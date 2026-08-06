@@ -1,0 +1,1020 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+<title>프로그램 아카이브 1 페이지 - (사) 한국시네마테크협의회(서울아트시네마)</title>
+<link rel="stylesheet" href="https://www.cinematheque.seoul.kr/css/default.css?ver=221014">
+<link rel="stylesheet" href="https://www.cinematheque.seoul.kr/theme/eb4_busi_027/plugins/bootstrap/css/bootstrap.min.css?ver=221014">
+<link rel="stylesheet" href="https://www.cinematheque.seoul.kr/theme/eb4_busi_027/plugins/fontawesome5/css/fontawesome-all.min.css?ver=221014">
+<link rel="stylesheet" href="https://www.cinematheque.seoul.kr/theme/eb4_busi_027/plugins/eyoom-form/css/eyoom-form.min.css?ver=221014">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://www.cinematheque.seoul.kr/theme/eb4_busi_027/css/common.css?ver=221014">
+<link rel="stylesheet" href="https://www.cinematheque.seoul.kr/theme/eb4_busi_027/css/style.css?ver=221014">
+<link rel="stylesheet" href="https://www.cinematheque.seoul.kr/theme/eb4_busi_027/css/custom.css?ver=221014">
+<link rel="stylesheet" href="https://www.cinematheque.seoul.kr/theme/eb4_busi_027/plugins/aos/aos.css" type="text/css" media="screen">
+<link rel="stylesheet" href="https://www.cinematheque.seoul.kr/theme/eb4_busi_027/plugins/sly/tab_scroll_category.css" type="text/css" media="screen">
+<link rel="stylesheet" href="https://www.cinematheque.seoul.kr/theme/eb4_busi_027/plugins/sweetalert2/sweetalert2.min.css" type="text/css" media="screen">
+<!--[if lte IE 8]>
+<script src="https://www.cinematheque.seoul.kr/js/html5.js"></script>
+<![endif]-->
+<script>
+// 자바스크립트에서 사용하는 전역변수 선언
+var g5_url       = "https://www.cinematheque.seoul.kr";
+var g5_bbs_url   = "https://www.cinematheque.seoul.kr/bbs";
+var g5_is_member = "";
+var g5_is_admin  = "";
+var g5_is_mobile = "";
+var g5_bo_table  = "program";
+var g5_sca       = "";
+var g5_editor    = "smarteditor2";
+var g5_cookie_domain = "";
+</script>
+<link href="" rel="stylesheet" id="theme-link">
+<script src="https://www.cinematheque.seoul.kr/js/jquery-1.12.4.min.js?ver=220620"></script>
+<script src="https://www.cinematheque.seoul.kr/js/jquery-migrate-1.4.1.min.js?ver=220620"></script>
+<script src="https://www.cinematheque.seoul.kr/js/common.js?ver=220620"></script>
+<script src="https://www.cinematheque.seoul.kr/js/wrest.js?ver=220620"></script>
+<script src="https://www.cinematheque.seoul.kr/js/placeholders.min.js?ver=220620"></script>
+<script src="https://www.cinematheque.seoul.kr/theme/eb4_busi_027/plugins/popper/popper.min.js?ver=220620"></script>
+<script src="https://www.cinematheque.seoul.kr/theme/eb4_busi_027/plugins/bootstrap/js/bootstrap.min.js?ver=220620"></script>
+<script src="https://www.cinematheque.seoul.kr/theme/eb4_busi_027/plugins/sidebar/jquery.sidebar.min.js?ver=220620"></script>
+</head>
+
+<body >
+
+<div class="wrapper">
+    <h1 id="hd-h1">프로그램 아카이브 1 페이지</h1>
+    <div class="to-content"><a href="#mainContent">본문 바로가기</a></div>
+
+
+        <div class="wrapper-inner">
+    				<div class="gnb-bg off"></div>
+		<div class="gnb-overlay-bg"></div>
+
+	    	    <header class="header sub-header" id="header-fixed" >
+			<div class="header-inner">
+								<h1 class="header-logo">
+
+										<a href="https://www.cinematheque.seoul.kr">
+																											<img src="https://www.cinematheque.seoul.kr/data/common/HfnTfUvm71CC+ItGB+8BaQ==.gif" alt="(사) 한국시네마테크협의회(서울아트시네마) LOGO">
+																									</a>
+				</h1>
+
+				<div class="gnb-wrap navbar-expand-lg">
+					<nav class="gnb offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-controls="offcanvasLeftLabel" id="navMenu">
+						<div class="mobile-box">
+							<div class="mobile-nav-trigger" data-bs-dismiss="offcanvas" aria-label="Close" role="button"><img src="https://www.cinematheque.seoul.kr/theme/eb4_busi_027/image/icons/close-fill.png" alt="icon"></div>
+<!--							<div class="login-box">
+								<ul class="d-f">
+																	<li><a href="https://www.cinematheque.seoul.kr/bbs/login.php">로그인</a></li>
+									<li><a href="https://www.cinematheque.seoul.kr/bbs/register.php">회원가입</a></li>
+																</ul>
+							</div>
+-->
+							<div class="search-box">
+								<form name="fsearchbox" method="get" action="https://www.cinematheque.seoul.kr/bbs/search.php" onsubmit="return fsearchbox_submit(this);" class="eyoom-form">
+									<input type="hidden" name="sfl" value="wr_subject||wr_content">
+									<input type="hidden" name="sop" value="and">
+									<label for="mo_sch_stx" class="sound_only"><strong>검색어 입력 필수</strong></label>
+									<div class="input input-button">
+										<input type="text" name="stx" id="mo_sch_stx" class="sch_stx" maxlength="20" placeholder="검색어를 입력">
+										<div class="button"><input type="submit"><img src="https://www.cinematheque.seoul.kr/theme/eb4_busi_027/image/icons/search-line.png" alt="icon"></div>
+									</div>
+								</form>
+							</div>
+						</div>
+
+
+												<ul class="gnb-nav">
+																					<li class="dropdown ">
+								<a href="/bbs/content.php?co_id=kact_info" target="_self" class="dropdown-toggle nav-link">
+																		Seoul art cinema								</a>
+																<a href="#" class="cate-dropdown-open dorpdown-toggle" data-bs-toggle="dropdown"></a>
+																<div class="gnb-dep-2 dep-off"></div>
+																																								<ul class="dropdown-menu gnb-depth-2">
+																	<li class="dropdown-submenu ">
+										<a href="/bbs/content.php?co_id=kact_info" target="_self" class="dropdown-item nav-link">
+											<span class="submenu-marker"></span>
+																						(사)한국시네마테크협의회																					</a>
+																													</li>
+																																	<li class="dropdown-submenu ">
+										<a href="/bbs/content.php?co_id=sac_info" target="_self" class="dropdown-item nav-link">
+											<span class="submenu-marker"></span>
+																						서울아트시네마																					</a>
+																													</li>
+																																	<li class="dropdown-submenu ">
+										<a href="/bbs/content.php?co_id=cinema_info" target="_self" class="dropdown-item nav-link">
+											<span class="submenu-marker"></span>
+																						극장 안내																					</a>
+																													</li>
+																																	<li class="dropdown-submenu ">
+										<a href="/bbs/board.php?bo_table=rental" target="_self" class="dropdown-item nav-link">
+											<span class="submenu-marker"></span>
+																						대관 안내																					</a>
+																													</li>
+																																	<li class="dropdown-submenu ">
+										<a href="/bbs/board.php?bo_table=notice" target="_self" class="dropdown-item nav-link">
+											<span class="submenu-marker"></span>
+																						공지사항																					</a>
+																													</li>
+																																	<li class="dropdown-submenu ">
+										<a href="/bbs/content.php?co_id=edu" target="_self" class="dropdown-item nav-link">
+											<span class="submenu-marker"></span>
+																						청소년 교육 프로그램																					</a>
+																													</li>
+																</ul>
+																															</li>
+														<li class="dropdown active">
+								<a href="/bbs/board.php?sfl=wr_30&amp;bo_table=program&amp;stx=1" target="_self" class="dropdown-toggle nav-link">
+																		Programs								</a>
+																<a href="#" class="cate-dropdown-open dorpdown-toggle" data-bs-toggle="dropdown"></a>
+																<div class="gnb-dep-2 dep-off"></div>
+																																								<ul class="dropdown-menu gnb-depth-2">
+																	<li class="dropdown-submenu active">
+										<a href="/bbs/board.php?sfl=wr_30&amp;bo_table=program&amp;stx=1" target="_self" class="dropdown-item nav-link">
+											<span class="submenu-marker"></span>
+																						현재 상영 프로그램																					</a>
+																													</li>
+																																	<li class="dropdown-submenu ">
+										<a href="/bbs/board.php?sfl=wr_29&amp;bo_table=program&amp;stx=1" target="_self" class="dropdown-item nav-link">
+											<span class="submenu-marker"></span>
+																						상영 예정 프로그램																					</a>
+																													</li>
+																																	<li class="dropdown-submenu ">
+										<a href="/bbs/board.php?bo_table=event" target="_self" class="dropdown-item nav-link">
+											<span class="submenu-marker"></span>
+																						이벤트																					</a>
+																													</li>
+																																	<li class="dropdown-submenu ">
+										<a href="/bbs/board.php?bo_table=program" target="_self" class="dropdown-item nav-link">
+											<span class="submenu-marker"></span>
+																						프로그램 아카이브																					</a>
+																													</li>
+																																	<li class="dropdown-submenu ">
+										<a href="/bbs/board.php?bo_table=film" target="_self" class="dropdown-item nav-link">
+											<span class="submenu-marker"></span>
+																						필름 아카이브																					</a>
+																													</li>
+																</ul>
+																															</li>
+														<li class="dropdown ">
+								<a href="/bbs/content.php?co_id=timetable" target="_self" class="dropdown-toggle nav-link">
+																		Schedule								</a>
+																<a href="#" class="cate-dropdown-open dorpdown-toggle" data-bs-toggle="dropdown"></a>
+																<div class="gnb-dep-2 dep-off"></div>
+																																								<ul class="dropdown-menu gnb-depth-2">
+																	<li class="dropdown-submenu ">
+										<a href="/bbs/content.php?co_id=timetable" target="_self" class="dropdown-item nav-link">
+											<span class="submenu-marker"></span>
+																						상영시간표																					</a>
+																													</li>
+																																	<li class="dropdown-submenu ">
+										<a href="/bbs/content.php?co_id=ticket_info" target="_self" class="dropdown-item nav-link">
+											<span class="submenu-marker"></span>
+																						예매 안내																					</a>
+																													</li>
+																</ul>
+																															</li>
+														<li class="dropdown ">
+								<a href="/bbs/content.php?co_id=membership_info" target="_self" class="dropdown-toggle nav-link">
+																		Membership								</a>
+																<a href="#" class="cate-dropdown-open dorpdown-toggle" data-bs-toggle="dropdown"></a>
+																<div class="gnb-dep-2 dep-off"></div>
+																																								<ul class="dropdown-menu gnb-depth-2">
+																	<li class="dropdown-submenu ">
+										<a href="/bbs/content.php?co_id=membership_info" target="_self" class="dropdown-item nav-link">
+											<span class="submenu-marker"></span>
+																						관객회원																					</a>
+																													</li>
+																																	<li class="dropdown-submenu ">
+										<a href="/bbs/content.php?co_id=supporter_info" target="_self" class="dropdown-item nav-link">
+											<span class="submenu-marker"></span>
+																						후원회원																					</a>
+																													</li>
+																																	<li class="dropdown-submenu ">
+										<a href="/bbs/write.php?bo_table=contact_newletter" target="_self" class="dropdown-item nav-link">
+											<span class="submenu-marker"></span>
+																						뉴스레터 신청																					</a>
+																													</li>
+																																	<li class="dropdown-submenu ">
+										<a href="/bbs/board.php?bo_table=qa" target="_self" class="dropdown-item nav-link">
+											<span class="submenu-marker"></span>
+																						Q&A											<!--											<i class="far fa-check-circle text-blue m-r-5"></i>
+-->																					</a>
+																													</li>
+																</ul>
+																															</li>
+														<li class="dropdown ">
+								<a href="/bbs/board.php?bo_table=art_shop" target="_self" class="dropdown-toggle nav-link">
+																		Art shop								</a>
+																<a href="#" class="cate-dropdown-open dorpdown-toggle" data-bs-toggle="dropdown"></a>
+																<div class="gnb-dep-2 dep-off"></div>
+																																								<ul class="dropdown-menu gnb-depth-2">
+																	<li class="dropdown-submenu ">
+										<a href="/bbs/board.php?bo_table=art_shop&amp;sca=도서" target="_self" class="dropdown-item nav-link">
+											<span class="submenu-marker"></span>
+																						도서																					</a>
+																													</li>
+																																	<li class="dropdown-submenu ">
+										<a href="/bbs/board.php?bo_table=art_shop&amp;sca=포스터" target="_self" class="dropdown-item nav-link">
+											<span class="submenu-marker"></span>
+																						포스터																					</a>
+																													</li>
+																																	<li class="dropdown-submenu ">
+										<a href="/bbs/board.php?bo_table=art_shop&amp;sca=굿즈" target="_self" class="dropdown-item nav-link">
+											<span class="submenu-marker"></span>
+																						굿즈																					</a>
+																													</li>
+																</ul>
+																															</li>
+														<li class="dropdown ">
+								<a href="https://www.tinyticket.net/event-manager/EMusZONUABqg" target="_blank" class="dropdown-toggle nav-link">
+																		Ticketing								</a>
+																<a href="#" class="cate-dropdown-open dorpdown-toggle" data-bs-toggle="dropdown"></a>
+																<div class="gnb-dep-2 dep-off"></div>
+																																								<ul class="dropdown-menu gnb-depth-2">
+																	<li class="dropdown-submenu ">
+										<a href="https://www.tinyticket.net/event-manager/EMusZONUABqg" target="_blank" class="dropdown-item nav-link">
+											<span class="submenu-marker"></span>
+																						예매하기																					</a>
+																													</li>
+																</ul>
+																															</li>
+																				</ul>
+					</nav>
+				</div>
+
+								<div class="top-bar">
+					<ul class="top-bar-list list-unstyled">
+						<a href="/bbs/content.php?co_id=english" style="margin-top: 3px; margin-right: 5px">
+						EN
+						</a>
+<!--											<li class="top-bar-btn-login hidden-xs hidden-sm">
+							<a href="https://www.cinematheque.seoul.kr/bbs/login.php">
+								<img src="https://www.cinematheque.seoul.kr/theme/eb4_busi_027/image/icons/shut-down-line.png" alt="icon">
+							</a>
+						</li>
+					-->
+
+						<li class="btn-search hidden-xs hidden-sm">
+							<a href="#" data-bs-toggle="modal" data-bs-target=".search-contents-modal">
+								<img src="https://www.cinematheque.seoul.kr/theme/eb4_busi_027/image/icons/search-line.png" alt="icon">
+							</a>
+						</li>
+												<li class="mobile-nav-trigger" id="navToggle" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">
+							<span>
+								<img src="https://www.cinematheque.seoul.kr/theme/eb4_busi_027/image/icons/function-line.png" alt="icon">
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>	    </header>
+                <div class="modal fade contents-modal member-contents-modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-box modal-sm modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h4>
+                            방문해 주셔서 감사합니다.
+                        </h4>
+                        <ul class="list-unstyled member-list">
+                                                </ul>
+                        <div class="contnets-bottom">
+                            <button type="button" data-bs-dismiss="modal"><span class="transition-03 en-font">Close</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                <div class="modal fade contents-modal search-contents-modal" aria-hidden="true">
+            <div class="modal-box modal-sm modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h4>
+                            검색어를 입력해 주세요.
+                        </h4>
+                        <div class="search-contents">
+                            <div class="search-contnets-mid">
+                                <form name="fsearchbox" method="get" action="https://www.cinematheque.seoul.kr/bbs/search.php" onsubmit="return fsearchbox_submit(this);" class="eyoom-form">
+                                    <input type="hidden" name="sfl" value="wr_subject||wr_content">
+                                    <input type="hidden" name="sop" value="and">
+                                    <label for="head_sch_stx" class="sound_only"><strong>검색어 입력 필수</strong></label>
+                                    <div class="input input-button">
+                                        <input type="text" name="stx" id="head_sch_stx" maxlength="20" class="sch_stx" placeholder="검색어 입력">
+                                        <div class="button">
+											<input type="submit">
+											<img src="https://www.cinematheque.seoul.kr/theme/eb4_busi_027/image/icons/search-line.png" alt="icon">
+										</div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="contnets-bottom">
+                                <button type="button" data-bs-dismiss="modal"><span class="transition-03 en-font">Close</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+						<div class="page-title">
+			<div class="page-title-image" style="background-image:url('https://www.cinematheque.seoul.kr/theme/eb4_busi_027/image/page_title/gr_002.jpg');">
+			</div>
+			<div class="container">
+				<div class="page-title-caption">
+					<h2>현재 상영 프로그램</h2>
+				</div>
+			</div>
+		</div>
+		<!--		<div class="sub-menu">
+			<div class="container">
+				<div class="sub-menu-inner">
+					<div class="sub-home-link"><a href="https://www.cinematheque.seoul.kr"><img src="https://www.cinematheque.seoul.kr/theme/eb4_busi_027/image/icons/home-fill-2.svg" alt="home"></a></div>
+					<div class="sub-menu-title sub-menu-title-first">
+						<h2>Programs</h2>
+						<ul class="list-sub-menu list-unstyled">
+																					<li class="">
+								<a href="/bbs/content.php?co_id=kact_info">Seoul art cinema</a>
+							</li>
+														<li class="active">
+								<a href="/bbs/board.php?sfl=wr_30&amp;bo_table=program&amp;stx=1">Programs</a>
+							</li>
+														<li class="">
+								<a href="/bbs/content.php?co_id=timetable">Schedule</a>
+							</li>
+														<li class="">
+								<a href="/bbs/content.php?co_id=membership_info">Membership</a>
+							</li>
+														<li class="">
+								<a href="/bbs/board.php?bo_table=art_shop">Art shop</a>
+							</li>
+														<li class="">
+								<a href="https://www.tinyticket.net/event-manager/EMusZONUABqg">Ticketing</a>
+							</li>
+																				</ul>
+					</div>
+					<div class="sub-menu-title sub-menu-title-second">
+						<h2>현재 상영 프로그램</h2>
+						<ul class="list-sub-menu list-unstyled">
+																					<li class="active">
+								<a href="/bbs/board.php?sfl=wr_30&amp;bo_table=program&amp;stx=1" target="_self">현재 상영 프로그램</a>
+							</li>
+														<li class="">
+								<a href="/bbs/board.php?sfl=wr_29&amp;bo_table=program&amp;stx=1" target="_self">상영 예정 프로그램</a>
+							</li>
+														<li class="">
+								<a href="/bbs/board.php?bo_table=event" target="_self">이벤트</a>
+							</li>
+														<li class="">
+								<a href="/bbs/board.php?bo_table=program" target="_self">프로그램 아카이브</a>
+							</li>
+														<li class="">
+								<a href="/bbs/board.php?bo_table=film" target="_self">필름 아카이브</a>
+							</li>
+																				</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+-->
+                <main id="mainContent" class="basic-body sub-basic-body">
+                        <div class="container">
+                <div class="row">
+	            	                <article class="basic-body-main col-12">
+
+
+<style>
+.board-list {font-size:.9375rem}
+.board-list .board-setup {position:relative;border:1px solid #d5d5d5;height:38px;margin-bottom:20px}
+.board-list .board-setup .select {position:absolute;top:-1px;left:-1px;display:inline-block;width:200px}
+.board-list .board-setup-btn-box {position:absolute;top:-1px;right:-1px;display:inline-block;width:420px}
+.board-list .board-setup-btn {float:left;width:25%;height:38px;line-height:38px;color:#fff;text-align:center;font-size:.8125rem}
+.board-list .board-setup-btn:nth-child(odd) {background-color:#000}
+.board-list .board-setup-btn:nth-child(even) {background-color:#3c3c3e}
+.board-list .board-setup-btn:hover {opacity:0.8}
+.board-list .favorite-setup {display:inline-block;width:125px;margin-left:15px}
+.board-list .favorite-setup .toggle {padding-right:45px}
+.board-product .product-item {position:relative;border-top:1px dotted #eaeaea;width:100%;padding:20px 0;display:flex}
+.board-product .product-item .product-img {flex-shrink:0;width:400px;margin-right:20px}
+.board-product .product-item .product-desc {flex-grow:1;position:relative}
+.board-product .product-item .product-noimg-desc {position:relative}
+.board-product .product-item .product-img-box {position:relative;overflow:hidden}
+.board-product .product-item .product-img-box-in {position:relative;overflow:hidden}
+.board-product .product-item .product-img-box-in:after {content:"";text-align:center;position:absolute;display:block;left:0;top:0;opacity:0;-moz-transition:all 0.2s ease 0s;-webkit-transition:all 0.2s ease 0s;-ms-transition:all 0.2s ease 0s;-o-transition:all 0.2s ease 0s;transition:all 0.2s ease 0s;width:100%;height:100%;background:rgba(0,0,0,0.3)}
+.board-product .product-item .product-img-box-in .movie-icon {display:inline-block;position:absolute;top:50%;left:50%;width:50px;height:50px;line-height:50px;text-align:center;color:#fff;font-size:40px;transform:translate(-50%,-50%);z-index:1}
+.board-product .product-item .product-img-box-in:hover:after {opacity:1}
+.board-product .product-item .product-desc h4 {font-size:1.4rem;color:#252525;margin-top:0;margin-bottom:10px;word-break:keep-all;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.board-product .product-item .product-desc h4 a:hover {text-decoration:none}
+.board-product .product-item .product-checkbox {display:inline-block;position:absolute;top:-2px;right:-10px;z-index:1}
+.board-product .product-item .product-cont {position:relative;color:#959595;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;
+-webkit-box-orient:vertical;margin-bottom:10px; padding-right: 15px}
+.board-product .product-item .product-desc h6 {margin-bottom: 15px;;font-size:1rem;color:#707070}
+
+.board-product .product-dl {margin-bottom: 15px;}
+.board-product .product-dl dt {padding: 5px 10px;font-size: 1rem;border-bottom: 1px solid #909090;}
+.board-product .product-dl dd {padding: 5px 10px;font-size: 1rem;border-bottom: 1px solid #ddd;}
+
+.board-product .product-btn-view {margin-top:20px}
+.board-product .product-btn-view a {display:inline-block;padding:5px 20px;font-size:0.75rem;color:#A4A4A4;border:1px solid #A4A4A4;border-radius:2px;transition: .3s}
+.board-product .product-btn-view a:hover {color:#fff;background-color:#333}
+
+.board-product .product-item-notice {position:relative;overflow:hidden;border:1px solid #e5e5e5;background:#fff;padding:8px 10px;margin-bottom:30px;-webkit-border-radius:2px !important;-moz-border-radius:2px !important;border-radius:2px !important}
+.board-product .product-item-notice .label {font-size:11px;font-weight:normal;margin-bottom:0}
+.board-list .view-infinite-more {margin-top:30px;margin-bottom:40px}
+.board-list .view-infinite-more .btn-e-xlg {position:relative;height:50px;line-height:50px;padding:0 120px;font-size:1.0625rem !important;border:1px solid #b5b5b5;background:#fff;color:#757575}
+.board-list .view-infinite-more .btn-e-xlg i {position:absolute;top:10px;right:5px;font-size:30px;color:#fff;transition:all 0.2s ease-in-out}
+.board-list .view-infinite-more .btn-e-xlg:hover {border:1px solid #959595;background:#f5f5f5;color:#000}
+.board-list .view-infinite-more .btn-e-xlg:hover i {color:#b5b5b5}
+#infscr-loading {text-align:center;z-index:100;position:absolute;left:50%;bottom:0;width:200px;margin-left:-100px;padding:8px 0;background:#000;opacity:0.8;color:#fff}
+.board-list .board-list-button-wrap:after {content:"";display:block;clear:both}
+.board-list .board-list-button-wrap .blbw-left {float:left;margin-top:5px}
+.board-list .board-list-button-wrap .blbw-right {float:right;margin-top:5px}
+@media (max-width:1199px) {
+	.board-product .product-dl {margin-bottom:5px}
+}
+@media (max-width:991px) {
+    .board-product .product-item .product-img {width:240px}
+    .board-product .product-item .product-desc h4 {margin-bottom:5px;font-size:1rem}
+    .board-product .product-item .product-desc h6 {margin-bottom:10px;font-size:0.875rem}
+    .board-product .product-dl dt, .board-product .product-dl dd {padding:5px}
+}
+@media (max-width:767px) {
+    .board-product .product-item {display:inherit}
+    .board-product .product-item .product-img {flex-shrink:inherit;width:100%;margin-right:0;margin-bottom:15px}
+    .board-product .product-item .product-img-box-in .movie-icon {width:40px;height:40px;line-height:40px;font-size:30px}
+    .board-product .product-item .product-desc {flex-grow:inherit}
+}
+@media (min-width:1200px) {
+	.board-product .product-dl {display:table;width:100%;}
+	.board-product .product-dl dt {display:table-cell;width:15%;}
+	.board-product .product-dl dd {display:table-cell;width:85%;}
+	.board-product {display: flex;flex-wrap: wrap;}
+	.board-product .product-item { width: 50%; }
+	.board-product .product-item .product-img { width: 250px; }
+}
+
+</style>
+
+<div class="board-list">
+
+        <div class="board-info m-b-20">
+        <div class="float-start m-t-5 text-gray">
+           <!-- <u>전체 2 건 - 1 페이지</u>-->
+                    </div>
+                <div class="clearfix"></div>
+    </div>
+
+
+
+    <div class="board-list-button-wrap m-b-15">
+        <div class="blbw-left">
+                                    <a class="btn-e btn-e-sm btn-dark" type="button" data-bs-toggle="modal" data-bs-target=".search-modal"><i class="fas fa-search"></i></a>
+        </div>
+    </div>
+
+
+    <div class="board-product">
+            <div class="product-item">
+                        <div class="product-img">
+                <a href="https://www.cinematheque.seoul.kr/bbs/board.php?bo_table=program&amp;wr_id=1376&amp;sfl=wr_30&amp;stx=1" >
+                    <div class="product-img-box">
+                        <div class="product-img-box-in">
+                            <img class="img-responsive" src="https://www.cinematheque.seoul.kr/data/file/program/thumb-cd350d699bb6addbeff893b0d2cf9159_z9n4klE8_2bdf6ff19ebb7b1a66858c40fce05d5e6555fdce_400x300.jpg" alt="">                                                    </div>
+                    </div>
+                </a>
+            </div>
+                        <div class="product-desc">
+                <h4>
+                    <a href="https://www.cinematheque.seoul.kr/bbs/board.php?bo_table=program&amp;wr_id=1376&amp;sfl=wr_30&amp;stx=1" >
+                                                                        8월 굿애프터눈, 시네마테크                                            </a>
+                                    </h4>
+                <h6>2026년 8월 6일(목)~8월 28일(금)</h6>
+                <!--<dl class="product-dl">
+	        		<dt></dt>
+	        		<dd></dd>
+                </dl>
+                <dl class="product-dl">
+	        		<dt></dt>
+	        		<dd></dd>
+                </dl>
+                <dl class="product-dl">
+	        		<dt></dt>
+	        		<dd>y</dd>
+                </dl>-->
+                                <p class="product-cont">
+                                        평일 낮 시간 동안 서울아트시네마에서 만나는 “굿애프터눈, 시네마테크”▶ "8월 굿애프터눈, 시네마테크" 예매 오픈 일정― 관객회원 온라인 사전예매 오픈: 7월 28일(화) 오후 6시― 일반관객 온라인 예매 오픈: 7월 30일(목) 오후 2시&nbsp;― 현장 예매 오…                                    </p>
+                                <div class="product-btn-view"><a href="https://www.cinematheque.seoul.kr/bbs/board.php?bo_table=program&amp;wr_id=1376&amp;sfl=wr_30&amp;stx=1" >자세히 보기</a></div>
+            </div>
+        </div>
+            <div class="product-item">
+                        <div class="product-img">
+                <a href="https://www.cinematheque.seoul.kr/bbs/board.php?bo_table=program&amp;wr_id=1371&amp;sfl=wr_30&amp;stx=1" >
+                    <div class="product-img-box">
+                        <div class="product-img-box-in">
+                            <img class="img-responsive" src="https://www.cinematheque.seoul.kr/data/file/program/thumb-cd350d699bb6addbeff893b0d2cf9159_RztuG6Qh_eeb3bf5f044d08e42300e2ebe38c20d396d62ee7_400x300.jpg" alt="">                                                    </div>
+                    </div>
+                </a>
+            </div>
+                        <div class="product-desc">
+                <h4>
+                    <a href="https://www.cinematheque.seoul.kr/bbs/board.php?bo_table=program&amp;wr_id=1371&amp;sfl=wr_30&amp;stx=1" >
+                                                                        2026 시네바캉스 서울                                            </a>
+                                    </h4>
+                <h6>2026년 8월 5일(수) ~ 8월 30일(일)</h6>
+                <!--<dl class="product-dl">
+	        		<dt></dt>
+	        		<dd></dd>
+                </dl>
+                <dl class="product-dl">
+	        		<dt></dt>
+	        		<dd></dd>
+                </dl>
+                <dl class="product-dl">
+	        		<dt></dt>
+	        		<dd>y</dd>
+                </dl>-->
+                                <p class="product-cont">
+                                        무더운 여름과 함께 올해도 “2026 시네바캉스 서울”을 진행합니다. 8월 5일(수)부터 8월 30일(일)까지 열리는 이번 영화제에서는 마릴린 먼로의 탄생 백주년을 기념하는 특별전을 포함해, 기 질, 차이밍량, 구루 두트, 이시이 가쿠류, 마크 L. 레스터 등의 영화 …                                    </p>
+                                <div class="product-btn-view"><a href="https://www.cinematheque.seoul.kr/bbs/board.php?bo_table=program&amp;wr_id=1371&amp;sfl=wr_30&amp;stx=1" >자세히 보기</a></div>
+            </div>
+        </div>
+            </div>
+
+    <div class="board-list-button-wrap m-t-15">
+        <div class="blbw-left">
+                                    <a class="btn-e btn-e-sm btn-dark" type="button" data-bs-toggle="modal" data-bs-target=".search-modal"><i class="fas fa-search"></i></a>
+        </div>
+        <div class="blbw-right">
+                    </div>
+    </div>
+
+    </div>
+
+<div class="board-pagination">
+            <style>
+.eb-pagination-wrap {position:relative;text-align:center;padding:7px;margin-top:30px}
+.eb-pagination {position:relative;list-style:none;display:inline-block;padding:0;margin:0}
+.eb-pagination li {display:inline}
+.eb-pagination a {display:inline-block;font-size:.8125rem;text-decoration:none;min-width:30px;height:30px;padding:0 5px;border:1px solid #dadada;line-height:28px;text-align:center;color:#757575;position:relative;z-index:1}
+.eb-pagination a:active {outline:none}
+.eb-pagination a:hover {color:#000;background:#eaeaea}
+.eb-pagination a.active {cursor:default;background:#2b2b2e;color:#fff;border:0}
+.eb-pagination a.active:hover {color:#fff;background:#2b2b2e}
+.eb-pagination a.next,.eb-pagination a.prev {color:#959595}
+.eb-pagination a.next:hover,.eb-pagination a.prev:hover {color:#000}
+</style>
+
+<div class="eb-pagination-wrap">
+    <ul class="eb-pagination">
+        <li><a href="https://www.cinematheque.seoul.kr/bbs/board.php?bo_table=program&amp;sfl=wr_30&amp;stx=1&amp;page=1"><i class="fas fa-angle-double-left"></i></a></li>
+        <li><a href="https://www.cinematheque.seoul.kr/bbs/board.php?bo_table=program&amp;sfl=wr_30&amp;stx=1&amp;page=1" class="prev"><i class="fas fa-angle-left"></i></a></li>
+                        <li><a href="https://www.cinematheque.seoul.kr/bbs/board.php?bo_table=program&amp;sfl=wr_30&amp;stx=1&amp;page=1" class="active">1<span class="sound_only">페이지</span></a></li>
+                <li><a href="https://www.cinematheque.seoul.kr/bbs/board.php?bo_table=program&amp;sfl=wr_30&amp;stx=1&amp;page=1" class="next"><i class="fas fa-angle-right"></i></a></li>
+        <li><a href="https://www.cinematheque.seoul.kr/bbs/board.php?bo_table=program&amp;sfl=wr_30&amp;stx=1&amp;page=1"><i class="fas fa-angle-double-right"></i></a></li>
+    </ul>
+</div>    </div>
+
+<div class="modal fade search-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title f-s-20r"><i class="fas fa-search text-gray m-r-7"></i><strong>프로그램 아카이브 검색</strong></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                                <fieldset id="bo_sch" class="eyoom-form">
+                    <form name="fsearch" method="get">
+                    <input type="hidden" name="bo_table" value="program">
+                    <input type="hidden" name="sca" value="">
+                    <input type="hidden" name="sop" value="and">
+                    <label for="sfl" class="sound_only">검색대상</label>
+                    <section class="m-t-10">
+                        <label class="select">
+                            <select name="sfl" id="sfl" class="form-control">
+                                <option value="wr_subject">제목</option>
+                                <option value="wr_content">내용</option>
+                                <option value="wr_subject||wr_content">제목+내용</option>
+                                                            </select>
+                            <i></i>
+                        </label>
+                    </section>
+                    <section>
+                        <label for="stx" class="sound_only">검색어<strong class="sound_only"> 필수</strong></label>
+                        <div class="input input-button">
+                            <input type="text" name="stx" value="1" required id="stx">
+                            <div class="button"><input type="submit" value="검색">검색</div>
+                        </div>
+                    </section>
+                    </form>
+                </fieldset>
+                            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://www.cinematheque.seoul.kr/theme/eb4_busi_027/plugins/sweetalert2/sweetalert2.min.js"></script>
+<script src="https://www.cinematheque.seoul.kr/theme/eb4_busi_027/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
+
+<script>
+</script>
+
+
+
+
+
+                    </article>
+                            </div>        </div>	</main>
+        <footer class="footer">
+	    <div class="footer-top">
+		    <div class="container">
+			    <div class="row align-items-center-xl">
+			    	<div class="col-xl-6">
+						<div class="footer-f-wrap">
+														<div class="footer-logo">
+
+								 <a href="https://www.facebook.com/cinemathequeseoul" title="페이스북" target="_blank">
+	<i class="fab fa-facebook-square fa-2x"></i>
+								</a>
+ <a href="https://twitter.com/seoulartcinema" title="트위터" target="_blank">
+	<i class="fab fa-twitter-square fa-2x"></i>
+								</a>
+ <a href="https://www.instagram.com/seoulartcinema/" title="인스타" target="_blank">
+<i class="fab fa-instagram-square fa-2x"></i>								</a>
+ <a href="https://cafe.naver.com/seoulartcinema" title="네이버까페" target="_blank">
+<i class="fab fa-cuttlefish fa-2x"></i>								</a>
+<!--								<a href="https://www.cinematheque.seoul.kr">
+																																			<img src="https://www.cinematheque.seoul.kr/data/common/Jo2KBOeipbLGXPPwraSsJQ==.gif" class="img-responsive" alt="(사) 한국시네마테크협의회(서울아트시네마) LOGO">
+
+																																		</a>
+-->							</div>
+														<div class="footer-info">
+
+								<div class="footer-info-content">
+									<address>
+										<span>(04518) 서울시 중구 정동길 3 경향아트힐 2층(경향신문사)  </span> &nbsp; <br>
+										<span>Tel : (02)741-9782</span> &nbsp;
+										<span>E-mail : <a href="mailto:thequeseoul@naver.com" class="transition-03">thequeseoul@naver.com</a></span>
+									</address>
+								</div>
+							</div>
+						</div>
+			    	</div>
+			    	<div class="col-xl-6">
+				    	<ul class="footer-link">
+				    		<li>
+				    			<a href="/bbs/board.php?bo_table=qa">
+					    			<span>Q&A</span>
+					    			<small>직접 문의 할 사항을 남겨주세요.</small>
+					    			<img src="https://www.cinematheque.seoul.kr/theme/eb4_busi_027/image/icons/arrow-right.svg" alt="arrow">
+				    			</a>
+				    		</li>
+				    		<li>
+				    			<a href="/bbs/write.php?bo_table=contact_newletter">
+					    			<span>뉴스레터 신청</span>
+					    			<small>최신 소식을 받아보세요.</small>
+					    			<img src="https://www.cinematheque.seoul.kr/theme/eb4_busi_027/image/icons/arrow-right.svg" alt="arrow">
+				    			</a>
+				    		</li>
+				    	</ul>
+			    	</div>
+			    </div>
+		    </div>
+	    </div>
+	    <div class="container">
+		    <div class="footer-btm">
+                <div class="copyright en-font">Copyright &copy; (사) 한국시네마테크협의회(서울아트시네마). All Rights Reserved.</div>
+								<ul class="footer-menu">
+					<li><a href="https://www.cinematheque.seoul.kr/page/?pid=provision" class="transition-03">이용약관</a></li>
+					<li><a href="https://www.cinematheque.seoul.kr/page/?pid=privacy" class="transition-03">개인정보처리방침</a></li>
+					<li><a href="https://www.cinematheque.seoul.kr/page/?pid=noemail" class="transition-03">이메일무단수집거부</a></li>
+					<li><a href="https://www.nts.go.kr/" target="_blank">공익위반제보</a></li>
+				</ul>
+		    </div>
+	    </div>
+    </footer>
+
+    	<div class="eb-backtotop">
+		<svg class="backtotop-progress" width="100%" height="100%" viewBox="-1 -1 102 102">
+			<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+			<span class="progress-count"></span>
+		</svg>
+	</div>
+	</div></div>
+<div class="page-loader sub-page-loader">	</div>
+
+
+<div class="modal fade all-search-modal eb-search-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title f-s-20r"><i class="fas fa-search text-gray m-r-7"></i><strong>전체 게시판 검색</strong></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form name="fsearchbox" method="get" action="https://www.cinematheque.seoul.kr/bbs/search.php" onsubmit="return fsearchbox_submit(this);" class="eyoom-form">
+                <input type="hidden" name="sfl" value="wr_subject||wr_content">
+                <input type="hidden" name="sop" value="and">
+                <label for="modal_sch_stx" class="sound_only"><strong>검색어 입력 필수</strong></label>
+                <div class="input input-button">
+                    <input type="text" name="stx" id="modal_sch_stx" class="sch_stx" maxlength="20" placeholder="검색어 입력">
+                    <div class="button"><input type="submit">검색</div>
+                </div>
+                </form>
+                <script>
+                function fsearchbox_submit(f) {
+                    if (f.stx.value.length < 2 || f.stx.value == $(".sch_stx").attr("placeholder")) {
+                        alert("검색어는 두글자 이상 입력하십시오.");
+                        f.stx.select();
+                        f.stx.focus();
+                        return false;
+                    }
+                    var cnt = 0;
+                    for (var i=0; i<f.stx.value.length; i++) {
+                        if (f.stx.value.charAt(i) == ' ') cnt++;
+                    }
+                    if (cnt > 1) {
+                        alert("빠른 검색을 위하여 검색어에 공백은 한개만 입력할 수 있습니다.");
+                        f.stx.select();
+                        f.stx.focus();
+                        return false;
+                    }
+                    return true;
+                }
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade itemuse-iframe-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title f-s-20r"><i class="fas fa-edit text-gray m-r-7"></i><strong>사용후기 작성하기</strong></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <iframe id="itemuse-iframe" width="100%" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade itemqa-iframe-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title f-s-20r"><i class="fas fa-question-circle text-gray m-r-7"></i><strong>상품문의 작성하기</strong></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <iframe id="itemqa-iframe" width="100%" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade coupon-iframe-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title f-s-20r"><i class="fas fa-ticket-alt text-gray m-r-7"></i><strong>쿠폰 내역</strong></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <iframe id="coupon-iframe" width="100%" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function itemuse_modal(href) {
+    $('.itemuse-iframe-modal').modal('show').on('hidden.bs.modal', function() {
+        $("#itemuse-iframe").attr("src", "");
+        $('html').css({overflow: ''});
+    });
+    $('.itemuse-iframe-modal').modal('show').on('shown.bs.modal', function() {
+        $("#itemuse-iframe").attr("src", href);
+        $('#itemuse-iframe').height(parseInt($(window).height() * 0.8));
+        $('html').css({overflow: 'hidden'});
+    });
+    return false;
+}
+
+function itemqa_modal(href) {
+    $('.itemqa-iframe-modal').modal('show').on('hidden.bs.modal', function() {
+        $("#itemqa-iframe").attr("src", "");
+        $('html').css({overflow: ''});
+    });
+    $('.itemqa-iframe-modal').modal('show').on('shown.bs.modal', function() {
+        $("#itemqa-iframe").attr("src", href);
+        $('#itemqa-iframe').height(parseInt($(window).height() * 0.8));
+        $('html').css({overflow: 'hidden'});
+    });
+    return false;
+}
+
+function coupon_modal(href) {
+    $('.coupon-iframe-modal').modal('show').on('hidden.bs.modal', function() {
+        $("#coupon-iframe").attr("src", "");
+        $('html').css({overflow: ''});
+    });
+    $('.coupon-iframe-modal').modal('show').on('shown.bs.modal', function() {
+        $("#coupon-iframe").attr("src", "G5_SHOP_URL/coupon.php");
+        $('#coupon-iframe').height(parseInt($(window).height() * 0.8));
+        $('html').css({overflow: 'hidden'});
+    });
+    return false;
+}
+
+// 모달창을 닫은 후 리로드
+function close_modal_and_reload() {
+    close_modal();
+    document.location.reload();
+}
+function close_modal() {
+    $('.modal').modal('hide');
+}
+</script>
+
+<div class="modal fade poll-result-iframe-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title f-s-20r"><i class="fas fa-chart-bar text-gray m-r-7"></i><strong>투표 결과 보기</strong></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <iframe id="poll-result-iframe" width="100%" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function poll_result(url) {
+        $('.poll-result-iframe-modal').modal('show').on('hidden.bs.modal', function () {
+        $("#poll-result-iframe").attr("src", "");
+        $('html').css({overflow: ''});
+    });
+    $('.poll-result-iframe-modal').modal('show').on('shown.bs.modal', function () {
+        $("#poll-result-iframe").attr("src", url);
+        $('#poll-result-iframe').height(parseInt($(window).height() * 0.8));
+        $('html').css({overflow: 'hidden'});
+    });
+    return false;
+}
+</script>
+
+
+
+<script src="https://www.cinematheque.seoul.kr/theme/eb4_busi_027/js/app.js?ver=220620"></script>
+<script src="https://www.cinematheque.seoul.kr/theme/eb4_busi_027/plugins/aos/aos.js"></script>
+<script>
+/* aos.js 설정 및 리프레쉬 */
+$(function() {
+  AOS.init({
+    easing: 'ease-in-out',
+    duration: 800,
+    once: false // 애니메이션 한번 발동 여부
+  });
+
+  onElementHeightChange(document.body, function(){
+    AOS.refresh();
+  });
+});
+function onElementHeightChange(elm, callback) {
+    var lastHeight = elm.clientHeight
+    var newHeight;
+
+    (function run() {
+        newHeight = elm.clientHeight;
+        if (lastHeight !== newHeight) callback();
+        lastHeight = newHeight;
+
+        if (elm.onElementHeightChangeTimer) {
+          clearTimeout(elm.onElementHeightChangeTimer);
+        }
+
+        elm.onElementHeightChangeTimer = setTimeout(run, 200);
+    })();
+}
+</script>
+
+
+
+<script>
+$(function() {
+    // 폰트 리사이즈 쿠키있으면 실행
+    font_resize("container", get_cookie("ck_font_resize_rmv_class"), get_cookie("ck_font_resize_add_class"));
+});
+</script>
+
+<script>
+$(function(){
+    // 팔로우
+    $("#follow button").click(function(){
+        var action = $(this).attr('value');
+        var target = $(this).attr('name');
+
+        var url = "https://www.cinematheque.seoul.kr/eyoom/core/mypage/follow.ajax.php";
+        $.post(url, {'action':action,'user':target}, function(data) {
+            if(data.result == 'yes') {
+                var botton = $(".follow_"+target);
+                if (action == 'follow') {
+                    botton.removeClass('btn-e-indigo');
+                    botton.addClass('btn-e-dark');
+                    botton.attr('title','친구관계를 해제합니다.');
+                    botton.html('언팔로우 <i class="fas fa-times text-white"></i>');
+                    botton.attr('value','unfollow');
+                    Swal.fire({
+                        title: "알림",
+                        text: '해당 회원을 팔로우하였습니다.',
+                        confirmButtonColor: "#e53935",
+                        icon: "success",
+                        confirmButtonText: "확인"
+                    });
+                }
+                if (action == 'unfollow') {
+                    botton.removeClass('btn-e-dark');
+                    botton.addClass('btn-e-indigo');
+                    botton.attr('title','친구관계를 신청합니다.');
+                    botton.html('팔로우');
+                    botton.attr('value','follow');
+                    Swal.fire({
+                        title: "알림",
+                        text: '해당 회원을 팔로우 해제하였습니다.',
+                        confirmButtonColor: "#e53935",
+                        icon: "success",
+                        confirmButtonText: "확인"
+                    });
+                }
+            } else if (data.result == 'no'){
+                Swal.fire({
+                    title: "알림",
+                    text: '소셜기능을 Off 시켜놓은 회원입니다.',
+                    confirmButtonColor: "#e53935",
+                    icon: "warning",
+                    confirmButtonText: "확인"
+                });
+            }
+        },"json");
+    });
+
+    // 구독
+    $("#subscribe button").click(function(){
+        var action = $(this).attr('value');
+        var target = $(this).attr('name');
+
+        var url = "https://www.cinematheque.seoul.kr/eyoom/core/mypage/subscribe.ajax.php";
+        $.post(url, {'action':action,'user':target}, function(data) {
+            if(data.result == 'yes') {
+                var botton = $(".subscribe_"+target);
+                if (action == 'subscribe') {
+                    botton.removeClass('btn-e-teal');
+                    botton.addClass('btn-e-dark');
+                    botton.attr('title','구독을 해제합니다.');
+                    botton.html('구독해제 <i class="fas fa-times text-white"></i>');
+                    botton.attr('value','unsubscribe');
+                    Swal.fire({
+                        title: "알림",
+                        text: '해당 회원의 글을 구독신청 하였습니다.',
+                        confirmButtonColor: "#e53935",
+                        icon: "success",
+                        confirmButtonText: "확인"
+                    });
+                }
+                if (action == 'unsubscribe') {
+                    botton.removeClass('btn-e-dark');
+                    botton.addClass('btn-e-teal');
+                    botton.attr('title','구독을 신청합니다.');
+                    botton.html('구독하기');
+                    botton.attr('value','subscribe');
+                    Swal.fire({
+                        title: "알림",
+                        text: '해당 회원의 글을 구독해제 하였습니다.',
+                        confirmButtonColor: "#e53935",
+                        icon: "success",
+                        confirmButtonText: "확인"
+                    });
+                }
+            }
+        },"json");
+    });
+
+});
+</script>
+
+
+</body>
+</html>
+<!-- 사용스킨 : basic -->

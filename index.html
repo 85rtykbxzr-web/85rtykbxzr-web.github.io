@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html class="scroll-smooth light" lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="서울독립영화관시간표" />
+    <meta name="description" content="서울 독립영화관의 오늘 상영시간표, 기획전, 영화제 일정을 날짜별, 영화별, 상영관별로 확인하세요." />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://seoulcinemaschedule.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ko_KR" />
+    <meta property="og:site_name" content="서울독립영화관시간표" />
+    <meta property="og:title" content="서울독립영화관시간표" />
+    <meta property="og:description" content="서울 독립영화관의 오늘 상영시간표, 기획전, 영화제 일정을 날짜별, 영화별, 상영관별로 확인하세요." />
+    <meta property="og:url" content="https://seoulcinemaschedule.com/" />
+    <meta property="og:image" content="https://seoulcinemaschedule.com/assets/og-image.png" />
+    <meta property="og:image:secure_url" content="https://seoulcinemaschedule.com/assets/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="서울독립영화관시간표" />
+    <meta name="application-name" content="서울독립영화관" />
+    <meta name="apple-mobile-web-app-title" content="서울독립영화관" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="서울독립영화관시간표" />
+    <meta name="twitter:description" content="서울 독립영화관의 오늘 상영시간표, 기획전, 영화제 일정을 날짜별, 영화별, 상영관별로 확인하세요." />
+    <meta name="twitter:image" content="https://seoulcinemaschedule.com/assets/og-image.png" />
+    <title>서울독립영화관시간표</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "서울독립영화관시간표",
+        "alternateName": "서울독립영화관",
+        "url": "https://seoulcinemaschedule.com/",
+        "description": "서울 독립영화관의 오늘 상영시간표, 기획전, 영화제 일정을 날짜별, 영화별, 상영관별로 확인하세요."
+      }
+    </script>
+    <link href="/assets/app.css?v=07df6a6c1339" rel="stylesheet" />
+    <script defer src="/assets/app.js?v=07df6a6c1339"></script>
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=3" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=3" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=3" />
+    <link rel="shortcut icon" href="/assets/favicon-32.png?v=3" />
+  </head>
+  <body class="app-loading bg-background text-on-surface font-body-md selection:bg-primary-fixed">
+    <div id="bootFallback" class="boot-fallback" role="status" aria-live="polite">
+      <strong>시간표를 불러오는 중입니다.</strong>
+      <span>화면이 계속 비어 있으면 잠시 후 새로고침하거나 페이지를 다시 열어주세요.</span>
+    </div>
+    <div id="searchResultStatus" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+
+    <nav class="hidden md:flex justify-between items-center px-margin-desktop h-20 w-full fixed top-0 z-50 bg-surface/90 backdrop-blur-md border-b border-primary/10">
+      <div class="flex items-center gap-4">
+        <a class="cursor-pointer hover:opacity-70 transition-opacity h-12 flex items-center" href="#schedule" aria-label="서울독립영화관시간표 홈">
+          <span class="brand-title text-[26px] text-primary">서울독립영화관시간표</span>
+        </a>
+      </div>
+      <div class="hidden md:flex gap-10 items-center">
+        <a class="font-body-md text-sm font-bold text-primary border-b-2 border-primary pb-1 transition-colors" href="#schedule" data-nav-target="schedule" data-nav-kind="desktop">상영시간표</a>
+        <a class="font-body-md text-sm text-on-surface-variant hover:text-primary border-b-2 border-transparent pb-1 transition-colors" href="#programs" data-nav-target="programs" data-nav-kind="desktop">프로그램</a>
+        <a class="font-body-md text-sm text-on-surface-variant hover:text-primary border-b-2 border-transparent pb-1 transition-colors" href="#festivals" data-nav-target="festivals" data-nav-kind="desktop">영화제</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <button id="tabletSearchButton" class="hidden md:flex lg:hidden w-10 h-10 items-center justify-center text-primary" type="button" aria-label="검색 열기" aria-controls="tabletSearchPanel" aria-expanded="false">
+          <svg class="ui-icon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#search"></use></svg>
+        </button>
+        <div class="relative hidden lg:block">
+          <svg class="ui-icon absolute left-3 top-1/2 -translate-y-1/2 text-outline" aria-hidden="true"><use href="/assets/lucide-sprite.svg#search"></use></svg>
+          <input id="searchInput" class="w-56 bg-primary/5 border-none pl-10 pr-4 py-2 text-sm transition-colors focus:ring-1 focus:ring-primary" placeholder="영화 검색" type="search" autocomplete="off" aria-label="영화 검색" />
+        </div>
+      </div>
+    </nav>
+
+    <div id="tabletSearchPanel" class="hidden fixed left-0 right-0 top-20 z-40 border-b border-outline-variant/30 bg-surface px-margin-desktop py-4 lg:hidden" role="search">
+      <div class="relative mx-auto max-w-container-max">
+        <svg class="ui-icon absolute left-3 top-1/2 -translate-y-1/2 text-outline" aria-hidden="true"><use href="/assets/lucide-sprite.svg#search"></use></svg>
+        <input id="tabletSearchInput" class="w-full bg-primary/5 border-none pl-10 pr-4 py-3 text-sm transition-colors focus:ring-1 focus:ring-primary" placeholder="영화 검색" type="search" autocomplete="off" aria-label="영화 검색" />
+      </div>
+    </div>
+
+    <header class="md:hidden flex justify-start items-center px-6 h-20 w-full fixed top-0 z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30">
+      <a class="brand-title mobile-brand-title max-w-[calc(100vw-104px)] truncate text-primary whitespace-nowrap" href="#mobile-schedule" aria-label="서울독립영화관시간표 홈">서울독립영화관시간표</a>
+      <div class="flex items-center gap-2 ml-4 shrink-0">
+        <button id="mobileSearchButton" class="w-10 h-10 flex items-center justify-center text-primary" type="button" aria-label="검색 열기" aria-controls="mobileSearchPanel" aria-expanded="false">
+          <svg class="ui-icon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#search"></use></svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="hidden md:block pt-20">
+      <section class="px-margin-mobile md:px-margin-desktop pt-12 pb-section-gap max-w-container-max mx-auto w-full" id="schedule">
+        <div class="flex flex-col items-center mb-10">
+          <h1 id="desktopScheduleTitle" class="text-4xl md:text-5xl font-bold text-primary mb-3">상영시간표</h1>
+          <p id="desktopMonth" class="text-lg text-on-surface-variant">일정을 불러오는 중입니다.</p>
+          <p id="desktopDataStatus" class="mt-2 text-xs text-on-surface-variant"></p>
+        </div>
+
+        <div class="w-full mb-8">
+          <div class="flex items-center justify-start gap-2 overflow-x-auto pb-4 no-scrollbar border-b border-primary/10" id="desktopDateBar"></div>
+        </div>
+
+        <div class="flex justify-start md:justify-center mb-12">
+          <div class="inline-flex bg-primary/5 p-1 rounded-sm">
+            <button class="px-6 py-2 text-sm font-bold bg-primary text-surface rounded-sm transition-colors" type="button" data-view="today" data-toggle-style="desktop" aria-pressed="true">오늘</button>
+            <button class="px-6 py-2 text-sm text-on-surface-variant hover:text-primary transition-colors rounded-sm" type="button" data-view="film" data-toggle-style="desktop" aria-pressed="false">영화</button>
+            <button class="px-6 py-2 text-sm text-on-surface-variant hover:text-primary transition-colors rounded-sm" type="button" data-view="venue" data-toggle-style="desktop" aria-pressed="false">상영관</button>
+          </div>
+        </div>
+
+        <section class="hidden mb-12 text-primary" id="popular">
+          <div class="mb-8 flex items-end justify-between gap-4 border-b border-primary/10 pb-6">
+            <div>
+              <p class="mb-2 text-[11px] font-bold uppercase text-primary">Weekly Pick</p>
+              <h2 class="text-3xl font-bold font-display-lg">이번 주 추천</h2>
+            </div>
+            <span class="text-xs text-on-surface-variant" id="popularUpdatedAt"></span>
+          </div>
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4" id="popularList"></div>
+        </section>
+
+        <div class="mb-8">
+          <div class="mb-3 flex items-center justify-between gap-3">
+            <h2 class="text-sm font-bold text-primary" id="desktopVenueShortcutTitle">오늘 상영관 바로가기</h2>
+          </div>
+          <div id="desktopVenueFilter" class="grid grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-2"></div>
+        </div>
+
+        <div id="desktopSearchResults" class="hidden mb-12"></div>
+
+        <div class="space-y-12" id="desktopSchedule"></div>
+      </section>
+
+      <section class="py-section-gap text-primary bg-primary/5" id="programs">
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+          <div class="flex items-center gap-4 mb-12">
+            <h2 class="text-3xl font-bold font-display-lg">진행 중인 프로그램</h2>
+            <div class="h-px flex-grow bg-primary/10"></div>
+            <a class="text-sm font-bold hover:underline transition-colors flex items-center gap-1" href="#schedule">
+              모두 보기
+              <svg class="ui-icon ui-icon-sm" aria-hidden="true"><use href="/assets/lucide-sprite.svg#arrow-right"></use></svg>
+            </a>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10" id="programList"></div>
+        </div>
+      </section>
+
+      <section class="py-section-gap text-primary bg-surface" id="festivals">
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+          <div class="flex items-center gap-4 mb-12">
+            <h2 class="text-3xl font-bold font-display-lg">영화제 시간표</h2>
+            <div class="h-px flex-grow bg-primary/10"></div>
+          </div>
+          <div class="festival-table-shell overflow-x-auto">
+            <table class="festival-table w-full text-left text-sm">
+              <thead>
+                <tr>
+                  <th class="px-4 py-3 font-bold">일시</th>
+                  <th class="px-4 py-3 font-bold">섹션</th>
+                  <th class="px-4 py-3 font-bold">작품/행사</th>
+                  <th class="px-4 py-3 font-bold">장소</th>
+                  <th class="px-4 py-3 font-bold">예매</th>
+                </tr>
+              </thead>
+              <tbody id="festivalRows"></tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <footer class="w-full py-16 px-margin-desktop bg-surface border-t border-primary/10">
+        <div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
+          <div>
+            <div class="mb-4">
+              <span class="brand-title text-xl font-bold text-primary">서울독립영화관시간표</span>
+            </div>
+            <p class="text-sm text-on-surface-variant max-w-sm">영화를 사랑하는 시네필을 위한 작은 모험 지도</p>
+          </div>
+          <div class="grid grid-cols-2 md:flex gap-x-12 gap-y-4">
+            <a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#schedule">상영시간표</a>
+            <a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#programs">프로그램</a>
+            <a class="text-sm text-on-surface-variant hover:text-primary transition-colors" href="#festivals">영화제</a>
+          </div>
+          <div class="flex gap-4">
+            <a class="w-10 h-10 flex items-center justify-center border border-primary/10 hover:bg-primary hover:text-surface transition-colors btn-feedback rounded-sm" href="https://www.instagram.com/walrus_magazine/" target="_blank" rel="noopener noreferrer" aria-label="인스타그램">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="3.8"></circle>
+                <circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"></circle>
+              </svg>
+            </a>
+            <a class="w-10 h-10 flex items-center justify-center border border-primary/10 hover:bg-primary hover:text-surface transition-colors btn-feedback rounded-sm" href="mailto:walrusofficial@naver.com" aria-label="메일">
+              <svg class="ui-icon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#mail"></use></svg>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <main class="md:hidden pt-20 pb-32" id="mobile-schedule">
+      <div id="mobileSearchPanel" class="hidden px-6 py-4 border-b border-outline-variant/10 bg-surface" role="search">
+        <div class="relative">
+          <svg class="ui-icon absolute left-3 top-1/2 -translate-y-1/2 text-outline" aria-hidden="true"><use href="/assets/lucide-sprite.svg#search"></use></svg>
+          <input id="mobileSearchInput" class="w-full bg-primary/5 border-none focus:ring-1 focus:ring-primary text-sm pl-10 pr-4 py-3" placeholder="영화 검색" type="search" autocomplete="off" aria-label="영화 검색" />
+        </div>
+      </div>
+
+      <div class="sticky top-20 bg-surface/95 backdrop-blur-sm z-40 py-4 border-b border-outline-variant/10">
+        <div class="mobile-date-strip">
+          <div class="mobile-date-month" id="mobileDateMonth">
+            <strong class="mobile-date-month-number">06</strong>
+            <span class="mobile-date-month-label mobile-kicker">JUN</span>
+          </div>
+          <div class="mobile-date-scroll no-scrollbar" id="mobileDateBar" aria-label="날짜 선택"></div>
+        </div>
+      </div>
+
+      <div class="px-6 py-6 flex flex-col gap-6">
+        <div class="grid grid-cols-3 gap-1 p-1 bg-surface-container-low rounded-sm">
+          <button class="min-w-0 w-full py-2 text-center text-label-caps uppercase bg-surface text-primary border border-outline-variant/20" id="view-today" type="button" data-view="today" data-toggle-style="mobile" aria-pressed="true">오늘</button>
+          <button class="min-w-0 w-full py-2 text-center text-label-caps uppercase text-on-surface-variant" id="view-movie" type="button" data-view="film" data-toggle-style="mobile" aria-pressed="false">영화</button>
+          <button class="min-w-0 w-full py-2 text-center text-label-caps uppercase text-on-surface-variant" id="view-theater" type="button" data-view="venue" data-toggle-style="mobile" aria-pressed="false">상영관</button>
+        </div>
+        <section class="hidden" id="mobile-popular">
+          <div class="border-b border-outline-variant/20 pb-3 mb-4">
+            <p class="mobile-kicker mb-1 text-primary">Weekly Pick</p>
+            <div class="flex items-center justify-between gap-3">
+              <h2 class="mobile-section-title text-on-surface">이번 주 추천</h2>
+              <span class="mobile-kicker text-on-surface-variant" id="mobilePopularUpdatedAt"></span>
+            </div>
+          </div>
+          <div class="flex gap-3 overflow-x-auto no-scrollbar snap-x snap-proximity pb-1" id="mobilePopularList" aria-label="이번 주 추천 작품"></div>
+        </section>
+        <div>
+          <div class="mb-2 flex items-center justify-between text-xs">
+            <strong class="text-primary" id="mobileVenueShortcutTitle">오늘 상영관 바로가기</strong>
+          </div>
+          <div id="mobileVenueFilter" class="flex gap-2 overflow-x-auto no-scrollbar snap-x snap-proximity pb-1" aria-label="상영관 바로가기"></div>
+        </div>
+        <div class="flex justify-between items-center border-b border-outline-variant/20 pb-2">
+          <h2 id="mobileScheduleHeading" class="mobile-section-title text-on-surface">상영시간표</h2>
+        </div>
+        <div id="mobileSearchResults" class="hidden"></div>
+      </div>
+
+      <div class="flex flex-col px-6 gap-10" id="mobileSchedule"></div>
+      <section class="px-6 pt-14" id="mobile-programs">
+        <div class="border-b border-outline-variant/20 pb-3 mb-6">
+          <h2 class="mobile-section-title text-on-surface">프로그램</h2>
+        </div>
+        <div class="flex flex-col gap-4" id="mobileProgramList"></div>
+      </section>
+      <section class="px-6 pt-14" id="mobile-festivals">
+        <div class="flex items-center justify-between border-b border-outline-variant/20 pb-3 mb-6">
+          <h2 class="mobile-section-title text-on-surface">영화제</h2>
+        </div>
+        <div class="flex flex-col gap-3" id="mobileFestivalList"></div>
+      </section>
+    </main>
+
+    <nav class="md:hidden fixed bottom-0 left-0 w-full bg-surface-container-highest/95 backdrop-blur-md border-t border-outline-variant/30 grid grid-cols-3 items-center h-16 z-50">
+      <a class="min-w-0 w-full h-full flex flex-col items-center justify-center gap-1 text-primary" href="#mobile-schedule" data-nav-target="mobile-schedule" data-nav-kind="mobile">
+        <svg class="ui-icon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#calendar-days"></use></svg>
+        <span class="text-[10px] font-label-caps uppercase font-bold">시간표</span>
+      </a>
+      <a class="min-w-0 w-full h-full flex flex-col items-center justify-center gap-1 text-on-surface-variant" href="#mobile-programs" data-nav-target="mobile-programs" data-nav-kind="mobile">
+        <svg class="ui-icon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#film"></use></svg>
+        <span class="text-[10px] font-label-caps uppercase">프로그램</span>
+      </a>
+      <a class="min-w-0 w-full h-full flex flex-col items-center justify-center gap-1 text-on-surface-variant" href="#mobile-festivals" data-nav-target="mobile-festivals" data-nav-kind="mobile">
+        <svg class="ui-icon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#tickets"></use></svg>
+        <span class="text-[10px] font-label-caps uppercase">영화제</span>
+      </a>
+    </nav>
+
+    <div id="toast" class="toast fixed left-1/2 bottom-24 z-[60] -translate-x-1/2 bg-primary text-surface text-sm px-4 py-3 rounded-sm shadow-lg" role="status" aria-live="polite"></div>
+  </body>
+</html>

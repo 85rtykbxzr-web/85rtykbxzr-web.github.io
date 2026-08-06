@@ -1,0 +1,2190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>이벤트 - 씨네큐브</title>
+
+	<!-- head.html include -->
+	<meta charset="UTF-8">
+<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+<meta name="format-detection" content="telephone=no">
+<!-- Cache-Control: 캐시 동작 제어 -->
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+
+<!-- Pragma: HTTP 1.0 하위호환용 -->
+<meta http-equiv="Pragma" content="no-cache">
+
+<!-- Expires: 캐시 만료 시간 설정 (즉시 만료) -->
+<meta http-equiv="Expires" content="0">
+
+<!-- SEO 메타 태그 -->
+<meta property="og:title" content="이벤트 - 씨네큐브" />
+<meta property="og:site_name" content="씨네큐브">
+<meta property="og:description" content="씨네큐브 이벤트" />
+<meta property="og:image" content="/assets/img/og/default.png" />
+<meta property="og:url" content="https://www.cinecube.co.kr/event" />
+<meta property="og:type" content="website">
+
+<title>이벤트</title>
+
+<meta name="description" content="씨네큐브 공식 홈페이지. 예매, 상영작, 이벤트, 공지사항 정보를 제공합니다.">
+<!-- CSRF 토큰이 있을 경우에만 메타 태그 추가 -->
+<meta name="_csrf" content="[redacted]"/>
+<meta name="_csrf_header" content="[redacted]"/>
+
+<!-- 로그인 사용자 식별 메타 (동기 URL 조립용). ccUserMeta가 존재할 때만 출력 -->
+
+
+
+
+
+
+<!-- icon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+<!-- font -->
+<!--Pretendard-->
+<link rel="preload" href="/assets/font/Pretendard/static/woff2/Pretendard-Black.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/assets/font/Pretendard/static/woff2/Pretendard-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/assets/font/Pretendard/static/woff2/Pretendard-ExtraBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/assets/font/Pretendard/static/woff2/Pretendard-ExtraLight.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/assets/font/Pretendard/static/woff2/Pretendard-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/assets/font/Pretendard/static/woff2/Pretendard-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="preload" href="/assets/font/Pretendard/static/woff2/Pretendard-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+<link rel="stylesheet" href="/assets/font/Pretendard/static/pretendard.css">
+
+<!-- common style -->
+<link rel="stylesheet" href="/assets/css/global.css">
+<!-- core -->
+<script src="/assets/lib/jquery/jquery.min.js"></script>
+<script src="/assets/lib/jquery/jquery.easing.min.js"></script>
+<script src="/assets/lib/tailwindcss_3.4.5.js"></script>
+<script src="/assets/js/bypage_result/preload.js"></script>
+
+<!-- appinfo -->
+<script src="/assets/lib/ua-parser.min.js"></script>
+<link rel="stylesheet" href="/assets/css/app_info.css">
+<script src="/assets/js/app_info.js"></script>
+
+<!-- lib -->
+<script src="/assets/lib/gsap/gsap.min.js"></script>
+<script src="/assets/lib/gsap/ScrollTrigger.min.js"></script>
+<script src="/assets/lib/gsap/ScrollToPlugin.min.js"></script>
+<script src="/assets/lib/lenis/dist/lenis.min.js"></script>
+<link rel="stylesheet" href="/assets/lib/swiper/swiper-bundle.min.css">
+<script src="/assets/lib/swiper/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="/assets/lib/aos/aos.css" />
+<script src="/assets/lib/aos/aos.js"></script>
+<link rel="stylesheet" href="/assets/lib/flatpickr.min.css">
+<script src="/assets/lib/flatpickr.js"></script>
+<script src="/assets/lib/flatpickr_ko.js"></script>
+<script src="/assets/lib/qrcode.min.js"></script>
+
+<!-- custom -->
+<script src="/assets/js/global.js"></script>
+<script src="/assets/js/bypage_result/concat.js"></script>
+
+<!-- reservation common -->
+<script src="/js/reservation-common.js"></script>
+
+<!-- app flags: 앱(WebView)에서만 iframe 모달 사용을 위해 전역 플래그 주입 -->
+<script>
+    window.IS_IOS_APP = false;
+    window.IS_ANDROID_APP = false;
+    window.IS_APP = (window.IS_IOS_APP || window.IS_ANDROID_APP);
+</script>
+
+<!-- debug -->
+<script src="/assets/js/debug.js"></script>
+
+<!-- // end : meta -->
+
+<!-- start : ga -->
+<!-- // end : ga -->
+</head>
+<body>
+	<div id="header-bg"></div>
+<div id="modal-cover"></div>
+
+<!-- start : loading-bar-wrap -->
+<div id="loading-bar-wrap">
+	<div class="loading-bar-inner">
+		<img class="loading-bar" src="/assets/img/loading_bar/loading_bar.gif" alt="" />
+	</div>
+</div>
+<script>
+    $(function() {
+        //LoadingBarWrap.on();
+    });
+</script>
+<!-- // end : loading-bar-wrap -->
+
+
+	<div id="wrap">
+		<title>이벤트</title>
+
+		<!-- start : header_box -->
+<div id="header-box" class="header-box ">
+	<!-- start : header_mo_2 -->
+	<header class="pc:hidden">
+		<section class="sec-36a2e280">
+			<div class="left-4cb0b4ba">
+				<a class="button-e226747c" href="/" onclick="if (document.referrer) { history.back(); return false; }">
+					<div class="fit-cover cover-c94c0b76">
+						<svg data-src="/assets/img/byproject/08081623.svg"></svg>
+					</div>
+				</a>
+
+				<div class="text-cbc46000 ml-[1.2rem]">이벤트</div>
+			</div>
+			<div class="right-7b009d98">
+				<div class="flex-642f34c3">
+					<!--<button class="button-f52e5441"  th:if="${isLoggedIn}" onclick="location.href='/member/logout?auto=true';">
+						<div class="fit-cover cover-54037098 mo:w-[2.2rem] mo:h-[2.2rem]">
+							<svg data-src="/assets/img/byproject/09031801.svg"></svg>
+						</div>
+					</button>-->
+					<!--<a href="/member/login" class="button-f52e5441" th:if="${!isLoggedIn}">
+						<div class="fit-cover cover-54037098 mo:w-[2.2rem] mo:h-[2.2rem]">
+							&lt;!&ndash;<svg data-src="/assets/img/byproject/09031801.svg"></svg>&ndash;&gt;
+							<svg data-src="/assets/img/byproject/09121516.svg"></svg>
+						</div>
+					</a>-->
+
+					<!--<a href="/" class="button-c662e7c3">
+						<div class="fit-cover cover-e4861b3b">
+							<svg data-src="/assets/img/byproject/08081630_1.svg"></svg>
+						</div>
+					</a>-->
+
+					<!-- start : button-396dd9d1 -->
+					<button class="button-396dd9d1" onclick="ModalPopup.open('modal-full-search');">
+						<div class="fit-cover cover-a2ad29b1 mo:w-[2.2rem] mo:h-[2.2rem]">
+							<svg data-src="/assets/img/byproject/08081630_2.svg"></svg>
+						</div>
+					</button>
+					<!-- // end : button-396dd9d1 -->
+
+					<!-- start : button-79d7586d -->
+					<a href="/mobileTickets" class="button-79d7586d mo:hidden">
+						<div class="fit-cover cover-e4861b3b">
+							<svg data-src="/assets/img/byproject/08081630_3.svg"></svg>
+						</div>
+						<span class="cnt-631c7e73"></span>
+					</a>
+					<!-- // end : button-79d7586d -->
+				</div>
+			</div>
+		</section>
+	</header>
+	<!-- // end : header_mo_2 -->
+
+		<!-- start : header -->
+	<header class="relative mo:hidden h-[--header-hei]">
+		<section class="sec-1e8f40e1">
+			<div class="left-9be32701">
+				<a href="/" class="fit-cover cover-f70a0cd6">
+					<img src="/assets/img/byproject/07170705.png" alt="CINECUBE" />
+				</a>
+			</div>
+			<div class="right-01c9671d">
+				<a href="/member/login" class="button-747bbd51 w-fit">
+					<div class="label">로그인</div>
+				</a>
+
+
+				<div class="box-d02d12d9 ml-[0.8rem]">
+					<div class="text-input-13078b24 inp-fa86a8a0">
+						<input name="#" type="text" id="gnbSearchInput" placeholder="영화검색" />
+						<button class="search-btn">
+							<div class="fit-cover cover-9a027391">
+								<img src="/assets/img/byproject/07311622.svg" alt="검색" onclick="goSearch()"/>
+							</div>
+						</button>
+
+						<script>
+                            const gnbSearchInput = document.getElementById('gnbSearchInput');
+
+                            function goSearch() {
+                                const keyword = (gnbSearchInput.value || '').trim();
+                                if (!keyword) {
+                                    alert('검색어를 입력해주세요.');
+                                    gnbSearchInput.focus();
+                                    return;
+                                }
+
+                                const params = new URLSearchParams({
+                                    searchScope: 'all',
+                                    keyword
+                                });
+
+                                // 자바스크립트로 직접 이동
+                                window.location.href = '/search/cinema?' + params.toString();
+                            }
+                            // 버튼 클릭 시
+                            $("#gnbSearchButton").on("click", goSearch);
+
+                            // Enter 키로도 실행 (input 내부에서 Enter)
+                            $("#gnbSearchInput").on("keydown", function (e) {
+								if (e.key === 'Enter') {
+									goSearch();
+								}
+							});
+
+						</script>
+					</div>
+					<button class="button-1fdfb8c7 pc:w-[2.4rem] pc:h-[2.4rem]" onclick="onClick_6595a2a1()">
+						<div class="fit-cover cover-127e43ae">
+							<img src="/assets/img/byproject/07311622.svg" alt="검색" />
+						</div>
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<ul class="gnb-9efb5e6d original">
+			<!-- loop start -->
+			<li data-save-size=".item-e799b50d-0">
+				<a class="menu-9d9d474a" href="/cinema/now">영화</a>
+			</li>
+			<li data-save-size=".item-e799b50d-1">
+				<a class="menu-9d9d474a" href="/cinema/time-table">시간표</a>
+			</li>
+			<li data-save-size=".item-e799b50d-2">
+				<a class="menu-9d9d474a" href="#" onclick="reservationManager.openDtryxQuickPopup(); return false;">예매</a>
+			</li>
+			<li data-save-size=".item-e799b50d-3">
+				<a class="menu-9d9d474a" href="/event">이벤트</a>
+			</li>
+			<li data-save-size=".item-e799b50d-4">
+				<a class="menu-9d9d474a" href="/about">씨네큐브</a>
+			</li>
+			<li data-save-size=".item-e799b50d-5">
+				<a class="menu-9d9d474a" href="/support/notice">공지 ∙ 문의</a>
+			</li>
+			<!--// loop end -->
+		</ul>
+
+		<ul class="gnb-9efb5e6d clone">
+			<!-- loop start -->
+			<li class="item-e799b50d-0">
+				<a class="menu-9d9d474a" href="/cinema/now">영화</a>
+			</li>
+			<li class="item-e799b50d-1">
+				<a class="menu-9d9d474a" href="/cinema/time-table">시간표</a>
+			</li>
+			<li class="item-e799b50d-2">
+				<a class="menu-9d9d474a" href="#" onclick="reservationManager.openDtryxQuickPopup(); return false;">예매</a>
+			</li>
+			<li class="item-e799b50d-3">
+				<a class="menu-9d9d474a" href="/event">이벤트</a>
+			</li>
+			<li class="item-e799b50d-4">
+				<a class="menu-9d9d474a" href="/about">씨네큐브</a>
+			</li>
+			<li class="item-e799b50d-5">
+				<a class="menu-9d9d474a" href="/support/notice">공지 ∙ 문의</a>
+			</li>
+			<!--// loop end -->
+		</ul>
+	</header>
+
+	<!-- // end : header -->
+
+	<!-- start : pc-sub-menu-box -->
+	<div id="pc-sub-menu-box" class="slide-box">
+		<div>
+			<section class="sec-eb159507">
+				<div class="zone-4565a7c3 w-[20rem] h-full pt-[2rem] pb-[4rem] flex flex-col justify-between">
+					<div>
+						<a href="#" class="button-32b8e1f3 w-full" onclick="reservationManager.openDtryxQuickPopup();
+                        return false;">
+							<div class="label">빠른예매</div>
+						</a>
+					</div>
+					<div class="flex items-center justify-between">
+						<!-- loop start -->
+						<a href="https://www.instagram.com/cinecube_kr/" target="_blank" class="button-8f9bd638">
+							<div class="fit-cover cover-3605631d w-[4.4rem] h-[4.4rem]">
+								<img src="/assets/img/byproject/07252249_1.svg" alt="Instagram cinecube" />
+							</div>
+						</a>
+						<a href="https://www.instagram.com/tcast_movie/" target="_blank" class="button-8f9bd638">
+							<div class="fit-cover cover-3605631d w-[4.4rem] h-[4.4rem]">
+								<img src="/assets/img/byproject/07252249_2.svg" alt="Instagram tcast" />
+							</div>
+						</a>
+						<a href="https://www.facebook.com/cinecube/" target="_blank" class="button-8f9bd638">
+							<div class="fit-cover cover-3605631d w-[4.4rem] h-[4.4rem]">
+								<img src="/assets/img/byproject/07252249_3.svg" alt="Facebook" />
+							</div>
+						</a>
+						<a href="https://x.com/icinecube" target="_blank" class="button-8f9bd638">
+							<div class="fit-cover cover-3605631d w-[4.4rem] h-[4.4rem]">
+								<img src="/assets/img/byproject/07252249_4.svg" alt="X" />
+							</div>
+						</a>
+						<!--// loop end -->
+					</div>
+				</div>
+
+				<div class="relative contents-wrap-1400">
+					<ul class="list-f6bbee77">
+						<!-- loop start -->
+						<li>
+							<ul class="list-774869cb flex flex-col gap-[2rem]">
+								<!-- loop start -->
+								<li>
+									<a href="/cinema/now">
+										<div class="text-1286416e">현재 상영작</div>
+									</a>
+								</li>
+								<li>
+									<a href="/cinema/coming-soon">
+										<div class="text-1286416e">상영 예정작</div>
+									</a>
+								</li>
+								<li>
+									<a href="/cinema/past">
+										<div class="text-1286416e">지난 상영작</div>
+									</a>
+								</li>
+								<!--// loop end -->
+							</ul>
+						</li>
+						<li>
+							<ul class="list-774869cb flex flex-col gap-[2rem]">
+								<!-- loop start -->
+								<li>
+									<a href="/cinema/time-table">
+										<div class="text-1286416e">영화별 시간표</div>
+									</a>
+								</li>
+								<li>
+									<a href="/cinema/time-order-table">
+										<div class="text-1286416e">날짜별 시간표</div>
+									</a>
+								</li>
+								<!--// loop end -->
+							</ul>
+						</li>
+						<li>
+							<ul class="list-774869cb flex flex-col gap-[2rem]">
+								<!-- loop start -->
+								<li>
+									<a href="#" onclick="reservationManager.openDtryxQuickPopup(); return false;">
+										<div class="text-1286416e">예매하기</div>
+									</a>
+								</li>
+								<li>
+									<a href="/reservation/guest">
+										<div class="text-1286416e">비회원 예매/취소</div>
+									</a>
+								</li>
+								<!--// loop end -->
+							</ul>
+						</li>
+						<li>
+							<ul class="list-774869cb flex flex-col gap-[2rem]">
+								<!-- loop start -->
+								<li>
+									<a href="/event/EG001">
+										<div class="text-1286416e">현장 이벤트</div>
+									</a>
+								</li>
+								<li>
+									<a href="/event/EG002">
+										<div class="text-1286416e">씨네토크</div>
+									</a>
+								</li>
+								<li>
+									<a href="/event/EG003">
+										<div class="text-1286416e">시사회</div>
+									</a>
+								</li>
+								<li>
+									<a href="/event/EG004,EG005,EG006">
+										<div class="text-1286416e">기타 이벤트 </div>
+									</a>
+								</li>
+								<li>
+									<a href="/event/past">
+										<div class="text-1286416e">지난 이벤트 </div>
+									</a>
+								</li>
+								<!--// loop end -->
+							</ul>
+						</li>
+						<li>
+							<ul class="list-774869cb flex flex-col gap-[2rem]">
+								<!-- loop start -->
+								<li>
+									<a href="/about/">
+										<div class="text-1286416e">씨네큐브 소개</div>
+									</a>
+								</li>
+								<li>
+									<a href="/about/etiquette">
+										<div class="text-1286416e">에티켓</div>
+									</a>
+								</li>
+								<li>
+									<a href="/about/membership">
+										<div class="text-1286416e">멤버십/VIP</div>
+									</a>
+								</li>
+								<li>
+									<a href="/about/building">
+										<div class="text-1286416e">흥국생명빌딩 </div>
+									</a>
+								</li>
+								<li>
+									<a href="/about/guide">
+										<div class="text-1286416e">관람안내 </div>
+									</a>
+								</li>
+								<li>
+									<a href="/about/location">
+										<div class="text-1286416e">오시는길 </div>
+									</a>
+								</li>
+								<li>
+									<a href="/about/parking">
+										<div class="text-1286416e">주차안내 </div>
+									</a>
+								</li>
+								<li>
+									<a href="/about/tickets">
+										<div class="text-1286416e">관람권/카드</div>
+									</a>
+								</li>
+								<!--// loop end -->
+							</ul>
+						</li>
+						<li>
+							<ul class="list-774869cb flex flex-col gap-[2rem]">
+								<!-- loop start -->
+								<li>
+									<a href="/support/notice">
+										<div class="text-1286416e">공지사항 </div>
+									</a>
+								</li>
+								<li>
+									<a href="/support/inquiry/write">
+										<div class="text-1286416e">1:1문의 </div>
+									</a>
+								</li>
+								<li>
+									<a href="/support/faq">
+										<div class="text-1286416e">FAQ</div>
+									</a>
+								</li>
+								<!--// loop end -->
+							</ul>
+						</li>
+						<!--// loop end -->
+					</ul>
+				</div>
+
+			</section>
+		</div>
+	</div>
+	<!-- // end : pc-sub-menu-box -->
+
+	<!-- start : mo-sub-menu-box -->
+	<div id="mo-sub-menu-box">
+		<div class="wrap-f7ff684a">
+			<div class="top-972f01c9">
+				<section class="sec-35dbb4fe">
+
+					<div class="left-d4bbb826">
+
+
+						<a href="/member/login" class="flex-4441f4e8">
+							<div class="text-44955e02">
+								로그인
+							</div>
+							<div class="fit-cover cover-da40d353 ml-[1.2rem]">
+								<img src="/assets/img/byproject/right_arrow.svg" alt=""/>
+							</div>
+						</a>
+					</div>
+					<div class="right-2c2c5564">
+						<div class="flex-642f34c3">
+
+							<!-- start : button-396dd9d1 -->
+							<button class="button-396dd9d1" onclick="ModalPopup.open('modal-full-search');">
+								<div class="fit-cover cover-a2ad29b1 mo:w-[2.2rem] mo:h-[2.2rem]">
+									<svg data-src="/assets/img/byproject/08081630_2.svg"></svg>
+								</div>
+							</button>
+							<!-- // end : button-396dd9d1 -->
+
+							<!-- start : button-79d7586d -->
+							<a href="/mobileTickets" class="button-79d7586d mo:hidden">
+								<div class="fit-cover cover-e4861b3b">
+									<svg data-src="/assets/img/byproject/08081630_3.svg"></svg>
+								</div>
+								<span class="cnt-631c7e73"></span>
+							</a>
+							<!-- // end : button-79d7586d -->
+						</div>
+					</div>
+					<!--
+              <div class="left-4cb0b4ba flex-auto">
+                <button class="button-e226747c ">
+                  <div class="fit-cover cover-c94c0b76">
+                    <img src="/assets/img/byproject/07161003.png" alt="">
+                  </div>
+                </button>
+                <div class="text-input-0ab44d7e ml-[1rem] flex-auto">
+                  <input name="테스트" type="text" placeholder="검색">
+                  <button class="search-btn">
+                    <div class="fit-cover box-aa09e62d">
+                      <img src="/assets/img/byproject/07160940.png" alt="">
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div class="right-7b009d98 ml-[1.2rem]">
+                <a href="#" class="button-79d7586d ">
+                  <div class="fit-cover cover-e4861b3b">
+                    <img src="/assets/img/byproject/07170747.png" alt="">
+                  </div>
+                  <span class="cnt-631c7e73">6</span>
+                </a>
+              </div>
+              -->
+				</section>
+			</div>
+			<div class="bottom-25609e7f" data-lenis-prevent="true">
+				<section class="sec-2973b527 mt-[1.2rem]">
+
+					<div class="flex items-center justify-between">
+						<!-- loop start -->
+						<a href="#" class="button-ef12e658" onclick="reservationManager.openDtryxQuickPopup();
+                        return false;">
+							<div class="fit-cover cover-8795ea50 mb-[1.2rem] mo:w-[6.4rem] mo:h-[6.4rem]">
+								<img src="/assets/img/byproject/07270833_1.svg" alt="빠른예매" />
+							</div>
+							<div class="label">빠른예매</div>
+						</a>
+						<a href="/cinema/time-table" class="button-ef12e658">
+							<div class="fit-cover cover-8795ea50 mb-[1.2rem] mo:w-[6.4rem] mo:h-[6.4rem]">
+								<img src="/assets/img/byproject/07270833_2.svg" alt="상영시간표" />
+							</div>
+							<div class="label">상영시간표</div>
+						</a>
+						<a href="/event" class="button-ef12e658">
+							<div class="fit-cover cover-8795ea50 mb-[1.2rem] mo:w-[6.4rem] mo:h-[6.4rem]">
+								<img src="/assets/img/byproject/07270833_3.svg" alt="이벤트" />
+							</div>
+							<div class="label">이벤트</div>
+						</a>
+						<a href="/mypage" class="button-ef12e658">
+							<div class="fit-cover cover-8795ea50 mb-[1.2rem] mo:w-[6.4rem] mo:h-[6.4rem]">
+								<img src="/assets/img/byproject/07270833_4.svg" alt="마이페이지" />
+							</div>
+							<div class="label">마이페이지</div>
+						</a>
+						<!--// loop end -->
+					</div>
+				</section>
+
+				<hr class="border-[#EAEAEA] border-t-[.1rem] border-solid my-[2rem]" />
+
+				<ul class="list-41cb4f5e">
+					<!-- loop start -->
+					<li>
+						<label class="btn-5e4425b2">
+							<input class="rdo-713cea97" name="4df60b3c" type="radio" />
+							<div class="text-27ba1cba">영화</div>
+							<div class="fit-cover cover-70414a34">
+								<svg data-src="/assets/img/byproject/down_arrow.svg"></svg>
+							</div>
+						</label>
+
+						<div class="dom-3b282fc4 slide-box">
+							<div>
+								<ul class="list-63129906">
+									<!-- loop start -->
+									<li>
+										<a href="/cinema/now" class="link-6fa25fef">
+											<div class="text-7c8bbe14">현재 상영작 </div>
+										</a>
+									</li>
+									<li>
+										<a href="/cinema/coming-soon" class="link-6fa25fef ">
+											<div class="text-7c8bbe14">상영 예정작 </div>
+										</a>
+									</li>
+									<li>
+										<a href="/cinema/past" class="link-6fa25fef ">
+											<div class="text-7c8bbe14">지난 상영작 </div>
+										</a>
+									</li>
+									<!--// loop end -->
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<label class="btn-5e4425b2">
+							<input class="rdo-713cea97" name="4df60b3c" type="radio" />
+							<div class="text-27ba1cba">
+								시간표 </div>
+							<div class="fit-cover cover-70414a34">
+								<svg data-src="/assets/img/byproject/down_arrow.svg"></svg>
+							</div>
+						</label>
+
+						<div class="dom-3b282fc4 slide-box">
+							<div>
+								<ul class="list-63129906">
+									<!-- loop start -->
+									<li>
+										<a href="/cinema/time-table" class="link-6fa25fef ">
+											<div class="text-7c8bbe14">영화별 시간표 </div>
+										</a>
+									</li>
+									<li>
+										<a href="/cinema/time-order-table" class="link-6fa25fef ">
+											<div class="text-7c8bbe14">날짜별 시간표 </div>
+										</a>
+									</li>
+									<!--// loop end -->
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<label class="btn-5e4425b2">
+							<input class="rdo-713cea97" name="4df60b3c" type="radio" />
+							<div class="text-27ba1cba">
+								예매 </div>
+							<div class="fit-cover cover-70414a34">
+								<svg data-src="/assets/img/byproject/down_arrow.svg"></svg>
+							</div>
+						</label>
+
+						<div class="dom-3b282fc4 slide-box">
+							<div>
+								<ul class="list-63129906">
+									<!-- loop start -->
+									<li>
+										<a href="#" onclick="reservationManager.openDtryxQuickPopup(); return false;" class="link-6fa25fef ">
+											<div class="text-7c8bbe14">
+												예매하기 </div>
+										</a>
+									</li>
+									<li>
+										<a href="/reservation/guest" class="link-6fa25fef ">
+											<div class="text-7c8bbe14">
+												비회원 예매/취소</div>
+										</a>
+									</li>
+									<!--// loop end -->
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<label class="btn-5e4425b2">
+							<input class="rdo-713cea97" name="4df60b3c" type="radio" />
+							<div class="text-27ba1cba">
+								이벤트 </div>
+							<div class="fit-cover cover-70414a34">
+								<svg data-src="/assets/img/byproject/down_arrow.svg"></svg>
+							</div>
+						</label>
+
+						<div class="dom-3b282fc4 slide-box">
+							<div>
+								<ul class="list-63129906">
+									<!-- loop start -->
+									<li>
+										<a href="/event/EG001" class="link-6fa25fef ">
+											<div class="text-7c8bbe14">현장 이벤트 </div>
+										</a>
+									</li>
+									<li>
+										<a href="/event/EG002" class="link-6fa25fef ">
+											<div class="text-7c8bbe14">씨네토크 </div>
+										</a>
+									</li>
+									<li>
+										<a href="/event/EG003" class="link-6fa25fef ">
+											<div class="text-7c8bbe14">시사회 </div>
+										</a>
+									</li>
+									<li>
+										<a href="/event/EG004,EG005,EG006" class="link-6fa25fef ">
+											<div class="text-7c8bbe14">기타 이벤트 </div>
+										</a>
+									</li>
+									<li>
+										<a href="/event/past" class="link-6fa25fef ">
+											<div class="text-7c8bbe14">지난 이벤트 </div>
+										</a>
+									</li>
+									<!--// loop end -->
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<label class="btn-5e4425b2">
+							<input class="rdo-713cea97" name="4df60b3c" type="radio" />
+							<div class="text-27ba1cba">
+								씨네큐브 </div>
+							<div class="fit-cover cover-70414a34">
+								<svg data-src="/assets/img/byproject/down_arrow.svg"></svg>
+							</div>
+						</label>
+
+						<div class="dom-3b282fc4 slide-box">
+							<div>
+								<ul class="list-63129906">
+									<!-- loop start -->
+									<li>
+										<a href="/about/" class="link-6fa25fef ">
+											<div class="text-7c8bbe14">씨네큐브 소개 </div>
+										</a>
+									</li>
+									<li>
+										<a href="/about/etiquette" class="link-6fa25fef ">
+											<div class="text-7c8bbe14">에티켓 </div>
+										</a>
+									</li>
+									<li>
+										<a href="/about/membership" class="link-6fa25fef ">
+											<div class="text-7c8bbe14">멤버십/VIP </div>
+										</a>
+									</li>
+									<li>
+										<a href="/about/building" class="link-6fa25fef ">
+											<div class="text-7c8bbe14">흥국생명빌딩 </div>
+										</a>
+									</li>
+									<li>
+										<a href="/about/guide" class="link-6fa25fef ">
+											<div class="text-7c8bbe14">관람안내 </div>
+										</a>
+									</li>
+									<li>
+										<a href="/about/location" class="link-6fa25fef ">
+											<div class="text-7c8bbe14">오시는길 </div>
+										</a>
+									</li>
+									<li>
+										<a href="/about/parking" class="link-6fa25fef ">
+											<div class="text-7c8bbe14">주차안내 </div>
+										</a>
+									</li>
+									<li>
+										<a href="/about/tickets" class="link-6fa25fef ">
+											<div class="text-7c8bbe14">관람권/카드 </div>
+										</a>
+									</li>
+									<!--// loop end -->
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<label class="btn-5e4425b2">
+							<input class="rdo-713cea97" name="4df60b3c" type="radio" />
+							<div class="text-27ba1cba">
+								공지 ∙ 문의 </div>
+							<div class="fit-cover cover-70414a34">
+								<svg data-src="/assets/img/byproject/down_arrow.svg"></svg>
+							</div>
+						</label>
+
+						<div class="dom-3b282fc4 slide-box">
+							<div>
+								<ul class="list-63129906">
+									<!-- loop start -->
+									<li>
+										<a href="/support/notice" class="link-6fa25fef ">
+											<div class="text-7c8bbe14">공지사항 </div>
+										</a>
+									</li>
+									<li>
+										<a href="/support/inquiry/write" class="link-6fa25fef ">
+											<div class="text-7c8bbe14">1:1문의 </div>
+										</a>
+									</li>
+									<li>
+										<a href="/support/faq" class="link-6fa25fef ">
+											<div class="text-7c8bbe14">FAQ </div>
+										</a>
+									</li>
+									<!--// loop end -->
+								</ul>
+							</div>
+						</div>
+					</li>
+					<!--// loop end -->
+				</ul>
+
+				<hr class="border-[#EAEAEA] border-t-[.1rem] border-solid mt-[2rem] mb-[3rem]" />
+
+				<section class="sec-13f52dab flex items-center justify-center gap-[0.8rem]">
+					<!-- loop start -->
+					<a href="https://www.instagram.com/cinecube_kr" target="_blank" class="button-45ebd058">
+						<div class="fit-cover cover-e0132237">
+							<img src="/assets/img/byproject/07270913_1.svg" alt="씨네큐브 인스타그램" />
+						</div>
+					</a>
+					<a href="https://www.instagram.com/tcast_movie" target="_blank" class="button-45ebd058">
+						<div class="fit-cover cover-e0132237">
+							<img src="/assets/img/byproject/07270913_2.svg" alt="티캐스트 인스타그램" />
+						</div>
+					</a>
+					<a href="https://www.facebook.com/cinecube" target="_blank" class="button-45ebd058">
+						<div class="fit-cover cover-e0132237">
+							<img src="/assets/img/byproject/07270913_3.svg" alt="씨네큐브 페이스북" />
+						</div>
+					</a>
+					<a href="https://x.com/icinecube" target="_blank" class="button-45ebd058">
+						<div class="fit-cover cover-e0132237">
+							<img src="/assets/img/byproject/07270913_4.svg" alt="씨네큐브 X(트위터)" />
+						</div>
+					</a>
+					<!--// loop end -->
+				</section>
+			</div>
+
+		</div>
+	</div>
+	<!-- // end : mo-sub-menu-box -->
+</div>
+<!-- // end : header_box -->
+
+		<main>
+			<div class="contents-wrap-1400 mo:pt-[6.4rem] mo:pb-[8.05rem] pc:pt-[15.6rem] pc:pb-[26.87rem]">
+
+				<div class="mo:hidden">
+
+					<!-- start : breadcrub-d69294bb -->
+					<div class="breadcrub-d69294bb">
+						<div class="fit-cover cover-c338d138">
+							<img src="/assets/img/byproject/07090924.png" alt="" />
+						</div>
+						<div class="box-26ec5f5e">
+							<!-- loop start -->
+							<a class="text-4cf05ae5">
+								홈 </a>
+							<div class="fit-cover cover-ad688366">
+								<img src="/assets/img/byproject/07090926.png" alt="" />
+							</div>
+							<a class="text-4cf05ae5">
+								이벤트 </a>
+							<!--// loop end -->
+						</div>
+					</div>
+					<!-- // end : breadcrub-d69294bb -->
+
+				</div>
+
+				<div class="flex-b235ef5c mo:mt-[0.6rem] pc:mt-[8rem]">
+					<div class="left-5a64f56f">
+						<div class="text-7cd45efe">
+							이벤트
+						</div>
+					</div>
+					<div class="right-2bca7585">
+						<div class="drag-scroll-wrap dsw-622be0d8">
+							<div class="drag-scroll-container">
+								<!-- start : tab-button-90e006cb -->
+								<div class="tab-button-90e006cb">
+									<!-- 전체 탭 -->
+									<!--<label>
+										<input class="rdo-cf43103a" type="radio" name="radio-b543f170"
+										       th:checked="${selectedGubun == 'all'}"
+										       data-url="/event"
+										       onclick="location.href=this.dataset.url" />
+										<div>전체</div>
+									</label>-->
+									<!-- 구분별 탭 (동적 생성) -->
+
+										<label>
+											<input class="rdo-cf43103a" type="radio" name="radio-b543f170"
+											       data-url="/event/EG001"
+											       onclick="location.href=this.dataset.url"/>
+											<div>현장이벤트</div>
+										</label>
+
+										<label>
+											<input class="rdo-cf43103a" type="radio" name="radio-b543f170"
+											       data-url="/event/EG002"
+											       onclick="location.href=this.dataset.url"/>
+											<div>씨네토크</div>
+										</label>
+
+										<label>
+											<input class="rdo-cf43103a" type="radio" name="radio-b543f170"
+											       data-url="/event/EG003"
+											       onclick="location.href=this.dataset.url"/>
+											<div>시사회</div>
+										</label>
+
+
+
+
+
+
+
+									<label>
+										<input class="rdo-cf43103a" type="radio" name="radio-b543f170"
+										       data-url="/event/EG004,EG005,EG006"
+										       onclick="location.href=this.dataset.url"/>
+										<div>기타이벤트</div>
+									</label>
+									<label>
+										<input class="rdo-cf43103a" type="radio" name="radio-b543f170"
+										       data-url="/event/past"
+										       onclick="location.href=this.dataset.url"/>
+										<div>지난이벤트</div>
+									</label>
+								</div>
+								<!-- // end : tab-button-90e006cb -->
+								<script>
+                                    DragScrollContainer.init();
+								</script>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="line-4c2f2e95 mo:hidden pc:mt-[4.8rem] pc:mb-[8rem]"></div>
+
+
+
+				<div class="mo:mt-[1.65rem]">
+
+					<!-- start : filter-box-dc9a5125 -->
+					<div class="filter-box-dc9a5125">
+						<div class="left-64fd589b">
+							<div class="text-6a7e066c">
+								<span>9</span>개의 이벤트
+							</div>
+						</div>
+						<div class="right-8911afd3">
+
+						</div>
+					</div>
+					<!-- // end : filter-box-dc9a5125 -->
+
+				</div>
+
+				<div class="mo:mt-[3.25rem] pc:mt-[4rem]">
+
+					<!-- start : list-0c774320 -->
+					<ul class="list-0c774320">
+						<!-- loop start -->
+						<li data-event-idx="1578">
+							<a href="/event/view/1578" class="item-2ffaf269">
+								<div class="fit-cover cover-37d9befa">
+									<img
+											src="/static/uploads/EVENT/20260804_f63c9940.JPG"
+											alt="&lt;마티 슈프림&gt; 마티의 꿈 포스터 증정"
+											class="event-image" onerror="this.onerror=null;this.src=&#39;/static/uploads/EDITOR/20260804_d9a2e70e.JPG&#39;" />
+								</div>
+
+								<div class="info-60021491 mo:mt-[1rem] pc:mt-[2rem]">
+									<div class="flex-6a6557cc">
+										<div class="text-320c069d">
+											기간
+										</div>
+										<div class="text-b0d6dfe4">26.08.04 ~ 26.08.11</div>
+									</div>
+									<div class="text-ce131c0a mo:mt-[0.8rem] pc:mt-[2.4rem]">&lt;마티 슈프림&gt; 마티의 꿈 포스터 증정</div>
+								</div>
+
+								<div class="tag-list-2e355ea5 mo:mt-[1.2rem] pc:mt-[1.6rem]">
+									<div class="tag-a31609e0">현장이벤트</div>
+									<div class="tag-a31609e0 type-2">
+										선착순
+									</div>
+								</div>
+							</a>
+						</li>
+						<li data-event-idx="1576">
+							<a href="/event/view/1576" class="item-2ffaf269">
+								<div class="fit-cover cover-37d9befa">
+									<img
+											src="/static/uploads/EVENT/20260802_27436ad5.png"
+											alt="&lt;산양들&gt; 씨네토크"
+											class="event-image" onerror="this.onerror=null;this.src=&#39;/static/uploads/EDITOR/20260802_9505f73f.png&#39;" />
+								</div>
+
+								<div class="info-60021491 mo:mt-[1rem] pc:mt-[2rem]">
+									<div class="flex-6a6557cc">
+										<div class="text-320c069d">
+											기간
+										</div>
+										<div class="text-b0d6dfe4">26.08.02 ~ 26.08.09</div>
+									</div>
+									<div class="text-ce131c0a mo:mt-[0.8rem] pc:mt-[2.4rem]">&lt;산양들&gt; 씨네토크</div>
+								</div>
+
+								<div class="tag-list-2e355ea5 mo:mt-[1.2rem] pc:mt-[1.6rem]">
+									<div class="tag-a31609e0">씨네토크</div>
+
+								</div>
+							</a>
+						</li>
+						<li data-event-idx="1575">
+							<a href="/event/view/1575" class="item-2ffaf269">
+								<div class="fit-cover cover-37d9befa">
+									<img
+											src="/static/uploads/EVENT/20260731_2686a0b6.jpg"
+											alt="&lt;시크릿 에이전트&gt; 1977 브라질 포스터 증정"
+											class="event-image" onerror="this.onerror=null;this.src=&#39;/static/uploads/EDITOR/20260731_6add348e.jpg&#39;" />
+								</div>
+
+								<div class="info-60021491 mo:mt-[1rem] pc:mt-[2rem]">
+									<div class="flex-6a6557cc">
+										<div class="text-320c069d">
+											기간
+										</div>
+										<div class="text-b0d6dfe4">26.08.04 ~ 26.08.11</div>
+									</div>
+									<div class="text-ce131c0a mo:mt-[0.8rem] pc:mt-[2.4rem]">&lt;시크릿 에이전트&gt; 1977 브라질 포스터 증정</div>
+								</div>
+
+								<div class="tag-list-2e355ea5 mo:mt-[1.2rem] pc:mt-[1.6rem]">
+									<div class="tag-a31609e0">현장이벤트</div>
+									<div class="tag-a31609e0 type-2">
+										선착순
+									</div>
+								</div>
+							</a>
+						</li>
+						<li data-event-idx="1574">
+							<a href="/event/view/1574" class="item-2ffaf269">
+								<div class="fit-cover cover-37d9befa">
+									<img
+											src="/static/uploads/EVENT/20260731_18dc660a.jpg"
+											alt="&lt;파리의 사생활&gt; 씨네토크"
+											class="event-image" onerror="this.onerror=null;this.src=&#39;/static/uploads/EDITOR/20260731_51e95738.jpg&#39;" />
+								</div>
+
+								<div class="info-60021491 mo:mt-[1rem] pc:mt-[2rem]">
+									<div class="flex-6a6557cc">
+										<div class="text-320c069d">
+											기간
+										</div>
+										<div class="text-b0d6dfe4">26.07.31 ~ 26.08.07</div>
+									</div>
+									<div class="text-ce131c0a mo:mt-[0.8rem] pc:mt-[2.4rem]">&lt;파리의 사생활&gt; 씨네토크</div>
+								</div>
+
+								<div class="tag-list-2e355ea5 mo:mt-[1.2rem] pc:mt-[1.6rem]">
+									<div class="tag-a31609e0">씨네토크</div>
+
+								</div>
+							</a>
+						</li>
+						<li data-event-idx="1573">
+							<a href="/event/view/1573" class="item-2ffaf269">
+								<div class="fit-cover cover-37d9befa">
+									<img
+											src="/static/uploads/EVENT/20260731_c389dfa9.jpg"
+											alt="&lt;애정만세&gt; 프리미어 상영 오리지널 영문 스페셜 포스터 증정"
+											class="event-image" onerror="this.onerror=null;this.src=&#39;/static/uploads/EDITOR/20260731_f8b3bcee.jpg&#39;" />
+								</div>
+
+								<div class="info-60021491 mo:mt-[1rem] pc:mt-[2rem]">
+									<div class="flex-6a6557cc">
+										<div class="text-320c069d">
+											기간
+										</div>
+										<div class="text-b0d6dfe4">26.07.31 ~ 26.08.08</div>
+									</div>
+									<div class="text-ce131c0a mo:mt-[0.8rem] pc:mt-[2.4rem]">&lt;애정만세&gt; 프리미어 상영 오리지널 영문 스페셜 포스터 증정</div>
+								</div>
+
+								<div class="tag-list-2e355ea5 mo:mt-[1.2rem] pc:mt-[1.6rem]">
+									<div class="tag-a31609e0">현장이벤트</div>
+
+								</div>
+							</a>
+						</li>
+						<li data-event-idx="1572">
+							<a href="/event/view/1572" class="item-2ffaf269">
+								<div class="fit-cover cover-37d9befa">
+									<img
+											src="/static/uploads/EVENT/20260731_4ae65b08.jpg"
+											alt="&lt;지느러미&gt; 근미래 포스터 증정"
+											class="event-image" onerror="this.onerror=null;this.src=&#39;/static/uploads/EDITOR/20260731_d8d9399d.jpg&#39;" />
+								</div>
+
+								<div class="info-60021491 mo:mt-[1rem] pc:mt-[2rem]">
+									<div class="flex-6a6557cc">
+										<div class="text-320c069d">
+											기간
+										</div>
+										<div class="text-b0d6dfe4">26.08.04 ~ 26.08.11</div>
+									</div>
+									<div class="text-ce131c0a mo:mt-[0.8rem] pc:mt-[2.4rem]">&lt;지느러미&gt; 근미래 포스터 증정</div>
+								</div>
+
+								<div class="tag-list-2e355ea5 mo:mt-[1.2rem] pc:mt-[1.6rem]">
+									<div class="tag-a31609e0">현장이벤트</div>
+									<div class="tag-a31609e0 type-2">
+										선착순
+									</div>
+								</div>
+							</a>
+						</li>
+						<li data-event-idx="1571">
+							<a href="/event/view/1571" class="item-2ffaf269">
+								<div class="fit-cover cover-37d9befa">
+									<img
+											src="/static/uploads/EVENT/20260731_14d3134d.jpg"
+											alt="&lt;너바나 더 밴드&gt; 멀미케이 패취 증정"
+											class="event-image" onerror="this.onerror=null;this.src=&#39;/static/uploads/EDITOR/20260731_69b0055f.jpg&#39;" />
+								</div>
+
+								<div class="info-60021491 mo:mt-[1rem] pc:mt-[2rem]">
+									<div class="flex-6a6557cc">
+										<div class="text-320c069d">
+											기간
+										</div>
+										<div class="text-b0d6dfe4">26.08.04 ~ 26.08.11</div>
+									</div>
+									<div class="text-ce131c0a mo:mt-[0.8rem] pc:mt-[2.4rem]">&lt;너바나 더 밴드&gt; 멀미케이 패취 증정</div>
+								</div>
+
+								<div class="tag-list-2e355ea5 mo:mt-[1.2rem] pc:mt-[1.6rem]">
+									<div class="tag-a31609e0">현장이벤트</div>
+									<div class="tag-a31609e0 type-2">
+										선착순
+									</div>
+								</div>
+							</a>
+						</li>
+						<li data-event-idx="1570">
+							<a href="/event/view/1570" class="item-2ffaf269">
+								<div class="fit-cover cover-37d9befa">
+									<img
+											src="/static/uploads/EVENT/20260731_b39e9081.jpg"
+											alt="&lt;콘크리트 녹색섬&gt; 영화보는 저녁 시사"
+											class="event-image" onerror="this.onerror=null;this.src=&#39;/static/uploads/EDITOR/20260731_d24e08b0.jpg&#39;" />
+								</div>
+
+								<div class="info-60021491 mo:mt-[1rem] pc:mt-[2rem]">
+									<div class="flex-6a6557cc">
+										<div class="text-320c069d">
+											기간
+										</div>
+										<div class="text-b0d6dfe4">26.07.31 ~ 26.08.10</div>
+									</div>
+									<div class="text-ce131c0a mo:mt-[0.8rem] pc:mt-[2.4rem]">&lt;콘크리트 녹색섬&gt; 영화보는 저녁 시사</div>
+								</div>
+
+								<div class="tag-list-2e355ea5 mo:mt-[1.2rem] pc:mt-[1.6rem]">
+									<div class="tag-a31609e0">시사회</div>
+
+								</div>
+							</a>
+						</li>
+						<!--// loop end -->
+					</ul>
+					<!-- // end : list-0c774320 -->
+
+				</div>
+
+				<div class="area-207ebfa3 mo:mt-[5rem] pc:mt-[11rem]">
+
+					<!-- start : paging-base -->
+					<div class="paging-base">
+						<div class="left-5b21c3a0">
+							<!-- 처음으로 버튼 -->
+
+							<!-- 이전으로 버튼 -->
+
+						</div>
+						<div class="center-9a44476f">
+							<div class="select-native-1b08466f">
+								<select onchange="goToPage(this.value)">
+
+										<option value="1"
+										        selected="selected">1</option>
+
+										<option value="2">2</option>
+
+								</select>
+								<div class="view-label">1</div>
+								<div class="fit-cover toggle-arrow">
+									<img src="/assets/img/byproject/07100722.png" alt="" />
+								</div>
+								<script>
+                                    SelectNative.init();
+
+                                    function goToPage(pageNum) {
+                                        const selectedGubun = "all";
+                                        if (selectedGubun === 'all') {
+                                            window.location.href = '/event?page=' + pageNum;
+                                        } else {
+                                            window.location.href = '/event/' + selectedGubun + '?page=' + pageNum;
+                                        }
+                                    }
+								</script>
+							</div>
+							<div class="text-43958f8b">
+								/ <span>2</span>
+							</div>
+						</div>
+						<div class="right-9c9551ad">
+							<!-- 다음으로 버튼 -->
+							<a href="/event?page=2"
+							   class="btn-9b61778a">
+								<div class="fit-cover cover-fbda77ec">
+									<img src="/assets/img/byproject/07100712_3.png" alt="다음으로" />
+								</div>
+							</a>
+							<!-- 마지막으로 버튼 -->
+							<a href="/event?page=2"
+							   class="btn-9b61778a">
+								<div class="fit-cover cover-fbda77ec">
+									<img src="/assets/img/byproject/07100712_4.png" alt="마지막으로" />
+								</div>
+							</a>
+						</div>
+
+					</div>
+					<!-- // end : paging-base -->
+				</div>
+
+			</div>
+		</main>
+
+		<!-- 기존 푸터 코드 제거하고 레이아웃 포함 -->
+			<!-- start : footer_box -->
+	<div id="footer-box" class=" footer-box">
+		<!-- start : footer_mo -->
+		<footer class="pc:hidden footer-17a6127e">
+			<div class="fit-cover cover-5b58a196">
+				<img src="/assets/img/byproject/07110814.png" />
+			</div>
+
+			<ul class="list-6933e598 mt-[6rem]">
+				<li>
+					<a href="/agreement/PRIVACY">
+						<div class="text-960edd0e black">
+							개인정보처리방침
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="/agreement/USE">
+						<div class="text-960edd0e">
+							이용약관
+						</div>
+					</a>
+				</li>
+			</ul>
+
+			<div class="text-4a3faa26 mt-[4.4rem]">
+				씨네큐브
+			</div>
+
+			<ul class="list-393c43a9 mt-[2.45rem]">
+				<li>
+					<div class="text-85a7a560 w-[3.3rem]">
+						주소
+					</div>
+					<div class="text-7cf914cc">
+						서울특별시 종로구 새문안로 68(신문로 1가, 흥국생명빌딩) 9층
+					</div>
+				</li>
+				<li>
+					<div class="text-85a7a560">
+						영화관
+					</div>
+					<div class="text-7cf914cc">
+						씨네큐브광화문(101-85-30008)
+					</div>
+				</li>
+				<li>
+					<div class="text-85a7a560">
+						사업자
+					</div>
+					<div class="text-7cf914cc">
+						(주)티캐스트(220-87-71134)
+					</div>
+				</li>
+				<li>
+					<div class="text-85a7a560">
+						대표이사
+					</div>
+					<div class="text-7cf914cc">
+						이정화
+					</div>
+					<div class="bar-7137386d mx-[0.8rem]"></div>
+					<div class="text-85a7a560">
+						문의전화
+					</div>
+					<div class="text-7cf914cc">
+						02)2002-7776
+					</div>
+				</li>
+			</ul>
+
+			<div class="box-99d1c56e mt-[4.8rem]">
+
+				<!-- start : select-1c708504 -->
+				<div class="select-native-7c7d55eb select-1c708504">
+					<select name="FAMILY_SITE" class="select-box-link footer-family">
+						<!-- loop start -->
+						<option value="" selected disabled>-- FAMILY SITE --</option>
+						<option value="https://ech.tcast.tv/">E채널</option>
+						<option value="https://ech.tcast.tv/elike">E LIKE</option>
+						<option value="https://ech.tcast.tv/chview">채널뷰</option>
+						<option value="https://ech.tcast.tv/mx">MX</option>
+						<option value="https://ech.tcast.tv/dramacube">드라마큐브</option>
+						<option value="https://ech.tcast.tv/now">채널나우</option>
+						<option value="https://ech.tcast.tv/ever">채널에버</option>
+						<option value="https://ech.tcast.tv/screen">스크린</option>
+						<option value="https://ech.tcast.tv/cinef">씨네프</option>
+						<!--// loop end -->
+					</select>
+					<div class="view-label no-change">FAMILY SITE</div>
+					<div class="fit-cover toggle-arrow">
+						<img src="/assets/img/byproject/07070957.png" />
+					</div>
+					<script>
+	                    SelectNative.init()
+					</script>
+				</div>
+				<!-- // end : select-1c708504 -->
+
+				<!-- start : select-5a41455d -->
+				<div class="select-native-7c7d55eb select-5a41455d">
+					<select name="footerFamily" class="select-box-link footer-family">
+						<option value="" selected disabled>-- 태광그룹 --</option>
+						<!-- loop start -->
+						<option value="http://www.taekwang.co.kr/">태광산업</option>
+						<option value="http://www.daehansf.co.kr/index.jsp">대한화섬</option>
+						<option value="http://www.taekwangsf.com/">태광화섬 유한공사</option>
+						<option value="https://www.heungkuklife.co.kr/">흥국생명</option>
+						<option value="https://www.heungkukfire.co.kr/MAW/main1.do">흥국화재</option>
+						<option value="https://www.heungkuksec.co.kr/">흥국증권</option>
+						<option value="http://www.hkfund.co.kr/">흥국자산운용</option>
+						<option value="https://www.goryosb.co.kr/home">고려저축은행</option>
+						<option value="https://www.yegaramsb.co.kr/main.frm?FRST_LOAD_YN=Y">예가람저축은행</option>
+						<option value="https://www.trncompany.co.kr/main/main.do">티알엔</option>
+						<option value="https://ech.tcast.tv/">티캐스트</option>
+						<option value="https://www.kcttel.com/">한국케이블텔레콤(kct)</option>
+						<option value="https://www.tsis.co.kr/">tsis</option>
+						<option value="https://www.iljufoundation.org/homepage/index.do">일주학술문화재단</option>
+						<option value="https://sehwamuseum.org/">세화미술관</option>
+						<option value="https://www.pinkspiders.co.kr/">핑크스파이더배구단</option>
+					</select>
+					<div class="view-label no-change">태광그룹</div>
+					<div class="fit-cover toggle-arrow">
+						<img src="/assets/img/byproject/07070957.png" />
+					</div>
+					<script>
+	                    SelectNative.init()
+					</script>
+				</div>
+				<!-- // end : select-5a41455d -->
+
+			</div>
+
+			<!-- start : list-c341d58e -->
+			<ul class="list-c341d58e">
+				<!-- loop start -->
+				<li>
+					<a href="https://www.instagram.com/cinecube_kr" target="_blank">
+						<div class="fit-cover box-35c45116">
+							<img src="/assets/img/byproject/07071008_1.png" alt="씨네큐브 인스타그램" />
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/tcast_movie" target="_blank">
+						<div class="fit-cover box-35c45116">
+							<img src="/assets/img/byproject/07071008_2.png" alt="티캐스트 인스타그램" />
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="https://www.facebook.com/cinecube" target="_blank">
+						<div class="fit-cover box-35c45116">
+							<img src="/assets/img/byproject/07071008_3.png" alt="씨네큐브 페이스북" />
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="https://x.com/icinecube" target="_blank">
+						<div class="fit-cover box-35c45116">
+							<img src="/assets/img/byproject/07071008_4.png" alt="씨네큐브 X(트위터)" />
+						</div>
+					</a>
+				</li>
+				<!--// loop end -->
+
+			</ul>
+			<!-- // end : list-c341d58e -->
+
+			<div class="text-f9a2496f mt-[4.8rem]">
+				COPYRIGHT© T.cast ALL RIGHTS RESERVED
+			</div>
+		</footer>
+		<!-- // end : footer_mo -->
+
+		<!-- start : footer -->
+		<footer class="mo:hidden">
+			<section class="sec-aa3ca4d2">
+				<div class="wrap-e36f4c8b">
+					<div class="panel-00e71eb9">
+						<div class="fit-cover box-1805c0aa">
+							<img src="/assets/img/byproject/07070930.png" />
+						</div>
+					</div>
+					<div class="panel-3007f5a9">
+						<div class="left-3ab3b834">
+							<div class="text-861d918e">
+								씨네큐브
+							</div>
+
+							<div class="panel-6927847e">
+								<div class="box-e5db05b8">
+									<div class="text-25acce4f">
+										주소
+									</div>
+									<div class="text-b01de2fb">
+										서울특별시 종로구 새문안로 68(신문로 1가, 흥국생명빌딩) 9층
+									</div>
+								</div>
+								<div class="area-8a8c9ab6">
+									<div class="box-e5db05b8">
+										<div class="text-25acce4f">
+											영화관
+										</div>
+										<div class="text-b01de2fb">
+											씨네큐브광화문(101-85-30008)
+										</div>
+									</div>
+									<div class="bar-a193995c"></div>
+									<div class="box-e5db05b8">
+										<div class="text-25acce4f">
+											사업자
+										</div>
+										<div class="text-b01de2fb">
+											(주)티캐스트(220-87-71134)
+										</div>
+									</div>
+								</div>
+								<div class="area-8a8c9ab6">
+									<div class="box-e5db05b8">
+										<div class="text-25acce4f">
+											대표이사
+										</div>
+										<div class="text-b01de2fb">
+											이정화
+										</div>
+									</div>
+									<div class="bar-a193995c"></div>
+									<div class="box-e5db05b8">
+										<div class="text-25acce4f">
+											문의전화
+										</div>
+										<div class="text-b01de2fb">
+											02)2002-7776
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						<div class="right-2d1251fd">
+
+							<div class="flex-b17b051c">
+								<div class="left-1acabb9e">
+									<ul class="list-f85ea718">
+										<li>
+											<a href="/agreement/PRIVACY">
+												<div class="text-7b515a95">
+													개인정보처리방침
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="/agreement/USE">
+												<div class="text-122a7b8f">
+													이용약관
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<div class="right-38eb869f">
+									<div class="box-e6b39d14">
+
+										<!-- start : select-1c708504 -->
+										<div class="select-native-7c7d55eb select-1c708504">
+											<select name="FAMILY_SITE" class="select-box-link footer-family">
+												<option value="" selected disabled>-- FAMILY SITE --</option>
+												<!-- loop start -->
+												<option value="https://ech.tcast.tv/">E채널</option>
+												<option value="https://ech.tcast.tv/elike">E LIKE</option>
+												<option value="https://ech.tcast.tv/chview">채널뷰</option>
+												<option value="https://ech.tcast.tv/mx">MX</option>
+												<option value="https://ech.tcast.tv/dramacube">드라마큐브</option>
+												<option value="https://ech.tcast.tv/now">채널나우</option>
+												<option value="https://ech.tcast.tv/ever">채널에버</option>
+												<option value="https://ech.tcast.tv/screen">스크린</option>
+												<option value="https://ech.tcast.tv/cinef">씨네프</option>
+												<!--// loop end -->
+											</select>
+											<div class="view-label no-change">FAMILY SITE</div>
+											<div class="fit-cover toggle-arrow">
+												<img src="/assets/img/byproject/07070957.png" />
+											</div>
+											<script>
+	                                            SelectNative.init()
+
+											</script>
+										</div>
+										<!-- // end : select-1c708504 -->
+
+										<!-- start : select-5a41455d -->
+										<div class="select-native-7c7d55eb select-5a41455d">
+											<select name="footerFamily" class="select-box-link footer-family">
+												<option value="" selected disabled>-- 태광그룹 --</option>
+												<option value="http://www.taekwang.co.kr/">태광산업</option>
+												<option value="http://www.daehansf.co.kr/index.jsp">대한화섬</option>
+												<option value="http://www.taekwangsf.com/">태광화섬 유한공사</option>
+												<option value="https://www.heungkuklife.co.kr/">흥국생명</option>
+												<option value="https://www.heungkukfire.co.kr/MAW/main1.do">흥국화재</option>
+												<option value="https://www.heungkuksec.co.kr/">흥국증권</option>
+												<option value="http://www.hkfund.co.kr/">흥국자산운용</option>
+												<option value="https://www.goryosb.co.kr/home">고려저축은행</option>
+												<option value="https://www.yegaramsb.co.kr/main.frm?FRST_LOAD_YN=Y">예가람저축은행</option>
+												<option value="https://www.trncompany.co.kr/main/main.do">티알엔</option>
+												<option value="https://ech.tcast.tv/">티캐스트</option>
+												<option value="https://www.kcttel.com/">한국케이블텔레콤(kct)</option>
+												<option value="https://www.tsis.co.kr/">tsis</option>
+												<option value="https://www.iljufoundation.org/homepage/index.do">일주학술문화재단</option>
+												<option value="https://sehwamuseum.org/">세화미술관</option>
+												<option value="https://www.pinkspiders.co.kr/">핑크스파이더배구단</option>
+											</select>
+											<div class="view-label no-change">태광그룹</div>
+											<div class="fit-cover toggle-arrow">
+												<img src="/assets/img/byproject/07070957.png" />
+											</div>
+											<script>
+	                                            SelectNative.init()
+
+											</script>
+										</div>
+										<!-- // end : select-5a41455d -->
+
+									</div>
+
+									<!-- start : list-c341d58e -->
+									<ul class="list-c341d58e">
+										<!-- loop start -->
+										<li>
+											<a href="https://www.instagram.com/cinecube_kr" target="_blank">
+												<div class="fit-cover box-35c45116">
+													<img src="/assets/img/byproject/07071008_1.png" alt="씨네큐브 인스타그램" />
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="https://www.instagram.com/tcast_movie" target="_blank">
+												<div class="fit-cover box-35c45116">
+													<img src="/assets/img/byproject/07071008_2.png" alt="티캐스트 인스타그램" />
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="https://www.facebook.com/cinecube" target="_blank">
+												<div class="fit-cover box-35c45116">
+													<img src="/assets/img/byproject/07071008_3.png" alt="씨네큐브 페이스북" />
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="https://x.com/icinecube" target="_blank">
+												<div class="fit-cover box-35c45116">
+													<img src="/assets/img/byproject/07071008_4.png" alt="씨네큐브 X(트위터)" />
+												</div>
+											</a>
+										</li>
+										<!--// loop end -->
+
+									</ul>
+									<!-- // end : list-c341d58e -->
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+					<div class="panel-6ba850eb">
+						<div class="text-5bc11ce5">
+							COPYRIGHT© T.CAST ALL RIGHTS RESERVED
+						</div>
+					</div>
+				</div>
+			</section>
+		</footer>
+		<!-- // end : footer -->
+	</div>
+	<!-- // end : footer_box -->
+
+
+	<!-- start : mo-bottom-tab-bar -->
+	<div id="mo-bottom-tab-bar">
+		<ul class="grid-73b73c3d">
+			<!-- loop start -->
+			<li>
+				<button class="button-cfed366c open-mo-sub-btn" data-active-id="ca351636">
+					<div class="fit-cover cover-5ae3c51b">
+						<svg data-src="/assets/img/byproject/07262313_1.svg"></svg>
+					</div>
+					<div class="label mt-[0.5rem]">
+						메뉴 </div>
+				</button>
+			</li>
+
+			<li>
+				<button class="button-cfed366c " data-active-id="4e3e0e4a" onclick="location.href='/';">
+					<div class="fit-cover cover-5ae3c51b">
+						<svg data-src="/assets/img/byproject/07262313_2.svg"></svg>
+					</div>
+					<div class="label mt-[0.5rem]">홈</div>
+				</button>
+			</li>
+
+			<li>
+				<button class="button-345e1fee mx-auto -mt-[1.2rem]" onclick="reservationManager.openDtryxQuickPopup(); return false;">
+					<div class="fit-cover cover-24ec2dbd w-[5rem] h-[5rem]">
+						<img src="/assets/img/byproject/07291650.png" alt="빠른예매"/>
+					</div>
+				</button>
+			</li>
+
+			<li>
+				<button class="button-cfed366c " data-active-id="a1f2350b" onclick="location.href='/cinema/time-table';">
+					<div class="fit-cover cover-5ae3c51b">
+						<svg data-src="/assets/img/byproject/07262313_3.svg"></svg>
+					</div>
+					<div class="label mt-[0.5rem]">시간표 </div>
+				</button>
+			</li>
+
+			<li>
+				<button class="button-cfed366c " data-active-id="0c1d6880" onclick="location.href='/mypage';">
+					<div class="fit-cover cover-5ae3c51b">
+						<svg data-src="/assets/img/byproject/07262313_4.svg"></svg>
+					</div>
+					<div class="label mt-[0.5rem]">
+						<span>마이페이지</span>
+					</div>
+				</button>
+			</li>
+
+			<!--// loop end -->
+		</ul>
+	</div>
+	<!-- // end : mo-bottom-tab-bar -->
+
+	<!-- start : bottom-util-box -->
+	<div id="bottom-util-box">
+		<div class="bottom-util-box-inner">
+			<div class="left-d012d779">
+				<!--<button>left</button>-->
+			</div>
+			<div class="right-4f771267">
+				<div class="box-3550ece3">
+					<button class="button-0feba499" onclick="reservationManager.openDtryxQuickPopup(); return false;">
+						<div class="slide-box-h sb-d9e5d135">
+							<div>
+								<div class="label pl-[1.2rem]">빠른예매</div>
+							</div>
+						</div>
+
+						<div class="flex-be1ec9ad ml-[-0.4rem]">
+							<div class="fit-cover w-[2rem] h-[2rem]">
+								<img src="/assets/img/byproject/07260952.svg" />
+							</div>
+						</div>
+
+					</button>
+					<div class="target-c5e080b1 slide-box">
+						<div>
+							<button class="button-a9030978" onclick="PageManager.scrollTo(0)">
+								<div class="fit-cover box-f3ec3b4d">
+									<img src="/assets/img/byproject/07071031.png" alt="위로 가기" />
+								</div>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // end : bottom-util-box -->
+</div>
+<!-- // end : id wrap -->
+
+
+<div class="modal-container modal-full-search-container" data-lenis-prevent>
+	<div class="back-cover"></div>
+	<div class="position-box">
+		<!-- start : modal-full-search -->
+		<div id="modal-full-search" class="modal-popup modal-full-search">
+			<!--<button class="modal-close-action">Close</button>-->
+			<div class="wrap-562b1c22 full-modal-wrap not-move type-2">
+				<div class="top-34ee978e">
+					<div class="zone-e246706e">
+						<div class="flex-076498f4 flex items-center justify-between mo:h-[6.4rem] mo:px-[--side-padding]">
+							<div class="left-4cb0b4ba flex-auto">
+								<button class="button-e226747c modal-close-action pc:hidden">
+									<div class="fit-cover cover-c94c0b76">
+										<img src="/assets/img/byproject/07161003.png" alt="뒤로가기">
+									</div>
+								</button>
+								<div class="text-input-0ab44d7e mo:ml-[1rem] flex-auto">
+									<input id="mobileGnbSearchInput" type="text" placeholder="검색" />
+									<button class="search-btn" id="mobileGnbSearchButton">
+										<div class="fit-cover box-aa09e62d">
+											<img src="/assets/img/byproject/07160940.png" alt="검색" onclick="goMobileGnbSearch();"/>
+										</div>
+									</button>
+								</div>
+
+								<script>
+                                    const mobileGnbSearchInput = document.getElementById('mobileGnbSearchInput');
+
+                                    function goMobileGnbSearch() {
+                                        const keyword = (mobileGnbSearchInput.value || '').trim();
+                                        if (!keyword) {
+                                            alert('검색어를 입력해주세요.');
+                                            mobileGnbSearchInput.focus();
+                                            return;
+                                        }
+
+                                        const params = new URLSearchParams({
+                                            searchScope: 'all',
+                                            keyword
+                                        });
+
+                                        // 자바스크립트로 직접 이동
+                                        window.location.href = '/search/cinema?' + params.toString();
+                                    }
+                                    // Enter 키로도 실행 (input 내부에서 Enter)
+                                    $("#mobileGnbSearchInput").on("keydown", function (e) {
+                                        if (e.key === 'Enter') {
+                                            goMobileGnbSearch();
+                                        }
+                                    });
+
+								</script>
+							</div>
+							<div class="right-7b009d98 pc:hidden ml-[1.2rem]">
+
+								<!-- start : button-79d7586d -->
+								<a href="/mobileTickets" class="button-79d7586d mo:hidden">
+									<div class="fit-cover cover-e4861b3b">
+										<img src="/assets/img/byproject/08081630_3.svg" alt="온라인 티켓" />
+									</div>
+									<span class="cnt-631c7e73"></span>
+								</a>
+								<!-- // end : button-79d7586d -->
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="bottom-0f3bfff2 modal-close-action">
+				</div>
+			</div>
+			<script>
+                ModalPopup.init()
+			</script>
+		</div>
+		<!-- // end : modal-full-search -->
+	</div>
+</div>
+
+<!-- 로그인 모달 레이아웃 -->
+<div class="modal-container modal-login-container" data-lenis-prevent>
+	<div class="back-cover"></div>
+	<div class="position-box">
+		<!-- start : modal-login -->
+		<div id="modal-login" class="modal-popup">
+			<div class="wrap-692057c9">
+				<button class="modal-close-action btn-1b13fad7" id="closeLoginModalBtn">
+					<div class="fit-cover cover-1c545c9e">
+						<img src="/assets/img/byproject/07120800.png" alt="로그인 레이어 닫기" />
+					</div>
+				</button>
+
+				<div class="text-ab16b5ae mo:mt-[4rem] pc:mt-[4.8rem]">
+					씨네큐브 로그인
+				</div>
+
+				<div class="text-217f1fa2 mo:hidden pc:mt-[2rem]">
+					로그인 후 씨네큐브의 영화를 예매하실 수 있습니다
+				</div>
+
+				<form id="modalLoginForm" novalidate>
+					<!-- CSRF 토큰 추가 -->
+					<input type="hidden" name="_csrf" value="[redacted]" id="csrfToken" />
+					<!-- 현재 페이지 URL을 returnUrl로 전달 -->
+					<input type="hidden" name="returnUrl" id="returnUrl" />
+
+					<div class="area-1a143a36 mo:mt-[2rem] pc:mt-[2.8rem]">
+						<div class="text-input-fb55416a">
+							<div class="label">아이디</div>
+							<input name="username" type="text" id="modalUsername" placeholder="아이디를 입력하세요" value="" required />
+						</div>
+						<div class="text-input-fb55416a mt-[1rem]">
+							<div class="label">비밀번호</div>
+							<input name="password" type="password" id="modalUserPassword" placeholder="비밀번호를 입력하세요" required />
+						</div>
+						<div class="area-b5e37222 mt-[1rem] mo:hidden">
+							<label class="label-2cf32f34">
+								<input class="choice-box-d6228163" type="checkbox" name="remember-username" id="modal-remember-username">
+								<div>
+									아이디 저장
+								</div>
+							</label>
+						</div>
+
+						<div class="area-b5e37222 mt-[1rem] pc:hidden">
+							<label class="label-2cf32f34">
+								<input class="choice-box-d6228163" type="checkbox" name="auto-login" id="auto-login">
+								<div>
+									자동 로그인
+								</div>
+							</label>
+						</div>
+
+						<div class="area-c9a5ceb3">
+							<button type="submit" class="button-f8a31095" id="modalLoginButton">
+								<div class="label">로그인하기</div>
+							</button>
+						</div>
+						<div class="box-d07bcaaa">
+							<a href="/member/findId" class="link-34c98e73">아이디찾기</a>
+							<div class="bar-baa87811"></div>
+							<a href="/member/findPassword" class="link-34c98e73">비밀번호 찾기</a>
+							<div class="bar-baa87811"></div>
+							<a href="/member/signin/step1" class="link-34c98e73">회원가입</a>
+						</div>
+						<!-- start : box-3d986870 -->
+						<div class="box-3d986870">
+							<!-- loop start -->
+							<div class="item-c74b424c">
+								<a href="/member/sns/kakao">
+									<div class="fit-cover cover-b5dbb05b">
+										<img src="/assets/img/byproject/sns_btn_kakao_mo.svg" alt="" />
+									</div>
+								</a>
+							</div>
+							<div class="item-c74b424c">
+								<a href="/member/sns/naver">
+									<div class="fit-cover cover-b5dbb05b">
+										<img src="/assets/img/byproject/sns_btn_naver_mo.svg" alt="" />
+									</div>
+								</a>
+							</div>
+							<div class="item-c74b424c">
+								<a href="/member/sns/apple">
+									<div class="fit-cover cover-b5dbb05b">
+										<img src="/assets/img/byproject/sns_btn_apple_mo.svg" alt="" />
+									</div>
+								</a>
+							</div>
+							<!--<div class="item-c74b424c">
+								<a href="/member/sns/google">
+									<div class="fit-cover cover-b5dbb05b">
+										<img src="/assets/img/byproject/sns_btn_google_mo.svg" alt="" />
+									</div>
+								</a>
+							</div>-->
+							<!--// loop end -->
+						</div>
+						<!-- // end : box-3d986870 -->
+					</div>
+					<div class="box-9efc7fcb">
+						<a href="/reservation/guest" class="button-9fdcb726">
+							<div class="label">비회원으로 영화 예매하기</div>
+						</a>
+					</div>
+				</form>
+			</div>
+			<script>
+                // Util: 쿠키 읽기/쓰기
+                function getCookie(name) {
+                    const value = `; ${document.cookie}`;
+                    const parts = value.split(`; ${name}=`);
+                    if (parts.length === 2) return parts.pop().split(';').shift();
+                    return null;
+                }
+                function setCookie(name, value, days) {
+                    const date = new Date();
+                    date.setTime(date.getTime() + (days*24*60*60*1000));
+                    const expires = "; expires=" + date.toUTCString();
+                    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+                }
+                function deleteCookie(name){ document.cookie = name + "=; Max-Age=0; path=/"; }
+
+                // 초기화: 저장된 아이디를 쿠키/로컬스토리지에서 불러와 채움
+                $(document).ready(function() {
+                    const cookieUsername = getCookie('rememberedUsername');
+                    const lsUsername = localStorage.getItem('rememberedUsername');
+
+                    let remembered = cookieUsername || lsUsername || '';
+
+                    if (remembered) {
+                        $('#modalUsername').val(remembered);
+                        $('#modal-remember-username').prop('checked', true);
+                    }
+
+                    // 앱 접속 여부
+                    const isApp = /*false*/ false;
+                    // 앱일 경우 UX상 아이디 저장 기본 체크(선택)
+                    // if (isApp && !remembered) { $('#modal-remember-username').prop('checked', true); }
+                });
+
+                // 로그인 모달이 열릴 때 현재 페이지 URL을 returnUrl에 설정
+                function setReturnUrl() {
+                    const returnUrlInput = document.getElementById('returnUrl');
+                    if (returnUrlInput) {
+                        // SNS 로그인 버튼이 클릭되었는지 확인
+                        const snsLoginClicked = sessionStorage.getItem('snsLoginClicked');
+
+                        if (snsLoginClicked === 'true') {
+                            // SNS 로그인인 경우 메인페이지 URL 사용
+                            const mainPageUrl = window.location.origin + '/';
+                            returnUrlInput.value = mainPageUrl;
+                            // console.log('SNS 로그인 - 메인페이지 URL 설정:', mainPageUrl);
+                        } else {
+                            // 일반 로그인인 경우 현재 페이지 URL 사용
+                            const currentUrl = window.location.origin + window.location.pathname;
+                            returnUrlInput.value = currentUrl;
+                            // console.log('일반 로그인 - 현재 페이지 URL 설정:', currentUrl);
+                        }
+                    }
+                }
+
+                // SNS 로그인 상태 초기화
+                function resetSnsLoginState() {
+                    sessionStorage.removeItem('snsLoginClicked');
+                    sessionStorage.removeItem('snsLoginReturnUrl');
+                }
+
+                // AJAX 로그인 처리
+                async function handleAjaxLogin(event) {
+                    event.preventDefault();
+                    const form = document.getElementById('modalLoginForm');
+                    const username = document.getElementById('modalUsername').value.trim();
+                    const password = document.getElementById('modalUserPassword').value;
+
+                    // 1) 공개키 조회 → 2) RSA 암호화 → 3) encPassword 전송
+                    let encPasswordB64 = null;
+                    try {
+                        const base64Spki = await fetchLoginPublicKey();
+                        const pubKey = await importRsaPublicKey(base64Spki);
+                        encPasswordB64 = await rsaEncryptToBase64(pubKey, password);
+                    } catch (e) {
+                        console.error('암호화 실패:', e);
+                        alert('보안 초기화에 실패했습니다. 잠시 후 다시 시도해주세요.');
+                        return;
+                    }
+
+                    const formData = new FormData();
+                    formData.append('username', username);
+                    formData.append('encPassword', encPasswordB64);
+                    formData.append('returnUrl', document.getElementById('returnUrl').value || '');
+                    // 자동로그인 체크 전달
+                    const autoLoginChecked = document.getElementById('auto-login')?.checked;
+                    if (autoLoginChecked) formData.append('auto-login', 'on');
+                    const csrf = document.getElementById('csrfToken');
+                    if (csrf) formData.append(csrf.name || '_csrf', csrf.value);
+
+                    fetch('/member/ajax-login', {
+                        method: 'POST',
+                        body: formData,
+                        credentials: 'same-origin'
+                    })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.success) {
+                        sessionStorage.setItem('loginAttempt', 'true');
+                        const usernameVal = username;
+                        if ($('#modal-remember-username').is(':checked')) {
+                            setCookie('rememberedUsername', usernameVal, 30);
+                            try { localStorage.setItem('rememberedUsername', usernameVal); } catch (e) {}
+                        } else {
+                            deleteCookie('rememberedUsername');
+                            try { localStorage.removeItem('rememberedUsername'); } catch (e) {}
+                        }
+                        ModalPopup.close('modal-login');
+                        window.location.reload();
+                        } else {
+                            if (data.message && data.message.trim().length > 0) alert(data.message);
+                        }
+                    })
+                    .catch(err => {
+                        console.error('로그인 요청 오류:', err);
+                        showLoginError('로그인 처리 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.');
+                    });
+                }
+
+                // DOM이 로드된 후 초기 설정
+                document.addEventListener('DOMContentLoaded', function() {
+                    setReturnUrl();
+
+                    // 로그인 폼 이벤트 리스너 추가
+                    const loginForm = document.getElementById('modalLoginForm');
+                    const closeLoginModalBtn = document.getElementById('closeLoginModalBtn');
+
+                    if (loginForm) {
+                        loginForm.addEventListener('submit', handleAjaxLogin);
+                    }
+
+                    // 엔터키 처리
+                    const usernameInput = document.getElementById('modalUsername');
+                    const passwordInput = document.getElementById('modalUserPassword');
+
+                    if (usernameInput) {
+                        usernameInput.addEventListener('keypress', function(e) {
+                            if (e.key === 'Enter') {
+                                handleAjaxLogin(e);
+                            }
+                        });
+                    }
+
+                    if (passwordInput) {
+                        passwordInput.addEventListener('keypress', function(e) {
+                            if (e.key === 'Enter') {
+                                handleAjaxLogin(e);
+                            }
+                        });
+                    }
+
+                    // SNS 로그인 버튼 클릭 시 파라미터(returnUrl, auto-login) 부여
+                    const snsLoginButtons = document.querySelectorAll('a[href^="/member/sns/"]');
+                    snsLoginButtons.forEach(button => {
+                        button.addEventListener('click', function(e) {
+                            // SNS 로그인 상태 저장
+                            sessionStorage.setItem('snsLoginClicked', 'true');
+
+                            // 메인페이지 URL 고정 (쿠키 반영 안정성 위해)
+                            const mainPageUrl = window.location.origin + '/';
+
+                            // 세션 스토리지에 메인페이지 URL 저장
+                            sessionStorage.setItem('snsLoginReturnUrl', mainPageUrl);
+
+                            // href 구성: returnUrl + auto-login
+                            const originalHref = this.getAttribute('href');
+                            const url = new URL(originalHref, window.location.origin);
+                            url.searchParams.set('returnUrl', mainPageUrl);
+                            const autoLoginChecked = document.getElementById('auto-login')?.checked;
+                            if (autoLoginChecked) {
+                                url.searchParams.set('auto-login', 'on');
+                            } else {
+                                url.searchParams.delete('auto-login');
+                            }
+                            this.href = url.pathname + (url.search ? url.search : '');
+                        });
+                    });
+
+                    // 모달이 열릴 때마다 URL 업데이트
+                    const originalModalOpen = window.ModalPopup?.open;
+                    if (originalModalOpen) {
+                        window.ModalPopup.open = function(modalId) {
+                            const result = originalModalOpen.call(this, modalId);
+                            if (modalId === 'modal-login') {
+                                // 약간의 지연 후 URL 설정 (모달이 완전히 열린 후)
+                                setTimeout(() => {
+                                    setReturnUrl();
+                                }, 100);
+                            }
+                            return result;
+                        };
+                    }
+
+                    // MutationObserver로 모달 표시 상태 감지 (백업 방법)
+                    const observer = new MutationObserver(function(mutations) {
+                        mutations.forEach(function(mutation) {
+                            const target = mutation.target;
+                            if (target.classList && target.classList.contains('modal-login-container')) {
+                                // 모달이 표시되는 상태인지 확인
+                                const isVisible = target.style.display !== 'none' &&
+                                    !target.classList.contains('hidden') &&
+                                    target.offsetParent !== null;
+                                if (isVisible) {
+                                    setReturnUrl();
+                                }
+                            }
+                        });
+                    });
+
+                    // 모달 컨테이너 관찰 시작
+                    const modalContainer = document.querySelector('.modal-login-container');
+                    if (modalContainer) {
+                        observer.observe(modalContainer, {
+                            attributes: true,
+                            attributeFilter: ['style', 'class'],
+                            childList: true,
+                            subtree: true
+                        });
+                    }
+
+                    closeLoginModalBtn.addEventListener('click', function(e) {
+						e.preventDefault();
+                        ModalPopup.close('modal-login');
+					});
+                });
+
+
+			</script>
+            <script>
+                async function fetchLoginPublicKey() {
+                  const res = await fetch('/member/login-public-key', { credentials: 'same-origin' });
+                  const data = await res.json();
+                  if (!data || !data.publicKey) throw new Error('PUBLIC_KEY_FETCH_FAILED');
+                  return data.publicKey; // base64(SPKI)
+                }
+                async function importRsaPublicKey(base64Spki) {
+                  const der = Uint8Array.from(atob(base64Spki), c => c.charCodeAt(0)).buffer;
+                  return await window.crypto.subtle.importKey(
+                    'spki', der,
+                    { name: 'RSA-OAEP', hash: 'SHA-256' },
+                    false, ['encrypt']
+                  );
+                }
+                async function rsaEncryptToBase64(pubKey, text) {
+                  const enc = new TextEncoder().encode(text);
+                  const buf = await window.crypto.subtle.encrypt({ name: 'RSA-OAEP' }, pubKey, enc);
+                  const bytes = new Uint8Array(buf);
+                  let bin = ''; bytes.forEach(b => bin += String.fromCharCode(b));
+                  return btoa(bin);
+                }
+                </script>
+		</div>
+		<!-- // end : modal-login -->
+
+	</div>
+</div>
+
+
+
+</body>
+</html>

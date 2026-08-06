@@ -1,0 +1,277 @@
+name: Refresh and deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Refresh and deployment mode
+        required: true
+        default: full
+        type: choice
+        options:
+          - full
+          - seats
+          - deploy
+  schedule:
+    - cron: "7 */3 * * *"
+    - cron: "22,37,52 0-14,23 * * *"
+    - cron: "7 1,2,4,5,7,8,10,11,13,14,23 * * *"
+
+permissions: {}
+
+concurrency: { group: production-pages, queue: max }
+
+env:
+  TZ: Asia/Seoul
+  npm_config_audit: "false"
+  npm_config_engine_strict: "true"
+  npm_config_fund: "false"
+  npm_config_prefer_offline: "true"
+  PUBLIC_SITE_URL: https://85rtykbxzr-web.github.io
+
+jobs:
+  build:
+    name: Refresh and build
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      actions: read
+      contents: write
+      pages: read
+    steps:
+      - name: Check out the latest main branch
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: main
+          fetch-depth: 2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 22.23.2
+          cache: npm
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
+
+      - name: Select refresh mode
+        id: mode
+        env:
+          DISPATCH_MODE: ${{ inputs.mode }}
+          SCHEDULE_EXPRESSION: ${{ github.event.schedule }}
+        run: |
+          set -euo pipefail
+          case "$GITHUB_EVENT_NAME" in
+            push)
+              mode="deploy"
+              ;;
+            workflow_dispatch)
+              mode="$DISPATCH_MODE"
+              ;;
+            schedule)
+              if [ "$SCHEDULE_EXPRESSION" = "7 */3 * * *" ]; then
+                mode="full"
+              else
+                mode="seats"
+              fi
+              ;;
+            *)
+              echo "Unsupported event: $GITHUB_EVENT_NAME" >&2
+              exit 1
+              ;;
+          esac
+
+          case "$mode" in
+            full|seats|deploy) ;;
+            *)
+              echo "Unsupported refresh mode: $mode" >&2
+              exit 1
+              ;;
+          esac
+
+          echo "mode=$mode" >> "$GITHUB_OUTPUT"
+          echo "Selected refresh mode: $mode"
+
+      - name: Read scheduled run creation time
+        if: github.event_name == 'schedule'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          run_json="$(
+            curl --fail --silent --show-error --location \
+              --retry 3 --retry-all-errors \
+              --header "Accept: application/vnd.github+json" \
+              --header "Authorization: Bearer $GITHUB_TOKEN" \
+              --header "X-GitHub-Api-Version: 2022-11-28" \
+              "$GITHUB_API_URL/repos/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+          )"
+          created_at="$(
+            RUN_JSON="$run_json" node --input-type=module -e '
+              const payload = JSON.parse(process.env.RUN_JSON || "{}");
+              if (!payload.created_at || !Number.isFinite(Date.parse(payload.created_at))) {
+                throw new Error("GitHub Actions run created_at is missing or invalid");
+              }
+              process.stdout.write(payload.created_at);
+            '
+          )"
+          echo "CI_PIPELINE_CREATED_AT=$created_at" >> "$GITHUB_ENV"
+
+      - name: Reject a stale full refresh
+        if: steps.mode.outputs.mode == 'full'
+        env:
+          MAX_PIPELINE_AGE_MINUTES: "240"
+        run: node scripts/assert-fresh-pipeline.mjs
+
+      - name: Reject a stale seat refresh
+        if: steps.mode.outputs.mode == 'seats'
+        env:
+          MAX_PIPELINE_AGE_MINUTES: "75"
+        run: node scripts/assert-fresh-pipeline.mjs
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Refresh the full public data set
+        if: steps.mode.outputs.mode == 'full'
+        run: |
+          set -euo pipefail
+          npm run update:sources
+          npm run update:popular
+          npm run check
+
+      - name: Audit the refreshed public tree before committing
+        if: steps.mode.outputs.mode == 'full'
+        run: npm run audit:public
+
+      - name: Commit refreshed public data
+        if: steps.mode.outputs.mode == 'full'
+        run: |
+          set -euo pipefail
+          generated_paths=(
+            data/schedule.json
+            data/source-health.json
+            data/incoming-candidates.json
+            data/live-sessions.json
+            data/source-snapshots
+            data/community-trends.json
+            data/community-trends-cache.json
+            assets/recommendation-posters
+          )
+          base_commit="$(git rev-parse HEAD)"
+
+          if [ -z "$(git status --porcelain -- "${generated_paths[@]}")" ]; then
+            echo "No full-refresh data changes to commit."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A -- "${generated_paths[@]}"
+          git commit -m "Update schedule data [skip ci]"
+
+          git fetch origin "+refs/heads/main:refs/remotes/origin/main"
+          if [ "$(git rev-parse refs/remotes/origin/main)" != "$base_commit" ]; then
+            echo "main moved while the full refresh was running. Refusing a stale data push." >&2
+            exit 1
+          fi
+
+          git push origin HEAD:main
+
+      - name: Refresh live seat status
+        if: steps.mode.outputs.mode == 'seats'
+        run: npm run update:seats
+
+      - name: Verify and build the seat refresh
+        if: steps.mode.outputs.mode == 'seats'
+        env:
+          STATIC_SITE_INDEXABLE: "true"
+          STATIC_DEPLOYMENT_ID: ${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          export STATIC_DEPLOYMENT_COMMIT="$(git rev-parse HEAD)"
+          npm run check
+
+      - name: Preserve the newest compatible seat snapshot
+        if: steps.mode.outputs.mode == 'deploy'
+        env:
+          CI_PIPELINE_ID: ${{ github.run_id }}
+          SEOUL_CINEMA_PUBLIC_SCHEDULE_URL: https://85rtykbxzr-web.github.io/data/schedule.json
+        run: node scripts/preserve-deployed-seat-snapshot.mjs
+
+      - name: Audit and build the committed deployment
+        if: steps.mode.outputs.mode == 'deploy'
+        env:
+          STATIC_SITE_INDEXABLE: "true"
+          STATIC_DEPLOYMENT_ID: ${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          npm run audit
+          npm run audit:parser-quality
+          export STATIC_DEPLOYMENT_COMMIT="$(git rev-parse HEAD)"
+          npm run build:static
+
+      - name: Build the full refresh deployment
+        if: steps.mode.outputs.mode == 'full'
+        env:
+          STATIC_SITE_INDEXABLE: "true"
+          STATIC_DEPLOYMENT_ID: ${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          export STATIC_DEPLOYMENT_COMMIT="$(git rev-parse HEAD)"
+          npm run build:static:deploy
+
+      - name: Refuse to publish from an outdated main commit
+        run: |
+          set -euo pipefail
+          git fetch origin "+refs/heads/main:refs/remotes/origin/main"
+          if [ "$(git rev-parse refs/remotes/origin/main)" != "$(git rev-parse HEAD)" ]; then
+            echo "main moved during this run. Refusing to publish an older commit." >&2
+            exit 1
+          fi
+          test -f dist/healthz.json
+
+      - name: Audit the public tree before artifact upload
+        run: npm run audit:public
+
+      - name: Upload the Pages artifact
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4
+        with:
+          path: dist
+          retention-days: 1
+
+  deploy:
+    name: Deploy and verify
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      id-token: write
+      pages: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    outputs:
+      page_url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out verification scripts
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 22.23.2
+
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4
+
+      - name: Verify the live deployment
+        env:
+          EXPECTED_DEPLOYMENT_ID: ${{ github.run_id }}
+          PAGES_VERIFY_URL: ${{ steps.deployment.outputs.page_url }}
+        run: node scripts/verify-pages-deployment.mjs

@@ -1,0 +1,516 @@
+{
+  "label": "최근 3일 추천",
+  "generatedAt": "2026-08-06T03:17:10.577Z",
+  "weekStart": "2026-08-04",
+  "weekEnd": "2026-08-06",
+  "windowStart": "2026-08-04",
+  "windowEnd": "2026-08-06",
+  "rollingDays": 3,
+  "scoreModel": {
+    "windowDays": 3,
+    "recencyDecay": 0.72
+  },
+  "items": [
+    {
+      "rank": 1,
+      "title": "오디세이",
+      "posterUrl": "/assets/recommendation-posters/12a1f0054306abaf.webp",
+      "localPosterUrl": "/assets/recommendation-posters/12a1f0054306abaf.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.dtryx.com/reserve/movie.do?cgid=81630DDE-489C-4034-A6FB-9AD54E055E5B&BrandCd=indieart&CinemaCd=000065&MovieCd=029254&PlaySDT=2026-08-06&ScreenCd=02&ShowSeq=3",
+      "score": 2130.2,
+      "signal": 166.4,
+      "positiveSignal": 166.4,
+      "mentionCount": 25.1,
+      "rawPositiveSignal": 186,
+      "rawMentionCount": 29,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "forest",
+        "arirang",
+        "momo",
+        "kucine",
+        "filmforum",
+        "heyri",
+        "laika"
+      ],
+      "venueNames": [
+        "더숲아트시네마",
+        "아리랑시네센터",
+        "아트하우스 모모",
+        "KU시네마테크",
+        "필름포럼",
+        "헤이리시네마",
+        "라이카시네마"
+      ],
+      "nextDate": "2026-08-06",
+      "nextTime": "14:00",
+      "evidence": [
+        {
+          "title": "오디세이아관련 영화 최고작은 역시 이거지",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1836817&page=1",
+          "date": "2026-08-05",
+          "positive": 6,
+          "rawPositive": 6,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "최고",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "오디세이 보고 왔는데",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1836772&page=2",
+          "date": "2026-08-05",
+          "positive": 2,
+          "rawPositive": 2,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "좋고",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 8,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "오디세이 원작 모르고 봤으면 더 재밌었을 듯",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1836701&page=3",
+          "date": "2026-08-05",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "오디세이 봤는데 ㄹㅇ 놀란은 놀란이네 진짜",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1837208&page=1",
+          "date": "2026-08-06",
+          "positive": 14,
+          "rawPositive": 14,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "꼭 봐",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "꼭봐",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "봐라",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "오디세이 이 분위기면 오스카 작품상, 감독상 가능한가",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1837189&page=1",
+          "date": "2026-08-06",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "좋음",
+              "count": 2,
+              "weight": 2,
+              "score": 4,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 3,
+          "commentPositive": 4,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://img.dtryx.com/poster/2026/07/E9CCF4F9-B861-4E09-877F-A240E963F5DF.small.jpg"
+    },
+    {
+      "rank": 2,
+      "title": "블루 벨벳",
+      "posterUrl": "/assets/recommendation-posters/6dcdd0c0482d0f77.webp",
+      "localPosterUrl": "/assets/recommendation-posters/6dcdd0c0482d0f77.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://movieland.co/product/blue-velvet/288/?item_code=P00000LC00DM",
+      "score": 163.1,
+      "signal": 13,
+      "positiveSignal": 13,
+      "mentionCount": 0.7,
+      "rawPositiveSignal": 18,
+      "rawMentionCount": 1,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "movieland"
+      ],
+      "venueNames": [
+        "무비랜드"
+      ],
+      "nextDate": "2026-08-09",
+      "nextTime": "13:30",
+      "evidence": [
+        {
+          "title": "린치는 멀홀드 다음 2위작이 블루벨벳 vs 트윈 픽스",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1836693&page=3",
+          "date": "2026-08-05",
+          "positive": 18,
+          "rawPositive": 18,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "최고",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "최고",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "최고",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 6,
+          "commentPositive": 18,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        }
+      ],
+      "posterSourceUrl": "https://movieland.co/web/product/big/202607/06f7bd103c6ec74a193a9e750a4ded2a.jpg"
+    },
+    {
+      "rank": 3,
+      "title": "경멸",
+      "posterUrl": "/assets/recommendation-posters/ef2d34cb9bd9a9a8.webp",
+      "localPosterUrl": "/assets/recommendation-posters/ef2d34cb9bd9a9a8.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121388&playDt=20260806&tsId=TS0044&pno=2",
+      "score": 61,
+      "signal": 4,
+      "positiveSignal": 4,
+      "mentionCount": 1,
+      "rawPositiveSignal": 4,
+      "rawMentionCount": 1,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "sangsangmadang",
+        "emu",
+        "heyri",
+        "laika",
+        "kucine",
+        "momo",
+        "forest"
+      ],
+      "venueNames": [
+        "KT&G 상상마당 시네마",
+        "에무시네마",
+        "헤이리시네마",
+        "라이카시네마",
+        "KU시네마테크",
+        "아트하우스 모모",
+        "더숲아트시네마"
+      ],
+      "nextDate": "2026-08-06",
+      "nextTime": "11:55",
+      "evidence": [
+        {
+          "title": "경멸 재밌네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1837083&page=3",
+          "date": "2026-08-06",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 1,
+          "commentPositive": 4,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://img.dtryx.com/poster/2026/06/F243913F-6481-48FB-A61C-8E56BD95E430.small.jpg"
+    },
+    {
+      "rank": 4,
+      "title": "마티 슈프림",
+      "posterUrl": "/assets/recommendation-posters/d2d9d8a7ce0c6d80.webp",
+      "localPosterUrl": "/assets/recommendation-posters/d2d9d8a7ce0c6d80.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://arthousemomo.co.kr/pages/ti.php?MovieCd=028854&PlaySDT=2026-08-06&ScreenCd=01&ShowSeq=2",
+      "score": 61,
+      "signal": 4,
+      "positiveSignal": 4,
+      "mentionCount": 1,
+      "rawPositiveSignal": 4,
+      "rawMentionCount": 1,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "momo",
+        "kucine",
+        "cinecube",
+        "emu",
+        "forest",
+        "sangsangmadang",
+        "filmforum",
+        "laika"
+      ],
+      "venueNames": [
+        "아트하우스 모모",
+        "KU시네마테크",
+        "씨네큐브 광화문",
+        "에무시네마",
+        "더숲아트시네마",
+        "KT&G 상상마당 시네마",
+        "필름포럼",
+        "라이카시네마"
+      ],
+      "nextDate": "2026-08-06",
+      "nextTime": "13:00",
+      "evidence": [
+        {
+          "title": "마티슈프림이 오디세이보다 재밌었음",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1837103&page=3",
+          "date": "2026-08-06",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://img.dtryx.com/poster/2026/07/F0BA36E2-02BD-4E6B-ADFC-F160EA8E30F5.small.jpg"
+    }
+  ],
+  "testerOnly": false,
+  "promotedToMain": true,
+  "sourceInternal": {
+    "kind": "public-community-positive-signal",
+    "galleryId": "nouvellevague",
+    "fetchedPostCount": 225,
+    "listedPostCount": 292,
+    "detailedPostCount": 80,
+    "commentFetchCount": 80,
+    "commentCount": 226,
+    "commentFetchErrorCount": 0,
+    "scannedPageCount": 6,
+    "reachedLookbackStart": true,
+    "oldestScannedDate": "2026-08-05",
+    "newestScannedDate": "2026-08-06",
+    "scanMode": "daily",
+    "candidateWindowStart": "2026-08-06",
+    "candidateWindowEnd": "2026-08-20",
+    "candidateCount": 156,
+    "seedLookbackDays": 3,
+    "seedStart": "2026-08-04",
+    "listLookbackDays": 1,
+    "listWindowStart": "2026-08-06",
+    "listPageCap": 180,
+    "minimumListPages": 6,
+    "scoreModel": {
+      "windowDays": 3,
+      "recencyDecay": 0.72
+    },
+    "scoredPostDays": [
+      "2026-08-06"
+    ],
+    "signalMode": "positive-only",
+    "positiveTermGroups": [
+      {
+        "label": "strong",
+        "weight": 6,
+        "terms": [
+          "ㅆㅅㅌㅊ",
+          "씹상타",
+          "개명작",
+          "갓작",
+          "걸작",
+          "인생작",
+          "올해의",
+          "최고",
+          "미쳤",
+          "미친 영화",
+          "미친영화",
+          "개쩜",
+          "개쩐다",
+          "개쩌",
+          "쩐다",
+          "압도",
+          "강추",
+          "꼭 봐",
+          "꼭봐",
+          "극장에서 봐야"
+        ]
+      },
+      {
+        "label": "clear",
+        "weight": 4,
+        "terms": [
+          "ㅅㅌㅊ",
+          "상타치",
+          "개좋",
+          "존좋",
+          "존잼",
+          "꿀잼",
+          "개재밌",
+          "재밌",
+          "재밋",
+          "재미있",
+          "재미남",
+          "명작",
+          "수작",
+          "추천",
+          "극장용",
+          "극장서",
+          "극장가서",
+          "훌륭",
+          "잘 만들",
+          "잘만들",
+          "감탄",
+          "여운",
+          "감동",
+          "만족",
+          "재관람"
+        ]
+      },
+      {
+        "label": "soft",
+        "weight": 2,
+        "terms": [
+          "좋았다",
+          "좋았음",
+          "좋더라",
+          "좋음",
+          "좋네",
+          "좋긴",
+          "좋고",
+          "볼만",
+          "괜찮",
+          "인상적",
+          "취저",
+          "흥미롭",
+          "재밋네",
+          "나쁘지 않",
+          "봐라",
+          "볼 가치",
+          "볼가치"
+        ]
+      }
+    ],
+    "negativeTermGroups": [],
+    "negativeHandling": "ignored-for-ranking",
+    "questionPatterns": [
+      "[?？]",
+      "어떰|어때|어떤데|어떤가|어떠냐",
+      "볼\\s*만\\s*한(?:가|지|가요|지요)|볼\\s*만\\s*하(?:냐|니|나|노|냐고|ㄴ가|ㄴ지|ㅁ\\?)",
+      "볼망함|볼까|볼지|보러\\s*갈|보러갈|봐도\\s*(?:됨|되|괜찮)",
+      "괜찮(?:냐|음\\?|을까|나|은가|은지)|좋(?:냐|음\\?|을까|나|은가|은지)|재밌(?:냐|음\\?|을까|나|는가|는지)|재밋(?:냐|음\\?|을까|나|는가|는지)",
+      "추천\\s*좀|추천좀|본\\s*사람|본사람|본\\s*놈|본놈",
+      "하냐|하니|하노|해야\\s*함|해야함"
+    ],
+    "reviewQuestionPatterns": [
+      "볼\\s*만|어떰|어때|어떤데|어떤가|어떠냐",
+      "재밌|재밋|재미|좋(?:냐|음|은가|은지|을까|나)|괜찮",
+      "추천|평\\s*어|평이|후기|명작|걸작|수작|꿀잼|존잼|노잼|별로|비추",
+      "잘\\s*만듦|잘\\s*만듬|잘만듦|잘만듬"
+    ],
+    "posterProvider": "verified-image-official-source+known-poster-url+wikipedia-pageimage-fallback",
+    "errors": []
+  }
+}
