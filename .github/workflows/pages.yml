@@ -9,16 +9,12 @@ on:
       mode:
         description: Refresh and deployment mode
         required: true
-        default: full
+        default: deploy
         type: choice
         options:
+          - deploy
           - full
           - seats
-          - deploy
-  schedule:
-    - cron: "7 */3 * * *"
-    - cron: "22,37,52 0-14,23 * * *"
-    - cron: "7 1,2,4,5,7,8,10,11,13,14,23 * * *"
 
 permissions: {}
 
@@ -61,7 +57,6 @@ jobs:
         id: mode
         env:
           DISPATCH_MODE: ${{ inputs.mode }}
-          SCHEDULE_EXPRESSION: ${{ github.event.schedule }}
         run: |
           set -euo pipefail
           case "$GITHUB_EVENT_NAME" in
@@ -70,13 +65,6 @@ jobs:
               ;;
             workflow_dispatch)
               mode="$DISPATCH_MODE"
-              ;;
-            schedule)
-              if [ "$SCHEDULE_EXPRESSION" = "7 */3 * * *" ]; then
-                mode="full"
-              else
-                mode="seats"
-              fi
               ;;
             *)
               echo "Unsupported event: $GITHUB_EVENT_NAME" >&2

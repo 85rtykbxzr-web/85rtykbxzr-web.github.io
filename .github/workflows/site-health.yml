@@ -2,8 +2,6 @@ name: Check public site health
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "43 0 * * *"
 
 permissions: {}
 
