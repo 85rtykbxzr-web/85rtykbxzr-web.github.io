@@ -8,25 +8,31 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos-15, windows-2025]
+        os: [ubuntu-latest, ubuntu-24.04-arm]
     runs-on: ${{ matrix.os }}
-    timeout-minutes: 4
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
         with:
           node-version: 22.23.2
-      - name: Probe source connectivity without changing data
+      - name: Probe official API ports and timetable transports
         shell: bash
         run: |
           node --input-type=module <<'JS'
-          import fs from 'node:fs';
+          import dns from 'node:dns/promises';
+          import { execFile } from 'node:child_process';
+          import { promisify } from 'node:util';
+          const exec=promisify(execFile);
+          for(const host of ['api.dtryx.com','www.dtryx.com','www.cinematheque.seoul.kr'])console.log(JSON.stringify({host,ips:await dns.lookup(host,{all:true}).catch(e=>e.code)}));
+          const path='/dtryx/cms/thirdparty/movie/third-party-type2-timetable-play-date-list?BrandCd=indieart&CinemaCd=000067&MovieCd=&ChannelCd=homepage&WorkGuID=324A2914-AB19-42A3-BDFE-58A08B2DC35D&EngVerYn=N';
           const sources=[
-            {sourceId:'moviee-live',url:'https://moviee.co.kr/api/TicketApi/GetPlayDateList?tIdList=130&mId=&groupCd=-1&mode=0&gId=&pId='},
-            {sourceId:'dtryx-public',url:'https://www.dtryx.com/cinema/showseq_list.do?BrandCd=indieart&CinemaCd=000067&PlaySDT=2026-09-12'},
-            {sourceId:'momo-timetable',url:'https://www.arthousemomo.co.kr/pages/showtimes.php'},
-            {sourceId:'heyri-public',url:'https://scinema.org/cinema/showseq_list.do?BrandCd=indieart&CinemaCd=000071&PlaySDT=2026-09-12'},
-            {sourceId:'dtryx-api',url:'https://api.dtryx.com:30443/dtryx/cms/thirdparty/movie/third-party-type2-timetable-play-date-list?BrandCd=indieart&CinemaCd=000067&MovieCd=&ChannelCd=homepage&WorkGuID=324A2914-AB19-42A3-BDFE-58A08B2DC35D&EngVerYn=N'}
+            ['dtryx-https443','https://api.dtryx.com'+path],
+            ['dtryx-https30443','https://api.dtryx.com:30443'+path],
+            ['dtryx-public-http','http://www.dtryx.com/cinema/showseq_list.do?BrandCd=indieart&CinemaCd=000067&PlaySDT=2026-09-12'],
+            ['sac-https','https://www.cinematheque.seoul.kr/bbs/content.php?co_id=timetable'],
+            ['sac-http','http://www.cinematheque.seoul.kr/bbs/content.php?co_id=timetable']
           ];
-          for(let i=0;i<sources.length;i+=5)await Promise.all(sources.slice(i,i+5).map(async x=>{const start=Date.now();try{const r=await fetch(x.url,{signal:AbortSignal.timeout(15000),headers:{'user-agent':'Mozilla/5.0','accept':'*/*'}});await r.arrayBuffer();console.log(JSON.stringify({source:x.sourceId,status:r.status,ms:Date.now()-start}))}catch(e){console.log(JSON.stringify({source:x.sourceId,error:e.message,cause:e.cause?.code,ms:Date.now()-start}))}}));
+          await Promise.all(sources.map(async ([source,url])=>{const start=Date.now();try{const r=await fetch(url,{signal:AbortSignal.timeout(20000),headers:{'user-agent':'Mozilla/5.0','accept':'*/*'}});const text=await r.text();let rows;try{rows=JSON.parse(text).Recordset?.length;}catch{}console.log(JSON.stringify({source,status:r.status,url:r.url,ms:Date.now()-start,bytes:text.length,rows,marker:text.includes('timetable')}));}catch(e){console.log(JSON.stringify({source,error:e.message,cause:e.cause?.code,ms:Date.now()-start}));}}));
+          for(const [source,url] of sources.filter(([s])=>['dtryx-https443','sac-https'].includes(s))){const r=await exec('curl',['-4','-I','--max-time','20',url]).catch(e=>({stdout:e.stdout,stderr:e.stderr}));console.log(JSON.stringify({curl:source,output:r.stdout,error:r.stderr?.slice(-700)}));}
           JS
