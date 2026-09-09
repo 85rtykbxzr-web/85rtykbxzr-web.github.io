@@ -21,6 +21,12 @@ jobs:
         run: |
           node --input-type=module <<'JS'
           import fs from 'node:fs';
-          const sources=JSON.parse(fs.readFileSync('data/source-health.json')).health.filter(x=>!x.skipped&&x.url);
+          const sources=[
+            {sourceId:'moviee-live',url:'https://moviee.co.kr/api/TicketApi/GetPlayDateList?tIdList=130&mId=&groupCd=-1&mode=0&gId=&pId='},
+            {sourceId:'dtryx-public',url:'https://www.dtryx.com/cinema/showseq_list.do?BrandCd=indieart&CinemaCd=000067&PlaySDT=2026-09-12'},
+            {sourceId:'momo-timetable',url:'https://www.arthousemomo.co.kr/pages/showtimes.php'},
+            {sourceId:'heyri-public',url:'https://scinema.org/cinema/showseq_list.do?BrandCd=indieart&CinemaCd=000071&PlaySDT=2026-09-12'},
+            {sourceId:'dtryx-api',url:'https://api.dtryx.com:30443/dtryx/cms/thirdparty/movie/third-party-type2-timetable-play-date-list?BrandCd=indieart&CinemaCd=000067&MovieCd=&ChannelCd=homepage&WorkGuID=324A2914-AB19-42A3-BDFE-58A08B2DC35D&EngVerYn=N'}
+          ];
           for(let i=0;i<sources.length;i+=5)await Promise.all(sources.slice(i,i+5).map(async x=>{const start=Date.now();try{const r=await fetch(x.url,{signal:AbortSignal.timeout(15000),headers:{'user-agent':'Mozilla/5.0','accept':'*/*'}});await r.arrayBuffer();console.log(JSON.stringify({source:x.sourceId,status:r.status,ms:Date.now()-start}))}catch(e){console.log(JSON.stringify({source:x.sourceId,error:e.message,cause:e.cause?.code,ms:Date.now()-start}))}}));
           JS
