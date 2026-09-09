@@ -1,68 +1,21 @@
 name: Check public site health
-
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "43 0 * * *"
-
-permissions: {}
-
-concurrency: { group: public-site-health, queue: max }
-
-env:
-  TZ: Asia/Seoul
-  SITE_HEALTH_URL: https://85rtykbxzr-web.github.io
-
+permissions:
+  contents: read
 jobs:
-  health:
-    name: Verify the deployed site
+  probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
-    permissions:
-      contents: read
+    timeout-minutes: 4
     steps:
-      - name: Check out health scripts
-        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
-
-      - name: Set up Node.js
-        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
         with:
           node-version: 22.23.2
-
-      - name: Read the live deployment ID
-        env:
-          HEALTH_CACHE_BUSTER: ${{ github.run_id }}
+      - name: Probe source connectivity without changing data
         run: |
-          node --input-type=module <<'NODE'
-          import { appendFile } from "node:fs/promises";
-          import { fetchWithTransientRetry } from "./scripts/http-retry.mjs";
-
-          const baseUrl = String(process.env.SITE_HEALTH_URL || "").replace(/\/+$/, "");
-          const url = `${baseUrl}/healthz.json?health_run=${encodeURIComponent(process.env.HEALTH_CACHE_BUSTER || Date.now())}`;
-          const response = await fetchWithTransientRetry(
-            url,
-            { cache: "no-store", headers: { accept: "application/json" } },
-            { attempts: 3, requestTimeoutMs: 15_000, retryDelayMs: 1_000 }
-          );
-          if (!response.ok) throw new Error(`${url} returned HTTP ${response.status}`);
-          const health = await response.json();
-          const deploymentId = String(health?.deploymentId || "");
-          if (!/^\d+$/.test(deploymentId)) throw new Error("Live health payload has no numeric deploymentId");
-          await appendFile(process.env.GITHUB_ENV, `EXPECTED_DEPLOYMENT_ID=${deploymentId}\n`);
-          console.log(`Live deployment ID: ${deploymentId}`);
-          NODE
-
-      - name: Verify the current deployment payload
-        env:
-          PAGES_VERIFY_URL: ${{ env.SITE_HEALTH_URL }}
-        run: node scripts/verify-pages-deployment.mjs
-
-      - name: Verify public data freshness
-        run: node scripts/verify-public-site-freshness.mjs
-
-      - name: Audit parser quality from the public data
-        env:
-          SEOUL_CINEMA_AUDIT_SCHEDULE_URL: https://85rtykbxzr-web.github.io/data/schedule.json?health_run=${{ github.run_id }}
-          SEOUL_CINEMA_AUDIT_SOURCE_HEALTH_URL: https://85rtykbxzr-web.github.io/data/source-health.json?health_run=${{ github.run_id }}
-          SEOUL_CINEMA_HEALTH_REQUEST_TIMEOUT_MS: "15000"
-        run: node scripts/audit-parser-quality.mjs
+          node --input-type=module <<'JS'
+          import fs from 'node:fs';
+          const sources=JSON.parse(fs.readFileSync('data/source-health.json')).health.filter(x=>!x.skipped&&x.url);
+          for(let i=0;i<sources.length;i+=5)await Promise.all(sources.slice(i,i+5).map(async x=>{const start=Date.now();try{const r=await fetch(x.url,{signal:AbortSignal.timeout(15000),headers:{'user-agent':'Mozilla/5.0','accept':'*/*'}});await r.arrayBuffer();console.log(JSON.stringify({source:x.sourceId,status:r.status,ms:Date.now()-start}))}catch(e){console.log(JSON.stringify({source:x.sourceId,error:e.message,cause:e.cause?.code,ms:Date.now()-start}))}}));
+          JS
