@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-09-09T06:24:06.451Z",
+  "generatedAt": "2026-09-09T08:06:37.293Z",
   "weekStart": "2026-09-07",
   "weekEnd": "2026-09-09",
   "windowStart": "2026-09-07",
@@ -37,7 +37,7 @@
       "evidence": [
         {
           "title": "바닷마을 다이어리는 어땠냐",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850331&page=3",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850331&page=4",
           "date": "2026-09-09",
           "positive": 4,
           "rawPositive": 4,
@@ -71,6 +71,61 @@
     },
     {
       "rank": 2,
+      "title": "더 드라마",
+      "posterUrl": "/assets/recommendation-posters/40f5f0963689ae80.webp",
+      "localPosterUrl": "/assets/recommendation-posters/40f5f0963689ae80.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121681&playDt=20260909&tsId=TS0039&pno=4",
+      "score": 37,
+      "signal": 2,
+      "positiveSignal": 2,
+      "mentionCount": 1,
+      "rawPositiveSignal": 2,
+      "rawMentionCount": 1,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "kucine",
+        "filmforum",
+        "cinecube"
+      ],
+      "venueNames": [
+        "KU시네마테크",
+        "필름포럼",
+        "씨네큐브 광화문"
+      ],
+      "nextDate": "2026-09-09",
+      "nextTime": "19:30",
+      "evidence": [
+        {
+          "title": "더 드라마 하임 썅년 연기 물 올랐네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850491&page=1",
+          "date": "2026-09-09",
+          "positive": 2,
+          "rawPositive": 2,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "볼만",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_177ef811.jpg"
+    },
+    {
+      "rank": 3,
       "title": "어떻게 해야 했을까?",
       "posterUrl": "/assets/recommendation-posters/1afd45512fb98782.webp",
       "localPosterUrl": "/assets/recommendation-posters/1afd45512fb98782.webp",
@@ -129,36 +184,6 @@
       "posterSourceUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbJls3D%2FdJMcadJqj1f%2FAAAAAAAAAAAAAAAAAAAAACeMfcsEnFeBQJWMcvIohcvB_4ORkerlfY_wDyJXwSo3%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1790780399%26allow_ip%3D%26allow_referer%3D%26signature%3DnMY%252BG758kZMubJT3miJ5F2mCJH8%253D"
     },
     {
-      "rank": 3,
-      "title": "더 드라마",
-      "posterUrl": "/assets/recommendation-posters/40f5f0963689ae80.webp",
-      "localPosterUrl": "/assets/recommendation-posters/40f5f0963689ae80.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121681&playDt=20260909&tsId=TS0039&pno=4",
-      "score": 0,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 0,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 0,
-      "scheduleBackfill": true,
-      "venueIds": [
-        "kucine",
-        "filmforum",
-        "cinecube"
-      ],
-      "venueNames": [
-        "KU시네마테크",
-        "필름포럼",
-        "씨네큐브 광화문"
-      ],
-      "nextDate": "2026-09-09",
-      "nextTime": "19:30",
-      "evidence": [],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_177ef811.jpg"
-    },
-    {
       "rank": 4,
       "title": "위커 맨: 파이널 컷",
       "posterUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260818_bfba8fe2.jpg",
@@ -196,11 +221,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 192,
+    "fetchedPostCount": 219,
     "listedPostCount": 292,
-    "detailedPostCount": 18,
-    "commentFetchCount": 18,
-    "commentCount": 41,
+    "detailedPostCount": 23,
+    "commentFetchCount": 23,
+    "commentCount": 70,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -209,7 +234,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-09-09",
     "candidateWindowEnd": "2026-09-23",
-    "candidateCount": 104,
+    "candidateCount": 102,
     "seedLookbackDays": 3,
     "seedStart": "2026-09-07",
     "listLookbackDays": 1,
