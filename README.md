@@ -38,6 +38,17 @@ Dtryx는 GitHub의 Linux·macOS·Windows·ARM 러너에서 TCP 연결 시간이 
 
 예약 시각은 목표 시각이며 GitHub Actions 대기열에 따라 실제 시작이 늦어질 수 있습니다. 마지막 갱신 시각은 사이트와 `healthz.json`에 표시됩니다.
 
+### GitHub 내부 타이머
+
+예약 트리거의 실행 기록이 생성되지 않는 상황을 보완하기 위해 `Keep hosted data refreshing` 작업을 사용합니다. `refresh-cadence` 환경의 GitHub 관리 대기 타이머가 15분 뒤 다음 작업을 허용하고, 저장소의 `GITHUB_TOKEN`으로 다음 확인을 호출합니다. 대기 중 실행기를 점유하지 않으며 별도 서버·토큰·맥북은 필요하지 않습니다.
+
+각 확인은 공개 데이터의 갱신 구간과 진행 중 배포를 읽고 필요한 전체/좌석 갱신 및 일일 점검만 시작합니다. 동시에 하나의 타이머만 유지하고, 환경 대기가 빠졌을 때 빠르게 반복 실행하지 않도록 실제 대기 시간을 검사합니다. `REFRESH_CLOCK_ENABLED=true`일 때 이 타이머가 갱신을 이어 갑니다. 기존 전체/좌석 cron과 매시 `:17` 타이머 재시작 예약도 복구 경로로 유지합니다. 타이머는 이미 갱신된 구간이나 진행 중 작업을 확인하면 수집을 생략하고, 모든 실제 배포는 동일한 직렬 대기열을 사용합니다.
+
+- 시작: `refresh-cadence` 환경 대기 15분, main 브랜치만 허용, `REFRESH_CLOCK_MIN_WAIT_MINUTES=14`, `REFRESH_CLOCK_ENABLED=true` 설정 후 `Keep hosted data refreshing`을 한 번 실행합니다.
+- 타이머 중지: `REFRESH_CLOCK_ENABLED=false`로 바꾸고 대기 중인 타이머 실행을 취소합니다. 기존 cron은 유지됩니다.
+- 자동 갱신 전체 중지: `HOSTED_COLLECTION_READY=false`로 바꾸고 진행 중 실행을 취소합니다.
+- 타이머가 중단되면 GitHub Actions에 실패 원인이 남습니다. 수정 후 같은 작업을 수동 실행하면 다시 이어집니다.
+
 전체/좌석 작업은 직렬 실행합니다. 대기 중 배포 설정이 바뀌거나, main이 이동하거나, 데이터 검증에 실패하면 배포하지 않습니다. 전체 수집 데이터만 커밋하고 좌석 갱신은 배포 산출물에 반영합니다. 정리한 HTML 스냅샷과 코드에는 공개 감사를 적용합니다.
 
 GitHub Actions의 `Refresh and deploy GitHub Pages`에서 `full`, `seats`, `deploy`를 수동 실행할 수 있습니다. `CI`와 `Check public site health`도 수동 실행을 지원합니다.

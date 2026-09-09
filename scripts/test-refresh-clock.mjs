@@ -1,0 +1,22 @@
+import assert from "node:assert/strict";
+import { refreshPlan, assertClockWait } from "./refresh-clock.mjs";
+
+const now = Date.parse("2026-09-09T12:07:00+09:00");
+const health = { ok: true, scheduleGeneratedAt: "2026-09-09T11:41:00+09:00", seatStatusVerifiedAt: "2026-09-09T11:53:00+09:00" };
+assert.equal(refreshPlan({ health, now }).mode, "full", "the three-hour slot advances at :07");
+assert.equal(refreshPlan({ health, now: now - 1 }).mode, null, "do not refresh before the interval boundary");
+const fresh = { ...health, scheduleGeneratedAt: "2026-09-09T12:08:00+09:00", seatStatusVerifiedAt: "2026-09-09T12:08:00+09:00" };
+assert.equal(refreshPlan({ health: fresh, now: now + 16 * 60_000 }).mode, "seats");
+assert.equal(refreshPlan({ health, pagesRuns: [{ status: "waiting" }], now }).mode, null, "a pending deployment prevents duplicate refreshes");
+assert.equal(refreshPlan({ health: { ...health, scheduleGeneratedAt: "invalid" }, now }).mode, "full");
+assert.equal(refreshPlan({ health: { ...health, scheduleGeneratedAt: "2027-01-01T00:00:00Z" }, now }).mode, "full");
+const night = Date.parse("2026-09-10T02:30:00+09:00");
+assert.equal(refreshPlan({ health: { ok: true, scheduleGeneratedAt: "2026-09-10T00:10:00+09:00", seatStatusVerifiedAt: "2026-09-09T23:53:00+09:00" }, now: night }).mode, null, "night seats do not trigger a refresh");
+assert.equal(refreshPlan({ health: fresh, now, healthRuns: [{ status: "completed", conclusion: "success", created_at: "2026-09-09T10:00:00+09:00" }] }).healthDue, false);
+assert.equal(refreshPlan({ health: fresh, now, healthRuns: [{ status: "completed", conclusion: "failure", created_at: "2026-09-09T10:00:00+09:00" }] }).healthDue, true, "failed health checks are retried");
+assert.equal(refreshPlan({ health: fresh, now, healthRuns: [{ status: "in_progress", created_at: "2026-09-09T10:00:00+09:00" }] }).healthDue, false);
+assert.equal(assertClockWait(new Date(now - 15 * 60_000).toISOString(), 14, now), 15);
+assert.throws(() => assertClockWait(new Date(now - 10_000).toISOString(), 14, now));
+assert.throws(() => assertClockWait("invalid", 14, now));
+assert.throws(() => assertClockWait(new Date(now).toISOString(), 0, now));
+console.log("Refresh clock tests passed (intervals, night hours, duplicate prevention, health retries, and rapid-loop guard).");

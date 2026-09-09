@@ -1,0 +1,68 @@
+name: Keep hosted data refreshing
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 * * * *"
+
+permissions: {}
+
+# Exactly one clock can wait at a time. GitHub keeps one pending successor.
+concurrency:
+  group: hosted-refresh-clock
+  cancel-in-progress: false
+
+env:
+  TZ: Asia/Seoul
+
+jobs:
+  refresh:
+    if: vars.HOSTED_COLLECTION_READY == 'true' && vars.REFRESH_CLOCK_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      actions: write
+    outputs:
+      wait_started_at: ${{ steps.clock.outputs.started_at }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 22.23.2
+      - name: Start due collection and site checks
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/refresh-clock.mjs tick
+      - name: Record the start of the managed wait
+        id: clock
+        if: always()
+        run: node -e 'require("node:fs").appendFileSync(process.env.GITHUB_OUTPUT, `started_at=${new Date().toISOString()}\n`)'
+
+  next:
+    name: Wait before the next refresh
+    needs: refresh
+    if: always() && !cancelled() && vars.HOSTED_COLLECTION_READY == 'true' && vars.REFRESH_CLOCK_ENABLED == 'true'
+    environment: refresh-cadence
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      actions: write
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: 22.23.2
+      - name: Continue after the GitHub environment timer
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CLOCK_WAIT_STARTED_AT: ${{ needs.refresh.outputs.wait_started_at }}
+          CLOCK_MIN_WAIT_MINUTES: ${{ vars.REFRESH_CLOCK_MIN_WAIT_MINUTES || '14' }}
+        run: node scripts/refresh-clock.mjs next
