@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-09-09",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-09-09T08:06:31.277Z",
+  "updatedAt": "2026-09-09T09:14:13.432Z",
   "days": {
     "2026-09-07": {
       "호프": {
@@ -499,41 +499,34 @@
       }
     },
     "2026-09-09": {
-      "더드라마": {
-        "title": "더 드라마(2D)",
-        "positiveSignal": 2,
-        "mentionCount": 1,
+      "옵세션": {
+        "title": "옵세션(2D)",
+        "positiveSignal": 34,
+        "mentionCount": 7,
         "evidence": [
           {
-            "title": "더 드라마 하임 썅년 연기 물 올랐네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850491&page=1",
+            "title": "옵세션 재밌네요",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850529&page=1",
             "date": "2026-09-09",
-            "positive": 2,
-            "rawPositive": 2,
+            "positive": 4,
+            "rawPositive": 4,
             "negative": 0,
             "positiveHits": [
               {
-                "term": "볼만",
+                "term": "재밌",
                 "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
               }
             ],
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 2,
+            "commentCount": 0,
             "commentPositive": 0,
             "commentNegative": 0
-          }
-        ]
-      },
-      "옵세션": {
-        "title": "옵세션(2D)",
-        "positiveSignal": 30,
-        "mentionCount": 6,
-        "evidence": [
+          },
           {
             "title": "옵세션 까는 감정은 딱 그거임",
             "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850488&page=1",
@@ -559,7 +552,7 @@
           },
           {
             "title": "옵세션 백룸 대전은 그냥",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850471&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850471&page=2",
             "date": "2026-09-09",
             "positive": 4,
             "rawPositive": 4,
@@ -579,22 +572,22 @@
             "commentCount": 3,
             "commentPositive": 4,
             "commentNegative": 0
-          },
+          }
+        ]
+      },
+      "더드라마": {
+        "title": "더 드라마(2D)",
+        "positiveSignal": 16,
+        "mentionCount": 3,
+        "evidence": [
           {
-            "title": "옵세션은 남여관객 나눠서 공포감 조성한거 맞는거같음",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850470&page=1",
+            "title": "더 드라마 ㅈㄴ 여초영화인줄 알았는데",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850525&page=1",
             "date": "2026-09-09",
-            "positive": 8,
-            "rawPositive": 8,
+            "positive": 4,
+            "rawPositive": 4,
             "negative": 0,
             "positiveHits": [
-              {
-                "term": "잘만들",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              },
               {
                 "term": "재밌",
                 "count": 1,
@@ -606,8 +599,98 @@
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 7,
-            "commentPositive": 8,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "더드라마에서 언급되는 루이말 영화",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850512&page=1",
+            "date": "2026-09-09",
+            "positive": 10,
+            "rawPositive": 10,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "걸작",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 3,
+            "commentPositive": 10,
+            "commentNegative": 0
+          },
+          {
+            "title": "더 드라마 하임 썅년 연기 물 올랐네",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850491&page=1",
+            "date": "2026-09-09",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "볼만",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "담요를입은사람": {
+        "title": "담요를 입은 사람",
+        "positiveSignal": 10,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "담요를 입은 사람 봐라",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850523&page=1",
+            "date": "2026-09-09",
+            "positive": 10,
+            "rawPositive": 10,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "꼭 봐",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "봐라",
+                "count": 2,
+                "weight": 2,
+                "score": 4,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
             "commentNegative": 0
           }
         ]

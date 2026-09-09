@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-09-09T08:06:37.293Z",
+  "generatedAt": "2026-09-09T09:14:20.378Z",
   "weekStart": "2026-09-07",
   "weekEnd": "2026-09-09",
   "windowStart": "2026-09-07",
@@ -13,6 +13,178 @@
   "items": [
     {
       "rank": 1,
+      "title": "더 드라마",
+      "posterUrl": "/assets/recommendation-posters/40f5f0963689ae80.webp",
+      "localPosterUrl": "/assets/recommendation-posters/40f5f0963689ae80.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121681&playDt=20260909&tsId=TS0039&pno=4",
+      "score": 215,
+      "signal": 16,
+      "positiveSignal": 16,
+      "mentionCount": 3,
+      "rawPositiveSignal": 16,
+      "rawMentionCount": 3,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "kucine",
+        "filmforum",
+        "cinecube"
+      ],
+      "venueNames": [
+        "KU시네마테크",
+        "필름포럼",
+        "씨네큐브 광화문"
+      ],
+      "nextDate": "2026-09-09",
+      "nextTime": "19:30",
+      "evidence": [
+        {
+          "title": "더 드라마 ㅈㄴ 여초영화인줄 알았는데",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850525&page=1",
+          "date": "2026-09-09",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "더드라마에서 언급되는 루이말 영화",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850512&page=1",
+          "date": "2026-09-09",
+          "positive": 10,
+          "rawPositive": 10,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "걸작",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 3,
+          "commentPositive": 10,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "더 드라마 하임 썅년 연기 물 올랐네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850491&page=1",
+          "date": "2026-09-09",
+          "positive": 2,
+          "rawPositive": 2,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "볼만",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_177ef811.jpg"
+    },
+    {
+      "rank": 2,
+      "title": "담요를 입은 사람",
+      "posterUrl": "/assets/recommendation-posters/19fee0b48adfa052.webp",
+      "localPosterUrl": "/assets/recommendation-posters/19fee0b48adfa052.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-09-10&movieCd=027432&playSDT=2026-09-10&screenId=02&showSeq=6",
+      "score": 133,
+      "signal": 10,
+      "positiveSignal": 10,
+      "mentionCount": 1,
+      "rawPositiveSignal": 10,
+      "rawMentionCount": 1,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "cinecube",
+        "indiespace",
+        "filmforum"
+      ],
+      "venueNames": [
+        "씨네큐브 광화문",
+        "인디스페이스",
+        "필름포럼"
+      ],
+      "nextDate": "2026-09-10",
+      "nextTime": "17:50",
+      "evidence": [
+        {
+          "title": "담요를 입은 사람 봐라",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850523&page=1",
+          "date": "2026-09-09",
+          "positive": 10,
+          "rawPositive": 10,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "꼭 봐",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "봐라",
+              "count": 2,
+              "weight": 2,
+              "score": 4,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_3826837b.jpg"
+    },
+    {
+      "rank": 3,
       "title": "바닷마을 다이어리",
       "posterUrl": "/assets/recommendation-posters/7918aa07bba667de.webp",
       "localPosterUrl": "/assets/recommendation-posters/7918aa07bba667de.webp",
@@ -70,62 +242,7 @@
       "posterSourceUrl": "https://movieland.co/web/product/big/202609/12090ed421b7b9789a2886d7c2c0b6cd.jpg"
     },
     {
-      "rank": 2,
-      "title": "더 드라마",
-      "posterUrl": "/assets/recommendation-posters/40f5f0963689ae80.webp",
-      "localPosterUrl": "/assets/recommendation-posters/40f5f0963689ae80.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121681&playDt=20260909&tsId=TS0039&pno=4",
-      "score": 37,
-      "signal": 2,
-      "positiveSignal": 2,
-      "mentionCount": 1,
-      "rawPositiveSignal": 2,
-      "rawMentionCount": 1,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "kucine",
-        "filmforum",
-        "cinecube"
-      ],
-      "venueNames": [
-        "KU시네마테크",
-        "필름포럼",
-        "씨네큐브 광화문"
-      ],
-      "nextDate": "2026-09-09",
-      "nextTime": "19:30",
-      "evidence": [
-        {
-          "title": "더 드라마 하임 썅년 연기 물 올랐네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850491&page=1",
-          "date": "2026-09-09",
-          "positive": 2,
-          "rawPositive": 2,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "볼만",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_177ef811.jpg"
-    },
-    {
-      "rank": 3,
+      "rank": 4,
       "title": "어떻게 해야 했을까?",
       "posterUrl": "/assets/recommendation-posters/1afd45512fb98782.webp",
       "localPosterUrl": "/assets/recommendation-posters/1afd45512fb98782.webp",
@@ -182,38 +299,6 @@
         }
       ],
       "posterSourceUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbJls3D%2FdJMcadJqj1f%2FAAAAAAAAAAAAAAAAAAAAACeMfcsEnFeBQJWMcvIohcvB_4ORkerlfY_wDyJXwSo3%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1790780399%26allow_ip%3D%26allow_referer%3D%26signature%3DnMY%252BG758kZMubJT3miJ5F2mCJH8%253D"
-    },
-    {
-      "rank": 4,
-      "title": "위커 맨: 파이널 컷",
-      "posterUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260818_bfba8fe2.jpg",
-      "localPosterUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260818_bfba8fe2.jpg",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-09-09&movieCd=029328&playSDT=2026-09-09&screenId=01&showSeq=5",
-      "score": 0,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 0,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 0,
-      "scheduleBackfill": true,
-      "venueIds": [
-        "cinecube",
-        "sangsangmadang",
-        "filmforum",
-        "kucine"
-      ],
-      "venueNames": [
-        "씨네큐브 광화문",
-        "KT&G 상상마당 시네마",
-        "필름포럼",
-        "KU시네마테크"
-      ],
-      "nextDate": "2026-09-09",
-      "nextTime": "18:05",
-      "evidence": [],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260818_bfba8fe2.jpg"
     }
   ],
   "testerOnly": false,
@@ -221,11 +306,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 219,
+    "fetchedPostCount": 244,
     "listedPostCount": 292,
-    "detailedPostCount": 23,
-    "commentFetchCount": 23,
-    "commentCount": 70,
+    "detailedPostCount": 27,
+    "commentFetchCount": 27,
+    "commentCount": 73,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -234,7 +319,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-09-09",
     "candidateWindowEnd": "2026-09-23",
-    "candidateCount": 102,
+    "candidateCount": 101,
     "seedLookbackDays": 3,
     "seedStart": "2026-09-07",
     "listLookbackDays": 1,
