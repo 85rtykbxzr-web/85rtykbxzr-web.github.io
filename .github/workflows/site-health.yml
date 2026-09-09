@@ -20,6 +20,8 @@ jobs:
         shell: bash
         run: |
           node --input-type=module <<'JS'
+          const production=await fetch('https://seoulcinemaschedule.com/healthz.json?github_probe=1');console.log(JSON.stringify({productionStatus:production.status,body:(await production.text()).slice(0,800)}));
+          if(!production.ok)throw new Error('Production domain rejects GitHub health checks');
           import { readCafe24Challenge } from './scripts/cafe24-challenge.mjs';
           const url='https://www.cinematheque.seoul.kr/bbs/content.php?co_id=timetable';
           const first=await fetch(url);const firstText=await first.text();
