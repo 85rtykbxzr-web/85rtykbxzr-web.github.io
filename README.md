@@ -28,9 +28,15 @@ Dtryx는 GitHub의 Linux·macOS·Windows·ARM 러너에서 TCP 연결 시간이 
 
 `HOSTED_COLLECTION_READY=true`일 때 예약 수집과 사이트 점검을 실행합니다. `PRODUCTION_READY=true`일 때 검색 색인을 허용합니다. 최초 활성화 전에 전체 수집·좌석 갱신·배포·사이트 점검과 실제 브라우저 조회를 확인합니다.
 
+2026-09-09 운영 도메인을 GitHub Pages로 전환하고 두 변수를 활성화했습니다. 운영 전환 검증은 [전체 수집·배포](https://github.com/85rtykbxzr-web/85rtykbxzr-web.github.io/actions/runs/34304129567), [좌석 갱신·배포](https://github.com/85rtykbxzr-web/85rtykbxzr-web.github.io/actions/runs/34304313311), [공개 사이트 점검](https://github.com/85rtykbxzr-web/85rtykbxzr-web.github.io/actions/runs/34304394694)에서 모두 통과했습니다. 실제 운영 브라우저에서 7개관 조회도 확인했습니다.
+
+본 주소의 A 레코드는 GitHub Pages 공식 IP 4개에 직접 연결하며, GitHub가 인증서를 관리하고 HTTPS를 강제합니다. Cloudflare는 DNS 관리와 `www` → 본 주소 리디렉션에 사용합니다. GitLab·Render·개인 맥북은 운영 사이트의 수집·배포에 필요하지 않습니다.
+
 - 전체 시간표·추천: KST 3시간마다 `:07`
 - 좌석: KST 08–23시 15분 간격(전체 수집과 중복하지 않음)
 - 공개 사이트 점검: 매일 KST 09:43
+
+예약 시각은 목표 시각이며 GitHub Actions 대기열에 따라 실제 시작이 늦어질 수 있습니다. 마지막 갱신 시각은 사이트와 `healthz.json`에 표시됩니다.
 
 전체/좌석 작업은 직렬 실행합니다. 대기 중 배포 설정이 바뀌거나, main이 이동하거나, 데이터 검증에 실패하면 배포하지 않습니다. 전체 수집 데이터만 커밋하고 좌석 갱신은 배포 산출물에 반영합니다. 정리한 HTML 스냅샷과 코드에는 공개 감사를 적용합니다.
 

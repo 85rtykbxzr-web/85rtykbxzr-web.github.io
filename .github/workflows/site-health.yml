@@ -11,7 +11,7 @@ concurrency: { group: public-site-health, queue: max }
 
 env:
   TZ: Asia/Seoul
-  SITE_HEALTH_URL: https://85rtykbxzr-web.github.io
+  SITE_HEALTH_URL: https://seoulcinemaschedule.com
 
 jobs:
   health:
@@ -65,7 +65,7 @@ jobs:
 
       - name: Audit parser quality from the public data
         env:
-          SEOUL_CINEMA_AUDIT_SCHEDULE_URL: https://85rtykbxzr-web.github.io/data/schedule.json?health_run=${{ github.run_id }}
-          SEOUL_CINEMA_AUDIT_SOURCE_HEALTH_URL: https://85rtykbxzr-web.github.io/data/source-health.json?health_run=${{ github.run_id }}
+          SEOUL_CINEMA_AUDIT_SCHEDULE_URL: https://seoulcinemaschedule.com/data/schedule.json?health_run=${{ github.run_id }}
+          SEOUL_CINEMA_AUDIT_SOURCE_HEALTH_URL: https://seoulcinemaschedule.com/data/source-health.json?health_run=${{ github.run_id }}
           SEOUL_CINEMA_HEALTH_REQUEST_TIMEOUT_MS: "15000"
         run: node scripts/audit-parser-quality.mjs

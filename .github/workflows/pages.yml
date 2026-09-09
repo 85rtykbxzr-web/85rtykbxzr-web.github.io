@@ -30,7 +30,7 @@ env:
   npm_config_engine_strict: "true"
   npm_config_fund: "false"
   npm_config_prefer_offline: "true"
-  PUBLIC_SITE_URL: https://85rtykbxzr-web.github.io
+  PUBLIC_SITE_URL: https://seoulcinemaschedule.com
   SCHEDULE_COLLECTION_MODE: browser-live
 
 jobs:
@@ -213,7 +213,7 @@ jobs:
         if: steps.mode.outputs.mode == 'deploy'
         env:
           CI_PIPELINE_ID: ${{ github.run_id }}
-          SEOUL_CINEMA_PUBLIC_SCHEDULE_URL: https://85rtykbxzr-web.github.io/data/schedule.json
+          SEOUL_CINEMA_PUBLIC_SCHEDULE_URL: https://seoulcinemaschedule.com/data/schedule.json
         run: node scripts/preserve-deployed-seat-snapshot.mjs
 
       - name: Audit and build the committed deployment
