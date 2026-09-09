@@ -5,7 +5,11 @@ permissions:
   contents: read
 jobs:
   probe:
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-15, windows-2025]
+    runs-on: ${{ matrix.os }}
     timeout-minutes: 4
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
@@ -13,6 +17,7 @@ jobs:
         with:
           node-version: 22.23.2
       - name: Probe source connectivity without changing data
+        shell: bash
         run: |
           node --input-type=module <<'JS'
           import fs from 'node:fs';
