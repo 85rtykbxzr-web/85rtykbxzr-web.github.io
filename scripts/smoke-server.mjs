@@ -170,6 +170,32 @@ async function main() {
     expectRevalidated(sourceHealthResponse, "source health data");
     expectNoIndex(sourceHealthResponse, "source health data");
     assert(Array.isArray(sourceHealth?.health), "source-health.json has no health rows");
+    const { response: trendsResponse, body: trends } = await fetchJson(`${baseUrl}/data/community-trends.json`);
+    assert(trendsResponse.ok, "community-trends.json did not return 200");
+    expectSecurityHeaders(trendsResponse, "community trends data");
+    expectRevalidated(trendsResponse, "community trends data");
+    expectNoIndex(trendsResponse, "community trends data");
+    assert(
+      Object.keys(trends || {}).every((key) => ["generatedAt", "items"].includes(key)),
+      "community trends exposes an unexpected top-level field"
+    );
+    assert(Array.isArray(trends?.items) && trends.items.length === 4, "community trends does not expose four picks");
+    assert(!trends.sourceInternal, "community trends exposes internal source metadata");
+    assert(trends.items.every((item) => !item.evidence), "community trends exposes source evidence");
+    assert(
+      trends.items.every((item) =>
+        Object.keys(item).every((key) =>
+          ["nextDate", "nextTime", "posterSourceUrl", "posterUrl", "rank", "title", "trailerUrl", "url"].includes(key)
+        )
+      ),
+      "community trends exposes an unexpected item field"
+    );
+    const trendsEtag = trendsResponse.headers.get("etag");
+    assert(trendsEtag, "community trends data is missing an ETag");
+    const revalidatedTrendsResponse = await fetch(`${baseUrl}/data/community-trends.json`, {
+      headers: { "if-none-match": trendsEtag }
+    });
+    assert(revalidatedTrendsResponse.status === 304, "matching community trends ETag did not return 304");
     const deniedRefresh = await expectStatus(baseUrl, "/api/refresh", 403, { method: "POST" });
     expectSecurityHeaders(deniedRefresh, "denied refresh");
     expectNoStore(deniedRefresh, "denied refresh");

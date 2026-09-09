@@ -611,6 +611,22 @@ function fileEtag(fileStat) {
   return `W/"${fileStat.size.toString(16)}-${Math.trunc(fileStat.mtimeMs).toString(16)}"`;
 }
 
+function publicCommunityTrends(trends) {
+  return {
+    generatedAt: trends.generatedAt || null,
+    items: (trends.items || []).slice(0, 4).map((item, index) => ({
+      rank: Number(item.rank) || index + 1,
+      title: String(item.title || ""),
+      posterUrl: String(item.localPosterUrl || item.posterUrl || ""),
+      posterSourceUrl: String(item.posterSourceUrl || ""),
+      url: String(item.url || ""),
+      trailerUrl: String(item.trailerUrl || ""),
+      nextDate: String(item.nextDate || ""),
+      nextTime: String(item.nextTime || "")
+    }))
+  };
+}
+
 function requestMatchesEtag(req, etag) {
   return String(req.headers["if-none-match"] || "")
     .split(",")
@@ -655,6 +671,38 @@ async function serveStatic(req, res) {
 
   if (!fileStat.isFile()) {
     sendJson(res, 404, { error: "not found" });
+    return;
+  }
+
+  if (publicFilePath === "/data/community-trends.json") {
+    const trends = JSON.parse(await readFile(filePath, "utf8"));
+    const body = `${JSON.stringify(publicCommunityTrends(trends))}\n`;
+    const contentType = mimeTypes[".json"];
+    const bodySize = Buffer.byteLength(body);
+    const encoding = responseCompression(req, contentType, bodySize);
+    const etag = `W/"${bodySize.toString(16)}-${Math.trunc(fileStat.mtimeMs).toString(16)}"`;
+    const commonHeaders = {
+      "cache-control": staticCacheControl(publicFilePath, req.url),
+      etag,
+      "last-modified": fileStat.mtime.toUTCString(),
+      ...compressionHeaders("", isCompressibleResponse(contentType, bodySize)),
+      "x-robots-tag": "noindex, nofollow, noarchive"
+    };
+    if (requestMatchesEtag(req, etag)) {
+      res.writeHead(304, responseHeaders(commonHeaders));
+      res.end();
+      return;
+    }
+    res.writeHead(200, responseHeaders({
+      "content-type": contentType,
+      ...commonHeaders,
+      ...(encoding ? { "content-encoding": encoding } : {})
+    }));
+    if (req.method === "HEAD") {
+      res.end();
+      return;
+    }
+    pipeResponse(Readable.from([body]), res, encoding);
     return;
   }
 

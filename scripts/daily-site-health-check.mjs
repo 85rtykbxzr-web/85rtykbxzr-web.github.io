@@ -2,6 +2,7 @@ import { spawn } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { fetchWithTransientRetry } from "./http-retry.mjs";
 import { isNonBlockingSourceHealthWarning } from "./source-health-status.mjs";
+import { isPastKstSession, kstSessionStartMs } from "../src/session-time.mjs";
 
 const primaryOrigin = trimTrailingSlash(process.env.SEOUL_CINEMA_SITE_URL || "https://seoulcinemaschedule.com");
 const pagesOrigin = trimTrailingSlash(
@@ -419,7 +420,7 @@ function trendHasFutureSession(item, schedule, today) {
   const titleKey = normalizeMovieTitle(item.title);
   if (!titleKey) return false;
   return (schedule.sessions || []).some((session) => {
-    if (!session.date || session.date < today) return false;
+    if (!session.date || session.date < today || isPastKstSession(session)) return false;
     const sessionKey = normalizeMovieTitle(session.title);
     return sessionKey === titleKey || sessionKey.includes(titleKey) || titleKey.includes(sessionKey);
   });
@@ -434,7 +435,8 @@ function validateTrendsData(trends, label, schedule) {
   for (const item of items.slice(0, 4)) {
     if (!item.title) fail(`${label} recommendation title`, JSON.stringify(item));
     if (!isRecommendationPosterUrl(item.posterUrl)) fail(`${label} ${item.title || "(unknown)"} poster URL`, item.posterUrl || "(missing)");
-    if (!item.nextDate || item.nextDate < today) {
+    const storedNextShowingMs = kstSessionStartMs({ date: item.nextDate, time: item.nextTime });
+    if (storedNextShowingMs == null || storedNextShowingMs < Date.now()) {
       const detail = `${item.nextDate || "(missing)"} ${item.nextTime || ""}`.trim();
       if (trendHasFutureSession(item, schedule, today)) {
         warn(`${label} ${item.title || "(unknown)"} stored next showing`, `${detail}; current schedule still has future sessions`);

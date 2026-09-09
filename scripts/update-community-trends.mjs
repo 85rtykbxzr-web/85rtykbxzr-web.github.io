@@ -2,6 +2,7 @@ import { createHash } from "node:crypto";
 import { mkdir, readFile, readdir, unlink } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import sharp from "sharp";
+import { isPastKstSession } from "../src/session-time.mjs";
 import { writeFileAtomic } from "./write-file-atomic.mjs";
 
 const schedulePath = fileURLToPath(new URL("../data/schedule.json", import.meta.url));
@@ -26,6 +27,7 @@ const communityFetchTimeoutMs = boundedInteger(process.env.COMMUNITY_TREND_FETCH
 const recencyDecay = boundedNumber(process.env.COMMUNITY_TREND_RECENCY_DECAY, 0.72, 0.2, 1);
 const forceBackfill = /^(1|true|yes|backfill|seed)$/i.test(process.env.COMMUNITY_TREND_FORCE_BACKFILL || "");
 const testerOnly = /^(1|true|yes|tester)$/i.test(process.env.COMMUNITY_TREND_TESTER_ONLY || process.env.COMMUNITY_TREND_STAGE || "");
+const candidateCutoffMs = Date.now();
 const todayKey = kstDateString();
 const rollingDays = boundedInteger(process.env.COMMUNITY_TREND_SCORE_DAYS || process.env.COMMUNITY_TREND_ROLLING_DAYS, 3, 1, 14);
 const windowStart = addDays(todayKey, -(rollingDays - 1));
@@ -798,7 +800,7 @@ function buildCandidates(schedule) {
   const venuesById = new Map((schedule.venues || []).map((venue) => [venue.id, venue]));
   const grouped = new Map();
   for (const session of schedule.sessions || []) {
-    if (!session.date || session.date < todayKey || session.date > horizonEnd) continue;
+    if (!session.date || session.date < todayKey || session.date > horizonEnd || isPastKstSession(session, candidateCutoffMs)) continue;
     const title = compactTitle(session.title);
     const normalized = normalizeTitle(title);
     if (!title || normalized.length < 2) continue;

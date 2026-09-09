@@ -5,6 +5,7 @@ import {
   resolveFestivalName
 } from "./src/festival-labels.mjs";
 import { safePublicUrl } from "./src/public-url-policy.mjs";
+import { isPastKstSession } from "./src/session-time.mjs";
 
 (function () {
   const analyticsHostnames = new Set(["seoulcinemaschedule.com", "www.seoulcinemaschedule.com"]);
@@ -1046,11 +1047,7 @@ import { safePublicUrl } from "./src/public-url-policy.mjs";
   }
 
   function isPastTimedItem(item) {
-    const time = String(item?.timeSort || item?.time || "").match(/\d{1,2}:\d{2}/)?.[0];
-    if (!item?.date || !time) return false;
-    const startTime = new Date(`${item.date}T${time}:00+09:00`);
-    if (Number.isNaN(startTime.getTime())) return false;
-    return startTime.getTime() < Date.now();
+    return isPastKstSession(item);
   }
 
   function isPastSession(session) {

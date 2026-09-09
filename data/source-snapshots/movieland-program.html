@@ -407,7 +407,7 @@
 <script type="text/javascript">var CAFE24API = { instance: [], MALL_ID: 'movielandco', SHOP_NO: 1, basicAuthKeys: {}, setBasicAuthKey: function (clientId, basicAuthKey) { if (typeof basicAuthKey !== 'string') { return; } if (clientId) { CAFE24API.basicAuthKeys[clientId] = basicAuthKey; } else { CAFE24API.basicAuthKeys['default'] = basicAuthKey; } }, init: function (appInfo) { if (typeof appInfo == 'object') { if (appInfo.hasOwnProperty('client_id')) { var appKey = appInfo.client_id; } } else { var appKey = appInfo; } if (appKey) { if (!this.instance[appKey]) { CAFE24API.clientId = appKey; if (appInfo.hasOwnProperty('version')) { CAFE24API.version = appInfo.version; } else { if (CAFE24API.hasOwnProperty('version')) { delete CAFE24API.version; } } var copyObject = CAFE24API.constructor(); for (var attr in CAFE24API) { if (CAFE24API.hasOwnProperty(attr)) { copyObject[attr] = CAFE24API[attr]; } } this.instance[appKey] = copyObject; } return this.instance[appKey]; } }, initializeXhr: function () { try { return new XMLHttpRequest(); } catch (error) { return new window.ActiveXObject('Microsoft.XMLHTTP'); } }, fullPath: function (url) { return 'https://movielandco.cafe24api.com' + url; }, getLoginProvider: function (callback) { if (!CAFE24API.__chkValidSessionScope(callback, 'customer')) { return; } callback(null, { 'login': CAPP_ASYNC_METHODS.AppCommon.getLoginProvider() }); }, getCustomerProvider: function (callback) { if (!CAFE24API.__chkValidSessionScope(callback, 'customer')) { return; } callback(null, { 'login': CAPP_ASYNC_METHODS.AppCommon.getCustomerProvider() }); }, getMemberID: function (callback) { if (!CAPP_ASYNC_METHODS.IS_LOGIN) { callback(null); } else { callback(CAPP_ASYNC_METHODS.AppCommon.getMemberID()); } }, getEncryptedMemberId: function (client_id, callback) { if (!CAFE24API.__chkValidSessionScope(callback, 'customer')) { return; } callback(null, CAPP_ASYNC_METHODS.AppCommon.getEncryptedMemberId(client_id)); }, getMemberInfo: function (callback) { callback({ 'id': CAPP_ASYNC_METHODS.AppCommon.getMemberInfo() }); }, getCustomerIDInfo: function (callback) { if (!CAFE24API.__scopeErr(callback, 'application')) { return; } callback(null, { 'id': CAPP_ASYNC_METHODS.AppCommon.getCustomerIDInfo() }); }, getCustomerInfo: function (callback) { if (!CAFE24API.__chkValidSessionScope(callback, 'customer')) { return; } callback(null, { 'customer': CAPP_ASYNC_METHODS.AppCommon.getCustomerInfo() }); }, getDefaultShippingAddress: function (callback) { if (!CAFE24API.__chkValidSessionScope(callback, 'customer')) { return; } callback(null, { 'shipping_address': CAPP_ASYNC_METHODS.AppCommon.getDefaultShippingAddress() }); }, getMileageInfo: function (callback) { if (!CAFE24API.__chkValidSessionScope(callback, 'customer')) { return; } callback(null, { 'mileage': CAPP_ASYNC_METHODS.AppCommon.getMileageInfo() }); }, getPointInfo: function (callback) { if (!CAFE24API.__chkValidSessionScope(callback, 'customer')) { return; } callback(null, { 'point': CAPP_ASYNC_METHODS.AppCommon.getPointInfo() }); }, getDepositInfo: function (callback) { if (!CAFE24API.__chkValidSessionScope(callback, 'customer')) { return; } callback(null, { 'deposit': CAPP_ASYNC_METHODS.AppCommon.getDepositInfo() }); }, getCreditInfo: function (callback) { if (!CAFE24API.__chkValidSessionScope(callback, 'customer')) { return; } callback(null, { 'credit': CAPP_ASYNC_METHODS.AppCommon.getCreditInfo() }); }, getCartList: function (callback) { if (!CAFE24API.__scopeErr(callback, 'personal')) { return; } CAPP_ASYNC_METHODS.AppCommon.getCartList().then(function (data) { callback(null, { 'carts': data }); }); }, getCartInfo: function (callback) { if (!CAFE24API.__chkValidSessionScope(callback, 'personal')) { return; } callback(null, { 'cart': CAPP_ASYNC_METHODS.AppCommon.getCartInfo() }); }, getCartItemList: function (callback) { if (!CAFE24API.__scopeErr(callback, 'order')) { return; } callback(null, { 'items': CAPP_ASYNC_METHODS.AppCommon.getCartItemList() }); }, getCartCount: function (callback) { if (!CAFE24API.__chkValidSessionScope(callback, 'personal')) { return; } callback(null, CAPP_ASYNC_METHODS.AppCommon.getCartCount()); }, getCouponCount: function (callback) { if (!CAFE24API.__chkValidSessionScope(callback, 'promotion')) { return; } callback(null, CAPP_ASYNC_METHODS.AppCommon.getCouponCount()); }, getWishCount: function (callback) { if (!CAFE24API.__chkValidSessionScope(callback, 'personal')) { return; } callback(null, CAPP_ASYNC_METHODS.AppCommon.getWishCount()); }, getShopInfo: function (callback) { if (!CAFE24API.__scopeErr(callback, 'store')) { return; } callback(null, { 'shop': CAPP_ASYNC_METHODS.AppCommon.getShopInfo() }); }, addCurrentProductToCart: function (mall_id, time, app_key, member_id, hmac, callback) { if (!CAFE24API.__scopeErr(callback, 'order')) { return; } CAPP_ASYNC_METHODS.AppCommon.addCurrentProductToCart(mall_id, time, app_key, member_id, hmac).then(function (data) { callback(null, { 'cart': data }); }).catch(function (data) { if (data) { callback(new Error('422'), { 'error': { code: data.code, message: data.message } }); } else { callback(new Error('422'), { 'error': { code: 422, message: 'This sdk is not available on the current page' } }); } }); }, precreateOrder: function (mall_id, time, app_key, member_id, hmac, callback) { if (!CAFE24API.__scopeErr(callback, 'order')) { return; } CAPP_ASYNC_METHODS.AppCommon.precreateOrder(mall_id, time, app_key, member_id, hmac).then(function (data) { callback(null, { 'order': data }); }).catch(function (data) { if (data) { callback(new Error('422'), { 'error': { code: data.code, message: data.message } }); } else { callback(new Error('422'), { 'error': { code: 422, message: 'This sdk is not available on the current page' } }); } }); }, calculatePayment: function (mall_id, request_time, app_key, member_id, request_data_json, hmac, callback) { if (!CAFE24API.__scopeErr(callback, 'order')) { return; } CAPP_ASYNC_METHODS.AppCommon.calculatePayment(mall_id, request_time, app_key, member_id, request_data_json, hmac).then(function (data) { callback(null, { 'expected_payment': data }); }).catch(function (data) { if (data) { callback(new Error('422'), { 'error': { code: data.code, message: data.message } }); } else { callback(new Error('422'), { 'error': { code: 422, message: 'This sdk is not available on the current page' } }); } }); }, precreateOrderV2: function (mall_id, time, app_key, member_id, request_data_json, hmac, callback) { if (!CAFE24API.__scopeErr(callback, 'order')) { return; } CAPP_ASYNC_METHODS.AppCommon.precreateOrderV2(mall_id, time, app_key, member_id, request_data_json, hmac).then(function (data) { callback(null, { 'order': data }); }).catch(function (data) { if (data) { callback(new Error('422'), { 'error': { code: data.code, message: data.message } }); } else { callback(new Error('422'), { 'error': { code: 422, message: 'This sdk is not available on the current page' } }); } }); }, getOrderItemList: function (start_date, end_date, order_status, page, count, order_id, callback) { if (!CAFE24API.__scopeErr(callback, 'order')) { return; } CAPP_ASYNC_METHODS.AppCommon.getOrderItemList(start_date, end_date, order_status, page, count, order_id).then(function (data) { callback(null, { 'items': data }); }).catch(function (data) { if (data) { callback(new Error('422'), { 'error': { code: data.code, message: data.message } }); } else { callback(new Error(422), { 'error': { code: 422, message: 'This sdk is not available on the current page' } }); } }); }, getOrderDetailInfo: function (shop_no, order_id, callback) { if (!CAFE24API.__scopeErr(callback, 'order')) { return; } CAPP_ASYNC_METHODS.AppCommon.getOrderDetailInfo(shop_no, order_id).then(function (data) { callback(null, { 'orders': data }); }).catch(function (data) { if (data) { callback(new Error('422'), { 'error': { code: data.code, message: data.message } }); } else { callback(new Error(422), { 'error': { code: 422, message: 'This sdk is not available on the current page' } }); } }); }, getClaimableItemList: function (order_id, customer_service_type, callback) { if (!CAFE24API.__scopeErr(callback, 'order')) { return; } CAPP_ASYNC_METHODS.AppCommon.getClaimableItemList(order_id, customer_service_type).then(function (data) { callback(null, { 'items': data }); }).catch(function (data) { if (data) { callback(new Error('422'), { 'error': { code: data.code, message: data.message } }); } else { callback(new Error(422), { 'error': { code: 422, message: 'This sdk is not available on the current page' } }); } }); }, emptyCart: function (basket_shipping_type, callback) { if (!CAFE24API.__scopeErr(callback, 'personal')) { return; } CAPP_ASYNC_METHODS.AppCommon.emptyCart(basket_shipping_type).then(function (data) { callback(null, { 'result': data }); }).catch(function (data) { if (data) { callback(new Error('422'), { 'error': { code: data.code, message: data.message } }); } else { callback(new Error(422), { 'error': { code: 422, message: 'This sdk is not available on the current page' } }); } }); }, deleteCartItems: function (basket_shipping_type, product_list, callback) { if (!CAFE24API.__scopeErr(callback, 'personal')) { return; } CAPP_ASYNC_METHODS.AppCommon.deleteCartItems(basket_shipping_type, product_list).then(function (data) { callback(null, { 'result': data }); }).catch(function (data) { if (data) { callback(new Error('422'), { 'error': { code: data.code, message: data.message } }); } else { callback(new Error(422), { 'error': { code: 422, message: 'This sdk is not available on the current page' } }); } }); }, addCart: function (basket_type, prepaid_shipping_fee, product_list, callback) { if (!CAFE24API.__scopeErr(callback, 'personal')) { return; } CAPP_ASYNC_METHODS.AppCommon.addCart(basket_type, prepaid_shipping_fee, product_list).then(function (data) { callback(null, data); }).catch(function (data) { if (data) { callback(new Error('422'), { 'error': { code: data.code, message: data.message } }); } else { callback(new Error(422), { 'error': { code: 422, message: 'This sdk is not available on the current page' } }); } }) }, addBundleProductsCart: function (basket_type, prepaid_shipping_fee, product_list, callback) { if (!CAFE24API.__scopeErr(callback, 'personal')) { return; } CAPP_ASYNC_METHODS.AppCommon.addBundleProductsCart(basket_type, prepaid_shipping_fee, product_list).then(function (data) { callback(null, data); }).catch(function (data) { if (data) { callback(new Error('422'), { 'error': { code: data.code, message: data.message } }); } else { callback(new Error(422), { 'error': { code: 422, message: 'This sdk is not available on the current page' } }); } }) }, get: function (url, callback) { return CAFE24API.complete('GET', url, this, null, callback); }, post: function (url, params, callback) { return CAFE24API.complete('POST', url, this, params, callback); }, put: function (url, params, callback) { return CAFE24API.complete('PUT', url, this, params, callback); }, delete: function (url, callback) { return CAFE24API.complete('DELETE', url, this, null, callback); }, complete: function (method, url, obj, params, callback) { var xhr = CAFE24API.sendXhr(method, url, obj, params, callback); xhr.onreadystatechange = function () { if (xhr.readyState === XMLHttpRequest.DONE) { if (xhr.status >= 200 && xhr.status <= 208) { callback(null, JSON.parse(xhr.responseText)); } else { callback(new Error(xhr.status), JSON.parse(xhr.responseText)); } } }; }, sendXhr: function (method, url, obj, params, callback) { if (method !== 'POST') { var url = obj.fullPath(url); } var xhr = obj.initializeXhr(); var queryVars = {}; if (obj.clientId) queryVars['cafe24_app_key'] = obj.clientId; if (obj.version) queryVars['cafe24_api_version'] = obj.version; var basicAuthKey = CAFE24API.basicAuthKeys[obj.clientId] || CAFE24API.basicAuthKeys['default']; if (basicAuthKey && basicAuthKey.length > 0) { queryVars['authorization'] = 'Basic ' + basicAuthKey; } if (params === null) { var seperator = url.indexOf('?') == -1 ? '?' : '&'; var queryString = []; for (var key in queryVars) { queryString.push(key + '=' + encodeURIComponent(queryVars[key])); } if (queryString.length > 0) { url = url + seperator + queryString.join('&'); } } xhr.open(method, url, true); if (typeof params == 'object' && params !== null) { xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded; charset=utf-8'); for (var key in queryVars) { params[key] = queryVars[key]; } params = 'formData=' + JSON.stringify(params); } xhr.send(params || null); return xhr; }, __sessionErr: function (callback) { callback(new Error(403), { 'error': { code: 403, message: 'Failed to get session. Only available when log in.' } }); }, __scopeErr: function (callback, scope) { if (typeof CAFE24.APPSCRIPT_SDK_DATA != "undefined" && jQuery.inArray(scope, CAFE24.APPSCRIPT_SDK_DATA) > -1) { return true; } callback(new Error(403), { 'error': { code: 403, message: 'You do not have the necessary authority(scope) to use the SDK.' } }); }, __chkValidSessionScope: function (callback, scope) { if (!CAPP_ASYNC_METHODS.IS_LOGIN) { CAFE24API.__sessionErr(callback); return false; } if (!CAFE24API.__scopeErr(callback, scope)) { return false; } return true; } }; </script>
 <script type="text/javascript">
 window.CAFE24 = window.CAFE24 || {};
-CAFE24.MANIFEST_CACHE_REVISION = '2608051495';
+CAFE24.MANIFEST_CACHE_REVISION = '2609091502';
 CAFE24.getDeprecatedNamespace = function(sDeprecatedNamespace, sSupersededNamespace) {
 var sNamespace = sSupersededNamespace
 ? sSupersededNamespace
@@ -432,7 +432,7 @@ CAFE24.SDE_SHOP_NUM = 1;CAFE24.SHOP = {getLanguage : function() { return "ko_KR"
 "TW": "zh_TW",
 "VN": "vi_VN",
 "PH": "en_PH"
-}},isLanguageShop : function(sLanguageCode) { return sLanguageCode === "ko_KR"; },getDefaultShopNo : function() { return 1; },getProductVer : function() { return 2; },isSDE : function() { return true; },isMode : function() {return false; },getModeName : function() {return false; },isMobileAdmin : function() {return false; },isNewProMode : function() {return true; },isExperienceMall : function() { return false; },isDcollection : function() {return false; },isYoutubeShops : function() {return false; },getYtShopsShopNo : function() {return 0; },isFrontDesignChangeRequired : function() {return false;},isG2G : function() {return false; },getAdminID : function() {return ''},getMallID : function() {return 'movielandco'},getCurrencyFormat : function(sPriceTxt, bIsNumberFormat) {
+}},isLanguageShop : function(sLanguageCode) { return sLanguageCode === "ko_KR"; },getDefaultShopNo : function() { return 1; },getProductVer : function() { return 2; },isSDE : function() { return true; },isMode : function() {return false; },getModeName : function() {return false; },isMobileAdmin : function() {return false; },isNewProMode : function() {return true; },isExperienceMall : function() { return false; },isDcollection : function() {return false; },isYoutubeShops : function() {return false; },getYtShopsShopNo : function() {return 0; },isFrontDesignChangeRequired : function() {return false;},isG2G : function() {return false; },isGlobale : function() {return false; },getAdminID : function() {return ''},getMallID : function() {return 'movielandco'},getCurrencyFormat : function(sPriceTxt, bIsNumberFormat) {
 sPriceTxt = String(sPriceTxt);
 var aCurrencySymbol = ["","\uc6d0",false];
 if (typeof CAFE24.SHOP_PRICE !== 'undefined' && isNaN(sPriceTxt.replace(/[,]/gi, '')) === false && bIsNumberFormat === true) {
@@ -450,7 +450,7 @@ return aCurrencySymbol[0] + sPriceTxt + aCurrencySymbol[1];
 } catch (e) {
 return aCurrencySymbol[0] + sPriceTxt + aCurrencySymbol[1];
 }
-}};CAFE24.CURRENCY_INFO = {getOriginReferenceCurrency : function() {return 'USD'},getCurrencyList : function(sCurrencyCode) { var aCurrencyList = {"JPY":{"currency_symbol":"&yen;","decimal_place":0,"round_method_type":"F"},"VND":{"currency_symbol":"&#8363;","decimal_place":0,"round_method_type":"F"},"PHP":{"currency_symbol":"&#8369;","decimal_place":2,"round_method_type":"R"},"USD":{"currency_symbol":"$","decimal_place":2,"round_method_type":"R"},"CNY":{"currency_symbol":"&yen;","decimal_place":2,"round_method_type":"R"},"TWD":{"currency_symbol":"NT$","decimal_place":0,"round_method_type":"F"},"EUR":{"currency_symbol":"\u20ac","decimal_place":2,"round_method_type":"R"},"BRL":{"currency_symbol":"R$","decimal_place":2,"round_method_type":"R"},"AUD":{"currency_symbol":"A$","decimal_place":2,"round_method_type":"R"},"BHD":{"currency_symbol":".&#1583;.&#1576;","decimal_place":3,"round_method_type":"R"},"BDT":{"currency_symbol":"&#2547;","decimal_place":2,"round_method_type":"R"},"GBP":{"currency_symbol":"&pound;","decimal_place":2,"round_method_type":"R"},"CAD":{"currency_symbol":"C$","decimal_place":2,"round_method_type":"R"},"CZK":{"currency_symbol":"K&#269;","decimal_place":2,"round_method_type":"R"},"DKK":{"currency_symbol":"kr","decimal_place":2,"round_method_type":"R"},"HKD":{"currency_symbol":"HK$","decimal_place":2,"round_method_type":"R"},"HUF":{"currency_symbol":"Ft","decimal_place":2,"round_method_type":"R"},"INR":{"currency_symbol":"&#8377;","decimal_place":2,"round_method_type":"R"},"IDR":{"currency_symbol":"Rp","decimal_place":0,"round_method_type":"F"},"ILS":{"currency_symbol":"&#8362;","decimal_place":2,"round_method_type":"R"},"JOD":{"currency_symbol":" &#1583;&#1610;&#1606;&#1575;&#1585;","decimal_place":3,"round_method_type":"R"},"KWD":{"currency_symbol":"&#1583;&#1610;&#1606;&#1575;&#1585;","decimal_place":3,"round_method_type":"R"},"MYR":{"currency_symbol":"RM","decimal_place":2,"round_method_type":"R"},"MXN":{"currency_symbol":"Mex$","decimal_place":2,"round_method_type":"R"},"NZD":{"currency_symbol":"NZ$","decimal_place":2,"round_method_type":"R"},"NOK":{"currency_symbol":"kr","decimal_place":2,"round_method_type":"R"},"PKR":{"currency_symbol":"&#8360;","decimal_place":2,"round_method_type":"R"},"PLN":{"currency_symbol":"z\u0142","decimal_place":2,"round_method_type":"R"},"RUB":{"currency_symbol":"\u0440\u0443\u0431","decimal_place":2,"round_method_type":"R"},"SAR":{"currency_symbol":"&#65020;","decimal_place":2,"round_method_type":"R"},"SGD":{"currency_symbol":"S$","decimal_place":2,"round_method_type":"R"},"ZAR":{"currency_symbol":"R","decimal_place":2,"round_method_type":"R"},"SEK":{"currency_symbol":"kr","decimal_place":2,"round_method_type":"R"},"CHF":{"currency_symbol":"Fr","decimal_place":2,"round_method_type":"R"},"THB":{"currency_symbol":"&#3647;","decimal_place":2,"round_method_type":"R"},"TRY":{"currency_symbol":"TL","decimal_place":2,"round_method_type":"R"},"AED":{"currency_symbol":"&#1601;&#1604;&#1587;","decimal_place":2,"round_method_type":"R"}}; return aCurrencyList[sCurrencyCode] },isUseReferenceCurrency : function() {return false }};CAFE24.COMMON_UTIL = {convertSslForString : function(sString) { return sString.replace(/http:/gi, '');},convertSslForHtml : function(sHtml) { return sHtml.replace(/((?:src|href)\s*=\s*['"])http:(\/\/(?:[a-z0-9\-_\.]+)\/)/ig, '$1$2');},getProtocol : function() { return 'https'; },moveSsl : function() { if (CAFE24.COMMON_UTIL.getProtocol() === 'http') { var oLocation = jQuery(window.location); var sUrl = 'https://' + oLocation.attr('host') + oLocation.attr('pathname') + oLocation.attr('search'); window.location.replace(sUrl); } },setEcCookie : function(sKey, sValue, iExpire) {var exdate = new Date();exdate.setDate(exdate.getDate() + iExpire);var setValue = escape(sValue) + "; domain=." + CAFE24.GLOBAL_INFO.getBaseDomain() + "; path=/;expires=" + exdate.toUTCString();document.cookie = sKey + "=" + setValue;}};CAFE24.SHOP_LIB_INFO = {getBankInfo : function() {
+}};CAFE24.CURRENCY_INFO = {getOriginReferenceCurrency : function() {return 'USD'},getCurrencyList : function(sCurrencyCode) { var aCurrencyList = {"AED":{"currency_symbol":"&#1601;&#1604;&#1587;","decimal_place":2,"round_method_type":"R"},"AMD":{"currency_symbol":"\u058f","decimal_place":2,"round_method_type":"R"},"AOA":{"currency_symbol":"Kz","decimal_place":2,"round_method_type":"R"},"AUD":{"currency_symbol":"A$","decimal_place":2,"round_method_type":"R"},"BDT":{"currency_symbol":"&#2547;","decimal_place":2,"round_method_type":"R"},"BHD":{"currency_symbol":".&#1583;.&#1576;","decimal_place":3,"round_method_type":"R"},"BRL":{"currency_symbol":"R$","decimal_place":2,"round_method_type":"R"},"CAD":{"currency_symbol":"C$","decimal_place":2,"round_method_type":"R"},"CHF":{"currency_symbol":"Fr","decimal_place":2,"round_method_type":"R"},"CNY":{"currency_symbol":"&yen;","decimal_place":2,"round_method_type":"R"},"CRC":{"currency_symbol":"\u20a1","decimal_place":2,"round_method_type":"R"},"CVE":{"currency_symbol":"$","decimal_place":2,"round_method_type":"R"},"CZK":{"currency_symbol":"K&#269;","decimal_place":2,"round_method_type":"R"},"DJF":{"currency_symbol":"Fdj","decimal_place":0,"round_method_type":"F"},"DKK":{"currency_symbol":"kr","decimal_place":2,"round_method_type":"R"},"DZD":{"currency_symbol":"\u062f.\u062c","decimal_place":2,"round_method_type":"R"},"ETB":{"currency_symbol":"Br","decimal_place":2,"round_method_type":"R"},"EUR":{"currency_symbol":"\u20ac","decimal_place":2,"round_method_type":"R"},"GBP":{"currency_symbol":"&pound;","decimal_place":2,"round_method_type":"R"},"GEL":{"currency_symbol":"\u20be","decimal_place":2,"round_method_type":"R"},"GHS":{"currency_symbol":"GH\u20b5","decimal_place":2,"round_method_type":"R"},"GMD":{"currency_symbol":"D","decimal_place":2,"round_method_type":"R"},"GNF":{"currency_symbol":"FG","decimal_place":0,"round_method_type":"F"},"HKD":{"currency_symbol":"HK$","decimal_place":2,"round_method_type":"R"},"HUF":{"currency_symbol":"Ft","decimal_place":2,"round_method_type":"R"},"IDR":{"currency_symbol":"Rp","decimal_place":0,"round_method_type":"F"},"ILS":{"currency_symbol":"&#8362;","decimal_place":2,"round_method_type":"R"},"INR":{"currency_symbol":"&#8377;","decimal_place":2,"round_method_type":"R"},"JOD":{"currency_symbol":" &#1583;&#1610;&#1606;&#1575;&#1585;","decimal_place":3,"round_method_type":"R"},"JPY":{"currency_symbol":"&yen;","decimal_place":0,"round_method_type":"F"},"KES":{"currency_symbol":"KSh","decimal_place":2,"round_method_type":"R"},"KMF":{"currency_symbol":"CF","decimal_place":0,"round_method_type":"F"},"KWD":{"currency_symbol":"&#1583;&#1610;&#1606;&#1575;&#1585;","decimal_place":3,"round_method_type":"R"},"MAD":{"currency_symbol":"\u062f.\u0645.","decimal_place":2,"round_method_type":"R"},"MDL":{"currency_symbol":"L","decimal_place":2,"round_method_type":"R"},"MOP":{"currency_symbol":"MOP$","decimal_place":2,"round_method_type":"R"},"MVR":{"currency_symbol":"Rf","decimal_place":2,"round_method_type":"R"},"MWK":{"currency_symbol":"MK","decimal_place":2,"round_method_type":"R"},"MXN":{"currency_symbol":"Mex$","decimal_place":2,"round_method_type":"R"},"MYR":{"currency_symbol":"RM","decimal_place":2,"round_method_type":"R"},"NOK":{"currency_symbol":"kr","decimal_place":2,"round_method_type":"R"},"NZD":{"currency_symbol":"NZ$","decimal_place":2,"round_method_type":"R"},"PGK":{"currency_symbol":"K","decimal_place":2,"round_method_type":"R"},"PHP":{"currency_symbol":"&#8369;","decimal_place":2,"round_method_type":"R"},"PKR":{"currency_symbol":"&#8360;","decimal_place":2,"round_method_type":"R"},"PLN":{"currency_symbol":"z\u0142","decimal_place":2,"round_method_type":"R"},"RUB":{"currency_symbol":"\u0440\u0443\u0431","decimal_place":2,"round_method_type":"R"},"RWF":{"currency_symbol":"RF","decimal_place":0,"round_method_type":"F"},"SAR":{"currency_symbol":"&#65020;","decimal_place":2,"round_method_type":"R"},"SEK":{"currency_symbol":"kr","decimal_place":2,"round_method_type":"R"},"SGD":{"currency_symbol":"S$","decimal_place":2,"round_method_type":"R"},"SLL":{"currency_symbol":"Le","decimal_place":2,"round_method_type":"R"},"STN":{"currency_symbol":"Db","decimal_place":2,"round_method_type":"R"},"THB":{"currency_symbol":"&#3647;","decimal_place":2,"round_method_type":"R"},"TND":{"currency_symbol":"\u062f.\u062a","decimal_place":3,"round_method_type":"R"},"TOP":{"currency_symbol":"T$","decimal_place":2,"round_method_type":"R"},"TRY":{"currency_symbol":"TL","decimal_place":2,"round_method_type":"R"},"TWD":{"currency_symbol":"NT$","decimal_place":0,"round_method_type":"F"},"TZS":{"currency_symbol":"TSh","decimal_place":2,"round_method_type":"R"},"UGX":{"currency_symbol":"USh","decimal_place":0,"round_method_type":"F"},"USD":{"currency_symbol":"$","decimal_place":2,"round_method_type":"R"},"VND":{"currency_symbol":"&#8363;","decimal_place":0,"round_method_type":"F"},"VUV":{"currency_symbol":"VT","decimal_place":0,"round_method_type":"F"},"WST":{"currency_symbol":"WS$","decimal_place":2,"round_method_type":"R"},"XAF":{"currency_symbol":"FCFA","decimal_place":0,"round_method_type":"F"},"XOF":{"currency_symbol":"CFA","decimal_place":0,"round_method_type":"F"},"XPF":{"currency_symbol":"\u20a3","decimal_place":0,"round_method_type":"F"},"ZAR":{"currency_symbol":"R","decimal_place":2,"round_method_type":"R"},"ZMW":{"currency_symbol":"ZK","decimal_place":2,"round_method_type":"R"}}; return aCurrencyList[sCurrencyCode] },isUseReferenceCurrency : function() {return false }};CAFE24.COMMON_UTIL = {convertSslForString : function(sString) { return sString.replace(/http:/gi, '');},convertSslForHtml : function(sHtml) { return sHtml.replace(/((?:src|href)\s*=\s*['"])http:(\/\/(?:[a-z0-9\-_\.]+)\/)/ig, '$1$2');},getProtocol : function() { return 'https'; },moveSsl : function() { if (CAFE24.COMMON_UTIL.getProtocol() === 'http') { var oLocation = jQuery(window.location); var sUrl = 'https://' + oLocation.attr('host') + oLocation.attr('pathname') + oLocation.attr('search'); window.location.replace(sUrl); } },setEcCookie : function(sKey, sValue, iExpire) {var exdate = new Date();exdate.setDate(exdate.getDate() + iExpire);var setValue = escape(sValue) + "; domain=." + CAFE24.GLOBAL_INFO.getBaseDomain() + "; path=/;expires=" + exdate.toUTCString();document.cookie = sKey + "=" + setValue;}};CAFE24.SHOP_LIB_INFO = {getBankInfo : function() {
 var oBankInfo = "";
 $.ajax({
 type: "GET",
@@ -623,14 +623,14 @@ CAFE24.FRONT_JS_CONFIG_MANAGE = {"sSmartBannerScriptUrl":"https:\/\/app4you.cafe
 var EC_FRONT_JS_CONFIG_MANAGE = CAFE24.getDeprecatedNamespace('EC_FRONT_JS_CONFIG_MANAGE');
 CAFE24.FRONT_JS_CONFIG_MEMBER = {"sAuthUrl":"https:\/\/ipin-ec.cafe24.com\/certify\/v1\/?action=auth"};
 var EC_FRONT_JS_CONFIG_MEMBER = CAFE24.getDeprecatedNamespace('EC_FRONT_JS_CONFIG_MEMBER');
-CAFE24.FRONT_JS_CONFIG_SHOP = {"search_period":[],"calendar_config":{"maxDate":"2028-08-06","locale":"ko"},"aProductPurchaseInfo_291":{"bIsSuccess":true,"sMessage":"","bReplaceLoginPage":false,"bIsDisplayPurchaseButton":true},"aProductPurchaseInfo_286":{"bIsSuccess":true,"sMessage":"","bReplaceLoginPage":false,"bIsDisplayPurchaseButton":true},"aProductPurchaseInfo_290":{"bIsSuccess":true,"sMessage":"","bReplaceLoginPage":false,"bIsDisplayPurchaseButton":true},"aProductPurchaseInfo_289":{"bIsSuccess":true,"sMessage":"","bReplaceLoginPage":false,"bIsDisplayPurchaseButton":true},"aProductPurchaseInfo_288":{"bIsSuccess":true,"sMessage":"","bReplaceLoginPage":false,"bIsDisplayPurchaseButton":true},"aProductPurchaseInfo_287":{"bIsSuccess":true,"sMessage":"","bReplaceLoginPage":false,"bIsDisplayPurchaseButton":true}};
+CAFE24.FRONT_JS_CONFIG_SHOP = {"search_period":[],"calendar_config":{"maxDate":"2028-09-09","locale":"ko"},"aProductPurchaseInfo_295":{"bIsSuccess":true,"sMessage":"","bReplaceLoginPage":false,"bIsDisplayPurchaseButton":true}};
 var EC_FRONT_JS_CONFIG_SHOP = CAFE24.getDeprecatedNamespace('EC_FRONT_JS_CONFIG_SHOP');
 typeof window.CAFE24 === "undefined" && (window.CAFE24 = {});
-CAFE24.FRONTEND = {"FW_MANIFEST_CACHE_REVISION":2608051495,"IS_WEB_VIEW":"F"};
+CAFE24.FRONTEND = {"IS_RENDERED_LOGIN":"F","FW_MANIFEST_CACHE_REVISION":2609091502,"IS_WEB_VIEW":"F"};
 CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","path":{"origin":"\/","result":"\/","prefix":""},"shop_no":0,"skin_code":"default","support_language_list":{"ar":"ar_EG","ar-EG":"ar_EG","de":"de_DE","de-DE":"de_DE","en":"en_US","en-IN":"en_IN","en-PH":"en_PH","en-US":"en_US","es":"es_ES","es-ES":"es_ES","hi":"hi_IN","hi-IN":"hi_IN","id":"id_ID","id-ID":"id_ID","it":"it_IT","it-IT":"it_IT","ja":"ja_JP","ja-JP":"ja_JP","ko":"ko_KR","ko-KR":"ko_KR","ms":"ms_MY","ms-MY":"ms_MY","pt":"pt_PT","pt-PT":"pt_PT","ru":"ru_RU","ru-RU":"ru_RU","th":"th_TH","th-TH":"th_TH","tr":"tr_TR","tr-TR":"tr_TR","vi":"vi_VN","vi-VN":"vi_VN","zh":"zh_CN","zh-CN":"zh_CN","zh-HK":"zh_HK","zh-MO":"zh_MO","zh-SG":"zh_SG","zh-TW":"zh_TW"}};
 </script>
 
-<link rel="stylesheet" type="text/css" href="/ind-script/optimizer.php?filename=lY1BCgIxDEX3pVvPERd6Am8geIA0ZqRMmpQ0A3p7ZVYiuOj2895_3e3h2MB52ObEQGPA4qYBZK2Z5s9w6P8ppjRMtqimqdhzCt8i5gKCL_YZIbAITwnWk1TlVFD1pyW1wK12pBWu3y8XFNY7OpzyOR9hEYxead3lNw&type=css&k=61732c6aac8d44fbd11c495dd901314cca505b98&t=1785819153"  /><link rel="stylesheet" type="text/css" href="/ind-script/optimizer_user.php?filename=lZRBbgMhDEX3SbY5B01vkUVXPYEHnBlrwEZjoyS3L2naTVupeAf4PWTBB024T6g0c9CV-BQy3KVZmEAphqgaChAf-uCoP9HPqqSWMUTIyAm2cEVcK8QVZvxb-rV_lFKEB-HnwiCMcdcnuGvkFKZmNtzSt2Qw-Y2MXkckG1WntWD2KhfJyXtscnManYpOpW49cdHcVjrzRbwWzMRgo3ekV6q4HQp5o9ML3fvvjX3ppfUA6CL1faFaiefR7tq0V7sPJ-7B24JllIeUnvzLyW28OgzXF6CZEr4htwf_AQ&type=css&k=35f8cb33fbff68daad4db4af8130827b0b515ad9&t=1761211724&user=T"  />
+<link rel="stylesheet" type="text/css" href="/ind-script/optimizer.php?filename=lY1BCgIxDEX3pVvPERd6Am8geIA0ZqRMmpQ0A3p7ZVYiuOj2895_3e3h2MB52ObEQGPA4qYBZK2Z5s9w6P8ppjRMtqimqdhzCt8i5gKCL_YZIbAITwnWk1TlVFD1pyW1wK12pBWu3y8XFNY7OpzyOR9hEYxead3lNw&type=css&k=61732c6aac8d44fbd11c495dd901314cca505b98&t=1788863396"  /><link rel="stylesheet" type="text/css" href="/ind-script/optimizer_user.php?filename=lZRBbgMhDEX3SbY5B01vkUVXPYEHnBlrwEZjoyS3L2naTVupeAf4PWTBB024T6g0c9CV-BQy3KVZmEAphqgaChAf-uCoP9HPqqSWMUTIyAm2cEVcK8QVZvxb-rV_lFKEB-HnwiCMcdcnuGvkFKZmNtzSt2Qw-Y2MXkckG1WntWD2KhfJyXtscnManYpOpW49cdHcVjrzRbwWzMRgo3ekV6q4HQp5o9ML3fvvjX3ppfUA6CL1faFaiefR7tq0V7sPJ-7B24JllIeUnvzLyW28OgzXF6CZEr4htwf_AQ&type=css&k=35f8cb33fbff68daad4db4af8130827b0b515ad9&t=1761211724&user=T"  />
 <style type="text/css">
 
 </style>
@@ -877,14 +877,14 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
   }
   </style>
 <div data-slider="true" data-type="full" data-mode="fade" data-minslides="1" data-maxslides="10" data-controls="true" data-adaptiveheight="true" data-autohover="true" data-responsive="true" class="smart-banner-wrapper square" data-pager="true" data-auto="true" data-speed="500" data-pause="6000" data-banner-size-width="5834" data-banner-size-height="2480"><ul style="width: auto; position: relative; visibility:hidden" class="smart-banner-bxslider">
-<li><a href="/category/Now-Showing/24/" target="_self" ontouchstart="APP4YOU_SMART_BANNER.incrementBanner('3104802')" onclick="APP4YOU_SMART_BANNER.incrementBanner('3104802')" style="cursor:pointer"><picture><source media="(max-width: 720px)" srcset="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/f7ec9e6c-859f-4801-8fb1-f2ff62b2f12a.png"><img src="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/9732d121-0f27-4e5a-bcc0-033909d64bb7.png"></source></picture></a></li>
+<li><a href="/category/Now-Showing/24/" target="_self" ontouchstart="APP4YOU_SMART_BANNER.incrementBanner('3341483')" onclick="APP4YOU_SMART_BANNER.incrementBanner('3341483')" style="cursor:pointer"><picture><source media="(max-width: 720px)" srcset="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/076f13f9-3433-42b7-d1a7-2bbe9da40d8f.png"><img src="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/6ca4baf1-3622-4ddf-809e-b403ab8e79b4.png"></source></picture></a></li>
+<li><a href="/product/INSIDE-THE-DREAM-AUDEMARS-PIGUET/295/category/23/display/1/" target="_self" ontouchstart="APP4YOU_SMART_BANNER.incrementBanner('3169831')" onclick="APP4YOU_SMART_BANNER.incrementBanner('3169831')" style="cursor:pointer"><picture><source media="(max-width: 720px)" srcset="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/a7f0bfd7-12d6-490d-f6fa-e8756de303b5.jpeg"><img src="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/7ca9efa3-0e57-4bc5-a7e6-276f9a9d61e7.jpeg"></source></picture></a></li>
 <li><a href="https://movieland.market/product/archivebook" target="_self" ontouchstart="APP4YOU_SMART_BANNER.incrementBanner('2214523')" onclick="APP4YOU_SMART_BANNER.incrementBanner('2214523')" style="cursor:pointer"><picture><source media="(max-width: 720px)" srcset="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/8c97c6a8-1996-4aa2-eff1-47957010960f.jpeg"><img src="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/98dd4242-d39d-4229-9fb1-f8a4f3cfb5bc.jpeg"></source></picture></a></li>
 <li><a href="javascript:void(0)%5C;" style="cursor:default"><picture><source media="(max-width: 720px)" srcset="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/4d5fd7bb-bada-4725-b9b0-a77f75d6a2cf.jpeg"><img src="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/59fe968b-b937-455c-a1f6-51d130d8e189.jpeg"></source></picture></a></li>
 <li><a href="javascript:void(0)%5C;" style="cursor:default"><picture><source media="(max-width: 720px)" srcset="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/18424967-a017-41bb-aace-976c92b8fe9e.jpeg"><img src="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/224e673e-9637-40d9-90cb-9889a795b753.jpeg"></source></picture></a></li>
-<li><a href="https://movieland.market/product/cinematopiapuzzlepack" target="_self" ontouchstart="APP4YOU_SMART_BANNER.incrementBanner('3169831')" onclick="APP4YOU_SMART_BANNER.incrementBanner('3169831')" style="cursor:pointer"><picture><source media="(max-width: 720px)" srcset="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/0cb4225f-fb44-45cb-ebc2-349f16ba3fb2.jpeg"><img src="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/7468f958-ae08-4c45-e9e4-ec840c33c4db.jpeg"></source></picture></a></li>
 </ul></div>
 </div>
-<!--#ez="1/4"-->
+<!--#ez="1/6"-->
 <section class="section main_product_list" data-ez-module="product-list/1" data-ez-layout="grid4" data-ez="contents-09llhns-1" style="margin-bottom: 0px;">
   <ez-prop data-version="1.0.0" type="layout">
     <ez-var data-prop="layout" data-namespace="ez.module.product-list.layout" data-type="array">
@@ -914,10 +914,10 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
         <!--
 ※ 상품진열 공통소스
 -->
-<li id="anchorBoxId_291" class="xans-record-">
+<li id="anchorBoxId_295" class="xans-record-">
   <div class="prdList__item">
     <div class="thumbnail">
-      <a href="/product/broken-flowers/291/category/1/display/2/?icid=MAIN.product_listmain_1"><img src="//movieland.co/web/product/medium/202607/7fe0669a1242cd18b21c5a59034fd53b.jpg" id="eListPrdImage291_2" alt="BROKEN FLOWERS" loading="lazy"></a>
+      <a href="/product/inside-the-dream-audemars-piguet/295/category/1/display/2/?icid=MAIN.product_listmain_1"><img src="//movieland.co/web/product/medium/202608/f91a4868ddcf2829653fe7595cdf711d.jpg" id="eListPrdImage295_2" alt="INSIDE THE DREAM AUDEMARS PIGUET" loading="lazy"></a>
       <div class="likeButton displaynone">
         <button type="button">
            <strong></strong>
@@ -932,22 +932,22 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
     </div>
     <div class="description" ec-data-custom="" ec-data-price="">
       <div class="name">
-        <a href="/product/broken-flowers/291/category/1/display/2/?icid=MAIN.product_listmain_1" class=""><span class="title displaynone"><span class="" style="font-size:12px;color:#555555;">상품명</span> :</span>
-          <span class="" style="font-size:12px;color:#555555;">BROKEN FLOWERS</span></a>
+        <a href="/product/inside-the-dream-audemars-piguet/295/category/1/display/2/?icid=MAIN.product_listmain_1" class=""><span class="title displaynone"><span class="" style="font-size:12px;color:#555555;">상품명</span> :</span>
+          <span class="" style="font-size:12px;color:#555555;">INSIDE THE DREAM AUDEMARS PIGUET</span></a>
       </div>
       <ul class="xans-element- xans-product xans-product-listitem-1 xans-product-listitem xans-product-1 spec"><li class=" xans-record-">
           <strong class="title displaynone"><span class="" style="font-size:12px;color:#555555;">상품요약정보</span> :</strong>
-          <span class="" style="font-size:12px;color:#555555;"><p style="font-family:'Pretendard', Arial, sans-serif ;  font-size:1.1rem; font-weight: 600;">브로큰 플라워</p> <p>2005</p></span>        </li>
+          <span class="" style="font-size:12px;color:#555555;"><p style="font-family:'Pretendard', Arial, sans-serif ;  font-size:1.1rem; font-weight: 600;">인사이드 더 드림 오데마 피게</p> <p>2026</p></span>        </li>
 </ul>
       <div class="icon">
                             </div>
     </div>
   </div>
 </li>
-<li id="anchorBoxId_286" class="xans-record-">
+<li id="anchorBoxId_296" class="xans-record-">
   <div class="prdList__item">
     <div class="thumbnail">
-      <a href="/product/tenacious-d-in-the-pick-of-destiny/286/category/1/display/2/?icid=MAIN.product_listmain_1"><img src="//movieland.co/web/product/medium/202607/171fb80298229a3532d511e626570075.png" id="eListPrdImage286_2" alt="TENACIOUS D IN THE PICK OF DESTINY" loading="lazy"></a>
+      <a href="/product/our-little-sister/296/category/1/display/2/?icid=MAIN.product_listmain_1"><img src="//movieland.co/web/product/medium/202609/29f41950c7e9bbb90b6fd7199aff9632.jpg" id="eListPrdImage296_2" alt="OUR LITTLE SISTER" loading="lazy"></a>
       <div class="likeButton displaynone">
         <button type="button">
            <strong></strong>
@@ -962,22 +962,22 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
     </div>
     <div class="description" ec-data-custom="" ec-data-price="">
       <div class="name">
-        <a href="/product/tenacious-d-in-the-pick-of-destiny/286/category/1/display/2/?icid=MAIN.product_listmain_1" class=""><span class="title displaynone"><span class="" style="font-size:12px;color:#555555;">상품명</span> :</span>
-          <span class="" style="font-size:12px;color:#555555;">TENACIOUS D IN THE PICK OF DESTINY</span></a>
+        <a href="/product/our-little-sister/296/category/1/display/2/?icid=MAIN.product_listmain_1" class=""><span class="title displaynone"><span class="" style="font-size:12px;color:#555555;">상품명</span> :</span>
+          <span class="" style="font-size:12px;color:#555555;">OUR LITTLE SISTER</span></a>
       </div>
       <ul class="xans-element- xans-product xans-product-listitem-1 xans-product-listitem xans-product-1 spec"><li class=" xans-record-">
           <strong class="title displaynone"><span class="" style="font-size:12px;color:#555555;">상품요약정보</span> :</strong>
-          <span class="" style="font-size:12px;color:#555555;"><p style="font-family:'Pretendard', Arial, sans-serif ;  font-size:1.1rem; font-weight: 600;">터네이셔스 D</p> <p>2006</p></span>        </li>
+          <span class="" style="font-size:12px;color:#555555;"><p style="font-family:'Pretendard', Arial, sans-serif ;  font-size:1.1rem; font-weight: 600;">바닷마을 다이어리</p> <p>2015</p></span>        </li>
 </ul>
       <div class="icon">
                             </div>
     </div>
   </div>
 </li>
-<li id="anchorBoxId_290" class="xans-record-">
+<li id="anchorBoxId_297" class="xans-record-">
   <div class="prdList__item">
     <div class="thumbnail">
-      <a href="/product/time-of-the-gypsies/290/category/1/display/2/?icid=MAIN.product_listmain_1"><img src="//movieland.co/web/product/medium/202607/2303ae63074c6c936ce13d4609ff5522.png" id="eListPrdImage290_2" alt="TIME OF THE GYPSIES" loading="lazy"></a>
+      <a href="/product/riverside-mukolitta/297/category/1/display/2/?icid=MAIN.product_listmain_1"><img src="//movieland.co/web/product/medium/202609/77ddba3ab2c4cbcb746d90a6ca87ea15.jpg" id="eListPrdImage297_2" alt="RIVERSIDE MUKOLITTA" loading="lazy"></a>
       <div class="likeButton displaynone">
         <button type="button">
            <strong></strong>
@@ -992,22 +992,22 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
     </div>
     <div class="description" ec-data-custom="" ec-data-price="">
       <div class="name">
-        <a href="/product/time-of-the-gypsies/290/category/1/display/2/?icid=MAIN.product_listmain_1" class=""><span class="title displaynone"><span class="" style="font-size:12px;color:#555555;">상품명</span> :</span>
-          <span class="" style="font-size:12px;color:#555555;">TIME OF THE GYPSIES</span></a>
+        <a href="/product/riverside-mukolitta/297/category/1/display/2/?icid=MAIN.product_listmain_1" class=""><span class="title displaynone"><span class="" style="font-size:12px;color:#555555;">상품명</span> :</span>
+          <span class="" style="font-size:12px;color:#555555;">RIVERSIDE MUKOLITTA</span></a>
       </div>
       <ul class="xans-element- xans-product xans-product-listitem-1 xans-product-listitem xans-product-1 spec"><li class=" xans-record-">
           <strong class="title displaynone"><span class="" style="font-size:12px;color:#555555;">상품요약정보</span> :</strong>
-          <span class="" style="font-size:12px;color:#555555;"><p style="font-family:'Pretendard', Arial, sans-serif ;  font-size:1.1rem; font-weight: 600;">집시의 시간</p> <p>1988</p></span>        </li>
+          <span class="" style="font-size:12px;color:#555555;"><p style="font-family:'Pretendard', Arial, sans-serif ;  font-size:1.1rem; font-weight: 600;">강변의 무코리타</p> <p>2021</p></span>        </li>
 </ul>
       <div class="icon">
                             </div>
     </div>
   </div>
 </li>
-<li id="anchorBoxId_289" class="xans-record-">
+<li id="anchorBoxId_299" class="xans-record-">
   <div class="prdList__item">
     <div class="thumbnail">
-      <a href="/product/vertigo/289/category/1/display/2/?icid=MAIN.product_listmain_1"><img src="//movieland.co/web/product/medium/202607/eafea0749144b7b662ae11e54d019006.png" id="eListPrdImage289_2" alt="VERTIGO" loading="lazy"></a>
+      <a href="/product/summer-wars/299/category/1/display/2/?icid=MAIN.product_listmain_1"><img src="//movieland.co/web/product/medium/202609/0676f8c7568171fc378c40d1def82eda.jpg" id="eListPrdImage299_2" alt="SUMMER WARS" loading="lazy"></a>
       <div class="likeButton displaynone">
         <button type="button">
            <strong></strong>
@@ -1022,22 +1022,22 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
     </div>
     <div class="description" ec-data-custom="" ec-data-price="">
       <div class="name">
-        <a href="/product/vertigo/289/category/1/display/2/?icid=MAIN.product_listmain_1" class=""><span class="title displaynone"><span class="" style="font-size:12px;color:#555555;">상품명</span> :</span>
-          <span class="" style="font-size:12px;color:#555555;">VERTIGO</span></a>
+        <a href="/product/summer-wars/299/category/1/display/2/?icid=MAIN.product_listmain_1" class=""><span class="title displaynone"><span class="" style="font-size:12px;color:#555555;">상품명</span> :</span>
+          <span class="" style="font-size:12px;color:#555555;">SUMMER WARS</span></a>
       </div>
       <ul class="xans-element- xans-product xans-product-listitem-1 xans-product-listitem xans-product-1 spec"><li class=" xans-record-">
           <strong class="title displaynone"><span class="" style="font-size:12px;color:#555555;">상품요약정보</span> :</strong>
-          <span class="" style="font-size:12px;color:#555555;"><p style="font-family:'Pretendard', Arial, sans-serif ;  font-size:1.1rem; font-weight: 600;">현기증</p> <p>1958</p></span>        </li>
+          <span class="" style="font-size:12px;color:#555555;"><p style="font-family:'Pretendard', Arial, sans-serif ;  font-size:1.1rem; font-weight: 600;">썸머 워즈</p> <p>2009</p></span>        </li>
 </ul>
       <div class="icon">
                             </div>
     </div>
   </div>
 </li>
-<li id="anchorBoxId_288" class="xans-record-">
+<li id="anchorBoxId_300" class="xans-record-">
   <div class="prdList__item">
     <div class="thumbnail">
-      <a href="/product/blue-velvet/288/category/1/display/2/?icid=MAIN.product_listmain_1"><img src="//movieland.co/web/product/medium/202607/c934b29145a9a9d55750b2eeff60c232.jpg" id="eListPrdImage288_2" alt="블루벨벳" loading="lazy"></a>
+      <a href="/product/sabakan/300/category/1/display/2/?icid=MAIN.product_listmain_1"><img src="//movieland.co/web/product/medium/202609/d6f693dcfa4c69caef75a5c69ae04a3d.jpg" id="eListPrdImage300_2" alt="SABAKAN" loading="lazy"></a>
       <div class="likeButton displaynone">
         <button type="button">
            <strong></strong>
@@ -1052,22 +1052,22 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
     </div>
     <div class="description" ec-data-custom="" ec-data-price="">
       <div class="name">
-        <a href="/product/blue-velvet/288/category/1/display/2/?icid=MAIN.product_listmain_1" class=""><span class="title displaynone"><span class="" style="font-size:12px;color:#555555;">상품명</span> :</span>
-          <span class="" style="font-size:12px;color:#555555;">BLUE VELVET</span></a>
+        <a href="/product/sabakan/300/category/1/display/2/?icid=MAIN.product_listmain_1" class=""><span class="title displaynone"><span class="" style="font-size:12px;color:#555555;">상품명</span> :</span>
+          <span class="" style="font-size:12px;color:#555555;">SABAKAN</span></a>
       </div>
       <ul class="xans-element- xans-product xans-product-listitem-1 xans-product-listitem xans-product-1 spec"><li class=" xans-record-">
           <strong class="title displaynone"><span class="" style="font-size:12px;color:#555555;">상품요약정보</span> :</strong>
-          <span class="" style="font-size:12px;color:#555555;"><p style="font-family:'Pretendard', Arial, sans-serif ;  font-size:1.1rem; font-weight: 600;">블루 벨벳</p> <p>1986</p></span>        </li>
+          <span class="" style="font-size:12px;color:#555555;"><p style="font-family:'Pretendard', Arial, sans-serif ;  font-size:1.1rem; font-weight: 600;">1986 그 여름,  그리고 고등어 통조림</p> <p>2022</p></span>        </li>
 </ul>
       <div class="icon">
                             </div>
     </div>
   </div>
 </li>
-<li id="anchorBoxId_287" class="xans-record-">
+<li id="anchorBoxId_301" class="xans-record-">
   <div class="prdList__item">
     <div class="thumbnail">
-      <a href="/product/dancer-in-the-dark/287/category/1/display/2/?icid=MAIN.product_listmain_1"><img src="//movieland.co/web/product/medium/202607/236d3bf125923c44ec2fc567e072e5c1.jpg" id="eListPrdImage287_2" alt="어둠속의댄서" loading="lazy"></a>
+      <a href="/product/cats-apartment/301/category/1/display/2/?icid=MAIN.product_listmain_1"><img src="//movieland.co/web/product/medium/202609/6f2ade05ea8ef7ac61787812368d793a.jpg" id="eListPrdImage301_2" alt="CATS&amp;#039; APARTMENT" loading="lazy"></a>
       <div class="likeButton displaynone">
         <button type="button">
            <strong></strong>
@@ -1082,22 +1082,22 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
     </div>
     <div class="description" ec-data-custom="" ec-data-price="">
       <div class="name">
-        <a href="/product/dancer-in-the-dark/287/category/1/display/2/?icid=MAIN.product_listmain_1" class=""><span class="title displaynone"><span class="" style="font-size:12px;color:#555555;">상품명</span> :</span>
-          <span class="" style="font-size:12px;color:#555555;">DANCER IN THE DARK</span></a>
+        <a href="/product/cats-apartment/301/category/1/display/2/?icid=MAIN.product_listmain_1" class=""><span class="title displaynone"><span class="" style="font-size:12px;color:#555555;">상품명</span> :</span>
+          <span class="" style="font-size:12px;color:#555555;">CATS' APARTMENT</span></a>
       </div>
       <ul class="xans-element- xans-product xans-product-listitem-1 xans-product-listitem xans-product-1 spec"><li class=" xans-record-">
           <strong class="title displaynone"><span class="" style="font-size:12px;color:#555555;">상품요약정보</span> :</strong>
-          <span class="" style="font-size:12px;color:#555555;"><p style="font-family:'Pretendard', Arial, sans-serif ;  font-size:1.1rem; font-weight: 600;">어둠 속의 댄서</p> <p>2000</p></span>        </li>
+          <span class="" style="font-size:12px;color:#555555;"><p style="font-family:'Pretendard', Arial, sans-serif ;  font-size:1.1rem; font-weight: 600;">고양이들의 아파트/p> <p>2022</p></span>        </li>
 </ul>
       <div class="icon">
                             </div>
     </div>
   </div>
 </li>
-<li id="anchorBoxId_292" class="xans-record-">
+<li id="anchorBoxId_298" class="xans-record-">
   <div class="prdList__item">
     <div class="thumbnail">
-      <a href="/product/dancer-in-the-dark-movie-talk/292/category/1/display/2/?icid=MAIN.product_listmain_1"><img src="//movieland.co/web/product/medium/202607/5b90c888bb9919757f5d4f4a8c09c6dc.png" id="eListPrdImage292_2" alt="DANCER IN THE DARK MOVIE TALK" loading="lazy"></a>
+      <a href="/product/moonlight/298/category/1/display/2/?icid=MAIN.product_listmain_1"><img src="//movieland.co/web/product/medium/202609/2b2c906342091d47cc595932db7f257a.jpg" id="eListPrdImage298_2" alt="MOONLIGHT" loading="lazy"></a>
       <div class="likeButton displaynone">
         <button type="button">
            <strong></strong>
@@ -1112,12 +1112,12 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
     </div>
     <div class="description" ec-data-custom="" ec-data-price="">
       <div class="name">
-        <a href="/product/dancer-in-the-dark-movie-talk/292/category/1/display/2/?icid=MAIN.product_listmain_1" class=""><span class="title displaynone"><span class="" style="font-size:12px;color:#555555;">상품명</span> :</span>
-          <span class="" style="font-size:12px;color:#555555;">DANCER IN THE DARK MOVIE TALK</span></a>
+        <a href="/product/moonlight/298/category/1/display/2/?icid=MAIN.product_listmain_1" class=""><span class="title displaynone"><span class="" style="font-size:12px;color:#555555;">상품명</span> :</span>
+          <span class="" style="font-size:12px;color:#555555;">MOONLIGHT</span></a>
       </div>
       <ul class="xans-element- xans-product xans-product-listitem-1 xans-product-listitem xans-product-1 spec"><li class=" xans-record-">
           <strong class="title displaynone"><span class="" style="font-size:12px;color:#555555;">상품요약정보</span> :</strong>
-          <span class="" style="font-size:12px;color:#555555;"><p style="font-family:'Pretendard', Arial, sans-serif ;  font-size:1.1rem; font-weight: 600;">with 허키 시바세키, 민희진</p> <p>2026</p></span>        </li>
+          <span class="" style="font-size:12px;color:#555555;"><p style="font-family:'Pretendard', Arial, sans-serif ;  font-size:1.1rem; font-weight: 600;">문라이트</p> <p>2016</p></span>        </li>
 </ul>
       <div class="icon">
                             </div>
@@ -1190,14 +1190,14 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
         /></a>
       </p>
     </div>-->
-<input id="hiddenDate" name="hiddenDate" value="2026-08-06" type="hidden"  /><div class="xans-element- xans-calendar xans-calendar-headweek "><!--
+<input id="hiddenDate" name="hiddenDate" value="2026-09-09" type="hidden"  /><div class="xans-element- xans-calendar xans-calendar-headweek "><!--
             $calendar_write_url = calendar_write.html
          -->
 <p class="date">
-        <a href="#none" onclick="CALENDAR.setCalendarChange('2026', '07', '27')"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/calendar/btn_prev.gif" alt="이전달"></a>
-        <span>2026.08.03 ~ 2026.08.09</span>
-        <a href="#none" onclick="CALENDAR.setCalendarChange('2026', '08', '10')"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/calendar/btn_next.gif" alt="다음달"></a>
-        <a href="#none" onclick="CALENDAR.setCalendarChange('2026', '08', '06')"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/calendar/btn_today.gif" alt="오늘"></a>
+        <a href="#none" onclick="CALENDAR.setCalendarChange('2026', '08', '31')"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/calendar/btn_prev.gif" alt="이전달"></a>
+        <span>2026.09.07 ~ 2026.09.13</span>
+        <a href="#none" onclick="CALENDAR.setCalendarChange('2026', '09', '14')"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/calendar/btn_next.gif" alt="다음달"></a>
+        <a href="#none" onclick="CALENDAR.setCalendarChange('2026', '09', '09')"><img src="http://img.echosting.cafe24.com/skin/base_ko_KR/calendar/btn_today.gif" alt="오늘"></a>
       </p>
 <!---
       <p class="btn">
@@ -1228,13 +1228,13 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
       </colgroup>
       <thead class="xans-element- xans-calendar xans-calendar-listweekhead "><tr>
           <th scope="col" class="time"><span>time</span></th>
-          <th scope="col"><span>03 (MON)</span></th>
-          <th scope="col"><span>04 (TUE)</span></th>
-          <th scope="col"><span>05 (WED)</span></th>
-          <th scope="col"><span>06 (THU)</span></th>
-          <th scope="col"><span>07 (FRI)</span></th>
-          <th scope="col" class="sat"><span>08 (SAT)</span></th>
-          <th scope="col" class="sun"><span>09 (SUN)</span></th>
+          <th scope="col"><span>07 (MON)</span></th>
+          <th scope="col"><span>08 (TUE)</span></th>
+          <th scope="col"><span>09 (WED)</span></th>
+          <th scope="col"><span>10 (THU)</span></th>
+          <th scope="col"><span>11 (FRI)</span></th>
+          <th scope="col" class="sat"><span>12 (SAT)</span></th>
+          <th scope="col" class="sun"><span>13 (SUN)</span></th>
         </tr>
 </thead>
       <tbody class="xans-element- xans-calendar xans-calendar-listweek"><!--
@@ -1247,9 +1247,9 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
                       </td>
           <td class="todo ">
                       </td>
-          <td class="todo ">
-                      </td>
           <td class="todo week_today">
+                      </td>
+          <td class="todo ">
                       </td>
           <td class="todo ">
                       </td>
@@ -1264,9 +1264,9 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
                       </td>
           <td class="todo ">
                       </td>
-          <td class="todo ">
-                      </td>
           <td class="todo week_today">
+                      </td>
+          <td class="todo ">
                       </td>
           <td class="todo ">
                       </td>
@@ -1281,9 +1281,9 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
                       </td>
           <td class="todo ">
                       </td>
-          <td class="todo ">
-                      </td>
           <td class="todo week_today">
+                      </td>
+          <td class="todo ">
                       </td>
           <td class="todo ">
                       </td>
@@ -1298,9 +1298,9 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
                       </td>
           <td class="todo ">
                       </td>
-          <td class="todo ">
-                      </td>
           <td class="todo week_today">
+                      </td>
+          <td class="todo ">
                       </td>
           <td class="todo ">
                       </td>
@@ -1315,9 +1315,9 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
                       </td>
           <td class="todo ">
                       </td>
-          <td class="todo ">
-                      </td>
           <td class="todo week_today">
+                      </td>
+          <td class="todo ">
                       </td>
           <td class="todo ">
                       </td>
@@ -1332,9 +1332,9 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
                       </td>
           <td class="todo ">
                       </td>
-          <td class="todo ">
-                      </td>
           <td class="todo week_today">
+                      </td>
+          <td class="todo ">
                       </td>
           <td class="todo ">
                       </td>
@@ -1349,9 +1349,9 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
                       </td>
           <td class="todo ">
                       </td>
-          <td class="todo ">
-                      </td>
           <td class="todo week_today">
+                      </td>
+          <td class="todo ">
                       </td>
           <td class="todo ">
                       </td>
@@ -1366,9 +1366,9 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
                       </td>
           <td class="todo ">
                       </td>
-          <td class="todo ">
-                      </td>
           <td class="todo week_today">
+                      </td>
+          <td class="todo ">
                       </td>
           <td class="todo ">
                       </td>
@@ -1383,9 +1383,9 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
                       </td>
           <td class="todo ">
                       </td>
-          <td class="todo ">
-                      </td>
           <td class="todo week_today">
+                      </td>
+          <td class="todo ">
                       </td>
           <td class="todo ">
                       </td>
@@ -1400,9 +1400,9 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
                       </td>
           <td class="todo ">
                       </td>
-          <td class="todo ">
-                      </td>
           <td class="todo week_today">
+                      </td>
+          <td class="todo ">
                       </td>
           <td class="todo ">
                       </td>
@@ -1417,9 +1417,9 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
                       </td>
           <td class="todo ">
                       </td>
-          <td class="todo ">
-                      </td>
           <td class="todo week_today">
+                      </td>
+          <td class="todo ">
                       </td>
           <td class="todo ">
                       </td>
@@ -1434,9 +1434,9 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
                       </td>
           <td class="todo ">
                       </td>
-          <td class="todo ">
-                      </td>
           <td class="todo week_today">
+                      </td>
+          <td class="todo ">
                       </td>
           <td class="todo ">
                       </td>
@@ -1451,9 +1451,9 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
                       </td>
           <td class="todo ">
                       </td>
-          <td class="todo ">
-                      </td>
           <td class="todo week_today">
+                      </td>
+          <td class="todo ">
                       </td>
           <td class="todo ">
                       </td>
@@ -1468,9 +1468,9 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
                       </td>
           <td class="todo ">
                       </td>
-          <td class="todo ">
-                      </td>
           <td class="todo week_today">
+                      </td>
+          <td class="todo ">
                       </td>
           <td class="todo ">
                       </td>
@@ -1485,9 +1485,9 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
                       </td>
           <td class="todo ">
                       </td>
-          <td class="todo ">
-                      </td>
           <td class="todo week_today">
+                      </td>
+          <td class="todo ">
                       </td>
           <td class="todo ">
                       </td>
@@ -1502,9 +1502,9 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
                       </td>
           <td class="todo ">
                       </td>
-          <td class="todo ">
-                      </td>
           <td class="todo week_today">
+                      </td>
+          <td class="todo ">
                       </td>
           <td class="todo ">
                       </td>
@@ -1519,9 +1519,9 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
                       </td>
           <td class="todo ">
                       </td>
-          <td class="todo ">
-                      </td>
           <td class="todo week_today">
+                      </td>
+          <td class="todo ">
                       </td>
           <td class="todo ">
                       </td>
@@ -1536,9 +1536,9 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
                       </td>
           <td class="todo ">
                       </td>
-          <td class="todo ">
-                      </td>
           <td class="todo week_today">
+                      </td>
+          <td class="todo ">
                       </td>
           <td class="todo ">
                       </td>
@@ -1553,9 +1553,9 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
                       </td>
           <td class="todo ">
                       </td>
-          <td class="todo ">
-                      </td>
           <td class="todo week_today">
+                      </td>
+          <td class="todo ">
                       </td>
           <td class="todo ">
                       </td>
@@ -1570,9 +1570,9 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
                       </td>
           <td class="todo ">
                       </td>
-          <td class="todo ">
-                      </td>
           <td class="todo week_today">
+                      </td>
+          <td class="todo ">
                       </td>
           <td class="todo ">
                       </td>
@@ -1587,9 +1587,9 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
                       </td>
           <td class="todo ">
                       </td>
-          <td class="todo ">
-                      </td>
           <td class="todo week_today">
+                      </td>
+          <td class="todo ">
                       </td>
           <td class="todo ">
                       </td>
@@ -1604,9 +1604,9 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
                       </td>
           <td class="todo ">
                       </td>
-          <td class="todo ">
-                      </td>
           <td class="todo week_today">
+                      </td>
+          <td class="todo ">
                       </td>
           <td class="todo ">
                       </td>
@@ -1621,9 +1621,9 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
                       </td>
           <td class="todo ">
                       </td>
-          <td class="todo ">
-                      </td>
           <td class="todo week_today">
+                      </td>
+          <td class="todo ">
                       </td>
           <td class="todo ">
                       </td>
@@ -1638,9 +1638,9 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
                       </td>
           <td class="todo ">
                       </td>
-          <td class="todo ">
-                      </td>
           <td class="todo week_today">
+                      </td>
+          <td class="todo ">
                       </td>
           <td class="todo ">
                       </td>
@@ -1788,13 +1788,16 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
   }
   </style>
 <div data-slider="true" data-type="full" data-mode="fade" data-minslides="1" data-maxslides="10" data-controls="true" data-adaptiveheight="true" data-autohover="true" data-responsive="true" class="smart-banner-wrapper square" data-pager="true" data-auto="true" data-speed="500" data-pause="6000" data-banner-size-width="6817" data-banner-size-height="3309"><ul style="width: auto; position: relative; visibility:hidden" class="smart-banner-bxslider">
-<li><a href="/category/Now-Showing/24/" target="_self" ontouchstart="APP4YOU_SMART_BANNER.incrementBanner('3284033')" onclick="APP4YOU_SMART_BANNER.incrementBanner('3284033')" style="cursor:pointer"><picture><source media="(max-width: 720px)" srcset="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/8285cf2b-aaf3-45e9-a683-397970e4f150.jpeg"><img src="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/d88d02a4-ee19-48dd-c9f4-f0ed6659b7ee.jpeg"></source></picture></a></li>
-<li><a href="/category/Now-Showing/24/" target="_self" ontouchstart="APP4YOU_SMART_BANNER.incrementBanner('3284032')" onclick="APP4YOU_SMART_BANNER.incrementBanner('3284032')" style="cursor:pointer"><picture><source media="(max-width: 720px)" srcset="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/cc64c7c3-807c-4341-9198-07dba9cd86d7.jpeg"><img src="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/84c6e227-26d2-4f98-cda4-2713fb1015b1.jpeg"></source></picture></a></li>
-<li><a href="/category/Now-Showing/24/" target="_self" ontouchstart="APP4YOU_SMART_BANNER.incrementBanner('3284031')" onclick="APP4YOU_SMART_BANNER.incrementBanner('3284031')" style="cursor:pointer"><picture><source media="(max-width: 720px)" srcset="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/c62be09e-5034-4e93-f5f4-7cea4090ed08.png"><img src="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/a7b6acdd-9e92-4deb-bcbe-a7e13a4ecdb7.png"></source></picture></a></li>
-<li><a href="/category/Now-Showing/24/" target="_self" ontouchstart="APP4YOU_SMART_BANNER.incrementBanner('3284030')" onclick="APP4YOU_SMART_BANNER.incrementBanner('3284030')" style="cursor:pointer"><picture><source media="(max-width: 720px)" srcset="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/27b40d78-3374-49b9-afd5-9db366491c69.jpeg"><img src="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/06a9c3c2-dcb3-467c-9b80-44d055834c35.jpeg"></source></picture></a></li>
+<li><a href="/product/INSIDE-THE-DREAM-AUDEMARS-PIGUET/295/category/23/display/1/" target="_self" ontouchstart="APP4YOU_SMART_BANNER.incrementBanner('3341149')" onclick="APP4YOU_SMART_BANNER.incrementBanner('3341149')" style="cursor:pointer"><picture><source media="(max-width: 720px)" srcset="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/30f07d07-3e2d-4fb7-d9de-3cf47c5e873c.jpeg"><img src="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/376a0ecb-d2af-4b0c-cfaa-703e016551e4.jpeg"></source></picture></a></li>
+<li><a href="/category/Now-Showing/24/" target="_self" ontouchstart="APP4YOU_SMART_BANNER.incrementBanner('3348970')" onclick="APP4YOU_SMART_BANNER.incrementBanner('3348970')" style="cursor:pointer"><picture><source media="(max-width: 720px)" srcset="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/769699fd-6505-446b-90ae-91f2dfb4ca84.jpeg"><img src="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/22dbd499-0216-4945-c7fd-4c8ef831145a.jpeg"></source></picture></a></li>
+<li><a href="/category/Now-Showing/24/" target="_self" ontouchstart="APP4YOU_SMART_BANNER.incrementBanner('3348969')" onclick="APP4YOU_SMART_BANNER.incrementBanner('3348969')" style="cursor:pointer"><picture><source media="(max-width: 720px)" srcset="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/f0a92f41-95a5-4ced-b4c3-f298b2ff931b.jpeg"><img src="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/86c327d0-cb96-427c-db8b-d09e7556e587.jpeg"></source></picture></a></li>
+<li><a href="/category/Now-Showing/24/" target="_self" ontouchstart="APP4YOU_SMART_BANNER.incrementBanner('3348968')" onclick="APP4YOU_SMART_BANNER.incrementBanner('3348968')" style="cursor:pointer"><picture><source media="(max-width: 720px)" srcset="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/590d857d-ce11-4fcd-9c89-3458a9848c35.jpeg"><img src="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/4cb76a84-e9f9-4584-8b92-3838de5a62d0.jpeg"></source></picture></a></li>
+<li><a href="/category/Now-Showing/24/" target="_self" ontouchstart="APP4YOU_SMART_BANNER.incrementBanner('3348967')" onclick="APP4YOU_SMART_BANNER.incrementBanner('3348967')" style="cursor:pointer"><picture><source media="(max-width: 720px)" srcset="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/d3feeec5-34ed-4b2d-d8b2-51ad79506611.jpeg"><img src="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/4e597a69-45e6-439e-e7f1-08f0613dbe78.jpeg"></source></picture></a></li>
+<li><a href="/category/Now-Showing/24/" target="_self" ontouchstart="APP4YOU_SMART_BANNER.incrementBanner('3341150')" onclick="APP4YOU_SMART_BANNER.incrementBanner('3341150')" style="cursor:pointer"><picture><source media="(max-width: 720px)" srcset="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/dfbef7d3-d949-4b15-9cd8-f01c231d6ca1.jpeg"><img src="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/f9a71d30-0c0b-4b40-e6d1-8d3fea402692.jpeg"></source></picture></a></li>
+<li><a href="/category/Now-Showing/24/" target="_self" ontouchstart="APP4YOU_SMART_BANNER.incrementBanner('3348966')" onclick="APP4YOU_SMART_BANNER.incrementBanner('3348966')" style="cursor:pointer"><picture><source media="(max-width: 720px)" srcset="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/586da682-e318-4836-dca5-b7ced4cb43e3.jpeg"><img src="https://file.cafe24cos.com/banner-admin-live/upload/movielandco/844da47b-ff9c-4e67-d892-b78b2cd8a21d.jpeg"></source></picture></a></li>
 </ul></div>
 </div>
-<!--#ez="1/4"-->
+<!--#ez="1/18"-->
 
 <!--#ez="1/4"-->
         </div>
@@ -2068,7 +2071,8 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
 <link itemprop="url" href="https://movieland.co">
 <a itemprop="sameAs" href="https://www.youtube.com/@MoTVshow"></a>
 </span>
-<script type="text/javascript" src="/app/Eclog/js/cid.generate.js?vs=f79a76fb9f6c50d3e8b62c2211effb79&u=movielandco.1"></script>
+<script type="text/javascript" src="/app/Eclog/js/cid.generate.js?vs=76a7a00bc1008ca4036103662dcbd297&u=movielandco.1"></script>
+<script type="text/javascript" src="/app/Manage/js/inflowbeacon.js?vs=76a7a00bc1008ca4036103662dcbd297&u=movielandco.1"></script>
 <script>        (function (i, s, o, g) {
             var a = s.createElement(o), m = s.getElementsByTagName(o)[0];
             var initialized = false;
@@ -2109,7 +2113,7 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
             a.setAttribute('crossorigin', 'anonymous');
             a.src = g;
             m.parentNode.insertBefore(a, m);
-        })(window, document, 'script', "//optimizer.poxo.com/ca2/analytics.js?v=20260806");</script>
+        })(window, document, 'script', "//optimizer.poxo.com/ca2/analytics.js?v=20260909");</script>
 
 <!-- External Script Start -->
 
@@ -2126,9 +2130,9 @@ CAFE24.ROUTE = {"is_mobile":false,"is_need_route":false,"language_code":"ZZ","pa
 <!-- External Script End -->
 
 <script type="text/javascript" src="//t1.kakaocdn.net/kakao_js_sdk/v1/kakao.min.js" charset="utf-8"></script>
-<script type="text/javascript" src="/ind-script/i18n.php?v=2608051495&lang=ko_KR&domain=front&type=" charset="utf-8"></script>
+<script type="text/javascript" src="/ind-script/i18n.php?v=2609091502&lang=ko_KR&domain=front&type=" charset="utf-8"></script>
 
-<script src="/ind-script/optimizer.php?filename=vVjLduI4EN0n3vZ3OH3mcWYbTGcmp5MJJ6Qna1kuQ8WypNEjxP31UzYODRgHy9CzAIxVt0oq3XpIuWElrJQpYgNWecMhfrExfv5DRi_2U94d9agZL-KXfz2Yqv35Jfo9uhokD28OjGTCti8irlSBMA7rjQiYZAQ8ymUggAlkNgRDo06ZZkHaqAWhdhybMQcOS4hLVYJ0MfD75uEZ3fLp-5Q5FpUoj6IFpiQLT_TcJ2u1QenyXlWK-9rwjTJloqQzSggwfdIz4e211hOD2aLXonco-sZyo5rVXlglSE7JC6f0hUAJFymTst_yGshVWSr5scwbk0RcSRzRBtwxjY20g1IL8uO2KNM6vlcpCogft1DrGXTW2CNdqszTK7tCPUR57iWvnRKTXOa5i8o9Cg3FdQwSUeJva55uAwX7XgnFsgGipXestvGQWjCvu27tgWglqhzFETJkkDMvXL00WzLjJh0e1EPzpdI7ym8a8FdWMBUX9fcM30B0mfkBOGn28tuBrewBTCH1i4Gyj5CDAckh8ab-rWYG-cgEly6wAf3_qTWjzCItbbsdhwdmUS7GYUtwLKsz4Z7DEyZAZszsOJ0GIt4O7AMmipmsI53WbwdupgVm-HIA5R3L8-o9dR9dshZ-gZR_Xqm80EqVeV_65kVA4ekqqz0qM9tVSho0bSmcW-8ShIafNOclk1lbmc6pljIZ0o6dWStlPXeiI4Sq6RwXqi97_rB2nJabkPk1-i26inMqdhp5EQQVn6_k3nQ-iJh5EzH1AFWLpnAkPdHZo-BvWL379cXu1vwA1GYHBmLp8yBkEYB40E3l_fLmDGvgzf_m71yJTHl3HmWb8nG6qtuSLc6kaoqWOqcKqYM6WeEtKZlTtRAwBwFNQ3OuSRpSN2G2gDNtxo2XWVvXTlf2XNpwRRsVSaclDlYgT7E_QZmdAJ8eKPAB8H_WSXCPKn2prO3EYksGLvV-QA1C8fbfZU4HJubGWT0N7Ic3rG1Km62PBXdo3SjgdWgw_oDOneIh6fQOC4gnRq2obiSMLyEUGxwPW6h2zgPBrTSdChxDEU983aDQy1IFeusRXhFWjomifUyUl51Z3DNJaXtHxQpSoRYDBFHmQq1SYLz_9Lx0JRVohw7B9skkptJOfYVqgE1mK8nX34HSJZRp9wR4BPRgMjB8kNu2YeuqMBanDxXlQcgeqh3BEjGocQ-f7T0KOFDzj6CmoJXFUFvPaJeHMs0AGB_I-20clXYIBj02oAIq6smzUdgnRfGajJhvw9NQyoCEHMdR9I5Vwfb-NCwLJcu1d4pqGvIGTNluFcpRLxzOlPY6NCi8JdNgKKReMdy50_X903yJWlNPd51llPFs6OSruoy0QT2GFjsKRoRPQ6u_sL50rkbTssU_sfQEdN3Gj13AupTeylyFckAwLFkqINi6Zm5plIDLg-fpAabv9u5PeyB6cMJfl79LquwoB4jbVX3xJbq8_9JeqO1eFTddBw1bblC7QZj6hjS-rnsYDby5Wc9Zt-wdhO5kCK2TD-_vDR2W4QbfaPw_&type=js&k=78ce252bff1510998f2582910125b78beed9cf3e&t=1785819153" ></script><script src="/ind-script/optimizer_user.php?filename=jZBLDsMwCAX3TbY9B-pZegLHRgkpYGRsVe3pm36WjeIVIA28EZ5wSOg0K_iN9AIcHrlVmIJThNVBAum4-tmPQL-TYTlNTRPjKDtb74s5NUawstVYwQPjYIUidsV8mi7yO-9ZxCyS_zviE0ipHvj_4qRxJV-yXRcyI537nsW0IYLaNvwF&type=js&k=6b0684da39192f89b64c1cec21542dad2c0b0c3b&t=1707789308&user=T" ></script>
+<script src="/ind-script/optimizer.php?filename=vVjLduI4EN0Hb_s7nD7zOLMNpjOT08kkJ6Qna1kuQ8WypNEjxP31UzYODRgHy9CzAIxVt0qPq7ol5YaVsFKmiA1Y5Q2H-MXG-PkPGb3YT3m31aNmvIhf_vVgqvbnl-j36HKQPbw5MJIJ276IuFIFwjisNyKgkxHwKJeBACaQ2RAMtTplmgFpoxaE2pnYjDlwWEJcqhKki4HfNQ_P6JZP32fMsahEeRQtMCVbeKLnPlurDUqX97pS3NeBr5UpEyWdUUKA6bN-EN5eaT01mC16I3qHoq8tN6oZ7YVVguyUvHBKXwiUcJEyKfsjr4FclaWSH9u8MUnElcQRbcAd89hYOyi1oHncNmVax3cqRQHx4xZq3YPOGHusS5V5emVXqIc4z73k9aTEZJd57qJyj0JDcZ2ARJT425qn20DBvldCsWyAaekdq2PcpxbM6-609kC0ElWO4ggZMsiZF64emi2ZcdMOD-qm-VLpHefXDfgrK5iKi_r7Ad9AdJn5AThp1vLbgaXsAcwg9YuBto-QgwHJIfGm_q0eDPKRCS5dYAP6_1NrRplFWlp2Ow4PzKJcjMOW4FhWZ8K9CU-YAJkxszPp1BDxtmEfMFXMZB3rtH47cDEtMMOXAyjvWJ5X76n76JC18Auk_PNK8kIjVeZ96JsXAcLTdVbPqMxs1yl50LSkcG6_SxAaflKfl0xmrTKd0y1lMqQVO7NXynruxIkQqqZzXKi-7Pkj2nFabrbMr9Fv0WWck9hp5EUQVHy-lHvd-WDHzJsdUzeQWjTCkfTszh4Hf8PqfV5f7K7mB6A2KzAQS597IYsAxL1ulPfLmzOsgTf_m79zJTLl3XmcbeTjdFc3JVucydUMLVVOFVIFdbLDG3IyJ7UQMAcBTUFzrk4acjdltoAzLca1l1mra6c7ey5tuKONi6RTEgc7kKfEn6LMToDPDgh8APyfdRLco0pfKmsrsdhSgIne31CDULz9N8npwMTcuKingf3wgrVNaQ_rY8EtWjcKeBW6GX9A507xkHR6iwXEU6NWpBsJ40sIxQbvhy1U2-eB4NaaTgWOoYinvi5Q6GWpAmfrEV4RVo6Jon1MlJedXtwxSWl7x8UKUqEWfQXC0pWkuA4dgu2zSUylnfoK1YBozXFtYukYCJOFP1A8H8AwW0m-_g60LqFMu8fAI6B7k4Hhg-ZuG7aWhrE4fUiZByF7-HYES-yg6j28t3co4IDwH0HNQCuLobGe0S4PpZsBMD6Q_Ns40ncIBj02oAIqKsyzUdgnRZs2GdHfhqehlAEJOY6j6C2rguP9aVgWSpYr7xQJG_IGTClvFcpRLxw-KO116KbwlkKDoS31iuGTO1tfQs2XqDUVdldZRlnShna-qrWk3dRjaLHjYMT2aWj1F9Y3z9VoWrb4J5aegK5r-bEDWOvpjcxVKAcEw5KlAoKja-aWRgmYHDxUDwh9u3eJ2gPRgxP-Wv4mJO8oB5jbVX37Jbq8_9LeqnWVvG623KB2gzD1NWl8VRcyGnhzvZ6zruwdhO5kCK2TDy_xDZ2Y4RrfqP0_&type=js&k=a7b74534a3a9897cca1ce950f3c49b4a312a1445&t=1788863396" ></script><script src="/ind-script/optimizer_user.php?filename=jZBLDsMwCAX3TbY9B-pZegLHRgkpYGRsVe3pm36WjeIVIA28EZ5wSOg0K_iN9AIcHrlVmIJThNVBAum4-tmPQL-TYTlNTRPjKDtb74s5NUawstVYwQPjYIUidsV8mi7yO-9ZxCyS_zviE0ipHvj_4qRxJV-yXRcyI537nsW0IYLaNvwF&type=js&k=6b0684da39192f89b64c1cec21542dad2c0b0c3b&t=1707789308&user=T" ></script>
 <script type="text/javascript">
 var sIsFrontDesignChangeRequired = 'F';
 var sYtshopping = 'F';
@@ -2316,7 +2320,7 @@ $M.iCategoryNo = 0;
 $M.iSortMethod = 0;
 $M.init();
 }
-CAFE24.SHOP_CURRENCY_INFO = {"1":{"aShopCurrencyInfo":{"currency_code":"KRW","currency_no":"410","currency_symbol":"\uffe6","currency_name":"South Korean won","currency_desc":"\uffe6 \uc6d0 (\ud55c\uad6d)","decimal_place":0,"round_method_type":"F"},"aShopSubCurrencyInfo":null,"aBaseCurrencyInfo":{"currency_code":"KRW","currency_no":"410","currency_symbol":"\uffe6","currency_name":"South Korean won","currency_desc":"\uffe6 \uc6d0 (\ud55c\uad6d)","decimal_place":0,"round_method_type":"F"},"fExchangeRate":1,"fExchangeSubRate":null,"aFrontCurrencyFormat":{"head":"","tail":"\uc6d0"},"aFrontSubCurrencyFormat":{"head":"","tail":""}}}; var SHOP_CURRENCY_INFO = CAFE24.SHOP_CURRENCY_INFO;
+CAFE24.SHOP_CURRENCY_INFO = {"1":{"aShopCurrencyInfo":{"currency_code":"KRW","currency_no":"410","currency_symbol":"\uffe6","currency_name":"South Korean won","currency_desc":"\uffe6 \uc6d0 (\ud55c\uad6d)","decimal_place":0,"round_method_type":"F"},"aShopSubCurrencyInfo":null,"aBaseCurrencyInfo":{"currency_code":"KRW","currency_no":"410","currency_symbol":"\uffe6","currency_name":"South Korean won","currency_desc":"\uffe6 \uc6d0 (\ud55c\uad6d)","decimal_place":0,"round_method_type":"F"},"fExchangeRate":1,"fExchangeSubRate":null,"aFrontCurrencyFormat":{"head":"","tail":"\uc6d0"},"aFrontSubCurrencyFormat":{"head":"","tail":""},"bPresentmentEnabled":false,"aPresentmentCurrencyInfo":null,"fExchangePresentmentRate":null,"aFrontPresentmentCurrencyFormat":null,"bGlobaleEnabled":false}}; var SHOP_CURRENCY_INFO = CAFE24.SHOP_CURRENCY_INFO;
 if (typeof CAFE24.SHOP_FRONT_NEW_OPTION_COMMON !== "undefined") {CAFE24.SHOP_FRONT_NEW_OPTION_COMMON.initObject();}
 if (typeof CAFE24.SHOP_FRONT_NEW_OPTION_BIND !== "undefined") {CAFE24.SHOP_FRONT_NEW_OPTION_BIND.initChooseBox();}
 if (typeof CAFE24.SHOP_FRONT_NEW_OPTION_DATA !== "undefined") {CAFE24.SHOP_FRONT_NEW_OPTION_DATA.initData();}
