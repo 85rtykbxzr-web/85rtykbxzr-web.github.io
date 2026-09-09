@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-09-09T02:21:52.052Z",
+  "generatedAt": "2026-09-09T02:41:55.484Z",
   "weekStart": "2026-09-07",
   "weekEnd": "2026-09-09",
   "windowStart": "2026-09-07",
@@ -165,7 +165,7 @@
       "localPosterUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260818_bfba8fe2.jpg",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-09-09&movieCd=029328&playSDT=2026-09-09&screenId=02&showSeq=2",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121542&playDt=20260909&tsId=TS0044&pno=2",
       "score": 0,
       "signal": 0,
       "positiveSignal": 0,
@@ -174,19 +174,19 @@
       "rawMentionCount": 0,
       "scheduleBackfill": true,
       "venueIds": [
-        "cinecube",
         "sangsangmadang",
+        "cinecube",
         "filmforum",
         "kucine"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
         "KT&G 상상마당 시네마",
+        "씨네큐브 광화문",
         "필름포럼",
         "KU시네마테크"
       ],
       "nextDate": "2026-09-09",
-      "nextTime": "11:25",
+      "nextTime": "14:15",
       "evidence": [],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260818_bfba8fe2.jpg"
     }
@@ -196,11 +196,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 104,
+    "fetchedPostCount": 111,
     "listedPostCount": 292,
-    "detailedPostCount": 4,
-    "commentFetchCount": 4,
-    "commentCount": 11,
+    "detailedPostCount": 5,
+    "commentFetchCount": 5,
+    "commentCount": 13,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
