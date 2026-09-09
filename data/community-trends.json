@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-09-09T02:41:55.484Z",
+  "generatedAt": "2026-09-09T03:16:41.161Z",
   "weekStart": "2026-09-07",
   "weekEnd": "2026-09-09",
   "windowStart": "2026-09-07",
@@ -76,7 +76,7 @@
       "localPosterUrl": "/assets/recommendation-posters/1afd45512fb98782.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-09-09&movieCd=029204&playSDT=2026-09-09&screenId=01&showSeq=2",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121454&playDt=20260909&tsId=TS0039&pno=1",
       "score": 35.5,
       "signal": 2.1,
       "positiveSignal": 2.1,
@@ -85,21 +85,21 @@
       "rawMentionCount": 1,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube",
         "kucine",
         "sangsangmadang",
         "filmforum",
+        "cinecube",
         "indiespace"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
         "KU시네마테크",
         "KT&G 상상마당 시네마",
         "필름포럼",
+        "씨네큐브 광화문",
         "인디스페이스"
       ],
       "nextDate": "2026-09-09",
-      "nextTime": "12:00",
+      "nextTime": "13:20",
       "evidence": [
         {
           "title": "어떻게 해야 했을까 별로네",
@@ -196,11 +196,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 111,
+    "fetchedPostCount": 119,
     "listedPostCount": 292,
-    "detailedPostCount": 5,
-    "commentFetchCount": 5,
-    "commentCount": 13,
+    "detailedPostCount": 6,
+    "commentFetchCount": 6,
+    "commentCount": 15,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,

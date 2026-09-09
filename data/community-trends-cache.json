@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-09-09",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-09-09T02:41:49.839Z",
+  "updatedAt": "2026-09-09T03:16:33.207Z",
   "days": {
     "2026-09-07": {
       "호프": {
@@ -499,6 +499,66 @@
       }
     },
     "2026-09-09": {
+      "옵세션": {
+        "title": "옵세션(2D)",
+        "positiveSignal": 12,
+        "mentionCount": 2,
+        "evidence": [
+          {
+            "title": "옵세션 생각할수록 괜찮은거같음",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850394&page=1",
+            "date": "2026-09-09",
+            "positive": 8,
+            "rawPositive": 8,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "걸작",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "괜찮",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "스포) 옵세션 마지막 장면 아름다우면서 비극적이었던 이유가",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850284&page=3",
+            "date": "2026-09-09",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "재밌",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 4,
+            "commentNegative": 0
+          }
+        ]
+      },
       "바닷마을다이어리": {
         "title": "바닷마을 다이어리",
         "positiveSignal": 4,
@@ -525,36 +585,6 @@
                 "weight": 2,
                 "score": 2,
                 "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 4,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "옵세션": {
-        "title": "옵세션(2D)",
-        "positiveSignal": 4,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "스포) 옵세션 마지막 장면 아름다우면서 비극적이었던 이유가",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850284&page=3",
-            "date": "2026-09-09",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "재밌",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
               }
             ],
             "negativeHits": [],
