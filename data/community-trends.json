@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-09-09T09:14:20.378Z",
+  "generatedAt": "2026-09-09T12:19:15.248Z",
   "weekStart": "2026-09-07",
   "weekEnd": "2026-09-09",
   "windowStart": "2026-09-07",
@@ -18,7 +18,7 @@
       "localPosterUrl": "/assets/recommendation-posters/40f5f0963689ae80.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121681&playDt=20260909&tsId=TS0039&pno=4",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-09-10&movieCd=029462&playSDT=2026-09-10&screenId=02&showSeq=3",
       "score": 215,
       "signal": 16,
       "positiveSignal": 16,
@@ -27,21 +27,21 @@
       "rawMentionCount": 3,
       "scheduleBackfill": false,
       "venueIds": [
-        "kucine",
+        "cinecube",
         "filmforum",
-        "cinecube"
+        "kucine"
       ],
       "venueNames": [
-        "KU시네마테크",
+        "씨네큐브 광화문",
         "필름포럼",
-        "씨네큐브 광화문"
+        "KU시네마테크"
       ],
-      "nextDate": "2026-09-09",
-      "nextTime": "19:30",
+      "nextDate": "2026-09-10",
+      "nextTime": "13:30",
       "evidence": [
         {
           "title": "더 드라마 ㅈㄴ 여초영화인줄 알았는데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850525&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850525&page=2",
           "date": "2026-09-09",
           "positive": 4,
           "rawPositive": 4,
@@ -58,14 +58,14 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 0,
+          "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
         },
         {
           "title": "더드라마에서 언급되는 루이말 영화",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850512&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850512&page=2",
           "date": "2026-09-09",
           "positive": 10,
           "rawPositive": 10,
@@ -96,7 +96,7 @@
         },
         {
           "title": "더 드라마 하임 썅년 연기 물 올랐네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850491&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850491&page=3",
           "date": "2026-09-09",
           "positive": 2,
           "rawPositive": 2,
@@ -151,7 +151,7 @@
       "evidence": [
         {
           "title": "담요를 입은 사람 봐라",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850523&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850523&page=2",
           "date": "2026-09-09",
           "positive": 10,
           "rawPositive": 10,
@@ -209,7 +209,7 @@
       "evidence": [
         {
           "title": "바닷마을 다이어리는 어땠냐",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850331&page=4",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850331&page=6",
           "date": "2026-09-09",
           "positive": 4,
           "rawPositive": 4,
@@ -248,7 +248,7 @@
       "localPosterUrl": "/assets/recommendation-posters/1afd45512fb98782.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121454&playDt=20260909&tsId=TS0044&pno=4",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121454&playDt=20260910&tsId=TS0056&pno=1",
       "score": 35.5,
       "signal": 2.1,
       "positiveSignal": 2.1,
@@ -257,21 +257,21 @@
       "rawMentionCount": 1,
       "scheduleBackfill": false,
       "venueIds": [
-        "sangsangmadang",
         "filmforum",
         "cinecube",
         "kucine",
+        "sangsangmadang",
         "indiespace"
       ],
       "venueNames": [
-        "KT&G 상상마당 시네마",
         "필름포럼",
         "씨네큐브 광화문",
         "KU시네마테크",
+        "KT&G 상상마당 시네마",
         "인디스페이스"
       ],
-      "nextDate": "2026-09-09",
-      "nextTime": "18:15",
+      "nextDate": "2026-09-10",
+      "nextTime": "10:30",
       "evidence": [
         {
           "title": "어떻게 해야 했을까 별로네",
@@ -306,20 +306,20 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 244,
-    "listedPostCount": 292,
-    "detailedPostCount": 27,
-    "commentFetchCount": 27,
-    "commentCount": 73,
+    "fetchedPostCount": 306,
+    "listedPostCount": 342,
+    "detailedPostCount": 42,
+    "commentFetchCount": 42,
+    "commentCount": 102,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 6,
+    "scannedPageCount": 7,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-09-08",
     "newestScannedDate": "2026-09-09",
     "scanMode": "daily",
     "candidateWindowStart": "2026-09-09",
     "candidateWindowEnd": "2026-09-23",
-    "candidateCount": 101,
+    "candidateCount": 100,
     "seedLookbackDays": 3,
     "seedStart": "2026-09-07",
     "listLookbackDays": 1,
