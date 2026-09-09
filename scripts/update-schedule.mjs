@@ -1429,13 +1429,20 @@ async function fetchCinecubeSessions() {
   };
 }
 
+function dtryxVisibleDateRows(payload) {
+  // RestYn marks rest/holiday calendar dates, not the absence of screenings.
+  // For example, visible Sundays can contain a full published timetable.
+  // Only HiddenYn hides a date; let the timetable endpoint decide its sessions.
+  return (payload.Recordset || []).filter((row) => row.HiddenYn !== "Y").slice(0, 14);
+}
+
 async function fetchMomoSessions() {
   const dateUrl = "https://api.dtryx.com:30443/dtryx/cms/thirdparty/movie/third-party-type2-timetable-play-date-list?BrandCd=indieart&CinemaCd=000067&MovieCd=&ChannelCd=homepage&WorkGuID=324A2914-AB19-42A3-BDFE-58A08B2DC35D&EngVerYn=N";
   const listBase = "https://api.dtryx.com:30443/dtryx/cms/thirdparty/movie/third-party-type2-timetable-list";
   const dates = await fetchJson(dateUrl);
   const sessions = [];
 
-  for (const dateRow of (dates.Recordset || []).filter((row) => row.HiddenYn !== "Y" && row.RestYn !== "Y").slice(0, 14)) {
+  for (const dateRow of dtryxVisibleDateRows(dates)) {
     const date = normalizeDate(dateRow.PlaySDT);
     const params = new URLSearchParams({
       BrandCd: "indieart",
@@ -1490,7 +1497,7 @@ async function fetchEmuSessions() {
   const dates = await fetchJson(dateUrl);
   const sessions = [];
 
-  for (const dateRow of (dates.Recordset || []).filter((row) => row.HiddenYn !== "Y" && row.RestYn !== "Y").slice(0, 14)) {
+  for (const dateRow of dtryxVisibleDateRows(dates)) {
     const date = normalizeDate(dateRow.PlaySDT);
     const params = new URLSearchParams({
       BrandCd: config.brandCd,
@@ -1646,7 +1653,7 @@ async function fetchDtryxType2Sessions(config) {
   const dates = await fetchJson(dateUrl);
   const sessions = [];
 
-  for (const dateRow of (dates.Recordset || []).filter((row) => row.HiddenYn !== "Y" && row.RestYn !== "Y").slice(0, 14)) {
+  for (const dateRow of dtryxVisibleDateRows(dates)) {
     const date = normalizeDate(dateRow.PlaySDT);
     const params = new URLSearchParams({
       BrandCd: config.brandCd,
@@ -1718,7 +1725,7 @@ async function fetchArirangSessions() {
   const dates = await fetchJson(dateUrl);
   const sessions = [];
 
-  for (const dateRow of (dates.Recordset || []).filter((row) => row.HiddenYn !== "Y" && row.RestYn !== "Y").slice(0, 14)) {
+  for (const dateRow of dtryxVisibleDateRows(dates)) {
     const date = normalizeDate(dateRow.PlaySDT);
     const params = new URLSearchParams({
       BrandCd: config.brandCd,
@@ -1785,7 +1792,7 @@ async function fetchArtnineSessions() {
   const dates = await fetchJson(dateUrl);
   const sessions = [];
 
-  for (const dateRow of (dates.Recordset || []).filter((row) => row.HiddenYn !== "Y" && row.RestYn !== "Y").slice(0, 14)) {
+  for (const dateRow of dtryxVisibleDateRows(dates)) {
     const date = normalizeDate(dateRow.PlaySDT);
     const params = new URLSearchParams({
       BrandCd: config.brandCd,
@@ -1880,7 +1887,7 @@ async function fetchForestSessions() {
   const dates = await fetchJson(dateUrl);
   const sessions = [];
 
-  for (const dateRow of (dates.Recordset || []).filter((row) => row.HiddenYn !== "Y" && row.RestYn !== "Y").slice(0, 14)) {
+  for (const dateRow of dtryxVisibleDateRows(dates)) {
     const date = normalizeDate(dateRow.PlaySDT);
     const params = new URLSearchParams({
       BrandCd: config.brandCd,
@@ -3550,6 +3557,7 @@ async function refreshSeatStatusOnly() {
 }
 
 export {
+  dtryxVisibleDateRows,
   liveResultFallbackProbeIssue,
   liveResultQualityIssue,
   liveSessionMetrics,

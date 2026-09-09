@@ -1,4 +1,5 @@
 import {
+  dtryxVisibleDateRows,
   liveResultFallbackProbeIssue,
   liveResultQualityIssue,
   liveSessionMetrics,
@@ -22,6 +23,21 @@ import {
 function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
+
+// Real date-calendar shape observed on 2026-09-06: RestYn=Y on a visible
+// Sunday with 10 Momo screenings, while HiddenYn=Y suppresses unpublished days.
+const visibleDtryxDates = dtryxVisibleDateRows({ Recordset: [
+  { PlaySDT: "2026-09-05", HiddenYn: "Y", RestYn: "Y" },
+  { PlaySDT: "2026-09-06", HiddenYn: "N", RestYn: "Y" },
+  { PlaySDT: "2026-09-07", HiddenYn: "N", RestYn: "N" },
+  { PlaySDT: "2026-09-12", HiddenYn: "N", RestYn: "Y" },
+  { PlaySDT: "2026-09-15", HiddenYn: "Y", RestYn: "N" }
+]}).map((row) => row.PlaySDT);
+assert(
+  visibleDtryxDates.join(",") === "2026-09-06,2026-09-07,2026-09-12",
+  "published weekend screenings must be collected; hidden dates must stay excluded"
+);
+assert(dtryxVisibleDateRows({}).length === 0, "an empty date calendar should yield no requests");
 
 const snapshotToken = "XMulEo02ExamplePublicSnapshotTokenValue1234567890";
 const sanitizedSnapshot = sanitizeSourceSnapshot(
