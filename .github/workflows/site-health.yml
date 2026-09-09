@@ -8,7 +8,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, ubuntu-24.04-arm]
+        os: [ubuntu-latest]
     runs-on: ${{ matrix.os }}
     timeout-minutes: 5
     steps:
@@ -33,6 +33,6 @@ jobs:
             ['sac-https','https://www.cinematheque.seoul.kr/bbs/content.php?co_id=timetable'],
             ['sac-http','http://www.cinematheque.seoul.kr/bbs/content.php?co_id=timetable']
           ];
-          await Promise.all(sources.map(async ([source,url])=>{const start=Date.now();try{const r=await fetch(url,{signal:AbortSignal.timeout(20000),headers:{'user-agent':'Mozilla/5.0','accept':'*/*'}});const text=await r.text();let rows;try{rows=JSON.parse(text).Recordset?.length;}catch{}console.log(JSON.stringify({source,status:r.status,url:r.url,ms:Date.now()-start,bytes:text.length,rows,marker:text.includes('timetable')}));}catch(e){console.log(JSON.stringify({source,error:e.message,cause:e.cause?.code,ms:Date.now()-start}));}}));
+          await Promise.all(sources.map(async ([source,url])=>{const start=Date.now();try{const r=await fetch(url,{signal:AbortSignal.timeout(20000),headers:{'user-agent':'Mozilla/5.0','accept':'*/*'}});const text=await r.text();let rows;try{rows=JSON.parse(text).Recordset?.length;}catch{}console.log(JSON.stringify({source,status:r.status,url:r.url,ms:Date.now()-start,bytes:text.length,rows,marker:text.includes('timetable'),body:source.startsWith('sac')?text.slice(0,1600):undefined}));}catch(e){console.log(JSON.stringify({source,error:e.message,cause:e.cause?.code,ms:Date.now()-start}));}}));
           for(const [source,url] of sources.filter(([s])=>['dtryx-https443','sac-https'].includes(s))){const r=await exec('curl',['-4','-I','--max-time','20',url]).catch(e=>({stdout:e.stdout,stderr:e.stderr}));console.log(JSON.stringify({curl:source,output:r.stdout,error:r.stderr?.slice(-700)}));}
           JS
