@@ -49,6 +49,15 @@ jobs:
           ref: main
           fetch-depth: 2
 
+      - name: Reject an outdated workflow definition
+        run: |
+          set -euo pipefail
+          git fetch --no-tags origin "$GITHUB_WORKFLOW_SHA"
+          if ! git diff --quiet "$GITHUB_WORKFLOW_SHA" HEAD -- .github/workflows/pages.yml; then
+            echo "The Pages workflow changed while this run was queued. Start a new run from main." >&2
+            exit 1
+          fi
+
       - name: Set up Node.js
         uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
         with:

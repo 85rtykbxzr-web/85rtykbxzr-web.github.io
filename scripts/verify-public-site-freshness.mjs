@@ -81,8 +81,12 @@ function validatePayloads({ health, schedule, trends, sourceHealth }, limits, no
   requireObject(sourceHealth, "source-health.json");
   const healthRows = requireArray(sourceHealth.health, "source-health.json health rows");
 
-  if (health.ok !== true || health.mode !== "static" || health.indexable !== true) {
-    throw new Error("healthz.json is not a valid indexable static-site health payload");
+  if (health.ok !== true || health.mode !== "static") {
+    throw new Error("healthz.json is not a valid static-site health payload");
+  }
+  const expectedIndexable = limits.indexable ?? true;
+  if (health.indexable !== expectedIndexable) {
+    throw new Error(`healthz.json indexable must be ${expectedIndexable}`);
   }
   if (!/^\d+$/.test(String(health.deploymentId || ""))) {
     throw new Error("healthz.json deploymentId must be numeric");
@@ -137,6 +141,7 @@ function validatePayloads({ health, schedule, trends, sourceHealth }, limits, no
   }
 
   return {
+    indexable: health.indexable,
     deploymentId: String(health.deploymentId),
     deploymentCommit: String(health.deploymentCommit),
     builtAt: health.builtAt,
@@ -163,6 +168,7 @@ async function main() {
   if (parsedBaseUrl.protocol !== "https:") throw new Error("SITE_HEALTH_URL must use HTTPS");
 
   const limits = {
+    indexable: /^(1|true|yes)$/i.test(process.env.SITE_EXPECT_INDEXABLE ?? "true"),
     schedule: positiveNumberEnv("SITE_MAX_SCHEDULE_AGE_HOURS", 12),
     seats: positiveNumberEnv("SITE_MAX_SEAT_AGE_HOURS", 2),
     trends: positiveNumberEnv("SITE_MAX_TRENDS_AGE_HOURS", 36),
@@ -181,7 +187,8 @@ async function main() {
     fetchJson(baseUrl, "data/source-health.json", cacheBuster, requestOptions)
   ]);
   const result = validatePayloads({ health, schedule, trends, sourceHealth }, limits);
-  console.log(JSON.stringify({ ok: true, baseUrl, limitsHours: limits, ...result }, null, 2));
+  const { indexable, ...limitsHours } = limits;
+  console.log(JSON.stringify({ ok: true, baseUrl, expectedIndexable: indexable, limitsHours, ...result }, null, 2));
 }
 
 export { validatePayloads };

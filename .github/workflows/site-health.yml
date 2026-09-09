@@ -59,6 +59,8 @@ jobs:
         run: node scripts/verify-pages-deployment.mjs
 
       - name: Verify public data freshness
+        env:
+          SITE_EXPECT_INDEXABLE: ${{ vars.PRODUCTION_READY == 'true' }}
         run: node scripts/verify-public-site-freshness.mjs
 
       - name: Audit parser quality from the public data
