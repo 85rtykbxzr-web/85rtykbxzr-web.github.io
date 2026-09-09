@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-09-09T03:16:41.161Z",
+  "generatedAt": "2026-09-09T06:24:06.451Z",
   "weekStart": "2026-09-07",
   "weekEnd": "2026-09-09",
   "windowStart": "2026-09-07",
@@ -37,7 +37,7 @@
       "evidence": [
         {
           "title": "바닷마을 다이어리는 어땠냐",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850331&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850331&page=3",
           "date": "2026-09-09",
           "positive": 4,
           "rawPositive": 4,
@@ -76,7 +76,7 @@
       "localPosterUrl": "/assets/recommendation-posters/1afd45512fb98782.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121454&playDt=20260909&tsId=TS0039&pno=1",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121454&playDt=20260909&tsId=TS0044&pno=4",
       "score": 35.5,
       "signal": 2.1,
       "positiveSignal": 2.1,
@@ -85,21 +85,21 @@
       "rawMentionCount": 1,
       "scheduleBackfill": false,
       "venueIds": [
-        "kucine",
         "sangsangmadang",
         "filmforum",
         "cinecube",
+        "kucine",
         "indiespace"
       ],
       "venueNames": [
-        "KU시네마테크",
         "KT&G 상상마당 시네마",
         "필름포럼",
         "씨네큐브 광화문",
+        "KU시네마테크",
         "인디스페이스"
       ],
       "nextDate": "2026-09-09",
-      "nextTime": "13:20",
+      "nextTime": "18:15",
       "evidence": [
         {
           "title": "어떻게 해야 했을까 별로네",
@@ -135,7 +135,7 @@
       "localPosterUrl": "/assets/recommendation-posters/40f5f0963689ae80.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-09-09&movieCd=029462&playSDT=2026-09-09&screenId=01&showSeq=3",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121681&playDt=20260909&tsId=TS0039&pno=4",
       "score": 0,
       "signal": 0,
       "positiveSignal": 0,
@@ -144,17 +144,17 @@
       "rawMentionCount": 0,
       "scheduleBackfill": true,
       "venueIds": [
-        "cinecube",
         "kucine",
-        "filmforum"
+        "filmforum",
+        "cinecube"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
         "KU시네마테크",
-        "필름포럼"
+        "필름포럼",
+        "씨네큐브 광화문"
       ],
       "nextDate": "2026-09-09",
-      "nextTime": "13:55",
+      "nextTime": "19:30",
       "evidence": [],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_177ef811.jpg"
     },
@@ -165,7 +165,7 @@
       "localPosterUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260818_bfba8fe2.jpg",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121542&playDt=20260909&tsId=TS0044&pno=2",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-09-09&movieCd=029328&playSDT=2026-09-09&screenId=01&showSeq=5",
       "score": 0,
       "signal": 0,
       "positiveSignal": 0,
@@ -174,19 +174,19 @@
       "rawMentionCount": 0,
       "scheduleBackfill": true,
       "venueIds": [
-        "sangsangmadang",
         "cinecube",
+        "sangsangmadang",
         "filmforum",
         "kucine"
       ],
       "venueNames": [
-        "KT&G 상상마당 시네마",
         "씨네큐브 광화문",
+        "KT&G 상상마당 시네마",
         "필름포럼",
         "KU시네마테크"
       ],
       "nextDate": "2026-09-09",
-      "nextTime": "14:15",
+      "nextTime": "18:05",
       "evidence": [],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260818_bfba8fe2.jpg"
     }
@@ -196,11 +196,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 119,
+    "fetchedPostCount": 192,
     "listedPostCount": 292,
-    "detailedPostCount": 6,
-    "commentFetchCount": 6,
-    "commentCount": 15,
+    "detailedPostCount": 18,
+    "commentFetchCount": 18,
+    "commentCount": 41,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -209,7 +209,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-09-09",
     "candidateWindowEnd": "2026-09-23",
-    "candidateCount": 100,
+    "candidateCount": 104,
     "seedLookbackDays": 3,
     "seedStart": "2026-09-07",
     "listLookbackDays": 1,
