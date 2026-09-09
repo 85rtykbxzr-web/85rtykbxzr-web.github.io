@@ -16,6 +16,7 @@ env:
 jobs:
   health:
     name: Verify the deployed site
+    if: github.event_name != 'schedule' || vars.HOSTED_COLLECTION_READY == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:

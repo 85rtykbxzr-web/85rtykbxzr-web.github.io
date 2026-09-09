@@ -2984,6 +2984,7 @@ async function fetchLiveSessions(fetchers, existingSchedule = null) {
   const existingMetrics = existingSchedule ? sourceSessionMetrics(existingSchedule) : {};
   for (const fetcher of fetchers) {
     const expectedSourceId = liveFetcherSourceIds.get(fetcher) || fetcher.name;
+    console.log(`[live] Fetching ${expectedSourceId}`);
     try {
       const result = await fetcher();
       const sourceId = result.sourceId || expectedSourceId;
@@ -3387,6 +3388,7 @@ async function main() {
   const sourceResults = [];
   for (const source of schedule.sources || []) {
     if (liveSourceIds.has(source.id)) continue;
+    console.log(`[snapshot] Fetching ${source.id}`);
     sourceResults.push(await fetchSourceSnapshot(source));
   }
 

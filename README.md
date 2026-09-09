@@ -1,43 +1,47 @@
 # 서울독립영화관시간표
 
-서울의 독립·예술영화관 상영시간표와 좌석 상태를 한 화면에서 보여 주는 정적 웹사이트입니다.
+서울의 독립·예술영화관 상영시간표와 좌석 상태를 보여 주는 정적 웹사이트입니다.
 
-- 정식 주소: <https://seoulcinemaschedule.com>
-- GitHub Pages 주소: <https://85rtykbxzr-web.github.io>
-- 운영 비용: GitHub의 공개 저장소용 표준 Actions와 Pages 범위에서 $0
+- 운영 사이트: https://seoulcinemaschedule.com
+- GitHub Pages 검증 사이트: https://85rtykbxzr-web.github.io
 
-## 자동 갱신
+## 전환 상태 — 2026-09-09
 
-GitHub 호스팅 러너가 외부 영화관의 공개 정보를 수집하고 검증한 뒤, 정상 산출물만 GitHub Pages에 배포합니다. 개인 컴퓨터나 별도 VPN은 필요하지 않습니다.
+GitHub Actions 계정 실행 제한은 해제되어 클라우드 작업을 실행할 수 있습니다. 최신 앱·검증 코드, 주말/공휴일 상영 누락 수정, sharp 보안 업데이트를 반영했습니다.
 
-- 전체 시간표·추천작: KST 3시간마다 `:07`
-- 좌석 상태: KST 08:00–23:59에 `:07`, `:22`, `:37`, `:52`
-- 공개 사이트 상태 점검: 매일 KST 09:43
+전체 자동 수집은 아직 전환 조건을 충족하지 못했습니다. GitHub 표준 Linux·macOS·Windows 러너에서 Dtryx의 공식 API와 공개 예매 API 연결 시간이 초과됩니다. 실제 전체 수집에서는 8개 출처의 최신 검증을 완료하지 못해 새 데이터 커밋과 배포를 중단했습니다. 마지막 정상 데이터를 최신이라고 표시하도록 안전장치를 완화하지 않습니다.
 
-전체 갱신과 좌석 갱신은 한 번에 하나씩 실행됩니다. 수집·검증·빌드가 실패하면 새 배포를 중단하고 마지막 정상 Pages 배포를 계속 제공합니다. 전체 갱신 결과만 `[skip ci]` 데이터 커밋으로 남기며, 좌석 갱신은 저장소 이력을 늘리지 않고 배포 산출물만 교체합니다.
+- 전체 수집 검증: https://github.com/85rtykbxzr-web/85rtykbxzr-web.github.io/actions/runs/34299146110
+- 운영체제별 실제 API 연결 검사: https://github.com/85rtykbxzr-web/85rtykbxzr-web.github.io/actions/runs/34299880814
 
-워크플로는 외부 서비스의 쓰기 토큰을 사용하지 않고 저장소별 `GITHUB_TOKEN`만 사용합니다. 사용 중인 GitHub 공식 Action도 전체 커밋 SHA로 고정했습니다. 수집한 HTML snapshot은 커밋 전에 토큰·CSRF·JWT 형태의 값을 제거하고 공개 저장소 감사를 통과해야 합니다.
+검증 사이트의 초기 데이터는 2026-09-09에 정상 수집·감사한 스냅샷입니다. 운영 도메인 전환 전까지 검증 사이트는 검색 색인을 차단합니다.
 
-## 로컬 검증
+## 자동화와 안전장치
 
-Node.js `22.23.2`에서 실행합니다.
+전체 수집·좌석 갱신·배포에는 GitHub 호스팅 러너와 저장소별 `GITHUB_TOKEN`만 사용합니다. 외부 쓰기 토큰이나 개인 PC 접속은 사용하지 않습니다.
 
-```bash
+예약 정의는 준비되어 있지만, `HOSTED_COLLECTION_READY=true`인 경우에만 실행됩니다. 현재 이 조건은 충족되지 않았습니다. 연결 문제 해결 후 `full`, `seats`, `deploy`, `site-health` 실행과 예약 실행의 최신성 검사를 모두 통과한 뒤 활성화합니다.
+
+- 전체 시간표·추천: KST 3시간마다 `:07`
+- 좌석: KST 08–23시 15분 간격(전체 수집과 중복하지 않음)
+- 사이트 점검: 매일 KST 09:43
+
+전체/좌석 작업은 직렬화됩니다. 오래 대기했거나 출처·회차·날짜 검증에 실패한 작업은 배포하지 않습니다. HTML 스냅샷은 민감한 토큰 모양 값을 제거하고 공개 감사를 거칩니다. 전체 수집 데이터만 커밋하고, 좌석은 배포 산출물만 갱신합니다.
+
+`PRODUCTION_READY=true`는 실제 운영 전환과 검증을 완료했을 때만 설정하여 검색 색인을 허용합니다. GitHub 페이지의 배포 성공만으로 운영 전환이 완료된 것은 아닙니다.
+
+## 검증 및 수동 실행
+
+Node.js 22.23.2를 사용합니다.
+
+```sh
 npm ci
 npm run check
 npm run audit:deps
 npm run audit:public
-STATIC_SITE_INDEXABLE=true npm run build:static
+npm run build:static
 ```
 
-정적 산출물은 `dist/`에 생성됩니다. 공개 산출물에는 사이트 화면, 필요한 자산, 검증된 시간표·추천·소스 상태 JSON만 포함됩니다.
+GitHub Actions의 `Refresh and deploy GitHub Pages`에서 `full`(전체 수집), `seats`(좌석 갱신), `deploy`(검증된 커밋 데이터 배포)를 실행합니다. `CI`와 `Check public site health`도 수동 실행할 수 있습니다.
 
-## 수동 운영
-
-GitHub의 **Actions → Refresh and deploy GitHub Pages → Run workflow**에서 다음 모드를 실행할 수 있습니다.
-
-- `full`: 전체 시간표와 추천작을 다시 수집하고 배포
-- `seats`: 현재 회차의 좌석 상태를 다시 수집하고 배포
-- `deploy`: 커밋된 정상 데이터를 다시 빌드해 배포
-
-모든 배포는 `/`, `/healthz.json`, `/data/schedule.json`, `/data/community-trends.json`을 실제 Pages 주소에서 다시 읽어 반영 여부를 확인합니다.
+배포 후 홈페이지·healthz.json·일정·추천을 다시 읽어 배포 ID와 생성 시각을 검증합니다. 데이터에 표시된 생성 시각을 기준으로 최신성을 판단합니다.

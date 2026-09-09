@@ -35,6 +35,7 @@ env:
 jobs:
   build:
     name: Refresh and build
+    if: github.event_name != 'schedule' || vars.HOSTED_COLLECTION_READY == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     permissions:
@@ -191,7 +192,7 @@ jobs:
       - name: Verify and build the seat refresh
         if: steps.mode.outputs.mode == 'seats'
         env:
-          STATIC_SITE_INDEXABLE: "true"
+          STATIC_SITE_INDEXABLE: ${{ vars.PRODUCTION_READY == 'true' }}
           STATIC_DEPLOYMENT_ID: ${{ github.run_id }}
         run: |
           set -euo pipefail
@@ -208,7 +209,7 @@ jobs:
       - name: Audit and build the committed deployment
         if: steps.mode.outputs.mode == 'deploy'
         env:
-          STATIC_SITE_INDEXABLE: "true"
+          STATIC_SITE_INDEXABLE: ${{ vars.PRODUCTION_READY == 'true' }}
           STATIC_DEPLOYMENT_ID: ${{ github.run_id }}
         run: |
           set -euo pipefail
@@ -220,7 +221,7 @@ jobs:
       - name: Build the full refresh deployment
         if: steps.mode.outputs.mode == 'full'
         env:
-          STATIC_SITE_INDEXABLE: "true"
+          STATIC_SITE_INDEXABLE: ${{ vars.PRODUCTION_READY == 'true' }}
           STATIC_DEPLOYMENT_ID: ${{ github.run_id }}
         run: |
           set -euo pipefail
