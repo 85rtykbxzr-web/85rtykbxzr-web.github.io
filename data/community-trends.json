@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-09-09T13:42:51.445Z",
-  "weekStart": "2026-09-07",
-  "weekEnd": "2026-09-09",
-  "windowStart": "2026-09-07",
-  "windowEnd": "2026-09-09",
+  "generatedAt": "2026-09-09T15:23:22.852Z",
+  "weekStart": "2026-09-08",
+  "weekEnd": "2026-09-10",
+  "windowStart": "2026-09-08",
+  "windowEnd": "2026-09-10",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -19,10 +19,10 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-09-10&movieCd=029462&playSDT=2026-09-10&screenId=02&showSeq=3",
-      "score": 215,
-      "signal": 16,
-      "positiveSignal": 16,
-      "mentionCount": 3,
+      "score": 157,
+      "signal": 11.5,
+      "positiveSignal": 11.5,
+      "mentionCount": 2.2,
       "rawPositiveSignal": 16,
       "rawMentionCount": 3,
       "scheduleBackfill": false,
@@ -61,7 +61,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "더드라마에서 언급되는 루이말 영화",
@@ -92,7 +92,7 @@
           "commentCount": 3,
           "commentPositive": 10,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "더 드라마 하임 썅년 연기 물 올랐네",
@@ -116,7 +116,7 @@
           "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_177ef811.jpg"
@@ -129,10 +129,10 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-09-10&movieCd=027432&playSDT=2026-09-10&screenId=02&showSeq=6",
-      "score": 133,
-      "signal": 10,
-      "positiveSignal": 10,
-      "mentionCount": 1,
+      "score": 98,
+      "signal": 7.2,
+      "positiveSignal": 7.2,
+      "mentionCount": 0.7,
       "rawPositiveSignal": 10,
       "rawMentionCount": 1,
       "scheduleBackfill": false,
@@ -178,7 +178,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_3826837b.jpg"
@@ -191,10 +191,10 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://movieland.co/product/our-little-sister/296/?item_code=P00000LK00BE",
-      "score": 56,
-      "signal": 4,
-      "positiveSignal": 4,
-      "mentionCount": 1,
+      "score": 44.2,
+      "signal": 2.9,
+      "positiveSignal": 2.9,
+      "mentionCount": 0.7,
       "rawPositiveSignal": 4,
       "rawMentionCount": 1,
       "scheduleBackfill": false,
@@ -236,7 +236,7 @@
           "commentCount": 2,
           "commentPositive": 4,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://movieland.co/web/product/big/202609/12090ed421b7b9789a2886d7c2c0b6cd.jpg"
@@ -249,13 +249,13 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121454&playDt=20260910&tsId=TS0056&pno=1",
-      "score": 35.5,
-      "signal": 2.1,
-      "positiveSignal": 2.1,
-      "mentionCount": 0.5,
-      "rawPositiveSignal": 4,
-      "rawMentionCount": 1,
-      "scheduleBackfill": false,
+      "score": 0,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 0,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 0,
+      "scheduleBackfill": true,
       "venueIds": [
         "filmforum",
         "cinecube",
@@ -272,32 +272,7 @@
       ],
       "nextDate": "2026-09-10",
       "nextTime": "10:30",
-      "evidence": [
-        {
-          "title": "어떻게 해야 했을까 별로네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1849307&page=7",
-          "date": "2026-09-07",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "재밌",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 4,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        }
-      ],
+      "evidence": [],
       "posterSourceUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbJls3D%2FdJMcadJqj1f%2FAAAAAAAAAAAAAAAAAAAAACeMfcsEnFeBQJWMcvIohcvB_4ORkerlfY_wDyJXwSo3%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1790780399%26allow_ip%3D%26allow_referer%3D%26signature%3DnMY%252BG758kZMubJT3miJ5F2mCJH8%253D"
     }
   ],
@@ -306,24 +281,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 329,
-    "listedPostCount": 342,
-    "detailedPostCount": 46,
-    "commentFetchCount": 46,
-    "commentCount": 106,
+    "fetchedPostCount": 19,
+    "listedPostCount": 292,
+    "detailedPostCount": 1,
+    "commentFetchCount": 1,
+    "commentCount": 3,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 7,
+    "scannedPageCount": 6,
     "reachedLookbackStart": true,
-    "oldestScannedDate": "2026-09-08",
-    "newestScannedDate": "2026-09-09",
+    "oldestScannedDate": "2026-09-09",
+    "newestScannedDate": "2026-09-10",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-09-09",
-    "candidateWindowEnd": "2026-09-23",
+    "candidateWindowStart": "2026-09-10",
+    "candidateWindowEnd": "2026-09-24",
     "candidateCount": 100,
     "seedLookbackDays": 3,
-    "seedStart": "2026-09-07",
+    "seedStart": "2026-09-08",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-09-09",
+    "listWindowStart": "2026-09-10",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -331,7 +306,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-09-09"
+      "2026-09-10"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [
