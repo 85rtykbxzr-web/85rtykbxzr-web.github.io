@@ -4,6 +4,9 @@ import { pathToFileURL } from "node:url";
 import { isFestivalSession, normalizeFestivalSessions } from "../src/festival-labels.mjs";
 import { createSkippedSourceSnapshotResult } from "./source-health-status.mjs";
 import { writeFileAtomic } from "./write-file-atomic.mjs";
+import { readCafe24Challenge } from "./cafe24-challenge.mjs";
+import { browserLiveSourceIds, prepareBrowserLiveSchedule, deferredBrowserHealth } from "../src/browser-live-schedule.mjs";
+const collectInBrowser = process.env.SCHEDULE_COLLECTION_MODE === "browser-live";
 
 const schedulePath = "data/schedule.json";
 const snapshotDir = "data/source-snapshots";
@@ -372,7 +375,7 @@ function sanitizeSourceSnapshot(html) {
 }
 
 async function fetchText(url, options = {}) {
-  const { timeoutMs, retries, headers, ...fetchOptions } = options;
+  const { timeoutMs, retries, headers, allowChallenge = true, ...fetchOptions } = options;
   const requestTimeoutMs = fetchTimeoutMs({ timeoutMs });
   const retryCount = fetchRetryCount({ retries });
   let lastError = null;
@@ -394,6 +397,13 @@ async function fetchText(url, options = {}) {
         }
       });
       const text = await response.text();
+      const challenge = allowChallenge ? readCafe24Challenge(text, String(url)) : null;
+      if (challenge) {
+        return await fetchText(challenge.url, {
+          ...options, allowChallenge: false,
+          headers: { ...headers, cookie: challenge.cookie }
+        });
+      }
       if (shouldRetryStatus(response.status) && attempt < retryCount) {
         await sleep(retryDelayMs(attempt));
         continue;
@@ -2984,6 +2994,7 @@ async function fetchLiveSessions(fetchers, existingSchedule = null) {
   const existingMetrics = existingSchedule ? sourceSessionMetrics(existingSchedule) : {};
   for (const fetcher of fetchers) {
     const expectedSourceId = liveFetcherSourceIds.get(fetcher) || fetcher.name;
+    if (collectInBrowser && browserLiveSourceIds.has(expectedSourceId)) continue;
     console.log(`[live] Fetching ${expectedSourceId}`);
     try {
       const result = await fetcher();
@@ -3385,6 +3396,7 @@ async function main() {
   await mkdir(snapshotDir, { recursive: true });
 
   let schedule = ensureLiveSources(ensureVenues(JSON.parse(await readFile(schedulePath, "utf8"))));
+  if (collectInBrowser) schedule = prepareBrowserLiveSchedule(schedule);
   const sourceResults = [];
   for (const source of schedule.sources || []) {
     if (liveSourceIds.has(source.id)) continue;
@@ -3412,6 +3424,7 @@ async function main() {
   const sourceById = new Map(schedule.sources.map((source) => [source.id, source]));
 
   const health = [
+    ...(collectInBrowser ? deferredBrowserHealth(checkedAt) : []),
     ...sourceResults.map((result) => result.health),
     ...liveResults.map((result) => {
       const metrics = liveSessionMetrics(result.sessions);
@@ -3459,7 +3472,7 @@ async function main() {
     const entry = healthById.get(source.id);
     return {
       ...source,
-      lastCheckedAt: checkedAt,
+      lastCheckedAt: entry?.deferredToBrowser ? null : checkedAt,
       lastOk: entry?.ok ?? null,
       lastStatus: entry?.status ?? null,
       lastError: entry?.error || "",
@@ -3503,7 +3516,7 @@ async function refreshSeatStatusOnly() {
   const liveSessions = liveResults.flatMap((result) => result.sessions);
   const merged = mergeSeatStatuses(schedule, liveSessions, checkedAt);
   const refreshIssue = seatStatusRefreshIssue({
-    expectedSources: seatStatusFetchers.length,
+    expectedSources: seatStatusFetchers.filter((fetcher) => !collectInBrowser || !browserLiveSourceIds.has(liveFetcherSourceIds.get(fetcher))).length,
     successfulSources: liveResults.filter((result) => liveSessionMetrics(result.sessions).sessions > 0).length,
     fetchedSessions: liveSessions.length,
     updatedSessions: merged.updatedSessions

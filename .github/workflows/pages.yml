@@ -31,6 +31,7 @@ env:
   npm_config_fund: "false"
   npm_config_prefer_offline: "true"
   PUBLIC_SITE_URL: https://85rtykbxzr-web.github.io
+  SCHEDULE_COLLECTION_MODE: browser-live
 
 jobs:
   build:

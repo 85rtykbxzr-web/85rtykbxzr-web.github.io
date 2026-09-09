@@ -112,7 +112,7 @@ function contentSecurityPolicy(structuredData) {
     "script-src-attr 'none'",
     "font-src 'self' data:",
     "img-src 'self' data: https:",
-    "connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com",
+    "connect-src 'self' https://api.dtryx.com:30443 https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com",
     "object-src 'none'",
     "worker-src 'none'",
     "media-src 'none'",
@@ -331,6 +331,8 @@ const builtAt = new Date().toISOString();
 const healthPayload = {
   ok: true,
   mode: "static",
+  collectionMode: schedule.meta?.collectionMode || "server",
+  browserLiveVenueIds: schedule.meta?.browserLiveVenueIds || [],
   indexable,
   builtAt,
   deploymentId,

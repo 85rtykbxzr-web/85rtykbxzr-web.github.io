@@ -1,3 +1,4 @@
+import { browserLiveConfigs, usesBrowserLive, refreshBrowserLiveSchedule } from "./src/browser-live-schedule.mjs";
 import { addCalendarDays, addCalendarMonths, calendarDaysBetween } from "./src/calendar-date.mjs";
 import {
   isFestivalSession,
@@ -24,6 +25,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
 
   const state = {
     data: null,
+    browserRefreshId: 0,
     query: "",
     date: null,
     linkFilter: "all",
@@ -431,6 +433,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
       data?.meta?.lastVerifiedAt || "",
       data?.meta?.generatedAt || "",
       data?.meta?.seatStatusVerifiedAt || "",
+      JSON.stringify(data?.meta?.browserLive || []),
       sessions.length,
       sessions[0]?.id || "",
       lastSession.id || "",
@@ -551,14 +554,71 @@ import { isPastKstSession } from "./src/session-time.mjs";
     if (dataStatus) {
       const verifiedAt = formatVerifiedAt(state.data?.meta?.lastVerifiedAt || state.data?.meta?.generatedAt);
       const venueCount = (state.data?.venues || []).length;
-      dataStatus.textContent = verifiedAt ? `${verifiedAt} 기준, ${venueCount}개 상영관` : `${venueCount}개 상영관`;
+      dataStatus.textContent = usesBrowserLive(state.data)
+        ? `${venueCount - browserLiveConfigs.length}개관 시간표 ${verifiedAt} 기준 · ${browserLiveConfigs.length}개관 실시간 조회`
+        : verifiedAt ? `${verifiedAt} 기준, ${venueCount}개 상영관` : `${venueCount}개 상영관`;
     }
+    renderBrowserLiveStatus();
     const mobileHeading = $("#mobileScheduleHeading");
     if (mobileHeading) {
       const filterLabel = state.linkFilter === "all" ? "" : `${actionLabel({ bookingType: state.linkFilter })} `;
       if (state.view === "film") mobileHeading.textContent = "영화별 상영";
       else if (state.view === "venue") mobileHeading.textContent = "상영관별 시간표";
       else mobileHeading.textContent = `${filterLabel}상영시간표`;
+    }
+  }
+
+  function startBrowserLiveRefresh(base) {
+    const requestId = ++state.browserRefreshId;
+    if (!usesBrowserLive(base)) return;
+    refreshBrowserLiveSchedule(base, {
+      onProgress(data) {
+        if (requestId !== state.browserRefreshId) return;
+        applyScheduleData(data);
+        render();
+      }
+    }).catch(() => {});
+  }
+
+  function browserLiveIncomplete() {
+    return usesBrowserLive(state.data) && (state.data.meta.browserLive || []).filter((row) => row.status === "ok").length < browserLiveConfigs.length;
+  }
+
+  function emptyScheduleMessage(message) {
+    if (!browserLiveIncomplete()) return message;
+    const rows = state.data.meta.browserLive || [];
+    if (rows.some((row) => row.status === "error")) return "일부 영화관의 시간표를 확인하지 못했습니다. 위의 공식 링크에서 확인해 주세요.";
+    return "영화관의 공식 시간표를 불러오는 중입니다.";
+  }
+
+  function renderBrowserLiveStatus() {
+    for (const id of ["desktop", "mobile"]) {
+      let notice = document.getElementById(`${id}LiveStatus`);
+      if (!usesBrowserLive(state.data)) { notice?.remove(); continue; }
+      if (!notice) {
+        notice = document.createElement("div");
+        notice.id = `${id}LiveStatus`;
+        notice.className = "border border-primary/10 bg-surface p-4 text-sm text-on-surface-variant";
+        notice.setAttribute("role", "status");
+        notice.setAttribute("aria-live", "polite");
+        document.getElementById(`${id}Schedule`).before(notice);
+      }
+      const rows = state.data.meta.browserLive || [];
+      const complete = rows.filter((row) => row.status === "ok");
+      const failures = rows.filter((row) => row.status === "error");
+      if (failures.length) {
+        const links = failures.map((row) => {
+          const config = browserLiveConfigs.find((item) => item.venueId === row.venueId);
+          return `<a class="underline" href="${escapeHtml(safePublicUrl(config.officialUrl))}" target="_blank" rel="noopener noreferrer">${escapeHtml(config.name)}</a>`;
+        });
+        notice.innerHTML = `${complete.length}/${browserLiveConfigs.length}개관 실시간 확인 · 연결되지 않은 영화관은 공식 시간표를 확인해 주세요: ${links.join(" · ")} <button class="underline" type="button" data-retry-browser-live>다시 확인</button>`;
+        notice.querySelector("button").onclick = () => refreshScheduleData({ force: true });
+      } else if (complete.length === browserLiveConfigs.length) {
+        const oldest = complete.map((row) => row.checkedAt).sort()[0];
+        notice.textContent = `${complete.length}개관 공식 시간표·좌석 ${formatVerifiedAt(oldest)} 실시간 확인`;
+      } else {
+        notice.textContent = `영화관 공식 시간표·좌석 확인 중 · ${complete.length}/${browserLiveConfigs.length}개관`;
+      }
     }
   }
 
@@ -1283,7 +1343,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
     const groups = groupedSessionEntries(filtered, (session) => session.venueId || "unknown", { sortByFavorites: true });
 
     if (!groups.length) {
-      container.innerHTML = `<div class="p-10 border-y border-primary/10 bg-surface text-center text-on-surface-variant">${escapeHtml(formatDate(activeDate))}에 맞는 상영 회차가 없습니다.</div>`;
+      container.innerHTML = `<div class="p-10 border-y border-primary/10 bg-surface text-center text-on-surface-variant">${escapeHtml(emptyScheduleMessage(`${formatDate(activeDate)}에 맞는 상영 회차가 없습니다.`))}</div>`;
       return;
     }
 
@@ -1308,7 +1368,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
     const container = $("#desktopSchedule");
 
     if (!entries.length) {
-      container.innerHTML = `<div class="p-10 border-y border-primary/10 bg-surface text-center text-on-surface-variant">조건에 맞는 상영 회차가 없습니다.</div>`;
+      container.innerHTML = `<div class="p-10 border-y border-primary/10 bg-surface text-center text-on-surface-variant">${escapeHtml(emptyScheduleMessage("조건에 맞는 상영 회차가 없습니다."))}</div>`;
       return;
     }
 
@@ -1467,7 +1527,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
       const groups = groupedSessionEntries(filtered, (session) => session.venueId || "unknown", { sortByFavorites: true });
       $("#mobileSchedule").innerHTML = groups.length
         ? groups.map((group) => agendaVenueSection(group.key, group.sessions, true)).join("")
-        : `<div class="p-6 border border-outline-variant/20 bg-surface-container-lowest text-center text-on-surface-variant">${escapeHtml(formatDate(activeDate))}에 맞는 상영 회차가 없습니다.</div>`;
+        : `<div class="p-6 border border-outline-variant/20 bg-surface-container-lowest text-center text-on-surface-variant">${escapeHtml(emptyScheduleMessage(`${formatDate(activeDate)}에 맞는 상영 회차가 없습니다.`))}</div>`;
       return;
     }
 
@@ -1485,7 +1545,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
         : Object.entries(grouped);
 
     if (!entries.length) {
-      $("#mobileSchedule").innerHTML = `<div class="p-6 border border-outline-variant/20 bg-surface-container-lowest text-center text-on-surface-variant">조건에 맞는 상영 회차가 없습니다.</div>`;
+      $("#mobileSchedule").innerHTML = `<div class="p-6 border border-outline-variant/20 bg-surface-container-lowest text-center text-on-surface-variant">${escapeHtml(emptyScheduleMessage("조건에 맞는 상영 회차가 없습니다."))}</div>`;
       return;
     }
 
@@ -1713,7 +1773,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
               ${
                 groups.length
                   ? groups.map((group) => renderSearchResultRow(group.key, group.sessions)).join("")
-                  : `<div class="py-10 border-t border-primary/10 text-center text-on-surface-variant">검색 결과가 없습니다.</div>`
+                  : `<div class="py-10 border-t border-primary/10 text-center text-on-surface-variant">${escapeHtml(emptyScheduleMessage("검색 결과가 없습니다."))}</div>`
               }
             </div>
           </div>
@@ -1733,7 +1793,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
             ${
               groups.length
                 ? groups.map((group) => renderSearchResultRow(group.key, group.sessions, true)).join("")
-                : `<div class="py-6 border-t border-outline-variant/20 text-sm text-on-surface-variant">검색 결과가 없습니다.</div>`
+                : `<div class="py-6 border-t border-outline-variant/20 text-sm text-on-surface-variant">${escapeHtml(emptyScheduleMessage("검색 결과가 없습니다."))}</div>`
             }
           </div>
         `
@@ -2843,6 +2903,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
 
       applyScheduleData(nextData);
       render();
+      startBrowserLiveRefresh(nextData);
       return true;
     } catch {
       return false;
@@ -3068,6 +3129,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
       applyScheduleData(scheduleData, { resetDate: true });
       render();
       hideBootFallback();
+      startBrowserLiveRefresh(scheduleData);
     } catch {
       renderError();
     }

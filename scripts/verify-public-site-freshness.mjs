@@ -1,3 +1,4 @@
+import { assertBrowserCollectionContract, usesBrowserLive } from "../src/browser-live-schedule.mjs";
 import { pathToFileURL } from "node:url";
 import { fetchWithTransientRetry } from "./http-retry.mjs";
 
@@ -80,6 +81,8 @@ function validatePayloads({ health, schedule, trends, sourceHealth }, limits, no
   requireArray(trends.items, "community-trends.json items", 4);
   requireObject(sourceHealth, "source-health.json");
   const healthRows = requireArray(sourceHealth.health, "source-health.json health rows");
+  assertBrowserCollectionContract(schedule, sourceHealth);
+  if (usesBrowserLive(schedule) && health.collectionMode !== "browser-live") throw new Error("Health and schedule collection modes differ");
 
   if (health.ok !== true || health.mode !== "static") {
     throw new Error("healthz.json is not a valid static-site health payload");

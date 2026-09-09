@@ -1,3 +1,4 @@
+import { assertBrowserCollectionContract, isBrowserLiveVenue } from "../src/browser-live-schedule.mjs";
 import { readFile } from "node:fs/promises";
 import {
   cleanFestivalDisplayTitle,
@@ -322,7 +323,9 @@ function validateCoverage(schedule, health, errors, warnings) {
     if (!venueIds.has(expectedVenueId)) errors.push(fail("Expected venue is missing", expectedVenueId));
   }
 
+  assertBrowserCollectionContract(schedule, health);
   for (const venue of schedule.venues) {
+    if (isBrowserLiveVenue(schedule, venue.id)) continue;
     if (!expectedVenueIds.has(venue.id)) errors.push(fail("Unexpected venue needs scope review", venue.id));
     if (!sessionsByVenue[venue.id]) errors.push(fail("Venue has no sessions", venue.id));
     const minimum = venueCoverageMinimums[venue.id];

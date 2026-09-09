@@ -1,3 +1,4 @@
+import { assertBrowserCollectionContract, isBrowserLiveVenue } from "../src/browser-live-schedule.mjs";
 import { readFile } from "node:fs/promises";
 import {
   isIntentionallySkippedSourceHealth,
@@ -321,6 +322,7 @@ function venueIssues({ venue, sessions, sources, healthRows, minimum }) {
 
 const schedule = await readJson(scheduleSource);
 const health = await readJson(healthSource);
+assertBrowserCollectionContract(schedule, health);
 const today = todayKst();
 const sessionsByVenue = Object.groupBy(
   (schedule.sessions || []).filter((session) => !session.date || session.date >= today),
@@ -334,6 +336,7 @@ const warnings = [];
 
 const rows = expectedVenueOrder.map((venueId) => {
   const venue = venuesById.get(venueId) || { id: venueId, name: venueId };
+  if (isBrowserLiveVenue(schedule, venueId)) return { id: venueId, name: venue.name, grade: "BROWSER", score: null, sessions: 0, dates: 0, health: "deferred-to-browser", verification: "Official API is verified per visit, not by this server audit" };
   const sessions = sessionsByVenue[venueId] || [];
   const sources = sourcesByVenue[venueId] || [];
   const healthRows = sources.map((source) => healthBySourceId.get(source.id)).filter(Boolean);
