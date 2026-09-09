@@ -1,10 +1,11 @@
 import { createDecipheriv } from "node:crypto";
 
-// This host returns a small CUPID JavaScript cookie challenge to cloud visitors.
+// These official cinema hosts return a small CUPID cookie challenge to cloud visitors.
 // Decode only its known AES-CBC fields; never execute downloaded JavaScript.
 export function readCafe24Challenge(html, requestUrl) {
   const origin = new URL(requestUrl);
-  if (origin.hostname !== "www.cinematheque.seoul.kr" || !html.includes("/cupid.js")) return null;
+  const allowedHosts = new Set(["www.cinematheque.seoul.kr", "www.arthousemomo.co.kr", "arthousemomo.co.kr"]);
+  if (!allowedHosts.has(origin.hostname) || !html.includes("/cupid.js")) return null;
   const values = [...html.matchAll(/\b[abc]=toNumbers\("([a-f0-9]{32})"\)/gi)].map((match) => match[1]);
   const redirect = html.match(/location\.href="([^"]+)"/)?.[1];
   if (values.length !== 3 || !redirect || !html.includes('document.cookie="CUPID="')) {

@@ -404,6 +404,7 @@ async function fetchText(url, options = {}) {
           headers: { ...headers, cookie: challenge.cookie }
         });
       }
+      if (text.length < 4096 && text.includes("/cupid.js")) throw new Error("Source returned an unresolved browser challenge");
       if (shouldRetryStatus(response.status) && attempt < retryCount) {
         await sleep(retryDelayMs(attempt));
         continue;
