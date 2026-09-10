@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-09-10T06:16:53.050Z",
+  "generatedAt": "2026-09-10T09:21:43.117Z",
   "weekStart": "2026-09-08",
   "weekEnd": "2026-09-10",
   "windowStart": "2026-09-08",
@@ -19,11 +19,11 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121681&playDt=20260910&tsId=TS0056&pno=5",
-      "score": 335,
-      "signal": 25.5,
-      "positiveSignal": 25.5,
+      "score": 359,
+      "signal": 27.5,
+      "positiveSignal": 27.5,
       "mentionCount": 4.2,
-      "rawPositiveSignal": 30,
+      "rawPositiveSignal": 32,
       "rawMentionCount": 5,
       "scheduleBackfill": false,
       "venueIds": [
@@ -120,10 +120,10 @@
         },
         {
           "title": "더 드라마 재밌네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850799&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850799&page=2",
           "date": "2026-09-10",
-          "positive": 4,
-          "rawPositive": 4,
+          "positive": 6,
+          "rawPositive": 6,
           "negative": 0,
           "positiveHits": [
             {
@@ -132,19 +132,26 @@
               "weight": 4,
               "score": 4,
               "label": "clear"
+            },
+            {
+              "term": "괜찮",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
             }
           ],
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
+          "commentCount": 1,
+          "commentPositive": 2,
           "commentNegative": 0,
           "dayWeight": 1
         },
         {
           "title": "노스포) 더 드라마 볼만",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850742&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850742&page=3",
           "date": "2026-09-10",
           "positive": 10,
           "rawPositive": 10,
@@ -197,7 +204,7 @@
       "localPosterUrl": "/assets/recommendation-posters/19fee0b48adfa052.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-09-10&movieCd=027432&playSDT=2026-09-10&screenId=02&showSeq=6",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-09-12&movieCd=027432&playSDT=2026-09-12&screenId=02&showSeq=4",
       "score": 98,
       "signal": 7.2,
       "positiveSignal": 7.2,
@@ -217,8 +224,8 @@
         "필름포럼",
         "KU시네마테크"
       ],
-      "nextDate": "2026-09-10",
-      "nextTime": "17:50",
+      "nextDate": "2026-09-12",
+      "nextTime": "15:30",
       "evidence": [
         {
           "title": "담요를 입은 사람 봐라",
@@ -352,11 +359,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 142,
+    "fetchedPostCount": 198,
     "listedPostCount": 292,
-    "detailedPostCount": 20,
-    "commentFetchCount": 20,
-    "commentCount": 50,
+    "detailedPostCount": 25,
+    "commentFetchCount": 25,
+    "commentCount": 73,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -365,7 +372,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-09-10",
     "candidateWindowEnd": "2026-09-24",
-    "candidateCount": 99,
+    "candidateCount": 97,
     "seedLookbackDays": 3,
     "seedStart": "2026-09-08",
     "listLookbackDays": 1,

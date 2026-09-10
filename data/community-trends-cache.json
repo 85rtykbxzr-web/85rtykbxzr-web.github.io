@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-09-10",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-09-10T06:16:47.238Z",
+  "updatedAt": "2026-09-10T09:21:37.393Z",
   "days": {
     "2026-09-08": {
       "호프": {
@@ -499,17 +499,54 @@
       }
     },
     "2026-09-10": {
+      "화장터인부": {
+        "title": "화장터 인부",
+        "positiveSignal": 8,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "화장터 인부 꿀잼시네마임?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850813&page=2",
+            "date": "2026-09-10",
+            "positive": 8,
+            "rawPositive": 8,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 5,
+            "commentPositive": 8,
+            "commentNegative": 0
+          }
+        ]
+      },
       "더드라마": {
         "title": "더 드라마(2D)",
-        "positiveSignal": 14,
+        "positiveSignal": 16,
         "mentionCount": 2,
         "evidence": [
           {
             "title": "더 드라마 재밌네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850799&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850799&page=2",
             "date": "2026-09-10",
-            "positive": 4,
-            "rawPositive": 4,
+            "positive": 6,
+            "rawPositive": 6,
             "negative": 0,
             "positiveHits": [
               {
@@ -518,18 +555,25 @@
                 "weight": 4,
                 "score": 4,
                 "label": "clear"
+              },
+              {
+                "term": "괜찮",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
               }
             ],
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
+            "commentCount": 1,
+            "commentPositive": 2,
             "commentNegative": 0
           },
           {
             "title": "노스포) 더 드라마 볼만",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850742&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850742&page=3",
             "date": "2026-09-10",
             "positive": 10,
             "rawPositive": 10,
@@ -580,7 +624,7 @@
         "evidence": [
           {
             "title": "옵세션 <- 묘하게 광기가 현실적임",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850796&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850796&page=2",
             "date": "2026-09-10",
             "positive": 4,
             "rawPositive": 4,
@@ -610,7 +654,7 @@
           },
           {
             "title": "( 스포) 옵세션에서 이 노래 은근 좋지 않았냐",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850792&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850792&page=2",
             "date": "2026-09-10",
             "positive": 2,
             "rawPositive": 2,
@@ -633,7 +677,7 @@
           },
           {
             "title": "옵세션 보러 가는데 너모 무서움;",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850743&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850743&page=3",
             "date": "2026-09-10",
             "positive": 2,
             "rawPositive": 2,
