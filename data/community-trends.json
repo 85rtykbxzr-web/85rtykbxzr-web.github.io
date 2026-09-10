@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-09-10T09:21:43.117Z",
+  "generatedAt": "2026-09-10T11:15:26.508Z",
   "weekStart": "2026-09-08",
   "weekEnd": "2026-09-10",
   "windowStart": "2026-09-08",
@@ -18,7 +18,7 @@
       "localPosterUrl": "/assets/recommendation-posters/40f5f0963689ae80.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121681&playDt=20260910&tsId=TS0056&pno=5",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-09-11&movieCd=029462&playSDT=2026-09-11&screenId=01&showSeq=2",
       "score": 359,
       "signal": 27.5,
       "positiveSignal": 27.5,
@@ -27,17 +27,17 @@
       "rawMentionCount": 5,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum",
         "cinecube",
+        "filmforum",
         "kucine"
       ],
       "venueNames": [
-        "필름포럼",
         "씨네큐브 광화문",
+        "필름포럼",
         "KU시네마테크"
       ],
-      "nextDate": "2026-09-10",
-      "nextTime": "19:50",
+      "nextDate": "2026-09-11",
+      "nextTime": "11:50",
       "evidence": [
         {
           "title": "더 드라마 ㅈㄴ 여초영화인줄 알았는데",
@@ -120,7 +120,7 @@
         },
         {
           "title": "더 드라마 재밌네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850799&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850799&page=3",
           "date": "2026-09-10",
           "positive": 6,
           "rawPositive": 6,
@@ -151,7 +151,7 @@
         },
         {
           "title": "노스포) 더 드라마 볼만",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850742&page=3",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850742&page=4",
           "date": "2026-09-10",
           "positive": 10,
           "rawPositive": 10,
@@ -359,10 +359,10 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 198,
+    "fetchedPostCount": 239,
     "listedPostCount": 292,
-    "detailedPostCount": 25,
-    "commentFetchCount": 25,
+    "detailedPostCount": 28,
+    "commentFetchCount": 28,
     "commentCount": 73,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
