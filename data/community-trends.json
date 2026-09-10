@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-09-10T03:11:11.527Z",
+  "generatedAt": "2026-09-10T04:35:30.383Z",
   "weekStart": "2026-09-08",
   "weekEnd": "2026-09-10",
   "windowStart": "2026-09-08",
@@ -18,7 +18,7 @@
       "localPosterUrl": "/assets/recommendation-posters/40f5f0963689ae80.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-09-10&movieCd=029462&playSDT=2026-09-10&screenId=02&showSeq=3",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121681&playDt=20260910&tsId=TS0056&pno=5",
       "score": 282,
       "signal": 21.5,
       "positiveSignal": 21.5,
@@ -27,17 +27,17 @@
       "rawMentionCount": 4,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube",
         "filmforum",
+        "cinecube",
         "kucine"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
         "필름포럼",
+        "씨네큐브 광화문",
         "KU시네마테크"
       ],
       "nextDate": "2026-09-10",
-      "nextTime": "13:30",
+      "nextTime": "19:50",
       "evidence": [
         {
           "title": "더 드라마 ㅈㄴ 여초영화인줄 알았는데",
@@ -326,11 +326,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 104,
+    "fetchedPostCount": 117,
     "listedPostCount": 292,
     "detailedPostCount": 13,
     "commentFetchCount": 13,
-    "commentCount": 30,
+    "commentCount": 32,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -339,7 +339,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-09-10",
     "candidateWindowEnd": "2026-09-24",
-    "candidateCount": 98,
+    "candidateCount": 99,
     "seedLookbackDays": 3,
     "seedStart": "2026-09-08",
     "listLookbackDays": 1,
