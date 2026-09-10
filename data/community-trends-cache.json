@@ -2,267 +2,25 @@
   "version": 2,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-09-08",
-  "windowEnd": "2026-09-10",
+  "windowStart": "2026-09-09",
+  "windowEnd": "2026-09-11",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-09-08",
       "2026-09-09",
-      "2026-09-10"
+      "2026-09-10",
+      "2026-09-11"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-09-10",
-    "lastWindowEnd": "2026-09-10",
+    "lastWindowStart": "2026-09-11",
+    "lastWindowEnd": "2026-09-11",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-09-10T12:11:09.593Z",
+  "updatedAt": "2026-09-10T15:15:36.753Z",
   "days": {
-    "2026-09-08": {
-      "호프": {
-        "title": "호프",
-        "positiveSignal": 16,
-        "mentionCount": 3,
-        "evidence": [
-          {
-            "title": "호프는 온라인 반응이 재밌음",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850138&page=1",
-            "date": "2026-09-08",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "재밌",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "호프 북미 반응 내가 딱 원하던 반응이라 존나 좋음",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850133&page=1",
-            "date": "2026-09-08",
-            "positive": 10,
-            "rawPositive": 10,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "훌륭",
-                "count": 2,
-                "weight": 4,
-                "score": 8,
-                "label": "clear"
-              },
-              {
-                "term": "좋음",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 3,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "호프 북미 반응이 좋네 트위터나 여기저기 보니",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850111&page=2",
-            "date": "2026-09-08",
-            "positive": 2,
-            "rawPositive": 2,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "좋네",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "아이즈와이드셧": {
-        "title": "아이즈 와이드 셧",
-        "positiveSignal": 10,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "아이즈 와이드 셧 재밌네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850087&page=2",
-            "date": "2026-09-08",
-            "positive": 10,
-            "rawPositive": 10,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "최고",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              },
-              {
-                "term": "재밌",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "오디세이": {
-        "title": "오디세이",
-        "positiveSignal": 10,
-        "mentionCount": 2,
-        "evidence": [
-          {
-            "title": "오디세이 그냥 외눈박이 원툴 아닌가",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850019&page=3",
-            "date": "2026-09-08",
-            "positive": 6,
-            "rawPositive": 6,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "재밌",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              },
-              {
-                "term": "볼만",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 4,
-            "commentPositive": 2,
-            "commentNegative": 0
-          },
-          {
-            "title": "오디세이 왜 빨리는지 ㄹㅇ 이해안감 (오늘첫관람)",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1849788&page=7",
-            "date": "2026-09-08",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "재밌",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 7,
-            "commentPositive": 4,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "옵세션": {
-        "title": "옵세션",
-        "positiveSignal": 10,
-        "mentionCount": 2,
-        "evidence": [
-          {
-            "title": "옵세션은 재밌었지만 한국영화였다면 욕먹었을듯",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1849980&page=4",
-            "date": "2026-09-08",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "재밌",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "스마일2 <<~ 이게 옵세션 보다 더 무서움",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1849811&page=7",
-            "date": "2026-09-08",
-            "positive": 6,
-            "rawPositive": 6,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "명작",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              },
-              {
-                "term": "좋음",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 6,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-09-09": {
       "옵세션": {
         "title": "옵세션(2D)",
@@ -693,6 +451,7 @@
           }
         ]
       }
-    }
+    },
+    "2026-09-11": {}
   }
 }
