@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-09-11",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-09-10T18:21:10.802Z",
+  "updatedAt": "2026-09-10T20:50:06.709Z",
   "days": {
     "2026-09-09": {
       "옵세션": {
@@ -452,6 +452,37 @@
         ]
       }
     },
-    "2026-09-11": {}
+    "2026-09-11": {
+      "오디세이": {
+        "title": "오디세이(2D)",
+        "positiveSignal": 2,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "오디세이 액션 기대하고 볼 만한 영화임?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851070&page=1",
+            "date": "2026-09-11",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "볼만",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 5,
+            "commentPositive": 2,
+            "commentNegative": 0
+          }
+        ]
+      }
+    }
   }
 }
