@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-09-10",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-09-10T11:15:22.055Z",
+  "updatedAt": "2026-09-10T12:11:09.593Z",
   "days": {
     "2026-09-08": {
       "호프": {
@@ -499,6 +499,36 @@
       }
     },
     "2026-09-10": {
+      "화장터인부": {
+        "title": "화장터 인부",
+        "positiveSignal": 4,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "화장터 인부 <= 내가 뭘 본 거임",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850915&page=1",
+            "date": "2026-09-10",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "재밌",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "더드라마": {
         "title": "더 드라마",
         "positiveSignal": 16,
