@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-09-10T00:22:03.809Z",
+  "generatedAt": "2026-09-10T03:11:11.527Z",
   "weekStart": "2026-09-08",
   "weekEnd": "2026-09-10",
   "windowStart": "2026-09-08",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-09-10&movieCd=029462&playSDT=2026-09-10&screenId=02&showSeq=3",
-      "score": 157,
-      "signal": 11.5,
-      "positiveSignal": 11.5,
-      "mentionCount": 2.2,
-      "rawPositiveSignal": 16,
-      "rawMentionCount": 3,
+      "score": 282,
+      "signal": 21.5,
+      "positiveSignal": 21.5,
+      "mentionCount": 3.2,
+      "rawPositiveSignal": 26,
+      "rawMentionCount": 4,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -117,6 +117,51 @@
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.72
+        },
+        {
+          "title": "노스포) 더 드라마 볼만",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850742&page=1",
+          "date": "2026-09-10",
+          "positive": 10,
+          "rawPositive": 10,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "극장용",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "괜찮",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            },
+            {
+              "term": "나쁘지 않",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            },
+            {
+              "term": "볼만",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 8,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_177ef811.jpg"
@@ -186,8 +231,8 @@
     {
       "rank": 3,
       "title": "바닷마을 다이어리",
-      "posterUrl": "/assets/recommendation-posters/7918aa07bba667de.webp",
-      "localPosterUrl": "/assets/recommendation-posters/7918aa07bba667de.webp",
+      "posterUrl": "/assets/recommendation-posters/27ffb132e51d6fb1.webp",
+      "localPosterUrl": "/assets/recommendation-posters/27ffb132e51d6fb1.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://movieland.co/product/our-little-sister/296/?item_code=P00000LK00BE",
@@ -239,7 +284,7 @@
           "dayWeight": 0.72
         }
       ],
-      "posterSourceUrl": "https://movieland.co/web/product/big/202609/12090ed421b7b9789a2886d7c2c0b6cd.jpg"
+      "posterSourceUrl": "https://movieland.co/web/product/big/202609/7901202d6fbe8da641e12c918fccc368.jpg"
     },
     {
       "rank": 4,
@@ -248,7 +293,7 @@
       "localPosterUrl": "/assets/recommendation-posters/1afd45512fb98782.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121454&playDt=20260910&tsId=TS0056&pno=1",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121454&playDt=20260911&tsId=TS0056&pno=2",
       "score": 0,
       "signal": 0,
       "positiveSignal": 0,
@@ -258,20 +303,20 @@
       "scheduleBackfill": true,
       "venueIds": [
         "filmforum",
-        "cinecube",
         "kucine",
         "sangsangmadang",
+        "cinecube",
         "indiespace"
       ],
       "venueNames": [
         "필름포럼",
-        "씨네큐브 광화문",
         "KU시네마테크",
         "KT&G 상상마당 시네마",
+        "씨네큐브 광화문",
         "인디스페이스"
       ],
-      "nextDate": "2026-09-10",
-      "nextTime": "10:30",
+      "nextDate": "2026-09-11",
+      "nextTime": "10:20",
       "evidence": [],
       "posterSourceUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbJls3D%2FdJMcadJqj1f%2FAAAAAAAAAAAAAAAAAAAAACeMfcsEnFeBQJWMcvIohcvB_4ORkerlfY_wDyJXwSo3%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1790780399%26allow_ip%3D%26allow_referer%3D%26signature%3DnMY%252BG758kZMubJT3miJ5F2mCJH8%253D"
     }
@@ -281,11 +326,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 67,
+    "fetchedPostCount": 104,
     "listedPostCount": 292,
-    "detailedPostCount": 6,
-    "commentFetchCount": 6,
-    "commentCount": 23,
+    "detailedPostCount": 13,
+    "commentFetchCount": 13,
+    "commentCount": 30,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -294,7 +339,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-09-10",
     "candidateWindowEnd": "2026-09-24",
-    "candidateCount": 100,
+    "candidateCount": 98,
     "seedLookbackDays": 3,
     "seedStart": "2026-09-08",
     "listLookbackDays": 1,

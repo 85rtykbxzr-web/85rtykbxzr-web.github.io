@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-09-10",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-09-10T00:21:57.615Z",
+  "updatedAt": "2026-09-10T03:11:07.100Z",
   "days": {
     "2026-09-08": {
       "호프": {
@@ -501,9 +501,32 @@
     "2026-09-10": {
       "옵세션": {
         "title": "옵세션(2D)",
-        "positiveSignal": 8,
-        "mentionCount": 2,
+        "positiveSignal": 10,
+        "mentionCount": 3,
         "evidence": [
+          {
+            "title": "옵세션 보러 가는데 너모 무서움;",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850743&page=1",
+            "date": "2026-09-10",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "괜찮",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 2,
+            "commentNegative": 0
+          },
           {
             "title": "나는 옵세션 니키 이 표정 너무 귀엽더라",
             "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850671&page=2",
@@ -529,7 +552,7 @@
           },
           {
             "title": "옵세션 vs 백룸",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850648&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850648&page=3",
             "date": "2026-09-10",
             "positive": 4,
             "rawPositive": 4,
@@ -548,6 +571,57 @@
             "reviewQuestion": false,
             "commentCount": 4,
             "commentPositive": 4,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "더드라마": {
+        "title": "더 드라마",
+        "positiveSignal": 10,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "노스포) 더 드라마 볼만",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850742&page=1",
+            "date": "2026-09-10",
+            "positive": 10,
+            "rawPositive": 10,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "극장용",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "괜찮",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              },
+              {
+                "term": "나쁘지 않",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              },
+              {
+                "term": "볼만",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 8,
             "commentNegative": 0
           }
         ]
