@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-09-11",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-09-11T06:11:33.141Z",
+  "updatedAt": "2026-09-11T09:16:21.668Z",
   "days": {
     "2026-09-09": {
       "옵세션": {
@@ -453,14 +453,157 @@
       }
     },
     "2026-09-11": {
-      "더드라마": {
-        "title": "더 드라마(2D)",
-        "positiveSignal": 2,
+      "사탄탱고": {
+        "title": "사탄탱고",
+        "positiveSignal": 16,
+        "mentionCount": 3,
+        "evidence": [
+          {
+            "title": "사탄탱고 정도면 드르렁은 아니지",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851271&page=2",
+            "date": "2026-09-11",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 4,
+            "commentNegative": 0
+          },
+          {
+            "title": "스포 난 사탄탱고 ㅈㄴ 드르렁 없이 재밌게 봄",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851270&page=2",
+            "date": "2026-09-11",
+            "positive": 8,
+            "rawPositive": 8,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "재밌",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 4,
+            "commentPositive": 4,
+            "commentNegative": 0
+          },
+          {
+            "title": "사탄탱고 <- 이거 영알못이 보면 드르렁임?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851258&page=2",
+            "date": "2026-09-11",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "재밌",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 2,
+            "commentPositive": 4,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "아델라는아직저녁을먹지않았다": {
+        "title": "아델라는 아직 저녁을 먹지 않았다",
+        "positiveSignal": 8,
         "mentionCount": 1,
         "evidence": [
           {
+            "title": "아델라는 아직 저녁을 먹지않았다 ㅈㄴ재밌네",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851230&page=2",
+            "date": "2026-09-11",
+            "positive": 8,
+            "rawPositive": 8,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "재밌",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "재밌",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 4,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "더드라마": {
+        "title": "더 드라마",
+        "positiveSignal": 4,
+        "mentionCount": 2,
+        "evidence": [
+          {
+            "title": "더 드라마 명작임?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851227&page=2",
+            "date": "2026-09-11",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "볼만",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 2,
+            "commentPositive": 2,
+            "commentNegative": 0
+          },
+          {
             "title": "더 드라마 평 어떰?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851193&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851193&page=3",
             "date": "2026-09-11",
             "positive": 2,
             "rawPositive": 2,
@@ -490,7 +633,7 @@
         "evidence": [
           {
             "title": "사탱,베마하는 극장서 봤지만 살다보니 벨타도 죽고 런던, 파멸까지",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851189&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851189&page=3",
             "date": "2026-09-11",
             "positive": 4,
             "rawPositive": 4,
@@ -520,7 +663,7 @@
         "evidence": [
           {
             "title": "<화장터 인부>감독 다른 작품 ㅊㅊ좀",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851185&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851185&page=3",
             "date": "2026-09-11",
             "positive": 2,
             "rawPositive": 2,
@@ -550,7 +693,7 @@
         "evidence": [
           {
             "title": "오디세이 액션 기대하고 볼 만한 영화임?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851070&page=3",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851070&page=5",
             "date": "2026-09-11",
             "positive": 4,
             "rawPositive": 4,
