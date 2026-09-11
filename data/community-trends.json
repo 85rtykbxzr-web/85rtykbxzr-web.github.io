@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-09-11T16:26:50.692Z",
+  "generatedAt": "2026-09-11T18:15:33.955Z",
   "weekStart": "2026-09-10",
   "weekEnd": "2026-09-12",
   "windowStart": "2026-09-10",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-09-12&movieCd=029462&playSDT=2026-09-12&screenId=01&showSeq=3",
-      "score": 154.4,
-      "signal": 11.2,
-      "positiveSignal": 11.2,
-      "mentionCount": 2.5,
-      "rawPositiveSignal": 20,
-      "rawMentionCount": 4,
+      "score": 231.4,
+      "signal": 17.2,
+      "positiveSignal": 17.2,
+      "mentionCount": 3.5,
+      "rawPositiveSignal": 26,
+      "rawMentionCount": 5,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -162,6 +162,37 @@
           "commentPositive": 2,
           "commentNegative": 0,
           "dayWeight": 0.72
+        },
+        {
+          "title": "더드라마 그냥 미취학아동버전 <폭력의 역사>네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851547&page=1",
+          "date": "2026-09-12",
+          "positive": 6,
+          "rawPositive": 6,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "봐라",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 4,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_177ef811.jpg"
@@ -272,11 +303,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 32,
+    "fetchedPostCount": 56,
     "listedPostCount": 292,
-    "detailedPostCount": 4,
-    "commentFetchCount": 4,
-    "commentCount": 25,
+    "detailedPostCount": 12,
+    "commentFetchCount": 12,
+    "commentCount": 63,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,

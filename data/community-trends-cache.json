@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-09-12",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-09-11T16:26:43.928Z",
+  "updatedAt": "2026-09-11T18:15:27.790Z",
   "days": {
     "2026-09-10": {
       "화장터인부": {
@@ -542,6 +542,81 @@
         ]
       }
     },
-    "2026-09-12": {}
+    "2026-09-12": {
+      "옵세션": {
+        "title": "옵세션(2D)",
+        "positiveSignal": 8,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "옵세션 스토리 자체가 걍 존나 불쾌함 ( 스포)",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851561&page=1",
+            "date": "2026-09-12",
+            "positive": 8,
+            "rawPositive": 8,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "잘 만들",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "잘만들",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 4,
+            "commentPositive": 8,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "더드라마": {
+        "title": "더 드라마",
+        "positiveSignal": 6,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "더드라마 그냥 미취학아동버전 <폭력의 역사>네",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851547&page=1",
+            "date": "2026-09-12",
+            "positive": 6,
+            "rawPositive": 6,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "봐라",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 4,
+            "commentNegative": 0
+          }
+        ]
+      }
+    }
   }
 }
