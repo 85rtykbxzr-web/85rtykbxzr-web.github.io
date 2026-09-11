@@ -2,260 +2,25 @@
   "version": 2,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-09-09",
-  "windowEnd": "2026-09-11",
+  "windowStart": "2026-09-10",
+  "windowEnd": "2026-09-12",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-09-09",
       "2026-09-10",
-      "2026-09-11"
+      "2026-09-11",
+      "2026-09-12"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-09-11",
-    "lastWindowEnd": "2026-09-11",
+    "lastWindowStart": "2026-09-12",
+    "lastWindowEnd": "2026-09-12",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-09-11T12:21:19.421Z",
+  "updatedAt": "2026-09-11T15:10:02.442Z",
   "days": {
-    "2026-09-09": {
-      "옵세션": {
-        "title": "옵세션(2D)",
-        "positiveSignal": 38,
-        "mentionCount": 8,
-        "evidence": [
-          {
-            "title": "스포) 옵세션 재밌네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850563&page=2",
-            "date": "2026-09-09",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "재밌",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "옵세션 재밌네요",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850529&page=2",
-            "date": "2026-09-09",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "재밌",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 4,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "옵세션 까는 감정은 딱 그거임",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850488&page=3",
-            "date": "2026-09-09",
-            "positive": 2,
-            "rawPositive": 2,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "볼만",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 3,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "더드라마": {
-        "title": "더 드라마",
-        "positiveSignal": 16,
-        "mentionCount": 3,
-        "evidence": [
-          {
-            "title": "더 드라마 ㅈㄴ 여초영화인줄 알았는데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850525&page=2",
-            "date": "2026-09-09",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "재밌",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "더드라마에서 언급되는 루이말 영화",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850512&page=3",
-            "date": "2026-09-09",
-            "positive": 10,
-            "rawPositive": 10,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "걸작",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              },
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 3,
-            "commentPositive": 10,
-            "commentNegative": 0
-          },
-          {
-            "title": "더 드라마 하임 썅년 연기 물 올랐네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850491&page=3",
-            "date": "2026-09-09",
-            "positive": 2,
-            "rawPositive": 2,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "볼만",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "담요를입은사람": {
-        "title": "담요를 입은 사람",
-        "positiveSignal": 10,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "담요를 입은 사람 봐라",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850523&page=2",
-            "date": "2026-09-09",
-            "positive": 10,
-            "rawPositive": 10,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "꼭 봐",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              },
-              {
-                "term": "봐라",
-                "count": 2,
-                "weight": 2,
-                "score": 4,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "바닷마을다이어리": {
-        "title": "바닷마을 다이어리",
-        "positiveSignal": 4,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "바닷마을 다이어리는 어땠냐",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850331&page=6",
-            "date": "2026-09-09",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "괜찮",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              },
-              {
-                "term": "좋음",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 4,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-09-10": {
       "화장터인부": {
         "title": "화장터 인부",
@@ -776,6 +541,7 @@
           }
         ]
       }
-    }
+    },
+    "2026-09-12": {}
   }
 }

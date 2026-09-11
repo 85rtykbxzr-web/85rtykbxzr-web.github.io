@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-09-11T12:21:24.514Z",
-  "weekStart": "2026-09-09",
-  "weekEnd": "2026-09-11",
-  "windowStart": "2026-09-09",
-  "windowEnd": "2026-09-11",
+  "generatedAt": "2026-09-11T15:10:07.679Z",
+  "weekStart": "2026-09-10",
+  "weekEnd": "2026-09-12",
+  "windowStart": "2026-09-10",
+  "windowEnd": "2026-09-12",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-09-12&movieCd=029462&playSDT=2026-09-12&screenId=01&showSeq=3",
-      "score": 318.7,
-      "signal": 23.8,
-      "positiveSignal": 23.8,
-      "mentionCount": 5,
-      "rawPositiveSignal": 36,
-      "rawMentionCount": 7,
+      "score": 154.4,
+      "signal": 11.2,
+      "positiveSignal": 11.2,
+      "mentionCount": 2.5,
+      "rawPositiveSignal": 20,
+      "rawMentionCount": 4,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -39,85 +39,6 @@
       "nextDate": "2026-09-12",
       "nextTime": "13:55",
       "evidence": [
-        {
-          "title": "더 드라마 ㅈㄴ 여초영화인줄 알았는데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850525&page=2",
-          "date": "2026-09-09",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "재밌",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "더드라마에서 언급되는 루이말 영화",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850512&page=3",
-          "date": "2026-09-09",
-          "positive": 10,
-          "rawPositive": 10,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "걸작",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            },
-            {
-              "term": "꿀잼",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 10,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "더 드라마 하임 썅년 연기 물 올랐네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850491&page=3",
-          "date": "2026-09-09",
-          "positive": 2,
-          "rawPositive": 2,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "볼만",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "더 드라마 재밌네",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850799&page=3",
@@ -147,7 +68,7 @@
           "commentCount": 1,
           "commentPositive": 2,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "노스포) 더 드라마 볼만",
@@ -192,105 +113,38 @@
           "commentCount": 2,
           "commentPositive": 8,
           "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_177ef811.jpg"
-    },
-    {
-      "rank": 2,
-      "title": "담요를 입은 사람",
-      "posterUrl": "/assets/recommendation-posters/19fee0b48adfa052.webp",
-      "localPosterUrl": "/assets/recommendation-posters/19fee0b48adfa052.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-09-12&movieCd=027432&playSDT=2026-09-12&screenId=02&showSeq=4",
-      "score": 72.8,
-      "signal": 5.2,
-      "positiveSignal": 5.2,
-      "mentionCount": 0.5,
-      "rawPositiveSignal": 10,
-      "rawMentionCount": 1,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "cinecube",
-        "indiespace",
-        "filmforum",
-        "kucine"
-      ],
-      "venueNames": [
-        "씨네큐브 광화문",
-        "인디스페이스",
-        "필름포럼",
-        "KU시네마테크"
-      ],
-      "nextDate": "2026-09-12",
-      "nextTime": "15:30",
-      "evidence": [
+          "dayWeight": 0.518
+        },
         {
-          "title": "담요를 입은 사람 봐라",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850523&page=2",
-          "date": "2026-09-09",
-          "positive": 10,
-          "rawPositive": 10,
+          "title": "더 드라마 명작임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851227&page=4",
+          "date": "2026-09-11",
+          "positive": 2,
+          "rawPositive": 2,
           "negative": 0,
           "positiveHits": [
             {
-              "term": "꼭 봐",
+              "term": "볼만",
               "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            },
-            {
-              "term": "봐라",
-              "count": 2,
               "weight": 2,
-              "score": 4,
+              "score": 2,
               "label": "soft"
             }
           ],
           "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 2,
+          "commentPositive": 2,
           "commentNegative": 0,
-          "dayWeight": 0.518
-        }
-      ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_3826837b.jpg"
-    },
-    {
-      "rank": 3,
-      "title": "바닷마을 다이어리",
-      "posterUrl": "/assets/recommendation-posters/27ffb132e51d6fb1.webp",
-      "localPosterUrl": "/assets/recommendation-posters/27ffb132e51d6fb1.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://movieland.co/product/our-little-sister/296/?item_code=P00000LK00BE",
-      "score": 33.5,
-      "signal": 2.1,
-      "positiveSignal": 2.1,
-      "mentionCount": 0.5,
-      "rawPositiveSignal": 4,
-      "rawMentionCount": 1,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "movieland"
-      ],
-      "venueNames": [
-        "무비랜드"
-      ],
-      "nextDate": "2026-09-19",
-      "nextTime": "13:30",
-      "evidence": [
+          "dayWeight": 0.72
+        },
         {
-          "title": "바닷마을 다이어리는 어땠냐",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1850331&page=6",
-          "date": "2026-09-09",
-          "positive": 4,
-          "rawPositive": 4,
+          "title": "더 드라마 평 어떰?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851193&page=5",
+          "date": "2026-09-11",
+          "positive": 2,
+          "rawPositive": 2,
           "negative": 0,
           "positiveHits": [
             {
@@ -299,28 +153,21 @@
               "weight": 2,
               "score": 2,
               "label": "soft"
-            },
-            {
-              "term": "좋음",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
             }
           ],
           "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 4,
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 1,
+          "commentPositive": 2,
           "commentNegative": 0,
-          "dayWeight": 0.518
+          "dayWeight": 0.72
         }
       ],
-      "posterSourceUrl": "https://movieland.co/web/product/big/202609/7901202d6fbe8da641e12c918fccc368.jpg"
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_177ef811.jpg"
     },
     {
-      "rank": 4,
+      "rank": 2,
       "title": "어떻게 해야 했을까?",
       "posterUrl": "/assets/recommendation-posters/1afd45512fb98782.webp",
       "localPosterUrl": "/assets/recommendation-posters/1afd45512fb98782.webp",
@@ -352,6 +199,72 @@
       "nextTime": "10:00",
       "evidence": [],
       "posterSourceUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbJls3D%2FdJMcadJqj1f%2FAAAAAAAAAAAAAAAAAAAAACeMfcsEnFeBQJWMcvIohcvB_4ORkerlfY_wDyJXwSo3%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1790780399%26allow_ip%3D%26allow_referer%3D%26signature%3DnMY%252BG758kZMubJT3miJ5F2mCJH8%253D"
+    },
+    {
+      "rank": 3,
+      "title": "철들 무렵",
+      "posterUrl": "/assets/recommendation-posters/08cf13afed798dc4.webp",
+      "localPosterUrl": "/assets/recommendation-posters/08cf13afed798dc4.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.tinyticket.net/event/EVJOSFND2Xwq",
+      "score": 0,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 0,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 0,
+      "scheduleBackfill": true,
+      "venueIds": [
+        "sac",
+        "kucine",
+        "filmforum",
+        "cinecube",
+        "indiespace"
+      ],
+      "venueNames": [
+        "서울아트시네마",
+        "KU시네마테크",
+        "필름포럼",
+        "씨네큐브 광화문",
+        "인디스페이스"
+      ],
+      "nextDate": "2026-09-15",
+      "nextTime": "20:00",
+      "evidence": [],
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_0c0f92fb.jpg"
+    },
+    {
+      "rank": 4,
+      "title": "담요를 입은 사람",
+      "posterUrl": "/assets/recommendation-posters/19fee0b48adfa052.webp",
+      "localPosterUrl": "/assets/recommendation-posters/19fee0b48adfa052.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-09-12&movieCd=027432&playSDT=2026-09-12&screenId=02&showSeq=4",
+      "score": 0,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 0,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 0,
+      "scheduleBackfill": true,
+      "venueIds": [
+        "cinecube",
+        "indiespace",
+        "filmforum",
+        "kucine"
+      ],
+      "venueNames": [
+        "씨네큐브 광화문",
+        "인디스페이스",
+        "필름포럼",
+        "KU시네마테크"
+      ],
+      "nextDate": "2026-09-12",
+      "nextTime": "15:30",
+      "evidence": [],
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_3826837b.jpg"
     }
   ],
   "testerOnly": false,
@@ -359,24 +272,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 355,
-    "listedPostCount": 392,
-    "detailedPostCount": 32,
-    "commentFetchCount": 32,
-    "commentCount": 99,
+    "fetchedPostCount": 6,
+    "listedPostCount": 292,
+    "detailedPostCount": 0,
+    "commentFetchCount": 0,
+    "commentCount": 0,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 8,
+    "scannedPageCount": 6,
     "reachedLookbackStart": true,
-    "oldestScannedDate": "2026-09-10",
-    "newestScannedDate": "2026-09-11",
+    "oldestScannedDate": "2026-09-11",
+    "newestScannedDate": "2026-09-12",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-09-11",
-    "candidateWindowEnd": "2026-09-25",
+    "candidateWindowStart": "2026-09-12",
+    "candidateWindowEnd": "2026-09-26",
     "candidateCount": 92,
     "seedLookbackDays": 3,
-    "seedStart": "2026-09-09",
+    "seedStart": "2026-09-10",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-09-11",
+    "listWindowStart": "2026-09-12",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -384,7 +297,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-09-11"
+      "2026-09-12"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [
