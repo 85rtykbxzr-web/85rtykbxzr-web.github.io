@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-09-11",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-09-11T04:33:57.248Z",
+  "updatedAt": "2026-09-11T06:11:33.141Z",
   "days": {
     "2026-09-09": {
       "옵세션": {
@@ -453,6 +453,96 @@
       }
     },
     "2026-09-11": {
+      "더드라마": {
+        "title": "더 드라마(2D)",
+        "positiveSignal": 2,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "더 드라마 평 어떰?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851193&page=1",
+            "date": "2026-09-11",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "괜찮",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 1,
+            "commentPositive": 2,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "파멸": {
+        "title": "파멸",
+        "positiveSignal": 4,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "사탱,베마하는 극장서 봤지만 살다보니 벨타도 죽고 런던, 파멸까지",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851189&page=1",
+            "date": "2026-09-11",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "극장서",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "화장터인부": {
+        "title": "화장터 인부",
+        "positiveSignal": 2,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "<화장터 인부>감독 다른 작품 ㅊㅊ좀",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851185&page=1",
+            "date": "2026-09-11",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "좋고",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 4,
+            "commentPositive": 2,
+            "commentNegative": 0
+          }
+        ]
+      },
       "오디세이": {
         "title": "오디세이(2D)",
         "positiveSignal": 4,
@@ -460,7 +550,7 @@
         "evidence": [
           {
             "title": "오디세이 액션 기대하고 볼 만한 영화임?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851070&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851070&page=3",
             "date": "2026-09-11",
             "positive": 4,
             "rawPositive": 4,
