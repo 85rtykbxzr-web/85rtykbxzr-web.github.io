@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-09-12",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-09-12T06:18:19.993Z",
+  "updatedAt": "2026-09-12T09:22:58.564Z",
   "days": {
     "2026-09-10": {
       "화장터인부": {
@@ -544,13 +544,36 @@
     },
     "2026-09-12": {
       "더드라마": {
-        "title": "더 드라마",
-        "positiveSignal": 16,
-        "mentionCount": 3,
+        "title": "더 드라마(2D)",
+        "positiveSignal": 20,
+        "mentionCount": 4,
         "evidence": [
           {
+            "title": "스포) 더드라마 하임이 ㅈ같더라 ㄹㅇ",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851825&page=2",
+            "date": "2026-09-12",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "재밌",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 18,
+            "commentPositive": 4,
+            "commentNegative": 0
+          },
+          {
             "title": "더 드라마 꼭 봐라 누갤여신의 대결임",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851632&page=3",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851632&page=6",
             "date": "2026-09-12",
             "positive": 8,
             "rawPositive": 8,
@@ -574,13 +597,13 @@
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 3,
+            "commentCount": 2,
             "commentPositive": 0,
             "commentNegative": 0
           },
           {
             "title": "더 드라마 보러옴.",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851619&page=4",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851619&page=6",
             "date": "2026-09-12",
             "positive": 2,
             "rawPositive": 2,
@@ -600,35 +623,42 @@
             "commentCount": 2,
             "commentPositive": 2,
             "commentNegative": 0
-          },
+          }
+        ]
+      },
+      "마르케타라자로바": {
+        "title": "마르케타 라자로바",
+        "positiveSignal": 10,
+        "mentionCount": 1,
+        "evidence": [
           {
-            "title": "더드라마 그냥 미취학아동버전 <폭력의 역사>네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851547&page=5",
+            "title": "마르케타 라자로바는 분량 문제 때문에 잘린 게 많아서",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851812&page=2",
             "date": "2026-09-12",
-            "positive": 6,
-            "rawPositive": 6,
+            "positive": 10,
+            "rawPositive": 10,
             "negative": 0,
             "positiveHits": [
               {
-                "term": "꿀잼",
+                "term": "최고",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "만족",
                 "count": 1,
                 "weight": 4,
                 "score": 4,
                 "label": "clear"
-              },
-              {
-                "term": "봐라",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
               }
             ],
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 4,
+            "commentCount": 6,
+            "commentPositive": 6,
             "commentNegative": 0
           }
         ]
@@ -640,7 +670,7 @@
         "evidence": [
           {
             "title": "옵세션 스토리 자체가 걍 존나 불쾌함 ( 스포)",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851561&page=5",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851561&page=7",
             "date": "2026-09-12",
             "positive": 8,
             "rawPositive": 8,
