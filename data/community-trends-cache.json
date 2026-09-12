@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-09-13",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-09-12T15:30:11.861Z",
+  "updatedAt": "2026-09-12T18:21:17.410Z",
   "days": {
     "2026-09-11": {
       "사탄탱고": {
@@ -566,6 +566,36 @@
       }
     },
     "2026-09-13": {
+      "옵세션": {
+        "title": "옵세션(2D)",
+        "positiveSignal": 6,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "옵세션 볼때는 존나 개무섭고 연기 쩐다 생각했는데",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1852453&page=10",
+            "date": "2026-09-13",
+            "positive": 6,
+            "rawPositive": 6,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "쩐다",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "더드라마": {
         "title": "더 드라마",
         "positiveSignal": 10,
@@ -573,7 +603,7 @@
         "evidence": [
           {
             "title": "더 드라마 취소하고 베니스나 봐야겠다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1852399&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1852399&page=11",
             "date": "2026-09-13",
             "positive": 10,
             "rawPositive": 10,
