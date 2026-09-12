@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-09-12",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-09-12T00:09:40.339Z",
+  "updatedAt": "2026-09-12T03:14:13.218Z",
   "days": {
     "2026-09-10": {
       "화장터인부": {
@@ -543,51 +543,67 @@
       }
     },
     "2026-09-12": {
-      "옵세션": {
-        "title": "옵세션(2D)",
-        "positiveSignal": 8,
-        "mentionCount": 1,
+      "더드라마": {
+        "title": "더 드라마",
+        "positiveSignal": 16,
+        "mentionCount": 3,
         "evidence": [
           {
-            "title": "옵세션 스토리 자체가 걍 존나 불쾌함 ( 스포)",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851561&page=1",
+            "title": "더 드라마 꼭 봐라 누갤여신의 대결임",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851632&page=1",
             "date": "2026-09-12",
             "positive": 8,
             "rawPositive": 8,
             "negative": 0,
             "positiveHits": [
               {
-                "term": "잘 만들",
+                "term": "꼭 봐",
                 "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
               },
               {
-                "term": "잘만들",
+                "term": "봐라",
                 "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
               }
             ],
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 6,
-            "commentPositive": 8,
+            "commentCount": 3,
+            "commentPositive": 0,
             "commentNegative": 0
-          }
-        ]
-      },
-      "더드라마": {
-        "title": "더 드라마",
-        "positiveSignal": 6,
-        "mentionCount": 1,
-        "evidence": [
+          },
+          {
+            "title": "더 드라마 보러옴.",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851619&page=1",
+            "date": "2026-09-12",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "좋음",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 2,
+            "commentNegative": 0
+          },
           {
             "title": "더드라마 그냥 미취학아동버전 <폭력의 역사>네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851547&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851547&page=3",
             "date": "2026-09-12",
             "positive": 6,
             "rawPositive": 6,
@@ -613,6 +629,43 @@
             "reviewQuestion": false,
             "commentCount": 1,
             "commentPositive": 4,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "옵세션": {
+        "title": "옵세션(2D)",
+        "positiveSignal": 8,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "옵세션 스토리 자체가 걍 존나 불쾌함 ( 스포)",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851561&page=2",
+            "date": "2026-09-12",
+            "positive": 8,
+            "rawPositive": 8,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "잘 만들",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "잘만들",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 8,
+            "commentPositive": 8,
             "commentNegative": 0
           }
         ]
