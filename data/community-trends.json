@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-09-13T12:12:44.735Z",
-  "weekStart": "2026-09-11",
-  "weekEnd": "2026-09-13",
-  "windowStart": "2026-09-11",
-  "windowEnd": "2026-09-13",
+  "generatedAt": "2026-09-13T15:16:15.437Z",
+  "weekStart": "2026-09-12",
+  "weekEnd": "2026-09-14",
+  "windowStart": "2026-09-12",
+  "windowEnd": "2026-09-14",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-09-14&movieCd=029462&playSDT=2026-09-14&screenId=01&showSeq=2",
-      "score": 350.2,
-      "signal": 26.5,
-      "positiveSignal": 26.5,
-      "mentionCount": 4.9,
-      "rawPositiveSignal": 34,
-      "rawMentionCount": 7,
+      "score": 232.7,
+      "signal": 17.6,
+      "positiveSignal": 17.6,
+      "mentionCount": 2.8,
+      "rawPositiveSignal": 30,
+      "rawMentionCount": 5,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -39,54 +39,6 @@
       "nextDate": "2026-09-14",
       "nextTime": "11:15",
       "evidence": [
-        {
-          "title": "더 드라마 명작임?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851227&page=4",
-          "date": "2026-09-11",
-          "positive": 2,
-          "rawPositive": 2,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "볼만",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 2,
-          "commentPositive": 2,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "더 드라마 평 어떰?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851193&page=5",
-          "date": "2026-09-11",
-          "positive": 2,
-          "rawPositive": 2,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "괜찮",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 1,
-          "commentPositive": 2,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "스포) 더드라마 하임이 ㅈ같더라 ㄹㅇ",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851825&page=6",
@@ -109,7 +61,7 @@
           "commentCount": 18,
           "commentPositive": 4,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "더 드라마 꼭 봐라 누갤여신의 대결임",
@@ -140,7 +92,7 @@
           "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "더 드라마 보러옴.",
@@ -163,6 +115,37 @@
           "reviewQuestion": false,
           "commentCount": 2,
           "commentPositive": 2,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "더 드라마 취소하고 베니스나 봐야겠다",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1852399&page=42",
+          "date": "2026-09-13",
+          "positive": 10,
+          "rawPositive": 10,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "걸작",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 10,
           "commentNegative": 0,
           "dayWeight": 0.72
         }
@@ -277,24 +260,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 2092,
-    "listedPostCount": 2136,
-    "detailedPostCount": 36,
-    "commentFetchCount": 36,
-    "commentCount": 91,
+    "fetchedPostCount": 12,
+    "listedPostCount": 292,
+    "detailedPostCount": 1,
+    "commentFetchCount": 1,
+    "commentCount": 1,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 43,
+    "scannedPageCount": 6,
     "reachedLookbackStart": true,
-    "oldestScannedDate": "2026-09-12",
-    "newestScannedDate": "2026-09-13",
+    "oldestScannedDate": "2026-09-13",
+    "newestScannedDate": "2026-09-14",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-09-13",
-    "candidateWindowEnd": "2026-09-27",
+    "candidateWindowStart": "2026-09-14",
+    "candidateWindowEnd": "2026-09-28",
     "candidateCount": 76,
     "seedLookbackDays": 3,
-    "seedStart": "2026-09-11",
+    "seedStart": "2026-09-12",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-09-13",
+    "listWindowStart": "2026-09-14",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -302,7 +285,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-09-13"
+      "2026-09-14"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [

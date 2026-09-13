@@ -2,350 +2,25 @@
   "version": 2,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-09-11",
-  "windowEnd": "2026-09-13",
+  "windowStart": "2026-09-12",
+  "windowEnd": "2026-09-14",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-09-11",
       "2026-09-12",
-      "2026-09-13"
+      "2026-09-13",
+      "2026-09-14"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-09-13",
-    "lastWindowEnd": "2026-09-13",
+    "lastWindowStart": "2026-09-14",
+    "lastWindowEnd": "2026-09-14",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-09-13T12:12:39.093Z",
+  "updatedAt": "2026-09-13T15:16:09.308Z",
   "days": {
-    "2026-09-11": {
-      "사탄탱고": {
-        "title": "사탄탱고",
-        "positiveSignal": 26,
-        "mentionCount": 5,
-        "evidence": [
-          {
-            "title": "내일이면 누갤 3대추천영화 중에 사탄탱고를 보는구나",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851398&page=1",
-            "date": "2026-09-11",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "추천",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 4,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "사탄탱고 언택트톡 구했다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851359&page=2",
-            "date": "2026-09-11",
-            "positive": 6,
-            "rawPositive": 6,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "강추",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 3,
-            "commentPositive": 6,
-            "commentNegative": 0
-          },
-          {
-            "title": "사탄탱고 정도면 드르렁은 아니지",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851271&page=3",
-            "date": "2026-09-11",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 4,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "마르케타라자로바": {
-        "title": "마르케타 라자로바",
-        "positiveSignal": 4,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "레몬에이드 죠 재밌더라 ㅋㅋ",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851354&page=2",
-            "date": "2026-09-11",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "재밌",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "레몬에이드죠": {
-        "title": "레몬에이드 죠",
-        "positiveSignal": 4,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "레몬에이드 죠 재밌더라 ㅋㅋ",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851354&page=2",
-            "date": "2026-09-11",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "재밌",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "아델라는아직저녁을먹지않았다": {
-        "title": "아델라는 아직 저녁을 먹지 않았다",
-        "positiveSignal": 8,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "아델라는 아직 저녁을 먹지않았다 ㅈㄴ재밌네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851230&page=4",
-            "date": "2026-09-11",
-            "positive": 8,
-            "rawPositive": 8,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "재밌",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              },
-              {
-                "term": "재밌",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 4,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "더드라마": {
-        "title": "더 드라마",
-        "positiveSignal": 4,
-        "mentionCount": 2,
-        "evidence": [
-          {
-            "title": "더 드라마 명작임?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851227&page=4",
-            "date": "2026-09-11",
-            "positive": 2,
-            "rawPositive": 2,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "볼만",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 2,
-            "commentPositive": 2,
-            "commentNegative": 0
-          },
-          {
-            "title": "더 드라마 평 어떰?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851193&page=5",
-            "date": "2026-09-11",
-            "positive": 2,
-            "rawPositive": 2,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "괜찮",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 1,
-            "commentPositive": 2,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "파멸": {
-        "title": "파멸",
-        "positiveSignal": 4,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "사탱,베마하는 극장서 봤지만 살다보니 벨타도 죽고 런던, 파멸까지",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851189&page=5",
-            "date": "2026-09-11",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "극장서",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "화장터인부": {
-        "title": "화장터 인부",
-        "positiveSignal": 2,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "<화장터 인부>감독 다른 작품 ㅊㅊ좀",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851185&page=5",
-            "date": "2026-09-11",
-            "positive": 2,
-            "rawPositive": 2,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "좋고",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 4,
-            "commentPositive": 2,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "오디세이": {
-        "title": "오디세이(2D)",
-        "positiveSignal": 4,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "오디세이 액션 기대하고 볼 만한 영화임?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851070&page=7",
-            "date": "2026-09-11",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "볼만",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              },
-              {
-                "term": "봐라",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 6,
-            "commentPositive": 4,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-09-12": {
       "사탄탱고": {
         "title": "사탄탱고",
@@ -765,6 +440,38 @@
             "reviewQuestion": false,
             "commentCount": 1,
             "commentPositive": 10,
+            "commentNegative": 0
+          }
+        ]
+      }
+    },
+    "2026-09-14": {
+      "런던에서온사나이": {
+        "title": "런던에서 온 사나이",
+        "positiveSignal": 4,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "런던에서 온 사나이 별로임?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1854778&page=1",
+            "date": "2026-09-14",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 1,
+            "commentPositive": 4,
             "commentNegative": 0
           }
         ]
