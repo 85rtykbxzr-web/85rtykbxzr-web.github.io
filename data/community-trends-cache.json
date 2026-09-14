@@ -2,244 +2,25 @@
   "version": 2,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-09-12",
-  "windowEnd": "2026-09-14",
+  "windowStart": "2026-09-13",
+  "windowEnd": "2026-09-15",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-09-12",
       "2026-09-13",
-      "2026-09-14"
+      "2026-09-14",
+      "2026-09-15"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-09-14",
-    "lastWindowEnd": "2026-09-14",
+    "lastWindowStart": "2026-09-15",
+    "lastWindowEnd": "2026-09-15",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-09-14T12:39:31.172Z",
+  "updatedAt": "2026-09-14T15:12:09.886Z",
   "days": {
-    "2026-09-12": {
-      "사탄탱고": {
-        "title": "사탄탱고",
-        "positiveSignal": 14,
-        "mentionCount": 2,
-        "evidence": [
-          {
-            "title": "사탄탱고 <- 생각보다 누하지 않음",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851953&page=4",
-            "date": "2026-09-12",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 5,
-            "commentPositive": 4,
-            "commentNegative": 0
-          },
-          {
-            "title": "사탄탱고 까는놈들 특징",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851952&page=4",
-            "date": "2026-09-12",
-            "positive": 10,
-            "rawPositive": 10,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "강추",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              },
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 23,
-            "commentPositive": 10,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "더드라마": {
-        "title": "더 드라마",
-        "positiveSignal": 20,
-        "mentionCount": 4,
-        "evidence": [
-          {
-            "title": "스포) 더드라마 하임이 ㅈ같더라 ㄹㅇ",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851825&page=6",
-            "date": "2026-09-12",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "재밌",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 18,
-            "commentPositive": 4,
-            "commentNegative": 0
-          },
-          {
-            "title": "더 드라마 꼭 봐라 누갤여신의 대결임",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851632&page=9",
-            "date": "2026-09-12",
-            "positive": 8,
-            "rawPositive": 8,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "꼭 봐",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              },
-              {
-                "term": "봐라",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "더 드라마 보러옴.",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851619&page=10",
-            "date": "2026-09-12",
-            "positive": 2,
-            "rawPositive": 2,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "좋음",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 2,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "마르케타라자로바": {
-        "title": "마르케타 라자로바",
-        "positiveSignal": 10,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "마르케타 라자로바는 분량 문제 때문에 잘린 게 많아서",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851812&page=6",
-            "date": "2026-09-12",
-            "positive": 10,
-            "rawPositive": 10,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "최고",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              },
-              {
-                "term": "만족",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 6,
-            "commentPositive": 6,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "옵세션": {
-        "title": "옵세션(2D)",
-        "positiveSignal": 8,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "옵세션 스토리 자체가 걍 존나 불쾌함 ( 스포)",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851561&page=11",
-            "date": "2026-09-12",
-            "positive": 8,
-            "rawPositive": 8,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "잘 만들",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              },
-              {
-                "term": "잘만들",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 8,
-            "commentPositive": 8,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-09-13": {
       "사탄탱고": {
         "title": "사탄탱고",
@@ -589,6 +370,7 @@
           }
         ]
       }
-    }
+    },
+    "2026-09-15": {}
   }
 }

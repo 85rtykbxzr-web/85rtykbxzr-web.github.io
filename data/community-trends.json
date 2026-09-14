@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-09-14T12:39:36.598Z",
-  "weekStart": "2026-09-12",
-  "weekEnd": "2026-09-14",
-  "windowStart": "2026-09-12",
-  "windowEnd": "2026-09-14",
+  "generatedAt": "2026-09-14T15:12:16.021Z",
+  "weekStart": "2026-09-13",
+  "weekEnd": "2026-09-15",
+  "windowStart": "2026-09-13",
+  "windowEnd": "2026-09-15",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-09-15&movieCd=029462&playSDT=2026-09-15&screenId=01&showSeq=5",
-      "score": 232.7,
-      "signal": 17.6,
-      "positiveSignal": 17.6,
-      "mentionCount": 2.8,
-      "rawPositiveSignal": 30,
-      "rawMentionCount": 5,
+      "score": 72.8,
+      "signal": 5.2,
+      "positiveSignal": 5.2,
+      "mentionCount": 0.5,
+      "rawPositiveSignal": 10,
+      "rawMentionCount": 1,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -39,85 +39,6 @@
       "nextDate": "2026-09-15",
       "nextTime": "17:20",
       "evidence": [
-        {
-          "title": "스포) 더드라마 하임이 ㅈ같더라 ㄹㅇ",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851825&page=6",
-          "date": "2026-09-12",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "재밌",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 18,
-          "commentPositive": 4,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "더 드라마 꼭 봐라 누갤여신의 대결임",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851632&page=9",
-          "date": "2026-09-12",
-          "positive": 8,
-          "rawPositive": 8,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "꼭 봐",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            },
-            {
-              "term": "봐라",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "더 드라마 보러옴.",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1851619&page=10",
-          "date": "2026-09-12",
-          "positive": 2,
-          "rawPositive": 2,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "좋음",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 2,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "더 드라마 취소하고 베니스나 봐야겠다",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1852399&page=42",
@@ -147,7 +68,7 @@
           "commentCount": 1,
           "commentPositive": 10,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_177ef811.jpg"
@@ -256,24 +177,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 375,
-    "listedPostCount": 392,
-    "detailedPostCount": 30,
-    "commentFetchCount": 30,
-    "commentCount": 99,
+    "fetchedPostCount": 4,
+    "listedPostCount": 292,
+    "detailedPostCount": 0,
+    "commentFetchCount": 0,
+    "commentCount": 0,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 8,
+    "scannedPageCount": 6,
     "reachedLookbackStart": true,
-    "oldestScannedDate": "2026-09-13",
-    "newestScannedDate": "2026-09-14",
+    "oldestScannedDate": "2026-09-14",
+    "newestScannedDate": "2026-09-15",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-09-14",
-    "candidateWindowEnd": "2026-09-28",
+    "candidateWindowStart": "2026-09-15",
+    "candidateWindowEnd": "2026-09-29",
     "candidateCount": 76,
     "seedLookbackDays": 3,
-    "seedStart": "2026-09-12",
+    "seedStart": "2026-09-13",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-09-14",
+    "listWindowStart": "2026-09-15",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -281,7 +202,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-09-14"
+      "2026-09-15"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [
