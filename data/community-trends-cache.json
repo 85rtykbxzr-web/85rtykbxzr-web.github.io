@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-09-16",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-09-15T16:54:44.936Z",
+  "updatedAt": "2026-09-15T18:10:20.475Z",
   "days": {
     "2026-09-14": {
       "옵세션": {
@@ -422,6 +422,37 @@
         ]
       }
     },
-    "2026-09-16": {}
+    "2026-09-16": {
+      "아비정전": {
+        "title": "아비정전(2D)",
+        "positiveSignal": 4,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "아비정전 5년반만에 다시 봤는데(ㅅㅍ)",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1855782&page=1",
+            "date": "2026-09-16",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 4,
+            "commentNegative": 0
+          }
+        ]
+      }
+    }
   }
 }
