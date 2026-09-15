@@ -2,230 +2,25 @@
   "version": 2,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-09-13",
-  "windowEnd": "2026-09-15",
+  "windowStart": "2026-09-14",
+  "windowEnd": "2026-09-16",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-09-13",
       "2026-09-14",
-      "2026-09-15"
+      "2026-09-15",
+      "2026-09-16"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-09-15",
-    "lastWindowEnd": "2026-09-15",
+    "lastWindowStart": "2026-09-16",
+    "lastWindowEnd": "2026-09-16",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-09-15T12:15:47.726Z",
+  "updatedAt": "2026-09-15T15:20:15.861Z",
   "days": {
-    "2026-09-13": {
-      "사탄탱고": {
-        "title": "사탄탱고",
-        "positiveSignal": 10,
-        "mentionCount": 2,
-        "evidence": [
-          {
-            "title": "사탄탱고 엔딩에서 똥 쌋다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1854593&page=1",
-            "date": "2026-09-13",
-            "positive": 6,
-            "rawPositive": 6,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "걸작",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 6,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "난 아직도 사탄탱고에서 못 벗어났다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1852613&page=38",
-            "date": "2026-09-13",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "좋았다",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              },
-              {
-                "term": "좋았음",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 8,
-            "commentPositive": 4,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "옵세션": {
-        "title": "옵세션(2D)",
-        "positiveSignal": 16,
-        "mentionCount": 4,
-        "evidence": [
-          {
-            "title": "옵세션 후기 스포업흠",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1854462&page=4",
-            "date": "2026-09-13",
-            "positive": 2,
-            "rawPositive": 2,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "볼만",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "에에올 옵세션< ㅈㄴ 거품영화들 ㄹㅇ",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1854358&page=6",
-            "date": "2026-09-13",
-            "positive": 6,
-            "rawPositive": 6,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "최고",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 6,
-            "commentNegative": 0
-          },
-          {
-            "title": "옵세션 이안이 악질인것중에 또 하나가",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1854243&page=8",
-            "date": "2026-09-13",
-            "positive": 2,
-            "rawPositive": 2,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "흥미롭",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "코다": {
-        "title": "코다(2D)",
-        "positiveSignal": 4,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "코다는진짜 영화사전체 최악의선택",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1853854&page=15",
-            "date": "2026-09-13",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "감동",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "더드라마": {
-        "title": "더 드라마",
-        "positiveSignal": 10,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "더 드라마 취소하고 베니스나 봐야겠다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1852399&page=42",
-            "date": "2026-09-13",
-            "positive": 10,
-            "rawPositive": 10,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "걸작",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              },
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 10,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-09-14": {
       "옵세션": {
         "title": "옵세션(2D)",
@@ -626,6 +421,7 @@
           }
         ]
       }
-    }
+    },
+    "2026-09-16": {}
   }
 }
