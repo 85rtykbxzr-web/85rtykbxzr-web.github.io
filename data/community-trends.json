@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-09-15T09:10:13.310Z",
+  "generatedAt": "2026-09-15T11:40:38.298Z",
   "weekStart": "2026-09-13",
   "weekEnd": "2026-09-15",
   "windowStart": "2026-09-13",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121723&playDt=20260923&tsId=TS0039&pno=1",
-      "score": 162,
-      "signal": 12,
-      "positiveSignal": 12,
-      "mentionCount": 2,
-      "rawPositiveSignal": 12,
-      "rawMentionCount": 2,
+      "score": 268,
+      "signal": 20,
+      "positiveSignal": 20,
+      "mentionCount": 4,
+      "rawPositiveSignal": 20,
+      "rawMentionCount": 4,
       "scheduleBackfill": false,
       "venueIds": [
         "kucine",
@@ -38,8 +38,56 @@
       "nextTime": "12:40",
       "evidence": [
         {
+          "title": "지방사람들은 가능한 사랑 부국제 가서봐라",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1855628&page=1",
+          "date": "2026-09-15",
+          "positive": 2,
+          "rawPositive": 2,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "봐라",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 6,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "가능한사랑이 두검사,고독의오후는 누르려나",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1855618&page=1",
+          "date": "2026-09-15",
+          "positive": 6,
+          "rawPositive": 6,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "걸작",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
           "title": "가능한사랑 <- 이거 엄마랑봐도 될라나",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1855540&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1855540&page=3",
           "date": "2026-09-15",
           "positive": 6,
           "rawPositive": 6,
@@ -60,30 +108,6 @@
           "commentPositive": 6,
           "commentNegative": 0,
           "dayWeight": 1
-        },
-        {
-          "title": "가능한 사랑 예매 미쳤네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1855411&page=4",
-          "date": "2026-09-15",
-          "positive": 6,
-          "rawPositive": 6,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "미쳤",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260911_9a7b3ad7.jpg"
@@ -95,7 +119,7 @@
       "localPosterUrl": "/assets/recommendation-posters/40f5f0963689ae80.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121681&playDt=20260915&tsId=TS0056&pno=5",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121681&playDt=20260916&tsId=TS0057&pno=1",
       "score": 72.8,
       "signal": 5.2,
       "positiveSignal": 5.2,
@@ -113,8 +137,8 @@
         "씨네큐브 광화문",
         "KU시네마테크"
       ],
-      "nextDate": "2026-09-15",
-      "nextTime": "18:30",
+      "nextDate": "2026-09-16",
+      "nextTime": "10:30",
       "evidence": [
         {
           "title": "더 드라마 취소하고 베니스나 봐야겠다",
@@ -157,7 +181,7 @@
       "localPosterUrl": "/assets/recommendation-posters/08cf13afed798dc4.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.tinyticket.net/event/EVJOSFND2Xwq",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121613&playDt=20260916&tsId=TS0044&pno=2",
       "score": 0,
       "signal": 0,
       "positiveSignal": 0,
@@ -166,23 +190,23 @@
       "rawMentionCount": 0,
       "scheduleBackfill": true,
       "venueIds": [
-        "sac",
         "sangsangmadang",
         "kucine",
         "filmforum",
         "cinecube",
-        "indiespace"
+        "indiespace",
+        "sac"
       ],
       "venueNames": [
-        "서울아트시네마",
         "KT&G 상상마당 시네마",
         "KU시네마테크",
         "필름포럼",
         "씨네큐브 광화문",
-        "인디스페이스"
+        "인디스페이스",
+        "서울아트시네마"
       ],
-      "nextDate": "2026-09-15",
-      "nextTime": "20:00",
+      "nextDate": "2026-09-16",
+      "nextTime": "10:30",
       "evidence": [],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_0c0f92fb.jpg"
     },
@@ -193,7 +217,7 @@
       "localPosterUrl": "/assets/recommendation-posters/1afd45512fb98782.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121454&playDt=20260915&tsId=TS0044&pno=6",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121454&playDt=20260916&tsId=TS0056&pno=2",
       "score": 0,
       "signal": 0,
       "positiveSignal": 0,
@@ -202,21 +226,21 @@
       "rawMentionCount": 0,
       "scheduleBackfill": true,
       "venueIds": [
-        "sangsangmadang",
         "filmforum",
+        "sangsangmadang",
         "indiespace",
         "kucine",
         "cinecube"
       ],
       "venueNames": [
-        "KT&G 상상마당 시네마",
         "필름포럼",
+        "KT&G 상상마당 시네마",
         "인디스페이스",
         "KU시네마테크",
         "씨네큐브 광화문"
       ],
-      "nextDate": "2026-09-15",
-      "nextTime": "20:10",
+      "nextDate": "2026-09-16",
+      "nextTime": "13:00",
       "evidence": [],
       "posterSourceUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbJls3D%2FdJMcadJqj1f%2FAAAAAAAAAAAAAAAAAAAAACeMfcsEnFeBQJWMcvIohcvB_4ORkerlfY_wDyJXwSo3%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1790780399%26allow_ip%3D%26allow_referer%3D%26signature%3DnMY%252BG758kZMubJT3miJ5F2mCJH8%253D"
     }
@@ -226,13 +250,13 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 235,
-    "listedPostCount": 292,
-    "detailedPostCount": 21,
-    "commentFetchCount": 21,
-    "commentCount": 64,
+    "fetchedPostCount": 300,
+    "listedPostCount": 342,
+    "detailedPostCount": 34,
+    "commentFetchCount": 34,
+    "commentCount": 111,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 6,
+    "scannedPageCount": 7,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-09-14",
     "newestScannedDate": "2026-09-15",

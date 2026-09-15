@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-09-15",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-09-15T09:10:07.785Z",
+  "updatedAt": "2026-09-15T11:40:31.404Z",
   "days": {
     "2026-09-13": {
       "사탄탱고": {
@@ -372,21 +372,51 @@
       }
     },
     "2026-09-15": {
-      "사탄탱고": {
-        "title": "사탄탱고",
-        "positiveSignal": 2,
+      "늑대의구멍": {
+        "title": "늑대의 구멍",
+        "positiveSignal": 4,
         "mentionCount": 1,
         "evidence": [
           {
-            "title": "사탄 탱고 맘에 안들어",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1855541&page=1",
+            "title": "늑대의 구멍 어수선하네",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1855657&page=1",
+            "date": "2026-09-15",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "재밌",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "가능한사랑": {
+        "title": "가능한 사랑(2D)",
+        "positiveSignal": 20,
+        "mentionCount": 4,
+        "evidence": [
+          {
+            "title": "지방사람들은 가능한 사랑 부국제 가서봐라",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1855628&page=1",
             "date": "2026-09-15",
             "positive": 2,
             "rawPositive": 2,
             "negative": 0,
             "positiveHits": [
               {
-                "term": "괜찮",
+                "term": "봐라",
                 "count": 1,
                 "weight": 2,
                 "score": 2,
@@ -396,20 +426,36 @@
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 3,
-            "commentPositive": 2,
+            "commentCount": 6,
+            "commentPositive": 0,
             "commentNegative": 0
-          }
-        ]
-      },
-      "가능한사랑": {
-        "title": "가능한 사랑(2D)",
-        "positiveSignal": 12,
-        "mentionCount": 2,
-        "evidence": [
+          },
+          {
+            "title": "가능한사랑이 두검사,고독의오후는 누르려나",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1855618&page=1",
+            "date": "2026-09-15",
+            "positive": 6,
+            "rawPositive": 6,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "걸작",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
           {
             "title": "가능한사랑 <- 이거 엄마랑봐도 될라나",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1855540&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1855540&page=3",
             "date": "2026-09-15",
             "positive": 6,
             "rawPositive": 6,
@@ -429,28 +475,130 @@
             "commentCount": 6,
             "commentPositive": 6,
             "commentNegative": 0
-          },
+          }
+        ]
+      },
+      "오디세이": {
+        "title": "오디세이(2D)",
+        "positiveSignal": 10,
+        "mentionCount": 1,
+        "evidence": [
           {
-            "title": "가능한 사랑 예매 미쳤네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1855411&page=4",
+            "title": "오디세이 다시 곱씹어봐도 ㅈㄴ 구리네",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1855616&page=1",
             "date": "2026-09-15",
-            "positive": 6,
-            "rawPositive": 6,
+            "positive": 10,
+            "rawPositive": 10,
             "negative": 0,
             "positiveHits": [
               {
-                "term": "미쳤",
+                "term": "걸작",
                 "count": 1,
                 "weight": 6,
                 "score": 6,
                 "label": "strong"
+              },
+              {
+                "term": "재밌",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
               }
             ],
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
+            "commentCount": 5,
+            "commentPositive": 10,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "토리노의말": {
+        "title": "토리노의 말",
+        "positiveSignal": 22,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "<토리노의 말> 허키, 김간지 gv 하네 ㅋㅋ",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1855600&page=2",
+            "date": "2026-09-15",
+            "positive": 22,
+            "rawPositive": 22,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "걸작",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 18,
+            "commentPositive": 22,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "사탄탱고": {
+        "title": "사탄탱고",
+        "positiveSignal": 2,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "사탄 탱고 맘에 안들어",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1855541&page=3",
+            "date": "2026-09-15",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "괜찮",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 3,
+            "commentPositive": 2,
             "commentNegative": 0
           }
         ]
