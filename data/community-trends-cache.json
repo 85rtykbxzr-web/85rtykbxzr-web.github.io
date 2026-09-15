@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-09-15",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-09-15T06:20:39.804Z",
+  "updatedAt": "2026-09-15T09:10:07.785Z",
   "days": {
     "2026-09-13": {
       "사탄탱고": {
@@ -372,14 +372,67 @@
       }
     },
     "2026-09-15": {
-      "가능한사랑": {
-        "title": "가능한 사랑(2D)",
-        "positiveSignal": 6,
+      "사탄탱고": {
+        "title": "사탄탱고",
+        "positiveSignal": 2,
         "mentionCount": 1,
         "evidence": [
           {
+            "title": "사탄 탱고 맘에 안들어",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1855541&page=1",
+            "date": "2026-09-15",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "괜찮",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 3,
+            "commentPositive": 2,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "가능한사랑": {
+        "title": "가능한 사랑(2D)",
+        "positiveSignal": 12,
+        "mentionCount": 2,
+        "evidence": [
+          {
+            "title": "가능한사랑 <- 이거 엄마랑봐도 될라나",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1855540&page=1",
+            "date": "2026-09-15",
+            "positive": 6,
+            "rawPositive": 6,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "미쳤",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 6,
+            "commentPositive": 6,
+            "commentNegative": 0
+          },
+          {
             "title": "가능한 사랑 예매 미쳤네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1855411&page=3",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1855411&page=4",
             "date": "2026-09-15",
             "positive": 6,
             "rawPositive": 6,

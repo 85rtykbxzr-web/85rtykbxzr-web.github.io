@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-09-15T06:20:45.776Z",
+  "generatedAt": "2026-09-15T09:10:13.310Z",
   "weekStart": "2026-09-13",
   "weekEnd": "2026-09-15",
   "windowStart": "2026-09-13",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121723&playDt=20260923&tsId=TS0039&pno=1",
-      "score": 85,
-      "signal": 6,
-      "positiveSignal": 6,
-      "mentionCount": 1,
-      "rawPositiveSignal": 6,
-      "rawMentionCount": 1,
+      "score": 162,
+      "signal": 12,
+      "positiveSignal": 12,
+      "mentionCount": 2,
+      "rawPositiveSignal": 12,
+      "rawMentionCount": 2,
       "scheduleBackfill": false,
       "venueIds": [
         "kucine",
@@ -38,8 +38,32 @@
       "nextTime": "12:40",
       "evidence": [
         {
+          "title": "가능한사랑 <- 이거 엄마랑봐도 될라나",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1855540&page=1",
+          "date": "2026-09-15",
+          "positive": 6,
+          "rawPositive": 6,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "미쳤",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 6,
+          "commentPositive": 6,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
           "title": "가능한 사랑 예매 미쳤네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1855411&page=3",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1855411&page=4",
           "date": "2026-09-15",
           "positive": 6,
           "rawPositive": 6,
@@ -71,7 +95,7 @@
       "localPosterUrl": "/assets/recommendation-posters/40f5f0963689ae80.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-09-15&movieCd=029462&playSDT=2026-09-15&screenId=01&showSeq=5",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121681&playDt=20260915&tsId=TS0056&pno=5",
       "score": 72.8,
       "signal": 5.2,
       "positiveSignal": 5.2,
@@ -80,17 +104,17 @@
       "rawMentionCount": 1,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube",
         "filmforum",
+        "cinecube",
         "kucine"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
         "필름포럼",
+        "씨네큐브 광화문",
         "KU시네마테크"
       ],
       "nextDate": "2026-09-15",
-      "nextTime": "17:20",
+      "nextTime": "18:30",
       "evidence": [
         {
           "title": "더 드라마 취소하고 베니스나 봐야겠다",
@@ -169,7 +193,7 @@
       "localPosterUrl": "/assets/recommendation-posters/1afd45512fb98782.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-09-15&movieCd=029204&playSDT=2026-09-15&screenId=01&showSeq=4",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121454&playDt=20260915&tsId=TS0044&pno=6",
       "score": 0,
       "signal": 0,
       "positiveSignal": 0,
@@ -178,21 +202,21 @@
       "rawMentionCount": 0,
       "scheduleBackfill": true,
       "venueIds": [
-        "cinecube",
         "sangsangmadang",
         "filmforum",
         "indiespace",
-        "kucine"
+        "kucine",
+        "cinecube"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
         "KT&G 상상마당 시네마",
         "필름포럼",
         "인디스페이스",
-        "KU시네마테크"
+        "KU시네마테크",
+        "씨네큐브 광화문"
       ],
       "nextDate": "2026-09-15",
-      "nextTime": "15:25",
+      "nextTime": "20:10",
       "evidence": [],
       "posterSourceUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbJls3D%2FdJMcadJqj1f%2FAAAAAAAAAAAAAAAAAAAAACeMfcsEnFeBQJWMcvIohcvB_4ORkerlfY_wDyJXwSo3%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1790780399%26allow_ip%3D%26allow_referer%3D%26signature%3DnMY%252BG758kZMubJT3miJ5F2mCJH8%253D"
     }
@@ -202,11 +226,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 184,
+    "fetchedPostCount": 235,
     "listedPostCount": 292,
-    "detailedPostCount": 14,
-    "commentFetchCount": 14,
-    "commentCount": 27,
+    "detailedPostCount": 21,
+    "commentFetchCount": 21,
+    "commentCount": 64,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -215,7 +239,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-09-15",
     "candidateWindowEnd": "2026-09-29",
-    "candidateCount": 89,
+    "candidateCount": 88,
     "seedLookbackDays": 3,
     "seedStart": "2026-09-13",
     "listLookbackDays": 1,
