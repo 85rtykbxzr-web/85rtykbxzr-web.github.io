@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-09-15",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-09-15T00:11:29.532Z",
+  "updatedAt": "2026-09-15T03:16:06.248Z",
   "days": {
     "2026-09-13": {
       "사탄탱고": {
@@ -371,6 +371,37 @@
         ]
       }
     },
-    "2026-09-15": {}
+    "2026-09-15": {
+      "가능한사랑": {
+        "title": "가능한 사랑(2D)",
+        "positiveSignal": 6,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "가능한 사랑 예매 미쳤네",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1855411&page=1",
+            "date": "2026-09-15",
+            "positive": 6,
+            "rawPositive": 6,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "미쳤",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      }
+    }
   }
 }

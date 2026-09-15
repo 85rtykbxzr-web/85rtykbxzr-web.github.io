@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-09-15T00:11:34.042Z",
+  "generatedAt": "2026-09-15T03:16:11.735Z",
   "weekStart": "2026-09-13",
   "weekEnd": "2026-09-15",
   "windowStart": "2026-09-13",
@@ -13,6 +13,59 @@
   "items": [
     {
       "rank": 1,
+      "title": "가능한 사랑",
+      "posterUrl": "/assets/recommendation-posters/5111b309025797e2.webp",
+      "localPosterUrl": "/assets/recommendation-posters/5111b309025797e2.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121723&playDt=20260923&tsId=TS0039&pno=1",
+      "score": 85,
+      "signal": 6,
+      "positiveSignal": 6,
+      "mentionCount": 1,
+      "rawPositiveSignal": 6,
+      "rawMentionCount": 1,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "kucine",
+        "cinecube"
+      ],
+      "venueNames": [
+        "KU시네마테크",
+        "씨네큐브 광화문"
+      ],
+      "nextDate": "2026-09-23",
+      "nextTime": "12:40",
+      "evidence": [
+        {
+          "title": "가능한 사랑 예매 미쳤네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1855411&page=1",
+          "date": "2026-09-15",
+          "positive": 6,
+          "rawPositive": 6,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "미쳤",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260911_9a7b3ad7.jpg"
+    },
+    {
+      "rank": 2,
       "title": "더 드라마",
       "posterUrl": "/assets/recommendation-posters/40f5f0963689ae80.webp",
       "localPosterUrl": "/assets/recommendation-posters/40f5f0963689ae80.webp",
@@ -74,7 +127,7 @@
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_177ef811.jpg"
     },
     {
-      "rank": 2,
+      "rank": 3,
       "title": "철들 무렵",
       "posterUrl": "/assets/recommendation-posters/08cf13afed798dc4.webp",
       "localPosterUrl": "/assets/recommendation-posters/08cf13afed798dc4.webp",
@@ -110,7 +163,7 @@
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_0c0f92fb.jpg"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "title": "어떻게 해야 했을까?",
       "posterUrl": "/assets/recommendation-posters/1afd45512fb98782.webp",
       "localPosterUrl": "/assets/recommendation-posters/1afd45512fb98782.webp",
@@ -142,34 +195,6 @@
       "nextTime": "12:20",
       "evidence": [],
       "posterSourceUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbJls3D%2FdJMcadJqj1f%2FAAAAAAAAAAAAAAAAAAAAACeMfcsEnFeBQJWMcvIohcvB_4ORkerlfY_wDyJXwSo3%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1790780399%26allow_ip%3D%26allow_referer%3D%26signature%3DnMY%252BG758kZMubJT3miJ5F2mCJH8%253D"
-    },
-    {
-      "rank": 4,
-      "title": "가능한 사랑",
-      "posterUrl": "/assets/recommendation-posters/5111b309025797e2.webp",
-      "localPosterUrl": "/assets/recommendation-posters/5111b309025797e2.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121723&playDt=20260923&tsId=TS0039&pno=1",
-      "score": 0,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 0,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 0,
-      "scheduleBackfill": true,
-      "venueIds": [
-        "kucine",
-        "cinecube"
-      ],
-      "venueNames": [
-        "KU시네마테크",
-        "씨네큐브 광화문"
-      ],
-      "nextDate": "2026-09-23",
-      "nextTime": "12:40",
-      "evidence": [],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260911_9a7b3ad7.jpg"
     }
   ],
   "testerOnly": false,
@@ -177,10 +202,10 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 69,
+    "fetchedPostCount": 119,
     "listedPostCount": 292,
-    "detailedPostCount": 5,
-    "commentFetchCount": 5,
+    "detailedPostCount": 7,
+    "commentFetchCount": 7,
     "commentCount": 16,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
@@ -190,7 +215,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-09-15",
     "candidateWindowEnd": "2026-09-29",
-    "candidateCount": 76,
+    "candidateCount": 75,
     "seedLookbackDays": 3,
     "seedStart": "2026-09-13",
     "listLookbackDays": 1,
