@@ -37,6 +37,10 @@ const sourceSafetyFloors = {
   "kucine-moviee-showtimes": { sessions: 4, dates: 1 },
   "heyri-dtryx-showtimes": { sessions: 8, dates: 2 }
 };
+// Sources that only list a short rolling window of upcoming screenings. Their
+// counts legitimately shrink relative to older stored data, so only the
+// safety floor and the zero-session check apply, not the ratio-drop heuristics.
+const rollingWindowSourceIds = new Set(["movieland-cafe24-options"]);
 const suspiciousDropSessionRatio = 0.45;
 const suspiciousDropDateRatio = 0.5;
 const fallbackProbeSessionRatio = 1;
@@ -2784,6 +2788,8 @@ function liveResultQualityIssue(sourceId, sessions, existingMetrics = {}, now = 
     return `date coverage below safety floor ${current.dates}/${floor.dates}; existing has ${existing.dates}`;
   }
 
+  if (rollingWindowSourceIds.has(sourceId)) return "";
+
   if (existing.sessions >= 8 && current.sessions < Math.ceil(existing.sessions * suspiciousDropSessionRatio)) {
     return `session count suspiciously dropped ${current.sessions}/${existing.sessions}`;
   }
@@ -3498,7 +3504,9 @@ async function main() {
   console.log(`Checked ${health.length} sources.`);
   console.log(`Merged ${liveSessions.length} live sessions.`);
   if (liveWarnings.length) console.log(`Live adapter warnings: ${liveWarnings.length}`);
+  for (const warning of liveWarnings) console.log(`  [warning] ${warning.sourceId}: ${warning.warning}`);
   if (liveErrors.length) console.log(`Live adapter errors: ${liveErrors.length}`);
+  for (const error of liveErrors) console.log(`  [error] ${error.sourceId}: ${error.error}`);
   if (verificationIncomplete) {
     const incompleteSourceIds = [
       ...new Set([
