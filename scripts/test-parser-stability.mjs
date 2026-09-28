@@ -260,6 +260,22 @@ assert(
   "Movieland may legitimately publish a single future screening"
 );
 
+const staleMovielandMetrics = sourceSessionMetrics({
+  sessions: sessions("movieland-cafe24-options", 40, 12)
+});
+assert(
+  liveResultQualityIssue(
+    "movieland-cafe24-options",
+    sessions("movieland-cafe24-options", 6, 2),
+    staleMovielandMetrics
+  ) === "",
+  "Movieland lists a short rolling window, so shrinking versus older stored data must not block a refresh"
+);
+assert(
+  liveResultQualityIssue("movieland-cafe24-options", [], staleMovielandMetrics).includes("returned 0 sessions"),
+  "Movieland returning nothing must still preserve existing data"
+);
+
 assert(
   liveResultFallbackProbeIssue("momo-dtryx-showtimes", sessions("momo-dtryx-showtimes", 30, 5), metrics),
   "moderate Dtryx drops should trigger a fallback probe"

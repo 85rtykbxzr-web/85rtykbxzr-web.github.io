@@ -11,8 +11,25 @@ function currentSlot(value, period, now) {
   return Math.floor((timestamp - offset) / period);
 }
 
+// Retry a failing refresh after 15, 30, 60, 120 then 180 minutes instead of every
+// tick, so a persistent upstream problem does not burn a runner every 15 minutes.
+export function failureBackoff(pagesRuns, now) {
+  let failures = 0;
+  for (const run of pagesRuns) {
+    if (run.conclusion !== "failure") break;
+    failures += 1;
+  }
+  if (!failures) return { failures, waitMinutes: 0, retryAt: 0 };
+  const waitMinutes = Math.min(15 * 2 ** (failures - 1), 180);
+  const finishedAt = Date.parse(pagesRuns[0].updated_at || pagesRuns[0].created_at || "");
+  const retryAt = Number.isFinite(finishedAt) ? finishedAt + waitMinutes * minute : 0;
+  return { failures, waitMinutes, retryAt: retryAt > now + 180 * minute ? 0 : retryAt };
+}
+
 export function refreshPlan({ health, pagesRuns = [], healthRuns = [], now = Date.now() }) {
   if (active(pagesRuns)) return { mode: null, healthDue: false, reason: "A Pages refresh or deployment is already running" };
+  const backoff = failureBackoff(pagesRuns, now);
+  const backingOff = backoff.retryAt > now;
   const kst = new Date(now + 9 * 60 * minute);
   const hour = kst.getUTCHours();
   let mode = null;
@@ -21,6 +38,9 @@ export function refreshPlan({ health, pagesRuns = [], healthRuns = [], now = Dat
   const target = Date.parse(`${kst.toISOString().slice(0, 10)}T09:43:00+09:00`);
   const checkedToday = healthRuns.some((run) => Date.parse(run.created_at) >= target && (run.status !== "completed" || run.conclusion === "success"));
   const healthDue = now >= target && !active(healthRuns) && !checkedToday;
+  if (mode && backingOff) {
+    return { mode: null, healthDue, reason: `Backing off after ${backoff.failures} consecutive failed refresh(es); retry after ${new Date(backoff.retryAt).toISOString()}` };
+  }
   return { mode, healthDue, reason: mode ? "A new refresh interval is due" : "Published data is current for this interval" };
 }
 

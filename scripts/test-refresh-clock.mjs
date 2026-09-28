@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { refreshPlan, assertClockWait } from "./refresh-clock.mjs";
+import { refreshPlan, failureBackoff, assertClockWait } from "./refresh-clock.mjs";
 
 const now = Date.parse("2026-09-09T12:07:00+09:00");
 const health = { ok: true, scheduleGeneratedAt: "2026-09-09T11:41:00+09:00", seatStatusVerifiedAt: "2026-09-09T11:53:00+09:00" };
@@ -15,8 +15,16 @@ assert.equal(refreshPlan({ health: { ok: true, scheduleGeneratedAt: "2026-09-10T
 assert.equal(refreshPlan({ health: fresh, now, healthRuns: [{ status: "completed", conclusion: "success", created_at: "2026-09-09T10:00:00+09:00" }] }).healthDue, false);
 assert.equal(refreshPlan({ health: fresh, now, healthRuns: [{ status: "completed", conclusion: "failure", created_at: "2026-09-09T10:00:00+09:00" }] }).healthDue, true, "failed health checks are retried");
 assert.equal(refreshPlan({ health: fresh, now, healthRuns: [{ status: "in_progress", created_at: "2026-09-09T10:00:00+09:00" }] }).healthDue, false);
+const failed = (minutesAgo) => ({ status: "completed", conclusion: "failure", updated_at: new Date(now - minutesAgo * 60_000).toISOString() });
+assert.equal(refreshPlan({ health, pagesRuns: [failed(5)], now }).mode, null, "a fresh failure waits out its 15 minute backoff");
+assert.equal(refreshPlan({ health, pagesRuns: [failed(16)], now }).mode, "full", "the first failure is retried after 15 minutes");
+assert.equal(refreshPlan({ health, pagesRuns: [failed(16), failed(31), failed(46)], now }).mode, null, "three failures back off for an hour");
+assert.equal(refreshPlan({ health, pagesRuns: [failed(61), failed(76), failed(91)], now }).mode, "full", "the backoff expires");
+assert.equal(refreshPlan({ health, pagesRuns: [{ status: "completed", conclusion: "success", updated_at: new Date(now - 5 * 60_000).toISOString() }, failed(20)], now }).mode, "full", "a success resets the backoff");
+assert.equal(failureBackoff(Array.from({ length: 12 }, () => failed(1)), now).waitMinutes, 180, "backoff is capped at one interval");
+assert.equal(refreshPlan({ health: fresh, pagesRuns: [failed(1)], now, healthRuns: [] }).healthDue, true, "backoff never suppresses the daily site check");
 assert.equal(assertClockWait(new Date(now - 15 * 60_000).toISOString(), 14, now), 15);
 assert.throws(() => assertClockWait(new Date(now - 10_000).toISOString(), 14, now));
 assert.throws(() => assertClockWait("invalid", 14, now));
 assert.throws(() => assertClockWait(new Date(now).toISOString(), 0, now));
-console.log("Refresh clock tests passed (intervals, night hours, duplicate prevention, health retries, and rapid-loop guard).");
+console.log("Refresh clock tests passed (intervals, night hours, duplicate prevention, health retries, failure backoff, and rapid-loop guard).");
