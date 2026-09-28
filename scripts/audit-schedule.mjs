@@ -441,7 +441,9 @@ const warnings = [];
 if (!Array.isArray(schedule.venues) || !schedule.venues.length) errors.push("No venues found");
 if (!Array.isArray(schedule.sources) || !schedule.sources.length) errors.push("No sources found");
 if (!Array.isArray(schedule.sessions) || !schedule.sessions.length) errors.push("No sessions found");
-if (!schedule.sessions.some(isFestivalSession)) errors.push("No festival sessions found");
+// Festivals are seasonal: a gap between festivals is normal and says nothing about
+// parser health (per-venue floors cover that), so it must not block a data refresh.
+if (!schedule.sessions.some(isFestivalSession)) warnings.push("No festival sessions in the current window");
 if (!Array.isArray(schedule.programs) || !schedule.programs.length) errors.push("No program cards found");
 
 validateSessions(schedule, errors);
