@@ -41,6 +41,9 @@ const sourceSafetyFloors = {
 // counts legitimately shrink relative to older stored data, so only the
 // safety floor and the zero-session check apply, not the ratio-drop heuristics.
 const rollingWindowSourceIds = new Set(["movieland-cafe24-options"]);
+// Small single-screen venues whose empty/rejected result keeps the stored sessions
+// with a warning but must not stop every other venue from refreshing and deploying.
+const nonBlockingPreservedSourceIds = new Set(["movieland-cafe24-options"]);
 const suspiciousDropSessionRatio = 0.45;
 const suspiciousDropDateRatio = 0.5;
 const fallbackProbeSessionRatio = 1;
@@ -2186,18 +2189,34 @@ function parseMovielandProductSessions(html, detailUrl) {
   });
 }
 
+// A refresh is incomplete when a source failed outright, or when a source that
+// must be verified fell back to its stored sessions.
+function blockingRefreshSources(liveErrors, liveWarnings) {
+  return [
+    ...new Set([
+      ...liveErrors.map((error) => error.sourceId),
+      ...liveWarnings
+        .filter((warning) => warning.preservedExisting && !nonBlockingPreservedSourceIds.has(warning.sourceId))
+        .map((warning) => warning.sourceId)
+    ])
+  ];
+}
+
 async function fetchMovielandSessions() {
   const pageUrl = "https://movieland.co/category/now-showing/24/";
   const { response, text } = await fetchText(pageUrl);
   if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
 
   const sessions = [];
-  for (const productUrl of movielandProductLinks(text, pageUrl)) {
+  const productLinks = movielandProductLinks(text, pageUrl);
+  console.log(`[movieland] ${productLinks.length} product link(s) on the now-showing page`);
+  for (const productUrl of productLinks) {
     const detail = await fetchText(productUrl);
     if (!detail.response.ok) continue;
     sessions.push(...parseMovielandProductSessions(detail.text, productUrl.replace(/\/category\/24\/display\/1\/?$/i, "/")));
   }
 
+  console.log(`[movieland] ${sessions.length} upcoming session(s) parsed`);
   return { sourceId: "movieland-cafe24-options", url: pageUrl, sessions };
 }
 
@@ -3414,8 +3433,8 @@ async function main() {
   const { liveResults, liveErrors, liveWarnings } = await fetchLiveSessions(fullLiveFetchers, schedule);
 
   const checkedAt = new Date().toISOString();
-  const preservedSourceWarnings = liveWarnings.filter((warning) => warning.preservedExisting);
-  const verificationIncomplete = liveErrors.length > 0 || preservedSourceWarnings.length > 0;
+  const incompleteSourceIds = blockingRefreshSources(liveErrors, liveWarnings);
+  const verificationIncomplete = incompleteSourceIds.length > 0;
   const liveSessions = liveResults.flatMap((result) => result.sessions);
   schedule = mergeLiveSessions(schedule, liveSessions, new Set(liveResults.map((result) => result.sourceId)));
   schedule = pruneUnscheduledSessions(schedule);
@@ -3508,12 +3527,6 @@ async function main() {
   if (liveErrors.length) console.log(`Live adapter errors: ${liveErrors.length}`);
   for (const error of liveErrors) console.log(`  [error] ${error.sourceId}: ${error.error}`);
   if (verificationIncomplete) {
-    const incompleteSourceIds = [
-      ...new Set([
-        ...liveErrors.map((error) => error.sourceId),
-        ...preservedSourceWarnings.map((warning) => warning.sourceId)
-      ])
-    ];
     throw new Error(`Full refresh incomplete for: ${incompleteSourceIds.join(", ")}`);
   }
 }
@@ -3581,6 +3594,7 @@ async function refreshSeatStatusOnly() {
 }
 
 export {
+  blockingRefreshSources,
   dtryxVisibleDateRows,
   liveResultFallbackProbeIssue,
   liveResultQualityIssue,
