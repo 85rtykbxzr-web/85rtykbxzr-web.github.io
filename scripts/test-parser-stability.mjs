@@ -1,4 +1,5 @@
 import {
+  blockingRefreshSources,
   dtryxVisibleDateRows,
   liveResultFallbackProbeIssue,
   liveResultQualityIssue,
@@ -274,6 +275,24 @@ assert(
 assert(
   liveResultQualityIssue("movieland-cafe24-options", [], staleMovielandMetrics).includes("returned 0 sessions"),
   "Movieland returning nothing must still preserve existing data"
+);
+
+const preserved = (sourceId) => ({ sourceId, warning: "kept existing", preservedExisting: true });
+assert(
+  blockingRefreshSources([], [preserved("movieland-cafe24-options")]).length === 0,
+  "a preserved Movieland result must not block the whole refresh"
+);
+assert(
+  blockingRefreshSources([], [preserved("sac-timetable")]).join() === "sac-timetable",
+  "a preserved result from a core venue must still block the refresh"
+);
+assert(
+  blockingRefreshSources([{ sourceId: "movieland-cafe24-options", error: "boom" }], []).join() === "movieland-cafe24-options",
+  "a hard Movieland error must still block the refresh"
+);
+assert(
+  blockingRefreshSources([], [{ sourceId: "sac-timetable", warning: "soft", preservedExisting: false }]).length === 0,
+  "non-preserving warnings never block"
 );
 
 assert(
