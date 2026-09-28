@@ -1172,6 +1172,29 @@ server.headersTimeout = 15000;
 server.requestTimeout = 30000;
 server.maxHeadersCount = 100;
 
+server.on("error", (error) => {
+  console.error(`Server error: ${error.code || error.message}`);
+  process.exit(1);
+});
+
+// A stray rejected promise must not take the whole process down silently.
+process.on("unhandledRejection", (reason) => {
+  console.error("Unhandled rejection:", reason);
+});
+
+// Drain in-flight requests on deploy/restart instead of cutting them off.
+let shuttingDown = false;
+for (const signal of ["SIGTERM", "SIGINT"]) {
+  process.on(signal, () => {
+    if (shuttingDown) return;
+    shuttingDown = true;
+    console.log(`${signal} received, shutting down.`);
+    server.close(() => process.exit(0));
+    server.closeIdleConnections?.();
+    setTimeout(() => process.exit(1), 10000).unref();
+  });
+}
+
 server.listen(port, host, () => {
   console.log(`서울독립영화관시간표 running at http://127.0.0.1:${port}/`);
   if (betaPassword) console.log(`Beta password enabled for user "${betaUser}".`);
