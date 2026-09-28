@@ -598,7 +598,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
       if (!notice) {
         notice = document.createElement("div");
         notice.id = `${id}LiveStatus`;
-        notice.className = "border border-primary/10 bg-surface p-4 text-sm text-on-surface-variant";
+        notice.className = `border border-primary/10 bg-surface p-4 text-sm text-on-surface-variant${id === "mobile" ? " mx-6" : ""}`;
         notice.setAttribute("role", "status");
         notice.setAttribute("aria-live", "polite");
         document.getElementById(`${id}Schedule`).before(notice);
@@ -1616,7 +1616,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
           : `<span class="mt-1 block text-[10px] font-label-caps text-on-surface-variant">${escapeHtml(item.countLabel)}</span>`;
         return `
           <div class="relative ${compact ? "w-32 shrink-0 snap-start" : "min-w-0"}">
-            <button class="${tileClass} ${favoriteClass}" type="button" data-venue-jump="${escapeHtml(item.id)}" aria-label="${escapeHtml(`${item.name} ${item.countLabel}`)}">
+            <button class="${tileClass} ${favoriteClass}${item.count ? "" : " [&>span:first-child]:opacity-40"}" type="button" data-venue-jump="${escapeHtml(item.id)}" aria-label="${escapeHtml(`${item.name} ${item.countLabel}`)}">
               ${markSpan}
               ${nameSpan}
               ${countSpan}
