@@ -622,7 +622,8 @@ function publicCommunityTrends(trends) {
       url: String(item.url || ""),
       trailerUrl: String(item.trailerUrl || ""),
       nextDate: String(item.nextDate || ""),
-      nextTime: String(item.nextTime || "")
+      nextTime: String(item.nextTime || ""),
+      scheduleBackfill: item.scheduleBackfill === true
     }))
   };
 }

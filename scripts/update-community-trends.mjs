@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
 import { mkdir, readFile, readdir, unlink } from "node:fs/promises";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import sharp from "sharp";
 import { isPastKstSession } from "../src/session-time.mjs";
 import { writeFileAtomic } from "./write-file-atomic.mjs";
@@ -318,12 +318,15 @@ function countTerm(text, term) {
   return count;
 }
 
+// One term repeated many times ("강추 강추 강추 …") should not outweigh distinct reactions.
+const maximumTermRepeats = 3;
+
 function countWeightedTerms(text, groups) {
   const hits = [];
   let score = 0;
   for (const group of groups) {
     for (const term of group.terms) {
-      const count = countTerm(text, term);
+      const count = Math.min(countTerm(text, term), maximumTermRepeats);
       if (!count) continue;
       const weighted = count * group.weight;
       score += weighted;
@@ -350,9 +353,22 @@ function isReviewQuestion(text) {
   return isQuestionLike(source) && reviewQuestionPatterns.some((pattern) => pattern.test(source));
 }
 
-function reviewSignal(post) {
-  const titleBodyText = `${post.title || ""} ${post.body || ""}`.trim();
-  const comments = Array.isArray(post.comments) ? post.comments : [];
+// Titles such as "최악의 하루" contain sentiment words or "?" that say nothing about the
+// reaction, so remove the film's own title (with or without spaces) before scoring.
+function stripFilmTitle(text, filmTitle) {
+  const letters = Array.from(String(filmTitle || "")).filter((char) => !/\s/.test(char));
+  if (letters.length < 2) return String(text || "");
+  const pattern = letters.map((char) => char.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("\\s*");
+  return String(text || "").replace(new RegExp(pattern, "gi"), " ");
+}
+
+function reviewSignal(post, options = {}) {
+  const filmTitle = options.filmTitle || "";
+  const titleBodyText = stripFilmTitle(`${post.title || ""} ${post.body || ""}`, filmTitle).trim();
+  const comments = (Array.isArray(post.comments) ? post.comments : []).map((comment) => ({
+    ...comment,
+    memo: stripFilmTitle(comment.memo, filmTitle)
+  }));
   const questionLike = isQuestionLike(titleBodyText);
   const reviewQuestion = isReviewQuestion(titleBodyText);
   const titleBodyPositive = questionLike ? { score: 0, hits: [] } : countWeightedTerms(titleBodyText, positiveTermGroups);
@@ -890,10 +906,13 @@ function buildDailySignals(candidates, posts) {
     if (!matches.length) continue;
 
     for (const candidate of matches) {
-      const signal = reviewSignal({
-        ...post,
-        comments: commentsForCandidate(post, candidate, matches.length)
-      });
+      const signal = reviewSignal(
+        {
+          ...post,
+          comments: commentsForCandidate(post, candidate, matches.length)
+        },
+        { filmTitle: candidate.title }
+      );
       if (!signal.net) continue;
 
       days[post.date][candidate.normalized] ||= {
@@ -1266,7 +1285,11 @@ async function main() {
   console.log(`Wrote ${items.length} weekly positive picks to data/community-trends.json`);
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+export { countWeightedTerms, reviewSignal, stripFilmTitle };
+
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch((error) => {
+    console.error(error);
+    process.exitCode = 1;
+  });
+}

@@ -2662,6 +2662,8 @@ import { isPastKstSession } from "./src/session-time.mjs";
   }
 
   function trendRankText(item) {
+    // A pick that only fills an empty slot has no community signal, so it gets no rank.
+    if (item?.scheduleBackfill) return "상영 중";
     const rank = Number(item?.rank || 0);
     return rank > 0 ? String(rank).padStart(2, "0") : "";
   }
