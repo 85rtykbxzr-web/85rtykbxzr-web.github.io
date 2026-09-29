@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-09-29T00:14:18.885Z",
+  "generatedAt": "2026-09-29T03:19:38.699Z",
   "weekStart": "2026-09-27",
   "weekEnd": "2026-09-29",
   "windowStart": "2026-09-27",
@@ -18,7 +18,7 @@
       "localPosterUrl": "/assets/recommendation-posters/5111b309025797e2.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-09-29&movieCd=029672&playSDT=2026-09-29&screenId=01&showSeq=2",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121723&playDt=20260929&tsId=TS0039&pno=1",
       "score": 710.3,
       "signal": 55.4,
       "positiveSignal": 55.4,
@@ -27,15 +27,15 @@
       "rawMentionCount": 13,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube",
-        "kucine"
+        "kucine",
+        "cinecube"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
-        "KU시네마테크"
+        "KU시네마테크",
+        "씨네큐브 광화문"
       ],
       "nextDate": "2026-09-29",
-      "nextTime": "11:20",
+      "nextTime": "13:30",
       "evidence": [
         {
           "title": "스포) 가능한 사랑 나름 해석 장문",
@@ -203,7 +203,7 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121738&playDt=20260929&tsId=TS0056&pno=4",
-      "score": 110.2,
+      "score": 113.2,
       "signal": 8.3,
       "positiveSignal": 8.3,
       "mentionCount": 1.6,
@@ -370,12 +370,12 @@
     },
     {
       "rank": 4,
-      "title": "철들 무렵",
-      "posterUrl": "/assets/recommendation-posters/08cf13afed798dc4.webp",
-      "localPosterUrl": "/assets/recommendation-posters/08cf13afed798dc4.webp",
+      "title": "이방인",
+      "posterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
+      "localPosterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121613&playDt=20260929&tsId=TS0044&pno=3",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-09-30&movieCd=029631&playSDT=2026-09-30&screenId=02&showSeq=2",
       "score": 0,
       "signal": 0,
       "positiveSignal": 0,
@@ -384,25 +384,21 @@
       "rawMentionCount": 0,
       "scheduleBackfill": true,
       "venueIds": [
+        "cinecube",
         "sangsangmadang",
         "filmforum",
-        "kucine",
-        "indiespace",
-        "sac",
-        "cinecube"
+        "kucine"
       ],
       "venueNames": [
+        "씨네큐브 광화문",
         "KT&G 상상마당 시네마",
         "필름포럼",
-        "KU시네마테크",
-        "인디스페이스",
-        "서울아트시네마",
-        "씨네큐브 광화문"
+        "KU시네마테크"
       ],
-      "nextDate": "2026-09-29",
-      "nextTime": "14:05",
+      "nextDate": "2026-09-30",
+      "nextTime": "11:45",
       "evidence": [],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_0c0f92fb.jpg"
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260903_7e3d6928.jpg"
     }
   ],
   "testerOnly": false,
@@ -410,11 +406,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 95,
+    "fetchedPostCount": 200,
     "listedPostCount": 292,
-    "detailedPostCount": 2,
-    "commentFetchCount": 2,
-    "commentCount": 7,
+    "detailedPostCount": 9,
+    "commentFetchCount": 9,
+    "commentCount": 23,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -423,7 +419,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-09-29",
     "candidateWindowEnd": "2026-10-13",
-    "candidateCount": 87,
+    "candidateCount": 92,
     "seedLookbackDays": 3,
     "seedStart": "2026-09-27",
     "listLookbackDays": 1,
