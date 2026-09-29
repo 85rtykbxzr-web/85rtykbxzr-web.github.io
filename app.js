@@ -591,10 +591,15 @@ import { isPastKstSession } from "./src/session-time.mjs";
     return "영화관의 공식 시간표를 불러오는 중입니다.";
   }
 
+  // Only surface a notice when a venue could not be checked. Successful and in-progress
+  // checks stay silent; the data-status line under the page title already shows freshness.
   function renderBrowserLiveStatus() {
+    const rows = usesBrowserLive(state.data) ? state.data.meta.browserLive || [] : [];
+    const failures = rows.filter((row) => row.status === "error");
+    const completeCount = rows.filter((row) => row.status === "ok").length;
     for (const id of ["desktop", "mobile"]) {
       let notice = document.getElementById(`${id}LiveStatus`);
-      if (!usesBrowserLive(state.data)) { notice?.remove(); continue; }
+      if (!failures.length) { notice?.remove(); continue; }
       if (!notice) {
         notice = document.createElement("div");
         notice.id = `${id}LiveStatus`;
@@ -603,22 +608,12 @@ import { isPastKstSession } from "./src/session-time.mjs";
         notice.setAttribute("aria-live", "polite");
         document.getElementById(`${id}Schedule`).before(notice);
       }
-      const rows = state.data.meta.browserLive || [];
-      const complete = rows.filter((row) => row.status === "ok");
-      const failures = rows.filter((row) => row.status === "error");
-      if (failures.length) {
-        const links = failures.map((row) => {
-          const config = browserLiveConfigs.find((item) => item.venueId === row.venueId);
-          return `<a class="underline" href="${escapeHtml(safePublicUrl(config.officialUrl))}" target="_blank" rel="noopener noreferrer">${escapeHtml(config.name)}</a>`;
-        });
-        notice.innerHTML = `${complete.length}/${browserLiveConfigs.length}개관 실시간 확인 · 연결되지 않은 영화관은 공식 시간표를 확인해 주세요: ${links.join(" · ")} <button class="underline" type="button" data-retry-browser-live>다시 확인</button>`;
-        notice.querySelector("button").onclick = () => refreshScheduleData({ force: true });
-      } else if (complete.length === browserLiveConfigs.length) {
-        const oldest = complete.map((row) => row.checkedAt).sort()[0];
-        notice.textContent = `${complete.length}개관 공식 시간표·좌석 ${formatVerifiedAt(oldest)} 실시간 확인`;
-      } else {
-        notice.textContent = `영화관 공식 시간표·좌석 확인 중 · ${complete.length}/${browserLiveConfigs.length}개관`;
-      }
+      const links = failures.map((row) => {
+        const config = browserLiveConfigs.find((item) => item.venueId === row.venueId);
+        return `<a class="underline" href="${escapeHtml(safePublicUrl(config.officialUrl))}" target="_blank" rel="noopener noreferrer">${escapeHtml(config.name)}</a>`;
+      });
+      notice.innerHTML = `${completeCount}/${browserLiveConfigs.length}개관 실시간 확인 · 연결되지 않은 영화관은 공식 시간표를 확인해 주세요: ${links.join(" · ")} <button class="underline" type="button" data-retry-browser-live>다시 확인</button>`;
+      notice.querySelector("button").onclick = () => refreshScheduleData({ force: true });
     }
   }
 
