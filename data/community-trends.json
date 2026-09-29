@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-09-29T06:24:10.860Z",
+  "generatedAt": "2026-09-29T09:13:47.872Z",
   "weekStart": "2026-09-27",
   "weekEnd": "2026-09-29",
   "windowStart": "2026-09-27",
@@ -18,13 +18,13 @@
       "localPosterUrl": "/assets/recommendation-posters/5111b309025797e2.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-09-29&movieCd=029672&playSDT=2026-09-29&screenId=01&showSeq=4",
-      "score": 710.3,
-      "signal": 55.4,
-      "positiveSignal": 55.4,
-      "mentionCount": 7.5,
-      "rawPositiveSignal": 96,
-      "rawMentionCount": 13,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-09-29&movieCd=029672&playSDT=2026-09-29&screenId=01&showSeq=5",
+      "score": 763.3,
+      "signal": 59.4,
+      "positiveSignal": 59.4,
+      "mentionCount": 8.5,
+      "rawPositiveSignal": 100,
+      "rawMentionCount": 14,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -35,7 +35,7 @@
         "KU시네마테크"
       ],
       "nextDate": "2026-09-29",
-      "nextTime": "16:20",
+      "nextTime": "19:20",
       "evidence": [
         {
           "title": "스포) 가능한 사랑 나름 해석 장문",
@@ -202,24 +202,24 @@
       "localPosterUrl": "/assets/recommendation-posters/730c75bb764294f9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121738&playDt=20260929&tsId=TS0056&pno=4",
-      "score": 113.2,
-      "signal": 8.3,
-      "positiveSignal": 8.3,
-      "mentionCount": 1.6,
-      "rawPositiveSignal": 16,
-      "rawMentionCount": 3,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-01&movieCd=029671&playSDT=2026-10-01&screenId=02&showSeq=2",
+      "score": 165.2,
+      "signal": 12.3,
+      "positiveSignal": 12.3,
+      "mentionCount": 2.6,
+      "rawPositiveSignal": 20,
+      "rawMentionCount": 4,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum",
-        "cinecube"
+        "cinecube",
+        "filmforum"
       ],
       "venueNames": [
-        "필름포럼",
-        "씨네큐브 광화문"
+        "씨네큐브 광화문",
+        "필름포럼"
       ],
-      "nextDate": "2026-09-29",
-      "nextTime": "16:30",
+      "nextDate": "2026-10-01",
+      "nextTime": "10:55",
       "evidence": [
         {
           "title": "압지비 꿈꾸던 모험 할매 3인방",
@@ -306,6 +306,30 @@
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.518
+        },
+        {
+          "title": "스포) 꿈꾸던 모험은 가능한 사랑이 상영되는 지금 더 추천할만한 영화였음",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865562&page=1",
+          "date": "2026-09-29",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "추천",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260910_b6b3a8cc.jpg"
@@ -406,20 +430,20 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 303,
-    "listedPostCount": 342,
-    "detailedPostCount": 16,
-    "commentFetchCount": 16,
-    "commentCount": 51,
+    "fetchedPostCount": 391,
+    "listedPostCount": 392,
+    "detailedPostCount": 20,
+    "commentFetchCount": 20,
+    "commentCount": 60,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 7,
+    "scannedPageCount": 8,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-09-27",
     "newestScannedDate": "2026-09-29",
     "scanMode": "daily",
     "candidateWindowStart": "2026-09-29",
     "candidateWindowEnd": "2026-10-13",
-    "candidateCount": 90,
+    "candidateCount": 88,
     "seedLookbackDays": 3,
     "seedStart": "2026-09-27",
     "listLookbackDays": 1,
