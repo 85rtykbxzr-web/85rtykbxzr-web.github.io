@@ -59,6 +59,16 @@ body {
   font-family: var(--font-sans);
 }
 
+/* Korean copy should wrap between words, not in the middle of them. */
+body {
+  word-break: keep-all;
+}
+
+h1,
+h2 {
+  text-wrap: balance;
+}
+
 body.app-loading main {
   visibility: hidden;
 }
