@@ -759,7 +759,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
   }
 
   function ageBadgeClass(label) {
-    const sizeClass = "inline-flex h-5 min-w-7 items-center justify-center px-2 text-[10px]";
+    const sizeClass = "inline-flex h-5 min-w-10 items-center justify-center px-2 text-[11px]";
     return `${sizeClass} ${ageClass(label)} shrink-0 rounded-sm font-bold leading-none`;
   }
 
@@ -1275,7 +1275,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
       <div class="${rowClass}">
         <div class="${compact ? "flex items-start gap-3" : "grid grid-cols-[5.5rem_minmax(0,1fr)_auto] gap-5 items-start"}">
           <span class="${compact ? "w-16" : ""} shrink-0">
-            <strong class="block font-schedule-time text-lg leading-none ${timeClass}">${escapeHtml(cleanTime(session))}</strong>
+            <strong class="block font-schedule-time text-lg leading-none tabular-nums ${timeClass}">${escapeHtml(cleanTime(session))}</strong>
             ${compact ? "" : `<span class="mt-2 block text-xs text-on-surface-variant">${escapeHtml(screenLabel)}</span>`}
           </span>
           <span class="min-w-0">
@@ -1288,8 +1288,8 @@ import { isPastKstSession } from "./src/session-time.mjs";
           <span class="${compact ? "ml-auto flex shrink-0 flex-col gap-2" : "flex shrink-0 flex-col items-stretch gap-2"}">
             ${
               interactive
-                ? `<a class="inline-flex justify-center px-3 py-1 text-[10px] font-label-caps ${statusClass}" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(statusLabel)}</a>`
-                : `<span class="inline-flex justify-center px-3 py-1 text-[10px] font-label-caps ${statusClass}">${escapeHtml(statusLabel)}</span>`
+                ? `<a class="inline-flex min-w-[3.25rem] justify-center px-3 py-1.5 text-xs font-label-caps ${statusClass}" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(statusLabel)}</a>`
+                : `<span class="inline-flex min-w-[3.25rem] justify-center px-3 py-1.5 text-xs font-label-caps ${statusClass}">${escapeHtml(statusLabel)}</span>`
             }
           </span>
         </div>
@@ -2134,8 +2134,8 @@ import { isPastKstSession } from "./src/session-time.mjs";
             <a class="flex gap-3 p-4 bg-surface-container-lowest border border-outline-variant/10" href="${escapeHtml(programUrl)}" target="_blank" rel="noopener noreferrer">
               ${posterMarkup(program, program.title, "w-24 h-16 object-cover shrink-0", "")}
               <span class="flex flex-col justify-center min-w-0">
-                <span class="mb-1 flex items-center gap-2">
-                  <span class="min-w-0 text-sm font-bold text-tertiary line-clamp-1">${escapeHtml(label || "프로그램")}</span>
+                <span class="mb-1 flex flex-wrap items-center gap-x-2 gap-y-1">
+                  <span class="min-w-0 text-sm font-bold text-tertiary">${escapeHtml(label || "프로그램")}</span>
                   ${lifecyclePillMarkup(lifecycle, true)}
                 </span>
                 <strong class="mobile-row-title line-clamp-2" title="${escapeHtml(cleanProgramTitle(program.title))}">${escapeHtml(cleanProgramTitle(program.title))}</strong>
