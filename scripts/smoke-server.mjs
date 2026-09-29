@@ -185,7 +185,7 @@ async function main() {
     assert(
       trends.items.every((item) =>
         Object.keys(item).every((key) =>
-          ["nextDate", "nextTime", "posterSourceUrl", "posterUrl", "rank", "title", "trailerUrl", "url"].includes(key)
+          ["nextDate", "nextTime", "posterSourceUrl", "posterUrl", "rank", "scheduleBackfill", "title", "trailerUrl", "url"].includes(key)
         )
       ),
       "community trends exposes an unexpected item field"

@@ -35,6 +35,7 @@ const allowedTrendItemFields = new Set([
   "posterSourceUrl",
   "posterUrl",
   "rank",
+  "scheduleBackfill",
   "title",
   "trailerUrl",
   "url"
