@@ -1024,7 +1024,7 @@ const server = createServer(async (req, res) => {
         return;
       }
 
-      redirect(res, "/assets/favicon-32.png?v=3");
+      redirect(res, "/assets/favicon-32.png?v=4");
       return;
     }
 
