@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-09-29T12:46:58.316Z",
-  "weekStart": "2026-09-27",
-  "weekEnd": "2026-09-29",
-  "windowStart": "2026-09-27",
-  "windowEnd": "2026-09-29",
+  "generatedAt": "2026-09-29T15:23:27.853Z",
+  "weekStart": "2026-09-28",
+  "weekEnd": "2026-09-30",
+  "windowStart": "2026-09-28",
+  "windowEnd": "2026-09-30",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-09-30&movieCd=029672&playSDT=2026-09-30&screenId=01&showSeq=1",
-      "score": 864.3,
-      "signal": 67.4,
-      "positiveSignal": 67.4,
-      "mentionCount": 9.5,
-      "rawPositiveSignal": 108,
-      "rawMentionCount": 15,
+      "score": 303.3,
+      "signal": 23.1,
+      "positiveSignal": 23.1,
+      "mentionCount": 3.5,
+      "rawPositiveSignal": 40,
+      "rawMentionCount": 6,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -37,106 +37,6 @@
       "nextDate": "2026-09-30",
       "nextTime": "09:20",
       "evidence": [
-        {
-          "title": "스포) 가능한 사랑 나름 해석 장문",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1864389&page=13",
-          "date": "2026-09-27",
-          "positive": 2,
-          "rawPositive": 2,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "좋았음",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 23,
-          "commentPositive": 2,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "스포) 가능한사랑 해변씬이 참 좋았음",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1864310&page=15",
-          "date": "2026-09-27",
-          "positive": 8,
-          "rawPositive": 8,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "감탄",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "좋더라",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            },
-            {
-              "term": "좋았음",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "( 스포) 영알못 영린이, 가능한 사랑 불호 평 리뷰.txt",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1864308&page=15",
-          "date": "2026-09-27",
-          "positive": 12,
-          "rawPositive": 12,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "꼭 봐",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            },
-            {
-              "term": "추천",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "괜찮",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 12,
-          "commentPositive": 12,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "가능한사랑 씹걸작이구만 왜깐거냐",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865013&page=3",
@@ -166,7 +66,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "<가능한 사랑> 이해할수 없는 타인 곁에 머무는 것",
@@ -190,6 +90,78 @@
           "commentCount": 1,
           "commentPositive": 2,
           "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "가능한 사랑의 불쾌한 서스펜스",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1864726&page=8",
+          "date": "2026-09-28",
+          "positive": 2,
+          "rawPositive": 2,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "좋았음",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 15,
+          "commentPositive": 2,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "스포) 가능한 사랑이 탐하는 '남'의 것",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865675&page=2",
+          "date": "2026-09-29",
+          "positive": 8,
+          "rawPositive": 8,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "감동",
+              "count": 2,
+              "weight": 4,
+              "score": 8,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 1,
+          "commentPositive": 8,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "스포) 꿈꾸던 모험은 가능한 사랑이 상영되는 지금 더 추천할만한 영화였음",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865562&page=3",
+          "date": "2026-09-29",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "추천",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
           "dayWeight": 0.72
         }
       ],
@@ -203,12 +175,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-01&movieCd=029671&playSDT=2026-10-01&screenId=02&showSeq=2",
-      "score": 362.2,
-      "signal": 28.3,
-      "positiveSignal": 28.3,
-      "mentionCount": 3.6,
-      "rawPositiveSignal": 36,
-      "rawMentionCount": 5,
+      "score": 185,
+      "signal": 14.4,
+      "positiveSignal": 14.4,
+      "mentionCount": 1.4,
+      "rawPositiveSignal": 20,
+      "rawMentionCount": 2,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -221,92 +193,6 @@
       "nextDate": "2026-10-01",
       "nextTime": "10:55",
       "evidence": [
-        {
-          "title": "압지비 꿈꾸던 모험 할매 3인방",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1864025&page=19",
-          "date": "2026-09-27",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "재밌",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 8,
-          "commentPositive": 4,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "꿈꾸던 모험과 독일영화",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1863984&page=19",
-          "date": "2026-09-27",
-          "positive": 8,
-          "rawPositive": 8,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "재밌",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "볼만",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            },
-            {
-              "term": "좋음",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 10,
-          "commentPositive": 2,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "꿈꾸던 모험 퍼시픽션 생각나네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1863969&page=20",
-          "date": "2026-09-27",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "재밌",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "꿈꾸던 모험 2회차 하러 갔다가 누갤서 알게된 걸작 예고편보고왔다",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865608&page=3",
@@ -336,7 +222,7 @@
           "commentCount": 4,
           "commentPositive": 4,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "스포) 꿈꾸던 모험은 가능한 사랑이 상영되는 지금 더 추천할만한 영화였음",
@@ -360,7 +246,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260910_b6b3a8cc.jpg"
@@ -373,10 +259,10 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-03&movieCd=023734&playSDT=2026-10-03&screenId=02&showSeq=5",
-      "score": 39.2,
-      "signal": 2.9,
-      "positiveSignal": 2.9,
-      "mentionCount": 0.7,
+      "score": 28.5,
+      "signal": 2.1,
+      "positiveSignal": 2.1,
+      "mentionCount": 0.5,
       "rawPositiveSignal": 4,
       "rawMentionCount": 1,
       "scheduleBackfill": false,
@@ -418,7 +304,7 @@
           "commentCount": 9,
           "commentPositive": 4,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/uploads/MOVIE/202406149050554.jpg"
@@ -461,24 +347,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 491,
-    "listedPostCount": 492,
-    "detailedPostCount": 34,
-    "commentFetchCount": 34,
-    "commentCount": 110,
+    "fetchedPostCount": 12,
+    "listedPostCount": 292,
+    "detailedPostCount": 0,
+    "commentFetchCount": 0,
+    "commentCount": 0,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 10,
+    "scannedPageCount": 6,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-09-27",
-    "newestScannedDate": "2026-09-29",
+    "newestScannedDate": "2026-09-30",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-09-29",
-    "candidateWindowEnd": "2026-10-13",
-    "candidateCount": 86,
+    "candidateWindowStart": "2026-09-30",
+    "candidateWindowEnd": "2026-10-14",
+    "candidateCount": 87,
     "seedLookbackDays": 3,
-    "seedStart": "2026-09-27",
+    "seedStart": "2026-09-28",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-09-29",
+    "listWindowStart": "2026-09-30",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -486,7 +372,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-09-29"
+      "2026-09-30"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [
