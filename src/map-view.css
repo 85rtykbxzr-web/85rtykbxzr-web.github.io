@@ -34,6 +34,8 @@ html.scm-lock, html.scm-lock body { overflow: hidden; }
 .scm-body { flex: 1; min-height: 0; display: flex; position: relative; }
 .scm-stage { flex: 1; min-width: 0; position: relative; }
 .scm-canvas { position: absolute; inset: 0; background: #eae6df; }
+/* Monochrome basemap so the ink/red pins carry the colour. */
+.scm-root .leaflet-tile-pane { filter: grayscale(1) contrast(0.92) brightness(1.04); }
 .scm-note {
   position: absolute; left: 50%; top: 12px; transform: translateX(-50%); z-index: 500; margin: 0;
   max-width: calc(100% - 32px); padding: 8px 14px; border-radius: 8px; background: #1c1b1a; color: #fff; font-size: 12px;
@@ -117,6 +119,7 @@ html.scm-lock, html.scm-lock body { overflow: hidden; }
 .scm-root .leaflet-control-zoom { border: 0; box-shadow: 0 2px 8px rgba(28, 27, 26, 0.25); }
 .scm-root .leaflet-control-zoom a { width: 40px; height: 40px; line-height: 40px; color: #1c1b1a; }
 .scm-root .leaflet-control-attribution { font-size: 10px; }
+.scm-root .leaflet-control-attribution a { color: inherit; text-decoration: underline; }
 
 @media (max-width: 767px) {
   .scm-head { flex-wrap: wrap; gap: 6px 10px; padding: 10px 12px 8px; }
