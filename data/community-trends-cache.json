@@ -2,177 +2,25 @@
   "version": 2,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-09-28",
-  "windowEnd": "2026-09-30",
+  "windowStart": "2026-09-29",
+  "windowEnd": "2026-10-01",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-09-28",
       "2026-09-29",
-      "2026-09-30"
+      "2026-09-30",
+      "2026-10-01"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-09-30",
-    "lastWindowEnd": "2026-09-30",
+    "lastWindowStart": "2026-10-01",
+    "lastWindowEnd": "2026-10-01",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-09-30T12:15:21.454Z",
+  "updatedAt": "2026-09-30T15:10:13.368Z",
   "days": {
-    "2026-09-28": {
-      "가능한사랑": {
-        "title": "가능한 사랑",
-        "positiveSignal": 28,
-        "mentionCount": 4,
-        "evidence": [
-          {
-            "title": "가능한사랑 씹걸작이구만 왜깐거냐",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865013&page=3",
-            "date": "2026-09-28",
-            "positive": 12,
-            "rawPositive": 12,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "걸작",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              },
-              {
-                "term": "최고",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "<가능한 사랑> 이해할수 없는 타인 곁에 머무는 것",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1864913&page=5",
-            "date": "2026-09-28",
-            "positive": 2,
-            "rawPositive": 2,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "좋네",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 2,
-            "commentNegative": 0
-          },
-          {
-            "title": "가능한 사랑의 불쾌한 서스펜스",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1864726&page=8",
-            "date": "2026-09-28",
-            "positive": 2,
-            "rawPositive": 2,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "좋았음",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 15,
-            "commentPositive": 2,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "퍼펙트데이즈": {
-        "title": "퍼펙트 데이즈",
-        "positiveSignal": 4,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "다들 빔벤더스 퍼펙트데이즈 어땠음",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1864834&page=6",
-            "date": "2026-09-28",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "볼만",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              },
-              {
-                "term": "좋았음",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 9,
-            "commentPositive": 4,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "파멸": {
-        "title": "파멸",
-        "positiveSignal": 4,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "벨라 타르 입문으로 런던에서 온 사나이 괜찮음?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1864712&page=8",
-            "date": "2026-09-28",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 3,
-            "commentPositive": 4,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-09-29": {
       "25시": {
         "title": "25시",
@@ -444,6 +292,7 @@
           }
         ]
       }
-    }
+    },
+    "2026-10-01": {}
   }
 }
