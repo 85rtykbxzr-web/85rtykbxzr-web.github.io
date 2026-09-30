@@ -2760,35 +2760,6 @@ import { isPastKstSession } from "./src/session-time.mjs";
     return choices;
   }
 
-  function trendVenueLinksMarkup(item, compact = false) {
-    const choices = trendSessionChoices(item, 2);
-    if (!choices.length) {
-      return `<p class="${compact ? "mobile-meta mt-2" : "mt-3 text-sm text-on-surface-variant"}">${escapeHtml(trendMetaText(item))}</p>`;
-    }
-    return `
-      <div class="${compact ? "mt-3 grid gap-2" : "mt-4 grid gap-2"}">
-        ${choices
-          .map(
-            (choice) =>
-              compact
-                ? `
-              <a class="flex min-w-0 flex-col gap-1 border border-primary/10 px-3 py-2 text-primary active:bg-primary active:text-surface" href="${escapeHref(choice.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${choice.venueName} ${choice.timeLabel} 예매`)}">
-                <span class="truncate text-[12px] font-bold">${escapeHtml(choice.venueName)}</span>
-                <span class="text-[10px] font-medium text-on-surface-variant">${escapeHtml(choice.timeLabel)}</span>
-              </a>
-            `
-                : `
-              <a class="flex min-w-0 items-center justify-between gap-3 border border-primary/15 px-3 py-2 text-sm font-bold text-primary transition-colors hover:bg-primary hover:text-surface" href="${escapeHref(choice.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${choice.venueName} ${choice.timeLabel} 예매`)}">
-                <span class="min-w-0 truncate">${escapeHtml(choice.venueName)}</span>
-                <span class="shrink-0 text-xs font-medium">${escapeHtml(choice.timeLabel)}</span>
-              </a>
-            `
-          )
-          .join("")}
-      </div>
-    `;
-  }
-
   function trendPosterLinkMarkup(item, className, imageClassName, priority = false) {
     const trailerUrl = trendTrailerUrl(item);
     const posterItem = { posterUrl: item.posterUrl, posterSourceUrl: item.posterSourceUrl };
@@ -2815,7 +2786,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
       <article class="pick-hero">
         ${trendPosterLinkMarkup(item, "pick-poster pick-poster-hero", "h-full w-full object-cover", priority)}
         <div class="pick-hero-body">
-          <span class="pick-num pick-num-xl" aria-label="${escapeHtml(`${Number(item.rank) || 1}위`)}">${escapeHtml(trendRankText(item))}</span>
+          <span class="pick-num pick-num-xl">${escapeHtml(trendRankText(item))}</span>
           <h3 class="pick-hero-title">${escapeHtml(item.title)}</h3>
           ${pickLinksMarkup(item)}
         </div>
@@ -2825,7 +2796,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
   function pickItemMarkup(item) {
     return `
       <li class="pick-item">
-        <span class="pick-num" aria-label="${escapeHtml(`${Number(item.rank) || 0}위`)}">${escapeHtml(trendRankText(item))}</span>
+        <span class="pick-num">${escapeHtml(trendRankText(item))}</span>
         ${trendPosterLinkMarkup(item, "pick-poster pick-poster-sm", "h-full w-full object-cover")}
         <div class="pick-item-body">
           <h3 class="pick-item-title">${escapeHtml(item.title)}</h3>
@@ -2909,6 +2880,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
       renderFestivals();
     }
     renderPopularPicks();
+    window.SeoulCinemaMap?.refresh?.();
     repairPosterImages();
     syncInitialHashScroll();
     updateNavActive();

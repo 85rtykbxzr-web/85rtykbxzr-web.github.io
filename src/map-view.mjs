@@ -120,7 +120,8 @@ export function openMap(ctx) {
       <button type="button" class="scm-close" id="scmClose" aria-label="지도 닫기">닫기</button>
     </div>
     <div class="scm-body">
-      <aside class="scm-panel" id="scmPanel" aria-live="polite"></aside>
+      <aside class="scm-panel" id="scmPanel"></aside>
+      <p class="scm-sr" id="scmStatus" role="status"></p>
       <div class="scm-stage">
         <div class="scm-canvas" id="scmCanvas"></div>
         <p class="scm-note" id="scmNote" hidden>지도 타일을 불러오지 못했어요. 목록과 예매 링크는 그대로 쓸 수 있어요.</p>
@@ -172,7 +173,7 @@ export function openMap(ctx) {
     return true;
   }
 
-  function visibleSessions(venueId) {
+  function visibleSessions() {
     const now = kstNow();
     return ctx.sessions().filter((session) => {
       if (!session.date || ctx.isPast(session) || !inRange(session, now)) return false;
@@ -378,6 +379,10 @@ export function openMap(ctx) {
     panel.classList.toggle("has-detail", Boolean(selected));
     panel.innerHTML = selected ? detailHtml(selected) : listHtml(entries);
     if (selected) panel.scrollTop = 0;
+    const films = new Set(entries.flatMap((entry) => entry.sessions.map((s) => s.title))).size;
+    $("#scmStatus").textContent = selected
+      ? `${selected.venue.name} · ${selected.filmCount}편`
+      : `영화관 ${entries.length}곳 · ${films}편`;
   }
 
   function refresh() {
@@ -390,6 +395,7 @@ export function openMap(ctx) {
     state.selected = id;
     refresh();
     map.invalidateSize();
+    $(".scm-back")?.focus({ preventScroll: true });
     const venue = venues.find((item) => item.id === id);
     if (venue && fly) {
       const compact = window.matchMedia("(max-width: 767px)").matches;
@@ -403,14 +409,17 @@ export function openMap(ctx) {
   }
 
   function clearSelection() {
+    const previous = state.selected;
     state.selected = null;
     refresh();
     map.invalidateSize();
+    if (previous) root.querySelector(`[data-venue="${CSS.escape(previous)}"]`)?.focus({ preventScroll: true });
   }
 
   function locate() {
-    if (!navigator.geolocation || state.locating) {
-      ctx.toast(navigator.geolocation ? "" : "이 브라우저는 위치 기능을 지원하지 않아요.");
+    if (state.locating) return;
+    if (!navigator.geolocation) {
+      ctx.toast("이 브라우저는 위치 기능을 지원하지 않아요.");
       return;
     }
     state.locating = true;
@@ -485,12 +494,15 @@ export function openMap(ctx) {
     const range = target.closest("[data-range]");
     if (range) {
       state.range = range.dataset.range;
-      return refresh();
+      refresh();
+      return $(`[data-range="${state.range}"]`)?.focus({ preventScroll: true });
     }
     const toggle = target.closest("[data-toggle]");
     if (toggle) {
-      state[toggle.dataset.toggle] = !state[toggle.dataset.toggle];
-      return refresh();
+      const key = toggle.dataset.toggle;
+      state[key] = !state[key];
+      refresh();
+      return $(`[data-toggle="${key}"]`)?.focus({ preventScroll: true });
     }
     if (target.closest("[data-locate]")) return locate();
     const row = target.closest("[data-venue]");
@@ -499,7 +511,8 @@ export function openMap(ctx) {
     const fav = target.closest("[data-fav]");
     if (fav) {
       ctx.toggleFavorite(fav.dataset.fav);
-      return refresh();
+      refresh();
+      return $("[data-fav]")?.focus({ preventScroll: true });
     }
     const jump = target.closest("[data-jump]");
     if (jump) {
@@ -517,10 +530,15 @@ export function openMap(ctx) {
   refresh();
   $("#scmClose").focus({ preventScroll: true });
 
-  active = { close, select, map, root };
+  active = { close, select, map, root, refresh };
   return active;
 }
 
 export function closeMap() {
   active?.close();
+}
+
+// Called by the app after new schedule data lands (e.g. the browser-live venues finish loading).
+export function refreshMap() {
+  active?.refresh();
 }
