@@ -67,22 +67,22 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
-    --rgb-background: 30 29 28;
+    --rgb-background: 20 19 18;
     --rgb-primary: 240 235 229;
-    --rgb-surface: 30 29 28;
-    --rgb-surface-container-lowest: 37 35 34;
-    --rgb-surface-container-low: 35 33 32;
-    --rgb-surface-container: 42 40 38;
-    --rgb-surface-container-high: 49 46 44;
-    --rgb-surface-container-highest: 56 53 50;
+    --rgb-surface: 20 19 18;
+    --rgb-surface-container-lowest: 38 36 34;
+    --rgb-surface-container-low: 30 28 27;
+    --rgb-surface-container: 44 41 39;
+    --rgb-surface-container-high: 52 49 46;
+    --rgb-surface-container-highest: 60 56 53;
     --rgb-on-surface: 240 235 229;
     --rgb-on-surface-variant: 186 179 168;
     --rgb-outline: 143 136 126;
-    --rgb-outline-variant: 74 69 64;
+    --rgb-outline-variant: 72 67 61;
     --rgb-tertiary: 227 154 112;
     --rgb-status-active: 114 188 178;
     --rgb-error: 255 122 114;
-    --rgb-major-festival: 20 19 18;
+    --rgb-major-festival: 42 38 35;
     --rgb-rating-12: 61 108 242;
     --rgb-rating-all: 31 145 80;
     --rgb-primary-fixed: 59 53 44;
@@ -93,22 +93,22 @@
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --rgb-background: 30 29 28;
+  --rgb-background: 20 19 18;
   --rgb-primary: 240 235 229;
-  --rgb-surface: 30 29 28;
-  --rgb-surface-container-lowest: 37 35 34;
-  --rgb-surface-container-low: 35 33 32;
-  --rgb-surface-container: 42 40 38;
-  --rgb-surface-container-high: 49 46 44;
-  --rgb-surface-container-highest: 56 53 50;
+  --rgb-surface: 20 19 18;
+  --rgb-surface-container-lowest: 38 36 34;
+  --rgb-surface-container-low: 30 28 27;
+  --rgb-surface-container: 44 41 39;
+  --rgb-surface-container-high: 52 49 46;
+  --rgb-surface-container-highest: 60 56 53;
   --rgb-on-surface: 240 235 229;
   --rgb-on-surface-variant: 186 179 168;
   --rgb-outline: 143 136 126;
-  --rgb-outline-variant: 74 69 64;
+  --rgb-outline-variant: 72 67 61;
   --rgb-tertiary: 227 154 112;
   --rgb-status-active: 114 188 178;
   --rgb-error: 255 122 114;
-  --rgb-major-festival: 20 19 18;
+  --rgb-major-festival: 42 38 35;
   --rgb-rating-12: 61 108 242;
   --rgb-rating-all: 31 145 80;
   --rgb-primary-fixed: 59 53 44;
