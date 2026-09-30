@@ -834,6 +834,35 @@ import { isPastKstSession } from "./src/session-time.mjs";
     return "확인";
   }
 
+  // Remaining seats parsed from "잔여 69/72석"; null when the source reports no seat count.
+  function seatInfo(session) {
+    if (!session || isSoldoutSession(session) || isPastSession(session)) return null;
+    const text = [session.summary, ...(session.tags || [])].filter(Boolean).join(" ");
+    const match = /잔여\s*(\d+)\s*\/\s*(\d+)\s*석/.exec(text);
+    if (!match) return null;
+    const left = Number(match[1]);
+    const total = Number(match[2]);
+    if (!total || left > total) return null;
+    const ratio = left / total;
+    // Quantised to tenths so the width comes from a class (inline styles are blocked by the CSP).
+    const step = left === 0 ? 0 : Math.max(1, Math.round(ratio * 10));
+    return { left, total, step, low: left <= 10 || ratio <= 0.2 };
+  }
+
+  function seatBarMarkup(session) {
+    const seat = seatInfo(session);
+    if (!seat) return "";
+    return `<span class="seat-bar${seat.low ? " is-low" : ""}" aria-hidden="true"><span class="seat-fill seat-f-${seat.step}"></span></span>`;
+  }
+
+  function seatGaugeMarkup(seat, compact = false) {
+    return `
+      <span class="seat-gauge${seat.low ? " is-low" : ""}${compact ? " is-compact" : ""}">
+        <span class="seat-track" aria-hidden="true"><span class="seat-fill seat-f-${seat.step}"></span></span>
+        <span class="seat-count">${seat.low ? "마감 임박 · " : ""}잔여 ${seat.left}/${seat.total}석</span>
+      </span>`;
+  }
+
   function timeLink(session, extraClasses = "", options = {}) {
     const past = isPastSession(session);
     const soldout = isSoldoutSession(session);
@@ -869,7 +898,8 @@ import { isPastKstSession } from "./src/session-time.mjs";
     }
 
     return `
-      <a class="time-btn ${extraClasses}" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(title)}">
+      <a class="time-btn ${extraClasses}" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(title)}${seatInfo(session) ? escapeHtml(` 잔여 ${seatInfo(session).left}석`) : ""}">
+        ${seatBarMarkup(session)}
         <span class="font-schedule-time text-sm leading-none whitespace-nowrap">${escapeHtml(timeText)}</span>
         ${withSubLabel ? `<span class="text-[10px] font-label-caps uppercase whitespace-nowrap">${escapeHtml(subLabel)}</span>` : ""}
       </a>
@@ -1294,7 +1324,9 @@ import { isPastKstSession } from "./src/session-time.mjs";
   }
 
   function agendaMeta(session, venue) {
+    const hasGauge = Boolean(seatInfo(session));
     const values = splitSessionMetaValues(session).filter((value) => {
+      if (hasGauge && seatMeta([value])) return false;
       if (isScreenMeta(value, session, venue) || isAgeMeta(value)) return false;
       if (isSoldoutSession(session) && (value.includes("매진") || value.includes("예매할 수 없습니다"))) return false;
       return true;
@@ -1342,6 +1374,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
               <strong class="block min-w-0 ${compact ? "mobile-row-title" : "text-lg leading-[22px]"} ${titleClass} truncate" title="${escapeHtml(session.title || "")}">${escapeHtml(displayTitle)}</strong>
             </span>
             <span class="${compact ? "mobile-meta mt-1 block break-keep" : "mt-2 block text-sm text-on-surface-variant"}">${escapeHtml(detailMeta)}</span>
+            ${seatInfo(session) ? seatGaugeMarkup(seatInfo(session), compact) : ""}
           </span>
           <span class="${compact ? "ml-auto flex shrink-0 flex-col gap-2" : "flex shrink-0 flex-col items-stretch gap-2"}">
             ${
