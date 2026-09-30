@@ -54,7 +54,8 @@ html.scm-lock, html.scm-lock body { overflow: hidden; }
 }
 .scm-row:hover { background: #f7f3f0; }
 .scm-row.is-empty .scm-row-main strong { font-weight: 500; color: #5f5b53; }
-.scm-row.is-empty .scm-row-time { flex: none; width: 4.4rem; font-size: 24px; font-weight: 900; letter-spacing: -0.05em; font-variant-numeric: tabular-nums; line-height: 1; }
+.scm-row-time { flex: none; width: 4.4rem; font-size: 24px; font-weight: 900; letter-spacing: -0.05em; font-variant-numeric: tabular-nums; line-height: 1; }
+.scm-row.is-empty .scm-row-time { color: #7b776e; }
 .scm-row.is-soon .scm-row-time { color: #e3242b; }
 .scm-row-main { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
 .scm-row-main strong { font-size: 14px; font-weight: 700; }
