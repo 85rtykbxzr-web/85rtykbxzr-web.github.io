@@ -19,6 +19,7 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="서울독립영화관시간표" />
+    <meta name="asset-version" content="0ccb9c6a3227" />
     <meta name="theme-color" content="#fdf8f6" />
     <meta name="application-name" content="서울독립영화관" />
     <meta name="apple-mobile-web-app-title" content="서울독립영화관" />
@@ -37,8 +38,8 @@
         "description": "서울 독립영화관의 오늘 상영시간표, 기획전, 영화제 일정을 날짜별, 영화별, 상영관별로 확인하세요."
       }
     </script>
-    <link href="/assets/app.css?v=6f708182a89e" rel="stylesheet" />
-    <script defer src="/assets/app.js?v=6f708182a89e"></script>
+    <link href="/assets/app.css?v=0ccb9c6a3227" rel="stylesheet" />
+    <script defer src="/assets/app.js?v=0ccb9c6a3227"></script>
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=4" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=4" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=4" />
@@ -61,6 +62,7 @@
         <a class="font-body-md text-sm font-bold text-primary border-b-2 border-primary pb-1 transition-colors" href="#schedule" data-nav-target="schedule" data-nav-kind="desktop">상영시간표</a>
         <a class="font-body-md text-sm text-on-surface-variant hover:text-primary border-b-2 border-transparent pb-1 transition-colors" href="#programs" data-nav-target="programs" data-nav-kind="desktop">프로그램</a>
         <a class="font-body-md text-sm text-on-surface-variant hover:text-primary border-b-2 border-transparent pb-1 transition-colors" href="#festivals" data-nav-target="festivals" data-nav-kind="desktop">영화제</a>
+        <a class="font-body-md text-sm text-on-surface-variant hover:text-primary border-b-2 border-transparent pb-1 transition-colors" href="#map" data-open-map>지도</a>
       </div>
       <div class="flex items-center gap-4">
         <button id="tabletSearchButton" class="hidden md:flex lg:hidden w-10 h-10 items-center justify-center text-primary" type="button" aria-label="검색 열기" aria-controls="tabletSearchPanel" aria-expanded="false">
@@ -260,7 +262,7 @@
       </section>
     </main>
 
-    <nav aria-label="주요 메뉴" class="md:hidden fixed bottom-0 left-0 w-full bg-surface-container-highest/95 backdrop-blur-md border-t border-outline-variant/30 grid grid-cols-3 items-center h-16 z-50">
+    <nav aria-label="주요 메뉴" class="md:hidden fixed bottom-0 left-0 w-full bg-surface-container-highest/95 backdrop-blur-md border-t border-outline-variant/30 grid grid-cols-4 items-center h-16 z-50">
       <a class="min-w-0 w-full h-full flex flex-col items-center justify-center gap-1 text-primary" href="#mobile-schedule" data-nav-target="mobile-schedule" data-nav-kind="mobile">
         <svg class="ui-icon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#calendar-days"></use></svg>
         <span class="text-[10px] font-label-caps uppercase font-bold">시간표</span>
@@ -272,6 +274,10 @@
       <a class="min-w-0 w-full h-full flex flex-col items-center justify-center gap-1 text-on-surface-variant" href="#mobile-festivals" data-nav-target="mobile-festivals" data-nav-kind="mobile">
         <svg class="ui-icon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#tickets"></use></svg>
         <span class="text-[10px] font-label-caps uppercase">영화제</span>
+      </a>
+      <a class="min-w-0 w-full h-full flex flex-col items-center justify-center gap-1 text-on-surface-variant" href="#map" data-open-map>
+        <svg class="ui-icon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#map-pin"></use></svg>
+        <span class="text-[10px] font-label-caps uppercase">지도</span>
       </a>
     </nav>
 

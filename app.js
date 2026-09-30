@@ -1038,6 +1038,69 @@ import { isPastKstSession } from "./src/session-time.mjs";
     setNavActive(activeSectionId());
   }
 
+  let mapAssetsPromise = null;
+
+  function loadMapAssets() {
+    if (window.SeoulCinemaMap) return Promise.resolve();
+    if (mapAssetsPromise) return mapAssetsPromise;
+    const version = document.querySelector('meta[name="asset-version"]')?.content || "";
+    const suffix = /^[A-Za-z0-9._-]+$/.test(version) ? `?v=${version}` : "";
+    mapAssetsPromise = new Promise((resolve, reject) => {
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = `/assets/map.css${suffix}`;
+      document.head.appendChild(link);
+      const script = document.createElement("script");
+      script.src = `/assets/map.js${suffix}`;
+      script.async = true;
+      script.onload = () => (window.SeoulCinemaMap ? resolve() : reject(new Error("map missing")));
+      script.onerror = () => reject(new Error("map load failed"));
+      document.head.appendChild(script);
+    }).catch((error) => {
+      mapAssetsPromise = null;
+      throw error;
+    });
+    return mapAssetsPromise;
+  }
+
+  async function openMapView(pushHash = true) {
+    if (!state.data) {
+      showToast("시간표를 불러온 뒤 열 수 있어요.");
+      return;
+    }
+    if (pushHash && window.location.hash !== "#map") history.pushState(null, "", "#map");
+    try {
+      await loadMapAssets();
+    } catch {
+      showToast("지도를 불러오지 못했어요. 잠시 뒤 다시 시도해 주세요.");
+      return;
+    }
+    window.SeoulCinemaMap.open({
+      venues: state.data.venues || [],
+      sessions: () => state.data?.sessions || [],
+      today: todayScheduleDate,
+      isPast: isPastSession,
+      isSoldout: isSoldoutSession,
+      isFavorite: isFavoriteVenue,
+      toggleFavorite: toggleFavoriteVenue,
+      markSrc: (id) => venueMarkAssets[id] || "",
+      safeImage: safeImageUrl,
+      actionUrl,
+      actionLabel,
+      address: venueAddress,
+      naverUrl: naverMapUrl,
+      closedDay: (venue) => venueClosedDays[venue?.id] || "상영일 운영",
+      toast: showToast,
+      jumpToVenue: (id) => {
+        if (window.location.hash === "#map") history.replaceState(null, "", "#schedule");
+        jumpToVenueSchedule(id);
+      },
+      onClose: () => {
+        if (window.location.hash === "#map") history.replaceState(null, "", window.location.pathname + window.location.search);
+      }
+    });
+  }
+
   function scrollToSection(id, behavior = "smooth") {
     const target = document.getElementById(id);
     if (!target) return false;
@@ -2860,6 +2923,13 @@ import { isPastKstSession } from "./src/session-time.mjs";
   function syncInitialHashScroll() {
     if (!window.location.hash) return;
     const hash = window.location.hash;
+    if (hash === "#map") {
+      if (state.hashSyncKey !== hash) {
+        state.hashSyncKey = hash;
+        openMapView(false);
+      }
+      return;
+    }
     // Key on the hash only (not data size) so a background data refresh does not
     // re-trigger an auto-scroll and yank the user back to the anchor. A real hash
     // change resets hashSyncKey via the hashchange handler, so navigation still scrolls.
@@ -3020,6 +3090,13 @@ import { isPastKstSession } from "./src/session-time.mjs";
         event.stopPropagation();
       }
 
+      const mapLink = event.target.closest("[data-open-map]");
+      if (mapLink) {
+        event.preventDefault();
+        openMapView();
+        return;
+      }
+
       const navLink = event.target.closest("[data-nav-target]");
       if (navLink) {
         const targetId = navLink.dataset.navTarget;
@@ -3072,6 +3149,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
     });
 
     window.addEventListener("hashchange", () => {
+      if (window.location.hash !== "#map") window.SeoulCinemaMap?.close();
       state.hashSyncKey = "";
       window.setTimeout(syncInitialHashScroll, 0);
       window.setTimeout(syncInitialHashScroll, 300);
