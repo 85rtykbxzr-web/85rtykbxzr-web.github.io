@@ -274,7 +274,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
     }
 
     return `
-      <img class="${maxClass} object-contain" src="${escapeHtml(source)}" alt="${escapeHtml(item.name)} 로고" width="${compact ? 86 : 126}" height="${compact ? 28 : 40}" loading="lazy" decoding="async" />
+      <img class="venue-mark ${maxClass} object-contain" src="${escapeHtml(source)}" alt="${escapeHtml(item.name)} 로고" width="${compact ? 86 : 126}" height="${compact ? 28 : 40}" loading="lazy" decoding="async" />
     `;
   }
 
@@ -744,10 +744,10 @@ import { isPastKstSession } from "./src/session-time.mjs";
   }
 
   function ageClass(label) {
-    if (label === "FEST") return "bg-error text-white";
+    if (label === "FEST") return "bg-badge-fest text-white";
     if (label === "GV") return "bg-primary text-surface";
-    if (label === "19") return "bg-major-festival text-white";
-    if (label === "15") return "bg-tertiary text-white";
+    if (label === "19") return "bg-badge-19 text-white";
+    if (label === "15") return "bg-badge-15 text-white";
     if (label === "12") return "bg-rating-12 text-white";
     if (label === "INFO") return "bg-outline-variant text-primary";
     return "bg-rating-all text-white";
@@ -1066,6 +1066,32 @@ import { isPastKstSession } from "./src/session-time.mjs";
 
   function updateNavActive() {
     setNavActive(activeSectionId());
+  }
+
+  function currentTheme() {
+    const chosen = document.documentElement.dataset.theme;
+    if (chosen === "light" || chosen === "dark") return chosen;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+  }
+
+  function syncThemeControls() {
+    const dark = currentTheme() === "dark";
+    document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
+      button.setAttribute("aria-pressed", String(dark));
+      button.setAttribute("aria-label", dark ? "야간 모드 끄기" : "야간 모드 켜기");
+    });
+    document.querySelector('meta[name="theme-color"]')?.setAttribute("content", dark ? "#141312" : "#fdf8f6");
+  }
+
+  function toggleTheme() {
+    const next = currentTheme() === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = next;
+    try {
+      localStorage.setItem("theme", next);
+    } catch {
+      // Not persisted; the choice still applies to this page view.
+    }
+    syncThemeControls();
   }
 
   let mapAssetsPromise = null;
@@ -2793,6 +2819,35 @@ import { isPastKstSession } from "./src/session-time.mjs";
     return choices;
   }
 
+  function trendVenueLinksMarkup(item, compact = false) {
+    const choices = trendSessionChoices(item, 2);
+    if (!choices.length) {
+      return `<p class="${compact ? "mobile-meta mt-2" : "mt-3 text-sm text-on-surface-variant"}">${escapeHtml(trendMetaText(item))}</p>`;
+    }
+    return `
+      <div class="${compact ? "mt-3 grid gap-2" : "mt-4 grid gap-2"}">
+        ${choices
+          .map(
+            (choice) =>
+              compact
+                ? `
+              <a class="flex min-w-0 flex-col gap-1 border border-primary/10 px-3 py-2 text-primary active:bg-primary active:text-surface" href="${escapeHref(choice.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${choice.venueName} ${choice.timeLabel} 예매`)}">
+                <span class="truncate text-[12px] font-bold">${escapeHtml(choice.venueName)}</span>
+                <span class="text-[10px] font-medium text-on-surface-variant">${escapeHtml(choice.timeLabel)}</span>
+              </a>
+            `
+                : `
+              <a class="flex min-w-0 items-center justify-between gap-3 border border-primary/15 px-3 py-2 text-sm font-bold text-primary transition-colors hover:bg-primary hover:text-surface" href="${escapeHref(choice.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${choice.venueName} ${choice.timeLabel} 예매`)}">
+                <span class="min-w-0 truncate">${escapeHtml(choice.venueName)}</span>
+                <span class="shrink-0 text-xs font-medium">${escapeHtml(choice.timeLabel)}</span>
+              </a>
+            `
+          )
+          .join("")}
+      </div>
+    `;
+  }
+
   function trendPosterLinkMarkup(item, className, imageClassName, priority = false) {
     const trailerUrl = trendTrailerUrl(item);
     const posterItem = { posterUrl: item.posterUrl, posterSourceUrl: item.posterSourceUrl };
@@ -2803,44 +2858,28 @@ import { isPastKstSession } from "./src/session-time.mjs";
     `;
   }
 
-  function pickLinksMarkup(item) {
-    const choices = trendSessionChoices(item, 2);
-    if (!choices.length) return `<p class="pick-meta">${escapeHtml(trendMetaText(item))}</p>`;
-    return `<div class="pick-links">${choices
-      .map(
-        (choice) =>
-          `<a class="pick-link" href="${escapeHref(choice.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${choice.venueName} ${choice.timeLabel} 예매`)}"><span class="pick-link-venue">${escapeHtml(choice.venueName)}</span><span class="pick-link-time">${escapeHtml(choice.timeLabel)}</span></a>`
-      )
-      .join("")}</div>`;
-  }
+  function trendCardMarkup(item, compact = false, priority = false) {
+    if (compact) {
+      return `
+        <article class="grid w-[calc(100vw-4rem)] max-w-[19rem] shrink-0 snap-start grid-cols-[5.5rem_minmax(0,1fr)] gap-3 border border-outline-variant/20 bg-surface-container-lowest p-4">
+          ${trendPosterLinkMarkup(item, "relative block aspect-[2/3] w-full overflow-hidden bg-primary/5", "h-full w-full object-cover", priority)}
+          <div class="flex min-w-0 flex-col justify-start">
+            <span class="mb-1 text-[19px] font-black leading-none text-primary">${escapeHtml(trendRankText(item))}</span>
+            <strong class="mobile-row-title line-clamp-2">${escapeHtml(item.title)}</strong>
+            ${trendVenueLinksMarkup(item, true)}
+          </div>
+        </article>
+      `;
+    }
 
-  function pickHeroMarkup(item, priority) {
     return `
-      <article class="pick-hero">
-        ${trendPosterLinkMarkup(item, "pick-poster pick-poster-hero", "h-full w-full object-cover", priority)}
-        <div class="pick-hero-body">
-          <span class="pick-num pick-num-xl">${escapeHtml(trendRankText(item))}</span>
-          <h3 class="pick-hero-title">${escapeHtml(item.title)}</h3>
-          ${pickLinksMarkup(item)}
-        </div>
-      </article>`;
-  }
-
-  function pickItemMarkup(item) {
-    return `
-      <li class="pick-item">
-        <span class="pick-num">${escapeHtml(trendRankText(item))}</span>
-        ${trendPosterLinkMarkup(item, "pick-poster pick-poster-sm", "h-full w-full object-cover")}
-        <div class="pick-item-body">
-          <h3 class="pick-item-title">${escapeHtml(item.title)}</h3>
-          ${pickLinksMarkup(item)}
-        </div>
-      </li>`;
-  }
-
-  function pickBandMarkup(items) {
-    const [hero, ...rest] = items;
-    return `<div class="pick-grid">${pickHeroMarkup(hero, true)}${rest.length ? `<ol class="pick-list">${rest.map(pickItemMarkup).join("")}</ol>` : ""}</div>`;
+      <article class="group flex min-h-52 flex-col border border-primary/10 bg-surface p-4">
+        ${trendPosterLinkMarkup(item, "relative mx-auto mb-5 block aspect-[2/3] w-full max-w-[13rem] overflow-hidden bg-primary/5", "h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]", priority)}
+        <span class="mb-2 block text-[22px] font-black leading-none text-primary">${escapeHtml(trendRankText(item))}</span>
+        <h3 class="line-clamp-2 text-lg font-bold leading-snug">${escapeHtml(item.title)}</h3>
+        ${trendVenueLinksMarkup(item)}
+      </article>
+    `;
   }
 
   function renderPopularPicks() {
@@ -2866,7 +2905,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
       element.classList.add("hidden");
     });
     if (activeList) {
-      activeList.innerHTML = active && items.length ? pickBandMarkup(items) : "";
+      activeList.innerHTML = active && items.length ? items.map((item, index) => trendCardMarkup(item, mobileLayout, index === 0)).join("") : "";
     }
   }
 
@@ -3095,6 +3134,11 @@ import { isPastKstSession } from "./src/session-time.mjs";
         event.stopPropagation();
       }
 
+      if (event.target.closest("[data-theme-toggle]")) {
+        toggleTheme();
+        return;
+      }
+
       const mapLink = event.target.closest("[data-open-map]");
       if (mapLink) {
         event.preventDefault();
@@ -3217,6 +3261,8 @@ import { isPastKstSession } from "./src/session-time.mjs";
 
   async function init() {
     bindEvents();
+    syncThemeControls();
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", syncThemeControls);
     try {
       state.favoriteVenueIds = loadFavoriteVenueIds();
       const [scheduleData] = await Promise.all([loadData(), loadCommunityTrends()]);
