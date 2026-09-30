@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-01",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-09-30T15:10:13.368Z",
+  "updatedAt": "2026-09-30T18:16:05.969Z",
   "days": {
     "2026-09-29": {
       "25시": {
@@ -293,6 +293,127 @@
         ]
       }
     },
-    "2026-10-01": {}
+    "2026-10-01": {
+      "베크마이스터하모니즈": {
+        "title": "베크마이스터 하모니즈",
+        "positiveSignal": 4,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "토리노의 말 vs 베크마이스터 하모니즈 둘 중 뭘 볼까요?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866576&page=1",
+            "date": "2026-10-01",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "재밌",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 1,
+            "commentPositive": 4,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "사탄탱고": {
+        "title": "사탄탱고(기획전)",
+        "positiveSignal": 2,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "토리노의말은 드르렁이 아니던데",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866484&page=2",
+            "date": "2026-10-01",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "볼만",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "토리노의말": {
+        "title": "토리노의 말",
+        "positiveSignal": 12,
+        "mentionCount": 2,
+        "evidence": [
+          {
+            "title": "토리노의말은 드르렁이 아니던데",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866484&page=2",
+            "date": "2026-10-01",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "볼만",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "토리노의 말 보다 결국 1시간은 잔듯 ㅋㅋ",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866476&page=2",
+            "date": "2026-10-01",
+            "positive": 10,
+            "rawPositive": 10,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "강추",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 7,
+            "commentPositive": 10,
+            "commentNegative": 0
+          }
+        ]
+      }
+    }
   }
 }
