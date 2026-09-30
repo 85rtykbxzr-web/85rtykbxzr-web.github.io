@@ -80,7 +80,7 @@ const securityHeaders = {
   // plain-HTTP/localhost responses, so it is safe to send unconditionally.
   "strict-transport-security": "max-age=31536000; includeSubDomains",
   "referrer-policy": "strict-origin-when-cross-origin",
-  "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+  "permissions-policy": "camera=(), microphone=(), geolocation=(self), payment=(), usb=()",
   "content-security-policy": [
     "default-src 'self'",
     "script-src 'self' 'sha256-urg7e3GLu2OmmcC/P19X7mQgt0AhIRQJw+h637P88S0=' https://www.googletagmanager.com",
@@ -570,7 +570,9 @@ function isPublicAssetPath(pathname) {
     "/data/community-trends.json",
     "/data/source-health.json",
     "/assets/app.css",
-    "/assets/app.js"
+    "/assets/app.js",
+    "/assets/map.css",
+    "/assets/map.js"
   ].includes(path)) {
     return true;
   }
@@ -597,7 +599,7 @@ function rawRequestPathname(url = "/") {
 function staticCacheControl(publicFilePath, requestUrl = "") {
   if (publicFilePath.startsWith("/data/")) return "no-cache, must-revalidate";
   const versioned = /(?:\?|&)v=[A-Za-z0-9._-]+(?:&|$)/.test(String(requestUrl));
-  if (versioned && ["/assets/app.css", "/assets/app.js"].includes(publicFilePath)) {
+  if (versioned && ["/assets/app.css", "/assets/app.js", "/assets/map.css", "/assets/map.js"].includes(publicFilePath)) {
     return "public, max-age=31536000, immutable";
   }
   if (publicFilePath.startsWith("/assets/")) return "public, max-age=86400, stale-while-revalidate=604800";
