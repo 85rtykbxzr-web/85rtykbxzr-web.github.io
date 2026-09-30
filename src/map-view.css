@@ -130,3 +130,5 @@ html.scm-lock, html.scm-lock body { overflow: hidden; }
   .scm-root .leaflet-control-zoom { display: none; }
 }
 @media (prefers-reduced-motion: reduce) { .scm-root * { transition: none !important; } }
+
+.scm-sr { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

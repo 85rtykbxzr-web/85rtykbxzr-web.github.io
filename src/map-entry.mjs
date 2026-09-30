@@ -1,3 +1,3 @@
-import { openMap, closeMap } from "./map-view.mjs";
+import { openMap, closeMap, refreshMap } from "./map-view.mjs";
 
-window.SeoulCinemaMap = { open: openMap, close: closeMap };
+window.SeoulCinemaMap = { open: openMap, close: closeMap, refresh: refreshMap };
