@@ -37,8 +37,8 @@
         "description": "서울 독립영화관의 오늘 상영시간표, 기획전, 영화제 일정을 날짜별, 영화별, 상영관별로 확인하세요."
       }
     </script>
-    <link href="/assets/app.css?v=cbe4aa23dfce" rel="stylesheet" />
-    <script defer src="/assets/app.js?v=cbe4aa23dfce"></script>
+    <link href="/assets/app.css?v=e8f171745760" rel="stylesheet" />
+    <script defer src="/assets/app.js?v=e8f171745760"></script>
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=4" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=4" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=4" />
@@ -109,15 +109,15 @@
           </div>
         </div>
 
-        <section class="hidden mb-12 text-primary" id="popular">
-          <div class="mb-8 flex items-end justify-between gap-4 border-b border-primary/10 pb-6">
+        <section class="pick-band hidden mb-12" id="popular" aria-labelledby="popularTitle">
+          <div class="pick-head">
             <div>
-              <p class="mb-2 text-[11px] font-bold uppercase text-primary">Weekly Pick</p>
-              <h2 class="text-3xl font-bold font-display-lg">이번 주 추천</h2>
+              <p class="pick-kicker">Weekly Pick</p>
+              <h2 class="pick-heading" id="popularTitle">이번 주 추천</h2>
             </div>
-            <span class="text-xs text-on-surface-variant" id="popularUpdatedAt"></span>
+            <span class="pick-sub" id="popularUpdatedAt"></span>
           </div>
-          <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4" id="popularList"></div>
+          <div id="popularList"></div>
         </section>
 
         <div class="mb-8">
@@ -223,15 +223,15 @@
           <button class="min-w-0 w-full py-2 text-center text-label-caps uppercase text-on-surface-variant" id="view-movie" type="button" data-view="film" data-toggle-style="mobile" aria-pressed="false">영화</button>
           <button class="min-w-0 w-full py-2 text-center text-label-caps uppercase text-on-surface-variant" id="view-theater" type="button" data-view="venue" data-toggle-style="mobile" aria-pressed="false">상영관</button>
         </div>
-        <section class="hidden" id="mobile-popular">
-          <div class="border-b border-outline-variant/20 pb-3 mb-4">
-            <p class="mobile-kicker mb-1 text-primary">Weekly Pick</p>
-            <div class="flex items-center justify-between gap-3">
-              <h2 class="mobile-section-title text-on-surface">이번 주 추천</h2>
-              <span class="mobile-kicker text-on-surface-variant" id="mobilePopularUpdatedAt"></span>
+        <section class="pick-band pick-band-mobile hidden" id="mobile-popular" aria-labelledby="mobilePopularTitle">
+          <div class="pick-head">
+            <div>
+              <p class="pick-kicker">Weekly Pick</p>
+              <h2 class="pick-heading" id="mobilePopularTitle">이번 주 추천</h2>
             </div>
+            <span class="pick-sub" id="mobilePopularUpdatedAt"></span>
           </div>
-          <div class="flex gap-3 overflow-x-auto no-scrollbar snap-x snap-proximity pb-1" id="mobilePopularList" aria-label="이번 주 추천 작품"></div>
+          <div id="mobilePopularList" aria-label="이번 주 추천 작품"></div>
         </section>
         <div>
           <div class="mb-2 flex items-center justify-between text-xs">
