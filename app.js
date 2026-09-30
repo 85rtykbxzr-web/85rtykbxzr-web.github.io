@@ -2803,44 +2803,26 @@ import { isPastKstSession } from "./src/session-time.mjs";
     `;
   }
 
-  function pickLinksMarkup(item) {
-    const choices = trendSessionChoices(item, 2);
-    if (!choices.length) return `<p class="pick-meta">${escapeHtml(trendMetaText(item))}</p>`;
-    return `<div class="pick-links">${choices
-      .map(
-        (choice) =>
-          `<a class="pick-link" href="${escapeHref(choice.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${choice.venueName} ${choice.timeLabel} 예매`)}"><span class="pick-link-venue">${escapeHtml(choice.venueName)}</span><span class="pick-link-time">${escapeHtml(choice.timeLabel)}</span></a>`
-      )
-      .join("")}</div>`;
-  }
-
-  function pickHeroMarkup(item, priority) {
+  function pickCardMarkup(item, index) {
+    const [first, ...others] = trendSessionChoices(item, 3);
+    const when = first
+      ? `<a class="pick-when" href="${escapeHref(first.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${item.title} ${first.venueName} ${first.timeLabel} 예매`)}"><span class="pick-when-time">${escapeHtml(first.timeLabel)}</span> ${escapeHtml(first.venueName)}</a>`
+      : `<span class="pick-when">${escapeHtml(trendMetaText(item))}</span>`;
+    const more = others.length
+      ? `<span class="pick-more">${escapeHtml(others.map((choice) => `${choice.venueName} ${choice.timeLabel.replace(/^오늘\s*/, "")}`).join(" · "))}</span>`
+      : "";
     return `
-      <article class="pick-hero">
-        ${trendPosterLinkMarkup(item, "pick-poster pick-poster-hero", "h-full w-full object-cover", priority)}
-        <div class="pick-hero-body">
-          <span class="pick-num pick-num-xl">${escapeHtml(trendRankText(item))}</span>
-          <h3 class="pick-hero-title">${escapeHtml(item.title)}</h3>
-          ${pickLinksMarkup(item)}
-        </div>
-      </article>`;
-  }
-
-  function pickItemMarkup(item) {
-    return `
-      <li class="pick-item">
-        <span class="pick-num">${escapeHtml(trendRankText(item))}</span>
-        ${trendPosterLinkMarkup(item, "pick-poster pick-poster-sm", "h-full w-full object-cover")}
-        <div class="pick-item-body">
-          <h3 class="pick-item-title">${escapeHtml(item.title)}</h3>
-          ${pickLinksMarkup(item)}
-        </div>
+      <li class="pick-card">
+        ${trendPosterLinkMarkup(item, "pick-poster", "h-full w-full object-cover", index === 0)}
+        <span class="pick-rank${index === 0 ? " is-top" : ""}">${escapeHtml(trendRankText(item))}</span>
+        <h3 class="pick-title">${escapeHtml(item.title)}</h3>
+        ${when}
+        ${more}
       </li>`;
   }
 
   function pickBandMarkup(items) {
-    const [hero, ...rest] = items;
-    return `<div class="pick-grid">${pickHeroMarkup(hero, true)}${rest.length ? `<ol class="pick-list">${rest.map(pickItemMarkup).join("")}</ol>` : ""}</div>`;
+    return `<ol class="pick-row">${items.map(pickCardMarkup).join("")}</ol>`;
   }
 
   function renderPopularPicks() {
