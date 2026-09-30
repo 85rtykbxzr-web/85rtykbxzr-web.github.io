@@ -7,9 +7,14 @@ const CLUSTER_RADIUS_PX = 52;
 const TILE_URL = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
 const RANGES = [
   { id: "today", label: "오늘" },
-  { id: "tomorrow", label: "내일" },
-  { id: "week", label: "일주일" }
+  { id: "soon", label: "지금 시작" },
+  { id: "night", label: "오늘 밤" },
+  { id: "weekend", label: "주말" }
 ];
+const SOON_WINDOW_MIN = 120;
+const NIGHT_FROM_MIN = 18 * 60;
+const TAG_SOON_MIN = 90;
+const WEEKDAYS = ["일", "월", "화", "수", "목", "금", "토"];
 const GV_PATTERN = /GV|관객과의\s*대화|씨네토크|시네토크|인디토크|토크|무대인사/i;
 
 let active = null;
@@ -48,6 +53,38 @@ function isGv(session) {
   );
 }
 
+function kstNow() {
+  const parts = Object.fromEntries(
+    new Intl.DateTimeFormat("en-GB", {
+      timeZone: "Asia/Seoul",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      hourCycle: "h23"
+    })
+      .formatToParts(new Date())
+      .map((part) => [part.type, part.value])
+  );
+  return { date: `${parts.year}-${parts.month}-${parts.day}`, minutes: Number(parts.hour) * 60 + Number(parts.minute) };
+}
+
+function startMinutes(session) {
+  const match = /(\d{1,2}):(\d{2})/.exec(session.time || "");
+  return match ? Number(match[1]) * 60 + Number(match[2]) : null;
+}
+
+function weekdayOf(dateString) {
+  const [y, m, d] = dateString.split("-").map(Number);
+  return new Date(Date.UTC(y, m - 1, d)).getUTCDay();
+}
+
+// Rough door-to-door estimate from straight-line distance; deliberately labelled "약" in the UI.
+function travelMinutes(km) {
+  return Math.round(12 + km * 4);
+}
+
 function shortDate(dateString) {
   return `${dateString.slice(5, 7)}.${dateString.slice(8, 10)}`;
 }
@@ -58,6 +95,7 @@ export function openMap(ctx) {
 
   const state = {
     range: "today",
+    reachable: false,
     bookable: false,
     gv: false,
     favorites: false,
@@ -120,15 +158,31 @@ export function openMap(ctx) {
   let userMarker = null;
 
   // ---- data ---------------------------------------------------------------
-  function visibleSessions() {
-    const today = ctx.today();
-    const from = state.range === "tomorrow" ? addDays(today, 1) : today;
-    const to = state.range === "today" ? today : state.range === "tomorrow" ? from : addDays(today, 6);
+  function inRange(session, now) {
+    const today = now.date;
+    const start = startMinutes(session);
+    if (state.range === "weekend") {
+      const last = addDays(today, 6);
+      const day = weekdayOf(session.date);
+      return session.date >= today && session.date <= last && (day === 0 || day === 6);
+    }
+    if (session.date !== today) return false;
+    if (state.range === "soon") return start != null && start >= now.minutes && start <= now.minutes + SOON_WINDOW_MIN;
+    if (state.range === "night") return start != null && start >= NIGHT_FROM_MIN;
+    return true;
+  }
+
+  function visibleSessions(venueId) {
+    const now = kstNow();
     return ctx.sessions().filter((session) => {
-      if (!session.date || session.date < from || session.date > to) return false;
-      if (ctx.isPast(session)) return false;
+      if (!session.date || ctx.isPast(session) || !inRange(session, now)) return false;
       if (state.bookable && ctx.isSoldout(session)) return false;
       if (state.gv && !isGv(session)) return false;
+      if (state.reachable && state.user && session.date === now.date) {
+        const venue = venues.find((item) => item.id === session.venueId);
+        const start = startMinutes(session);
+        if (venue && start != null && start < now.minutes + travelMinutes(distanceKm(state.user, venue.coords))) return false;
+      }
       return true;
     });
   }
@@ -157,17 +211,29 @@ export function openMap(ctx) {
   }
 
   // ---- markers ------------------------------------------------------------
+  function nextLabel(entry) {
+    const next = entry.sessions[0];
+    if (!next) return "";
+    const now = kstNow();
+    return next.date === now.date ? next.time || "" : `${WEEKDAYS[weekdayOf(next.date)]} ${next.time || ""}`;
+  }
+
+  function isSoon(entry) {
+    const next = entry.sessions[0];
+    const start = next && startMinutes(next);
+    const now = kstNow();
+    return Boolean(next && next.date === now.date && start != null && start >= now.minutes && start - now.minutes <= TAG_SOON_MIN);
+  }
+
   function pinHtml(entry, selected) {
     const { venue } = entry;
-    const classes = ["scm-pin"];
+    const classes = ["scm-tag"];
     if (!entry.filmCount) classes.push("is-empty");
+    if (isSoon(entry)) classes.push("is-soon");
     if (ctx.isFavorite(venue.id)) classes.push("is-fav");
     if (selected) classes.push("is-selected");
-    const badge = entry.filmCount ? `<span class="scm-pin-badge">${entry.filmCount}편</span>` : "";
-    return `<div class="${classes.join(" ")}">
-      <span class="scm-pin-logo"><b>${esc((venue.name || "?").slice(0, 1))}</b></span>
-      <span class="scm-pin-name">${esc(venue.name)}</span>${badge}
-    </div>`;
+    const time = entry.filmCount ? `<b class="scm-tag-time">${esc(nextLabel(entry))}</b>` : `<b class="scm-tag-time">—</b>`;
+    return `<div class="${classes.join(" ")}">${time}<span class="scm-tag-name">${esc(venue.name)}</span></div>`;
   }
 
   function clusterEntries(entries) {
@@ -194,7 +260,7 @@ export function openMap(ctx) {
             html: pinHtml(entry, entry.venue.id === state.selected),
             iconSize: [0, 0]
           }),
-          title: `${entry.venue.name} · ${entry.filmCount}편`,
+          title: `${entry.venue.name} · ${entry.filmCount ? `다음 ${nextLabel(entry)} · ${entry.filmCount}편` : "상영 없음"}`,
           alt: entry.venue.name,
           keyboard: true,
           zIndexOffset: entry.venue.id === state.selected ? 1000 : entry.filmCount
@@ -209,7 +275,7 @@ export function openMap(ctx) {
       const marker = L.marker([lat, lng], {
         icon: L.divIcon({
           className: "scm-pin-host",
-          html: `<div class="scm-cluster"><b>${cluster.members.length}관</b><span>${films}편</span></div>`,
+          html: `<div class="scm-cluster"><b>${cluster.members.length}</b><span>관 · ${films}편</span></div>`,
           iconSize: [0, 0]
         }),
         title: `영화관 ${cluster.members.length}곳 · 확대해서 보기`,
@@ -233,7 +299,7 @@ export function openMap(ctx) {
     ).join("");
     const toggle = (key, label) =>
       `<button type="button" class="scm-chip${state[key] ? " is-on" : ""}" data-toggle="${key}" aria-pressed="${state[key]}">${label}</button>`;
-    $("#scmChips").innerHTML = `${rangeButtons}<span class="scm-chip-gap" aria-hidden="true"></span>${toggle("bookable", "예매 가능")}${toggle("gv", "GV·토크")}${toggle("favorites", "즐겨찾기")}
+    $("#scmChips").innerHTML = `${rangeButtons}<span class="scm-chip-gap" aria-hidden="true"></span>${state.user ? toggle("reachable", "갈 수 있는 회차만") : ""}${toggle("bookable", "예매 가능")}${toggle("gv", "GV·토크")}${toggle("favorites", "즐겨찾기")}
       <button type="button" class="scm-chip scm-locate${state.user ? " is-on" : ""}" data-locate ${state.locating ? "disabled" : ""}>${state.locating ? "찾는 중…" : state.user ? "내 위치 ✓" : "내 위치"}</button>`;
   }
 
@@ -244,21 +310,20 @@ export function openMap(ctx) {
     });
     const rows = sorted
       .map((entry) => {
-        const next = entry.sessions[0];
-        const logo = ctx.markSrc(entry.venue.id);
-        return `<li><button type="button" class="scm-row${entry.filmCount ? "" : " is-empty"}" data-venue="${esc(entry.venue.id)}">
-          <span class="scm-row-logo">${logo ? `<img src="${esc(logo)}" alt="" width="36" height="36" loading="lazy" decoding="async" />` : ""}</span>
+        const travel = entry.distance != null ? `이동 약 ${travelMinutes(entry.distance)}분 · ${formatDistance(entry.distance)}` : "";
+        return `<li><button type="button" class="scm-row${entry.filmCount ? "" : " is-empty"}${isSoon(entry) ? " is-soon" : ""}" data-venue="${esc(entry.venue.id)}">
+          <span class="scm-row-time">${entry.filmCount ? esc(nextLabel(entry)) : "—"}</span>
           <span class="scm-row-main">
             <strong>${esc(entry.venue.name)}</strong>
-            <small>${esc(entry.venue.area || "")}${entry.distance != null ? ` · ${formatDistance(entry.distance)}` : ""}${next ? ` · 다음 ${esc(next.date === ctx.today() ? "" : shortDate(next.date) + " ")}${esc(next.time || "")}` : ""}</small>
+            <small>${esc([entry.venue.area, travel].filter(Boolean).join(" · "))}</small>
           </span>
           <span class="scm-row-count">${entry.filmCount ? `<b>${entry.filmCount}</b>편` : "없음"}</span>
         </button></li>`;
       })
       .join("");
     const totalFilms = new Set(entries.flatMap((entry) => entry.sessions.map((s) => s.title))).size;
-    return `<div class="scm-panel-head"><h3>영화관 ${entries.length}곳</h3><p>${totalFilms}편 상영${state.user ? " · 가까운 순" : ""}</p></div>
-      ${!state.user ? `<p class="scm-hint">‘내 위치’를 누르면 가까운 영화관 순으로 정렬돼요. 위치는 이 기기 안에서만 쓰고 저장하거나 전송하지 않아요.</p>` : ""}
+    return `<div class="scm-panel-head"><h3>영화관 ${entries.length}곳</h3><p>${totalFilms}편 상영${state.user ? " · 가까운 순" : ""}${state.range === "soon" ? " · 2시간 안에 시작" : ""}</p></div>
+      ${!state.user ? `<p class="scm-hint">‘내 위치’를 누르면 가까운 순으로 정렬하고, 지금 출발해서 볼 수 있는 회차만 추릴 수 있어요. 위치는 이 기기 안에서만 쓰고 저장하거나 전송하지 않아요.</p>` : ""}
       <ul class="scm-list">${rows || `<li class="scm-empty">조건에 맞는 영화관이 없어요.</li>`}</ul>`;
   }
 
@@ -294,7 +359,7 @@ export function openMap(ctx) {
       <div class="scm-detail-head">
         <h3>${esc(venue.name)}</h3>
         <p>${esc(ctx.closedDay(venue))} · <a href="${esc(ctx.naverUrl(venue))}" target="_blank" rel="noopener noreferrer">${esc(ctx.address(venue))}</a></p>
-        ${entry.distance != null ? `<p class="scm-dist">내 위치에서 약 ${formatDistance(entry.distance)}</p>` : ""}
+        ${entry.distance != null ? `<p class="scm-dist">내 위치에서 이동 약 ${travelMinutes(entry.distance)}분 · ${formatDistance(entry.distance)} (직선거리 기준 추정)</p>` : ""}
         <div class="scm-actions">
           <a class="scm-btn" href="${esc(ctx.naverUrl(venue))}" target="_blank" rel="noopener noreferrer">네이버 지도</a>
           ${venue.url ? `<a class="scm-btn" href="${esc(venue.url)}" target="_blank" rel="noopener noreferrer">공식 사이트</a>` : ""}
