@@ -603,7 +603,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
       if (!notice) {
         notice = document.createElement("div");
         notice.id = `${id}LiveStatus`;
-        notice.className = `border border-primary/10 bg-surface p-4 text-sm text-on-surface-variant${id === "mobile" ? " mx-6" : ""}`;
+        notice.className = `border border-primary/10 bg-surface-container-lowest p-4 text-sm text-on-surface-variant${id === "mobile" ? " mx-6" : ""}`;
         notice.setAttribute("role", "status");
         notice.setAttribute("aria-live", "polite");
         document.getElementById(`${id}Schedule`).before(notice);
@@ -1650,7 +1650,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
     target.parentElement?.classList.toggle("hidden", !items.length);
     const tileClass = compact
       ? "group flex h-24 w-32 flex-col items-center justify-between border bg-surface-container-lowest px-2 py-2 text-center text-primary transition-colors active:bg-primary/5"
-      : "group flex min-h-28 w-full min-w-0 flex-col items-center justify-between border bg-surface px-3 py-3 text-center text-primary transition-colors hover:border-primary/30 hover:bg-primary/5";
+      : "group flex min-h-28 w-full min-w-0 flex-col items-center justify-between border bg-surface-container-lowest px-3 py-3 text-center text-primary transition-colors hover:border-primary/30 hover:bg-primary/5";
     target.innerHTML = items
       .map((item) => {
         const itemName = item.displayName || item.name;
@@ -2210,7 +2210,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
         const lifecycle = programLifecycle(program);
         const programUrl = safeExternalUrl(program.url, "#");
         return `
-          <a class="group flex h-full cursor-pointer flex-col rounded-sm border border-primary/10 bg-surface p-4 transition-colors hover:border-primary/30" href="${escapeHtml(programUrl)}" target="_blank" rel="noopener noreferrer">
+          <a class="group flex h-full cursor-pointer flex-col rounded-sm border border-primary/10 bg-surface-container-lowest p-4 transition-colors hover:border-primary/30" href="${escapeHtml(programUrl)}" target="_blank" rel="noopener noreferrer">
             <div class="aspect-video bg-surface/10 mb-6 overflow-hidden">
               ${posterMarkup(program, program.title, "w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]", "")}
             </div>
@@ -2810,7 +2810,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
     }
 
     return `
-      <article class="group flex min-h-52 flex-col border border-primary/10 bg-surface p-4">
+      <article class="group flex min-h-52 flex-col border border-primary/10 bg-surface-container-lowest p-4">
         ${trendPosterLinkMarkup(item, "relative mx-auto mb-5 block aspect-[2/3] w-full max-w-[13rem] overflow-hidden bg-primary/5", "h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]", priority)}
         <span class="mb-2 block text-[22px] font-black leading-none text-primary">${escapeHtml(trendRankText(item))}</span>
         <h3 class="line-clamp-2 text-lg font-bold leading-snug">${escapeHtml(item.title)}</h3>

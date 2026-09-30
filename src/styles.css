@@ -70,15 +70,15 @@
     --rgb-background: 20 19 18;
     --rgb-primary: 240 235 229;
     --rgb-surface: 20 19 18;
-    --rgb-surface-container-lowest: 27 25 24;
-    --rgb-surface-container-low: 26 24 23;
-    --rgb-surface-container: 33 31 29;
-    --rgb-surface-container-high: 41 38 36;
-    --rgb-surface-container-highest: 49 45 42;
+    --rgb-surface-container-lowest: 38 36 34;
+    --rgb-surface-container-low: 30 28 27;
+    --rgb-surface-container: 44 41 39;
+    --rgb-surface-container-high: 52 49 46;
+    --rgb-surface-container-highest: 60 56 53;
     --rgb-on-surface: 240 235 229;
     --rgb-on-surface-variant: 186 179 168;
     --rgb-outline: 143 136 126;
-    --rgb-outline-variant: 64 59 54;
+    --rgb-outline-variant: 72 67 61;
     --rgb-tertiary: 227 154 112;
     --rgb-status-active: 114 188 178;
     --rgb-error: 255 122 114;
@@ -87,7 +87,7 @@
     --rgb-rating-all: 31 145 80;
     --rgb-primary-fixed: 59 53 44;
     --rgb-warm-white: 255 250 247;
-    --rgb-badge-19: 72 66 60;
+    --rgb-badge-19: 82 75 69;
   }
 }
 
@@ -96,15 +96,15 @@
   --rgb-background: 20 19 18;
   --rgb-primary: 240 235 229;
   --rgb-surface: 20 19 18;
-  --rgb-surface-container-lowest: 27 25 24;
-  --rgb-surface-container-low: 26 24 23;
-  --rgb-surface-container: 33 31 29;
-  --rgb-surface-container-high: 41 38 36;
-  --rgb-surface-container-highest: 49 45 42;
+  --rgb-surface-container-lowest: 38 36 34;
+  --rgb-surface-container-low: 30 28 27;
+  --rgb-surface-container: 44 41 39;
+  --rgb-surface-container-high: 52 49 46;
+  --rgb-surface-container-highest: 60 56 53;
   --rgb-on-surface: 240 235 229;
   --rgb-on-surface-variant: 186 179 168;
   --rgb-outline: 143 136 126;
-  --rgb-outline-variant: 64 59 54;
+  --rgb-outline-variant: 72 67 61;
   --rgb-tertiary: 227 154 112;
   --rgb-status-active: 114 188 178;
   --rgb-error: 255 122 114;
@@ -113,7 +113,7 @@
   --rgb-rating-all: 31 145 80;
   --rgb-primary-fixed: 59 53 44;
   --rgb-warm-white: 255 250 247;
-  --rgb-badge-19: 72 66 60;
+  --rgb-badge-19: 82 75 69;
 }
 
 html,
