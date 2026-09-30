@@ -2799,28 +2799,44 @@ import { isPastKstSession } from "./src/session-time.mjs";
     `;
   }
 
-  function trendCardMarkup(item, compact = false, priority = false) {
-    if (compact) {
-      return `
-        <article class="grid w-[calc(100vw-4rem)] max-w-[19rem] shrink-0 snap-start grid-cols-[5.5rem_minmax(0,1fr)] gap-3 border border-outline-variant/20 bg-surface-container-lowest p-4">
-          ${trendPosterLinkMarkup(item, "relative block aspect-[2/3] w-full overflow-hidden bg-primary/5", "h-full w-full object-cover", priority)}
-          <div class="flex min-w-0 flex-col justify-start">
-            <span class="mb-1 text-[19px] font-black leading-none text-primary">${escapeHtml(trendRankText(item))}</span>
-            <strong class="mobile-row-title line-clamp-2">${escapeHtml(item.title)}</strong>
-            ${trendVenueLinksMarkup(item, true)}
-          </div>
-        </article>
-      `;
-    }
+  function pickLinksMarkup(item) {
+    const choices = trendSessionChoices(item, 2);
+    if (!choices.length) return `<p class="pick-meta">${escapeHtml(trendMetaText(item))}</p>`;
+    return `<div class="pick-links">${choices
+      .map(
+        (choice) =>
+          `<a class="pick-link" href="${escapeHref(choice.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${choice.venueName} ${choice.timeLabel} 예매`)}"><span class="pick-link-venue">${escapeHtml(choice.venueName)}</span><span class="pick-link-time">${escapeHtml(choice.timeLabel)}</span></a>`
+      )
+      .join("")}</div>`;
+  }
 
+  function pickHeroMarkup(item, priority) {
     return `
-      <article class="group flex min-h-52 flex-col border border-primary/10 bg-surface p-4">
-        ${trendPosterLinkMarkup(item, "relative mx-auto mb-5 block aspect-[2/3] w-full max-w-[13rem] overflow-hidden bg-primary/5", "h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]", priority)}
-        <span class="mb-2 block text-[22px] font-black leading-none text-primary">${escapeHtml(trendRankText(item))}</span>
-        <h3 class="line-clamp-2 text-lg font-bold leading-snug">${escapeHtml(item.title)}</h3>
-        ${trendVenueLinksMarkup(item)}
-      </article>
-    `;
+      <article class="pick-hero">
+        ${trendPosterLinkMarkup(item, "pick-poster pick-poster-hero", "h-full w-full object-cover", priority)}
+        <div class="pick-hero-body">
+          <span class="pick-num pick-num-xl" aria-label="${escapeHtml(`${Number(item.rank) || 1}위`)}">${escapeHtml(trendRankText(item))}</span>
+          <h3 class="pick-hero-title">${escapeHtml(item.title)}</h3>
+          ${pickLinksMarkup(item)}
+        </div>
+      </article>`;
+  }
+
+  function pickItemMarkup(item) {
+    return `
+      <li class="pick-item">
+        <span class="pick-num" aria-label="${escapeHtml(`${Number(item.rank) || 0}위`)}">${escapeHtml(trendRankText(item))}</span>
+        ${trendPosterLinkMarkup(item, "pick-poster pick-poster-sm", "h-full w-full object-cover")}
+        <div class="pick-item-body">
+          <h3 class="pick-item-title">${escapeHtml(item.title)}</h3>
+          ${pickLinksMarkup(item)}
+        </div>
+      </li>`;
+  }
+
+  function pickBandMarkup(items) {
+    const [hero, ...rest] = items;
+    return `<div class="pick-grid">${pickHeroMarkup(hero, true)}${rest.length ? `<ol class="pick-list">${rest.map(pickItemMarkup).join("")}</ol>` : ""}</div>`;
   }
 
   function renderPopularPicks() {
@@ -2846,7 +2862,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
       element.classList.add("hidden");
     });
     if (activeList) {
-      activeList.innerHTML = active && items.length ? items.map((item, index) => trendCardMarkup(item, mobileLayout, index === 0)).join("") : "";
+      activeList.innerHTML = active && items.length ? pickBandMarkup(items) : "";
     }
   }
 
