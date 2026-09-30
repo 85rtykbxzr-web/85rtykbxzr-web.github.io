@@ -3,8 +3,12 @@ import "leaflet/dist/leaflet.css";
 import "./map-view.css";
 import { venueCoordinates } from "./map-coordinates.mjs";
 
-const CLUSTER_RADIUS_PX = 52;
-const TILE_URL = "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png";
+// Pins are ~110×50px tags drawn above their point; merge anything whose tags would overlap.
+const PIN_BOX_W = 118;
+const PIN_BOX_H = 58;
+// Keyless OSM tiles (CARTO now answers keyless requests with an "API KEY REQUIRED" image).
+// Usage policy: light traffic, attribution, and a Referer — the site sends its origin.
+const TILE_URL = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
 const RANGES = [
   { id: "today", label: "오늘" },
   { id: "soon", label: "지금 시작" },
@@ -142,9 +146,9 @@ export function openMap(ctx) {
   map.attributionControl.setPrefix(false);
   L.control.zoom({ position: "bottomright", zoomInTitle: "확대", zoomOutTitle: "축소" }).addTo(map);
   const tiles = L.tileLayer(TILE_URL, {
-    subdomains: "abcd",
     maxZoom: 19,
-    attribution: "© OpenStreetMap · © CARTO"
+    attribution: '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors',
+    referrerPolicy: "strict-origin-when-cross-origin"
   }).addTo(map);
   let tileErrors = 0;
   tiles.on("tileerror", () => {
@@ -239,10 +243,17 @@ export function openMap(ctx) {
 
   function clusterEntries(entries) {
     const clusters = [];
-    entries.forEach((entry) => {
+    // Venues with showings seed clusters first so empty venues fold into them, not the reverse.
+    const ordered = [...entries].sort(
+      (a, b) => Number(b.venue.id === state.selected) - Number(a.venue.id === state.selected) || b.filmCount - a.filmCount
+    );
+    ordered.forEach((entry) => {
       const point = map.latLngToContainerPoint(entry.venue.coords);
-      const hit = clusters.find((cluster) => cluster.point.distanceTo(point) < CLUSTER_RADIUS_PX);
-      if (hit && entry.venue.id !== state.selected) hit.members.push(entry);
+      const hit = clusters.find(
+        (cluster) => Math.abs(cluster.point.x - point.x) < PIN_BOX_W && Math.abs(cluster.point.y - point.y) < PIN_BOX_H
+      );
+      // The selected venue always keeps its own pin.
+      if (hit && entry.venue.id !== state.selected && hit.members[0].venue.id !== state.selected) hit.members.push(entry);
       else clusters.push({ point, members: [entry] });
     });
     return clusters;
@@ -270,8 +281,8 @@ export function openMap(ctx) {
         pinLayer.addLayer(marker);
         return;
       }
-      const lat = cluster.members.reduce((sum, m) => sum + m.venue.coords[0], 0) / cluster.members.length;
-      const lng = cluster.members.reduce((sum, m) => sum + m.venue.coords[1], 0) / cluster.members.length;
+      // Anchor at the seed: seeds are pairwise non-overlapping, a centroid could drift onto a neighbour.
+      const [lat, lng] = cluster.members[0].venue.coords;
       const films = cluster.members.reduce((sum, m) => sum + m.filmCount, 0);
       const marker = L.marker([lat, lng], {
         icon: L.divIcon({
@@ -524,10 +535,18 @@ export function openMap(ctx) {
   document.addEventListener("keydown", onKey, true);
 
   // ---- start --------------------------------------------------------------
-  const seoul = venues.filter((venue) => venue.coords[0] < 37.75 && venue.coords[1] > 126.85);
-  map.fitBounds(L.latLngBounds((seoul.length ? seoul : venues).map((venue) => venue.coords)), { padding: [60, 60] });
-  map.on("moveend zoomend", drawPins);
+  // Render the panel first: on mobile it takes part of the height, and the map must know its
+  // final size before choosing the opening view.
+  // Open on the dense 홍대–신촌–광화문 belt so its pins read individually; outlying venues are
+  // one pan away and always listed in the panel.
+  const compactView = window.matchMedia("(max-width: 767px)").matches;
+  const openView = () => map.setView(compactView ? [37.5595, 126.94] : [37.5625, 126.948], compactView ? 13 : 13.5);
+  openView();
   refresh();
+  map.invalidateSize();
+  openView();
+  map.on("moveend zoomend", drawPins);
+  drawPins();
   $("#scmClose").focus({ preventScroll: true });
 
   active = { close, select, map, root, refresh };

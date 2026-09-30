@@ -19,8 +19,9 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="서울독립영화관시간표" />
-    <meta name="asset-version" content="92a9e70c472b" />
+    <meta name="asset-version" content="3872b4168468" />
     <meta name="theme-color" content="#fdf8f6" />
+    <script src="/assets/theme.js"></script>
     <meta name="application-name" content="서울독립영화관" />
     <meta name="apple-mobile-web-app-title" content="서울독립영화관" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -38,8 +39,8 @@
         "description": "서울 독립영화관의 오늘 상영시간표, 기획전, 영화제 일정을 날짜별, 영화별, 상영관별로 확인하세요."
       }
     </script>
-    <link href="/assets/app.css?v=92a9e70c472b" rel="stylesheet" />
-    <script defer src="/assets/app.js?v=92a9e70c472b"></script>
+    <link href="/assets/app.css?v=3872b4168468" rel="stylesheet" />
+    <script defer src="/assets/app.js?v=3872b4168468"></script>
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=4" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=4" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=4" />
@@ -65,6 +66,10 @@
         <a class="font-body-md text-sm text-on-surface-variant hover:text-primary border-b-2 border-transparent pb-1 transition-colors" href="#map" data-open-map>지도</a>
       </div>
       <div class="flex items-center gap-4">
+        <button class="flex w-10 h-10 items-center justify-center text-primary" type="button" data-theme-toggle aria-label="야간 모드 켜기" aria-pressed="false">
+          <svg class="ui-icon theme-icon-moon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#moon"></use></svg>
+          <svg class="ui-icon theme-icon-sun" aria-hidden="true"><use href="/assets/lucide-sprite.svg#sun"></use></svg>
+        </button>
         <button id="tabletSearchButton" class="hidden md:flex lg:hidden w-10 h-10 items-center justify-center text-primary" type="button" aria-label="검색 열기" aria-controls="tabletSearchPanel" aria-expanded="false">
           <svg class="ui-icon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#search"></use></svg>
         </button>
@@ -83,8 +88,12 @@
     </div>
 
     <header class="md:hidden flex justify-start items-center px-6 h-20 w-full fixed top-0 z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30">
-      <a class="brand-title mobile-brand-title max-w-[calc(100vw-104px)] truncate text-primary whitespace-nowrap" href="#mobile-schedule" aria-label="서울독립영화관시간표 홈">서울독립영화관시간표</a>
-      <div class="flex items-center gap-2 ml-4 shrink-0">
+      <a class="brand-title mobile-brand-title max-w-[calc(100vw-144px)] truncate text-primary whitespace-nowrap" href="#mobile-schedule" aria-label="서울독립영화관시간표 홈">서울독립영화관시간표</a>
+      <div class="flex items-center gap-1 ml-auto shrink-0">
+        <button class="flex w-10 h-10 items-center justify-center text-primary" type="button" data-theme-toggle aria-label="야간 모드 켜기" aria-pressed="false">
+          <svg class="ui-icon theme-icon-moon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#moon"></use></svg>
+          <svg class="ui-icon theme-icon-sun" aria-hidden="true"><use href="/assets/lucide-sprite.svg#sun"></use></svg>
+        </button>
         <button id="mobileSearchButton" class="w-10 h-10 flex items-center justify-center text-primary" type="button" aria-label="검색 열기" aria-controls="mobileSearchPanel" aria-expanded="false">
           <svg class="ui-icon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#search"></use></svg>
         </button>
@@ -111,15 +120,15 @@
           </div>
         </div>
 
-        <section class="pick-band hidden mb-12" id="popular" aria-labelledby="popularTitle">
-          <div class="pick-head">
+        <section class="hidden mb-12 text-primary" id="popular">
+          <div class="mb-8 flex items-end justify-between gap-4 border-b border-primary/10 pb-6">
             <div>
-              <p class="pick-kicker">Weekly Pick</p>
-              <h2 class="pick-heading" id="popularTitle">이번 주 추천</h2>
+              <p class="mb-2 text-[11px] font-bold uppercase text-primary">Weekly Pick</p>
+              <h2 class="text-3xl font-bold font-display-lg">이번 주 추천</h2>
             </div>
-            <span class="pick-sub" id="popularUpdatedAt"></span>
+            <span class="text-xs text-on-surface-variant" id="popularUpdatedAt"></span>
           </div>
-          <div id="popularList"></div>
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4" id="popularList"></div>
         </section>
 
         <div class="mb-8">
@@ -225,15 +234,15 @@
           <button class="min-w-0 w-full py-2 text-center text-label-caps uppercase text-on-surface-variant" id="view-movie" type="button" data-view="film" data-toggle-style="mobile" aria-pressed="false">영화</button>
           <button class="min-w-0 w-full py-2 text-center text-label-caps uppercase text-on-surface-variant" id="view-theater" type="button" data-view="venue" data-toggle-style="mobile" aria-pressed="false">상영관</button>
         </div>
-        <section class="pick-band pick-band-mobile hidden" id="mobile-popular" aria-labelledby="mobilePopularTitle">
-          <div class="pick-head">
-            <div>
-              <p class="pick-kicker">Weekly Pick</p>
-              <h2 class="pick-heading" id="mobilePopularTitle">이번 주 추천</h2>
+        <section class="hidden" id="mobile-popular">
+          <div class="border-b border-outline-variant/20 pb-3 mb-4">
+            <p class="mobile-kicker mb-1 text-primary">Weekly Pick</p>
+            <div class="flex items-center justify-between gap-3">
+              <h2 class="mobile-section-title text-on-surface">이번 주 추천</h2>
+              <span class="mobile-kicker text-on-surface-variant" id="mobilePopularUpdatedAt"></span>
             </div>
-            <span class="pick-sub" id="mobilePopularUpdatedAt"></span>
           </div>
-          <div id="mobilePopularList" aria-label="이번 주 추천 작품"></div>
+          <div class="flex gap-3 overflow-x-auto no-scrollbar snap-x snap-proximity pb-1" id="mobilePopularList" aria-label="이번 주 추천 작품"></div>
         </section>
         <div>
           <div class="mb-2 flex items-center justify-between text-xs">

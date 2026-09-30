@@ -572,7 +572,8 @@ function isPublicAssetPath(pathname) {
     "/assets/app.css",
     "/assets/app.js",
     "/assets/map.css",
-    "/assets/map.js"
+    "/assets/map.js",
+    "/assets/theme.js"
   ].includes(path)) {
     return true;
   }

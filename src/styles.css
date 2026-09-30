@@ -15,30 +15,105 @@
 }
 
 :root {
-  --color-ink: #1c1b1a;
-  --color-paper: #fdf8f6;
-  --color-paper-low: #f7f3f0;
-  --color-paper-mid: #f1edeb;
-  --color-paper-high: #ece7e5;
-  --color-paper-highest: #e6e2df;
-  --color-white: #ffffff;
-  --color-warm-white: #fffaf7;
-  --color-major-festival: #24211f;
-  --color-muted: #4a463f;
-  --color-outline: #7b776e;
-  --color-outline-soft: #ccc6bb;
-  --color-action: #944925;
-  --color-active: #2f6f68;
-  --color-error: #ba1a1a;
-  --color-rating-12: #1d4ed8;
-  --color-rating-all: #15803d;
-  --color-primary-fixed: #e9e2d3;
+  color-scheme: light;
+  --rgb-background: 253 248 246;
+  --rgb-primary: 28 27 26;
+  --rgb-surface: 253 248 246;
+  --rgb-surface-container-lowest: 255 255 255;
+  --rgb-surface-container-low: 247 243 240;
+  --rgb-surface-container: 241 237 235;
+  --rgb-surface-container-high: 236 231 229;
+  --rgb-surface-container-highest: 230 226 223;
+  --rgb-on-surface: 28 27 26;
+  --rgb-on-surface-variant: 74 70 63;
+  --rgb-outline: 123 119 110;
+  --rgb-outline-variant: 204 198 187;
+  --rgb-tertiary: 148 73 37;
+  --rgb-status-active: 47 111 104;
+  --rgb-error: 186 26 26;
+  --rgb-major-festival: 36 33 31;
+  --rgb-rating-12: 29 78 216;
+  --rgb-rating-all: 21 128 61;
+  --rgb-primary-fixed: 233 226 211;
+  --rgb-warm-white: 255 250 247;
+  --rgb-badge-19: 36 33 31;
+  --color-ink: rgb(var(--rgb-primary));
+  --color-paper: rgb(var(--rgb-surface));
+  --color-paper-low: rgb(var(--rgb-surface-container-low));
+  --color-paper-mid: rgb(var(--rgb-surface-container));
+  --color-paper-high: rgb(var(--rgb-surface-container-high));
+  --color-paper-highest: rgb(var(--rgb-surface-container-highest));
+  --color-white: rgb(var(--rgb-surface-container-lowest));
+  --color-warm-white: rgb(var(--rgb-warm-white));
+  --color-major-festival: rgb(var(--rgb-major-festival));
+  --color-muted: rgb(var(--rgb-on-surface-variant));
+  --color-outline: rgb(var(--rgb-outline));
+  --color-outline-soft: rgb(var(--rgb-outline-variant));
+  --color-action: rgb(var(--rgb-tertiary));
+  --color-active: rgb(var(--rgb-status-active));
+  --color-error: rgb(var(--rgb-error));
+  --color-rating-12: rgb(var(--rgb-rating-12));
+  --color-rating-all: rgb(var(--rgb-rating-all));
+  --color-primary-fixed: rgb(var(--rgb-primary-fixed));
   --primary: var(--color-ink);
   --surface: var(--color-paper);
   --transition-base: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   --font-mono: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   --brand-font: "Sandoll Neutbom", system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+
+/* Night mode: follows the system unless the visitor picked a theme (data-theme on <html>). */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --rgb-background: 20 19 18;
+    --rgb-primary: 240 235 229;
+    --rgb-surface: 20 19 18;
+    --rgb-surface-container-lowest: 27 25 24;
+    --rgb-surface-container-low: 26 24 23;
+    --rgb-surface-container: 33 31 29;
+    --rgb-surface-container-high: 41 38 36;
+    --rgb-surface-container-highest: 49 45 42;
+    --rgb-on-surface: 240 235 229;
+    --rgb-on-surface-variant: 186 179 168;
+    --rgb-outline: 143 136 126;
+    --rgb-outline-variant: 64 59 54;
+    --rgb-tertiary: 227 154 112;
+    --rgb-status-active: 114 188 178;
+    --rgb-error: 255 122 114;
+    --rgb-major-festival: 42 38 35;
+    --rgb-rating-12: 61 108 242;
+    --rgb-rating-all: 31 145 80;
+    --rgb-primary-fixed: 59 53 44;
+    --rgb-warm-white: 255 250 247;
+    --rgb-badge-19: 72 66 60;
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --rgb-background: 20 19 18;
+  --rgb-primary: 240 235 229;
+  --rgb-surface: 20 19 18;
+  --rgb-surface-container-lowest: 27 25 24;
+  --rgb-surface-container-low: 26 24 23;
+  --rgb-surface-container: 33 31 29;
+  --rgb-surface-container-high: 41 38 36;
+  --rgb-surface-container-highest: 49 45 42;
+  --rgb-on-surface: 240 235 229;
+  --rgb-on-surface-variant: 186 179 168;
+  --rgb-outline: 143 136 126;
+  --rgb-outline-variant: 64 59 54;
+  --rgb-tertiary: 227 154 112;
+  --rgb-status-active: 114 188 178;
+  --rgb-error: 255 122 114;
+  --rgb-major-festival: 42 38 35;
+  --rgb-rating-12: 61 108 242;
+  --rgb-rating-all: 31 145 80;
+  --rgb-primary-fixed: 59 53 44;
+  --rgb-warm-white: 255 250 247;
+  --rgb-badge-19: 72 66 60;
 }
 
 html,
@@ -107,7 +182,7 @@ body.app-loading main {
   left: 80px;
   z-index: 2;
   width: 18px;
-  background: linear-gradient(90deg, var(--color-paper) 0%, rgba(253, 248, 246, 0));
+  background: linear-gradient(90deg, var(--color-paper) 0%, rgb(var(--rgb-surface) / 0));
   content: "";
   pointer-events: none;
 }
@@ -196,7 +271,7 @@ body.app-loading main {
 
 .time-ended {
   position: relative;
-  color: rgba(255, 255, 255, 0.62) !important;
+  color: rgb(var(--rgb-surface) / 0.62) !important;
   background: var(--primary) !important;
   border-color: var(--primary) !important;
   cursor: default;
@@ -207,8 +282,8 @@ body.app-loading main {
   position: absolute;
   inset: 4px 8px;
   background:
-    linear-gradient(to bottom right, transparent calc(50% - 0.55px), rgba(255, 255, 255, 0.28) calc(50% - 0.55px), rgba(255, 255, 255, 0.28) calc(50% + 0.55px), transparent calc(50% + 0.55px)),
-    linear-gradient(to top right, transparent calc(50% - 0.55px), rgba(255, 255, 255, 0.28) calc(50% - 0.55px), rgba(255, 255, 255, 0.28) calc(50% + 0.55px), transparent calc(50% + 0.55px));
+    linear-gradient(to bottom right, transparent calc(50% - 0.55px), rgb(var(--rgb-surface) / 0.28) calc(50% - 0.55px), rgb(var(--rgb-surface) / 0.28) calc(50% + 0.55px), transparent calc(50% + 0.55px)),
+    linear-gradient(to top right, transparent calc(50% - 0.55px), rgb(var(--rgb-surface) / 0.28) calc(50% - 0.55px), rgb(var(--rgb-surface) / 0.28) calc(50% + 0.55px), transparent calc(50% + 0.55px));
   pointer-events: none;
 }
 
@@ -226,7 +301,7 @@ body.app-loading main {
 .time-ended:hover {
   transform: none;
   background: var(--primary) !important;
-  color: rgba(255, 255, 255, 0.62) !important;
+  color: rgb(var(--rgb-surface) / 0.62) !important;
   box-shadow: none;
 }
 
@@ -335,7 +410,7 @@ body.app-loading main {
   justify-content: space-between;
   gap: 12px;
   padding: 8px;
-  border: 1px solid rgba(28, 27, 26, 0.12);
+  border: 1px solid rgb(var(--rgb-primary) / 0.12);
   background: var(--color-paper-mid);
   color: var(--color-ink);
   text-align: left;
@@ -362,7 +437,7 @@ body.app-loading main {
 
 .festival-table-shell,
 .festival-mobile-card {
-  border: 1px solid rgba(28, 27, 26, 0.16);
+  border: 1px solid rgb(var(--rgb-primary) / 0.16);
   background: var(--color-paper);
 }
 
@@ -378,7 +453,7 @@ body.app-loading main {
 }
 
 .festival-table th {
-  border-bottom: 1px solid rgba(28, 27, 26, 0.28);
+  border-bottom: 1px solid rgb(var(--rgb-primary) / 0.28);
 }
 
 .festival-group-row {
@@ -386,8 +461,8 @@ body.app-loading main {
 }
 
 .festival-group-row td {
-  border-top: 1px solid rgba(28, 27, 26, 0.12);
-  border-bottom: 1px solid rgba(28, 27, 26, 0.1);
+  border-top: 1px solid rgb(var(--rgb-primary) / 0.12);
+  border-bottom: 1px solid rgb(var(--rgb-primary) / 0.1);
 }
 
 .festival-group-panel {
@@ -434,7 +509,8 @@ body.app-loading main {
 .major-festival-mobile-card .festival-action {
   border-color: rgba(255, 250, 247, 0.46);
   background: var(--color-warm-white);
-  color: var(--color-ink);
+  /* Sits on a fixed light chip inside the dark festival band, so its ink stays dark in both themes. */
+  color: #1c1b1a;
 }
 
 .major-festival-row .festival-logo-inline,
@@ -466,7 +542,7 @@ body.app-loading main {
 .major-festival-mobile-card .festival-highlight-detail {
   border-color: rgba(255, 250, 247, 0.18);
   background: var(--color-warm-white);
-  color: var(--color-ink);
+  color: #1c1b1a;
 }
 
 .major-festival-row .festival-highlight-detail summary,
@@ -475,7 +551,7 @@ body.app-loading main {
 .major-festival-mobile-card .festival-highlight-detail div span,
 .major-festival-row .festival-highlight-day strong,
 .major-festival-mobile-card .festival-highlight-day strong {
-  color: var(--color-ink);
+  color: #1c1b1a;
 }
 
 .festival-logo-box {
@@ -483,12 +559,12 @@ body.app-loading main {
   flex: 0 0 auto;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(28, 27, 26, 0.16);
+  border: 1px solid rgb(var(--rgb-primary) / 0.16);
   padding: 8px;
 }
 
 .festival-logo-inline {
-  border-color: rgba(28, 27, 26, 0.1);
+  border-color: rgb(var(--rgb-primary) / 0.1);
   background: var(--color-warm-white);
   padding: 4px;
 }
@@ -511,8 +587,8 @@ body.app-loading main {
 .festival-highlight-day {
   display: inline-flex;
   align-items: center;
-  border: 1px solid rgba(28, 27, 26, 0.14);
-  background: rgba(255, 250, 247, 0.72);
+  border: 1px solid rgb(var(--rgb-primary) / 0.14);
+  background: rgb(var(--rgb-surface-container-lowest) / 0.72);
   color: var(--color-muted);
   font-size: 11px;
   font-weight: 700;
@@ -537,7 +613,7 @@ body.app-loading main {
 }
 
 .festival-highlight-detail {
-  border: 1px solid rgba(28, 27, 26, 0.14);
+  border: 1px solid rgb(var(--rgb-primary) / 0.14);
   background: var(--color-warm-white);
 }
 
@@ -579,7 +655,7 @@ body.app-loading main {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  border-top: 1px solid rgba(28, 27, 26, 0.1);
+  border-top: 1px solid rgb(var(--rgb-primary) / 0.1);
   padding: 8px;
 }
 
@@ -624,7 +700,7 @@ body.app-loading main {
   grid-template-columns: 64px minmax(0, 1fr) auto;
   align-items: start;
   gap: 8px;
-  border: 1px solid rgba(28, 27, 26, 0.1);
+  border: 1px solid rgb(var(--rgb-primary) / 0.1);
   background: var(--color-paper);
   padding: 8px;
   color: var(--color-ink);
@@ -704,12 +780,12 @@ a.festival-schedule-item:hover {
 }
 
 .festival-session-row td {
-  border-top: 1px solid rgba(28, 27, 26, 0.12);
+  border-top: 1px solid rgb(var(--rgb-primary) / 0.12);
 }
 
 .festival-action {
-  border: 1px solid rgba(28, 27, 26, 0.18);
-  background: var(--color-warm-white);
+  border: 1px solid rgb(var(--rgb-primary) / 0.18);
+  background: var(--color-white);
 }
 
 .festival-action:hover {
@@ -851,10 +927,10 @@ a.festival-schedule-item:hover {
   max-width: 560px;
   margin: 0 auto;
   padding: 16px 20px;
-  border: 1px solid rgba(28, 27, 26, 0.12);
+  border: 1px solid rgb(var(--rgb-primary) / 0.12);
   background: var(--color-white);
   color: var(--color-ink);
-  box-shadow: 0 12px 40px rgba(28, 27, 26, 0.08);
+  box-shadow: 0 12px 40px rgb(var(--rgb-primary) / 0.08);
 }
 
 .boot-fallback strong,
@@ -919,61 +995,17 @@ a.festival-schedule-item:hover {
 .seat-f-9 { width: 90%; }
 .seat-f-10 { width: 100%; }
 
-/* Weekly pick — editorial band (kept compact so it sits with the dense schedule below) */
-.pick-band {
-  --pick-ink: #1c1b1a;
-  --pick-paper: #fdf8f6;
-  --pick-red: #e3242b;
-  background: var(--pick-ink);
-  color: var(--pick-paper);
-  padding: 1.5rem 1.5rem 1.75rem;
+/* Theme toggle shows the mode you would switch to. */
+.theme-icon-sun { display: none; }
+:root[data-theme="dark"] .theme-icon-sun { display: block; }
+:root[data-theme="dark"] .theme-icon-moon { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-icon-sun { display: block; }
+  :root:not([data-theme="light"]) .theme-icon-moon { display: none; }
 }
-.pick-band :focus-visible { outline: 2px solid var(--pick-paper); outline-offset: 3px; }
-.pick-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; margin-bottom: 1.25rem; }
-.pick-kicker { margin: 0 0 0.35rem; font-size: 11px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: #ff6b6f; }
-.pick-heading { margin: 0; font-size: 1.5rem; font-weight: 900; letter-spacing: -0.04em; line-height: 1.1; }
-.pick-sub { font-size: 12px; color: rgb(253 248 246 / 0.7); }
-.pick-grid { display: grid; gap: 2rem; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; }
 
-.pick-poster { display: block; position: relative; overflow: hidden; background: rgb(253 248 246 / 0.08); }
-.pick-poster img { transition: transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1); }
-.pick-poster:hover img { transform: scale(1.03); }
-.pick-poster-hero { aspect-ratio: 2 / 3; width: 9.5rem; flex: none; }
-.pick-poster-sm { aspect-ratio: 2 / 3; width: 3.5rem; flex: none; }
-
-.pick-num { font-weight: 900; letter-spacing: -0.06em; line-height: 0.85; font-variant-numeric: tabular-nums; color: rgb(253 248 246 / 0.4); }
-.pick-num-xl { display: block; font-size: 3.75rem; color: var(--pick-red); margin: 0 0 0.6rem -0.04em; }
-.pick-hero { display: flex; gap: 1.25rem; align-items: flex-end; }
-.pick-hero-body { min-width: 0; }
-.pick-hero-title { margin: 0 0 0.8rem; font-size: 1.35rem; font-weight: 900; letter-spacing: -0.035em; line-height: 1.2; text-wrap: balance; }
-
-.pick-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid rgb(253 248 246 / 0.22); }
-.pick-item { display: grid; grid-template-columns: 2.5rem 3.5rem minmax(0, 1fr); gap: 0.85rem; align-items: center; padding: 0.75rem 0; border-bottom: 1px solid rgb(253 248 246 / 0.22); }
-.pick-item .pick-num { font-size: 1.75rem; }
-.pick-item-title { margin: 0 0 0.5rem; font-size: 1rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1.25; }
-
-.pick-links { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-.pick-link { display: inline-flex; align-items: baseline; gap: 0.5rem; max-width: 100%; padding: 0.35rem 0.65rem; border: 1px solid rgb(253 248 246 / 0.4); font-size: 0.75rem; font-weight: 700; color: var(--pick-paper); text-decoration: none; transition: background-color 0.2s, color 0.2s; }
-.pick-link:hover { background: var(--pick-paper); color: var(--pick-ink); border-color: var(--pick-paper); }
-.pick-link-venue { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.pick-link-time { flex: none; font-weight: 500; font-variant-numeric: tabular-nums; opacity: 0.85; }
-.pick-meta { margin: 0; font-size: 0.8rem; color: rgb(253 248 246 / 0.75); }
-
-@media (max-width: 1023px) {
-  .pick-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+/* Venue logos are drawn for light backgrounds; give them a paper chip at night. */
+:root[data-theme="dark"] .venue-mark { background: #f5f1ec; padding: 2px 6px; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .venue-mark { background: #f5f1ec; padding: 2px 6px; }
 }
-@media (max-width: 767px) {
-  .pick-band-mobile { margin-inline: -1.5rem; padding: 1.25rem 1.5rem 1.5rem; }
-  .pick-head { margin-bottom: 1rem; }
-  .pick-heading { font-size: 1.35rem; }
-  .pick-hero { gap: 0.9rem; }
-  .pick-poster-hero { width: 7rem; }
-  .pick-num-xl { font-size: 3rem; }
-  .pick-hero-title { font-size: 1.15rem; margin-bottom: 0.65rem; }
-  .pick-grid { gap: 1rem; }
-  .pick-item { grid-template-columns: 2rem 3rem minmax(0, 1fr); gap: 0.7rem; padding: 0.65rem 0; }
-  .pick-item .pick-num { font-size: 1.5rem; }
-  .pick-poster-sm { width: 3rem; }
-  .pick-item-title { font-size: 0.95rem; }
-}
-@media (prefers-reduced-motion: reduce) { .pick-poster img, .pick-link { transition: none; } .pick-poster:hover img { transform: none; } }

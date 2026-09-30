@@ -34,6 +34,8 @@ html.scm-lock, html.scm-lock body { overflow: hidden; }
 .scm-body { flex: 1; min-height: 0; display: flex; position: relative; }
 .scm-stage { flex: 1; min-width: 0; position: relative; }
 .scm-canvas { position: absolute; inset: 0; background: #eae6df; }
+/* Monochrome basemap so the ink/red pins carry the colour. */
+.scm-root .leaflet-tile-pane { filter: grayscale(1) contrast(0.92) brightness(1.04); }
 .scm-note {
   position: absolute; left: 50%; top: 12px; transform: translateX(-50%); z-index: 500; margin: 0;
   max-width: calc(100% - 32px); padding: 8px 14px; border-radius: 8px; background: #1c1b1a; color: #fff; font-size: 12px;
@@ -117,6 +119,7 @@ html.scm-lock, html.scm-lock body { overflow: hidden; }
 .scm-root .leaflet-control-zoom { border: 0; box-shadow: 0 2px 8px rgba(28, 27, 26, 0.25); }
 .scm-root .leaflet-control-zoom a { width: 40px; height: 40px; line-height: 40px; color: #1c1b1a; }
 .scm-root .leaflet-control-attribution { font-size: 10px; }
+.scm-root .leaflet-control-attribution a { color: inherit; text-decoration: underline; }
 
 @media (max-width: 767px) {
   .scm-head { flex-wrap: wrap; gap: 6px 10px; padding: 10px 12px 8px; }
@@ -132,3 +135,51 @@ html.scm-lock, html.scm-lock body { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) { .scm-root * { transition: none !important; } }
 
 .scm-sr { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Night mode */
+:root[data-theme="dark"] .scm-root, :root[data-theme="dark"] .scm-panel { background: #141312; color: #f0ebe5; }
+:root[data-theme="dark"] .scm-panel { border-color: #403b36; }
+:root[data-theme="dark"] .scm-canvas { background: #1e1c1a; }
+:root[data-theme="dark"] .scm-root .leaflet-tile-pane { filter: grayscale(1) invert(1) brightness(0.85) contrast(0.9); }
+:root[data-theme="dark"] .scm-row { border-color: #292624; }
+:root[data-theme="dark"] .scm-row:hover { background: #1f1d1b; }
+:root[data-theme="dark"] .scm-row-main small, :root[data-theme="dark"] .scm-row-count, :root[data-theme="dark"] .scm-panel-head p, :root[data-theme="dark"] .scm-hint, :root[data-theme="dark"] .scm-empty, :root[data-theme="dark"] .scm-detail-head p, :root[data-theme="dark"] .scm-detail-head a, :root[data-theme="dark"] .scm-back { color: #bab3a8; }
+:root[data-theme="dark"] .scm-row-count b { color: #f0ebe5; }
+:root[data-theme="dark"] .scm-row.is-empty .scm-row-main strong, :root[data-theme="dark"] .scm-row.is-empty .scm-row-time { color: #8f887e; }
+:root[data-theme="dark"] .scm-back:hover { background: #211f1d; }
+:root[data-theme="dark"] .scm-detail-head, :root[data-theme="dark"] .scm-film { border-color: #292624; }
+:root[data-theme="dark"] .scm-btn { background: #1b1918; border-color: #f0ebe5; color: #f0ebe5 !important; }
+:root[data-theme="dark"] .scm-btn.is-primary { background: #f0ebe5; color: #141312 !important; }
+:root[data-theme="dark"] .scm-poster { background: #292624; }
+:root[data-theme="dark"] .scm-dist { color: #72bcb2 !important; }
+:root[data-theme="dark"] .scm-tag.is-empty { background: #292624; color: #bab3a8; border-color: #5b554e; }
+:root[data-theme="dark"] .scm-tag.is-empty::after { background: #5b554e; }
+:root[data-theme="dark"] .scm-root .leaflet-control-zoom a { background: #211f1d; color: #f0ebe5; }
+:root[data-theme="dark"] .scm-root .leaflet-control-attribution { background: rgb(20 19 18 / 0.8); color: #bab3a8; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .scm-root, :root:not([data-theme="light"]) .scm-panel { background: #141312; color: #f0ebe5; }
+  :root:not([data-theme="light"]) .scm-panel { border-color: #403b36; }
+  :root:not([data-theme="light"]) .scm-canvas { background: #1e1c1a; }
+  :root:not([data-theme="light"]) .scm-root .leaflet-tile-pane { filter: grayscale(1) invert(1) brightness(0.85) contrast(0.9); }
+  :root:not([data-theme="light"]) .scm-row { border-color: #292624; }
+  :root:not([data-theme="light"]) .scm-row:hover { background: #1f1d1b; }
+  :root:not([data-theme="light"]) .scm-row-main small, :root:not([data-theme="light"]) .scm-row-count, :root:not([data-theme="light"]) .scm-panel-head p, :root:not([data-theme="light"]) .scm-hint, :root:not([data-theme="light"]) .scm-empty, :root:not([data-theme="light"]) .scm-detail-head p, :root:not([data-theme="light"]) .scm-detail-head a, :root:not([data-theme="light"]) .scm-back { color: #bab3a8; }
+  :root:not([data-theme="light"]) .scm-row-count b { color: #f0ebe5; }
+  :root:not([data-theme="light"]) .scm-row.is-empty .scm-row-main strong, :root:not([data-theme="light"]) .scm-row.is-empty .scm-row-time { color: #8f887e; }
+  :root:not([data-theme="light"]) .scm-back:hover { background: #211f1d; }
+  :root:not([data-theme="light"]) .scm-detail-head, :root:not([data-theme="light"]) .scm-film { border-color: #292624; }
+  :root:not([data-theme="light"]) .scm-btn { background: #1b1918; border-color: #f0ebe5; color: #f0ebe5 !important; }
+  :root:not([data-theme="light"]) .scm-btn.is-primary { background: #f0ebe5; color: #141312 !important; }
+  :root:not([data-theme="light"]) .scm-poster { background: #292624; }
+  :root:not([data-theme="light"]) .scm-dist { color: #72bcb2 !important; }
+  :root:not([data-theme="light"]) .scm-tag.is-empty { background: #292624; color: #bab3a8; border-color: #5b554e; }
+  :root:not([data-theme="light"]) .scm-tag.is-empty::after { background: #5b554e; }
+  :root:not([data-theme="light"]) .scm-root .leaflet-control-zoom a { background: #211f1d; color: #f0ebe5; }
+  :root:not([data-theme="light"]) .scm-root .leaflet-control-attribution { background: rgb(20 19 18 / 0.8); color: #bab3a8; }
+}
+:root[data-theme="dark"] .scm-tag:not(.is-empty):not(.is-soon), :root[data-theme="dark"] .scm-cluster { background: #f0ebe5; color: #141312; border-color: #f0ebe5; }
+:root[data-theme="dark"] .scm-tag:not(.is-empty):not(.is-soon)::after { background: #f0ebe5; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .scm-tag:not(.is-empty):not(.is-soon), :root:not([data-theme="light"]) .scm-cluster { background: #f0ebe5; color: #141312; border-color: #f0ebe5; }
+  :root:not([data-theme="light"]) .scm-tag:not(.is-empty):not(.is-soon)::after { background: #f0ebe5; }
+}
