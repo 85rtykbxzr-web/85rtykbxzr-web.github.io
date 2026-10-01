@@ -2314,7 +2314,7 @@ import { filmTitleKey } from "./src/film-title.mjs";
             const thumb = safeImageUrl(posterSource(program));
             const full = thumb ? safeImageUrl(fullSizeBoardImage(thumb)) : "";
             const image = full ? posterMarkup({ posterUrl: full, posterSourceUrl: full !== thumb ? thumb : "" }, title, "prog-media-img", "", { decorative: true }) : "";
-            const media = `<span class="prog-media" aria-hidden="true">${iconMarkup("film", "prog-media-ic")}${image}</span>`;
+            const media = `<span class="prog-media" aria-hidden="true">${programCoverMarkup(program, title, venue)}${image}</span>`;
             return `
               <a class="prog has-media" href="${escapeHref(program.url)}" target="_blank" rel="noopener noreferrer">
                 ${media}
@@ -2325,6 +2325,19 @@ import { filmTitleKey } from "./src/film-title.mjs";
           })
           .join("")
       : emptyMarkup("지금 진행 중인 프로그램이 없어요.");
+  }
+
+  // Sits under the post image and shows when there is none (or it fails to load): the
+  // program's own title set as a cover, on one of a few tones picked from the title.
+  function programCoverMarkup(program, title, venue) {
+    let hash = 0;
+    for (const char of title) hash = (hash * 31 + char.codePointAt(0)) >>> 0;
+    const kind = String(program.kind || "").trim();
+    return `<span class="prog-cover is-tone-${hash % 6}">
+      ${kind ? `<span class="prog-cover-kind">${escapeHtml(kind)}</span>` : ""}
+      <span class="prog-cover-title">${escapeHtml(title)}</span>
+      ${venue?.name ? `<span class="prog-cover-venue">${escapeHtml(venue.name)}</span>` : ""}
+    </span>`;
   }
 
   function festivalNameFromSession(session) {

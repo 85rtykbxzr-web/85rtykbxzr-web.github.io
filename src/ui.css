@@ -614,3 +614,16 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .ticket-pick.is-upload input { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
 .ticket-pick.is-upload:focus-within { box-shadow: 0 0 0 2px var(--t3); }
 .ticket-credit { margin-top: 2px; font-size: 11px; color: var(--t4); }
+
+/* Program cover: shown when a post has no image of its own */
+.prog-cover { position: absolute; inset: 0; z-index: -1; display: flex; flex-direction: column; justify-content: flex-end; gap: 6px; padding: 18px 20px; color: #fff; }
+.prog-cover::after { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(120% 90% at 100% 0%, rgb(255 255 255 / 0.16), transparent 60%); }
+.prog-cover-kind { align-self: flex-start; padding: 3px 9px; border-radius: 999px; background: rgb(255 255 255 / 0.18); font-size: 12px; font-weight: 700; letter-spacing: 0.02em; }
+.prog-cover-title { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; font-size: 22px; font-weight: 800; line-height: 1.22; letter-spacing: -0.02em; word-break: keep-all; }
+.prog-cover-venue { font-size: 13px; font-weight: 600; opacity: 0.72; }
+.prog-cover.is-tone-0 { background: linear-gradient(140deg, #3b2a4d, #1d1726); }
+.prog-cover.is-tone-1 { background: linear-gradient(140deg, #5a2f2a, #24140f); }
+.prog-cover.is-tone-2 { background: linear-gradient(140deg, #23413d, #0f1d1b); }
+.prog-cover.is-tone-3 { background: linear-gradient(140deg, #2c3a5c, #121a2b); }
+.prog-cover.is-tone-4 { background: linear-gradient(140deg, #57472a, #221b0e); }
+.prog-cover.is-tone-5 { background: linear-gradient(140deg, #4a2b3f, #1e1119); }
