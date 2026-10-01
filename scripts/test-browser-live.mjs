@@ -44,7 +44,7 @@ await assert.rejects(() => fetchBrowserVenue(browserLiveConfigs[0], { now, fetch
   if (new URL(url).searchParams.has("PlaySDT")) body.Recordset.push(body.Recordset[0]);
   return { ok: true, json: async () => body };
 } }), /중복/);
-const partial = await refreshBrowserLiveSchedule(prepared, { now, fetchImpl: (url, options) => {
+const partial = await refreshBrowserLiveSchedule(prepared, { now, retryDelayMs: 0, cache: null, fetchImpl: (url, options) => {
   if (new URL(url).searchParams.get("CinemaCd") === "000065") throw new Error("offline");
   return fetchImpl(url, options);
 } });
@@ -53,6 +53,27 @@ assert.equal(partial.meta.browserLive.find((row) => row.venueId === "forest").ch
 assert(!partial.sessions.some((session) => session.venueId === "forest"));
 assert(partial.sessions.some((session) => session.id === "core"));
 assert.equal(partial.meta.generatedAt, fixture.meta.generatedAt, "Browser fetch must not falsify the server verification timestamp");
+
+// One transient failure per venue is retried; a venue that stays down falls back to the
+// last good result kept in the browser.
+const flaky = new Set();
+const retried = await refreshBrowserLiveSchedule(prepared, { now, retryDelayMs: 0, cache: null, fetchImpl: (requestUrl, options) => {
+  const cinema = new URL(requestUrl).searchParams.get("CinemaCd");
+  if (!flaky.has(cinema)) { flaky.add(cinema); throw new Error("blip"); }
+  return fetchImpl(requestUrl, options);
+} });
+assert.equal(retried.meta.browserLive.filter((row) => row.status === "ok").length, 7, "a single failure per venue must be retried");
+const stored = new Map();
+const memoryCache = { read: (id) => stored.get(id) || null, write: (id, value) => stored.set(id, value) };
+await refreshBrowserLiveSchedule(prepared, { now, retryDelayMs: 0, cache: memoryCache, fetchImpl });
+const fallback = await refreshBrowserLiveSchedule(prepared, { now, retryDelayMs: 0, cache: memoryCache, fetchImpl: (requestUrl, options) => {
+  if (new URL(requestUrl).searchParams.get("CinemaCd") === "000065") throw new Error("offline");
+  return fetchImpl(requestUrl, options);
+} });
+const forestRow = fallback.meta.browserLive.find((row) => row.venueId === "forest");
+assert.equal(forestRow.status, "ok");
+assert.equal(forestRow.stale, true);
+assert(fallback.sessions.some((session) => session.venueId === "forest"), "cached sessions fill in for an unreachable venue");
 
 const url = "https://www.cinematheque.seoul.kr/bbs/content.php?co_id=timetable";
 const challenge = `<script src="/cupid.js"></script><script>var a=toNumbers("2b7e151628aed2a6abf7158809cf4f3c"),b=toNumbers("000102030405060708090a0b0c0d0e0f"),c=toNumbers("7649abac8119b246cee98e9b12e9197d");document.cookie="CUPID=";location.href="${url}&ckattempt=1";</script>`;
