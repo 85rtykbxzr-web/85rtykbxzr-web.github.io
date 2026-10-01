@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-01T03:50:44.731Z",
+  "generatedAt": "2026-10-01T06:38:56.487Z",
   "weekStart": "2026-09-29",
   "weekEnd": "2026-10-01",
   "windowStart": "2026-09-29",
@@ -13,6 +13,145 @@
   "items": [
     {
       "rank": 1,
+      "title": "가능한 사랑",
+      "posterUrl": "/assets/recommendation-posters/5111b309025797e2.webp",
+      "localPosterUrl": "/assets/recommendation-posters/5111b309025797e2.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-01&movieCd=029672&playSDT=2026-10-01&screenId=01&showSeq=4",
+      "score": 289.8,
+      "signal": 22.2,
+      "positiveSignal": 22.2,
+      "mentionCount": 3,
+      "rawPositiveSignal": 28,
+      "rawMentionCount": 4,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "cinecube",
+        "kucine"
+      ],
+      "venueNames": [
+        "씨네큐브 광화문",
+        "KU시네마테크"
+      ],
+      "nextDate": "2026-10-01",
+      "nextTime": "16:20",
+      "evidence": [
+        {
+          "title": "스포) 가능한 사랑이 탐하는 '남'의 것",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865675&page=18",
+          "date": "2026-09-29",
+          "positive": 8,
+          "rawPositive": 8,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "감동",
+              "count": 2,
+              "weight": 4,
+              "score": 8,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 1,
+          "commentPositive": 8,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "스포) 꿈꾸던 모험은 가능한 사랑이 상영되는 지금 더 추천할만한 영화였음",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865562&page=19",
+          "date": "2026-09-29",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "추천",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "스포) 가능한 사랑 찰나였지만 좋았던 장면",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866912&page=2",
+          "date": "2026-10-01",
+          "positive": 2,
+          "rawPositive": 2,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "좋았음",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 3,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "가능한 사랑이 버닝 밀양보다 더 재밌었음??",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866853&page=3",
+          "date": "2026-10-01",
+          "positive": 14,
+          "rawPositive": 14,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "최고",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 4,
+          "commentPositive": 14,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260911_9a7b3ad7.jpg"
+    },
+    {
+      "rank": 2,
       "title": "꿈꾸던 모험",
       "posterUrl": "/assets/recommendation-posters/730c75bb764294f9.webp",
       "localPosterUrl": "/assets/recommendation-posters/730c75bb764294f9.webp",
@@ -127,83 +266,6 @@
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260910_b6b3a8cc.jpg"
     },
     {
-      "rank": 2,
-      "title": "가능한 사랑",
-      "posterUrl": "/assets/recommendation-posters/5111b309025797e2.webp",
-      "localPosterUrl": "/assets/recommendation-posters/5111b309025797e2.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-01&movieCd=029672&playSDT=2026-10-01&screenId=01&showSeq=4",
-      "score": 87.8,
-      "signal": 6.2,
-      "positiveSignal": 6.2,
-      "mentionCount": 1,
-      "rawPositiveSignal": 12,
-      "rawMentionCount": 2,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "cinecube",
-        "kucine"
-      ],
-      "venueNames": [
-        "씨네큐브 광화문",
-        "KU시네마테크"
-      ],
-      "nextDate": "2026-10-01",
-      "nextTime": "16:20",
-      "evidence": [
-        {
-          "title": "스포) 가능한 사랑이 탐하는 '남'의 것",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865675&page=18",
-          "date": "2026-09-29",
-          "positive": 8,
-          "rawPositive": 8,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "감동",
-              "count": 2,
-              "weight": 4,
-              "score": 8,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 1,
-          "commentPositive": 8,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "스포) 꿈꾸던 모험은 가능한 사랑이 상영되는 지금 더 추천할만한 영화였음",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865562&page=19",
-          "date": "2026-09-29",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "추천",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        }
-      ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260911_9a7b3ad7.jpg"
-    },
-    {
       "rank": 3,
       "title": "포르테",
       "posterUrl": "/assets/recommendation-posters/02b4fb126bbada3a.webp",
@@ -211,7 +273,7 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://indiespace.kr/notice/5494",
-      "score": 20,
+      "score": 23,
       "signal": 1,
       "positiveSignal": 1,
       "mentionCount": 0.5,
@@ -347,18 +409,18 @@
         },
         {
           "rank": 7,
-          "title": "스파이럴",
-          "englishTitle": "The Spiral",
-          "section": "오픈 시네마",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91100&c_idx=437&sp_idx=&QueryStep=2",
+          "title": "로마 엘라스티카",
+          "englishTitle": "Roma Elastica",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91150&c_idx=430&sp_idx=&QueryStep=2",
           "mentionCount": 5
         },
         {
           "rank": 8,
-          "title": "클럽 키드",
-          "englishTitle": "Club Kid",
-          "section": "월드 시네마",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91104&c_idx=434&sp_idx=&QueryStep=2",
+          "title": "스파이럴",
+          "englishTitle": "The Spiral",
+          "section": "오픈 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91100&c_idx=437&sp_idx=&QueryStep=2",
           "mentionCount": 5
         }
       ]
@@ -369,24 +431,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 4840,
-    "listedPostCount": 4841,
-    "detailedPostCount": 80,
-    "commentFetchCount": 80,
-    "commentCount": 252,
+    "fetchedPostCount": 426,
+    "listedPostCount": 442,
+    "detailedPostCount": 34,
+    "commentFetchCount": 34,
+    "commentCount": 92,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 97,
+    "scannedPageCount": 9,
     "reachedLookbackStart": true,
-    "oldestScannedDate": "2026-09-11",
+    "oldestScannedDate": "2026-09-27",
     "newestScannedDate": "2026-10-01",
-    "scanMode": "backfill",
+    "scanMode": "daily",
     "candidateWindowStart": "2026-10-01",
     "candidateWindowEnd": "2026-10-15",
-    "candidateCount": 86,
+    "candidateCount": 85,
     "seedLookbackDays": 3,
     "seedStart": "2026-09-29",
-    "listLookbackDays": 10,
-    "listWindowStart": "2026-09-22",
+    "listLookbackDays": 1,
+    "listWindowStart": "2026-10-01",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -394,8 +456,6 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-09-29",
-      "2026-09-30",
       "2026-10-01"
     ],
     "signalMode": "positive-only",

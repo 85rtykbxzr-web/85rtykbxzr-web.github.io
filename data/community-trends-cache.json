@@ -14,12 +14,12 @@
       "2026-09-30",
       "2026-10-01"
     ],
-    "lastMode": "backfill",
-    "lastWindowStart": "2026-09-22",
+    "lastMode": "daily",
+    "lastWindowStart": "2026-10-01",
     "lastWindowEnd": "2026-10-01",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-01T03:50:40.070Z",
+  "updatedAt": "2026-10-01T06:38:50.748Z",
   "days": {
     "2026-09-29": {
       "오디세이": {
@@ -347,6 +347,73 @@
       }
     },
     "2026-10-01": {
+      "가능한사랑": {
+        "title": "가능한 사랑",
+        "positiveSignal": 16,
+        "mentionCount": 2,
+        "evidence": [
+          {
+            "title": "스포) 가능한 사랑 찰나였지만 좋았던 장면",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866912&page=2",
+            "date": "2026-10-01",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "좋았음",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 3,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "가능한 사랑이 버닝 밀양보다 더 재밌었음??",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866853&page=3",
+            "date": "2026-10-01",
+            "positive": 14,
+            "rawPositive": 14,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "최고",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "재밌",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "재밌",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 4,
+            "commentPositive": 14,
+            "commentNegative": 0
+          }
+        ]
+      },
       "사탄탱고": {
         "title": "사탄탱고(기획전)",
         "positiveSignal": 6,
@@ -354,7 +421,7 @@
         "evidence": [
           {
             "title": "사탄탱고 예매했다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866744&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866744&page=4",
             "date": "2026-10-01",
             "positive": 4,
             "rawPositive": 4,
@@ -377,7 +444,7 @@
           },
           {
             "title": "토리노의말은 드르렁이 아니던데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866484&page=5",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866484&page=8",
             "date": "2026-10-01",
             "positive": 2,
             "rawPositive": 2,
@@ -407,7 +474,7 @@
         "evidence": [
           {
             "title": "토리노의 말 vs 베크마이스터 하모니즈 둘 중 뭘 볼까요?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866576&page=4",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866576&page=7",
             "date": "2026-10-01",
             "positive": 4,
             "rawPositive": 4,
@@ -437,7 +504,7 @@
         "evidence": [
           {
             "title": "토리노의말은 드르렁이 아니던데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866484&page=5",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866484&page=8",
             "date": "2026-10-01",
             "positive": 2,
             "rawPositive": 2,
@@ -460,7 +527,7 @@
           },
           {
             "title": "토리노의 말 보다 결국 1시간은 잔듯 ㅋㅋ",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866476&page=5",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866476&page=8",
             "date": "2026-10-01",
             "positive": 10,
             "rawPositive": 10,
@@ -494,7 +561,7 @@
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-01T03:50:40.009Z",
+      "lineupFetchedAt": "2026-10-01T06:38:50.740Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -2530,6 +2597,51 @@
           }
         },
         "2026-10-01": {
+          "바람불어좋은날": {
+            "title": "바람불어 좋은날",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "로마엘라스티카": {
+            "title": "로마 엘라스티카",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "백투부에노스아이레스": {
+            "title": "백 투 부에노스아이레스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "메트로폴리스": {
+            "title": "메트로폴리스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "엄마의바다": {
+            "title": "엄마의 바다",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "아버지의방": {
+            "title": "아버지의 방",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "나기노트": {
+            "title": "나기 노트",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "에브리타임": {
+            "title": "에브리타임",
+            "mentionCount": 3,
+            "commentCount": 0
+          },
+          "실버익스프레스": {
+            "title": "실버 익스프레스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
           "더스트": {
             "title": "더스트",
             "mentionCount": 1,
@@ -2553,11 +2665,6 @@
           "인헤릿": {
             "title": "인헤릿",
             "mentionCount": 1,
-            "commentCount": 0
-          },
-          "에브리타임": {
-            "title": "에브리타임",
-            "mentionCount": 3,
             "commentCount": 0
           },
           "미노타우로스": {
