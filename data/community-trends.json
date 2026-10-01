@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-01T13:08:07.537Z",
-  "weekStart": "2026-09-29",
-  "weekEnd": "2026-10-01",
-  "windowStart": "2026-09-29",
-  "windowEnd": "2026-10-01",
+  "generatedAt": "2026-10-01T15:11:04.543Z",
+  "weekStart": "2026-09-30",
+  "weekEnd": "2026-10-02",
+  "windowStart": "2026-09-30",
+  "windowEnd": "2026-10-02",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121723&playDt=20261002&tsId=TS0039&pno=1",
-      "score": 467.8,
-      "signal": 36.2,
-      "positiveSignal": 36.2,
-      "mentionCount": 5,
-      "rawPositiveSignal": 42,
-      "rawMentionCount": 6,
+      "score": 281.6,
+      "signal": 21.6,
+      "positiveSignal": 21.6,
+      "mentionCount": 2.9,
+      "rawPositiveSignal": 30,
+      "rawMentionCount": 4,
       "scheduleBackfill": false,
       "venueIds": [
         "kucine",
@@ -37,54 +37,6 @@
       "nextDate": "2026-10-02",
       "nextTime": "09:50",
       "evidence": [
-        {
-          "title": "스포) 가능한 사랑이 탐하는 '남'의 것",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865675&page=18",
-          "date": "2026-09-29",
-          "positive": 8,
-          "rawPositive": 8,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "감동",
-              "count": 2,
-              "weight": 4,
-              "score": 8,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 1,
-          "commentPositive": 8,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "스포) 꿈꾸던 모험은 가능한 사랑이 상영되는 지금 더 추천할만한 영화였음",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865562&page=19",
-          "date": "2026-09-29",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "추천",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "스포) 가능한 사랑 놓친부분 알려줄사람",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867212&page=1",
@@ -107,7 +59,7 @@
           "commentCount": 6,
           "commentPositive": 6,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "레터박스에서 가능한사랑이 버닝 점수 제쳤네",
@@ -138,7 +90,7 @@
           "commentCount": 4,
           "commentPositive": 8,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "스포) 가능한 사랑 찰나였지만 좋았던 장면",
@@ -162,138 +114,23 @@
           "commentCount": 3,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260911_9a7b3ad7.jpg"
     },
     {
       "rank": 2,
-      "title": "꿈꾸던 모험",
-      "posterUrl": "/assets/recommendation-posters/730c75bb764294f9.webp",
-      "localPosterUrl": "/assets/recommendation-posters/730c75bb764294f9.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121738&playDt=20261002&tsId=TS0057&pno=1",
-      "score": 173.7,
-      "signal": 13.2,
-      "positiveSignal": 13.2,
-      "mentionCount": 1.8,
-      "rawPositiveSignal": 24,
-      "rawMentionCount": 3,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "filmforum",
-        "cinecube"
-      ],
-      "venueNames": [
-        "필름포럼",
-        "씨네큐브 광화문"
-      ],
-      "nextDate": "2026-10-02",
-      "nextTime": "10:30",
-      "evidence": [
-        {
-          "title": "꿈꾸던 모험 2회차 하러 갔다가 누갤서 알게된 걸작 예고편보고왔다",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865608&page=18",
-          "date": "2026-09-29",
-          "positive": 16,
-          "rawPositive": 16,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "걸작",
-              "count": 2,
-              "weight": 6,
-              "score": 12,
-              "label": "strong"
-            },
-            {
-              "term": "재밌",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 4,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "스포) 꿈꾸던 모험은 가능한 사랑이 상영되는 지금 더 추천할만한 영화였음",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865562&page=19",
-          "date": "2026-09-29",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "추천",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "꿈꾸던 모험 엔딩곡 듣고 별 반개 올림",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866276&page=8",
-          "date": "2026-09-30",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "좋네",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            },
-            {
-              "term": "좋더라",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 4,
-          "commentPositive": 2,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260910_b6b3a8cc.jpg"
-    },
-    {
-      "rank": 3,
       "title": "이방인",
       "posterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
       "localPosterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-02&movieCd=029631&playSDT=2026-10-02&screenId=02&showSeq=2",
-      "score": 61,
-      "signal": 4,
-      "positiveSignal": 4,
-      "mentionCount": 1,
+      "score": 46.2,
+      "signal": 2.9,
+      "positiveSignal": 2.9,
+      "mentionCount": 0.7,
       "rawPositiveSignal": 4,
       "rawMentionCount": 1,
       "scheduleBackfill": false,
@@ -334,47 +171,54 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260903_7e3d6928.jpg"
     },
     {
-      "rank": 4,
-      "title": "포르테",
-      "posterUrl": "/assets/recommendation-posters/02b4fb126bbada3a.webp",
-      "localPosterUrl": "/assets/recommendation-posters/02b4fb126bbada3a.webp",
+      "rank": 3,
+      "title": "꿈꾸던 모험",
+      "posterUrl": "/assets/recommendation-posters/730c75bb764294f9.webp",
+      "localPosterUrl": "/assets/recommendation-posters/730c75bb764294f9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://indiespace.kr/notice/5494",
-      "score": 23,
-      "signal": 1,
-      "positiveSignal": 1,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121738&playDt=20261002&tsId=TS0057&pno=1",
+      "score": 33.5,
+      "signal": 2.1,
+      "positiveSignal": 2.1,
       "mentionCount": 0.5,
-      "rawPositiveSignal": 2,
+      "rawPositiveSignal": 4,
       "rawMentionCount": 1,
       "scheduleBackfill": false,
       "venueIds": [
-        "indiespace",
-        "filmforum"
+        "filmforum",
+        "cinecube"
       ],
       "venueNames": [
-        "인디스페이스",
-        "필름포럼"
+        "필름포럼",
+        "씨네큐브 광화문"
       ],
       "nextDate": "2026-10-02",
-      "nextTime": "12:50",
+      "nextTime": "10:30",
       "evidence": [
         {
-          "title": "포르테 <~ 이건 뭐냐",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865782&page=16",
-          "date": "2026-09-29",
-          "positive": 2,
-          "rawPositive": 2,
+          "title": "꿈꾸던 모험 엔딩곡 듣고 별 반개 올림",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866276&page=8",
+          "date": "2026-09-30",
+          "positive": 4,
+          "rawPositive": 4,
           "negative": 0,
           "positiveHits": [
             {
-              "term": "봐라",
+              "term": "좋네",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            },
+            {
+              "term": "좋더라",
               "count": 1,
               "weight": 2,
               "score": 2,
@@ -384,13 +228,47 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 2,
+          "commentCount": 4,
           "commentPositive": 2,
           "commentNegative": 0,
           "dayWeight": 0.518
         }
       ],
-      "posterSourceUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fc79q99%2FdJMcaaUohnn%2FAAAAAAAAAAAAAAAAAAAAANV33Og0pcI7HmBVuiDyugpgWjmPDDYQ_26VbGmM_cRW%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3Da9i3bddwCcyE5DSmMLZWURUWZEQ%253D"
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260910_b6b3a8cc.jpg"
+    },
+    {
+      "rank": 4,
+      "title": "철들 무렵",
+      "posterUrl": "/assets/recommendation-posters/08cf13afed798dc4.webp",
+      "localPosterUrl": "/assets/recommendation-posters/08cf13afed798dc4.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-02&movieCd=028449&playSDT=2026-10-02&screenId=02&showSeq=5",
+      "score": 0,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 0,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 0,
+      "scheduleBackfill": true,
+      "venueIds": [
+        "cinecube",
+        "indiespace",
+        "kucine",
+        "sangsangmadang",
+        "filmforum"
+      ],
+      "venueNames": [
+        "씨네큐브 광화문",
+        "인디스페이스",
+        "KU시네마테크",
+        "KT&G 상상마당 시네마",
+        "필름포럼"
+      ],
+      "nextDate": "2026-10-02",
+      "nextTime": "18:00",
+      "evidence": [],
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_0c0f92fb.jpg"
     }
   ],
   "festivalPicks": [
@@ -423,7 +301,7 @@
           "englishTitle": "Gravity",
           "section": "특별상영 & 까르뜨 블랑슈",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91282&c_idx=441&sp_idx=&QueryStep=2",
-          "mentionCount": 9
+          "mentionCount": 10
         },
         {
           "rank": 4,
@@ -473,24 +351,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 491,
-    "listedPostCount": 492,
-    "detailedPostCount": 42,
-    "commentFetchCount": 42,
-    "commentCount": 84,
+    "fetchedPostCount": 14,
+    "listedPostCount": 292,
+    "detailedPostCount": 0,
+    "commentFetchCount": 0,
+    "commentCount": 0,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 10,
+    "scannedPageCount": 6,
     "reachedLookbackStart": true,
-    "oldestScannedDate": "2026-09-27",
-    "newestScannedDate": "2026-10-01",
+    "oldestScannedDate": "2026-10-01",
+    "newestScannedDate": "2026-10-02",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-10-01",
-    "candidateWindowEnd": "2026-10-15",
+    "candidateWindowStart": "2026-10-02",
+    "candidateWindowEnd": "2026-10-16",
     "candidateCount": 83,
     "seedLookbackDays": 3,
-    "seedStart": "2026-09-29",
+    "seedStart": "2026-09-30",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-10-01",
+    "listWindowStart": "2026-10-02",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -498,7 +376,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-10-01"
+      "2026-10-02"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [
