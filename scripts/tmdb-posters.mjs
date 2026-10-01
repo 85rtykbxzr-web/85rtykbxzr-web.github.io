@@ -6,7 +6,6 @@ import { readFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { writeFileAtomic } from "./write-file-atomic.mjs";
-import { browserLiveConfigs, fetchBrowserVenue } from "../src/browser-live-schedule.mjs";
 import { filmSearchTitle, filmTitleKey } from "../src/film-title.mjs";
 
 const API = "https://api.themoviedb.org/3";
@@ -88,23 +87,12 @@ async function readJson(path, fallback) {
   }
 }
 
-// Venues collected in the visitor's browser never reach schedule.json, so their titles are
-// fetched here the same way; a venue that cannot be reached is simply skipped.
-async function browserLiveSessions(fetchImpl) {
-  const results = await Promise.allSettled(browserLiveConfigs.map((config) => fetchBrowserVenue(config, { fetchImpl })));
-  results.forEach((result, index) => {
-    if (result.status === "rejected") console.warn(`Ticket posters: skipped ${browserLiveConfigs[index].name} (${result.reason?.message || result.reason})`);
-  });
-  return results.flatMap((result) => (result.status === "fulfilled" ? result.value.sessions : []));
-}
-
 // Looks up titles that are new or stale, keeps the rest, and drops films no longer scheduled.
 export async function fillTicketPosters({ apiKey, now = Date.now(), fetchImpl = fetch } = {}) {
   const schedule = await readJson(join(root, "data/schedule.json"), { sessions: [] });
   const existing = await readJson(postersPath, { films: {} });
   const titles = new Map();
-  const liveSessions = await browserLiveSessions(fetchImpl);
-  for (const session of [...(schedule.sessions || []), ...liveSessions]) {
+  for (const session of schedule.sessions || []) {
     const key = filmTitleKey(session.title);
     const runtime = Number(String(session.tags || "").match(/(\d{2,3})분/)?.[1] || 0);
     if (key && !titles.has(key)) titles.set(key, { title: filmSearchTitle(session.title), runtime });
