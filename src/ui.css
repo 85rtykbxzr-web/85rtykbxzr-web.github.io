@@ -873,11 +873,10 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 /* home strip that opens the festival planner */
 .fest-strip-slot:empty { display: none; }
 .fest-strip-slot { margin-top: 12px; margin-bottom: 4px; }
-.fest-strip { display: flex; align-items: center; gap: 12px; width: 100%; padding: 14px 16px; border-radius: 16px; background: var(--strong); color: var(--on-strong); text-align: left; -webkit-tap-highlight-color: transparent; transition: transform 0.15s; }
+.fest-strip { display: flex; align-items: center; gap: 12px; width: 100%; padding: 13px 16px; border-radius: 16px; background: var(--strong); color: var(--on-strong); text-align: left; -webkit-tap-highlight-color: transparent; transition: transform 0.15s; }
 .fest-strip:active { transform: scale(0.99); }
 .fest-strip-tag { flex: none; padding: 3px 8px; border-radius: 6px; background: color-mix(in srgb, var(--on-strong) 14%, transparent); font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums; }
 .fest-strip-t { display: flex; flex-direction: column; min-width: 0; flex: 1; }
 .fest-strip-t b { font-size: 15px; line-height: 21px; font-weight: 700; letter-spacing: -0.01em; }
-.fest-strip-t small { font-size: 12.5px; line-height: 17px; opacity: 0.65; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .fest-strip .ui-icon { flex: none; width: 18px; height: 18px; opacity: 0.7; }
 .fpt.v-ink .tt-block { left: 1px; right: 0; }
