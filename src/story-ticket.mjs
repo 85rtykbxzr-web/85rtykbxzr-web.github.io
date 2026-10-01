@@ -257,81 +257,72 @@ function drawDayLine(ctx, ticket, cx, y, big, small) {
   ctx.fillText(rest, left + dayWidth + gap, y);
 }
 
-function drawPosterStyle(ctx, ticket, poster) {
-  drawBlurredBackdrop(ctx, poster, "#1b1a18");
-  ctx.fillStyle = "rgba(0,0,0,0.34)";
-  ctx.fillRect(0, 0, W, H);
+function drawPosterStyle(ctx, ticket, poster, k = 1) {
+  // Fill the story; a 2:3 poster loses about 8% on each side, which keeps the full-bleed look.
+  if (poster) drawCover(ctx, poster, 0, 0, W, H);
+  else {
+    ctx.fillStyle = "#1b1a18";
+    ctx.fillRect(0, 0, W, H);
+  }
+  const top = ctx.createLinearGradient(0, 0, 0, 520);
+  top.addColorStop(0, "rgba(0,0,0,0.5)");
+  top.addColorStop(1, "rgba(0,0,0,0)");
+  ctx.fillStyle = top;
+  ctx.fillRect(0, 0, W, 520);
+  const bottom = ctx.createLinearGradient(0, 900, 0, H);
+  bottom.addColorStop(0, "rgba(0,0,0,0)");
+  bottom.addColorStop(0.5, "rgba(0,0,0,0.62)");
+  bottom.addColorStop(1, "rgba(0,0,0,0.86)");
+  ctx.fillStyle = bottom;
+  ctx.fillRect(0, 900, W, H - 900);
   grain(ctx, 0.1);
 
-  const cx = W / 2;
-  const bottom = SAFE_BOTTOM + 90; // the reply bar is shorter than the ad-safe 20%
-  setTitleFont(ctx, 88);
-  const titleLines = wrapLines(ctx, ticket.title, W - 160, 2);
-  ctx.letterSpacing = "0px";
+  const x = 84;
+  const d = dateParts(ticket.date);
+  const titleSize = Math.round(84 * k);
+  setTitleFont(ctx, titleSize);
+  const titleLines = wrapLines(ctx, ticket.title, W - x * 2, 3);
   const meta = [ticket.venue, ticket.screen].filter(Boolean).join("  ·  ");
-  const textH = 64 + titleLines.length * 102 + (ticket.rating ? 84 : 0) + 70;
-
-  // whole poster as a card, as large as the space between the brand line and the text allows
-  const top = SAFE_TOP + 100;
-  const maxH = bottom - textH - 64 - top;
-  if (poster) {
-    const iw = poster.naturalWidth || poster.width;
-    const ih = poster.naturalHeight || poster.height;
-    let ph = maxH;
-    let pw = Math.round((ph * iw) / ih);
-    if (pw > W - 160) {
-      pw = W - 160;
-      ph = Math.round((pw * ih) / iw);
-    }
-    const px = Math.round(cx - pw / 2);
-    const py = Math.round(top + (maxH - ph) / 2);
-    ctx.save();
-    ctx.shadowColor = "rgba(0,0,0,0.45)";
-    ctx.shadowBlur = 50;
-    ctx.shadowOffsetY = 20;
-    roundRectPath(ctx, px, py, pw, ph, 14);
-    ctx.fillStyle = "#000";
-    ctx.fill();
-    ctx.restore();
-    ctx.save();
-    roundRectPath(ctx, px, py, pw, ph, 14);
-    ctx.clip();
-    ctx.drawImage(poster, px, py, pw, ph);
-    ctx.restore();
+  // laid out from the bottom up so the block ends just above the story reply bar
+  let y = SAFE_BOTTOM + 20;
+  ctx.textAlign = "left";
+  ctx.fillStyle = "rgba(255,255,255,0.74)";
+  ctx.font = `500 ${Math.round(32 * k)}px ${SANS}`;
+  ctx.fillText(meta, x, y);
+  y -= Math.round(70 * k);
+  if (ticket.rating) {
+    const size = Math.round(38 * k);
+    const width = drawStars(ctx, ticket.rating, x, y - size * 0.36, size, "#ffffff", "rgba(255,255,255,0.26)");
+    ctx.fillStyle = "#ffffff";
+    ctx.font = `600 ${Math.round(32 * k)}px ${SANS}`;
+    ctx.fillText(ratingText(ticket.rating), x + width + 16, y - 2);
+    y -= Math.round(80 * k);
   }
-
-  let y = bottom - textH + 64;
-  drawDayLine(ctx, ticket, cx, y, 58, 38);
-  ctx.textAlign = "center";
   ctx.fillStyle = "#ffffff";
-  setTitleFont(ctx, 88);
-  for (const line of titleLines) {
-    y += 102;
-    ctx.fillText(line, cx, y);
+  setTitleFont(ctx, titleSize);
+  for (let i = titleLines.length - 1; i >= 0; i--) {
+    ctx.fillText(titleLines[i], x, y);
+    y -= Math.round(titleSize * 1.16);
   }
   ctx.letterSpacing = "0px";
-  if (ticket.rating) {
-    y += 84;
-    const size = 42;
-    const label = ratingText(ticket.rating);
-    ctx.font = `600 34px ${SANS}`;
-    const labelWidth = ctx.measureText(label).width;
-    const starsWidth = size * 5 + size * 0.18 * 4;
-    const left = cx - (starsWidth + 16 + labelWidth) / 2;
-    drawStars(ctx, ticket.rating, left, y - 14, size, "#ffffff", "rgba(255,255,255,0.26)");
-    ctx.fillStyle = "#ffffff";
-    ctx.textAlign = "left";
-    ctx.fillText(label, left + starsWidth + 16, y);
-    ctx.textAlign = "center";
-  }
-  y += 70;
-  ctx.fillStyle = "rgba(255,255,255,0.74)";
-  ctx.font = `500 34px ${SANS}`;
-  ctx.fillText(meta, cx, y);
-
+  y -= Math.round(4 * k);
+  const day = d ? `${Number(d.mm)}월 ${Number(d.dd)}일` : ticket.date;
   ctx.fillStyle = "#ffffff";
-  ctx.font = `400 38px ${BRAND}`;
-  ctx.fillText("서울독립영화관시간표", cx, SAFE_TOP + 44);
+  ctx.font = `700 ${Math.round(54 * k)}px ${SANS}`;
+  ctx.fillText(day, x, y);
+  const dayWidth = ctx.measureText(day).width;
+  ctx.fillStyle = "rgba(255,255,255,0.78)";
+  ctx.font = `500 ${Math.round(36 * k)}px ${SANS}`;
+  ctx.fillText(d ? `${d.ko}요일  ${ticket.time}` : ticket.time, x + dayWidth + 18 * k, y);
+
+  ctx.textAlign = "center";
+  ctx.save();
+  ctx.shadowColor = "rgba(0,0,0,0.4)";
+  ctx.shadowBlur = 12;
+  ctx.fillStyle = "#ffffff";
+  ctx.font = `400 ${Math.round(36 * k)}px ${BRAND}`;
+  ctx.fillText("서울독립영화관시간표", W / 2, SAFE_TOP + 44);
+  ctx.restore();
 }
 
 function drawTicketStyle(ctx, ticket, poster, seed) {
@@ -571,8 +562,8 @@ function drawReceiptStyle(ctx, ticket, poster, seed) {
  * @param {{ title: string, venue: string, screen?: string, date: string, time: string, rating?: number, posterUrl?: string, id?: string }} ticket
  * @param {keyof typeof ticketStyles} styleKey
  */
-export async function drawStoryTicket(ticket, styleKey = "poster") {
-  const fontLoads = [`700 92px ${SANS}`, `600 36px ${SANS}`, `500 34px ${SANS}`, `400 38px ${BRAND}`].map((font) =>
+export async function drawStoryTicket(ticket, styleKey = "poster", { typeScale = 1 } = {}) {
+  const fontLoads = [`700 84px ${SANS}`, `600 32px ${SANS}`, `500 36px ${SANS}`, `400 36px ${BRAND}`].map((font) =>
     document.fonts?.load(font, `${ticket.title}${ticket.venue}${ticket.screen || ""}서울독립영화관시간표극장상영관시간좌석편월일화수목금토요0123456789.:·TOTALSEOUL`).catch(() => null)
   );
   const [poster] = await Promise.all([loadPoster(ticket.posterUrl), ...fontLoads]);
@@ -585,6 +576,6 @@ export async function drawStoryTicket(ticket, styleKey = "poster") {
   const seed = hash(`${ticket.id}${ticket.title}`);
   if (styleKey === "ticket") drawTicketStyle(ctx, ticket, poster, seed);
   else if (styleKey === "receipt") drawReceiptStyle(ctx, ticket, poster, seed);
-  else drawPosterStyle(ctx, ticket, poster);
+  else drawPosterStyle(ctx, ticket, poster, typeScale);
   return canvas;
 }
