@@ -257,7 +257,7 @@ function drawDayLine(ctx, ticket, cx, y, big, small) {
   ctx.fillText(rest, left + dayWidth + gap, y);
 }
 
-function drawPosterStyle(ctx, ticket, poster, { typeScale: k = 1.05, brandSize = 34, brandAlpha = 1 } = {}) {
+function drawPosterStyle(ctx, ticket, poster, { typeScale: k = 1.05 } = {}) {
   // Fill the story; a 2:3 poster loses about 8% on each side, which keeps the full-bleed look.
   if (poster) drawCover(ctx, poster, 0, 0, W, H);
   else {
@@ -314,15 +314,6 @@ function drawPosterStyle(ctx, ticket, poster, { typeScale: k = 1.05, brandSize =
   ctx.fillStyle = "rgba(255,255,255,0.78)";
   ctx.font = `500 ${Math.round(36 * k)}px ${SANS}`;
   ctx.fillText(d ? `${d.ko}요일  ${ticket.time}` : ticket.time, x + dayWidth + 18 * k, y);
-
-  ctx.textAlign = "center";
-  ctx.save();
-  ctx.shadowColor = "rgba(0,0,0,0.4)";
-  ctx.shadowBlur = 12;
-  ctx.fillStyle = `rgba(255,255,255,${brandAlpha})`;
-  ctx.font = `400 ${Math.round(brandSize * k)}px ${BRAND}`;
-  ctx.fillText("서울독립영화관시간표", W / 2, SAFE_TOP + 44);
-  ctx.restore();
 }
 
 function drawTicketStyle(ctx, ticket, poster, seed) {
