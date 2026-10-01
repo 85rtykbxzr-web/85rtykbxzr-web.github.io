@@ -234,7 +234,6 @@ main { padding-top: 72px; }
 .hero-poster:hover img { transform: scale(1.03); }
 .hero-text { min-width: 0; }
 .hero-label { font-size: 13px; line-height: 18px; font-weight: 600; color: rgb(255 255 255 / 0.78); }
-.hero-src { margin-left: 8px; padding-left: 8px; border-left: 1px solid rgb(255 255 255 / 0.3); font-weight: 500; color: rgb(255 255 255 / 0.7); }
 .hero-title { margin-top: 8px; font-size: 32px; line-height: 40px; font-weight: 700; letter-spacing: -0.02em; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .hero-facts { margin-top: 6px; font-size: 15px; line-height: 22px; color: rgb(255 255 255 / 0.78); }
 .hero-facts:empty { display: none; }
@@ -359,8 +358,7 @@ main { padding-top: 72px; }
   .hero-in { gap: 16px; padding: 18px; }
   .hero-poster { width: 100px; border-radius: 10px; }
   .hero-label { font-size: 12px; line-height: 16px; }
-  .hero-src { display: none; }
-  .hero-title { margin-top: 4px; font-size: 21px; line-height: 28px; }
+    .hero-title { margin-top: 4px; font-size: 21px; line-height: 28px; }
   .hero-facts { margin-top: 2px; font-size: 13px; line-height: 18px; }
   .hero-times { flex-direction: column; align-items: flex-start; gap: 6px; margin-top: 14px; }
   .glass { height: 34px; padding: 0 12px; gap: 6px; border-radius: 10px; font-size: 13px; }
@@ -458,8 +456,7 @@ main { padding-top: 72px; }
 .fp-rank { flex: none; width: 18px; font-size: 14px; font-weight: 700; color: var(--t4); font-variant-numeric: tabular-nums; }
 .fest-picks li:nth-child(-n + 3) .fp-rank { color: var(--t1); }
 .fp-title { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; color: var(--t1); }
-.fp-sec { flex: none; max-width: 40%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; color: var(--t4); }
-.fp-n { flex: none; margin-left: auto; font-size: 13px; color: var(--t4); font-variant-numeric: tabular-nums; }
+.fp-sec { flex: none; margin-left: auto; max-width: 45%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; color: var(--t4); }
 @media (max-width: 767px) {
   .fest-picks ol { grid-template-columns: 1fr; }
   .fp-sec { display: none; }

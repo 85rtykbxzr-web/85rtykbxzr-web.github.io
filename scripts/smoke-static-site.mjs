@@ -30,7 +30,7 @@ const brotliDecompressAsync = promisify(brotliDecompress);
 const gunzipAsync = promisify(gunzip);
 const allowedTrendTopLevelFields = new Set(["festivalPicks", "generatedAt", "items"]);
 const allowedFestivalPickFields = new Set(["festivalId", "items", "name"]);
-const allowedFestivalPickItemFields = new Set(["mentionCount", "rank", "section", "title", "url"]);
+const allowedFestivalPickItemFields = new Set(["rank", "section", "title", "url"]);
 const allowedTrendItemFields = new Set([
   "nextDate",
   "nextTime",

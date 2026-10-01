@@ -1290,12 +1290,12 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
     if (items.length < 3) return "";
     return `
       <div class="fest-picks">
-        <p class="fest-picks-h"><strong>관심작 순위</strong><span>누벨바그 갤러리 언급 많은 순</span></p>
+        <p class="fest-picks-h"><strong>관심작 순위</strong></p>
         <ol>
           ${items
             .map((item, index) => {
               const url = safeExternalUrl(item.url, "");
-              const body = `<span class="fp-rank">${index + 1}</span><span class="fp-title">${escapeHtml(item.title)}</span>${item.section ? `<span class="fp-sec">${escapeHtml(item.section)}</span>` : ""}<span class="fp-n">언급 ${Number(item.mentionCount) || 0}</span>`;
+              const body = `<span class="fp-rank">${index + 1}</span><span class="fp-title">${escapeHtml(item.title)}</span>${item.section ? `<span class="fp-sec">${escapeHtml(item.section)}</span>` : ""}`;
               return `<li>${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${body}</a>` : `<span class="fp-row">${body}</span>`}</li>`;
             })
             .join("")}
@@ -1324,11 +1324,6 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
   function shortVenueName(venue) {
     const names = { cinecube: "씨네큐브", sangsangmadang: "상상마당", momo: "아트하우스 모모", kucine: "KU시네마테크", kofa: "KOFA" };
     return names[venue?.id] || venue?.name || "상영관";
-  }
-
-  // Picks are ranked from reactions in the DC Inside nouvellevague gallery (scripts/update-community-trends.mjs).
-  function trendSourceLabel() {
-    return "누벨바그 갤러리 반응";
   }
 
   function trendFactsText(item) {
@@ -1366,7 +1361,6 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
 
   function trendHeroMarkup(item, index) {
     const posterItem = { posterUrl: item.posterUrl, posterSourceUrl: item.posterSourceUrl };
-    const source = trendSourceLabel();
     const choices = trendTimeChoices(item, 3);
     const times = choices.length
       ? `<div class="hero-times">${choices
@@ -1384,7 +1378,7 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
             ${posterMarkup(posterItem, item.title, "", "", { priority: index === 0 })}
           </a>
           <div class="hero-text">
-            <p class="hero-label">이번 주 추천 ${escapeHtml(String(item.rank || index + 1))}위${source ? `<span class="hero-src">${escapeHtml(source)}</span>` : ""}</p>
+            <p class="hero-label">이번 주 추천 ${escapeHtml(String(item.rank || index + 1))}위</p>
             <h3 class="hero-title">${escapeHtml(item.title)}</h3>
             <p class="hero-facts">${escapeHtml(trendFactsText(item))}</p>
             ${times}

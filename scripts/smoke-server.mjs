@@ -195,7 +195,7 @@ async function main() {
       trends.festivalPicks.every(
         (festival) =>
           Object.keys(festival).every((key) => ["festivalId", "items", "name"].includes(key)) &&
-          festival.items.every((item) => Object.keys(item).every((key) => ["mentionCount", "rank", "section", "title", "url"].includes(key)))
+          festival.items.every((item) => Object.keys(item).every((key) => ["rank", "section", "title", "url"].includes(key)))
       ),
       "community trends exposes an unexpected festival pick field"
     );

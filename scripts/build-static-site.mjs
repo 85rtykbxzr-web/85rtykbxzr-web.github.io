@@ -94,8 +94,7 @@ function publicFestivalPicks(trends) {
       rank: Number(item.rank) || index + 1,
       title: String(item.title || ""),
       section: String(item.section || ""),
-      url: String(item.url || ""),
-      mentionCount: Number(item.mentionCount) || 0
+      url: String(item.url || "")
     }))
   }));
 }
