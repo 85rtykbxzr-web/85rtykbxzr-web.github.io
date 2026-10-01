@@ -25,7 +25,7 @@ const PLACE_FILTERS = [
 const heart = (filled) =>
   `<svg viewBox="0 0 24 24" aria-hidden="true"><path class="${filled ? "is-filled" : ""}" d="M12 20.3s-7.3-4.4-9.1-9.1C1.6 7.9 3.8 4.6 7.2 4.6c2 0 3.6 1.1 4.8 2.7 1.2-1.6 2.8-2.7 4.8-2.7 3.4 0 5.6 3.3 4.3 6.6-1.8 4.7-9.1 9.1-9.1 9.1Z"/></svg>`;
 
-export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUrl, kstDateString, festivalLogo = () => "" }) {
+export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUrl, kstDateString }) {
   const state = { data: null, festivalId: "", day: "", mode: "all", place: "", gv: false, query: "", window: null, loading: null, timer: 0 };
 
   const storageKey = () => `fest-plan:v1:${state.festivalId}`;
@@ -393,11 +393,7 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
     const days = festivalDays();
     const today = kstDateString();
     if (!days.includes(state.day)) state.day = days.includes(today) ? today : days.find((date) => sessionsOn(date).length > 5) || days[0];
-    $("#fpTitle").textContent = data.name;
-    const logo = $("#fpLogo");
-    const logoUrl = festivalLogo(festivalId);
-    logo.hidden = !logoUrl;
-    if (logoUrl && logo.getAttribute("src") !== logoUrl) logo.src = logoUrl;
+    $("#fpTitle").textContent = data.officialName || data.name;
     render();
     // keep the time-now line and the 상영 중 / 다음 marks current while the sheet is open
     clearInterval(state.timer);

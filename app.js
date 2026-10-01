@@ -2597,7 +2597,7 @@ import { createFestivalPlanner } from "./src/festival-planner-ui.mjs";
   const plannerFestivalPattern = /^biff-/;
   let festivalPlanner = null;
   function planner() {
-    festivalPlanner ||= createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUrl, kstDateString, festivalLogo });
+    festivalPlanner ||= createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUrl, kstDateString });
     return festivalPlanner;
   }
 
@@ -2606,12 +2606,6 @@ import { createFestivalPlanner } from "./src/festival-planner-ui.mjs";
     const lifecycle = lifecycleFromRange({ start: row.startDate, end: row.endDate });
     if (lifecycle?.expired) return "";
     return `<button class="book fest-plan-btn" type="button" data-fest-planner="${escapeHtml(row.festivalId)}">시간표 짜기</button>`;
-  }
-
-  function festivalLogo(festivalId) {
-    const festival = (state.data?.majorFestivals || []).find((item) => item.id === festivalId);
-    const path = festival?.logoPath || festival?.logoUrl || "";
-    return path && !/^https?:/.test(path) ? `/${path.replace(/^\/+/, "")}` : path;
   }
 
   // Home strip from two weeks before the festival to its last day: the planner, one tap away.

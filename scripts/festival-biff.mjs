@@ -150,6 +150,8 @@ export async function refreshBiff({ force = false, now = new Date() } = {}) {
   const output = {
     festivalId: festival.id,
     name: festival.name,
+    // BIFF began in 1996: 2026 is the 31st edition (제31회)
+    officialName: `제${Number(festival.startDate.slice(0, 4)) - 1995}회 ${festival.name}`,
     startDate: festival.startDate,
     endDate: festival.endDate,
     ticketUrl: "https://www.biff.kr/kor/html/ticket/ticket_info.asp",
