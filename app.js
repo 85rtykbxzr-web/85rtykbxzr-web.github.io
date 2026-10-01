@@ -145,6 +145,7 @@ import { filmTitleKey } from "./src/film-title.mjs";
   };
 
   const $ = (selector) => document.querySelector(selector);
+  const $all = (selector) => [...document.querySelectorAll(selector)];
   const iconSpritePath = "/assets/lucide-sprite.svg";
 
   function iconMarkup(name, className = "") {
@@ -513,6 +514,26 @@ import { filmTitleKey } from "./src/film-title.mjs";
     }).catch(() => {});
   }
 
+  // Live-collected venues by state: "error" once both tries failed with nothing cached,
+  // "pending" while the first answer is still on its way.
+  function browserLiveStates() {
+    const rows = usesBrowserLive(state.data) ? state.data.meta.browserLive || [] : [];
+    return new Map(rows.map((row) => [row.venueId, row.status]));
+  }
+
+  function failedVenueCards(compact) {
+    if (state.query.trim()) return "";
+    const venues = venueMap();
+    return [...browserLiveStates()]
+      .filter(([, status]) => status === "error")
+      .map(([venueId]) => venueCardMarkup(venueId, venues[venueId], "보류", `
+        <div class="venue-failed">
+          <p>시간표를 지금 불러오지 못했어요. 잠시 후 다시 시도해 주세요.</p>
+          <button type="button" data-retry-browser-live>다시 시도</button>
+        </div>`, compact, "is-failed"))
+      .join("");
+  }
+
   function browserLiveIncomplete() {
     return usesBrowserLive(state.data) && (state.data.meta.browserLive || []).filter((row) => row.status === "ok").length < browserLiveConfigs.length;
   }
@@ -540,7 +561,7 @@ import { filmTitleKey } from "./src/film-title.mjs";
       }
       notice.innerHTML = rows.map((row) => {
         const name = browserLiveConfigs.find((config) => config.venueId === row.venueId)?.name || row.venueId;
-        const detail = row.status === "ok" ? `${row.sessions}회` : row.message || "";
+        const detail = row.status === "ok" ? `${row.sessions}회${row.stale ? ` (저장본, ${row.message})` : ""}` : row.message || "";
         return `<div>${escapeHtml(name)} · ${escapeHtml(row.status)}${detail ? ` · ${escapeHtml(detail)}` : ""}</div>`;
       }).join("");
     }
@@ -1160,7 +1181,7 @@ import { filmTitleKey } from "./src/film-title.mjs";
     return `<a class="tchip${booking ? "" : " is-ghost"}" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${label} ${actionLabel(session)}${seat ? ` 잔여 ${seat.left}석` : ""}`)}">${dayMarkup}<span>${escapeHtml(time)}</span>${seatMarkup}</a>`;
   }
 
-  function venueCardMarkup(key, venue, countLabel, body, compact = false) {
+  function venueCardMarkup(key, venue, countLabel, body, compact = false, extraClass = "") {
     const venueName = venue?.name || key || "상영관";
     const anchorId = venueAnchorId(key, compact ? "mobile" : "desktop");
     const officialUrl = venueOfficialUrl(venue);
@@ -1168,7 +1189,7 @@ import { filmTitleKey } from "./src/film-title.mjs";
       ? `<a href="${escapeHtml(officialUrl)}" target="_blank" rel="noopener noreferrer" title="${escapeHtml(`${venueName} 공식 사이트`)}">${escapeHtml(venueName)}</a>`
       : escapeHtml(venueName);
     return `
-      <article id="${escapeHtml(anchorId)}" class="venue">
+      <article id="${escapeHtml(anchorId)}" class="venue${extraClass ? ` ${extraClass}` : ""}">
         <div class="venue-h">
           <div>
             <h3>${nameMarkup}</h3>
@@ -1259,13 +1280,14 @@ import { filmTitleKey } from "./src/film-title.mjs";
         : emptyMarkup(emptyScheduleMessage("조건에 맞는 상영 회차가 없습니다."));
     }
     const groups = groupedSessionEntries(filtered, (session) => session.venueId || "unknown", { sortByFavorites: true });
+    const failed = failedVenueCards(compact);
     if (!groups.length) {
       const message = state.view === "today" ? `${formatDate(activeDate)}에 맞는 상영 회차가 없습니다.` : "조건에 맞는 상영 회차가 없습니다.";
-      return emptyMarkup(emptyScheduleMessage(message));
+      return failed || emptyMarkup(emptyScheduleMessage(message));
     }
     return groups
       .map((group) => (state.view === "venue" ? venueViewCard(group.key, group.sessions, compact) : agendaVenueSection(group.key, group.sessions, compact)))
-      .join("");
+      .join("") + failed;
   }
 
   function updateSoonBadges() {
@@ -1906,11 +1928,17 @@ import { filmTitleKey } from "./src/film-title.mjs";
     if (!target) return;
     target.parentElement?.classList.toggle("hidden", !items.length);
     const mapToggle = `<button class="chip map-toggle${state.mapOpen ? " is-on" : ""}" type="button" data-venue-map-toggle aria-pressed="${state.mapOpen}">${mapIconMarkup}지도</button>`;
+    const liveStates = browserLiveStates();
     target.innerHTML = mapToggle + items
       .map((item) => {
         const name = item.displayName || item.name;
         const favorite = isFavoriteVenue(item.id);
-        return `<button class="chip${item.count ? "" : " is-empty"}" type="button" data-venue-jump="${escapeHtml(item.id)}" aria-label="${escapeHtml(`${item.name} ${item.countLabel}${favorite ? ", 즐겨찾기" : ""}`)}">${favorite ? iconMarkup("star-fill") : ""}${escapeHtml(name)}<span class="n">${item.count.toLocaleString("ko-KR")}</span></button>`;
+        const live = liveStates.get(item.id);
+        if (live === "error") {
+          return `<button class="chip is-failed" type="button" data-venue-jump="${escapeHtml(item.id)}" aria-label="${escapeHtml(`${item.name} 시간표 불러오기 실패`)}">${favorite ? iconMarkup("star-fill") : ""}${escapeHtml(name)}<span class="n">보류</span></button>`;
+        }
+        const count = live === "pending" && !item.count ? "…" : item.count.toLocaleString("ko-KR");
+        return `<button class="chip${item.count ? "" : " is-empty"}" type="button" data-venue-jump="${escapeHtml(item.id)}" aria-label="${escapeHtml(`${item.name} ${live === "pending" && !item.count ? "확인 중" : item.countLabel}${favorite ? ", 즐겨찾기" : ""}`)}">${favorite ? iconMarkup("star-fill") : ""}${escapeHtml(name)}<span class="n">${count}</span></button>`;
       })
       .join("");
   }
@@ -2332,9 +2360,14 @@ import { filmTitleKey } from "./src/film-title.mjs";
             const thumb = safeImageUrl(posterSource(program));
             const full = thumb ? safeImageUrl(fullSizeBoardImage(thumb)) : "";
             const image = full ? posterMarkup({ posterUrl: full, posterSourceUrl: full !== thumb ? thumb : "" }, title, "prog-media-img", "", { decorative: true }) : "";
-            // No image at all: the card stays a plain text card instead of showing an empty frame.
-            // A tone sits under the image in case it fails to load.
-            const media = image ? `<span class="prog-media" aria-hidden="true"><span class="prog-tone is-tone-${programTone(title)}"></span>${image}</span>` : "";
+            // A post without its own image shows the venue's mark on a soft tone, so cards keep
+            // one shape; the tone also sits under a real image in case it fails to load.
+            const mark = !image && venueMarkAssets[program.venueId];
+            const media = image
+              ? `<span class="prog-media" aria-hidden="true"><span class="prog-tone is-tone-${programTone(title)}"></span>${image}</span>`
+              : mark
+                ? `<span class="prog-media is-mark" aria-hidden="true"><span class="prog-tone is-tone-${programTone(title)}"></span><span class="prog-mark"><img src="${escapeHtml(mark)}" alt="" loading="lazy" decoding="async" /></span></span>`
+                : "";
             return `
               <a class="prog${media ? " has-media" : ""}" href="${escapeHref(program.url)}" target="_blank" rel="noopener noreferrer">
                 ${media}
@@ -3068,8 +3101,68 @@ import { filmTitleKey } from "./src/film-title.mjs";
         return `<button class="ticket-star${fill}" type="button" data-ticket-star="${value}" aria-label="별점 ${value}점">${ticketStarMarkup}</button>`;
       })
       .join("");
-    const value = $("#ticketRatingValue");
-    if (value) value.textContent = rating ? rating.toFixed(1) : "별점 없음";
+    paintTicketStars(rating);
+  }
+
+  // Updates the stars in place (no re-render) so a drag stays smooth; the star under the
+  // finger swells and settles back once the finger moves on.
+  function paintTicketStars(rating, hotValue = 0) {
+    $all("#ticketRating .ticket-star").forEach((star) => {
+      const value = Number(star.dataset.ticketStar);
+      star.classList.toggle("is-full", rating >= value);
+      star.classList.toggle("is-half", rating < value && rating >= value - 0.5);
+      star.classList.toggle("is-hot", value === hotValue);
+    });
+    const label = $("#ticketRatingValue");
+    if (label) label.textContent = rating ? rating.toFixed(1) : "별점 없음";
+  }
+
+  // Half-star value under a pointer x: the left half of a star is .5, the right half whole.
+  function ticketRatingAt(clientX) {
+    const stars = $all("#ticketRating .ticket-star");
+    if (!stars.length) return 0;
+    for (const star of stars) {
+      const rect = star.getBoundingClientRect();
+      if (clientX <= rect.right) {
+        const value = Number(star.dataset.ticketStar);
+        return clientX < rect.left + rect.width / 2 ? Math.max(0.5, value - 0.5) : value;
+      }
+    }
+    return 5;
+  }
+
+  function bindTicketRatingDrag() {
+    const target = $("#ticketRating");
+    if (!target) return;
+    let drag = null;
+    const finish = (event) => {
+      if (!drag) return;
+      const value = ticketRatingAt(event.clientX);
+      // a tap on the current score clears it; a drag always keeps where it ended
+      ticketState.rating = !drag.moved && value === drag.startRating ? 0 : value;
+      drag = null;
+      paintTicketStars(ticketState.rating);
+      renderTicketPreview();
+    };
+    target.addEventListener("pointerdown", (event) => {
+      if (!event.target.closest(".ticket-star")) return;
+      event.preventDefault();
+      target.setPointerCapture?.(event.pointerId);
+      drag = { startX: event.clientX, startRating: ticketState.rating, moved: false };
+      const value = ticketRatingAt(event.clientX);
+      paintTicketStars(value, Math.ceil(value));
+    });
+    target.addEventListener("pointermove", (event) => {
+      if (!drag) return;
+      if (Math.abs(event.clientX - drag.startX) > 4) drag.moved = true;
+      const value = ticketRatingAt(event.clientX);
+      paintTicketStars(value, Math.ceil(value));
+    });
+    target.addEventListener("pointerup", finish);
+    target.addEventListener("pointercancel", () => {
+      drag = null;
+      paintTicketStars(ticketState.rating);
+    });
   }
 
   // Tapping the left half of a star gives a half point; tapping the current score clears it.
@@ -3163,7 +3256,7 @@ import { filmTitleKey } from "./src/film-title.mjs";
     document.body.append(link);
     link.click();
     link.remove();
-    showToast("티켓 이미지를 저장했어요");
+    showToast("이미지를 저장했어요");
   }
 
   const viewOrder = ["today", "film", "venue"];
@@ -3200,6 +3293,7 @@ import { filmTitleKey } from "./src/film-title.mjs";
     $("#searchInput")?.addEventListener("input", (event) => syncSearch(event.target.value));
     // the picker re-renders its file input, so the change listener is delegated
     $("#ticketSessionSelects")?.addEventListener("change", onTicketSelectChange);
+    bindTicketRatingDrag();
     $("#ticketPicker")?.addEventListener("change", (event) => {
       if (event.target.id === "ticketPhoto") setTicketPhoto(event.target.files?.[0]);
     });
@@ -3284,6 +3378,14 @@ import { filmTitleKey } from "./src/film-title.mjs";
         return;
       }
 
+      const retryLive = event.target.closest("[data-retry-browser-live]");
+      if (retryLive) {
+        retryLive.disabled = true;
+        retryLive.textContent = "불러오는 중…";
+        refreshScheduleData({ force: true });
+        return;
+      }
+
       if (event.target.closest("[data-ticket-open]")) {
         event.preventDefault();
         openTicketMaker();
@@ -3304,10 +3406,13 @@ import { filmTitleKey } from "./src/film-title.mjs";
         return;
       }
 
+      // pointer input is handled by the drag code; this path is the keyboard (Enter/Space)
       const starButton = event.target.closest("[data-ticket-star]");
       if (starButton) {
-        setTicketRating(starButton, event);
-        renderTicketPreview();
+        if (event.detail === 0) {
+          setTicketRating(starButton, event);
+          renderTicketPreview();
+        }
         return;
       }
 

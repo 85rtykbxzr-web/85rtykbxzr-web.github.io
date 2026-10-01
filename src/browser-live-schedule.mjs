@@ -132,21 +132,69 @@ export async function fetchBrowserVenue(config, { fetchImpl = fetch, now = new D
   return { venueId: config.venueId, sourceId: config.sourceId, sessions, checkedAt: new Date().toISOString(), status: "ok" };
 }
 
-export async function refreshBrowserLiveSchedule(base, { fetchImpl = fetch, onProgress = () => {}, now = new Date() } = {}) {
+// The cinemas' API answers a visitor's browser most of the time but not always, so one
+// failure should not empty a venue: retry once, keep at most three venues in flight, and
+// fall back to the last good result this browser saw (up to 12 hours old).
+const cacheMaxAgeMs = 12 * 60 * 60 * 1000;
+
+function localCache() {
+  try {
+    const storage = globalThis.localStorage;
+    if (!storage) return null;
+    return {
+      read(venueId) {
+        try { return JSON.parse(storage.getItem(`browser-live:v1:${venueId}`) || "null"); } catch { return null; }
+      },
+      write(venueId, value) {
+        try { storage.setItem(`browser-live:v1:${venueId}`, JSON.stringify(value)); } catch { /* storage full or blocked */ }
+      }
+    };
+  } catch {
+    return null;
+  }
+}
+
+async function fetchVenueWithRetry(config, { fetchImpl, now, retryDelayMs }) {
+  try {
+    return await fetchBrowserVenue(config, { fetchImpl, now });
+  } catch (error) {
+    await new Promise((resolve) => setTimeout(resolve, retryDelayMs));
+    return fetchBrowserVenue(config, { fetchImpl, now });
+  }
+}
+
+function cachedVenue(cache, config, now, message) {
+  const cached = cache?.read(config.venueId);
+  const age = Date.now() - Date.parse(cached?.checkedAt || 0);
+  if (!cached || !Array.isArray(cached.sessions) || !(age >= 0 && age < cacheMaxAgeMs)) return null;
+  const today = todayKst(now);
+  const sessions = cached.sessions.filter((session) => session?.venueId === config.venueId && session.date >= today);
+  if (!sessions.length) return null;
+  return { venueId: config.venueId, sourceId: config.sourceId, sessions, checkedAt: cached.checkedAt, status: "ok", stale: true, message };
+}
+
+export async function refreshBrowserLiveSchedule(base, { fetchImpl = fetch, onProgress = () => {}, now = new Date(), retryDelayMs = 1500, concurrency = 3, cache = localCache() } = {}) {
   if (!usesBrowserLive(base)) return base;
   let result = { ...base, meta: { ...base.meta, browserLive: browserLiveConfigs.map((config) => ({ venueId: config.venueId, status: "pending" })) } };
   onProgress(result);
-  // One timetable request per cinema at a time; seven small independent streams.
-  await Promise.all(browserLiveConfigs.map(async (config) => {
-    let outcome;
-    try { outcome = await fetchBrowserVenue(config, { fetchImpl, now }); }
-    catch (error) { outcome = { venueId: config.venueId, status: "error", message: error.message }; }
-    const sessions = result.sessions.filter((session) => session.venueId !== config.venueId);
-    if (outcome.status === "ok") sessions.push(...outcome.sessions);
-    sessions.sort((a, b) => `${a.date} ${a.timeSort} ${a.id}`.localeCompare(`${b.date} ${b.timeSort} ${b.id}`));
-    const browserLive = result.meta.browserLive.map((row) => row.venueId === config.venueId ? { venueId: outcome.venueId, status: outcome.status, checkedAt: outcome.checkedAt || null, message: outcome.message || "", sessions: outcome.sessions?.length || 0 } : row);
-    result = { ...result, sessions, meta: { ...result.meta, browserLive } };
-    onProgress(result);
-  }));
+  const queue = [...browserLiveConfigs];
+  const worker = async () => {
+    for (let config = queue.shift(); config; config = queue.shift()) {
+      let outcome;
+      try {
+        outcome = await fetchVenueWithRetry(config, { fetchImpl, now, retryDelayMs });
+        cache?.write(config.venueId, { checkedAt: outcome.checkedAt, sessions: outcome.sessions });
+      } catch (error) {
+        outcome = cachedVenue(cache, config, now, error.message) || { venueId: config.venueId, status: "error", message: error.message };
+      }
+      const sessions = result.sessions.filter((session) => session.venueId !== config.venueId);
+      if (outcome.status === "ok") sessions.push(...outcome.sessions);
+      sessions.sort((a, b) => `${a.date} ${a.timeSort} ${a.id}`.localeCompare(`${b.date} ${b.timeSort} ${b.id}`));
+      const browserLive = result.meta.browserLive.map((row) => row.venueId === config.venueId ? { venueId: outcome.venueId, status: outcome.status, stale: Boolean(outcome.stale), checkedAt: outcome.checkedAt || null, message: outcome.message || "", sessions: outcome.sessions?.length || 0 } : row);
+      result = { ...result, sessions, meta: { ...result.meta, browserLive } };
+      onProgress(result);
+    }
+  };
+  await Promise.all(Array.from({ length: Math.max(1, concurrency) }, worker));
   return result;
 }

@@ -92,8 +92,9 @@ body {
 .nav a { padding: 8px 12px; border-radius: 10px; font-size: 15px; font-weight: 600; color: var(--t4); transition: background-color 0.15s, color 0.15s; }
 .nav a:hover { background: var(--fill); color: var(--t1); }
 .nav a[aria-current] { color: var(--t1); }
-.nav-ticket { margin-left: 4px; padding: 8px 14px; border-radius: 10px; background: var(--fill); font-size: 15px; font-weight: 700; color: var(--t1); transition: filter 0.15s; }
-.nav-ticket:hover { filter: brightness(0.96); }
+/* same look as the section links beside it */
+.nav-ticket { padding: 8px 12px; border-radius: 10px; font-size: 15px; font-weight: 600; color: var(--t4); transition: background-color 0.15s, color 0.15s; }
+.nav-ticket:hover { background: var(--fill); color: var(--t1); }
 .tools { margin-left: auto; display: flex; align-items: center; gap: 8px; }
 .search { display: flex; align-items: center; gap: 8px; height: 40px; width: 280px; padding: 0 14px; border-radius: 12px; background: var(--fill); color: var(--t4); cursor: text; }
 .search input { flex: 1; min-width: 0; height: 100%; padding: 0; border: 0; background: none; outline: none; box-shadow: none; font-size: 15px; color: var(--t1); }
@@ -576,15 +577,15 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .ticket-preview:not([src]) { visibility: hidden; }
 .ticket-controls { display: flex; align-items: center; justify-content: center; gap: 12px; }
 .ticket-rating-wrap { display: flex; align-items: center; gap: 8px; min-width: 0; }
-.ticket-rating { display: flex; }
+.ticket-rating { display: flex; touch-action: none; -webkit-user-select: none; user-select: none; }
 .ticket-star { width: 48px; height: 52px; display: grid; place-items: center; -webkit-tap-highlight-color: transparent; }
-.ticket-star svg { width: 40px; height: 40px; }
+.ticket-star svg { width: 40px; height: 40px; transition: transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1); }
+.ticket-star.is-hot svg { transform: scale(1.28); transition-duration: 0.18s; }
 .ticket-star .bg { fill: var(--line-2); }
-.ticket-star .fg { fill: var(--t1); clip-path: inset(0 100% 0 0); }
+.ticket-star .fg { fill: var(--t1); clip-path: inset(0 100% 0 0); transition: clip-path 0.14s ease-out; }
 .ticket-star.is-half .fg { clip-path: inset(0 50% 0 0); }
 .ticket-star.is-full .fg { clip-path: none; }
-.ticket-star:active svg { transform: scale(0.9); }
-.ticket-rating-value { font-size: 15px; font-weight: 600; color: var(--t4); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.ticket-rating-value { min-width: 64px; font-size: 15px; font-weight: 600; color: var(--t4); white-space: nowrap; font-variant-numeric: tabular-nums; }
 .ticket-actions { display: grid; gap: 8px; }
 .ticket-btn { height: 52px; border-radius: 14px; background: var(--fill); font-size: 16px; font-weight: 700; color: var(--t1); transition: filter 0.15s, transform 0.15s; }
 .ticket-btn:active { transform: scale(0.98); }
@@ -623,8 +624,40 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 /* Ticket sheet: pick today's screening (영화관 → 영화 → 시간) */
 .ticket-session { display: grid; grid-template-columns: minmax(0, 1fr) 96px; gap: 6px; }
 .ticket-session .ticket-select:first-child { grid-column: 1 / -1; }
-.ticket-select { position: relative; display: flex; flex-direction: column; justify-content: center; gap: 1px; min-width: 0; height: 50px; padding: 0 24px 0 12px; border-radius: 12px; background: var(--fill); }
-.ticket-select::after { content: ""; position: absolute; right: 11px; top: 50%; width: 7px; height: 7px; margin-top: -5px; border-right: 2px solid var(--t4); border-bottom: 2px solid var(--t4); transform: rotate(45deg); pointer-events: none; }
-.ticket-select span { font-size: 11px; font-weight: 600; color: var(--t4); }
-.ticket-select select { width: 100%; min-width: 0; border: 0; padding: 0; background: none; font: inherit; font-size: 15px; font-weight: 700; color: var(--t1); -webkit-appearance: none; appearance: none; text-overflow: ellipsis; outline: none; cursor: pointer; }
-.ticket-select:focus-within { box-shadow: inset 0 0 0 2px var(--t3); }
+.ticket-select { position: relative; display: block; min-width: 0; height: 50px; border-radius: 12px; background: var(--fill); }
+.ticket-select::after { content: ""; position: absolute; right: 11px; top: 50%; width: 7px; height: 7px; margin-top: -5px; border-right: 2px solid var(--t4); border-bottom: 2px solid var(--t4); transform: rotate(45deg); z-index: 1; pointer-events: none; }
+.ticket-select span { position: absolute; left: 12px; top: 7px; z-index: 1; font-size: 11px; font-weight: 600; color: var(--t4); pointer-events: none; }
+/* the select covers the whole box, so a tap or click anywhere on it opens the list */
+.ticket-select select { position: absolute; inset: 0; width: 100%; height: 100%; min-width: 0; margin: 0; border: 0; border-radius: inherit; padding: 18px 28px 0 12px; background: none; font: inherit; font-size: 16px; font-weight: 700; color: var(--t1); -webkit-appearance: none; appearance: none; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; outline: none; cursor: pointer; }
+.ticket-select:focus-within { background: var(--fill-hover, var(--line)); }
+/* the forms plugin and iOS paint a blue ring and border on focused selects */
+.ticket-select select:focus, .ticket-select select:focus-visible { outline: none; border: 0; box-shadow: none; --tw-ring-shadow: 0 0 #0000; --tw-ring-offset-shadow: 0 0 #0000; }
+
+/* Live-collected venue that could not be loaded right now */
+.chip.is-failed { color: var(--t2); box-shadow: inset 0 0 0 1px color-mix(in srgb, #e5484d 45%, transparent); }
+.chip.is-failed .n { color: #e5484d; font-weight: 700; }
+.venue.is-failed .count { color: #e5484d; font-weight: 700; }
+.venue-failed { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 0 12px; border-top: 1px solid var(--line); }
+.venue-failed p { font-size: 14px; line-height: 20px; color: var(--t3); }
+.venue-failed button { flex: none; height: 36px; padding: 0 14px; border-radius: 10px; background: var(--fill); font-size: 14px; font-weight: 700; color: var(--t1); }
+.venue-failed button:hover { filter: brightness(0.96); }
+.prog-media.is-mark { display: grid; place-items: center; }
+.prog-mark { display: grid; place-items: center; width: 96px; height: 96px; padding: 14px; border-radius: 22px; background: #fff; box-shadow: 0 10px 30px -10px rgb(0 0 0 / 0.45); }
+.prog-mark img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+/* Venue card (design A): a bigger venue name, poster-sized thumbs, softer rules */
+.venue-h { margin-bottom: 8px; }
+.venue-h h3 { font-size: 21px; line-height: 28px; font-weight: 800; }
+.venue-h p { margin-top: 3px; }
+.row { grid-template-columns: 44px minmax(0, 1fr) auto; padding-top: 13px; padding-bottom: 13px; }
+.row::before { border-top-color: color-mix(in srgb, var(--line) 70%, transparent); }
+.venue-h + .row::before, .venue > .row:first-of-type::before { border-top-color: transparent; }
+.thumb { width: 44px; height: 62px; border-radius: 8px; }
+.title .t { font-weight: 800; }
+.meta { font-size: 13px; }
+@media (max-width: 767px) {
+  .venue { padding-top: 20px; }
+  .venue-h h3 { font-size: 20px; line-height: 27px; }
+  .row { grid-template-columns: 42px minmax(0, 1fr) auto; }
+  .thumb { width: 42px; height: 60px; }
+}
