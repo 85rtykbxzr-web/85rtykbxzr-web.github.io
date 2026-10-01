@@ -13,6 +13,8 @@ const canonicalPublicBaseUrl = "https://seoulcinemaschedule.com";
 const indexable = /^(1|true|yes)$/i.test(process.env.STATIC_SITE_INDEXABLE || "");
 const deploymentId = process.env.STATIC_DEPLOYMENT_ID || null;
 const deploymentCommit = process.env.STATIC_DEPLOYMENT_COMMIT || null;
+// TMDB v3 read key for the page's own poster search; it is public by design once published.
+const tmdbPageKey = /^[0-9a-f]{32}$/i.test(process.env.TMDB_API_KEY || "") ? process.env.TMDB_API_KEY : "";
 const optionalDataFiles = ["record-posters.json", "ticket-posters.json"];
 const allowedAssetExtensions = new Set([".css", ".gif", ".jpeg", ".jpg", ".js", ".png", ".svg", ".txt", ".webp", ".woff2"]);
 const excludedPublicAssetPaths = [
@@ -127,7 +129,7 @@ function contentSecurityPolicy(structuredData) {
     "script-src-attr 'none'",
     "font-src 'self' data:",
     "img-src 'self' data: https:",
-    "connect-src 'self' https://api.dtryx.com:30443 https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com",
+    "connect-src 'self' https://api.dtryx.com:30443 https://api.themoviedb.org https://www.google-analytics.com https://analytics.google.com https://region1.google-analytics.com",
     "object-src 'none'",
     "worker-src 'none'",
     "media-src 'none'",
@@ -324,7 +326,8 @@ const structuredData = indexHtml.match(/<script type="application\/ld\+json">([\
 if (!structuredData) throw new Error("index.html is missing structured data");
 const securityMarkup = [
   `    <meta http-equiv="Content-Security-Policy" content="${escapeHtmlAttribute(contentSecurityPolicy(structuredData))}" />`,
-  '    <meta name="referrer" content="strict-origin-when-cross-origin" />'
+  '    <meta name="referrer" content="strict-origin-when-cross-origin" />',
+  ...(tmdbPageKey ? [`    <meta name="tmdb-key" content="${tmdbPageKey}" />`] : [])
 ].join("\n");
 const robotsContent = indexable ? "index,follow" : "noindex,nofollow,noarchive";
 const renderedIndex = indexHtml

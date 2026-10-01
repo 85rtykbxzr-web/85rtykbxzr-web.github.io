@@ -9,6 +9,7 @@ import { safePublicUrl } from "./src/public-url-policy.mjs";
 import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
 import { drawStoryTicket } from "./src/story-ticket.mjs";
 import { filmTitleKey } from "./src/film-title.mjs";
+import { searchTmdbPoster, tmdbImageBase } from "./src/tmdb.mjs";
 
 (function () {
   const analyticsHostnames = new Set(["seoulcinemaschedule.com", "www.seoulcinemaschedule.com"]);
@@ -2956,12 +2957,47 @@ import { filmTitleKey } from "./src/film-title.mjs";
     return ticketPostersPromise;
   }
 
+  // Films only shown at venues collected in the browser never reach the pipeline's poster
+  // list, so the page looks them up on TMDB itself (key published with the build) and
+  // remembers the answer for a week.
+  const tmdbLookups = new Map();
+  const tmdbCacheMs = 7 * 24 * 60 * 60 * 1000;
+
+  function browserTmdbFilm(session) {
+    const key = filmTitleKey(session?.title);
+    const apiKey = document.querySelector('meta[name="tmdb-key"]')?.content || "";
+    if (!key || !apiKey) return Promise.resolve(null);
+    if (!tmdbLookups.has(key)) {
+      tmdbLookups.set(key, (async () => {
+        const storageKey = `tmdb-film:v1:${key}`;
+        try {
+          const cached = JSON.parse(localStorage.getItem(storageKey) || "null");
+          if (cached && Date.now() - cached.at < tmdbCacheMs) return cached.film;
+        } catch { /* storage unavailable */ }
+        const runtime = Number(String(session.tags || "").match(/(\d{2,3})분/)?.[1] || 0);
+        const match = await searchTmdbPoster(session.title, { apiKey, runtime }).catch(() => undefined);
+        if (match === undefined) return null;
+        const film = { posters: match?.posters || [] };
+        try { localStorage.setItem(storageKey, JSON.stringify({ at: Date.now(), film })); } catch { /* storage full */ }
+        return film;
+      })());
+    }
+    return tmdbLookups.get(key);
+  }
+
+  async function ticketFilmPosters(session) {
+    const posters = await loadTicketPosters();
+    const listed = posters?.films?.[filmTitleKey(session?.title)];
+    if (listed?.posters?.length) return { base: String(posters.imageBase || tmdbImageBase), paths: listed.posters };
+    const found = await browserTmdbFilm(session);
+    return { base: tmdbImageBase, paths: found?.posters || [] };
+  }
+
   // Poster choices for the open session: TMDB artwork first, then the cinema's poster.
-  function ticketPosterChoices(posters) {
+  async function ticketPosterChoices() {
     const session = ticketState.session;
-    const film = posters?.films?.[filmTitleKey(session?.title)];
-    const base = String(posters?.imageBase || "");
-    const choices = (film?.posters || [])
+    const { base, paths } = await ticketFilmPosters(session);
+    const choices = paths
       .map((path) => ({ full: safeImageUrl(`${base}w780${path}`), thumb: safeImageUrl(`${base}w185${path}`) }))
       .filter((choice) => choice.full && choice.thumb);
     const own = posterItemFor(session);
@@ -2973,7 +3009,9 @@ import { filmTitleKey } from "./src/film-title.mjs";
   async function renderTicketPicker() {
     const target = $("#ticketPickerList");
     if (!target) return;
-    const choices = ticketPosterChoices(await loadTicketPosters());
+    const session = ticketState.session;
+    const choices = await ticketPosterChoices();
+    if (session !== ticketState.session) return;
     const current = ticketState.photo || ticketState.poster || choices[0]?.full || "";
     target.innerHTML = [
       ...choices.map((choice, index) => `<button class="ticket-pick${choice.full === current ? " is-on" : ""}" type="button" data-ticket-poster="${escapeHtml(choice.full)}" aria-pressed="${choice.full === current}" aria-label="${escapeHtml(choice.cinema ? "극장 포스터" : `포스터 ${index + 1}`)}"><img src="${escapeHtml(choice.thumb)}" alt="" loading="lazy" decoding="async" />${choice.cinema ? '<span class="ticket-pick-tag">극장</span>' : ""}</button>`),
@@ -3193,11 +3231,15 @@ import { filmTitleKey } from "./src/film-title.mjs";
 
   async function renderTicketCanvas() {
     const details = currentTicketDetails();
-    if (!ticketState.photo && !ticketState.poster) {
-      const first = ticketPosterChoices(await loadTicketPosters())[0];
-      if (first) details.posterUrl = first.full;
+    if (ticketState.photo || ticketState.poster) return drawStoryTicket(details);
+    // Nothing picked: use the first poster that can actually be drawn. Some cinema image
+    // hosts refuse other sites, so their poster shows in the picker but not on the canvas.
+    let canvas = null;
+    for (const choice of (await ticketPosterChoices()).slice(0, 4)) {
+      canvas = await drawStoryTicket({ ...details, posterUrl: choice.full });
+      if (canvas.posterDrawn) return canvas;
     }
-    return drawStoryTicket(details);
+    return canvas || drawStoryTicket(details);
   }
 
   async function renderTicketPreview() {
@@ -3208,6 +3250,7 @@ import { filmTitleKey } from "./src/film-title.mjs";
       const canvas = await renderTicketCanvas();
       if (requestId !== ticketState.requestId || !image) return;
       image.src = canvas.toDataURL("image/png");
+      if (ticketState.poster && !canvas.posterDrawn) showToast("이 포스터는 영화관 사이트가 막아 둬서 쓸 수 없어요. 다른 포스터를 골라 주세요");
     } finally {
       if (requestId === ticketState.requestId) image?.classList.remove("is-loading");
     }
