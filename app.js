@@ -515,34 +515,14 @@ import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
   function emptyScheduleMessage(message) {
     if (!browserLiveIncomplete()) return message;
     const rows = state.data.meta.browserLive || [];
-    if (rows.some((row) => row.status === "error")) return "일부 영화관의 시간표를 확인하지 못했습니다. 위의 공식 링크에서 확인해 주세요.";
+    if (rows.some((row) => row.status === "error")) return "일부 영화관의 시간표를 확인하지 못했습니다. 영화관 공식 페이지에서 확인해 주세요.";
     return "영화관의 공식 시간표를 불러오는 중입니다.";
   }
 
-  // Only surface a notice when a venue could not be checked; successful and in-progress
-  // checks stay silent.
+  // The live-check status banner is intentionally not shown; venues that could not be
+  // checked simply list no sessions. Clear any banner left by an older build.
   function renderBrowserLiveStatus() {
-    const rows = usesBrowserLive(state.data) ? state.data.meta.browserLive || [] : [];
-    const failures = rows.filter((row) => row.status === "error");
-    const completeCount = rows.filter((row) => row.status === "ok").length;
-    for (const id of ["desktop", "mobile"]) {
-      let notice = document.getElementById(`${id}LiveStatus`);
-      if (!failures.length) { notice?.remove(); continue; }
-      if (!notice) {
-        notice = document.createElement("div");
-        notice.id = `${id}LiveStatus`;
-        notice.className = "notice";
-        notice.setAttribute("role", "status");
-        notice.setAttribute("aria-live", "polite");
-        document.getElementById(`${id}Schedule`).before(notice);
-      }
-      const links = failures.map((row) => {
-        const config = browserLiveConfigs.find((item) => item.venueId === row.venueId);
-        return `<a href="${escapeHtml(safePublicUrl(config.officialUrl))}" target="_blank" rel="noopener noreferrer">${escapeHtml(config.name)}</a>`;
-      });
-      notice.innerHTML = `${completeCount}/${browserLiveConfigs.length}개관 실시간 확인 · 연결되지 않은 영화관은 공식 시간표를 확인해 주세요: ${links.join(" · ")} <button type="button" data-retry-browser-live>다시 확인</button>`;
-      notice.querySelector("button").onclick = () => refreshScheduleData({ force: true });
-    }
+    for (const id of ["desktop", "mobile"]) document.getElementById(`${id}LiveStatus`)?.remove();
   }
 
   function matchesSearch(session, venues, query) {
