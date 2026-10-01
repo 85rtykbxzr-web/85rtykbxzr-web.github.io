@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-01",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-01T09:14:07.034Z",
+  "updatedAt": "2026-10-01T12:20:23.108Z",
   "days": {
     "2026-09-29": {
       "오디세이": {
@@ -347,58 +347,44 @@
       }
     },
     "2026-10-01": {
-      "토리노의말": {
-        "title": "토리노의 말",
-        "positiveSignal": 12,
-        "mentionCount": 1,
+      "가능한사랑": {
+        "title": "가능한 사랑(2D)",
+        "positiveSignal": 24,
+        "mentionCount": 3,
         "evidence": [
           {
-            "title": "와 토리노의 말 이거 여운 좆되네 와",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866967&page=2",
+            "title": "레터박스에서 가능한사랑이 버닝 점수 제쳤네",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867139&page=1",
             "date": "2026-10-01",
-            "positive": 12,
-            "rawPositive": 12,
+            "positive": 8,
+            "rawPositive": 8,
             "negative": 0,
             "positiveHits": [
               {
-                "term": "꿀잼",
+                "term": "걸작",
                 "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
               },
               {
-                "term": "여운",
+                "term": "좋았음",
                 "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              },
-              {
-                "term": "여운",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
               }
             ],
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 6,
+            "commentCount": 4,
             "commentPositive": 8,
             "commentNegative": 0
-          }
-        ]
-      },
-      "가능한사랑": {
-        "title": "가능한 사랑",
-        "positiveSignal": 16,
-        "mentionCount": 2,
-        "evidence": [
+          },
           {
             "title": "스포) 가능한 사랑 찰나였지만 좋았던 장면",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866912&page=3",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866912&page=5",
             "date": "2026-10-01",
             "positive": 2,
             "rawPositive": 2,
@@ -421,7 +407,7 @@
           },
           {
             "title": "가능한 사랑이 버닝 밀양보다 더 재밌었음??",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866853&page=4",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866853&page=7",
             "date": "2026-10-01",
             "positive": 14,
             "rawPositive": 14,
@@ -458,6 +444,80 @@
           }
         ]
       },
+      "이방인": {
+        "title": "이방인",
+        "positiveSignal": 4,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "오늘 이방인 보고왔는데",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867073&page=3",
+            "date": "2026-10-01",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "감탄",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "토리노의말": {
+        "title": "토리노의 말",
+        "positiveSignal": 12,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "와 토리노의 말 이거 여운 좆되네 와",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866967&page=5",
+            "date": "2026-10-01",
+            "positive": 12,
+            "rawPositive": 12,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "여운",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "여운",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 6,
+            "commentPositive": 8,
+            "commentNegative": 0
+          }
+        ]
+      },
       "사탄탱고": {
         "title": "사탄탱고(기획전)",
         "positiveSignal": 4,
@@ -465,7 +525,7 @@
         "evidence": [
           {
             "title": "사탄탱고 예매했다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866744&page=6",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866744&page=8",
             "date": "2026-10-01",
             "positive": 4,
             "rawPositive": 4,
@@ -492,7 +552,7 @@
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-01T09:14:07.029Z",
+      "lineupFetchedAt": "2026-10-01T12:20:23.099Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -2528,6 +2588,21 @@
           }
         },
         "2026-10-01": {
+          "그래비티": {
+            "title": "그래비티",
+            "mentionCount": 2,
+            "commentCount": 1
+          },
+          "로마엘라스티카": {
+            "title": "로마 엘라스티카",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "실버익스프레스": {
+            "title": "실버 익스프레스",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
           "에브리타임": {
             "title": "에브리타임",
             "mentionCount": 4,
@@ -2553,11 +2628,6 @@
             "mentionCount": 1,
             "commentCount": 0
           },
-          "로마엘라스티카": {
-            "title": "로마 엘라스티카",
-            "mentionCount": 1,
-            "commentCount": 0
-          },
           "백투부에노스아이레스": {
             "title": "백 투 부에노스아이레스",
             "mentionCount": 1,
@@ -2580,11 +2650,6 @@
           },
           "나기노트": {
             "title": "나기 노트",
-            "mentionCount": 1,
-            "commentCount": 0
-          },
-          "실버익스프레스": {
-            "title": "실버 익스프레스",
             "mentionCount": 1,
             "commentCount": 0
           },

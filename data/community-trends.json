@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-01T09:14:11.676Z",
+  "generatedAt": "2026-10-01T12:20:29.732Z",
   "weekStart": "2026-09-29",
   "weekEnd": "2026-10-01",
   "windowStart": "2026-09-29",
@@ -18,24 +18,24 @@
       "localPosterUrl": "/assets/recommendation-posters/5111b309025797e2.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-01&movieCd=029672&playSDT=2026-10-01&screenId=02&showSeq=6",
-      "score": 289.8,
-      "signal": 22.2,
-      "positiveSignal": 22.2,
-      "mentionCount": 3,
-      "rawPositiveSignal": 28,
-      "rawMentionCount": 4,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121723&playDt=20261002&tsId=TS0039&pno=1",
+      "score": 390.8,
+      "signal": 30.2,
+      "positiveSignal": 30.2,
+      "mentionCount": 4,
+      "rawPositiveSignal": 36,
+      "rawMentionCount": 5,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube",
-        "kucine"
+        "kucine",
+        "cinecube"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
-        "KU시네마테크"
+        "KU시네마테크",
+        "씨네큐브 광화문"
       ],
-      "nextDate": "2026-10-01",
-      "nextTime": "20:00",
+      "nextDate": "2026-10-02",
+      "nextTime": "09:50",
       "evidence": [
         {
           "title": "스포) 가능한 사랑이 탐하는 '남'의 것",
@@ -86,8 +86,39 @@
           "dayWeight": 0.518
         },
         {
+          "title": "레터박스에서 가능한사랑이 버닝 점수 제쳤네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867139&page=1",
+          "date": "2026-10-01",
+          "positive": 8,
+          "rawPositive": 8,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "걸작",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "좋았음",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 4,
+          "commentPositive": 8,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
           "title": "스포) 가능한 사랑 찰나였지만 좋았던 장면",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866912&page=3",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866912&page=5",
           "date": "2026-10-01",
           "positive": 2,
           "rawPositive": 2,
@@ -111,7 +142,7 @@
         },
         {
           "title": "가능한 사랑이 버닝 밀양보다 더 재밌었음??",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866853&page=4",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866853&page=7",
           "date": "2026-10-01",
           "positive": 14,
           "rawPositive": 14,
@@ -267,6 +298,63 @@
     },
     {
       "rank": 3,
+      "title": "이방인",
+      "posterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
+      "localPosterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-02&movieCd=029631&playSDT=2026-10-02&screenId=02&showSeq=2",
+      "score": 61,
+      "signal": 4,
+      "positiveSignal": 4,
+      "mentionCount": 1,
+      "rawPositiveSignal": 4,
+      "rawMentionCount": 1,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "cinecube",
+        "filmforum",
+        "sangsangmadang",
+        "kucine"
+      ],
+      "venueNames": [
+        "씨네큐브 광화문",
+        "필름포럼",
+        "KT&G 상상마당 시네마",
+        "KU시네마테크"
+      ],
+      "nextDate": "2026-10-02",
+      "nextTime": "11:25",
+      "evidence": [
+        {
+          "title": "오늘 이방인 보고왔는데",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867073&page=3",
+          "date": "2026-10-01",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "감탄",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260903_7e3d6928.jpg"
+    },
+    {
+      "rank": 4,
       "title": "포르테",
       "posterUrl": "/assets/recommendation-posters/02b4fb126bbada3a.webp",
       "localPosterUrl": "/assets/recommendation-posters/02b4fb126bbada3a.webp",
@@ -288,8 +376,8 @@
         "인디스페이스",
         "필름포럼"
       ],
-      "nextDate": "2026-10-01",
-      "nextTime": "19:00",
+      "nextDate": "2026-10-02",
+      "nextTime": "12:50",
       "evidence": [
         {
           "title": "포르테 <~ 이건 뭐냐",
@@ -317,38 +405,6 @@
         }
       ],
       "posterSourceUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fc79q99%2FdJMcaaUohnn%2FAAAAAAAAAAAAAAAAAAAAANV33Og0pcI7HmBVuiDyugpgWjmPDDYQ_26VbGmM_cRW%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3Da9i3bddwCcyE5DSmMLZWURUWZEQ%253D"
-    },
-    {
-      "rank": 4,
-      "title": "이방인",
-      "posterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
-      "localPosterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-01&movieCd=029631&playSDT=2026-10-01&screenId=01&showSeq=5",
-      "score": 0,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 0,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 0,
-      "scheduleBackfill": true,
-      "venueIds": [
-        "cinecube",
-        "filmforum",
-        "sangsangmadang",
-        "kucine"
-      ],
-      "venueNames": [
-        "씨네큐브 광화문",
-        "필름포럼",
-        "KT&G 상상마당 시네마",
-        "KU시네마테크"
-      ],
-      "nextDate": "2026-10-01",
-      "nextTime": "19:30",
-      "evidence": [],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260903_7e3d6928.jpg"
     }
   ],
   "festivalPicks": [
@@ -377,6 +433,14 @@
         },
         {
           "rank": 3,
+          "title": "그래비티",
+          "englishTitle": "Gravity",
+          "section": "특별상영 & 까르뜨 블랑슈",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91282&c_idx=441&sp_idx=&QueryStep=2",
+          "mentionCount": 8
+        },
+        {
+          "rank": 4,
           "title": "오아시스",
           "englishTitle": "Oasis",
           "section": "플래시 포워드",
@@ -384,15 +448,15 @@
           "mentionCount": 8
         },
         {
-          "rank": 4,
-          "title": "그래비티",
-          "englishTitle": "Gravity",
-          "section": "특별상영 & 까르뜨 블랑슈",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91282&c_idx=441&sp_idx=&QueryStep=2",
+          "rank": 5,
+          "title": "로마 엘라스티카",
+          "englishTitle": "Roma Elastica",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91150&c_idx=430&sp_idx=&QueryStep=2",
           "mentionCount": 6
         },
         {
-          "rank": 5,
+          "rank": 6,
           "title": "버킹 패스타드",
           "englishTitle": "Bucking Fastard",
           "section": "아이콘",
@@ -400,20 +464,12 @@
           "mentionCount": 6
         },
         {
-          "rank": 6,
+          "rank": 7,
           "title": "클럽 키드",
           "englishTitle": "Club Kid",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91104&c_idx=434&sp_idx=&QueryStep=2",
           "mentionCount": 6
-        },
-        {
-          "rank": 7,
-          "title": "로마 엘라스티카",
-          "englishTitle": "Roma Elastica",
-          "section": "아이콘",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91150&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 5
         },
         {
           "rank": 8,
@@ -431,20 +487,20 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 341,
-    "listedPostCount": 342,
-    "detailedPostCount": 28,
-    "commentFetchCount": 28,
-    "commentCount": 61,
+    "fetchedPostCount": 441,
+    "listedPostCount": 442,
+    "detailedPostCount": 37,
+    "commentFetchCount": 37,
+    "commentCount": 71,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 7,
+    "scannedPageCount": 9,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-09-27",
     "newestScannedDate": "2026-10-01",
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-01",
     "candidateWindowEnd": "2026-10-15",
-    "candidateCount": 85,
+    "candidateCount": 83,
     "seedLookbackDays": 3,
     "seedStart": "2026-09-29",
     "listLookbackDays": 1,
