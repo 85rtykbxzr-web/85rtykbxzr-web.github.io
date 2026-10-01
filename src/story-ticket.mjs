@@ -259,7 +259,7 @@ function drawPosterStyle(ctx, ticket, poster) {
   const d = dateParts(ticket.date);
   setTitleFont(ctx, 80);
   const titleLines = wrapLines(ctx, ticket.title, W - x * 2, 3);
-  const meta = [ticket.venue, ticket.screen, ticket.seat ? `좌석 ${ticket.seat}` : ""].filter(Boolean).join("  ·  ");
+  const meta = [ticket.venue, ticket.screen].filter(Boolean).join("  ·  ");
   // laid out from the bottom up so the block always ends above the story reply bar
   let y = SAFE_BOTTOM - 12;
   ctx.textAlign = "left";
@@ -313,7 +313,7 @@ function drawTicketStyle(ctx, ticket, poster, seed) {
   setTitleFont(ctx, 70);
   const titleLines = wrapLines(ctx, ticket.title, inner, 3);
   ctx.letterSpacing = "0px";
-  const rows = [["극장", ticket.venue], ["상영관", ticket.screen], ["시간", ticket.time], ["좌석", ticket.seat]].filter(([, value]) => value);
+  const rows = [["극장", ticket.venue], ["상영관", ticket.screen], ["시간", ticket.time]].filter(([, value]) => value);
   const ratingH = ticket.rating ? 76 : 0;
   const bodyH = 150 + titleLines.length * 84 + ratingH + 44 + rows.length * 78 + 40;
   const stubH = 190;
@@ -432,7 +432,7 @@ function drawReceiptStyle(ctx, ticket, poster, seed) {
   setTitleFont(ctx, 54);
   const titleLines = wrapLines(ctx, ticket.title, inner, 3);
   ctx.letterSpacing = "0px";
-  const rows = [["극장", ticket.venue], ["상영관", ticket.screen], ["좌석", ticket.seat]].filter(([, value]) => value);
+  const rows = [["극장", ticket.venue], ["상영관", ticket.screen], ["시간", ticket.time]].filter(([, value]) => value);
   const rh = 232 + titleLines.length * 66 + (ticket.rating ? 70 : 0) + 70 + rows.length * 52 + 134 + 250;
   const ry = Math.round(SAFE_TOP + (SAFE_BOTTOM - SAFE_TOP - rh) / 2);
 
@@ -478,7 +478,7 @@ function drawReceiptStyle(ctx, ticket, poster, seed) {
   lc.font = `500 24px ${SANS}`;
   lc.fillStyle = "rgba(29,27,24,0.7)";
   lc.textAlign = "center";
-  lc.fillText(d ? `${d.yyyy}-${d.mm}-${d.dd} (${d.ko})  ${ticket.time}` : `${ticket.date} ${ticket.time}`, cx, y);
+  lc.fillText(d ? `${d.yyyy}-${d.mm}-${d.dd} (${d.ko})` : ticket.date, cx, y);
   y += 36;
   dashed(y);
 
@@ -535,7 +535,7 @@ function drawReceiptStyle(ctx, ticket, poster, seed) {
 }
 
 /**
- * @param {{ title: string, venue: string, screen?: string, date: string, time: string, seat?: string, rating?: number, posterUrl?: string, id?: string }} ticket
+ * @param {{ title: string, venue: string, screen?: string, date: string, time: string, rating?: number, posterUrl?: string, id?: string }} ticket
  * @param {keyof typeof ticketStyles} styleKey
  */
 export async function drawStoryTicket(ticket, styleKey = "poster") {

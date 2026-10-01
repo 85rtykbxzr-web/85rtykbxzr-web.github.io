@@ -2915,8 +2915,6 @@ import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
     const sheet = $("#ticketSheet");
     if (!session || !sheet) return;
     ticketState.session = session;
-    const seat = $("#ticketSeat");
-    if (seat) seat.value = "";
     ticketState.rating = 0;
     ticketState.photo = "";
     const photo = $("#ticketPhoto");
@@ -2981,7 +2979,6 @@ import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
       screen: String(session.screen || "").trim() && session.screen !== venue?.name ? session.screen : "",
       date: session.date,
       time: cleanTime(session),
-      seat: String($("#ticketSeat")?.value || "").trim().slice(0, 8).toUpperCase(),
       rating: ticketState.rating,
       posterUrl: ticketState.photo || (poster ? safeImageUrl(posterSource(poster)) : "")
     };
@@ -3084,12 +3081,7 @@ import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
 
   function bindEvents() {
     $("#searchInput")?.addEventListener("input", (event) => syncSearch(event.target.value));
-    let seatTimer = null;
     $("#ticketPhoto")?.addEventListener("change", (event) => setTicketPhoto(event.target.files?.[0]));
-    $("#ticketSeat")?.addEventListener("input", () => {
-      window.clearTimeout(seatTimer);
-      seatTimer = window.setTimeout(renderTicketPreview, 250);
-    });
     $("#tabletSearchInput")?.addEventListener("input", (event) => syncSearch(event.target.value));
     $("#mobileSearchInput")?.addEventListener("input", (event) => syncSearch(event.target.value));
     $("#tabletSearchButton")?.addEventListener("click", () => {
