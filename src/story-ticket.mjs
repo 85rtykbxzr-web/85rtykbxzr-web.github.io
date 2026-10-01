@@ -224,7 +224,7 @@ function drawPosterStyle(ctx, ticket, poster, { typeScale: k = 1.05, gap: baseGa
   };
   // Each piece of the text block: measured ink box plus a draw at a baseline.
   const pieces = {
-    label: () => textLine("영화 일기", `600 ${px(28)}px ${SANS}`, "rgba(255,255,255,0.72)", { tracking: 1 }),
+    label: () => textLine("영화 기록", `600 ${px(28)}px ${SANS}`, "rgba(255,255,255,0.72)", { tracking: 1 }),
     pill: () => {
       const font = `700 ${px(26)}px ${SANS}`;
       const box = ink(font);
@@ -234,7 +234,7 @@ function drawPosterStyle(ctx, ticket, poster, { typeScale: k = 1.05, gap: baseGa
         asc: box.asc + padY, desc: box.desc + padY,
         draw(baseline) {
           ctx.font = font;
-          const w = ctx.measureText("영화 일기").width + padX * 2;
+          const w = ctx.measureText("영화 기록").width + padX * 2;
           const left = align === "center" ? cx - w / 2 : x;
           ctx.fillStyle = "rgba(255,255,255,0.18)";
           ctx.beginPath();
@@ -242,7 +242,7 @@ function drawPosterStyle(ctx, ticket, poster, { typeScale: k = 1.05, gap: baseGa
           ctx.fill();
           ctx.fillStyle = "#ffffff";
           ctx.textAlign = "left";
-          ctx.fillText("영화 일기", left + padX, baseline);
+          ctx.fillText("영화 기록", left + padX, baseline);
         }
       };
     },
