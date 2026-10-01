@@ -2904,7 +2904,42 @@ import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
     setTabletSearchOpen(false);
   }
 
-  const ticketState = { session: null, style: "poster", rating: 0, photo: "", requestId: 0 };
+  const ticketState = { session: null, style: "poster", rating: 0, photo: "", poster: "", requestId: 0 };
+  let ticketPostersPromise = null;
+
+  // English TMDB artwork per film, refreshed by the data pipeline; the ticket prefers it
+  // over the cinema's own poster. A missing file just means no TMDB choices.
+  function loadTicketPosters() {
+    ticketPostersPromise ||= fetch("data/ticket-posters.json", { cache: "no-cache" })
+      .then((response) => (response.ok ? response.json() : null))
+      .catch(() => null);
+    return ticketPostersPromise;
+  }
+
+  // Poster choices for the open session: TMDB artwork first, then the cinema's poster.
+  function ticketPosterChoices(posters) {
+    const session = ticketState.session;
+    const film = posters?.films?.[normalizeTrendTitle(session?.title)];
+    const base = String(posters?.imageBase || "");
+    const choices = (film?.posters || [])
+      .map((path) => ({ full: safeImageUrl(`${base}w780${path}`), thumb: safeImageUrl(`${base}w185${path}`) }))
+      .filter((choice) => choice.full && choice.thumb);
+    const own = posterItemFor(session);
+    const ownUrl = own ? safeImageUrl(posterSource(own)) : "";
+    if (ownUrl) choices.push({ full: ownUrl, thumb: safeImageUrl(optimizedPosterSource(posterSource(own))) || ownUrl, cinema: true });
+    return choices;
+  }
+
+  async function renderTicketPicker() {
+    const target = $("#ticketPickerList");
+    if (!target) return;
+    const choices = ticketPosterChoices(await loadTicketPosters());
+    const current = ticketState.photo || ticketState.poster || choices[0]?.full || "";
+    target.innerHTML = [
+      ...choices.map((choice, index) => `<button class="ticket-pick${choice.full === current ? " is-on" : ""}" type="button" data-ticket-poster="${escapeHtml(choice.full)}" aria-pressed="${choice.full === current}" aria-label="${escapeHtml(choice.cinema ? "극장 포스터" : `포스터 ${index + 1}`)}"><img src="${escapeHtml(choice.thumb)}" alt="" loading="lazy" decoding="async" />${choice.cinema ? '<span class="ticket-pick-tag">극장</span>' : ""}</button>`),
+      `<label class="ticket-pick is-upload${ticketState.photo ? " is-on" : ""}"><input id="ticketPhoto" type="file" accept="image/*" /><span aria-hidden="true">+</span><span>내 사진</span></label>`
+    ].join("");
+  }
 
   function ticketTitle(session) {
     return String(session?.title || "").replace(/\s*\((?:2D|3D|4K|자막|영문자막|더빙)[^)]*\)\s*$/i, "").trim() || "오늘의 영화";
@@ -2917,8 +2952,8 @@ import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
     ticketState.session = session;
     ticketState.rating = 0;
     ticketState.photo = "";
-    const photo = $("#ticketPhoto");
-    if (photo) photo.value = "";
+    ticketState.poster = "";
+    toggleTicketPicker(false);
     $("#ticketSheetTitle").textContent = ticketTitle(session);
     renderTicketStyles();
     renderTicketRating();
@@ -2927,6 +2962,16 @@ import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
     if (typeof sheet.showModal === "function") sheet.showModal();
     else sheet.setAttribute("open", "");
     renderTicketPreview();
+  }
+
+  function toggleTicketPicker(open) {
+    const picker = $("#ticketPicker");
+    const button = $("#ticketPosterToggle");
+    if (!picker) return;
+    const next = open ?? picker.hidden;
+    picker.hidden = !next;
+    button?.setAttribute("aria-expanded", String(next));
+    if (next) renderTicketPicker();
   }
 
   function closeTicketSheet() {
@@ -2980,14 +3025,16 @@ import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
       date: session.date,
       time: cleanTime(session),
       rating: ticketState.rating,
-      posterUrl: ticketState.photo || (poster ? safeImageUrl(posterSource(poster)) : "")
+      posterUrl: ticketState.photo || ticketState.poster || (poster ? safeImageUrl(posterSource(poster)) : "")
     };
   }
 
   async function renderTicketCanvas() {
     const details = currentTicketDetails();
-    const label = $("#ticketPhotoLabel");
-    if (label) label.textContent = details.posterUrl ? "포스터 바꾸기" : "포스터 넣기";
+    if (!ticketState.photo && !ticketState.poster) {
+      const first = ticketPosterChoices(await loadTicketPosters())[0];
+      if (first) details.posterUrl = first.full;
+    }
     return drawStoryTicket(details, ticketState.style);
   }
 
@@ -3010,6 +3057,7 @@ import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
     const reader = new FileReader();
     reader.onload = () => {
       ticketState.photo = String(reader.result || "");
+      renderTicketPicker();
       renderTicketPreview();
     };
     reader.readAsDataURL(file);
@@ -3081,7 +3129,10 @@ import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
 
   function bindEvents() {
     $("#searchInput")?.addEventListener("input", (event) => syncSearch(event.target.value));
-    $("#ticketPhoto")?.addEventListener("change", (event) => setTicketPhoto(event.target.files?.[0]));
+    // the picker re-renders its file input, so the change listener is delegated
+    $("#ticketPicker")?.addEventListener("change", (event) => {
+      if (event.target.id === "ticketPhoto") setTicketPhoto(event.target.files?.[0]);
+    });
     $("#tabletSearchInput")?.addEventListener("input", (event) => syncSearch(event.target.value));
     $("#mobileSearchInput")?.addEventListener("input", (event) => syncSearch(event.target.value));
     $("#tabletSearchButton")?.addEventListener("click", () => {
@@ -3174,6 +3225,20 @@ import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
       if (styleButton) {
         ticketState.style = styleButton.dataset.ticketStyle;
         renderTicketStyles();
+        renderTicketPreview();
+        return;
+      }
+
+      if (event.target.closest("#ticketPosterToggle")) {
+        toggleTicketPicker();
+        return;
+      }
+
+      const posterPick = event.target.closest("[data-ticket-poster]");
+      if (posterPick) {
+        ticketState.poster = posterPick.dataset.ticketPoster;
+        ticketState.photo = "";
+        renderTicketPicker();
         renderTicketPreview();
         return;
       }

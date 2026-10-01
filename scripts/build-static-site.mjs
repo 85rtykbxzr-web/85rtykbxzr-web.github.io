@@ -13,7 +13,7 @@ const canonicalPublicBaseUrl = "https://seoulcinemaschedule.com";
 const indexable = /^(1|true|yes)$/i.test(process.env.STATIC_SITE_INDEXABLE || "");
 const deploymentId = process.env.STATIC_DEPLOYMENT_ID || null;
 const deploymentCommit = process.env.STATIC_DEPLOYMENT_COMMIT || null;
-const optionalDataFiles = ["record-posters.json"];
+const optionalDataFiles = ["record-posters.json", "ticket-posters.json"];
 const allowedAssetExtensions = new Set([".css", ".gif", ".jpeg", ".jpg", ".js", ".png", ".svg", ".txt", ".webp", ".woff2"]);
 const excludedPublicAssetPaths = [
   "festival-marks/siwff.png",

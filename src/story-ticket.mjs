@@ -257,7 +257,7 @@ function drawDayLine(ctx, ticket, cx, y, big, small) {
   ctx.fillText(rest, left + dayWidth + gap, y);
 }
 
-function drawPosterStyle(ctx, ticket, poster, { typeScale: k = 1.05 } = {}) {
+function drawPosterStyle(ctx, ticket, poster, { typeScale: k = 1.05, gap: baseGap = 30, tightGap = 20 } = {}) {
   // Fill the story; a 2:3 poster loses about 8% on each side, which keeps the full-bleed look.
   if (poster) drawCover(ctx, poster, 0, 0, W, H);
   else {
@@ -269,11 +269,11 @@ function drawPosterStyle(ctx, ticket, poster, { typeScale: k = 1.05 } = {}) {
   top.addColorStop(1, "rgba(0,0,0,0)");
   ctx.fillStyle = top;
   ctx.fillRect(0, 0, W, 520);
-  const bottom = ctx.createLinearGradient(0, 900, 0, H);
-  bottom.addColorStop(0, "rgba(0,0,0,0)");
-  bottom.addColorStop(0.5, "rgba(0,0,0,0.62)");
-  bottom.addColorStop(1, "rgba(0,0,0,0.86)");
-  ctx.fillStyle = bottom;
+  const shade = ctx.createLinearGradient(0, 900, 0, H);
+  shade.addColorStop(0, "rgba(0,0,0,0)");
+  shade.addColorStop(0.5, "rgba(0,0,0,0.62)");
+  shade.addColorStop(1, "rgba(0,0,0,0.86)");
+  ctx.fillStyle = shade;
   ctx.fillRect(0, 900, W, H - 900);
   grain(ctx, 0.1);
 
@@ -283,37 +283,60 @@ function drawPosterStyle(ctx, ticket, poster, { typeScale: k = 1.05 } = {}) {
   setTitleFont(ctx, titleSize);
   const titleLines = wrapLines(ctx, ticket.title, W - x * 2, 3);
   const meta = [ticket.venue, ticket.screen].filter(Boolean).join("  ·  ");
-  // laid out from the bottom up so the block ends just above the story reply bar
-  let y = SAFE_BOTTOM + 20;
+  // Laid out from the bottom up on measured ink boxes, so the gaps between date, title,
+  // stars and venue look even whatever the glyphs; the block ends above the reply bar.
+  const ink = (font, sample = "가") => {
+    ctx.font = font;
+    const m = ctx.measureText(sample);
+    return { asc: m.actualBoundingBoxAscent, desc: m.actualBoundingBoxDescent };
+  };
+  const gapTight = Math.round(tightGap * k);
+  const gap = Math.round(baseGap * k);
+  const metaFont = `500 ${Math.round(32 * k)}px ${SANS}`;
+  const titleFont = `700 ${titleSize}px ${SANS}`;
+  const dayFont = `700 ${Math.round(54 * k)}px ${SANS}`;
+  const restFont = `500 ${Math.round(36 * k)}px ${SANS}`;
+  const ratingFont = `600 ${Math.round(32 * k)}px ${SANS}`;
+
+  let bottom = SAFE_BOTTOM + 20;
   ctx.textAlign = "left";
   ctx.fillStyle = "rgba(255,255,255,0.74)";
-  ctx.font = `500 ${Math.round(32 * k)}px ${SANS}`;
-  ctx.fillText(meta, x, y);
-  y -= Math.round(70 * k);
+  ctx.font = metaFont;
+  ctx.fillText(meta, x, bottom);
+  bottom -= ink(metaFont).asc + gap;
+
   if (ticket.rating) {
     const size = Math.round(48 * k);
-    const width = drawStars(ctx, ticket.rating, x, y - size * 0.34, size, "#ffffff", "rgba(255,255,255,0.26)");
+    // a star's points reach r above the centre and about 0.81r below it
+    const cy = bottom - size * 0.405;
+    const width = drawStars(ctx, ticket.rating, x, cy, size, "#ffffff", "rgba(255,255,255,0.26)");
+    const digits = ink(ratingFont, "4.5");
     ctx.fillStyle = "#ffffff";
-    ctx.font = `600 ${Math.round(32 * k)}px ${SANS}`;
-    ctx.fillText(ratingText(ticket.rating), x + width + 18, y - 2);
-    y -= Math.round(90 * k);
+    ctx.font = ratingFont;
+    ctx.fillText(ratingText(ticket.rating), x + width + 18, cy + (digits.asc - digits.desc) / 2);
+    bottom = cy - size / 2 - gap;
   }
+
+  const titleInk = ink(titleFont);
+  const lineHeight = Math.round(titleSize * 1.16);
+  let baseline = bottom - titleInk.desc;
   ctx.fillStyle = "#ffffff";
   setTitleFont(ctx, titleSize);
   for (let i = titleLines.length - 1; i >= 0; i--) {
-    ctx.fillText(titleLines[i], x, y);
-    y -= Math.round(titleSize * 1.16);
+    ctx.fillText(titleLines[i], x, baseline);
+    if (i) baseline -= lineHeight;
   }
   ctx.letterSpacing = "0px";
-  y -= Math.round(4 * k);
+
+  const dayBaseline = baseline - titleInk.asc - gapTight - ink(dayFont, "1").desc;
   const day = d ? `${Number(d.mm)}월 ${Number(d.dd)}일` : ticket.date;
   ctx.fillStyle = "#ffffff";
-  ctx.font = `700 ${Math.round(54 * k)}px ${SANS}`;
-  ctx.fillText(day, x, y);
+  ctx.font = dayFont;
+  ctx.fillText(day, x, dayBaseline);
   const dayWidth = ctx.measureText(day).width;
   ctx.fillStyle = "rgba(255,255,255,0.78)";
-  ctx.font = `500 ${Math.round(36 * k)}px ${SANS}`;
-  ctx.fillText(d ? `${d.ko}요일  ${ticket.time}` : ticket.time, x + dayWidth + 18 * k, y);
+  ctx.font = restFont;
+  ctx.fillText(d ? `${d.ko}요일  ${ticket.time}` : ticket.time, x + dayWidth + 18 * k, dayBaseline);
 }
 
 function drawTicketStyle(ctx, ticket, poster, seed) {

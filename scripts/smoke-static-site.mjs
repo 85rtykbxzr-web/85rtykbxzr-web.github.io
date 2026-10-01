@@ -23,7 +23,7 @@ const expectedTopLevelEntries = new Set([
   "robots.txt",
   "sitemap.xml"
 ]);
-const allowedDataFiles = new Set(["community-trends.json", "record-posters.json", "schedule.json", "source-health.json"]);
+const allowedDataFiles = new Set(["community-trends.json", "record-posters.json", "schedule.json", "source-health.json", "ticket-posters.json"]);
 const compressibleExtensions = new Set([".css", ".html", ".js", ".json", ".svg", ".txt", ".xml"]);
 const minimumCompressionSize = 256;
 const brotliDecompressAsync = promisify(brotliDecompress);

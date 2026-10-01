@@ -569,6 +569,7 @@ function isPublicAssetPath(pathname) {
     "/data/schedule.json",
     "/data/community-trends.json",
     "/data/source-health.json",
+    "/data/ticket-posters.json",
     "/assets/app.css",
     "/assets/app.js",
     "/assets/theme.js"

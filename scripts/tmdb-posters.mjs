@@ -1,40 +1,65 @@
-// TMDB poster lookup for films whose cinema listing has no artwork.
-// Needs TMDB_API_KEY (v3 key). Usage: node scripts/tmdb-posters.mjs --probe "더 드라마" ["이방인" ...]
+// TMDB poster lookup for the story ticket: English (or text-free) artwork per film title.
+// Needs TMDB_API_KEY (v3 key); without it every mode is a no-op.
+//   node scripts/tmdb-posters.mjs --fill              refresh data/ticket-posters.json from data/schedule.json
+//   node scripts/tmdb-posters.mjs --probe "더 드라마"   print the match for a title
+import { readFile } from "node:fs/promises";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { writeFileAtomic } from "./write-file-atomic.mjs";
 
 const API = "https://api.themoviedb.org/3";
-export const tmdbImageBase = "https://image.tmdb.org/t/p/w780";
+export const tmdbImageBase = "https://image.tmdb.org/t/p/";
 
+// Drops screening tags such as "(기획전)", "(2D)", "[GV]" and add-ons like "+ 시네토크 …",
+// and keeps only the main title before a long " : " subtitle.
 export function cleanFilmTitle(title) {
-  return String(title || "")
-    .replace(/\s*\((?:2D|3D|4K|자막|영문자막|더빙|디지털|리마스터링?)[^)]*\)\s*/gi, " ")
-    .replace(/\s*\[[^\]]*\]\s*/g, " ")
+  let value = String(title || "")
+    .replace(/\([^)]*\)|\[[^\]]*\]/g, " ")
+    .replace(/\s\+\s.*$/, "")
     .replace(/\s+/g, " ")
     .trim();
+  const [head, ...rest] = value.split(/\s:\s/);
+  if (rest.length && head.length >= 2) value = head.trim();
+  return value;
 }
 
 function normalize(value) {
   return String(value || "").replace(/[^\p{Letter}\p{Number}]+/gu, "").toLowerCase();
 }
 
+// Same key as normalizeTrendTitle in app.js, so the page can look a session up by its title.
+export function ticketPosterKey(title) {
+  return String(title || "")
+    .replace(/\([^)]*\)/g, "")
+    .replace(/[^\p{Letter}\p{Number}]+/gu, "")
+    .toLowerCase();
+}
+
 // Prefer an exact Korean title match, then the most popular result that has a poster.
-export function pickTmdbResult(results, title) {
+// Exact Korean or original title matches first, most popular first.
+export function rankTmdbResults(results, title) {
   const wanted = normalize(cleanFilmTitle(title));
   const withPoster = (results || []).filter((item) => item.poster_path);
   const exact = withPoster.filter((item) => normalize(item.title) === wanted || normalize(item.original_title) === wanted);
-  const pool = exact.length ? exact : withPoster;
-  return pool.sort((a, b) => (b.popularity || 0) - (a.popularity || 0))[0] || null;
+  return (exact.length ? exact : withPoster).sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
 }
 
-// Original-release artwork reads better than localized one-sheets: English first, then
-// text-free, each ranked by TMDB votes.
-export function pickTmdbPoster(posters, languages = ["en", null]) {
-  for (const language of languages) {
-    const ranked = (posters || [])
-      .filter((poster) => (poster.iso_639_1 ?? null) === language && poster.file_path)
-      .sort((a, b) => (b.vote_average || 0) - (a.vote_average || 0) || (b.vote_count || 0) - (a.vote_count || 0));
-    if (ranked.length) return ranked[0].file_path;
-  }
-  return "";
+export function pickTmdbResult(results, title) {
+  return rankTmdbResults(results, title)[0] || null;
+}
+
+// Poster choices for the ticket: English artwork first, then text-free, then Korean,
+// each ranked by TMDB votes.
+export function rankTmdbPosters(posters, limit = 8) {
+  const order = ["en", null, "ko"];
+  return (posters || [])
+    .filter((poster) => poster.file_path && order.includes(poster.iso_639_1 ?? null))
+    .sort((a, b) =>
+      order.indexOf(a.iso_639_1 ?? null) - order.indexOf(b.iso_639_1 ?? null) ||
+      (b.vote_average || 0) - (a.vote_average || 0) ||
+      (b.vote_count || 0) - (a.vote_count || 0))
+    .slice(0, limit)
+    .map((poster) => poster.file_path);
 }
 
 async function tmdbJson(path, params, { apiKey, fetchImpl }) {
@@ -43,23 +68,93 @@ async function tmdbJson(path, params, { apiKey, fetchImpl }) {
   return response.json();
 }
 
-export async function searchTmdbPoster(title, { apiKey, fetchImpl = fetch } = {}) {
+// runtime (minutes, from the cinema listing) breaks ties between films sharing a title.
+export async function searchTmdbPoster(title, { apiKey, runtime = 0, fetchImpl = fetch } = {}) {
   const query = cleanFilmTitle(title);
   if (!apiKey || !query) return null;
-  const data = await tmdbJson("/search/movie", { query, language: "ko-KR", include_adult: "false" }, { apiKey, fetchImpl });
-  const best = pickTmdbResult(data.results, query);
+  const options = { apiKey, fetchImpl };
+  const data = await tmdbJson("/search/movie", { query, language: "ko-KR", include_adult: "false" }, options);
+  const ranked = rankTmdbResults(data.results, query);
+  let best = ranked[0];
   if (!best) return null;
-  const images = await tmdbJson(`/movie/${best.id}/images`, { include_image_language: "en,null" }, { apiKey, fetchImpl }).catch(() => null);
-  const posterPath = pickTmdbPoster(images?.posters) || best.poster_path;
-  return { tmdbId: best.id, title: best.title, originalTitle: best.original_title, releaseDate: best.release_date || "", posterUrl: `${tmdbImageBase}${posterPath}` };
+  if (runtime && ranked.length > 1) {
+    for (const candidate of ranked.slice(0, 4)) {
+      const details = await tmdbJson(`/movie/${candidate.id}`, {}, options).catch(() => null);
+      if (details?.runtime && Math.abs(details.runtime - runtime) <= 6) {
+        best = candidate;
+        break;
+      }
+    }
+  }
+  const images = await tmdbJson(`/movie/${best.id}/images`, { include_image_language: "en,null,ko" }, options).catch(() => null);
+  const posters = rankTmdbPosters(images?.posters);
+  if (!posters.length && best.poster_path) posters.push(best.poster_path);
+  return { tmdbId: best.id, title: best.title, originalTitle: best.original_title, releaseDate: best.release_date || "", posters };
 }
 
-if (import.meta.url === `file://${process.argv[1]}` && process.argv[2] === "--probe") {
+const root = join(dirname(fileURLToPath(import.meta.url)), "..");
+const postersPath = join(root, "data/ticket-posters.json");
+const DAY = 24 * 60 * 60 * 1000;
+const hitTtl = 30 * DAY;
+const missTtl = 3 * DAY;
+const lookupBudget = 120;
+
+async function readJson(path, fallback) {
+  try {
+    return JSON.parse(await readFile(path, "utf8"));
+  } catch {
+    return fallback;
+  }
+}
+
+// Looks up titles that are new or stale, keeps the rest, and drops films no longer scheduled.
+export async function fillTicketPosters({ apiKey, now = Date.now(), fetchImpl = fetch } = {}) {
+  const schedule = await readJson(join(root, "data/schedule.json"), { sessions: [] });
+  const existing = await readJson(postersPath, { films: {} });
+  const titles = new Map();
+  for (const session of schedule.sessions || []) {
+    const key = ticketPosterKey(session.title);
+    const runtime = Number(String(session.tags || "").match(/(\d{2,3})분/)?.[1] || 0);
+    if (key && !titles.has(key)) titles.set(key, { title: cleanFilmTitle(session.title), runtime });
+  }
+  const films = {};
+  let lookups = 0;
+  let failures = 0;
+  for (const [key, { title, runtime }] of titles) {
+    const previous = existing.films?.[key];
+    const age = previous ? now - Date.parse(previous.checkedAt || 0) : Infinity;
+    const fresh = previous && age < (previous.posters?.length ? hitTtl : missTtl);
+    if (fresh || lookups >= lookupBudget) {
+      if (previous) films[key] = previous;
+      continue;
+    }
+    lookups += 1;
+    try {
+      const match = await searchTmdbPoster(title, { apiKey, runtime, fetchImpl });
+      films[key] = { title, tmdbId: match?.tmdbId || null, posters: match?.posters || [], checkedAt: new Date(now).toISOString() };
+    } catch (error) {
+      failures += 1;
+      if (previous) films[key] = previous;
+      console.warn(`TMDB lookup failed for ${title}: ${error.message}`);
+    }
+  }
+  const output = { generatedAt: new Date(now).toISOString(), source: "TMDB", imageBase: tmdbImageBase, films };
+  await writeFileAtomic(postersPath, `${JSON.stringify(output, null, 2)}\n`);
+  const found = Object.values(films).filter((film) => film.posters.length).length;
+  console.log(`Ticket posters: ${found}/${titles.size} films have TMDB artwork (${lookups} lookups, ${failures} failures).`);
+}
+
+const mode = import.meta.url === `file://${process.argv[1]}` ? process.argv[2] : "";
+if (mode === "--fill" || mode === "--probe") {
   const apiKey = process.env.TMDB_API_KEY;
   if (!apiKey) {
-    console.log("TMDB_API_KEY is not set; skipping probe.");
+    console.log("TMDB_API_KEY is not set; leaving ticket posters unchanged.");
     process.exit(0);
   }
+}
+if (mode === "--fill") await fillTicketPosters({ apiKey: process.env.TMDB_API_KEY });
+if (mode === "--probe") {
+  const apiKey = process.env.TMDB_API_KEY;
   for (const title of process.argv.slice(3)) {
     try {
       console.log(JSON.stringify({ query: title, match: await searchTmdbPoster(title, { apiKey }) }));
