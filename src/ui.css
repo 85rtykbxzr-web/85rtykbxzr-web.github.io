@@ -450,7 +450,9 @@ main { padding-top: 72px; }
 .fest-picks-h { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; margin-bottom: 4px; }
 .fest-picks-h strong { font-size: 15px; font-weight: 700; color: var(--t1); }
 .fest-picks-h span { font-size: 13px; color: var(--t4); }
-.fest-picks ol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; }
+/* Two columns filled top to bottom: 1 2 3 on the left, 4 5 6 on the right. */
+.fest-picks ol { columns: 2; column-gap: 24px; }
+.fest-picks li { break-inside: avoid; }
 .fest-picks li a, .fest-picks .fp-row { display: flex; align-items: center; gap: 10px; min-width: 0; height: 40px; border-bottom: 1px solid var(--line); font-size: 15px; }
 .fest-picks li a:hover .fp-title { text-decoration: underline; text-underline-offset: 3px; }
 .fp-rank { flex: none; width: 18px; font-size: 14px; font-weight: 700; color: var(--t4); font-variant-numeric: tabular-nums; }
@@ -458,7 +460,7 @@ main { padding-top: 72px; }
 .fp-title { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; color: var(--t1); }
 .fp-sec { flex: none; margin-left: auto; max-width: 45%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; color: var(--t4); }
 @media (max-width: 767px) {
-  .fest-picks ol { grid-template-columns: 1fr; }
+  .fest-picks ol { columns: 1; }
   .fp-sec { display: none; }
 }
 
