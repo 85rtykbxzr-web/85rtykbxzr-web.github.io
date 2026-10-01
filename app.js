@@ -2314,9 +2314,11 @@ import { filmTitleKey } from "./src/film-title.mjs";
             const thumb = safeImageUrl(posterSource(program));
             const full = thumb ? safeImageUrl(fullSizeBoardImage(thumb)) : "";
             const image = full ? posterMarkup({ posterUrl: full, posterSourceUrl: full !== thumb ? thumb : "" }, title, "prog-media-img", "", { decorative: true }) : "";
-            const media = `<span class="prog-media" aria-hidden="true">${programCoverMarkup(program, title, venue)}${image}</span>`;
+            // No image at all: the card stays a plain text card instead of showing an empty frame.
+            // A tone sits under the image in case it fails to load.
+            const media = image ? `<span class="prog-media" aria-hidden="true"><span class="prog-tone is-tone-${programTone(title)}"></span>${image}</span>` : "";
             return `
-              <a class="prog has-media" href="${escapeHref(program.url)}" target="_blank" rel="noopener noreferrer">
+              <a class="prog${media ? " has-media" : ""}" href="${escapeHref(program.url)}" target="_blank" rel="noopener noreferrer">
                 ${media}
                 <span class="prog-top"><span>${escapeHtml(programCardLabel(program, venue))}</span>${lifecyclePillMarkup(programLifecycle(program))}</span>
                 <h3 title="${escapeHtml(title)}">${escapeHtml(title)}</h3>
@@ -2327,17 +2329,10 @@ import { filmTitleKey } from "./src/film-title.mjs";
       : emptyMarkup("지금 진행 중인 프로그램이 없어요.");
   }
 
-  // Sits under the post image and shows when there is none (or it fails to load): the
-  // program's own title set as a cover, on one of a few tones picked from the title.
-  function programCoverMarkup(program, title, venue) {
+  function programTone(title) {
     let hash = 0;
     for (const char of title) hash = (hash * 31 + char.codePointAt(0)) >>> 0;
-    const kind = String(program.kind || "").trim();
-    return `<span class="prog-cover is-tone-${hash % 6}">
-      ${kind ? `<span class="prog-cover-kind">${escapeHtml(kind)}</span>` : ""}
-      <span class="prog-cover-title">${escapeHtml(title)}</span>
-      ${venue?.name ? `<span class="prog-cover-venue">${escapeHtml(venue.name)}</span>` : ""}
-    </span>`;
+    return hash % 6;
   }
 
   function festivalNameFromSession(session) {
