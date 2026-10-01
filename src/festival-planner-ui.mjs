@@ -309,6 +309,9 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
       block.style.height = `${Math.max(22, (Number(block.dataset.ttHeight) / 60) * hourHeight - 1)}px`;
       block.style.left = `calc(${(lane / lanes) * 100}% + 1px)`;
       block.style.width = `calc(${100 / lanes}% - 1px)`;
+      // as many title lines as the block's height holds, under the place line when it shows
+      const room = parseFloat(block.style.height) - 10 - (lanes > 1 ? 0 : 13);
+      block.style.setProperty("--tt-lines", String(Math.max(1, Math.floor(room / 14))));
     });
     const days = Number(grid.dataset.ttDays) || 1;
     grid.style.setProperty("--tt-days", String(days));
@@ -350,7 +353,6 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
     const today = kstDateString();
     if (!days.includes(state.day)) state.day = days.includes(today) ? today : days.find((date) => sessionsOn(date).length > 5) || days[0];
     $("#fpTitle").textContent = data.name;
-    $("#fpSub").textContent = `${data.startDate.slice(5).replace("-", ".")} – ${data.endDate.slice(5).replace("-", ".")} · 상영 ${data.sessions.length}회`;
     render();
     if (typeof sheet.showModal === "function") sheet.showModal();
     else sheet.setAttribute("open", "");

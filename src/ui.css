@@ -677,10 +677,10 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .fp-sheet[open] { animation: ticket-in 0.28s cubic-bezier(0.32, 0.72, 0, 1); }
 @media (max-width: 767px) { .fp-sheet { inset: 0; width: 100%; height: 100dvh; margin: 0; border-radius: 0; } }
 .fp-in { display: flex; flex-direction: column; height: 100%; }
-.fp-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; padding: calc(16px + env(safe-area-inset-top)) 18px 10px; }
+.fp-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: calc(16px + env(safe-area-inset-top)) 18px 10px; }
 .fp-head h2 { font-size: 22px; line-height: 30px; font-weight: 800; letter-spacing: -0.02em; }
 .fp-head p { margin-top: 2px; font-size: 13px; color: var(--t4); }
-.fp-head .icon-btn { margin: -4px -6px 0 0; }
+.fp-head .icon-btn { margin-right: -6px; }
 .fp-modes { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; margin: 0 18px; padding: 4px; border-radius: 12px; background: var(--fill); }
 .fp-modes button { height: 38px; border-radius: 9px; font-size: 15px; font-weight: 600; color: var(--t3); }
 .fp-modes button.is-on { background: var(--card); color: var(--t1); box-shadow: 0 1px 3px rgb(0 0 0 / 0.1); }
@@ -791,3 +791,7 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .tt-block span { font-size: 9.5px; line-height: 12px; font-weight: 500; opacity: 0.9; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
 
 /* --- refined timetable looks (variant classes for comparison) --- */
+.fpt.v-ink .tt-block b { -webkit-line-clamp: var(--tt-lines, 3); font-size: 11.5px; line-height: 14px; overflow-wrap: anywhere; }
+.fpt.v-ink .tt-block span { margin-top: 1px; font-size: 10px; line-height: 12px; }
+.fpt.v-ink .tt-block[data-tt-narrow] { padding: 5px 4px; }
+.fpt.v-ink .tt-block[data-tt-narrow] b { font-size: 10.5px; line-height: 14px; letter-spacing: -0.04em; }
