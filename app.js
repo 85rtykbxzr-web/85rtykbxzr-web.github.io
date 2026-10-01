@@ -2940,6 +2940,8 @@ import { drawStoryTicket } from "./src/story-ticket.mjs";
     $("#ticketShare")?.classList.toggle("hidden", !canShareFiles);
     if (typeof sheet.showModal === "function") sheet.showModal();
     else sheet.setAttribute("open", "");
+    // showModal focuses the close button, which draws a focus ring on touch screens
+    sheet.focus({ preventScroll: true });
     renderTicketPreview();
   }
 
