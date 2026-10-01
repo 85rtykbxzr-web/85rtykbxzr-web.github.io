@@ -542,26 +542,14 @@ a.row:hover .go { stroke: var(--t3); }
   .map-card { position: static; width: auto; padding: 16px 16px 20px; border-radius: 0; border-top: 1px solid var(--line); box-shadow: none; }
 }
 
-/* Theme switch: a veil that dims like house lights (to night) or lifts like them coming up (to day). */
-.house-lights { position: fixed; inset: 0; z-index: 200; pointer-events: none; background: #0b0b0a; opacity: 0; }
-.house-lights.is-dimming { animation: lights-down 1s ease-in-out both; }
-.house-lights.is-raising { animation: lights-up 1s ease-out both; }
-@keyframes lights-down { 0% { opacity: 0; } 42% { opacity: 0.92; } 100% { opacity: 0; } }
-@keyframes lights-up { 0% { opacity: 0.85; background: #0b0b0a; } 100% { opacity: 0; background: #fff7e8; } }
-
-/* Silent film easter egg: black and white, a touch of sepia, grain, vignette and a faint projector judder. */
-html.silent-film { filter: grayscale(1) sepia(0.18) contrast(1.12) brightness(0.98); }
-html.silent-film body::before, html.silent-film body::after { content: ""; position: fixed; inset: 0; z-index: 150; pointer-events: none; }
-html.silent-film body::before { background: radial-gradient(ellipse at center, transparent 55%, rgb(0 0 0 / 0.45) 100%); }
-html.silent-film body::after {
-  inset: -50%;
-  opacity: 0.16;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
-  animation: film-grain 0.6s steps(4) infinite;
-}
-html.silent-film main { animation: film-judder 0.24s steps(2) infinite; }
-@keyframes film-grain { 0% { transform: translate(0, 0); } 25% { transform: translate(-6%, 4%); } 50% { transform: translate(5%, -7%); } 75% { transform: translate(-3%, 6%); } 100% { transform: translate(0, 0); } }
-@keyframes film-judder { 0% { transform: translateY(0); } 100% { transform: translateY(1px); } }
-@media (prefers-reduced-motion: reduce) {
-  html.silent-film body::after, html.silent-film main { animation: none; }
-}
+/* Theme switch: a smooth crossfade of the whole page through a short dim (see toggleTheme). */
+html[data-theme-switch] *, html[data-theme-switch] *::before, html[data-theme-switch] *::after { transition: none !important; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: 0.7s; animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); animation-fill-mode: both; mix-blend-mode: normal; }
+html[data-theme-switch="dark"]::view-transition-old(root) { animation-name: lights-down-out; }
+html[data-theme-switch="dark"]::view-transition-new(root) { animation-name: lights-down-in; }
+html[data-theme-switch="light"]::view-transition-old(root) { animation-name: lights-up-out; }
+html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lights-up-in; }
+@keyframes lights-down-out { from { opacity: 1; filter: brightness(1); } to { opacity: 0; filter: brightness(0.4); } }
+@keyframes lights-down-in { from { opacity: 0; filter: brightness(0.7); } to { opacity: 1; filter: brightness(1); } }
+@keyframes lights-up-out { from { opacity: 1; filter: brightness(1); } to { opacity: 0; filter: brightness(1.6); } }
+@keyframes lights-up-in { from { opacity: 0; filter: brightness(1.25); } to { opacity: 1; filter: brightness(1); } }

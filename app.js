@@ -518,8 +518,8 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
     return "영화관의 공식 시간표를 불러오는 중입니다.";
   }
 
-  // Only surface a notice when a venue could not be checked. Successful and in-progress
-  // checks stay silent; the data-status line under the page title already shows freshness.
+  // Only surface a notice when a venue could not be checked; successful and in-progress
+  // checks stay silent.
   function renderBrowserLiveStatus() {
     const rows = usesBrowserLive(state.data) ? state.data.meta.browserLive || [] : [];
     const failures = rows.filter((row) => row.status === "error");
@@ -878,37 +878,20 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
     syncThemeControls();
   }
 
-  // Night mode dims like house lights going down; day mode brings them back up.
+  // The whole page crossfades through a short dim, like house lights going down (night)
+  // or coming up (day). Element transitions are paused so nothing changes colour on its own.
   function toggleTheme() {
     const next = currentTheme() === "dark" ? "light" : "dark";
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const root = document.documentElement;
+    if (!document.startViewTransition || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       applyTheme(next);
       return;
     }
-    let veil = document.getElementById("houseLights");
-    if (!veil) {
-      veil = document.createElement("div");
-      veil.id = "houseLights";
-      veil.setAttribute("aria-hidden", "true");
-      document.body.append(veil);
-    }
-    veil.className = `house-lights ${next === "dark" ? "is-dimming" : "is-raising"}`;
-    window.setTimeout(() => applyTheme(next), next === "dark" ? 420 : 0);
-    window.clearTimeout(toggleTheme.timer);
-    toggleTheme.timer = window.setTimeout(() => {
-      veil.className = "house-lights";
-    }, 1100);
-  }
-
-  // Hidden: five quick taps on the site name turn the page into a silent film.
-  function registerSilentFilmTap() {
-    const now = Date.now();
-    registerSilentFilmTap.taps = (registerSilentFilmTap.taps || []).filter((time) => now - time < 2000);
-    registerSilentFilmTap.taps.push(now);
-    if (registerSilentFilmTap.taps.length < 5) return;
-    registerSilentFilmTap.taps = [];
-    const on = document.documentElement.classList.toggle("silent-film");
-    showToast(on ? "무성영화 모드 · 로고를 다섯 번 더 누르면 꺼져요" : "유성영화로 돌아왔어요");
+    root.dataset.themeSwitch = next;
+    const transition = document.startViewTransition(() => applyTheme(next));
+    transition.finished.finally(() => {
+      delete root.dataset.themeSwitch;
+    });
   }
 
   function scrollToSection(id, behavior = "smooth") {
@@ -2987,8 +2970,6 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
         toggleTheme();
         return;
       }
-
-      if (event.target.closest(".brand")) registerSilentFilmTap();
 
       const navLink = event.target.closest("[data-nav-target]");
       if (navLink) {
