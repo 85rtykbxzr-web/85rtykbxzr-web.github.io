@@ -257,7 +257,7 @@ function drawDayLine(ctx, ticket, cx, y, big, small) {
   ctx.fillText(rest, left + dayWidth + gap, y);
 }
 
-function drawPosterStyle(ctx, ticket, poster, k = 1) {
+function drawPosterStyle(ctx, ticket, poster, { typeScale: k = 1.05, brandSize = 34, brandAlpha = 1 } = {}) {
   // Fill the story; a 2:3 poster loses about 8% on each side, which keeps the full-bleed look.
   if (poster) drawCover(ctx, poster, 0, 0, W, H);
   else {
@@ -291,12 +291,12 @@ function drawPosterStyle(ctx, ticket, poster, k = 1) {
   ctx.fillText(meta, x, y);
   y -= Math.round(70 * k);
   if (ticket.rating) {
-    const size = Math.round(38 * k);
-    const width = drawStars(ctx, ticket.rating, x, y - size * 0.36, size, "#ffffff", "rgba(255,255,255,0.26)");
+    const size = Math.round(48 * k);
+    const width = drawStars(ctx, ticket.rating, x, y - size * 0.34, size, "#ffffff", "rgba(255,255,255,0.26)");
     ctx.fillStyle = "#ffffff";
     ctx.font = `600 ${Math.round(32 * k)}px ${SANS}`;
-    ctx.fillText(ratingText(ticket.rating), x + width + 16, y - 2);
-    y -= Math.round(80 * k);
+    ctx.fillText(ratingText(ticket.rating), x + width + 18, y - 2);
+    y -= Math.round(90 * k);
   }
   ctx.fillStyle = "#ffffff";
   setTitleFont(ctx, titleSize);
@@ -319,8 +319,8 @@ function drawPosterStyle(ctx, ticket, poster, k = 1) {
   ctx.save();
   ctx.shadowColor = "rgba(0,0,0,0.4)";
   ctx.shadowBlur = 12;
-  ctx.fillStyle = "#ffffff";
-  ctx.font = `400 ${Math.round(36 * k)}px ${BRAND}`;
+  ctx.fillStyle = `rgba(255,255,255,${brandAlpha})`;
+  ctx.font = `400 ${Math.round(brandSize * k)}px ${BRAND}`;
   ctx.fillText("서울독립영화관시간표", W / 2, SAFE_TOP + 44);
   ctx.restore();
 }
@@ -562,7 +562,7 @@ function drawReceiptStyle(ctx, ticket, poster, seed) {
  * @param {{ title: string, venue: string, screen?: string, date: string, time: string, rating?: number, posterUrl?: string, id?: string }} ticket
  * @param {keyof typeof ticketStyles} styleKey
  */
-export async function drawStoryTicket(ticket, styleKey = "poster", { typeScale = 1 } = {}) {
+export async function drawStoryTicket(ticket, styleKey = "poster", options = {}) {
   const fontLoads = [`700 84px ${SANS}`, `600 32px ${SANS}`, `500 36px ${SANS}`, `400 36px ${BRAND}`].map((font) =>
     document.fonts?.load(font, `${ticket.title}${ticket.venue}${ticket.screen || ""}서울독립영화관시간표극장상영관시간좌석편월일화수목금토요0123456789.:·TOTALSEOUL`).catch(() => null)
   );
@@ -576,6 +576,6 @@ export async function drawStoryTicket(ticket, styleKey = "poster", { typeScale =
   const seed = hash(`${ticket.id}${ticket.title}`);
   if (styleKey === "ticket") drawTicketStyle(ctx, ticket, poster, seed);
   else if (styleKey === "receipt") drawReceiptStyle(ctx, ticket, poster, seed);
-  else drawPosterStyle(ctx, ticket, poster, typeScale);
+  else drawPosterStyle(ctx, ticket, poster, options);
   return canvas;
 }
