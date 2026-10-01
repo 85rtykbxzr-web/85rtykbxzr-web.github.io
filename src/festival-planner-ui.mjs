@@ -26,10 +26,15 @@ const heart = (filled) =>
   `<svg viewBox="0 0 24 24" aria-hidden="true"><path class="${filled ? "is-filled" : ""}" d="M12 20.3s-7.3-4.4-9.1-9.1C1.6 7.9 3.8 4.6 7.2 4.6c2 0 3.6 1.1 4.8 2.7 1.2-1.6 2.8-2.7 4.8-2.7 3.4 0 5.6 3.3 4.3 6.6-1.8 4.7-9.1 9.1-9.1 9.1Z"/></svg>`;
 
 export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUrl, kstDateString }) {
-  const state = { data: null, festivalId: "", day: "", mode: "all", place: "", gv: false, query: "", window: null, loading: null, timer: 0 };
+  const state = { data: null, festivalId: "", day: "", mode: "all", place: "", gv: false, query: "", window: null, loading: null, timer: 0, shared: null };
 
   const storageKey = () => `fest-plan:v1:${state.festivalId}`;
+  // A plan opened from a shared link is shown as is, read-only, until it is taken in.
   function readPicks() {
+    if (state.shared) return state.shared;
+    return readOwnPicks();
+  }
+  function readOwnPicks() {
     try {
       return new Set(JSON.parse(localStorage.getItem(storageKey()) || "[]"));
     } catch {
@@ -315,13 +320,41 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
     return `<h3 class="fp-detail-h">${heading}${summary}</h3><ol class="fp-itin">${body}</ol>`;
   }
 
+  // Share links carry the picks in the address (?fp=biff-2026&p=1008-084.1008-147): no account,
+  // nothing stored on a server. Ids are biff-YYYY-MM-DD-code; the year comes from the festival.
+  function planToken(picks) {
+    return [...picks]
+      .map((id) => id.match(/^[a-z]+-\d{4}-(\d{2})-(\d{2})-(.+)$/))
+      .filter(Boolean)
+      .map(([, month, day, code]) => `${month}${day}-${code}`)
+      .join(".");
+  }
+  function picksFromToken(token) {
+    const prefix = `${state.festivalId.replace(/-\d{4}$/, "")}-${state.data.startDate.slice(0, 4)}`;
+    const ids = String(token || "")
+      .split(".")
+      .map((part) => part.match(/^(\d{2})(\d{2})-([\w-]+)$/))
+      .filter(Boolean)
+      .map(([, month, day, code]) => `${prefix}-${month}-${day}-${code}`)
+      .filter((id) => byId(id));
+    return new Set(ids);
+  }
+  function shareUrl(picks) {
+    return `${window.location.origin}/?fp=${encodeURIComponent(state.festivalId)}&p=${encodeURIComponent(planToken(picks))}`;
+  }
+
+  function sharedBar(picks) {
+    return `<div class="fp-shared"><p><b>공유받은 시간표</b><span>${picks.size}편 · 아직 내 시간표에 담기지 않았어요</span></p><div class="fp-shared-actions"><button type="button" class="fp-shared-main" data-fp-import>내 시간표에 담기</button><button type="button" class="fp-fill" data-fp-unshare>내 시간표 보기</button></div></div>`;
+  }
+
   function renderMine(picks) {
     const anyPick = (state.data?.sessions || []).some((session) => picks.has(session.id));
     if (!anyPick) {
       return `<div class="fp-empty is-big"><p>보고 싶은 상영에 ♡를 눌러 담아 보세요</p><p class="sub">담은 영화가 시간표로 모이고, 사이사이 이동 시간과 여유 시간을 알려 드려요</p><button type="button" class="fp-fill" data-fp-mode="all">상영 둘러보기</button></div>`;
     }
     const ticket = state.data.ticketUrl ? `<a class="fp-ticket" href="${escapeHtml(safeExternalUrl(state.data.ticketUrl, "#"))}" target="_blank" rel="noopener noreferrer">공식 예매하러 가기</a>` : "";
-    return gridMarkup(picks) + dayDetailMarkup(picks) + `<p class="fp-note">도보 시간은 지도 기준 추정이에요. 입장 여유 5분을 더해 계산해요.</p>` + ticket;
+    const share = state.shared ? "" : `<button type="button" class="fp-share" data-fp-share>시간표 링크 보내기</button>`;
+    return (state.shared ? sharedBar(picks) : "") + gridMarkup(picks) + dayDetailMarkup(picks) + `<p class="fp-note">도보 시간은 지도 기준 추정이에요. 입장 여유 5분을 더해 계산해요.</p>` + share + ticket;
   }
 
   function placeNow() {
@@ -407,6 +440,10 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
   }
 
   function togglePick(id) {
+    if (state.shared) {
+      showToast("공유받은 시간표예요. 먼저 내 시간표에 담아 주세요");
+      return;
+    }
     const picks = readPicks();
     const session = byId(id);
     if (picks.has(id)) picks.delete(id);
@@ -424,6 +461,7 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
     if (!sheet?.contains(event.target)) return false;
     const target = event.target;
     if (target === sheet || target.closest("[data-fp-close]")) {
+      state.shared = null;
       sheet.close?.();
       return true;
     }
@@ -439,6 +477,11 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
     if (mode) {
       state.mode = mode.dataset.fpMode;
       state.window = null;
+      // 내 시간표 opens on a day that has picks, not on an empty one left over from browsing
+      if (state.mode === "mine" && !pickedOn(state.day).length) {
+        const first = (state.data?.sessions || []).filter((session) => readPicks().has(session.id)).map((session) => session.date).sort()[0];
+        if (first) state.day = first;
+      }
       $("#fpBody").scrollTop = 0;
       render();
       return true;
@@ -502,6 +545,29 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
       showToast(days.length ? `다른 회차 ${days.length}개가 있어요` : "다른 회차가 없어요");
       return true;
     }
+    if (target.closest("[data-fp-share]")) {
+      const url = shareUrl(readOwnPicks());
+      const copyLink = () =>
+        navigator.clipboard?.writeText(url).then(() => showToast("시간표 링크를 복사했어요"), () => showToast("링크를 복사하지 못했어요"));
+      if (navigator.share) navigator.share({ title: `${state.data.officialName || state.data.name} 내 시간표`, url }).catch((error) => error?.name !== "AbortError" && copyLink());
+      else copyLink();
+      return true;
+    }
+    if (target.closest("[data-fp-import]")) {
+      const own = readOwnPicks();
+      const before = own.size;
+      state.shared.forEach((id) => own.add(id));
+      writePicks(own);
+      state.shared = null;
+      render();
+      showToast(own.size > before ? `${own.size - before}편을 내 시간표에 담았어요` : "이미 다 담겨 있어요");
+      return true;
+    }
+    if (target.closest("[data-fp-unshare]")) {
+      state.shared = null;
+      render();
+      return true;
+    }
     const copy = target.closest("[data-fp-copy]");
     if (copy) {
       const code = copy.dataset.fpCopy;
@@ -521,5 +587,21 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
     input?.setSelectionRange(caret, caret);
   }
 
-  return { open, handleClick, handleInput };
+  async function openShared(festivalId, token) {
+    const data = await load(festivalId);
+    if (!data) return;
+    state.data = data;
+    state.festivalId = festivalId;
+    const picks = picksFromToken(token);
+    if (!picks.size) {
+      showToast("시간표 링크를 읽지 못했어요");
+      return;
+    }
+    state.shared = picks;
+    state.mode = "mine";
+    state.day = [...picks].map((id) => byId(id).date).sort()[0];
+    await open(festivalId);
+  }
+
+  return { open, openShared, handleClick, handleInput };
 }

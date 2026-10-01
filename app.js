@@ -2608,6 +2608,21 @@ import { createFestivalPlanner } from "./src/festival-planner-ui.mjs";
     return `<button class="book fest-plan-btn" type="button" data-fest-planner="${escapeHtml(row.festivalId)}">시간표 짜기</button>`;
   }
 
+  // A shared festival plan (?fp=biff-2026&p=…) opens once, then the address is cleaned up.
+  function openSharedFestivalPlan() {
+    if (state.sharedPlanChecked) return;
+    state.sharedPlanChecked = true;
+    const params = new URLSearchParams(window.location.search);
+    const festivalId = params.get("fp") || "";
+    const token = params.get("p") || "";
+    if (!plannerFestivalPattern.test(festivalId) || !token) return;
+    params.delete("fp");
+    params.delete("p");
+    const query = params.toString();
+    window.history.replaceState(window.history.state, "", `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash}`);
+    planner().openShared(festivalId, token);
+  }
+
   // Home strip from two weeks before the festival to its last day: the planner, one tap away.
   function renderFestivalStrip() {
     const festival = (state.data?.majorFestivals || []).find((item) => plannerFestivalPattern.test(item.id || ""));
@@ -2842,6 +2857,7 @@ import { createFestivalPlanner } from "./src/festival-planner-ui.mjs";
     }
     renderPopularPicks();
     renderFestivalStrip();
+    openSharedFestivalPlan();
     updateSoonBadges();
     repairPosterImages();
     syncInitialHashScroll();

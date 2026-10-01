@@ -2,9 +2,12 @@
 // and what a day of picked screenings looks like (overlaps, tight walks, free time).
 // Pure functions; the sheet that shows them lives in festival-planner-ui.mjs.
 
-// BIFF venues cluster around Centum City. Walking minutes are estimates from the street
-// layout (door to door, a little slack for lifts and crossings); the UI says so and links
-// to a Kakao Map route for the exact walk.
+// BIFF venues cluster around Centum City. Walking minutes come from OpenStreetMap's pedestrian
+// router (routing.openstreetmap.de, foot profile) between Kakao Map's venue points, at 75 m a
+// minute, rounded up. Where the router's path ran more than 1.8x the straight line (its footpaths
+// stop short around 센텀중앙로 55) the straight line x1.4 is used instead. CGV and Lotte sit on
+// upper floors of department stores: +2 minutes each for the lifts. Measured 2026-10-01; the UI
+// still calls them estimates and links a Kakao Map route.
 export const biffPlaces = [
   { id: "bcc", short: "영화의전당", name: "영화의전당", match: /^영화의전당/, map: "영화의전당" },
   { id: "cgv", short: "CGV", name: "CGV 센텀시티", match: /^CGV센텀시티|^신세계백화점 센텀시티/, map: "신세계센텀시티" },
@@ -16,11 +19,12 @@ export const biffPlaces = [
 ];
 
 const walkMinutes = {
-  "bcc-cgv": 7, "bcc-lotte": 9, "bcc-kofic": 10, "bcc-bmc": 10, "bcc-sohyang": 12, "bcc-dongseo": 12,
-  "cgv-lotte": 5, "cgv-kofic": 9, "cgv-bmc": 9, "cgv-sohyang": 9, "cgv-dongseo": 10,
-  "lotte-kofic": 10, "lotte-bmc": 10, "lotte-sohyang": 10, "lotte-dongseo": 11,
-  "kofic-bmc": 5, "kofic-sohyang": 6, "kofic-dongseo": 5,
-  "bmc-sohyang": 6, "bmc-dongseo": 6, "sohyang-dongseo": 5
+  "bcc-cgv": 11, "bcc-lotte": 11, "bcc-kofic": 2, "bcc-bmc": 8, "bcc-sohyang": 4, "bcc-dongseo": 5,
+  "cgv-lotte": 7, "cgv-kofic": 13, "cgv-bmc": 10, "cgv-sohyang": 12, "cgv-dongseo": 12,
+  "lotte-kofic": 13, "lotte-bmc": 6, "lotte-sohyang": 11, "lotte-dongseo": 11,
+  "kofic-bmc": 10, "kofic-sohyang": 3, "kofic-dongseo": 4,
+  "bmc-sohyang": 5, "bmc-dongseo": 5,
+  "sohyang-dongseo": 2
 };
 // halls inside one place: 영화의전당's halls sit in separate buildings
 const sameVenueMinutes = { bcc: 4, cgv: 2, lotte: 2 };
