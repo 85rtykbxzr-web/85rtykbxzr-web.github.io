@@ -14,6 +14,7 @@ const trustedPublicHostnames = new Set([
   "kucinema.net",
   "laikacinema.com",
   "litt.ly",
+  "map.kakao.com",
   "map.naver.com",
   "mjff.or.kr",
   "moviee.co.kr",
