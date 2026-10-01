@@ -2345,8 +2345,18 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
             const venue = venues[program.venueId];
             const title = cleanProgramTitle(program.title);
             const period = [program.period, program.sessions ? `${program.sessions}회` : ""].filter(Boolean).join(" · ");
+            // Posters (portrait) and programme banners (landscape) share one frame: the image is
+            // shown whole over a blurred copy of itself.
+            const imageSrc = safeImageUrl(posterSource(program));
+            // A film icon sits underneath, so a missing or broken image still leaves a tidy frame.
+            const media = `<span class="prog-media" aria-hidden="true">${iconMarkup("film", "prog-media-ic")}${
+              imageSrc
+                ? `<img class="prog-media-bg" src="${escapeHtml(imageSrc)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" />${posterMarkup(program, title, "prog-media-img", "", { decorative: true })}`
+                : ""
+            }</span>`;
             return `
-              <a class="prog" href="${escapeHref(program.url)}" target="_blank" rel="noopener noreferrer">
+              <a class="prog has-media" href="${escapeHref(program.url)}" target="_blank" rel="noopener noreferrer">
+                ${media}
                 <span class="prog-top"><span>${escapeHtml(programCardLabel(program, venue))}</span>${lifecyclePillMarkup(programLifecycle(program))}</span>
                 <h3 title="${escapeHtml(title)}">${escapeHtml(title)}</h3>
                 ${period ? `<p class="prog-period">${escapeHtml(period)}</p>` : ""}
