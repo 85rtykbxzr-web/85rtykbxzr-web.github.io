@@ -1,42 +1,33 @@
+@import "./pretendard.css";
+@import "./ui.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Sandoll Neutbom";
-  src:
-    local("Sandoll 늦봄 Medium"),
-    local("Sandoll 늦봄"),
-    local("Sandoll Neutbom Medium"),
-    local("Sandoll Neutbom");
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-}
-
 :root {
   color-scheme: light;
-  --rgb-background: 253 248 246;
-  --rgb-primary: 28 27 26;
-  --rgb-surface: 253 248 246;
+  --rgb-background: 242 244 246;
+  --rgb-primary: 25 31 40;
+  --rgb-surface: 255 255 255;
   --rgb-surface-container-lowest: 255 255 255;
-  --rgb-surface-container-low: 247 243 240;
-  --rgb-surface-container: 241 237 235;
-  --rgb-surface-container-high: 236 231 229;
-  --rgb-surface-container-highest: 230 226 223;
-  --rgb-on-surface: 28 27 26;
-  --rgb-on-surface-variant: 74 70 63;
-  --rgb-outline: 123 119 110;
-  --rgb-outline-variant: 204 198 187;
-  --rgb-tertiary: 148 73 37;
-  --rgb-status-active: 47 111 104;
-  --rgb-error: 186 26 26;
-  --rgb-major-festival: 36 33 31;
+  --rgb-surface-container-low: 242 244 246;
+  --rgb-surface-container: 238 240 242;
+  --rgb-surface-container-high: 229 232 235;
+  --rgb-surface-container-highest: 229 232 235;
+  --rgb-on-surface: 25 31 40;
+  --rgb-on-surface-variant: 107 118 132;
+  --rgb-outline: 139 149 161;
+  --rgb-outline-variant: 229 232 235;
+  --rgb-tertiary: 78 89 104;
+  --rgb-status-active: 78 89 104;
+  --rgb-error: 210 32 48;
+  --rgb-major-festival: 25 31 40;
   --rgb-rating-12: 29 78 216;
   --rgb-rating-all: 21 128 61;
-  --rgb-primary-fixed: 233 226 211;
+  --rgb-primary-fixed: 242 244 246;
   --rgb-warm-white: 255 250 247;
-  --rgb-badge-19: 36 33 31;
+  --rgb-badge-19: 25 31 40;
   --color-ink: rgb(var(--rgb-primary));
   --color-paper: rgb(var(--rgb-surface));
   --color-paper-low: rgb(var(--rgb-surface-container-low));
@@ -58,7 +49,7 @@
   --primary: var(--color-ink);
   --surface: var(--color-paper);
   --transition-base: 0.22s cubic-bezier(0.4, 0, 0.2, 1);
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   --font-mono: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace;
   --brand-font: "Sandoll Neutbom", system-ui, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
 }
@@ -67,53 +58,53 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
-    --rgb-background: 20 19 18;
-    --rgb-primary: 240 235 229;
-    --rgb-surface: 20 19 18;
-    --rgb-surface-container-lowest: 38 36 34;
-    --rgb-surface-container-low: 30 28 27;
-    --rgb-surface-container: 44 41 39;
-    --rgb-surface-container-high: 52 49 46;
-    --rgb-surface-container-highest: 60 56 53;
-    --rgb-on-surface: 240 235 229;
-    --rgb-on-surface-variant: 186 179 168;
-    --rgb-outline: 143 136 126;
-    --rgb-outline-variant: 72 67 61;
-    --rgb-tertiary: 227 154 112;
-    --rgb-status-active: 114 188 178;
-    --rgb-error: 255 122 114;
-    --rgb-major-festival: 42 38 35;
+    --rgb-background: 16 16 19;
+    --rgb-primary: 242 243 245;
+    --rgb-surface: 28 28 33;
+    --rgb-surface-container-lowest: 28 28 33;
+    --rgb-surface-container-low: 42 42 49;
+    --rgb-surface-container: 38 38 44;
+    --rgb-surface-container-high: 52 52 60;
+    --rgb-surface-container-highest: 52 52 60;
+    --rgb-on-surface: 242 243 245;
+    --rgb-on-surface-variant: 154 161 171;
+    --rgb-outline: 120 127 137;
+    --rgb-outline-variant: 51 51 59;
+    --rgb-tertiary: 176 182 190;
+    --rgb-status-active: 176 182 190;
+    --rgb-error: 255 95 107;
+    --rgb-major-festival: 28 28 33;
     --rgb-rating-12: 61 108 242;
     --rgb-rating-all: 31 145 80;
-    --rgb-primary-fixed: 59 53 44;
+    --rgb-primary-fixed: 42 42 49;
     --rgb-warm-white: 255 250 247;
-    --rgb-badge-19: 82 75 69;
+    --rgb-badge-19: 242 243 245;
   }
 }
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --rgb-background: 20 19 18;
-  --rgb-primary: 240 235 229;
-  --rgb-surface: 20 19 18;
-  --rgb-surface-container-lowest: 38 36 34;
-  --rgb-surface-container-low: 30 28 27;
-  --rgb-surface-container: 44 41 39;
-  --rgb-surface-container-high: 52 49 46;
-  --rgb-surface-container-highest: 60 56 53;
-  --rgb-on-surface: 240 235 229;
-  --rgb-on-surface-variant: 186 179 168;
-  --rgb-outline: 143 136 126;
-  --rgb-outline-variant: 72 67 61;
-  --rgb-tertiary: 227 154 112;
-  --rgb-status-active: 114 188 178;
-  --rgb-error: 255 122 114;
-  --rgb-major-festival: 42 38 35;
+  --rgb-background: 16 16 19;
+  --rgb-primary: 242 243 245;
+  --rgb-surface: 28 28 33;
+  --rgb-surface-container-lowest: 28 28 33;
+  --rgb-surface-container-low: 42 42 49;
+  --rgb-surface-container: 38 38 44;
+  --rgb-surface-container-high: 52 52 60;
+  --rgb-surface-container-highest: 52 52 60;
+  --rgb-on-surface: 242 243 245;
+  --rgb-on-surface-variant: 154 161 171;
+  --rgb-outline: 120 127 137;
+  --rgb-outline-variant: 51 51 59;
+  --rgb-tertiary: 176 182 190;
+  --rgb-status-active: 176 182 190;
+  --rgb-error: 255 95 107;
+  --rgb-major-festival: 28 28 33;
   --rgb-rating-12: 61 108 242;
   --rgb-rating-all: 31 145 80;
-  --rgb-primary-fixed: 59 53 44;
+  --rgb-primary-fixed: 42 42 49;
   --rgb-warm-white: 255 250 247;
-  --rgb-badge-19: 82 75 69;
+  --rgb-badge-19: 242 243 245;
 }
 
 html,
@@ -123,13 +114,14 @@ body {
 }
 
 :where(a, button, input, summary):focus-visible {
-  outline: 1px solid var(--color-ink);
+  outline: 2px solid var(--t1);
   outline-offset: 2px;
+  border-radius: 8px;
 }
 
 body {
-  background-color: var(--surface);
-  color: var(--primary);
+  background-color: var(--page);
+  color: var(--t1);
   -webkit-font-smoothing: antialiased;
   font-family: var(--font-sans);
 }
