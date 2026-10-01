@@ -1457,7 +1457,7 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
     const inactiveTarget = mobileLayout ? $("#desktopVenueFilter") : $("#mobileVenueFilter");
     inactiveTarget?.replaceChildren();
     renderVenueFilterTiles(activeTarget, shortcutItems);
-    renderVenueMap(shortcutItems);
+    renderVenueMap(shortcutItems, jumpDate);
   }
 
   const mapIconMarkup = '<svg class="ui-icon map-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"></path><circle cx="12" cy="10" r="2.4"></circle></svg>';
@@ -1483,48 +1483,441 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
     return loadKakaoMaps.promise;
   }
 
-  // One map per layout container; pins are rebuilt with each render's session counts.
-  const venueMaps = new Map();
+  // Short marker labels; the info card carries the full venue name.
+  const venueMapLabels = {
+    kofa: "KOFA",
+    sac: "서울아트시네마",
+    laika: "라이카",
+    indiespace: "인디스페이스",
+    momo: "모모",
+    cinecube: "씨네큐브",
+    emu: "에무",
+    forest: "더숲",
+    arirang: "아리랑",
+    filmforum: "필름포럼",
+    sangsangmadang: "상상마당",
+    artnine: "아트나인",
+    kucine: "KU시네마",
+    movieland: "무비랜드",
+    heyri: "헤이리"
+  };
+  // Marker geometry in px, in step with .map-pin in src/ui.css.
+  const mapPinSize = { venue: 28, cluster: 30 };
+  const mapPinPadding = { venue: 14, cluster: 12 };
+  const mapClusterStack = 5;
 
-  function renderVenueMap(items) {
+  // One map per layout container. Venue markers persist; overlapping ones merge into group markers.
+  const venueMaps = new Map();
+  let mapMeasureContext = null;
+
+  function mapTextWidth(text, font) {
+    mapMeasureContext ||= document.createElement("canvas").getContext("2d");
+    if (!mapMeasureContext) return String(text).length * 12;
+    mapMeasureContext.font = font;
+    return Math.ceil(mapMeasureContext.measureText(String(text)).width);
+  }
+
+  function mapVenueLabel(item) {
+    return venueMapLabels[item.id] || item.displayName || item.name;
+  }
+
+  function shortVenueAddress(venue) {
+    const parts = venueAddress(venue).replace(/^(?:서울(?:특별시)?|경기(?:도)?)\s+/, "").split(/\s+/);
+    const numberIndex = parts.findIndex((part, index) => index > 0 && /^\d/.test(part));
+    return parts.slice(0, numberIndex === -1 ? 3 : numberIndex + 1).join(" ");
+  }
+
+  function compareMapMarkers(a, b, selectedId) {
+    return (
+      Number(b.item.id === selectedId) - Number(a.item.id === selectedId) ||
+      Number(Boolean(b.item.count)) - Number(Boolean(a.item.count)) ||
+      Number(isFavoriteVenue(b.item.id)) - Number(isFavoriteVenue(a.item.id)) ||
+      b.item.count - a.item.count ||
+      compareVenueNames(a.item, b.item)
+    );
+  }
+
+  function boxesTouch(a, b, gap) {
+    return a.left < b.right + gap && b.left < a.right + gap && a.top < b.bottom + gap && b.top < a.bottom + gap;
+  }
+
+  // Screen position of each marker. The real SDK projects coordinates; offline stand-ins without a
+  // projection fall back to where the overlay landed.
+  function venueMapProjector(entry) {
+    const projection = typeof entry.map.getProjection === "function" ? entry.map.getProjection() : null;
+    if (projection?.containerPointFromCoords) {
+      return (marker) => {
+        const point = projection.containerPointFromCoords(marker.position);
+        return [typeof point.x === "number" ? point.x : point.getX(), typeof point.y === "number" ? point.y : point.getY()];
+      };
+    }
+    const origin = entry.canvas.getBoundingClientRect();
+    return (marker) => {
+      if (!marker.shown) {
+        marker.overlay.setMap(entry.map);
+        marker.shown = true;
+      }
+      const rect = marker.el.getBoundingClientRect();
+      return [rect.left + rect.width / 2 - origin.left, rect.top + rect.height / 2 - origin.top];
+    };
+  }
+
+  function mapGroupBox(group, countFont) {
+    const kind = group.members.length > 1 ? "cluster" : "venue";
+    const size = mapPinSize[kind];
+    const width = Math.max(size, mapTextWidth(group.total.toLocaleString("ko-KR"), countFont) + mapPinPadding[kind]);
+    const stack = kind === "cluster" ? mapClusterStack : 0;
+    const left = group.x - width / 2;
+    const top = group.y - size / 2;
+    return { left, top: top - stack, right: left + width + stack, bottom: top + size, bodyRight: left + width };
+  }
+
+  // Where the floating card covers the map (desktop only), so names are not placed under it.
+  function mapCardObstacle(entry) {
+    if (!entry.selectedId || isMobileViewport() || entry.card.classList.contains("hidden")) return null;
+    const canvas = entry.canvas.getBoundingClientRect();
+    const card = entry.card.getBoundingClientRect();
+    if (!card.width) return null;
+    return { left: card.left - canvas.left, top: card.top - canvas.top, right: card.right - canvas.left, bottom: card.bottom - canvas.top };
+  }
+
+  function layoutVenueMarkers(entry) {
+    const width = entry.canvas.clientWidth;
+    const height = entry.canvas.clientHeight;
+    // Busiest first, so groups form around the venues people are most likely after.
+    const markers = [...entry.markers.values()].sort((a, b) => compareMapMarkers(a, b, null));
+    if (!width || !height || !markers.length) return;
+    const family = getComputedStyle(entry.canvas).fontFamily;
+    const countFont = `700 13px ${family}`;
+    const project = venueMapProjector(entry);
+    const selectedId = entry.selectedId;
+    markers.forEach((marker) => {
+      marker.point = project(marker);
+    });
+
+    // A group sits on its busiest venue; selection never reshuffles groups.
+    const makeGroup = (members) => {
+      members.sort((a, b) => compareMapMarkers(a, b, null));
+      const group = {
+        members,
+        total: members.reduce((sum, marker) => sum + marker.item.count, 0),
+        x: members[0].point[0],
+        y: members[0].point[1]
+      };
+      group.box = mapGroupBox(group, countFont);
+      return group;
+    };
+
+    // Each venue joins the first group whose marker it would touch, else starts its own.
+    let groups = [];
+    markers.forEach((marker) => {
+      const own = makeGroup([marker]);
+      const host = groups.findIndex((group) => boxesTouch(group.box, own.box, 3));
+      if (host === -1) groups.push(own);
+      else groups[host] = makeGroup([...groups[host].members, marker]);
+    });
+    // A group that grew can reach a neighbour; fold those in too, until every marker stands clear.
+    for (let merged = true; merged; ) {
+      merged = false;
+      for (let i = 0; i < groups.length && !merged; i += 1) {
+        for (let j = i + 1; j < groups.length && !merged; j += 1) {
+          if (!boxesTouch(groups[i].box, groups[j].box, 3)) continue;
+          groups[i] = makeGroup([...groups[i].members, ...groups[j].members]);
+          groups.splice(j, 1);
+          merged = true;
+        }
+      }
+    }
+
+    // Names go beside, below or above a marker only where they clear every marker, name and the card.
+    const placed = [];
+    const card = mapCardObstacle(entry);
+    if (card) placed.push(card);
+    groups
+      .sort((a, b) => compareMapMarkers(a.members[0], b.members[0], selectedId))
+      .forEach((group) => {
+        const lead = group.members[0];
+        const cluster = group.members.length > 1;
+        const selected = !cluster && lead.item.id === selectedId;
+        const text = cluster ? `${mapVenueLabel(lead.item)} 외 ${group.members.length - 1}곳` : mapVenueLabel(lead.item);
+        const labelWidth = mapTextWidth(text, `${selected ? 700 : 600} 12px ${family}`) + 2;
+        const { box } = group;
+        const middle = (box.left + box.bodyRight) / 2;
+        const slots = [
+          ["right", box.bodyRight + (cluster ? mapClusterStack + 2 : 4), group.y - 8],
+          ["left", box.left - 4 - labelWidth, group.y - 8],
+          ["below", middle - labelWidth / 2, box.bottom + 2],
+          ["above", middle - labelWidth / 2, box.top - 2 - 16]
+        ];
+        group.label = null;
+        for (const [side, left, top] of slots) {
+          const rect = { left, top, right: left + labelWidth, bottom: top + 16 };
+          const inside = rect.left >= 4 && rect.right <= width - 4 && rect.top >= 4 && rect.bottom <= height - 4;
+          if (!inside) continue;
+          if (groups.some((other) => other !== group && boxesTouch(rect, other.box, 2))) continue;
+          if (placed.some((other) => boxesTouch(rect, other, 2))) continue;
+          placed.push(rect);
+          group.label = { text, side };
+          break;
+        }
+      });
+
+    const shownIds = new Set();
+    groups.forEach((group) => {
+      if (group.members.length > 1) return;
+      const marker = group.members[0];
+      const selected = marker.item.id === selectedId;
+      shownIds.add(marker.item.id);
+      paintMapPin(marker.el, { count: marker.item.count, label: group.label, selected });
+      marker.el.setAttribute("aria-label", `${marker.item.name} ${marker.item.countLabel}`);
+      marker.el.setAttribute("aria-pressed", String(selected));
+      marker.overlay.setZIndex(selected ? 10 : marker.item.count ? 3 : 2);
+      if (!marker.shown) {
+        marker.overlay.setMap(entry.map);
+        marker.shown = true;
+      }
+    });
+    markers.forEach((marker) => {
+      if (shownIds.has(marker.item.id) || !marker.shown) return;
+      marker.overlay.setMap(null);
+      marker.shown = false;
+    });
+
+    entry.clusters.forEach((overlay) => overlay.setMap(null));
+    entry.clusters = groups
+      .filter((group) => group.members.length > 1)
+      .map((group) => {
+        const el = document.createElement("button");
+        el.type = "button";
+        el.dataset.mapPin = "cluster";
+        const names = group.members.map((marker) => marker.item.name).join(", ");
+        el.setAttribute("aria-label", `${names} ${group.total.toLocaleString("ko-KR")}회차, 눌러서 확대`);
+        paintMapPin(el, { count: group.total, label: group.label, cluster: true, selected: group.members.some((marker) => marker.item.id === selectedId) });
+        el.addEventListener("click", () => zoomToMapGroup(entry, group.members));
+        const overlay = new entry.maps.CustomOverlay({ position: group.members[0].position, content: el, xAnchor: 0.5, yAnchor: 0.5, zIndex: 4, clickable: true });
+        overlay.setMap(entry.map);
+        return overlay;
+      });
+
+    entry.reset.classList.toggle("hidden", !(entry.fitLevel && entry.map.getLevel() < entry.fitLevel));
+  }
+
+  function paintMapPin(el, { count, label, cluster = false, selected = false }) {
+    el.className = [
+      "map-pin",
+      cluster ? "is-cluster" : "",
+      count ? "" : "is-empty",
+      selected ? "is-selected" : "",
+      label && label.side !== "right" ? `label-${label.side}` : ""
+    ]
+      .filter(Boolean)
+      .join(" ");
+    const labelMarkup = label ? `<span class="map-pin-label">${escapeHtml(label.text)}</span>` : "";
+    el.innerHTML = `<span class="map-pin-n">${escapeHtml(count.toLocaleString("ko-KR"))}</span>${labelMarkup}`;
+  }
+
+  function zoomToMapGroup(entry, members) {
+    const bounds = new entry.maps.LatLngBounds();
+    members.forEach((marker) => bounds.extend(marker.position));
+    const level = entry.map.getLevel();
+    entry.map.setBounds(bounds, 64, 64, 64, 64);
+    // Already as close as the map goes: open the busiest venue of the group instead.
+    if (entry.map.getLevel() >= level) {
+      selectMapVenue(entry, members[0].item.id);
+      return;
+    }
+    layoutVenueMarkers(entry);
+  }
+
+  function fitVenueMap(entry) {
+    const withSessions = entry.items.filter((item) => item.count);
+    const positions = (withSessions.length ? withSessions : entry.items).map((item) => entry.markers.get(item.id).position);
+    if (!positions.length) return;
+    const bounds = new entry.maps.LatLngBounds();
+    positions.forEach((position) => bounds.extend(position));
+    // One venue (or a few next door) still gets a neighbourhood around it, not a street-level close-up.
+    const lats = positions.map((position) => position.getLat());
+    const lngs = positions.map((position) => position.getLng());
+    const midLat = (Math.min(...lats) + Math.max(...lats)) / 2;
+    const midLng = (Math.min(...lngs) + Math.max(...lngs)) / 2;
+    if (Math.max(...lats) - Math.min(...lats) < 0.02 && Math.max(...lngs) - Math.min(...lngs) < 0.025) {
+      bounds.extend(new entry.maps.LatLng(midLat - 0.01, midLng - 0.0125));
+      bounds.extend(new entry.maps.LatLng(midLat + 0.01, midLng + 0.0125));
+    }
+    entry.map.setBounds(bounds, 40, 40, 40, 40);
+    entry.fitLevel = entry.map.getLevel();
+  }
+
+  function selectMapVenue(entry, venueId) {
+    if (entry.selectedId === venueId) return;
+    entry.selectedId = venueId;
+    renderVenueMapCard(entry);
+    layoutVenueMarkers(entry);
+    if (venueId) revealMapSelection(entry);
+  }
+
+  function revealMapSelection(entry) {
+    if (isMobileViewport()) {
+      // The card sits under the map on phones; bring both into view.
+      entry.panel.scrollIntoView({ block: "nearest", behavior: "smooth" });
+      return;
+    }
+    const selected = entry.markers.get(entry.selectedId);
+    const card = mapCardObstacle(entry);
+    if (!selected?.point || !card) return;
+    const width = entry.canvas.clientWidth;
+    const height = entry.canvas.clientHeight;
+    const nearCard = ([x, y]) => x < card.right + 40 && y > card.top - 40;
+    const visible = [...entry.markers.values()].filter(({ point }) => point && point[0] >= 0 && point[0] <= width && point[1] >= 0 && point[1] <= height);
+    const covered = visible.filter((marker) => nearCard(marker.point));
+    if (!covered.length) return;
+    // Slide everything clear of the card when it fits; otherwise just centre the chosen venue.
+    const xs = visible.map((marker) => marker.point[0]);
+    const shift = card.right + 40 - Math.min(...covered.map((marker) => marker.point[0]));
+    const west = visible[xs.indexOf(Math.min(...xs))];
+    const east = visible[xs.indexOf(Math.max(...xs))];
+    const span = east.point[0] - west.point[0];
+    if (span > 0 && Math.max(...xs) + shift <= width - 40) {
+      const lngPerPx = (east.position.getLng() - west.position.getLng()) / span;
+      const center = entry.map.getCenter();
+      entry.map.panTo(new entry.maps.LatLng(center.getLat(), center.getLng() - shift * lngPerPx));
+    } else if (nearCard(selected.point)) {
+      entry.map.panTo(selected.position);
+    } else {
+      return;
+    }
+    // The map's idle event lays the markers out again once the pan settles; this covers an instant pan.
+    layoutVenueMarkers(entry);
+  }
+
+  function renderVenueMapCard(entry) {
+    const item = entry.selectedId ? entry.markers.get(entry.selectedId)?.item : null;
+    entry.card.classList.toggle("hidden", !item);
+    if (!item) {
+      entry.card.replaceChildren();
+      return;
+    }
+    const venue = venueMap()[item.id] || { id: item.id, name: item.name };
+    const [lat, lng] = venueCoordinates[item.id];
+    const sessions = sortSessions(getRemainingSessions().filter((session) => session.venueId === item.id && session.date === entry.date));
+    const today = isTodayScheduleDate(entry.date);
+    const date = parseLocalDate(entry.date);
+    const dayLabel = today ? "오늘 남은 상영" : `${date.getMonth() + 1}월 ${date.getDate()}일 상영`;
+    const rows = sessions
+      .slice(0, 3)
+      .map((session) => {
+        const sold = isSoldoutSession(session) ? '<span class="map-card-sold">매진</span>' : "";
+        return `<li><span class="map-card-time">${escapeHtml(cleanTime(session))}</span><span class="map-card-title">${escapeHtml(session.title || "제목 확인")}</span>${sold}</li>`;
+      })
+      .join("");
+    const empty = today ? "오늘은 남은 상영이 없어요" : "이날은 상영이 없어요";
+    const directions = safeExternalUrl(`https://map.kakao.com/link/to/${encodeURIComponent(item.name)},${lat},${lng}`, "");
+    entry.card.innerHTML = `
+      <div class="map-card-head">
+        <div class="map-card-name">
+          <h3>${escapeHtml(item.name)}</h3>
+          <p>${escapeHtml(venueClosedDays[item.id] || "상영일 운영")}<span class="sep" aria-hidden="true">·</span>${escapeHtml(shortVenueAddress(venue))}</p>
+        </div>
+        <button class="map-card-close" type="button" data-map-card-close aria-label="닫기">${iconMarkup("x")}</button>
+      </div>
+      ${sessions.length ? `<p class="map-card-count">${dayLabel} ${sessions.length.toLocaleString("ko-KR")}회</p><ul class="map-card-times">${rows}</ul>` : `<p class="map-card-none">${empty}</p>`}
+      <div class="map-card-actions">
+        <button class="map-card-btn is-primary" type="button" data-venue-jump="${escapeHtml(item.id)}">시간표 보기</button>
+        ${directions ? `<a class="map-card-btn" href="${escapeHtml(directions)}" target="_blank" rel="noopener noreferrer">길찾기</a>` : ""}
+      </div>`;
+  }
+
+  function createVenueMapEntry(maps, panel) {
+    panel.replaceChildren();
+    const canvas = document.createElement("div");
+    canvas.className = "venue-map-canvas";
+    const reset = document.createElement("button");
+    reset.type = "button";
+    reset.className = "map-reset hidden";
+    reset.textContent = "전체 보기";
+    const card = document.createElement("section");
+    card.className = "map-card hidden";
+    card.setAttribute("aria-label", "상영관 정보");
+    panel.append(canvas, reset, card);
+    const map = new maps.Map(canvas, { center: new maps.LatLng(37.5665, 126.978), level: 8 });
+    map.setMaxLevel(11);
+    // Keep the Kakao logo clear of the card, which docks at the bottom left.
+    if (maps.CopyrightPosition && typeof map.setCopyrightPosition === "function") map.setCopyrightPosition(maps.CopyrightPosition.BOTTOMRIGHT, true);
+    const entry = { maps, map, panel, canvas, card, reset, items: [], date: "", markers: new Map(), clusters: [], selectedId: null, fitKey: "", fitLevel: 0 };
+    // Groups and names depend on the zoom and on what is in view, so redo them whenever the map settles.
+    maps.event.addListener(map, "idle", () => layoutVenueMarkers(entry));
+    maps.event.addListener(map, "click", () => selectMapVenue(entry, null));
+    reset.addEventListener("click", () => {
+      fitVenueMap(entry);
+      layoutVenueMarkers(entry);
+    });
+    card.addEventListener("click", (event) => {
+      if (event.target.closest("[data-map-card-close]")) selectMapVenue(entry, null);
+    });
+    panel.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && entry.selectedId) selectMapVenue(entry, null);
+    });
+    // Names are measured in the web font; place them again once it has loaded.
+    document.fonts?.ready.then(() => layoutVenueMarkers(entry));
+    venueMaps.set(panel.id, entry);
+    return entry;
+  }
+
+  function syncVenueMarkers(entry, items) {
+    const ids = new Set(items.map((item) => item.id));
+    entry.markers.forEach((marker, id) => {
+      if (ids.has(id)) return;
+      marker.overlay.setMap(null);
+      entry.markers.delete(id);
+    });
+    items.forEach((item) => {
+      let marker = entry.markers.get(item.id);
+      if (!marker) {
+        const [lat, lng] = venueCoordinates[item.id];
+        const position = new entry.maps.LatLng(lat, lng);
+        const el = document.createElement("button");
+        el.type = "button";
+        el.dataset.mapPin = "venue";
+        el.addEventListener("click", () => selectMapVenue(entry, item.id));
+        const overlay = new entry.maps.CustomOverlay({ position, content: el, xAnchor: 0.5, yAnchor: 0.5, zIndex: 2, clickable: true });
+        marker = { el, position, overlay, shown: false };
+        entry.markers.set(item.id, marker);
+      }
+      marker.item = item;
+    });
+    entry.items = items;
+  }
+
+  function renderVenueMap(items, date) {
     const mobileLayout = isMobileViewport();
     const panel = $(mobileLayout ? "#mobileVenueMap" : "#desktopVenueMap");
     $(mobileLayout ? "#desktopVenueMap" : "#mobileVenueMap")?.classList.add("hidden");
     if (!panel) return;
     panel.classList.toggle("hidden", !state.mapOpen);
-    if (!state.mapOpen) return;
+    if (!state.mapOpen) {
+      const closed = venueMaps.get(panel.id);
+      if (closed?.selectedId) {
+        closed.selectedId = null;
+        renderVenueMapCard(closed);
+      }
+      return;
+    }
     const pins = items.filter((item) => venueCoordinates[item.id]);
     loadKakaoMaps()
       .then((maps) => {
-        let entry = venueMaps.get(panel.id);
-        if (!entry) {
-          panel.replaceChildren();
-          const canvas = document.createElement("div");
-          canvas.className = "venue-map-canvas";
-          panel.append(canvas);
-          const map = new maps.Map(canvas, { center: new maps.LatLng(37.5665, 126.978), level: 8 });
-          map.setMaxLevel(11);
-          entry = { map, overlays: [] };
-          venueMaps.set(panel.id, entry);
-        }
+        const entry = venueMaps.get(panel.id) || createVenueMapEntry(maps, panel);
         entry.map.relayout();
-        entry.overlays.forEach((overlay) => overlay.setMap(null));
-        const bounds = new maps.LatLngBounds();
-        entry.overlays = pins.map((item) => {
-          const [lat, lng] = venueCoordinates[item.id];
-          const position = new maps.LatLng(lat, lng);
-          if (item.count) bounds.extend(position);
-          const pin = document.createElement("button");
-          pin.type = "button";
-          pin.className = `map-pin${item.count ? "" : " is-empty"}${isFavoriteVenue(item.id) ? " is-fav" : ""}`;
-          pin.dataset.venueJump = item.id;
-          pin.setAttribute("aria-label", `${item.name} ${item.countLabel}`);
-          pin.innerHTML = `<b>${escapeHtml(item.displayName || item.name)}</b><span>${item.count.toLocaleString("ko-KR")}</span>`;
-          const overlay = new maps.CustomOverlay({ position, content: pin, yAnchor: 1.15, zIndex: item.count ? 2 : 1 });
-          overlay.setMap(entry.map);
-          return overlay;
-        });
-        if (!bounds.isEmpty()) entry.map.setBounds(bounds, 48, 32, 32, 32);
+        syncVenueMarkers(entry, pins);
+        entry.date = date;
+        if (entry.selectedId && !entry.markers.has(entry.selectedId)) entry.selectedId = null;
+        // Re-frame only when the set of venues showing today changes, not on every render.
+        const fitKey = `${date}|${pins.filter((item) => item.count).map((item) => item.id).join(",")}`;
+        if (fitKey !== entry.fitKey) {
+          entry.fitKey = fitKey;
+          fitVenueMap(entry);
+        }
+        renderVenueMapCard(entry);
+        layoutVenueMarkers(entry);
       })
       .catch(() => {
         venueMaps.delete(panel.id);
@@ -1952,8 +2345,18 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
             const venue = venues[program.venueId];
             const title = cleanProgramTitle(program.title);
             const period = [program.period, program.sessions ? `${program.sessions}회` : ""].filter(Boolean).join(" · ");
+            // Posters (portrait) and programme banners (landscape) share one frame: the image is
+            // shown whole over a blurred copy of itself.
+            const imageSrc = safeImageUrl(posterSource(program));
+            // A film icon sits underneath, so a missing or broken image still leaves a tidy frame.
+            const media = `<span class="prog-media" aria-hidden="true">${iconMarkup("film", "prog-media-ic")}${
+              imageSrc
+                ? `<img class="prog-media-bg" src="${escapeHtml(imageSrc)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" />${posterMarkup(program, title, "prog-media-img", "", { decorative: true })}`
+                : ""
+            }</span>`;
             return `
-              <a class="prog" href="${escapeHref(program.url)}" target="_blank" rel="noopener noreferrer">
+              <a class="prog has-media" href="${escapeHref(program.url)}" target="_blank" rel="noopener noreferrer">
+                ${media}
                 <span class="prog-top"><span>${escapeHtml(programCardLabel(program, venue))}</span>${lifecyclePillMarkup(programLifecycle(program))}</span>
                 <h3 title="${escapeHtml(title)}">${escapeHtml(title)}</h3>
                 ${period ? `<p class="prog-period">${escapeHtml(period)}</p>` : ""}

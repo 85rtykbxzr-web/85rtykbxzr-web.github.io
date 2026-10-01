@@ -273,6 +273,14 @@ main { padding-top: 72px; }
 .pill { display: inline-flex; flex: none; align-items: center; height: 24px; padding: 0 8px; border-radius: 6px; font-size: 12px; font-weight: 700; white-space: nowrap; background: var(--fill); color: var(--t3); }
 .pill.is-ending { background: var(--red-bg); color: var(--red); }
 .prog-grid > .empty { grid-column: 1 / -1; }
+.prog.has-media { padding-top: 12px; }
+.prog-media { position: relative; display: block; margin: 0 -10px 16px; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; isolation: isolate; background: var(--fill); }
+.prog-media-bg { position: absolute; left: -25%; top: -25%; width: 37.5%; height: 37.5%; max-width: none; object-fit: cover; transform-origin: 0 0; transform: scale(4); filter: blur(8px); opacity: 0.85; z-index: -1; }
+.prog-media .prog-media-img { position: relative; display: block; width: 100%; height: 100%; object-fit: contain; }
+.prog-media .poster-fallback { display: none; }
+.prog-media-ic { position: absolute; left: 50%; top: 50%; width: 28px; height: 28px; margin: -14px 0 0 -14px; color: var(--t5); z-index: -2; }
+.prog:hover .prog-media-img { transform: scale(1.02); }
+.prog-media-img { transition: transform 0.3s ease; }
 
 /* ---------- festivals ---------- */
 .fest-list { border-radius: 20px; background: var(--card); padding: 4px 24px; }
@@ -486,18 +494,54 @@ a.row:hover .go { stroke: var(--t3); }
 /* venue map (Kakao Maps, opened from the 지도 chip) */
 .map-toggle .map-ic { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .chip.is-on { background: var(--strong); color: var(--on-strong); }
-.venue-map { margin: -4px 0 16px; border-radius: 20px; overflow: hidden; background: var(--card); }
-.venue-map-canvas { width: 100%; height: 380px; }
+.venue-map { position: relative; margin: -4px 0 16px; border-radius: 20px; overflow: hidden; background: var(--card); }
+.venue-map-canvas { position: relative; z-index: 0; width: 100%; height: 380px; }
 .venue-map-error { padding: 40px 24px; text-align: center; font-size: 15px; color: var(--t3); }
-.map-pin { display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 12px; border-radius: 999px; background: #fff; color: #191f28; font-family: var(--font); font-size: 13px; white-space: nowrap; box-shadow: 0 2px 8px rgb(0 23 51 / 0.18), 0 0 0 1px rgb(0 23 51 / 0.06); cursor: pointer; }
-.map-pin b { font-weight: 700; }
-.map-pin span { font-weight: 600; color: #6b7684; font-variant-numeric: tabular-nums; }
-.map-pin.is-fav { background: #191f28; color: #fff; }
-.map-pin.is-fav span { color: rgb(255 255 255 / 0.72); }
-.map-pin.is-empty { opacity: 0.6; }
-.map-pin:hover { transform: translateY(-1px); }
+/* Markers: session count only, names beside them where they fit (placed in app.js).
+   Kakao tiles stay light in both themes, so markers keep the light-theme ink and paper. */
+.map-pin { position: relative; display: inline-flex; align-items: center; justify-content: center; min-width: 28px; height: 28px; padding: 0 5px; border: 2px solid #fff; border-radius: 9px; background: #191f28; color: #fff; font-family: var(--font); font-size: 13px; font-weight: 700; line-height: 1; letter-spacing: 0; font-variant-numeric: tabular-nums; white-space: nowrap; box-shadow: 0 1px 4px rgb(0 23 51 / 0.28); cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.map-pin::before { content: ""; position: absolute; inset: -8px; }
+.map-pin.is-empty { background: #fff; color: #6b7684; box-shadow: 0 0 0 1px rgb(0 23 51 / 0.1), 0 1px 4px rgb(0 23 51 / 0.16); }
+/* A group of nearby venues: a second plate behind the marker; tapping zooms in. */
+.map-pin.is-cluster { min-width: 30px; height: 30px; padding: 0 4px; border-radius: 10px; box-shadow: 3px -3px 0 0 #6b7684, 3px -3px 0 2px #fff, 0 1px 4px rgb(0 23 51 / 0.28); }
+.map-pin.is-cluster.is-empty { box-shadow: 3px -3px 0 0 #d1d6db, 3px -3px 0 2px #fff, 0 0 0 1px rgb(0 23 51 / 0.1), 0 1px 4px rgb(0 23 51 / 0.16); }
+.map-pin.is-selected { background: #191f28; color: #fff; box-shadow: 0 0 0 2px #191f28, 0 4px 12px rgb(0 23 51 / 0.32); }
+.map-pin.is-cluster.is-selected { box-shadow: 0 0 0 2px #191f28, 3px -3px 0 2px #6b7684, 0 4px 12px rgb(0 23 51 / 0.32); }
+.map-pin:focus-visible { outline: 2px solid #191f28; outline-offset: 3px; }
+.map-pin-label { position: absolute; top: 50%; left: calc(100% + 6px); transform: translateY(-50%); font-size: 12px; font-weight: 600; line-height: 16px; color: #191f28; text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 3px #fff, 0 0 4px #fff; }
+.map-pin.is-cluster .map-pin-label { left: calc(100% + 9px); }
+.map-pin.label-left .map-pin-label { left: auto; right: calc(100% + 6px); }
+.map-pin.label-below .map-pin-label, .map-pin.label-above .map-pin-label { left: 50%; transform: translateX(-50%); }
+.map-pin.label-below .map-pin-label { top: calc(100% + 4px); }
+.map-pin.label-above .map-pin-label { top: auto; bottom: calc(100% + 4px); }
+.map-pin.is-cluster.label-above .map-pin-label { bottom: calc(100% + 9px); }
+.map-pin.is-empty .map-pin-label { color: #6b7684; }
+.map-pin.is-selected .map-pin-label { font-weight: 700; color: #191f28; }
+.map-reset { position: absolute; top: 12px; right: 12px; z-index: 2; height: 32px; padding: 0 12px; border-radius: 999px; background: #fff; color: #191f28; font-size: 13px; font-weight: 600; box-shadow: 0 0 0 1px rgb(0 23 51 / 0.08), 0 2px 8px rgb(0 23 51 / 0.16); }
+/* Venue card: floats bottom-left over the map on desktop, docks under it on phones. */
+.map-card { position: absolute; left: 16px; bottom: 16px; z-index: 2; width: 320px; padding: 16px; border-radius: 16px; background: var(--card); color: var(--t1); box-shadow: 0 0 0 1px color-mix(in srgb, var(--t1) 6%, transparent), 0 10px 28px -8px rgb(0 23 51 / 0.32); }
+.map-card-head { display: flex; align-items: flex-start; gap: 8px; }
+.map-card-name { flex: 1; min-width: 0; }
+.map-card-name h3 { font-size: 16px; font-weight: 700; line-height: 22px; color: var(--t1); }
+.map-card-name p { margin-top: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; line-height: 18px; color: var(--t4); }
+.map-card-name .sep { margin: 0 4px; }
+.map-card-close { flex: none; display: grid; place-items: center; width: 32px; height: 32px; margin: -6px -8px 0 0; border-radius: 999px; color: var(--t4); }
+.map-card-close:hover { background: var(--fill); color: var(--t2); }
+.map-card-close .ui-icon { width: 18px; height: 18px; }
+.map-card-count { margin-top: 12px; font-size: 13px; font-weight: 600; line-height: 18px; color: var(--t4); }
+.map-card-times { margin-top: 4px; }
+.map-card-times li { display: flex; align-items: center; gap: 10px; height: 28px; font-size: 14px; }
+.map-card-time { flex: none; min-width: 40px; font-weight: 700; color: var(--t1); font-variant-numeric: tabular-nums; }
+.map-card-title { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 500; color: var(--t2); }
+.map-card-sold { flex: none; margin-left: auto; font-size: 12px; font-weight: 600; color: var(--red); }
+.map-card-none { margin-top: 12px; font-size: 14px; color: var(--t4); }
+.map-card-actions { display: flex; gap: 8px; margin-top: 14px; }
+.map-card-btn { flex: 1; display: inline-flex; align-items: center; justify-content: center; height: 40px; border-radius: 12px; background: var(--fill); color: var(--t1); font-size: 14px; font-weight: 600; white-space: nowrap; transition: background-color 0.15s; }
+.map-card-btn:hover { background: var(--fill-hover); }
+.map-card-btn.is-primary { flex: 2; background: var(--strong); color: var(--on-strong); }
+.map-card-btn.is-primary:hover { background: var(--strong); }
 @media (max-width: 767px) {
-  .venue-map { margin: -4px -16px 12px; border-radius: 0; }
+  .venue-map { margin: -4px -16px 12px; border-radius: 0; scroll-margin: 76px 0 100px; }
   .venue-map-canvas { height: 300px; }
-  .map-pin { height: 30px; padding: 0 10px; font-size: 12px; }
+  .map-card { position: static; width: auto; padding: 16px 16px 20px; border-radius: 0; border-top: 1px solid var(--line); box-shadow: none; }
 }
