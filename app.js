@@ -816,6 +816,8 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
 
   function activeSectionId() {
     const ids = visibleNavIds();
+    // The last section can be too short to reach the top; at the bottom of the page it is the one in view.
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) return ids[ids.length - 1];
     const probeY = window.scrollY + navOffset() + 48;
     let active = ids[0];
     ids.forEach((id) => {
@@ -836,7 +838,24 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
     });
   }
 
+  // While a tapped tab scrolls the page, the sections it passes would light up one
+  // after another and drag the tab pill back and forth. Hold the tapped tab until
+  // the visitor scrolls by hand.
+  let navLockId = null;
+
+  function lockNavActive(id) {
+    navLockId = id;
+    setNavActive(id);
+  }
+
+  function releaseNavLock(event) {
+    if (!navLockId || event?.target?.closest?.("[data-nav-target]")) return;
+    navLockId = null;
+    updateNavActive();
+  }
+
   function updateNavActive() {
+    if (navLockId) return;
     setNavActive(activeSectionId());
   }
 
@@ -2471,6 +2490,7 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
       if (navLink) {
         const targetId = navLink.dataset.navTarget;
         if (targetId && scrollToSection(targetId)) {
+          lockNavActive(targetId);
           event.preventDefault();
           state.hashSyncKey = "";
           history.pushState(null, "", `#${encodeURIComponent(targetId)}`);
@@ -2523,6 +2543,7 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
       window.setTimeout(syncInitialHashScroll, 300);
       window.setTimeout(updateNavActive, 320);
     });
+    ["wheel", "touchstart", "keydown"].forEach((type) => window.addEventListener(type, releaseNavLock, { passive: true }));
     let navScrollScheduled = false;
     window.addEventListener(
       "scroll",
