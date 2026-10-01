@@ -15,7 +15,7 @@ const deploymentId = process.env.STATIC_DEPLOYMENT_ID || null;
 const deploymentCommit = process.env.STATIC_DEPLOYMENT_COMMIT || null;
 // TMDB v3 read key for the page's own poster search; it is public by design once published.
 const tmdbPageKey = /^[0-9a-f]{32}$/i.test(process.env.TMDB_API_KEY || "") ? process.env.TMDB_API_KEY : "";
-const optionalDataFiles = ["record-posters.json", "ticket-posters.json"];
+const optionalDataFiles = ["record-posters.json", "ticket-posters.json", "festival-biff.json"];
 const allowedAssetExtensions = new Set([".css", ".gif", ".jpeg", ".jpg", ".js", ".png", ".svg", ".txt", ".webp", ".woff2"]);
 const excludedPublicAssetPaths = [
   "festival-marks/siwff.png",

@@ -10,6 +10,7 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
 import { drawStoryTicket } from "./src/story-ticket.mjs";
 import { filmTitleKey } from "./src/film-title.mjs";
 import { searchTmdbPoster, tmdbImageBase } from "./src/tmdb.mjs";
+import { createFestivalPlanner } from "./src/festival-planner-ui.mjs";
 
 (function () {
   const analyticsHostnames = new Set(["seoulcinemaschedule.com", "www.seoulcinemaschedule.com"]);
@@ -1338,7 +1339,7 @@ import { searchTmdbPoster, tmdbImageBase } from "./src/tmdb.mjs";
           <p>${escapeHtml(summary)}</p>
           ${extra}
         </div>
-        ${major ? `<div class="fest-cta">${festivalActionMarkup(major)}</div>` : ""}
+        ${major ? `<div class="fest-cta">${festivalPlannerButton(major)}${festivalActionMarkup(major)}</div>` : ""}
       </div>`;
   }
 
@@ -2592,6 +2593,53 @@ import { searchTmdbPoster, tmdbImageBase } from "./src/tmdb.mjs";
     return `<a class="book${row.bookingType === "booking" ? "" : " is-ghost"}" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a>`;
   }
 
+  // Festivals with a collected timetable get the planner; BIFF only for now.
+  const plannerFestivalPattern = /^biff-/;
+  let festivalPlanner = null;
+  function planner() {
+    festivalPlanner ||= createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUrl, kstDateString });
+    return festivalPlanner;
+  }
+
+  function festivalPlannerButton(row) {
+    if (!plannerFestivalPattern.test(row?.festivalId || "")) return "";
+    const lifecycle = lifecycleFromRange({ start: row.startDate, end: row.endDate });
+    if (lifecycle?.expired) return "";
+    return `<button class="book fest-plan-btn" type="button" data-fest-planner="${escapeHtml(row.festivalId)}">시간표 짜기</button>`;
+  }
+
+  // A shared festival plan (?fp=biff-2026&p=…) opens once, then the address is cleaned up.
+  function openSharedFestivalPlan() {
+    if (state.sharedPlanChecked) return;
+    state.sharedPlanChecked = true;
+    const params = new URLSearchParams(window.location.search);
+    const festivalId = params.get("fp") || "";
+    const token = params.get("p") || "";
+    if (!plannerFestivalPattern.test(festivalId) || !token) return;
+    params.delete("fp");
+    params.delete("p");
+    const query = params.toString();
+    window.history.replaceState(window.history.state, "", `${window.location.pathname}${query ? `?${query}` : ""}${window.location.hash}`);
+    planner().openShared(festivalId, token);
+  }
+
+  // Home strip from two weeks before the festival to its last day: the planner, one tap away.
+  function renderFestivalStrip() {
+    const festival = (state.data?.majorFestivals || []).find((item) => plannerFestivalPattern.test(item.id || ""));
+    const today = kstDateString();
+    const shown = festival?.startDate && festival?.endDate && today <= festival.endDate && daysBetween(today, festival.startDate) <= 14;
+    let markup = "";
+    if (shown) {
+      const started = today >= festival.startDate;
+      const tag = started ? `${daysBetween(festival.startDate, today) + 1}일째` : `D-${daysBetween(today, festival.startDate)}`;
+      markup = `<button type="button" class="fest-strip" data-fest-planner="${escapeHtml(festival.id)}"><span class="fest-strip-tag">${escapeHtml(tag)}</span><span class="fest-strip-t"><b>${escapeHtml(festival.name)} 시간표 짜기</b></span><svg class="ui-icon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#arrow-right"></use></svg></button>`;
+    }
+    const mobileLayout = isMobileViewport();
+    const target = mobileLayout ? $("#mobileFestStrip") : $("#festStrip");
+    (mobileLayout ? $("#festStrip") : $("#mobileFestStrip"))?.replaceChildren();
+    if (target) target.innerHTML = markup;
+  }
+
   function majorFestivalLogoMarkup(row) {
     if (!row?.logoUrl) return "";
     return `<span class="fest-logo${row.logoTheme === "dark" ? " is-dark" : ""}"><img src="${escapeHtml(row.logoUrl)}" alt="${escapeHtml(row.name)} 로고" loading="lazy" /></span>`;
@@ -2808,6 +2856,8 @@ import { searchTmdbPoster, tmdbImageBase } from "./src/tmdb.mjs";
       renderFestivals();
     }
     renderPopularPicks();
+    renderFestivalStrip();
+    openSharedFestivalPlan();
     updateSoonBadges();
     repairPosterImages();
     syncInitialHashScroll();
@@ -3334,6 +3384,7 @@ import { searchTmdbPoster, tmdbImageBase } from "./src/tmdb.mjs";
 
   function bindEvents() {
     $("#searchInput")?.addEventListener("input", (event) => syncSearch(event.target.value));
+    $("#festPlanner")?.addEventListener("input", (event) => festivalPlanner?.handleInput(event));
     // the picker re-renders its file input, so the change listener is delegated
     $("#ticketSessionSelects")?.addEventListener("change", onTicketSelectChange);
     bindTicketRatingDrag();
@@ -3375,6 +3426,14 @@ import { searchTmdbPoster, tmdbImageBase } from "./src/tmdb.mjs";
       if (event.target.closest("[data-stop-propagation]")) {
         event.stopPropagation();
       }
+
+      const plannerOpen = event.target.closest("[data-fest-planner]");
+      if (plannerOpen) {
+        event.preventDefault();
+        planner().open(plannerOpen.dataset.festPlanner);
+        return;
+      }
+      if (festivalPlanner?.handleClick(event)) return;
 
       if (event.target.closest("[data-theme-toggle]")) {
         toggleTheme();
