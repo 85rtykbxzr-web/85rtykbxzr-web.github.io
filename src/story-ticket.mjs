@@ -168,7 +168,15 @@ function dateParts(value) {
   };
 }
 
-function drawPosterStyle(ctx, ticket, poster, { typeScale: k = 1.05, gap: baseGap = 26, starColor = "#ffffff" } = {}) {
+const layouts = {
+  a: ["label", ["day", 46, 32], "title", "stars", "meta"],
+  b: ["pill", "title", "stars", "metaFull"],
+  c: ["label", "title", "stars", "when", "meta"],
+  d: ["label", "title", "stars", "metaFull"],
+  e: ["pill", ["day", 46, 32], "title", "stars", "meta"]
+};
+
+function drawPosterStyle(ctx, ticket, poster, { typeScale: k = 1.05, gap: baseGap = 26, starColor = "#ffffff", layout = "a", align = "left" } = {}) {
   // Fill the story; a 2:3 poster loses about 8% on each side, which keeps the full-bleed look.
   if (poster) drawCover(ctx, poster, 0, 0, W, H);
   else {
@@ -190,64 +198,133 @@ function drawPosterStyle(ctx, ticket, poster, { typeScale: k = 1.05, gap: baseGa
 
   const x = 84;
   const d = dateParts(ticket.date);
-  const titleSize = Math.round(84 * k);
-  setTitleFont(ctx, titleSize);
-  const titleLines = wrapLines(ctx, ticket.title, W - x * 2, 3);
-  const meta = [ticket.venue, ticket.screen].filter(Boolean).join("  ·  ");
-  // Laid out from the bottom up on measured ink boxes, so the gaps between date, title,
-  // stars and venue look even whatever the glyphs; the block ends above the reply bar.
+  const dayText = d ? `${Number(d.mm)}월 ${Number(d.dd)}일` : ticket.date;
+  const weekday = d ? `${d.ko}요일` : "";
+  const venueText = [ticket.venue, ticket.screen].filter(Boolean).join("  ·  ");
+  const px = (size) => Math.round(size * k);
+  const cx = align === "center" ? W / 2 : x;
   const ink = (font, sample = "가") => {
     ctx.font = font;
     const m = ctx.measureText(sample);
     return { asc: m.actualBoundingBoxAscent, desc: m.actualBoundingBoxDescent };
   };
-  const gap = Math.round(baseGap * k);
-  const metaFont = `500 ${Math.round(32 * k)}px ${SANS}`;
-  const titleFont = `700 ${titleSize}px ${SANS}`;
-  const dayFont = `700 ${Math.round(54 * k)}px ${SANS}`;
-  const restFont = `500 ${Math.round(36 * k)}px ${SANS}`;
-  const ratingFont = `600 ${Math.round(32 * k)}px ${SANS}`;
+  const textLine = (text, font, color, { tracking = 0 } = {}) => {
+    const box = ink(font);
+    return {
+      asc: box.asc, desc: box.desc,
+      draw(baseline) {
+        ctx.font = font;
+        ctx.fillStyle = color;
+        ctx.letterSpacing = `${tracking}px`;
+        ctx.textAlign = align === "center" ? "center" : "left";
+        ctx.fillText(text, cx, baseline);
+        ctx.letterSpacing = "0px";
+      }
+    };
+  };
+  // Each piece of the text block: measured ink box plus a draw at a baseline.
+  const pieces = {
+    label: () => textLine("오늘의 영화 일기", `600 ${px(28)}px ${SANS}`, "rgba(255,255,255,0.72)", { tracking: 1 }),
+    pill: () => {
+      const font = `700 ${px(26)}px ${SANS}`;
+      const box = ink(font);
+      const padX = px(18);
+      const padY = px(12);
+      return {
+        asc: box.asc + padY, desc: box.desc + padY,
+        draw(baseline) {
+          ctx.font = font;
+          const w = ctx.measureText("오늘의 영화 일기").width + padX * 2;
+          const left = align === "center" ? cx - w / 2 : x;
+          ctx.fillStyle = "rgba(255,255,255,0.18)";
+          ctx.beginPath();
+          ctx.roundRect(left, baseline - box.asc - padY, w, box.asc + box.desc + padY * 2, 999);
+          ctx.fill();
+          ctx.fillStyle = "#ffffff";
+          ctx.textAlign = "left";
+          ctx.fillText("오늘의 영화 일기", left + padX, baseline);
+        }
+      };
+    },
+    day: (big = 54, small = 36) => {
+      const bigFont = `700 ${px(big)}px ${SANS}`;
+      const smallFont = `500 ${px(small)}px ${SANS}`;
+      const box = ink(bigFont, "1가");
+      return {
+        asc: box.asc, desc: box.desc,
+        draw(baseline) {
+          ctx.textAlign = "left";
+          ctx.font = bigFont;
+          const dayWidth = ctx.measureText(dayText).width;
+          ctx.font = smallFont;
+          const rest = `${weekday}  ${ticket.time}`.trim();
+          const restWidth = ctx.measureText(rest).width;
+          const gapX = px(16);
+          const left = align === "center" ? cx - (dayWidth + gapX + restWidth) / 2 : x;
+          ctx.font = bigFont;
+          ctx.fillStyle = "#ffffff";
+          ctx.fillText(dayText, left, baseline);
+          ctx.font = smallFont;
+          ctx.fillStyle = "rgba(255,255,255,0.78)";
+          ctx.fillText(rest, left + dayWidth + gapX, baseline);
+        }
+      };
+    },
+    when: () => textLine([dayText, weekday, ticket.time].filter(Boolean).join(" "), `500 ${px(32)}px ${SANS}`, "rgba(255,255,255,0.82)"),
+    title: () => {
+      const size = px(84);
+      setTitleFont(ctx, size);
+      const lines = wrapLines(ctx, ticket.title, W - x * 2, 3);
+      ctx.letterSpacing = "0px";
+      const box = ink(`700 ${size}px ${SANS}`);
+      const lineHeight = Math.round(size * 1.16);
+      return {
+        asc: box.asc + (lines.length - 1) * lineHeight, desc: box.desc,
+        draw(baseline) {
+          ctx.fillStyle = "#ffffff";
+          ctx.textAlign = align === "center" ? "center" : "left";
+          setTitleFont(ctx, size);
+          lines.forEach((line, index) => ctx.fillText(line, cx, baseline - (lines.length - 1 - index) * lineHeight));
+          ctx.letterSpacing = "0px";
+        }
+      };
+    },
+    stars: () => {
+      if (!ticket.rating) return null;
+      const size = px(48);
+      const ratingFont = `600 ${px(32)}px ${SANS}`;
+      const digits = ink(ratingFont, "4.5");
+      // optical box: the thin points reach past the star's visible mass
+      return {
+        asc: size * 0.4, desc: size * 0.33,
+        draw(baseline) {
+          const cy = baseline - size * 0.03;
+          const label = ratingText(ticket.rating);
+          ctx.font = ratingFont;
+          const labelWidth = ctx.measureText(label).width;
+          const starsWidth = size * 5 + size * 0.18 * 4;
+          const left = align === "center" ? cx - (starsWidth + px(18) + labelWidth) / 2 : x;
+          drawStars(ctx, ticket.rating, left, cy, size, starColor, "rgba(255,255,255,0.26)");
+          ctx.fillStyle = "#ffffff";
+          ctx.textAlign = "left";
+          ctx.fillText(label, left + starsWidth + px(18), cy + (digits.asc - digits.desc) / 2);
+        }
+      };
+    },
+    meta: () => textLine(venueText, `500 ${px(32)}px ${SANS}`, "rgba(255,255,255,0.74)"),
+    metaFull: () => textLine([[dayText, weekday, ticket.time].filter(Boolean).join(" "), venueText].join("  ·  "), `500 ${px(30)}px ${SANS}`, "rgba(255,255,255,0.78)")
+  };
 
+  // Laid out from the bottom up with one even gap; the block ends above the reply bar.
+  const gap = px(baseGap);
+  const order = (layouts[layout] || layouts.a).map((name) => (Array.isArray(name) ? pieces[name[0]](...name.slice(1)) : pieces[name]())).filter(Boolean);
   let bottom = SAFE_BOTTOM + 20;
-  ctx.textAlign = "left";
-  ctx.fillStyle = "rgba(255,255,255,0.74)";
-  ctx.font = metaFont;
-  ctx.fillText(meta, x, bottom);
-  bottom -= ink(metaFont).asc + gap;
-
-  if (ticket.rating) {
-    const size = Math.round(48 * k);
-    // Optical box: the star's thin points reach r above / 0.81r below the centre, but its
-    // visible mass sits closer in, so spacing uses a slightly tighter box.
-    const cy = bottom - size * 0.33;
-    const width = drawStars(ctx, ticket.rating, x, cy, size, starColor, "rgba(255,255,255,0.26)");
-    const digits = ink(ratingFont, "4.5");
-    ctx.fillStyle = "#ffffff";
-    ctx.font = ratingFont;
-    ctx.fillText(ratingText(ticket.rating), x + width + 18, cy + (digits.asc - digits.desc) / 2);
-    bottom = cy - size * 0.4 - gap;
+  for (let index = order.length - 1; index >= 0; index -= 1) {
+    const piece = order[index];
+    const baseline = bottom - piece.desc;
+    piece.draw(baseline);
+    bottom = baseline - piece.asc - gap;
   }
-
-  const titleInk = ink(titleFont);
-  const lineHeight = Math.round(titleSize * 1.16);
-  let baseline = bottom - titleInk.desc;
-  ctx.fillStyle = "#ffffff";
-  setTitleFont(ctx, titleSize);
-  for (let i = titleLines.length - 1; i >= 0; i--) {
-    ctx.fillText(titleLines[i], x, baseline);
-    if (i) baseline -= lineHeight;
-  }
-  ctx.letterSpacing = "0px";
-
-  const dayBaseline = baseline - titleInk.asc - gap - ink(dayFont, "1").desc;
-  const day = d ? `${Number(d.mm)}월 ${Number(d.dd)}일` : ticket.date;
-  ctx.fillStyle = "#ffffff";
-  ctx.font = dayFont;
-  ctx.fillText(day, x, dayBaseline);
-  const dayWidth = ctx.measureText(day).width;
-  ctx.fillStyle = "rgba(255,255,255,0.78)";
-  ctx.font = restFont;
-  ctx.fillText(d ? `${d.ko}요일  ${ticket.time}` : ticket.time, x + dayWidth + 18 * k, dayBaseline);
 }
 
 /**
