@@ -642,3 +642,6 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .venue-failed p { font-size: 14px; line-height: 20px; color: var(--t3); }
 .venue-failed button { flex: none; height: 36px; padding: 0 14px; border-radius: 10px; background: var(--fill); font-size: 14px; font-weight: 700; color: var(--t1); }
 .venue-failed button:hover { filter: brightness(0.96); }
+.prog-media.is-mark { display: grid; place-items: center; }
+.prog-mark { display: grid; place-items: center; width: 96px; height: 96px; padding: 14px; border-radius: 22px; background: #fff; box-shadow: 0 10px 30px -10px rgb(0 0 0 / 0.45); }
+.prog-mark img { max-width: 100%; max-height: 100%; object-fit: contain; }

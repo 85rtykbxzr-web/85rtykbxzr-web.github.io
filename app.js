@@ -2359,9 +2359,14 @@ import { filmTitleKey } from "./src/film-title.mjs";
             const thumb = safeImageUrl(posterSource(program));
             const full = thumb ? safeImageUrl(fullSizeBoardImage(thumb)) : "";
             const image = full ? posterMarkup({ posterUrl: full, posterSourceUrl: full !== thumb ? thumb : "" }, title, "prog-media-img", "", { decorative: true }) : "";
-            // No image at all: the card stays a plain text card instead of showing an empty frame.
-            // A tone sits under the image in case it fails to load.
-            const media = image ? `<span class="prog-media" aria-hidden="true"><span class="prog-tone is-tone-${programTone(title)}"></span>${image}</span>` : "";
+            // A post without its own image shows the venue's mark on a soft tone, so cards keep
+            // one shape; the tone also sits under a real image in case it fails to load.
+            const mark = !image && venueMarkAssets[program.venueId];
+            const media = image
+              ? `<span class="prog-media" aria-hidden="true"><span class="prog-tone is-tone-${programTone(title)}"></span>${image}</span>`
+              : mark
+                ? `<span class="prog-media is-mark" aria-hidden="true"><span class="prog-tone is-tone-${programTone(title)}"></span><span class="prog-mark"><img src="${escapeHtml(mark)}" alt="" loading="lazy" decoding="async" /></span></span>`
+                : "";
             return `
               <a class="prog${media ? " has-media" : ""}" href="${escapeHref(program.url)}" target="_blank" rel="noopener noreferrer">
                 ${media}
