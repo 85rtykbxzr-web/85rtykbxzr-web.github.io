@@ -1,18 +1,20 @@
-// Draws a 1080x1920 "today's movie" ticket for Instagram stories on a canvas.
+// Draws a 1080x1920 "today's movie" image for Instagram stories on a canvas.
 // Pure drawing: the caller passes the session details and gets a canvas back.
 
-export const ticketThemes = {
-  butter: { label: "버터", bgTop: "#fff7dc", bgBottom: "#ffe39a", accent: "#ff8a3d", ink: "#2b2620", sub: "#8a7d6b", onBg: "#2b2620", onBgSub: "#8a6f3a" },
-  peach: { label: "피치", bgTop: "#ffeef2", bgBottom: "#ffc6d5", accent: "#ff5c8a", ink: "#2d2226", sub: "#8f7480", onBg: "#3a2229", onBgSub: "#a05a72" },
-  mint: { label: "민트", bgTop: "#e8f8f1", bgBottom: "#b5e8d3", accent: "#25a57c", ink: "#1f2a26", sub: "#6c8279", onBg: "#1f3a31", onBgSub: "#3f7a65" },
-  night: { label: "밤", bgTop: "#26252d", bgBottom: "#131217", accent: "#f5c86b", ink: "#22201c", sub: "#857c70", onBg: "#f5f1e8", onBgSub: "#b9b1a4" }
+export const ticketStyles = {
+  poster: { label: "포스터" },
+  ticket: { label: "티켓" },
+  receipt: { label: "영수증" }
 };
 
 const W = 1080;
 const H = 1920;
 const SANS = '"Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic Neo", sans-serif';
 const BRAND = '"BM Kkubulim Brand", ' + SANS;
-const WEEKDAYS = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+const WEEKDAYS_EN = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+const WEEKDAYS_KO = ["일", "월", "화", "수", "목", "금", "토"];
+const INK = "#1d1b18";
+const PAPER = "#f3eee4";
 
 function roundRectPath(ctx, x, y, w, h, r) {
   ctx.beginPath();
@@ -54,6 +56,91 @@ function hash(text) {
   return value >>> 0;
 }
 
+// Canvas letterSpacing is not everywhere yet, so tracked labels are laid out by hand.
+function trackedWidth(ctx, text, spacing) {
+  return Array.from(text).reduce((sum, char) => sum + ctx.measureText(char).width + spacing, -spacing);
+}
+
+function drawTracked(ctx, text, x, y, spacing, align = "left") {
+  const width = trackedWidth(ctx, text, spacing);
+  let cx = align === "right" ? x - width : align === "center" ? x - width / 2 : x;
+  const previous = ctx.textAlign;
+  ctx.textAlign = "left";
+  for (const char of Array.from(text)) {
+    ctx.fillText(char, cx, y);
+    cx += ctx.measureText(char).width + spacing;
+  }
+  ctx.textAlign = previous;
+}
+
+function starPath(ctx, cx, cy, r) {
+  ctx.beginPath();
+  for (let i = 0; i < 10; i++) {
+    const radius = i % 2 ? r * 0.45 : r;
+    const angle = -Math.PI / 2 + (i * Math.PI) / 5;
+    const x = cx + Math.cos(angle) * radius;
+    const y = cy + Math.sin(angle) * radius;
+    if (i) ctx.lineTo(x, y);
+    else ctx.moveTo(x, y);
+  }
+  ctx.closePath();
+}
+
+// Five stars starting at x (or centred on it); rating is 0.5–5 in half steps. Returns the width.
+function drawStars(ctx, rating, x, cy, size, color, emptyColor, align = "left") {
+  const gap = size * 0.18;
+  const width = size * 5 + gap * 4;
+  let sx = align === "center" ? x - width / 2 : x;
+  for (let i = 0; i < 5; i++) {
+    const cx = sx + size / 2;
+    starPath(ctx, cx, cy, size / 2);
+    ctx.fillStyle = emptyColor;
+    ctx.fill();
+    const fill = Math.max(0, Math.min(1, rating - i));
+    if (fill > 0) {
+      ctx.save();
+      ctx.beginPath();
+      ctx.rect(sx, cy - size / 2, size * fill, size);
+      ctx.clip();
+      starPath(ctx, cx, cy, size / 2);
+      ctx.fillStyle = color;
+      ctx.fill();
+      ctx.restore();
+    }
+    sx += size + gap;
+  }
+  return width;
+}
+
+function ratingText(rating) {
+  return Number.isInteger(rating) ? `${rating}.0` : String(rating);
+}
+
+let grainTile = null;
+function grain(ctx, alpha) {
+  if (!grainTile) {
+    grainTile = document.createElement("canvas");
+    grainTile.width = 160;
+    grainTile.height = 160;
+    const tc = grainTile.getContext("2d");
+    const data = tc.createImageData(160, 160);
+    for (let i = 0; i < data.data.length; i += 4) {
+      const v = Math.random() * 255;
+      data.data[i] = v;
+      data.data[i + 1] = v;
+      data.data[i + 2] = v;
+      data.data[i + 3] = 255;
+    }
+    tc.putImageData(data, 0, 0);
+  }
+  ctx.save();
+  ctx.globalAlpha = alpha;
+  ctx.globalCompositeOperation = "overlay";
+  ctx.fillStyle = ctx.createPattern(grainTile, "repeat");
+  ctx.fillRect(0, 0, W, H);
+  ctx.restore();
+}
+
 function loadImage(src) {
   return new Promise((resolve) => {
     if (!src) {
@@ -80,10 +167,12 @@ async function loadPoster(src) {
 }
 
 function drawCover(ctx, image, x, y, w, h) {
-  const scale = Math.max(w / image.naturalWidth, h / image.naturalHeight);
+  const iw = image.naturalWidth || image.width;
+  const ih = image.naturalHeight || image.height;
+  const scale = Math.max(w / iw, h / ih);
   const sw = w / scale;
   const sh = h / scale;
-  ctx.drawImage(image, (image.naturalWidth - sw) / 2, (image.naturalHeight - sh) / 2, sw, sh, x, y, w, h);
+  ctx.drawImage(image, (iw - sw) / 2, (ih - sh) / 2, sw, sh, x, y, w, h);
 }
 
 // A poster from a host without CORS would taint the canvas and block the export,
@@ -102,159 +191,343 @@ function posterIsExportable(image) {
   }
 }
 
+// Downscale-then-upscale blur: works on browsers without ctx.filter (older Safari).
+function drawBlurredBackdrop(ctx, poster, fallback) {
+  if (!poster) {
+    ctx.fillStyle = fallback;
+    ctx.fillRect(0, 0, W, H);
+    return;
+  }
+  let source = poster;
+  for (const divisor of [8, 40]) {
+    const step = document.createElement("canvas");
+    step.width = Math.round(W / divisor);
+    step.height = Math.round(H / divisor);
+    const sc = step.getContext("2d");
+    sc.imageSmoothingQuality = "high";
+    if (source === poster) drawCover(sc, poster, 0, 0, step.width, step.height);
+    else sc.drawImage(source, 0, 0, step.width, step.height);
+    source = step;
+  }
+  ctx.imageSmoothingQuality = "high";
+  ctx.drawImage(source, -40, -40, W + 80, H + 80);
+  ctx.fillStyle = "rgba(20, 18, 15, 0.22)";
+  ctx.fillRect(0, 0, W, H);
+}
+
+function dateParts(value) {
+  const date = new Date(`${value}T00:00:00`);
+  if (Number.isNaN(date.getTime())) return null;
+  return {
+    yyyy: String(date.getFullYear()),
+    mm: String(date.getMonth() + 1).padStart(2, "0"),
+    dd: String(date.getDate()).padStart(2, "0"),
+    en: WEEKDAYS_EN[date.getDay()],
+    ko: WEEKDAYS_KO[date.getDay()]
+  };
+}
+
+function drawPosterStyle(ctx, ticket, poster) {
+  if (poster) drawCover(ctx, poster, 0, 0, W, H);
+  else {
+    ctx.fillStyle = "#1b1a18";
+    ctx.fillRect(0, 0, W, H);
+  }
+  const top = ctx.createLinearGradient(0, 0, 0, 360);
+  top.addColorStop(0, "rgba(0,0,0,0.35)");
+  top.addColorStop(1, "rgba(0,0,0,0)");
+  ctx.fillStyle = top;
+  ctx.fillRect(0, 0, W, 360);
+  const bottom = ctx.createLinearGradient(0, 940, 0, H);
+  bottom.addColorStop(0, "rgba(0,0,0,0)");
+  bottom.addColorStop(0.55, "rgba(0,0,0,0.62)");
+  bottom.addColorStop(1, "rgba(0,0,0,0.86)");
+  ctx.fillStyle = bottom;
+  ctx.fillRect(0, 940, W, H - 940);
+  grain(ctx, 0.12);
+
+  const x = 84;
+  const d = dateParts(ticket.date);
+  ctx.font = `800 84px ${SANS}`;
+  const titleLines = wrapLines(ctx, ticket.title, W - x * 2, 3);
+  const meta = [ticket.venue, ticket.screen, ticket.seat].filter(Boolean).join("  ·  ");
+  // laid out from the bottom up so the block always ends above the story reply bar
+  let y = 1590;
+  ctx.textAlign = "left";
+  ctx.fillStyle = "rgba(255,255,255,0.74)";
+  ctx.font = `500 30px ${SANS}`;
+  ctx.fillText(meta, x, y);
+  y -= 64;
+  if (ticket.rating) {
+    const width = drawStars(ctx, ticket.rating, x, y - 14, 38, "#ffffff", "rgba(255,255,255,0.28)");
+    ctx.fillStyle = "#ffffff";
+    ctx.font = `600 30px ${SANS}`;
+    ctx.fillText(ratingText(ticket.rating), x + width + 18, y - 3);
+    y -= 76;
+  }
+  ctx.fillStyle = "#ffffff";
+  ctx.font = `800 84px ${SANS}`;
+  for (let i = titleLines.length - 1; i >= 0; i--) {
+    ctx.fillText(titleLines[i], x, y);
+    y -= 98;
+  }
+  ctx.fillStyle = "rgba(255,255,255,0.82)";
+  ctx.font = `600 26px ${SANS}`;
+  drawTracked(ctx, d ? `${d.yyyy}.${d.mm}.${d.dd} ${d.en}   ${ticket.time}` : `${ticket.date} ${ticket.time}`, x, y + 22, 3);
+
+  ctx.textAlign = "center";
+  ctx.fillStyle = "rgba(255,255,255,0.7)";
+  ctx.font = `400 30px ${BRAND}`;
+  ctx.fillText("서울독립영화관시간표", W / 2, 1788);
+}
+
+function drawTicketStyle(ctx, ticket, poster, seed) {
+  drawBlurredBackdrop(ctx, poster, "#cbc4b7");
+  grain(ctx, 0.1);
+
+  const tw = 720;
+  const tx = (W - tw) / 2;
+  const pad = 64;
+  const inner = tw - pad * 2;
+  const d = dateParts(ticket.date);
+  ctx.font = `800 70px ${SANS}`;
+  const titleLines = wrapLines(ctx, ticket.title, inner, 3);
+  const rows = [["극장", ticket.venue], ["상영관", ticket.screen], ["시간", ticket.time], ["좌석", ticket.seat]].filter(([, value]) => value);
+  const ratingH = ticket.rating ? 76 : 0;
+  const bodyH = 150 + titleLines.length * 84 + ratingH + 44 + rows.length * 78 + 40;
+  const stubH = 190;
+  const th = bodyH + stubH;
+  const ty = Math.round(260 + (1400 - th) / 2);
+  const cutY = ty + bodyH;
+
+  const layer = document.createElement("canvas");
+  layer.width = W;
+  layer.height = H;
+  const lc = layer.getContext("2d");
+  lc.fillStyle = PAPER;
+  roundRectPath(lc, tx, ty, tw, th, 10);
+  lc.fill();
+  lc.save();
+  lc.clip();
+  grain(lc, 0.18);
+  lc.restore();
+
+  lc.fillStyle = "rgba(29,27,24,0.55)";
+  lc.font = `600 22px ${SANS}`;
+  drawTracked(lc, d ? `${d.yyyy}.${d.mm}.${d.dd} ${d.en}` : ticket.date, tx + pad, ty + 86, 3);
+  drawTracked(lc, `NO. ${String(seed % 100000).padStart(5, "0")}`, tx + tw - pad, ty + 86, 3, "right");
+  lc.fillStyle = INK;
+  lc.fillRect(tx + pad, ty + 112, inner, 3);
+
+  let y = ty + 150 + 56;
+  lc.font = `800 70px ${SANS}`;
+  for (const line of titleLines) {
+    lc.fillText(line, tx + pad, y);
+    y += 84;
+  }
+  y -= 84;
+  if (ticket.rating) {
+    const width = drawStars(lc, ticket.rating, tx + pad, y + 56, 36, INK, "rgba(29,27,24,0.16)");
+    lc.fillStyle = INK;
+    lc.font = `700 28px ${SANS}`;
+    lc.fillText(ratingText(ticket.rating), tx + pad + width + 16, y + 66);
+    y += ratingH;
+  }
+  y += 44;
+  for (const [label, value] of rows) {
+    lc.fillStyle = "rgba(29,27,24,0.16)";
+    lc.fillRect(tx + pad, y, inner, 2);
+    lc.fillStyle = "rgba(29,27,24,0.55)";
+    lc.font = `500 26px ${SANS}`;
+    lc.textAlign = "left";
+    lc.fillText(label, tx + pad, y + 50);
+    lc.fillStyle = INK;
+    lc.font = `700 30px ${SANS}`;
+    lc.textAlign = "right";
+    lc.fillText(value, tx + tw - pad, y + 51);
+    lc.textAlign = "left";
+    y += 78;
+  }
+
+  // perforation: punched notches plus a row of dots
+  lc.globalCompositeOperation = "destination-out";
+  for (const x of [tx, tx + tw]) {
+    lc.beginPath();
+    lc.arc(x, cutY, 26, 0, Math.PI * 2);
+    lc.fill();
+  }
+  lc.globalCompositeOperation = "source-over";
+  lc.fillStyle = "rgba(29,27,24,0.28)";
+  for (let x = tx + 48; x <= tx + tw - 48; x += 18) {
+    lc.beginPath();
+    lc.arc(x, cutY, 3, 0, Math.PI * 2);
+    lc.fill();
+  }
+
+  lc.fillStyle = INK;
+  lc.textAlign = "center";
+  lc.font = `400 38px ${BRAND}`;
+  lc.fillText("서울독립영화관시간표", W / 2, cutY + 96);
+  lc.fillStyle = "rgba(29,27,24,0.5)";
+  lc.font = `500 20px ${SANS}`;
+  drawTracked(lc, "SEOULCINEMASCHEDULE.COM", W / 2, cutY + 138, 3, "center");
+  lc.textAlign = "left";
+
+  ctx.save();
+  ctx.shadowColor = "rgba(0,0,0,0.2)";
+  ctx.shadowBlur = 48;
+  ctx.shadowOffsetY = 14;
+  ctx.drawImage(layer, 0, 0);
+  ctx.restore();
+}
+
+function zigzagPath(ctx, x, y, w, h, tooth) {
+  const count = Math.round(w / tooth);
+  const step = w / count;
+  ctx.beginPath();
+  ctx.moveTo(x, y);
+  for (let i = 0; i < count; i++) {
+    ctx.lineTo(x + step * (i + 0.5), y - tooth / 2);
+    ctx.lineTo(x + step * (i + 1), y);
+  }
+  ctx.lineTo(x + w, y + h);
+  for (let i = count - 1; i >= 0; i--) {
+    ctx.lineTo(x + step * (i + 0.5), y + h + tooth / 2);
+    ctx.lineTo(x + step * i, y + h);
+  }
+  ctx.closePath();
+}
+
+function drawReceiptStyle(ctx, ticket, poster, seed) {
+  drawBlurredBackdrop(ctx, poster, "#d6d0c5");
+  grain(ctx, 0.1);
+
+  const rw = 640;
+  const rx = (W - rw) / 2;
+  const pad = 56;
+  const inner = rw - pad * 2;
+  const d = dateParts(ticket.date);
+  ctx.font = `800 54px ${SANS}`;
+  const titleLines = wrapLines(ctx, ticket.title, inner, 3);
+  const rows = [["극장", ticket.venue], ["상영관", ticket.screen], ["좌석", ticket.seat]].filter(([, value]) => value);
+  const rh = 232 + titleLines.length * 66 + (ticket.rating ? 70 : 0) + 70 + rows.length * 52 + 134 + 250;
+  const ry = Math.round(260 + (1400 - rh) / 2);
+
+  const layer = document.createElement("canvas");
+  layer.width = W;
+  layer.height = H;
+  const lc = layer.getContext("2d");
+  lc.fillStyle = "#fbfaf6";
+  zigzagPath(lc, rx, ry, rw, rh, 22);
+  lc.fill();
+  lc.save();
+  lc.clip();
+  grain(lc, 0.14);
+  lc.restore();
+
+  const dashed = (y) => {
+    lc.fillStyle = "rgba(29,27,24,0.45)";
+    for (let x = rx + pad; x < rx + rw - pad; x += 14) lc.fillRect(x, y, 7, 2);
+  };
+  const row = (label, value, y, bold = false) => {
+    lc.fillStyle = bold ? INK : "rgba(29,27,24,0.62)";
+    lc.font = `${bold ? 800 : 500} ${bold ? 32 : 26}px ${SANS}`;
+    lc.textAlign = "left";
+    lc.fillText(label, rx + pad, y);
+    lc.fillStyle = INK;
+    lc.font = `${bold ? 800 : 600} ${bold ? 32 : 26}px ${SANS}`;
+    lc.textAlign = "right";
+    lc.fillText(value, rx + rw - pad, y);
+    lc.textAlign = "left";
+  };
+
+  const cx = W / 2;
+  let y = ry + 96;
+  lc.textAlign = "center";
+  lc.fillStyle = INK;
+  lc.font = `400 40px ${BRAND}`;
+  lc.fillText("서울독립영화관시간표", cx, y);
+  y += 44;
+  lc.fillStyle = "rgba(29,27,24,0.55)";
+  lc.font = `500 20px ${SANS}`;
+  drawTracked(lc, "SEOULCINEMASCHEDULE.COM", cx, y, 3, "center");
+  y += 56;
+  lc.font = `500 24px ${SANS}`;
+  lc.fillStyle = "rgba(29,27,24,0.7)";
+  lc.textAlign = "center";
+  lc.fillText(d ? `${d.yyyy}-${d.mm}-${d.dd} (${d.ko})  ${ticket.time}` : `${ticket.date} ${ticket.time}`, cx, y);
+  y += 36;
+  dashed(y);
+
+  lc.fillStyle = INK;
+  lc.font = `800 54px ${SANS}`;
+  lc.textAlign = "center";
+  y += 22;
+  for (const line of titleLines) {
+    y += 66;
+    lc.fillText(line, cx, y);
+  }
+  if (ticket.rating) {
+    drawStars(lc, ticket.rating, cx, y + 50, 34, INK, "rgba(29,27,24,0.16)", "center");
+    y += 70;
+  }
+  y += 44;
+  dashed(y);
+  y += 26;
+  for (const [label, value] of rows) {
+    y += 52;
+    row(label, value, y - 12);
+  }
+  y += 30;
+  dashed(y);
+  y += 62;
+  row("TOTAL", "1편", y, true);
+  y += 42;
+  dashed(y);
+
+  // barcode
+  y += 46;
+  let bx = cx - 190;
+  let bits = seed;
+  lc.fillStyle = INK;
+  while (bx < cx + 186) {
+    const width = 2 + (bits & 3) * 1.5;
+    bits = (bits >>> 2) | ((bits & 3) << 30);
+    lc.fillRect(bx, y, width, 84);
+    bx += width + 4 + ((bits >>> 7) & 1) * 3;
+  }
+  y += 128;
+  lc.fillStyle = "rgba(29,27,24,0.55)";
+  lc.font = `600 20px ${SANS}`;
+  drawTracked(lc, "THANK YOU FOR WATCHING", cx, y, 4, "center");
+  lc.textAlign = "left";
+
+  ctx.save();
+  ctx.shadowColor = "rgba(0,0,0,0.22)";
+  ctx.shadowBlur = 50;
+  ctx.shadowOffsetY = 20;
+  ctx.drawImage(layer, 0, 0);
+  ctx.restore();
+}
+
 /**
- * @param {{ title: string, venue: string, screen?: string, date: string, time: string, seat?: string, posterUrl?: string, id?: string }} ticket
- * @param {keyof typeof ticketThemes} themeKey
+ * @param {{ title: string, venue: string, screen?: string, date: string, time: string, seat?: string, rating?: number, posterUrl?: string, id?: string }} ticket
+ * @param {keyof typeof ticketStyles} styleKey
  */
-export async function drawStoryTicket(ticket, themeKey = "butter") {
-  const theme = ticketThemes[themeKey] || ticketThemes.butter;
-  const fontLoads = [
-    `800 64px ${SANS}`, `700 40px ${SANS}`, `600 34px ${SANS}`, `400 44px ${BRAND}`
-  ].map((font) => document.fonts?.load(font, `${ticket.title}${ticket.venue}${ticket.screen || ""}서울독립영화관시간표0123456789.:TODAY`).catch(() => null));
+export async function drawStoryTicket(ticket, styleKey = "poster") {
+  const fontLoads = [`800 84px ${SANS}`, `600 30px ${SANS}`, `500 26px ${SANS}`, `400 40px ${BRAND}`].map((font) =>
+    document.fonts?.load(font, `${ticket.title}${ticket.venue}${ticket.screen || ""}서울독립영화관시간표극장상영관시간좌석편0123456789.:TOTALSEOUL`).catch(() => null)
+  );
   const [poster] = await Promise.all([loadPoster(ticket.posterUrl), ...fontLoads]);
 
   const canvas = document.createElement("canvas");
   canvas.width = W;
   canvas.height = H;
   const ctx = canvas.getContext("2d");
-
-  // background
-  const bg = ctx.createLinearGradient(0, 0, 0, H);
-  bg.addColorStop(0, theme.bgTop);
-  bg.addColorStop(1, theme.bgBottom);
-  ctx.fillStyle = bg;
-  ctx.fillRect(0, 0, W, H);
-  const seed = hash(`${ticket.id}${ticket.title}`);
-
-  // header
-  const date = new Date(`${ticket.date}T00:00:00`);
-  const dateText = Number.isNaN(date.getTime())
-    ? ticket.date
-    : `${String(date.getMonth() + 1).padStart(2, "0")}.${String(date.getDate()).padStart(2, "0")} ${WEEKDAYS[date.getDay()]}`;
-  ctx.textAlign = "left";
   ctx.textBaseline = "alphabetic";
-  ctx.fillStyle = theme.accent;
-  ctx.font = `800 30px ${SANS}`;
-  ctx.fillText("TODAY'S MOVIE", 130, 200);
-  ctx.fillStyle = theme.onBg;
-  ctx.font = `800 72px ${SANS}`;
-  ctx.fillText(dateText, 130, 282);
-
-  const tx = 130;
-  const tw = 820;
-  const px = tx + 40;
-  const pw = tw - 80;
-  const ph = 560;
-  ctx.font = `800 64px ${SANS}`;
-  const titleLines = wrapLines(ctx, ticket.title, pw, 2);
-  // body: poster, title, venue, info columns; stub below the perforation
-  const bodyH = 40 + ph + 96 + (titleLines.length - 1) * 78 + 58 + 96 + 58 + 70;
-  const th = bodyH + 230;
-  const ty = Math.round(400 + (1160 - th) / 2);
-  const py = ty + 40;
-
-  // ticket on its own layer so the side notches can be punched out
-  const layer = document.createElement("canvas");
-  layer.width = W;
-  layer.height = H;
-  const lc = layer.getContext("2d");
-  lc.shadowColor = "rgba(40, 30, 20, 0.18)";
-  lc.shadowBlur = 40;
-  lc.shadowOffsetY = 18;
-  lc.fillStyle = "#fffdf8";
-  roundRectPath(lc, tx, ty, tw, th, 44);
-  lc.fill();
-  lc.shadowColor = "transparent";
-
-  // poster window
-  lc.save();
-  roundRectPath(lc, px, py, pw, ph, 28);
-  lc.clip();
-  lc.fillStyle = theme.accent;
-  lc.fillRect(px, py, pw, ph);
-  if (poster) {
-    drawCover(lc, poster, px, py, pw, ph);
-  } else {
-    lc.fillStyle = "rgba(255,255,255,0.22)";
-    for (let i = 0; i < 9; i++) {
-      roundRectPath(lc, px + 28 + i * 84, py + 26, 40, 28, 8);
-      lc.fill();
-      roundRectPath(lc, px + 28 + i * 84, py + ph - 54, 40, 28, 8);
-      lc.fill();
-    }
-    lc.fillStyle = "#ffffff";
-    lc.font = `800 54px ${SANS}`;
-    lc.textAlign = "center";
-    lc.fillText("NOW SHOWING", px + pw / 2, py + ph / 2 + 18);
-    lc.textAlign = "left";
-  }
-  lc.restore();
-
-  // title + venue
-  lc.fillStyle = theme.ink;
-  lc.font = `800 64px ${SANS}`;
-  titleLines.forEach((line, index) => lc.fillText(line, px, py + ph + 96 + index * 78));
-  const afterTitle = py + ph + 96 + (titleLines.length - 1) * 78;
-  lc.fillStyle = theme.sub;
-  lc.font = `600 34px ${SANS}`;
-  lc.fillText([ticket.venue, ticket.screen].filter(Boolean).join(" · "), px, afterTitle + 58);
-
-  // perforation + stub
-  const cutY = ty + bodyH;
-  lc.globalCompositeOperation = "destination-out";
-  for (const x of [tx, tx + tw]) {
-    lc.beginPath();
-    lc.arc(x, cutY, 32, 0, Math.PI * 2);
-    lc.fill();
-  }
-  lc.globalCompositeOperation = "source-over";
-  lc.strokeStyle = "#e6dfd2";
-  lc.lineWidth = 4;
-  lc.setLineDash([14, 14]);
-  lc.beginPath();
-  lc.moveTo(tx + 50, cutY);
-  lc.lineTo(tx + tw - 50, cutY);
-  lc.stroke();
-  lc.setLineDash([]);
-
-  const infoY = afterTitle + 58 + 96;
-  const columns = [["DATE", ticket.date.replaceAll("-", ".").slice(2)], ["TIME", ticket.time], ["SEAT", ticket.seat || "—"]];
-  columns.forEach(([label, value], index) => {
-    const x = px + index * (pw / 3);
-    lc.fillStyle = theme.accent;
-    lc.font = `800 24px ${SANS}`;
-    lc.fillText(label, x, infoY);
-    lc.fillStyle = theme.ink;
-    lc.font = `800 44px ${SANS}`;
-    lc.fillText(value, x, infoY + 58);
-  });
-
-  lc.fillStyle = theme.ink;
-  lc.font = `800 34px ${SANS}`;
-  lc.fillText("ADMIT ONE", px, cutY + 110);
-  lc.fillStyle = theme.sub;
-  lc.font = `600 24px ${SANS}`;
-  lc.fillText(`No. ${String(seed % 10000).padStart(4, "0")}`, px, cutY + 152);
-  // barcode
-  let bx = tx + tw - 60;
-  let bits = seed;
-  lc.fillStyle = theme.ink;
-  for (let i = 0; i < 34; i++) {
-    const width = 2 + (bits & 3) * 2;
-    bits = (bits >>> 2) | ((bits & 3) << 30);
-    bx -= width + 5;
-    lc.fillRect(bx, cutY + 66, width, 96);
-  }
-
-  ctx.drawImage(layer, 0, 0);
-
-  // footer
-  ctx.textAlign = "center";
-  ctx.fillStyle = theme.onBg;
-  ctx.font = `400 46px ${BRAND}`;
-  ctx.fillText("서울독립영화관시간표", W / 2, 1720);
-  ctx.fillStyle = theme.onBgSub;
-  ctx.font = `600 26px ${SANS}`;
-  ctx.fillText("seoulcinemaschedule.com", W / 2, 1772);
+  const seed = hash(`${ticket.id}${ticket.title}`);
+  if (styleKey === "ticket") drawTicketStyle(ctx, ticket, poster, seed);
+  else if (styleKey === "receipt") drawReceiptStyle(ctx, ticket, poster, seed);
+  else drawPosterStyle(ctx, ticket, poster);
   return canvas;
 }

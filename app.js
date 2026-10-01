@@ -7,7 +7,7 @@ import {
 } from "./src/festival-labels.mjs";
 import { safePublicUrl } from "./src/public-url-policy.mjs";
 import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
-import { drawStoryTicket, ticketThemes } from "./src/story-ticket.mjs";
+import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
 
 (function () {
   const analyticsHostnames = new Set(["seoulcinemaschedule.com", "www.seoulcinemaschedule.com"]);
@@ -2904,7 +2904,7 @@ import { drawStoryTicket, ticketThemes } from "./src/story-ticket.mjs";
     setTabletSearchOpen(false);
   }
 
-  const ticketState = { session: null, theme: "butter", requestId: 0 };
+  const ticketState = { session: null, style: "poster", rating: 0, requestId: 0 };
 
   function ticketTitle(session) {
     return String(session?.title || "").replace(/\s*\((?:2D|3D|4K|자막|영문자막|더빙)[^)]*\)\s*$/i, "").trim() || "오늘의 영화";
@@ -2917,8 +2917,10 @@ import { drawStoryTicket, ticketThemes } from "./src/story-ticket.mjs";
     ticketState.session = session;
     const seat = $("#ticketSeat");
     if (seat) seat.value = "";
+    ticketState.rating = 0;
     $("#ticketSheetTitle").textContent = ticketTitle(session);
-    renderTicketThemes();
+    renderTicketStyles();
+    renderTicketRating();
     const canShareFiles = Boolean(navigator.canShare && window.File);
     $("#ticketShare")?.classList.toggle("hidden", !canShareFiles);
     if (typeof sheet.showModal === "function") sheet.showModal();
@@ -2931,12 +2933,38 @@ import { drawStoryTicket, ticketThemes } from "./src/story-ticket.mjs";
     if (sheet?.open) sheet.close?.() ?? sheet.removeAttribute("open");
   }
 
-  function renderTicketThemes() {
-    const target = $("#ticketThemes");
+  function renderTicketStyles() {
+    const target = $("#ticketStyles");
     if (!target) return;
-    target.innerHTML = Object.entries(ticketThemes)
-      .map(([key, theme]) => `<button class="ticket-swatch is-${key}${key === ticketState.theme ? " is-on" : ""}" type="button" data-ticket-theme="${key}" aria-pressed="${key === ticketState.theme}" aria-label="${escapeHtml(theme.label)} 테마"><span>${escapeHtml(theme.label)}</span></button>`)
+    target.innerHTML = Object.entries(ticketStyles)
+      .map(([key, style]) => `<button class="ticket-style${key === ticketState.style ? " is-on" : ""}" type="button" data-ticket-style="${key}" aria-pressed="${key === ticketState.style}">${escapeHtml(style.label)}</button>`)
       .join("");
+  }
+
+  const ticketStarMarkup = '<svg viewBox="0 0 24 24" aria-hidden="true"><path class="bg" d="M12 2.6l2.9 6 6.5.8-4.8 4.5 1.2 6.5L12 17.2l-5.8 3.2 1.2-6.5-4.8-4.5 6.5-.8z"></path><path class="fg" d="M12 2.6l2.9 6 6.5.8-4.8 4.5 1.2 6.5L12 17.2l-5.8 3.2 1.2-6.5-4.8-4.5 6.5-.8z"></path></svg>';
+
+  function renderTicketRating() {
+    const target = $("#ticketRating");
+    if (!target) return;
+    const rating = ticketState.rating;
+    target.innerHTML = [1, 2, 3, 4, 5]
+      .map((value) => {
+        const fill = rating >= value ? " is-full" : rating >= value - 0.5 ? " is-half" : "";
+        return `<button class="ticket-star${fill}" type="button" data-ticket-star="${value}" aria-label="별점 ${value}점">${ticketStarMarkup}</button>`;
+      })
+      .join("");
+    const value = $("#ticketRatingValue");
+    if (value) value.textContent = rating ? rating.toFixed(1) : "별점 없음";
+  }
+
+  // Tapping the left half of a star gives a half point; tapping the current score clears it.
+  function setTicketRating(button, event) {
+    const value = Number(button.dataset.ticketStar);
+    const rect = button.getBoundingClientRect();
+    const half = event.clientX && event.clientX < rect.left + rect.width / 2;
+    const next = half ? value - 0.5 : value;
+    ticketState.rating = ticketState.rating === next ? 0 : next;
+    renderTicketRating();
   }
 
   function currentTicketDetails() {
@@ -2951,12 +2979,13 @@ import { drawStoryTicket, ticketThemes } from "./src/story-ticket.mjs";
       date: session.date,
       time: cleanTime(session),
       seat: String($("#ticketSeat")?.value || "").trim().slice(0, 8).toUpperCase(),
+      rating: ticketState.rating,
       posterUrl: poster ? safeImageUrl(posterSource(poster)) : ""
     };
   }
 
   async function renderTicketCanvas() {
-    return drawStoryTicket(currentTicketDetails(), ticketState.theme);
+    return drawStoryTicket(currentTicketDetails(), ticketState.style);
   }
 
   async function renderTicketPreview() {
@@ -3131,10 +3160,17 @@ import { drawStoryTicket, ticketThemes } from "./src/story-ticket.mjs";
         return;
       }
 
-      const themeSwatch = event.target.closest("[data-ticket-theme]");
-      if (themeSwatch) {
-        ticketState.theme = themeSwatch.dataset.ticketTheme;
-        renderTicketThemes();
+      const styleButton = event.target.closest("[data-ticket-style]");
+      if (styleButton) {
+        ticketState.style = styleButton.dataset.ticketStyle;
+        renderTicketStyles();
+        renderTicketPreview();
+        return;
+      }
+
+      const starButton = event.target.closest("[data-ticket-star]");
+      if (starButton) {
+        setTicketRating(starButton, event);
         renderTicketPreview();
         return;
       }

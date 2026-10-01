@@ -38,8 +38,8 @@
         "description": "서울 독립영화관의 오늘 상영시간표, 기획전, 영화제 일정을 날짜별, 영화별, 상영관별로 확인하세요."
       }
     </script>
-    <link href="/assets/app.css?v=96a53dbb77ef" rel="stylesheet" />
-    <script defer src="/assets/app.js?v=96a53dbb77ef"></script>
+    <link href="/assets/app.css?v=4db7f0569472" rel="stylesheet" />
+    <script defer src="/assets/app.js?v=4db7f0569472"></script>
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=6" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=6" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=6" />
@@ -276,11 +276,15 @@
         <div class="ticket-preview-wrap">
           <img id="ticketPreview" class="ticket-preview" alt="인스타그램 스토리용 티켓 미리보기" />
         </div>
+        <div class="ticket-styles" id="ticketStyles" role="group" aria-label="스타일"></div>
         <div class="ticket-controls">
-          <div class="ticket-themes" id="ticketThemes" role="group" aria-label="티켓 색"></div>
+          <div class="ticket-rating-wrap">
+            <div class="ticket-rating" id="ticketRating" role="group" aria-label="별점"></div>
+            <span class="ticket-rating-value" id="ticketRatingValue" aria-live="polite"></span>
+          </div>
           <label class="ticket-seat">
             <span>좌석</span>
-            <input id="ticketSeat" type="text" inputmode="text" maxlength="8" placeholder="예: F12" autocomplete="off" />
+            <input id="ticketSeat" type="text" inputmode="text" maxlength="8" placeholder="F12" autocomplete="off" />
           </label>
         </div>
         <div class="ticket-actions">
