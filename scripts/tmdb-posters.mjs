@@ -25,17 +25,33 @@ export function pickTmdbResult(results, title) {
   return pool.sort((a, b) => (b.popularity || 0) - (a.popularity || 0))[0] || null;
 }
 
+// Original-release artwork reads better than localized one-sheets: English first, then
+// text-free, each ranked by TMDB votes.
+export function pickTmdbPoster(posters, languages = ["en", null]) {
+  for (const language of languages) {
+    const ranked = (posters || [])
+      .filter((poster) => (poster.iso_639_1 ?? null) === language && poster.file_path)
+      .sort((a, b) => (b.vote_average || 0) - (a.vote_average || 0) || (b.vote_count || 0) - (a.vote_count || 0));
+    if (ranked.length) return ranked[0].file_path;
+  }
+  return "";
+}
+
+async function tmdbJson(path, params, { apiKey, fetchImpl }) {
+  const response = await fetchImpl(`${API}${path}?${new URLSearchParams({ api_key: apiKey, ...params })}`, { headers: { accept: "application/json" } });
+  if (!response.ok) throw new Error(`TMDB ${path} failed: ${response.status}`);
+  return response.json();
+}
+
 export async function searchTmdbPoster(title, { apiKey, fetchImpl = fetch } = {}) {
   const query = cleanFilmTitle(title);
   if (!apiKey || !query) return null;
-  const url = `${API}/search/movie?${new URLSearchParams({ api_key: apiKey, query, language: "ko-KR", include_adult: "false" })}`;
-  const response = await fetchImpl(url, { headers: { accept: "application/json" } });
-  if (!response.ok) throw new Error(`TMDB search failed: ${response.status}`);
-  const data = await response.json();
+  const data = await tmdbJson("/search/movie", { query, language: "ko-KR", include_adult: "false" }, { apiKey, fetchImpl });
   const best = pickTmdbResult(data.results, query);
-  return best
-    ? { tmdbId: best.id, title: best.title, originalTitle: best.original_title, releaseDate: best.release_date || "", posterUrl: `${tmdbImageBase}${best.poster_path}` }
-    : null;
+  if (!best) return null;
+  const images = await tmdbJson(`/movie/${best.id}/images`, { include_image_language: "en,null" }, { apiKey, fetchImpl }).catch(() => null);
+  const posterPath = pickTmdbPoster(images?.posters) || best.poster_path;
+  return { tmdbId: best.id, title: best.title, originalTitle: best.original_title, releaseDate: best.release_date || "", posterUrl: `${tmdbImageBase}${posterPath}` };
 }
 
 if (import.meta.url === `file://${process.argv[1]}` && process.argv[2] === "--probe") {
