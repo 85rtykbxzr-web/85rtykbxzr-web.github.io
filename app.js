@@ -3190,7 +3190,7 @@ import { filmTitleKey } from "./src/film-title.mjs";
     document.body.append(link);
     link.click();
     link.remove();
-    showToast("티켓 이미지를 저장했어요");
+    showToast("이미지를 저장했어요");
   }
 
   const viewOrder = ["today", "film", "venue"];
