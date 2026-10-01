@@ -2597,7 +2597,7 @@ import { createFestivalPlanner } from "./src/festival-planner-ui.mjs";
   const plannerFestivalPattern = /^biff-/;
   let festivalPlanner = null;
   function planner() {
-    festivalPlanner ||= createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUrl, kstDateString });
+    festivalPlanner ||= createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUrl, kstDateString, festivalLogo });
     return festivalPlanner;
   }
 
@@ -2606,6 +2606,12 @@ import { createFestivalPlanner } from "./src/festival-planner-ui.mjs";
     const lifecycle = lifecycleFromRange({ start: row.startDate, end: row.endDate });
     if (lifecycle?.expired) return "";
     return `<button class="book fest-plan-btn" type="button" data-fest-planner="${escapeHtml(row.festivalId)}">시간표 짜기</button>`;
+  }
+
+  function festivalLogo(festivalId) {
+    const festival = (state.data?.majorFestivals || []).find((item) => item.id === festivalId);
+    const path = festival?.logoPath || festival?.logoUrl || "";
+    return path && !/^https?:/.test(path) ? `/${path.replace(/^\/+/, "")}` : path;
   }
 
   // Home strip from two weeks before the festival to its last day: the planner, one tap away.
@@ -2617,7 +2623,7 @@ import { createFestivalPlanner } from "./src/festival-planner-ui.mjs";
     if (shown) {
       const started = today >= festival.startDate;
       const tag = started ? `${daysBetween(festival.startDate, today) + 1}일째` : `D-${daysBetween(today, festival.startDate)}`;
-      markup = `<button type="button" class="fest-strip" data-fest-planner="${escapeHtml(festival.id)}"><span class="fest-strip-tag">${escapeHtml(tag)}</span><span class="fest-strip-t"><b>${escapeHtml(festival.name)} 시간표 짜기</b></span><svg class="ui-icon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#arrow-right"></use></svg></button>`;
+      markup = `<button type="button" class="fest-strip" data-fest-planner="${escapeHtml(festival.id)}"><span class="fest-strip-tag">${escapeHtml(tag)}</span><span class="fest-strip-t">${festivalLogo(festival.id) ? `<img src="${escapeHtml(festivalLogo(festival.id))}" alt="${escapeHtml(festival.name)}" />` : `<b>${escapeHtml(festival.name)}</b>`}<b>시간표 짜기</b></span><svg class="ui-icon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#arrow-right"></use></svg></button>`;
     }
     const mobileLayout = isMobileViewport();
     const target = mobileLayout ? $("#mobileFestStrip") : $("#festStrip");

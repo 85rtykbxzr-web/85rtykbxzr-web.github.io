@@ -884,3 +884,12 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .fpt.v-ink .tt-day b, .fpt.v-ink .tt-day.is-on b { background: none; color: var(--t4); }
 .fpt.v-ink .tt-day.is-on b { color: var(--t1); font-weight: 700; }
 .fpt.v-ink .tt-day.is-today b { color: var(--red); }
+/* festival mark over a tight, heavy title */
+.fp-brand { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; min-width: 0; }
+.fp-brand img { display: block; height: 22px; width: auto; }
+.fp-brand img[hidden] { display: none; }
+.fp-head h2 { font-size: 28px; line-height: 32px; font-weight: 700; letter-spacing: -0.05em; font-feature-settings: "ss06", "tnum"; }
+.fp-head { align-items: flex-start; }
+.fp-head .icon-btn { margin-top: -6px; }
+.fest-strip-t { flex-direction: row; align-items: center; gap: 10px; }
+.fest-strip-t img { flex: none; height: 18px; width: auto; }
