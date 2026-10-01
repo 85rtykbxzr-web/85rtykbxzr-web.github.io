@@ -263,7 +263,7 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
     const lines = hours.map((hour) => `<span class="tt-hour"><i>${hour > 23 ? hour - 24 : hour}</i></span>`).join("");
     return `
       <div class="tt-wrap">
-        <div class="tt" data-tt-hours="${hours.length}" data-tt-days="${days.length}">
+        <div class="fpt v-cal" data-tt-hours="${hours.length}" data-tt-days="${days.length}">
           <div class="tt-head"><span class="tt-corner"></span>${head}</div>
           <div class="tt-body"><div class="tt-grid">${lines}</div><div class="tt-cols">${cols}</div></div>
         </div>
@@ -313,7 +313,7 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
   // Block positions come from data attributes: the page's CSP forbids inline style attributes,
   // but setting styles from script is fine.
   function placeBlocks() {
-    const grid = $("#fpBody .tt");
+    const grid = $("#fpBody .fpt");
     if (!grid) return;
     const hourHeight = 52;
     grid.querySelector(".tt-body").style.height = `${Number(grid.dataset.ttHours) * hourHeight}px`;

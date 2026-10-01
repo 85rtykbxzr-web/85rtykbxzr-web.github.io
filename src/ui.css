@@ -747,7 +747,7 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .fp-days[hidden] { display: none; }
 .tt-wrap { margin: 0 -18px 18px; padding: 0 18px; overflow-x: auto; scrollbar-width: none; }
 .tt-wrap::-webkit-scrollbar { display: none; }
-.tt { --tt-days: 1; --tt-time: 26px; min-width: calc(var(--tt-time) + var(--tt-days) * 62px); border-radius: 18px; background: var(--card); overflow: hidden; box-shadow: 0 0 0 1px var(--line); }
+.fpt { --tt-days: 1; --tt-time: 26px; min-width: calc(var(--tt-time) + var(--tt-days) * 62px); border-radius: 18px; background: var(--card); overflow: hidden; box-shadow: 0 0 0 1px var(--line); }
 .tt-head { display: grid; grid-template-columns: var(--tt-time) repeat(var(--tt-days), minmax(0, 1fr)); border-bottom: 1px solid var(--line); }
 .tt-day { display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 8px 0 7px; color: var(--t3); -webkit-tap-highlight-color: transparent; }
 .tt-day span { font-size: 11px; font-weight: 600; color: var(--t4); }
@@ -774,3 +774,22 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .tt-block.is-bad { box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--red) 80%, #fff); }
 .fp-detail-h { margin: 4px 2px 2px; font-size: 18px; font-weight: 800; letter-spacing: -0.02em; }
 .fp-card { scroll-margin: 120px; }
+
+/* --- refined timetable looks (variant classes for comparison) --- */
+.fpt.v-cal .tt-block { margin-left: 3px; padding: 5px 6px 5px 8px; border-radius: 8px; color: var(--t1); background: color-mix(in srgb, var(--tt-hue) 14%, var(--card)); box-shadow: inset 3px 0 0 var(--tt-hue); }
+.fpt.v-cal .tt-block span { color: color-mix(in srgb, var(--tt-hue) 70%, var(--t2)); opacity: 1; }
+.fpt.v-cal .tt-block b { color: color-mix(in srgb, var(--tt-hue) 45%, var(--t1)); }
+.fpt.v-mono .tt-block { margin-left: 3px; padding: 6px 7px; border-radius: 8px; background: var(--strong); color: var(--on-strong); }
+.fpt.v-mono .tt-block span { opacity: 0.6; }
+.fpt.v-mono .tt-block:nth-child(even) { background: color-mix(in srgb, var(--strong) 78%, var(--card)); }
+.fpt.v-paper { background: #faf8f3; }
+.fpt.v-paper .tt-block { margin-left: 3px; padding: 6px 7px; border-radius: 4px; color: #2b2620; background: var(--tt-paper); }
+.fpt.v-paper .tt-block span { color: #6b6357; opacity: 1; }
+.fpt.v-cal, .fpt.v-mono, .fpt.v-paper { box-shadow: none; }
+.fpt.v-cal .tt-hour, .fpt.v-mono .tt-hour, .fpt.v-paper .tt-hour { border-top-color: color-mix(in srgb, var(--line) 60%, transparent); }
+.fpt.v-cal .tt-col, .fpt.v-mono .tt-col, .fpt.v-paper .tt-col { border-left-color: color-mix(in srgb, var(--line) 60%, transparent); }
+.fpt.v-cal .tt-block.is-bad, .fpt.v-mono .tt-block.is-bad, .fpt.v-paper .tt-block.is-bad { box-shadow: inset 0 0 0 1.5px var(--red); }
+.fpt.v-cal .tt-block.is-bad { box-shadow: inset 3px 0 0 var(--red), inset 0 0 0 1px var(--red); }
+.fpt.v-cal .tt-block::after, .fpt.v-mono .tt-block::after, .fpt.v-paper .tt-block::after { display: none; }
+.tt-c0 { --tt-hue: #e5484d; --tt-paper: #f3d9cf; } .tt-c1 { --tt-hue: #f76b15; --tt-paper: #f2e1c4; } .tt-c2 { --tt-hue: #c99a00; --tt-paper: #ece6c7; } .tt-c3 { --tt-hue: #30a46c; --tt-paper: #d6e6d3; }
+.tt-c4 { --tt-hue: #12a594; --tt-paper: #cfe5e1; } .tt-c5 { --tt-hue: #0090ff; --tt-paper: #d3e0ec; } .tt-c6 { --tt-hue: #6e56cf; --tt-paper: #e0dbef; } .tt-c7 { --tt-hue: #d6409f; --tt-paper: #eed8e3; }
