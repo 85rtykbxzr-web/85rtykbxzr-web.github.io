@@ -7,7 +7,7 @@ import {
 } from "./src/festival-labels.mjs";
 import { safePublicUrl } from "./src/public-url-policy.mjs";
 import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
-import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
+import { drawStoryTicket } from "./src/story-ticket.mjs";
 
 (function () {
   const analyticsHostnames = new Set(["seoulcinemaschedule.com", "www.seoulcinemaschedule.com"]);
@@ -2884,7 +2884,7 @@ import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
     setTabletSearchOpen(false);
   }
 
-  const ticketState = { session: null, style: "poster", rating: 0, photo: "", poster: "", requestId: 0 };
+  const ticketState = { session: null, rating: 0, photo: "", poster: "", requestId: 0 };
   let ticketPostersPromise = null;
 
   // English TMDB artwork per film, refreshed by the data pipeline; the ticket prefers it
@@ -2935,7 +2935,6 @@ import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
     ticketState.poster = "";
     toggleTicketPicker(false);
     $("#ticketSheetTitle").textContent = ticketTitle(session);
-    renderTicketStyles();
     renderTicketRating();
     const canShareFiles = Boolean(navigator.canShare && window.File);
     $("#ticketShare")?.classList.toggle("hidden", !canShareFiles);
@@ -2957,14 +2956,6 @@ import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
   function closeTicketSheet() {
     const sheet = $("#ticketSheet");
     if (sheet?.open) sheet.close?.() ?? sheet.removeAttribute("open");
-  }
-
-  function renderTicketStyles() {
-    const target = $("#ticketStyles");
-    if (!target) return;
-    target.innerHTML = Object.entries(ticketStyles)
-      .map(([key, style]) => `<button class="ticket-style${key === ticketState.style ? " is-on" : ""}" type="button" data-ticket-style="${key}" aria-pressed="${key === ticketState.style}">${escapeHtml(style.label)}</button>`)
-      .join("");
   }
 
   const ticketStarMarkup = '<svg viewBox="0 0 24 24" aria-hidden="true"><path class="bg" d="M12 2.6l2.9 6 6.5.8-4.8 4.5 1.2 6.5L12 17.2l-5.8 3.2 1.2-6.5-4.8-4.5 6.5-.8z"></path><path class="fg" d="M12 2.6l2.9 6 6.5.8-4.8 4.5 1.2 6.5L12 17.2l-5.8 3.2 1.2-6.5-4.8-4.5 6.5-.8z"></path></svg>';
@@ -3015,7 +3006,7 @@ import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
       const first = ticketPosterChoices(await loadTicketPosters())[0];
       if (first) details.posterUrl = first.full;
     }
-    return drawStoryTicket(details, ticketState.style);
+    return drawStoryTicket(details);
   }
 
   async function renderTicketPreview() {
@@ -3198,14 +3189,6 @@ import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
       if (ticketButton) {
         event.preventDefault();
         openTicketSheet(ticketButton.dataset.ticketSession);
-        return;
-      }
-
-      const styleButton = event.target.closest("[data-ticket-style]");
-      if (styleButton) {
-        ticketState.style = styleButton.dataset.ticketStyle;
-        renderTicketStyles();
-        renderTicketPreview();
         return;
       }
 
