@@ -161,10 +161,8 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
     } else if (gap.status === "tight") {
       tone = "is-warn";
       headline = gap.free <= walk.minutes ? "이동 시간이 부족해요" : `빠듯해요 · 여유 ${gap.free}분`;
-    } else if (gap.status === "free") {
-      headline = `빈 시간 ${durationLabel(gap.free - gap.need)}`;
     } else {
-      headline = `여유 ${gap.free}분`;
+      headline = `여유 ${durationLabel(gap.free)}`;
     }
     const fill = gap.status === "free"
       ? `<button type="button" class="fp-fill" data-fp-window="${escapeHtml(previous.id)}|${escapeHtml(next.id)}" data-fp-window-label="${formatMinutes(gap.from)}~${next.time}">이 시간에 볼 영화 찾기</button>`
@@ -255,7 +253,7 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
           .map((group, index) => {
             const gap = gapBetween(groups[index].last, group.items[0].session, films());
             if (gap.status === "overlap") return "";
-            const label = gap.status === "free" ? `빈 ${durationLabel(gap.free - gap.need)}` : gap.status === "tight" ? `빠듯 ${gap.free}분` : `여유 ${gap.free}분`;
+            const label = gap.status === "tight" ? `빠듯 ${gap.free}분` : `여유 ${durationLabel(gap.free)}`;
             return `<span class="tt-gap${gap.status === "tight" ? " is-warn" : ""}" data-tt-top="${groups[index].end - startHour * 60}" data-tt-height="${gap.free}" aria-hidden="true"><i>${escapeHtml(label)}</i></span>`;
           })
           .join("");
@@ -320,7 +318,7 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
   function renderMine(picks) {
     const anyPick = (state.data?.sessions || []).some((session) => picks.has(session.id));
     if (!anyPick) {
-      return `<div class="fp-empty is-big"><p>보고 싶은 상영에 ♡를 눌러 담아 보세요</p><p class="sub">담은 영화가 시간표로 모이고, 사이사이 이동 시간과 빈 시간을 알려 드려요</p><button type="button" class="fp-fill" data-fp-mode="all">상영 둘러보기</button></div>`;
+      return `<div class="fp-empty is-big"><p>보고 싶은 상영에 ♡를 눌러 담아 보세요</p><p class="sub">담은 영화가 시간표로 모이고, 사이사이 이동 시간과 여유 시간을 알려 드려요</p><button type="button" class="fp-fill" data-fp-mode="all">상영 둘러보기</button></div>`;
     }
     const ticket = state.data.ticketUrl ? `<a class="fp-ticket" href="${escapeHtml(safeExternalUrl(state.data.ticketUrl, "#"))}" target="_blank" rel="noopener noreferrer">공식 예매하러 가기</a>` : "";
     return gridMarkup(picks) + dayDetailMarkup(picks) + `<p class="fp-note">도보 시간은 지도 기준 추정이에요. 입장 여유 5분을 더해 계산해요.</p>` + ticket;
