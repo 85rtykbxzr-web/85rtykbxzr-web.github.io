@@ -795,3 +795,14 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .fpt.v-ink .tt-block span { margin-top: 1px; font-size: 10px; line-height: 12px; }
 .fpt.v-ink .tt-block[data-tt-narrow] { padding: 5px 4px; }
 .fpt.v-ink .tt-block[data-tt-narrow] b { font-size: 10.5px; line-height: 14px; letter-spacing: -0.04em; }
+/* block: start time, title, place pinned to the foot like a ticket stub */
+.fpt.v-ink .tt-block time { font-size: 10px; line-height: 13px; font-weight: 600; font-variant-numeric: tabular-nums; letter-spacing: 0.01em; opacity: 0.55; }
+.fpt.v-ink .tt-block b { margin-top: 1px; }
+.fpt.v-ink .tt-block span { margin-top: auto; padding-top: 2px; }
+.fpt.v-ink .tt-col.is-on { background: none; }
+.fpt.v-ink .tt-day.is-on b { border-radius: 7px; background: var(--ink); color: var(--on-ink); }
+.tt-gap { position: absolute; left: 0; right: 0; display: grid; place-items: center; pointer-events: none; }
+.tt-gap::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; border-left: 1.5px dotted color-mix(in srgb, var(--t5) 80%, transparent); }
+.tt-gap i { position: relative; padding: 1px 4px; background: var(--card); font-style: normal; font-size: 9.5px; line-height: 12px; font-weight: 600; color: var(--t4); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.tt-gap.is-warn i { color: #c27a1c; }
+.tt-gap.is-short i { display: none; }

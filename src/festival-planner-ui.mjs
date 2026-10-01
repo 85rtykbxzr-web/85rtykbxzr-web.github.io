@@ -238,10 +238,19 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
             const session = item.session;
             const place = placeOf(session.venue);
             const hall = hallOf(session.venue, place);
-            return `<button type="button" class="tt-block" data-fp-focus="${escapeHtml(session.id)}" data-tt-top="${item.span.start - startHour * 60}" data-tt-height="${item.span.end - item.span.start}" data-tt-lane="${item.lane}" data-tt-lanes="${item.lanes}"${item.lanes > 1 ? " data-tt-narrow" : ""} aria-label="${escapeHtml(`${session.time} ${session.title} ${place.short}`)}"><b>${escapeHtml(session.title)}</b><span>${escapeHtml(place.id === "bcc" && hall ? hall : `${place.short}${hall ? ` ${hall}` : ""}`)}</span></button>`;
+            return `<button type="button" class="tt-block" data-fp-focus="${escapeHtml(session.id)}" data-tt-top="${item.span.start - startHour * 60}" data-tt-height="${item.span.end - item.span.start}" data-tt-lane="${item.lane}" data-tt-lanes="${item.lanes}"${item.lanes > 1 ? " data-tt-narrow" : ""} aria-label="${escapeHtml(`${session.time} ${session.title} ${place.short}`)}"><time>${session.time}</time><b>${escapeHtml(session.title)}</b><span>${escapeHtml(place.id === "bcc" && hall ? hall : `${place.short}${hall ? ` ${hall}` : ""}`)}</span></button>`;
           })
           .join("");
-        return `<div class="tt-col${date === state.day ? " is-on" : ""}">${blocks}</div>`;
+        // the walk between two screenings, drawn in the gap: a dotted path and how much time is left
+        const gaps = items
+          .filter((item) => item.gap && item.gap.status !== "overlap" && item.lanes === 1)
+          .map((item) => {
+            const gap = item.gap;
+            const label = gap.status === "free" ? `빈 ${durationLabel(gap.free - gap.need)}` : gap.status === "tight" ? `빠듯 ${gap.free}분` : `여유 ${gap.free}분`;
+            return `<span class="tt-gap${gap.status === "tight" ? " is-warn" : ""}" data-tt-top="${gap.from - startHour * 60}" data-tt-height="${gap.free}" aria-hidden="true"><i>${escapeHtml(label)}</i></span>`;
+          })
+          .join("");
+        return `<div class="tt-col${date === state.day ? " is-on" : ""}">${gaps}${blocks}</div>`;
       })
       .join("");
     const lines = hours.map((hour) => `<span class="tt-hour"><i>${hour > 23 ? hour - 24 : hour}</i></span>`).join("");
@@ -310,8 +319,14 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
       block.style.left = `calc(${(lane / lanes) * 100}% + 1px)`;
       block.style.width = `calc(${100 / lanes}% - 1px)`;
       // as many title lines as the block's height holds, under the place line when it shows
-      const room = parseFloat(block.style.height) - 10 - (lanes > 1 ? 0 : 13);
+      const room = parseFloat(block.style.height) - 10 - 13 - (lanes > 1 ? 0 : 13);
       block.style.setProperty("--tt-lines", String(Math.max(1, Math.floor(room / 14))));
+    });
+    grid.querySelectorAll(".tt-gap").forEach((gap) => {
+      const height = (Number(gap.dataset.ttHeight) / 60) * hourHeight;
+      gap.style.top = `${(Number(gap.dataset.ttTop) / 60) * hourHeight + 1}px`;
+      gap.style.height = `${height - 1}px`;
+      gap.classList.toggle("is-short", height < 18);
     });
     const days = Number(grid.dataset.ttDays) || 1;
     grid.style.setProperty("--tt-days", String(days));
