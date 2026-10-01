@@ -757,7 +757,8 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .fpt.v-ink .tt-hour { border-top: 1px dashed color-mix(in srgb, var(--line) 80%, transparent); }
 .fpt.v-ink .tt-hour:first-child { border-top: 0; }
 .fpt.v-ink .tt-col { border-left-color: color-mix(in srgb, var(--line) 70%, transparent); }
-.fpt.v-ink .tt-block { margin-left: 3px; padding: 6px 7px; border-radius: 8px; background: var(--ink); color: var(--on-ink); }
+.fpt.v-ink .tt-block { margin: 0; padding: 5px 6px; border-radius: 0; background: var(--ink); color: var(--on-ink); }
+.fpt.v-ink .tt-block:active { transform: none; filter: brightness(1.15); }
 .fpt.v-ink .tt-block span { opacity: 0.6; }
 .fpt.v-ink .tt-block::after { display: none; }
 .fpt.v-ink .tt-block[data-tt-narrow] { padding: 6px 5px; }

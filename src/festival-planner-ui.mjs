@@ -304,10 +304,11 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
     grid.querySelectorAll(".tt-block").forEach((block) => {
       const lanes = Number(block.dataset.ttLanes) || 1;
       const lane = Number(block.dataset.ttLane) || 0;
-      block.style.top = `${(Number(block.dataset.ttTop) / 60) * hourHeight}px`;
-      block.style.height = `${Math.max(22, (Number(block.dataset.ttHeight) / 60) * hourHeight - 2)}px`;
-      block.style.left = `${(lane / lanes) * 100}%`;
-      block.style.width = `calc(${100 / lanes}% - 5px)`;
+      // flush with the hour lines and column rules, a 1px gutter so neighbours stay apart
+      block.style.top = `${(Number(block.dataset.ttTop) / 60) * hourHeight + 1}px`;
+      block.style.height = `${Math.max(22, (Number(block.dataset.ttHeight) / 60) * hourHeight - 1)}px`;
+      block.style.left = `calc(${(lane / lanes) * 100}% + 1px)`;
+      block.style.width = `calc(${100 / lanes}% - 1px)`;
     });
     const days = Number(grid.dataset.ttDays) || 1;
     grid.style.setProperty("--tt-days", String(days));
