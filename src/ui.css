@@ -892,3 +892,10 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 /* long titles give way, badges keep their full width */
 .fp-title-text { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .fp-title .fp-badge { flex: none; }
+/* list rows: a long title wraps to a second line (badge follows inline) instead of being cut;
+   more air between the title and the place line */
+.fp-row .fp-title { display: block; white-space: normal; overflow: visible; line-height: 22px; word-break: keep-all; overflow-wrap: anywhere; }
+.fp-row .fp-title-text { display: inline; white-space: normal; overflow: visible; }
+.fp-row .fp-title .fp-badge { display: inline-block; margin-left: 6px; vertical-align: 1px; }
+.fp-row .fp-meta { margin-top: 5px; }
+.fp-row { padding: 14px 0; }
