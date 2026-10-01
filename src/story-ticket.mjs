@@ -171,12 +171,12 @@ function dateParts(value) {
 const layouts = {
   a: ["label", ["day", 46, 32], "title", "stars", "meta"],
   b: ["pill", "title", "stars", "metaFull"],
-  c: ["label", "title", "stars", "when", "meta"],
+  c: ["pill", "title", "stars", "when", "meta"],
   d: ["label", "title", "stars", "metaFull"],
   e: ["pill", ["day", 46, 32], "title", "stars", "meta"]
 };
 
-function drawPosterStyle(ctx, ticket, poster, { typeScale: k = 1.05, gap: baseGap = 26, starColor = "#ffffff", layout = "e", align = "left" } = {}) {
+function drawPosterStyle(ctx, ticket, poster, { typeScale: k = 1.05, gap: baseGap = 26, starColor = "#ffffff", layout = "c", align = "left" } = {}) {
   // Fill the story; a 2:3 poster loses about 8% on each side, which keeps the full-bleed look.
   if (poster) drawCover(ctx, poster, 0, 0, W, H);
   else {
