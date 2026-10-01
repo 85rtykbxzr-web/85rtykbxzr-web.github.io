@@ -38,8 +38,8 @@
         "description": "서울 독립영화관의 오늘 상영시간표, 기획전, 영화제 일정을 날짜별, 영화별, 상영관별로 확인하세요."
       }
     </script>
-    <link href="/assets/app.css?v=a5736caf5dae" rel="stylesheet" />
-    <script defer src="/assets/app.js?v=a5736caf5dae"></script>
+    <link href="/assets/app.css?v=17a2122776f5" rel="stylesheet" />
+    <script defer src="/assets/app.js?v=17a2122776f5"></script>
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=4" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=4" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=4" />
@@ -127,6 +127,7 @@
         <div>
           <h2 class="sr-only" id="desktopVenueShortcutTitle">오늘 상영관 바로가기</h2>
           <div id="desktopVenueFilter" class="chips"></div>
+          <div id="desktopVenueMap" class="venue-map hidden" aria-label="상영관 지도"></div>
         </div>
 
         <div id="desktopSearchResults" class="hidden"></div>
@@ -209,6 +210,7 @@
         <div>
           <h2 class="sr-only" id="mobileVenueShortcutTitle">오늘 상영관 바로가기</h2>
           <div id="mobileVenueFilter" class="chips" aria-label="상영관 바로가기"></div>
+          <div id="mobileVenueMap" class="venue-map hidden" aria-label="상영관 지도"></div>
         </div>
         <div id="mobileSearchResults" class="hidden"></div>
       </div>

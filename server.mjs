@@ -83,7 +83,7 @@ const securityHeaders = {
   "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
   "content-security-policy": [
     "default-src 'self'",
-    "script-src 'self' 'sha256-urg7e3GLu2OmmcC/P19X7mQgt0AhIRQJw+h637P88S0=' https://www.googletagmanager.com",
+    "script-src 'self' 'sha256-urg7e3GLu2OmmcC/P19X7mQgt0AhIRQJw+h637P88S0=' https://www.googletagmanager.com https://dapi.kakao.com https://t1.daumcdn.net",
     "style-src 'self'",
     "style-src-attr 'none'",
     "script-src-attr 'none'",

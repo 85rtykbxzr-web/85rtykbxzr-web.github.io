@@ -38,7 +38,8 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
     currentKstDate: "",
     lastRenderedMobileLayout: null,
     view: "today",
-    communityTrends: null
+    communityTrends: null,
+    mapOpen: false
   };
 
   const favoriteVenueStorageKey = "cineSeoulFavoriteVenues";
@@ -112,6 +113,26 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
     kucine: "KU",
     movieland: "MOVIE LAND",
     heyri: "HEYRI"
+  };
+  // Kakao Maps JavaScript key: public by design, only works on the domains registered for it.
+  const kakaoMapKey = "9f074c6f34b038341b0dec8dc2ac5566";
+  // [latitude, longitude], geocoded from the addresses above with Kakao's address search.
+  const venueCoordinates = {
+    kofa: [37.58066, 126.88984],
+    sac: [37.56817, 126.96998],
+    laika: [37.56517, 126.93094],
+    indiespace: [37.55725, 126.92499],
+    momo: [37.56446, 126.95029],
+    cinecube: [37.56964, 126.97214],
+    emu: [37.57207, 126.96901],
+    forest: [37.65418, 127.06144],
+    arirang: [37.60012, 127.01389],
+    filmforum: [37.56378, 126.94409],
+    sangsangmadang: [37.55096, 126.92106],
+    movieland: [37.54418, 127.05029],
+    artnine: [37.48461, 126.98167],
+    kucine: [37.53918, 127.07471],
+    heyri: [37.79167, 126.69768]
   };
   const knownProgramImages = {
     "p-sac-rossellini": "https://www.cinematheque.seoul.kr/data/file/program/thumb-cd350d699bb6addbeff893b0d2cf9159_5IpMwGuj_ebb50b412a6aa0d39ee6fb254d9d31640c68de5f_400x300.jpg",
@@ -1436,12 +1457,86 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
     const inactiveTarget = mobileLayout ? $("#desktopVenueFilter") : $("#mobileVenueFilter");
     inactiveTarget?.replaceChildren();
     renderVenueFilterTiles(activeTarget, shortcutItems);
+    renderVenueMap(shortcutItems);
+  }
+
+  const mapIconMarkup = '<svg class="ui-icon map-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"></path><circle cx="12" cy="10" r="2.4"></circle></svg>';
+
+  function loadKakaoMaps() {
+    if (window.kakao?.maps?.LatLng) return Promise.resolve(window.kakao.maps);
+    loadKakaoMaps.promise ||= new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${kakaoMapKey}&autoload=false`;
+      script.onload = () => {
+        if (!window.kakao?.maps?.load) {
+          reject(new Error("Kakao Maps SDK did not start"));
+          return;
+        }
+        window.kakao.maps.load(() => resolve(window.kakao.maps));
+      };
+      script.onerror = () => reject(new Error("Kakao Maps SDK failed to load"));
+      document.head.append(script);
+    }).catch((error) => {
+      loadKakaoMaps.promise = null;
+      throw error;
+    });
+    return loadKakaoMaps.promise;
+  }
+
+  // One map per layout container; pins are rebuilt with each render's session counts.
+  const venueMaps = new Map();
+
+  function renderVenueMap(items) {
+    const mobileLayout = isMobileViewport();
+    const panel = $(mobileLayout ? "#mobileVenueMap" : "#desktopVenueMap");
+    $(mobileLayout ? "#desktopVenueMap" : "#mobileVenueMap")?.classList.add("hidden");
+    if (!panel) return;
+    panel.classList.toggle("hidden", !state.mapOpen);
+    if (!state.mapOpen) return;
+    const pins = items.filter((item) => venueCoordinates[item.id]);
+    loadKakaoMaps()
+      .then((maps) => {
+        let entry = venueMaps.get(panel.id);
+        if (!entry) {
+          panel.replaceChildren();
+          const canvas = document.createElement("div");
+          canvas.className = "venue-map-canvas";
+          panel.append(canvas);
+          const map = new maps.Map(canvas, { center: new maps.LatLng(37.5665, 126.978), level: 8 });
+          map.setMaxLevel(11);
+          entry = { map, overlays: [] };
+          venueMaps.set(panel.id, entry);
+        }
+        entry.map.relayout();
+        entry.overlays.forEach((overlay) => overlay.setMap(null));
+        const bounds = new maps.LatLngBounds();
+        entry.overlays = pins.map((item) => {
+          const [lat, lng] = venueCoordinates[item.id];
+          const position = new maps.LatLng(lat, lng);
+          if (item.count) bounds.extend(position);
+          const pin = document.createElement("button");
+          pin.type = "button";
+          pin.className = `map-pin${item.count ? "" : " is-empty"}${isFavoriteVenue(item.id) ? " is-fav" : ""}`;
+          pin.dataset.venueJump = item.id;
+          pin.setAttribute("aria-label", `${item.name} ${item.countLabel}`);
+          pin.innerHTML = `<b>${escapeHtml(item.displayName || item.name)}</b><span>${item.count.toLocaleString("ko-KR")}</span>`;
+          const overlay = new maps.CustomOverlay({ position, content: pin, yAnchor: 1.15, zIndex: item.count ? 2 : 1 });
+          overlay.setMap(entry.map);
+          return overlay;
+        });
+        if (!bounds.isEmpty()) entry.map.setBounds(bounds, 48, 32, 32, 32);
+      })
+      .catch(() => {
+        venueMaps.delete(panel.id);
+        panel.innerHTML = `<p class="venue-map-error">지도를 불러오지 못했어요. 잠시 후 다시 열어 주세요.</p>`;
+      });
   }
 
   function renderVenueFilterTiles(target, items) {
     if (!target) return;
     target.parentElement?.classList.toggle("hidden", !items.length);
-    target.innerHTML = items
+    const mapToggle = `<button class="chip map-toggle${state.mapOpen ? " is-on" : ""}" type="button" data-venue-map-toggle aria-pressed="${state.mapOpen}">${mapIconMarkup}지도</button>`;
+    target.innerHTML = mapToggle + items
       .map((item) => {
         const name = item.displayName || item.name;
         const favorite = isFavoriteVenue(item.id);
@@ -2536,6 +2631,12 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
         event.preventDefault();
         event.stopPropagation();
         toggleFavoriteVenue(favoriteVenueToggle.dataset.favoriteVenue || "");
+        return;
+      }
+
+      if (event.target.closest("[data-venue-map-toggle]")) {
+        state.mapOpen = !state.mapOpen;
+        render();
         return;
       }
 
