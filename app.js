@@ -2608,6 +2608,24 @@ import { createFestivalPlanner } from "./src/festival-planner-ui.mjs";
     return `<button class="book fest-plan-btn" type="button" data-fest-planner="${escapeHtml(row.festivalId)}">시간표 짜기</button>`;
   }
 
+  // Home strip from two weeks before the festival to its last day: the planner, one tap away.
+  function renderFestivalStrip() {
+    const festival = (state.data?.majorFestivals || []).find((item) => plannerFestivalPattern.test(item.id || ""));
+    const today = kstDateString();
+    const shown = festival?.startDate && festival?.endDate && today <= festival.endDate && daysBetween(today, festival.startDate) <= 14;
+    let markup = "";
+    if (shown) {
+      const started = today >= festival.startDate;
+      const tag = started ? `${daysBetween(festival.startDate, today) + 1}일째` : `D-${daysBetween(today, festival.startDate)}`;
+      const sub = started ? "오늘 볼 영화와 이동 시간을 한눈에" : "보고 싶은 영화를 담으면 이동 시간과 빈 시간까지 정리돼요";
+      markup = `<button type="button" class="fest-strip" data-fest-planner="${escapeHtml(festival.id)}"><span class="fest-strip-tag">${escapeHtml(tag)}</span><span class="fest-strip-t"><b>${escapeHtml(festival.name)} 시간표 짜기</b><small>${escapeHtml(sub)}</small></span><svg class="ui-icon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#arrow-right"></use></svg></button>`;
+    }
+    const mobileLayout = isMobileViewport();
+    const target = mobileLayout ? $("#mobileFestStrip") : $("#festStrip");
+    (mobileLayout ? $("#festStrip") : $("#mobileFestStrip"))?.replaceChildren();
+    if (target) target.innerHTML = markup;
+  }
+
   function majorFestivalLogoMarkup(row) {
     if (!row?.logoUrl) return "";
     return `<span class="fest-logo${row.logoTheme === "dark" ? " is-dark" : ""}"><img src="${escapeHtml(row.logoUrl)}" alt="${escapeHtml(row.name)} 로고" loading="lazy" /></span>`;
@@ -2824,6 +2842,7 @@ import { createFestivalPlanner } from "./src/festival-planner-ui.mjs";
       renderFestivals();
     }
     renderPopularPicks();
+    renderFestivalStrip();
     updateSoonBadges();
     repairPosterImages();
     syncInitialHashScroll();

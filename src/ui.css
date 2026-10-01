@@ -761,8 +761,6 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .fpt.v-ink .tt-block:active { transform: none; filter: brightness(1.15); }
 .fpt.v-ink .tt-block span { opacity: 0.6; }
 .fpt.v-ink .tt-block::after { display: none; }
-.fpt.v-ink .tt-block[data-tt-narrow] { padding: 6px 5px; }
-.fpt.v-ink .tt-block[data-tt-narrow] span { display: none; }
 .fp-ticket { display: grid; place-items: center; height: 50px; margin-top: 14px; border-radius: 14px; background: var(--strong); font-size: 15px; font-weight: 700; color: var(--on-strong); }
 
 /* Festival planner: class-timetable grid of picked screenings */
@@ -793,8 +791,6 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 /* --- refined timetable looks (variant classes for comparison) --- */
 .fpt.v-ink .tt-block b { -webkit-line-clamp: var(--tt-lines, 3); font-size: 11.5px; line-height: 14px; overflow-wrap: anywhere; }
 .fpt.v-ink .tt-block span { margin-top: 1px; font-size: 10px; line-height: 12px; }
-.fpt.v-ink .tt-block[data-tt-narrow] { padding: 5px 4px; }
-.fpt.v-ink .tt-block[data-tt-narrow] b { font-size: 10.5px; line-height: 14px; letter-spacing: -0.04em; }
 /* block: start time, title, place pinned to the foot like a ticket stub */
 .fpt.v-ink .tt-block time { font-size: 10px; line-height: 13px; font-weight: 600; font-variant-numeric: tabular-nums; letter-spacing: 0.01em; opacity: 0.55; }
 .fpt.v-ink .tt-block b { margin-top: 1px; }
@@ -860,3 +856,28 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .fp-row.is-picked .fp-title { color: var(--t1); }
 .fp-badge { padding: 0 5px; background: none; box-shadow: inset 0 0 0 1px var(--line-2); font-size: 10.5px; line-height: 17px; color: var(--t4); }
 .fp-badge.is-gv { background: none; color: var(--red); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--red) 35%, transparent); }
+/* overlapping screenings as one block: faint stripes, every title, and the clash spelled out */
+.fpt.v-ink .tt-block.is-clash { background: repeating-linear-gradient(135deg, var(--ink) 0 7px, color-mix(in srgb, var(--ink) 86%, var(--on-ink)) 7px 8px); }
+.fpt.v-ink .tt-block.is-clash b + b { margin-top: 3px; padding-top: 3px; border-top: 1px solid color-mix(in srgb, var(--on-ink) 18%, transparent); }
+.fpt.v-ink .tt-block.is-clash span { color: #ff8a8a; opacity: 1; white-space: normal; }
+/* time now: a red rule across today's column */
+.tt-now { position: absolute; left: -1px; right: 0; z-index: 2; height: 0; border-top: 2px solid var(--red); pointer-events: none; }
+.tt-now::before { content: ""; position: absolute; left: -4px; top: -5px; width: 8px; height: 8px; border-radius: 999px; background: var(--red); }
+.tt-now[hidden] { display: none; }
+.tt-day.is-today span { color: var(--red); font-weight: 700; }
+.fp-live { flex: none; padding: 0 6px; border-radius: 4px; background: var(--fill); font-style: normal; font-size: 11px; line-height: 18px; font-weight: 600; color: var(--t2); }
+.fp-live.is-on { background: var(--red); color: #fff; }
+.fp-it.is-live { box-shadow: inset 3px 0 0 var(--red); }
+.fp-it.is-past > * { opacity: 0.45; }
+.fp-gap.is-bad { background: var(--fp-soft); }
+/* home strip that opens the festival planner */
+.fest-strip-slot:empty { display: none; }
+.fest-strip-slot { margin-top: 12px; margin-bottom: 4px; }
+.fest-strip { display: flex; align-items: center; gap: 12px; width: 100%; padding: 14px 16px; border-radius: 16px; background: var(--strong); color: var(--on-strong); text-align: left; -webkit-tap-highlight-color: transparent; transition: transform 0.15s; }
+.fest-strip:active { transform: scale(0.99); }
+.fest-strip-tag { flex: none; padding: 3px 8px; border-radius: 6px; background: color-mix(in srgb, var(--on-strong) 14%, transparent); font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.fest-strip-t { display: flex; flex-direction: column; min-width: 0; flex: 1; }
+.fest-strip-t b { font-size: 15px; line-height: 21px; font-weight: 700; letter-spacing: -0.01em; }
+.fest-strip-t small { font-size: 12.5px; line-height: 17px; opacity: 0.65; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.fest-strip .ui-icon { flex: none; width: 18px; height: 18px; opacity: 0.7; }
+.fpt.v-ink .tt-block { left: 1px; right: 0; }
