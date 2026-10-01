@@ -10,6 +10,7 @@ export const ticketStyles = {
 const W = 1080;
 const H = 1920;
 const SANS = '"Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic Neo", sans-serif';
+const BRAND = '"BM Kkubulim Brand", ' + SANS;
 const WEEKDAYS_EN = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 const WEEKDAYS_KO = ["일", "월", "화", "수", "목", "금", "토"];
 const INK = "#1d1b18";
@@ -295,9 +296,10 @@ function drawPosterStyle(ctx, ticket, poster) {
   ctx.save();
   ctx.shadowColor = "rgba(0,0,0,0.45)";
   ctx.shadowBlur = 14;
-  ctx.fillStyle = "rgba(255,255,255,0.92)";
-  ctx.font = `700 28px ${SANS}`;
-  ctx.fillText("서울독립영화관시간표", x, SAFE_TOP + 40);
+  ctx.fillStyle = "#ffffff";
+  ctx.textAlign = "center";
+  ctx.font = `400 44px ${BRAND}`;
+  ctx.fillText("서울독립영화관시간표", W / 2, SAFE_TOP + 52);
   ctx.restore();
 }
 
@@ -539,7 +541,7 @@ function drawReceiptStyle(ctx, ticket, poster, seed) {
  * @param {keyof typeof ticketStyles} styleKey
  */
 export async function drawStoryTicket(ticket, styleKey = "poster") {
-  const fontLoads = [`700 80px ${SANS}`, `600 30px ${SANS}`, `500 26px ${SANS}`].map((font) =>
+  const fontLoads = [`700 80px ${SANS}`, `600 30px ${SANS}`, `500 26px ${SANS}`, `400 44px ${BRAND}`].map((font) =>
     document.fonts?.load(font, `${ticket.title}${ticket.venue}${ticket.screen || ""}서울독립영화관시간표극장상영관시간좌석편월일화수목금토요0123456789.:·TOTALSEOUL`).catch(() => null)
   );
   const [poster] = await Promise.all([loadPoster(ticket.posterUrl), ...fontLoads]);
