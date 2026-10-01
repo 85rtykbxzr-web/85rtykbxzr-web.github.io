@@ -237,70 +237,101 @@ function dateParts(value) {
   };
 }
 
-function drawPosterStyle(ctx, ticket, poster) {
-  if (poster) drawCover(ctx, poster, 0, 0, W, H);
-  else {
-    ctx.fillStyle = "#1b1a18";
-    ctx.fillRect(0, 0, W, H);
-  }
-  const top = ctx.createLinearGradient(0, 0, 0, 480);
-  top.addColorStop(0, "rgba(0,0,0,0.45)");
-  top.addColorStop(1, "rgba(0,0,0,0)");
-  ctx.fillStyle = top;
-  ctx.fillRect(0, 0, W, 480);
-  const bottom = ctx.createLinearGradient(0, 820, 0, H);
-  bottom.addColorStop(0, "rgba(0,0,0,0)");
-  bottom.addColorStop(0.5, "rgba(0,0,0,0.66)");
-  bottom.addColorStop(1, "rgba(0,0,0,0.86)");
-  ctx.fillStyle = bottom;
-  ctx.fillRect(0, 820, W, H - 820);
-  grain(ctx, 0.12);
-
-  const x = 84;
+// Draws a day line like "10월 1일  목요일 14:30": the date heavier, the rest lighter, centred as one.
+function drawDayLine(ctx, ticket, cx, y, big, small) {
   const d = dateParts(ticket.date);
-  setTitleFont(ctx, 80);
-  const titleLines = wrapLines(ctx, ticket.title, W - x * 2, 3);
-  const meta = [ticket.venue, ticket.screen].filter(Boolean).join("  ·  ");
-  // laid out from the bottom up so the block always ends above the story reply bar
-  let y = SAFE_BOTTOM - 12;
+  const day = d ? `${Number(d.mm)}월 ${Number(d.dd)}일` : ticket.date;
+  const rest = d ? `${d.ko}요일  ${ticket.time}` : ticket.time;
+  ctx.font = `700 ${big}px ${SANS}`;
+  const dayWidth = ctx.measureText(day).width;
+  ctx.font = `500 ${small}px ${SANS}`;
+  const restWidth = ctx.measureText(rest).width;
+  const gap = Math.round(small * 0.5);
+  const left = cx - (dayWidth + gap + restWidth) / 2;
   ctx.textAlign = "left";
-  ctx.fillStyle = "rgba(255,255,255,0.72)";
-  ctx.font = `500 30px ${SANS}`;
-  ctx.fillText(meta, x, y);
-  y -= 66;
-  if (ticket.rating) {
-    const width = drawStars(ctx, ticket.rating, x, y - 13, 36, "#ffffff", "rgba(255,255,255,0.26)");
-    ctx.fillStyle = "#ffffff";
-    ctx.font = `600 30px ${SANS}`;
-    ctx.fillText(ratingText(ticket.rating), x + width + 16, y - 2);
-    y -= 74;
-  }
   ctx.fillStyle = "#ffffff";
-  setTitleFont(ctx, 80);
-  for (let i = titleLines.length - 1; i >= 0; i--) {
-    ctx.fillText(titleLines[i], x, y);
-    y -= 94;
+  ctx.font = `700 ${big}px ${SANS}`;
+  ctx.fillText(day, left, y);
+  ctx.fillStyle = "rgba(255,255,255,0.78)";
+  ctx.font = `500 ${small}px ${SANS}`;
+  ctx.fillText(rest, left + dayWidth + gap, y);
+}
+
+function drawPosterStyle(ctx, ticket, poster) {
+  drawBlurredBackdrop(ctx, poster, "#1b1a18");
+  ctx.fillStyle = "rgba(0,0,0,0.34)";
+  ctx.fillRect(0, 0, W, H);
+  grain(ctx, 0.1);
+
+  const cx = W / 2;
+  const bottom = SAFE_BOTTOM + 90; // the reply bar is shorter than the ad-safe 20%
+  setTitleFont(ctx, 88);
+  const titleLines = wrapLines(ctx, ticket.title, W - 160, 2);
+  ctx.letterSpacing = "0px";
+  const meta = [ticket.venue, ticket.screen].filter(Boolean).join("  ·  ");
+  const textH = 64 + titleLines.length * 102 + (ticket.rating ? 84 : 0) + 70;
+
+  // whole poster as a card, as large as the space between the brand line and the text allows
+  const top = SAFE_TOP + 100;
+  const maxH = bottom - textH - 64 - top;
+  if (poster) {
+    const iw = poster.naturalWidth || poster.width;
+    const ih = poster.naturalHeight || poster.height;
+    let ph = maxH;
+    let pw = Math.round((ph * iw) / ih);
+    if (pw > W - 160) {
+      pw = W - 160;
+      ph = Math.round((pw * ih) / iw);
+    }
+    const px = Math.round(cx - pw / 2);
+    const py = Math.round(top + (maxH - ph) / 2);
+    ctx.save();
+    ctx.shadowColor = "rgba(0,0,0,0.45)";
+    ctx.shadowBlur = 50;
+    ctx.shadowOffsetY = 20;
+    roundRectPath(ctx, px, py, pw, ph, 14);
+    ctx.fillStyle = "#000";
+    ctx.fill();
+    ctx.restore();
+    ctx.save();
+    roundRectPath(ctx, px, py, pw, ph, 14);
+    ctx.clip();
+    ctx.drawImage(poster, px, py, pw, ph);
+    ctx.restore();
+  }
+
+  let y = bottom - textH + 64;
+  drawDayLine(ctx, ticket, cx, y, 58, 38);
+  ctx.textAlign = "center";
+  ctx.fillStyle = "#ffffff";
+  setTitleFont(ctx, 88);
+  for (const line of titleLines) {
+    y += 102;
+    ctx.fillText(line, cx, y);
   }
   ctx.letterSpacing = "0px";
-  // date: big month.day, then weekday and time in a lighter weight on the same baseline
-  y -= 4;
-  ctx.fillStyle = "#ffffff";
-  ctx.font = `700 52px ${SANS}`;
-  const day = d ? `${Number(d.mm)}월 ${Number(d.dd)}일` : ticket.date;
-  ctx.fillText(day, x, y);
-  const dayWidth = ctx.measureText(day).width;
-  ctx.fillStyle = "rgba(255,255,255,0.78)";
+  if (ticket.rating) {
+    y += 84;
+    const size = 42;
+    const label = ratingText(ticket.rating);
+    ctx.font = `600 34px ${SANS}`;
+    const labelWidth = ctx.measureText(label).width;
+    const starsWidth = size * 5 + size * 0.18 * 4;
+    const left = cx - (starsWidth + 16 + labelWidth) / 2;
+    drawStars(ctx, ticket.rating, left, y - 14, size, "#ffffff", "rgba(255,255,255,0.26)");
+    ctx.fillStyle = "#ffffff";
+    ctx.textAlign = "left";
+    ctx.fillText(label, left + starsWidth + 16, y);
+    ctx.textAlign = "center";
+  }
+  y += 70;
+  ctx.fillStyle = "rgba(255,255,255,0.74)";
   ctx.font = `500 34px ${SANS}`;
-  ctx.fillText(d ? `${d.ko}요일  ${ticket.time}` : ticket.time, x + dayWidth + 18, y);
+  ctx.fillText(meta, cx, y);
 
-  ctx.save();
-  ctx.shadowColor = "rgba(0,0,0,0.45)";
-  ctx.shadowBlur = 14;
   ctx.fillStyle = "#ffffff";
-  ctx.textAlign = "center";
-  ctx.font = `400 44px ${BRAND}`;
-  ctx.fillText("서울독립영화관시간표", W / 2, SAFE_TOP + 52);
-  ctx.restore();
+  ctx.font = `400 38px ${BRAND}`;
+  ctx.fillText("서울독립영화관시간표", cx, SAFE_TOP + 44);
 }
 
 function drawTicketStyle(ctx, ticket, poster, seed) {
@@ -541,7 +572,7 @@ function drawReceiptStyle(ctx, ticket, poster, seed) {
  * @param {keyof typeof ticketStyles} styleKey
  */
 export async function drawStoryTicket(ticket, styleKey = "poster") {
-  const fontLoads = [`700 80px ${SANS}`, `600 30px ${SANS}`, `500 26px ${SANS}`, `400 44px ${BRAND}`].map((font) =>
+  const fontLoads = [`700 92px ${SANS}`, `600 36px ${SANS}`, `500 34px ${SANS}`, `400 38px ${BRAND}`].map((font) =>
     document.fonts?.load(font, `${ticket.title}${ticket.venue}${ticket.screen || ""}서울독립영화관시간표극장상영관시간좌석편월일화수목금토요0123456789.:·TOTALSEOUL`).catch(() => null)
   );
   const [poster] = await Promise.all([loadPoster(ticket.posterUrl), ...fontLoads]);
