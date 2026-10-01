@@ -301,10 +301,14 @@ main { padding-top: 72px; }
 .ftr-links a:not(.icon-btn):hover { background: var(--fill); color: var(--t1); }
 
 /* ---------- mobile tab bar ---------- */
-.tabbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; display: grid; grid-template-columns: repeat(3, 1fr); height: calc(60px + env(safe-area-inset-bottom)); padding-bottom: env(safe-area-inset-bottom); background: color-mix(in srgb, var(--card) 94%, transparent); -webkit-backdrop-filter: saturate(1.6) blur(16px); backdrop-filter: saturate(1.6) blur(16px); border-top: 1px solid var(--line-2); }
-.tabbar a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; font-size: 11px; line-height: 14px; font-weight: 600; color: var(--t4); }
-.tabbar a .ui-icon { width: 24px; height: 24px; }
+/* Floating capsule with a pill that slides to the current tab. */
+.tabbar { position: fixed; left: 50%; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 50; transform: translateX(-50%); width: min(calc(100% - 32px), 360px); height: 64px; padding: 6px; display: grid; grid-template-columns: repeat(3, 1fr); border-radius: 999px; background: color-mix(in srgb, var(--card) 86%, transparent); -webkit-backdrop-filter: saturate(1.8) blur(20px); backdrop-filter: saturate(1.8) blur(20px); box-shadow: 0 0 0 1px color-mix(in srgb, var(--t1) 7%, transparent), 0 10px 30px -8px rgb(0 23 51 / 0.22), 0 2px 6px rgb(0 23 51 / 0.06); }
+.tabbar a { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; border-radius: 999px; font-size: 11px; line-height: 14px; font-weight: 600; color: var(--t4); -webkit-tap-highlight-color: transparent; transition: color 0.2s ease; }
 .tabbar a[aria-current] { color: var(--t1); }
+.tab-pill { position: absolute; top: 6px; left: 6px; bottom: 6px; width: calc((100% - 12px) / 3); border-radius: 999px; background: var(--fill-hover); transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1); }
+.tabbar:has(a:nth-child(2)[aria-current]) .tab-pill { transform: translateX(100%); }
+.tabbar:has(a:nth-child(3)[aria-current]) .tab-pill { transform: translateX(200%); }
+.tabbar:not(:has(a[aria-current])) .tab-pill { opacity: 0; }
 
 /* ---------- toast ---------- */
 .toast { border-radius: 12px; background: var(--strong); color: var(--on-strong); font-weight: 600; box-shadow: var(--shadow); }
@@ -399,7 +403,7 @@ main { padding-top: 72px; }
   .fest-item > .book { grid-column: 2; justify-self: start; }
   .ftr { margin-top: 40px; padding-bottom: 32px; }
   .ftr-in { flex-direction: column; gap: 8px; }
-  .m-main { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+  .m-main { padding-bottom: calc(96px + env(safe-area-inset-bottom)); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -415,7 +419,7 @@ main { padding-top: 72px; }
 .venue-h:has(.film-id) { align-items: center; }
 
 /* tab bar icons: outline when idle, filled when current */
-.tab-ic { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.2s ease; }
+.tab-ic { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.2s ease; }
 .tab-ic .dot { stroke-width: 2.4; }
 .tab-ic .dash { stroke-dasharray: 2 2.4; }
 .tab-ic .solid { fill: currentColor; }
@@ -423,6 +427,6 @@ main { padding-top: 72px; }
 .tab-ic .ic-on { display: none; }
 .tabbar a[aria-current] .tab-ic .ic-on { display: inline; }
 .tabbar a[aria-current] .tab-ic .ic-off { display: none; }
-.tabbar a:active .tab-ic { transform: scale(0.9); }
+.tabbar a:active .tab-ic { transform: scale(0.88); }
 .tabbar a span { margin-top: 1px; }
-@media (prefers-reduced-motion: reduce) { .tab-ic { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .tab-ic, .tab-pill { transition: none; } }
