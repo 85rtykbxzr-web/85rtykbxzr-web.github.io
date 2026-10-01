@@ -34,10 +34,6 @@ jobs:
           node-version: 22.23.2
           cache: npm
 
-      - name: Probe browser-collected venues (temporary diagnostic)
-        continue-on-error: true
-        run: node scripts/probe-browser-live.mjs
-
       - name: Install dependencies
         run: npm ci
 

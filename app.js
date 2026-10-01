@@ -524,10 +524,26 @@ import { filmTitleKey } from "./src/film-title.mjs";
     return "영화관의 공식 시간표를 불러오는 중입니다.";
   }
 
-  // The live-check status banner is intentionally not shown; venues that could not be
-  // checked simply list no sessions. Clear any banner left by an older build.
+  // The live-check status banner is not shown to visitors; venues that could not be checked
+  // simply list no sessions. Adding ?live-debug to the URL shows each venue's result instead.
   function renderBrowserLiveStatus() {
-    for (const id of ["desktop", "mobile"]) document.getElementById(`${id}LiveStatus`)?.remove();
+    const debug = new URLSearchParams(location.search).has("live-debug");
+    const rows = debug && usesBrowserLive(state.data) ? state.data.meta.browserLive || [] : [];
+    for (const id of ["desktop", "mobile"]) {
+      let notice = document.getElementById(`${id}LiveStatus`);
+      if (!rows.length) { notice?.remove(); continue; }
+      if (!notice) {
+        notice = document.createElement("div");
+        notice.id = `${id}LiveStatus`;
+        notice.className = "notice";
+        document.getElementById(`${id}Schedule`)?.before(notice);
+      }
+      notice.innerHTML = rows.map((row) => {
+        const name = browserLiveConfigs.find((config) => config.venueId === row.venueId)?.name || row.venueId;
+        const detail = row.status === "ok" ? `${row.sessions}회` : row.message || "";
+        return `<div>${escapeHtml(name)} · ${escapeHtml(row.status)}${detail ? ` · ${escapeHtml(detail)}` : ""}</div>`;
+      }).join("");
+    }
   }
 
   function matchesSearch(session, venues, query) {
