@@ -910,3 +910,7 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .fp-shared + .tt-wrap { margin-top: 14px; }
 .fp-share { display: grid; place-items: center; width: 100%; height: 48px; margin-top: 14px; border-radius: 8px; background: var(--card); box-shadow: inset 0 0 0 1px var(--line-2); font-size: 15px; font-weight: 600; color: var(--t1); }
 .fp-share + .fp-ticket { margin-top: 8px; }
+/* row dividers in the sheet use the stronger hairline: the soft one vanished on phone screens */
+.fp-row + .fp-row, .fp-it + .fp-it, .fp-gap, .fp-gap + .fp-it { border-top-color: var(--line-2); }
+.fp-row .fp-meta { margin-top: 8px; }
+.fp-row { padding: 16px 0; }
