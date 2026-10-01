@@ -1,5 +1,15 @@
 import assert from "node:assert/strict";
 import { countWeightedTerms, reviewSignal, stripFilmTitle } from "./update-community-trends.mjs";
+import {
+  activeLineupFestivals,
+  buildFestivalDays,
+  festivalAliasesFor,
+  festivalCandidates,
+  festivalMatches,
+  mergeFestivalDays,
+  parseBiffLineup,
+  rankFestivalPicks
+} from "./festival-picks.mjs";
 
 const groups = [{ label: "strong", weight: 6, terms: ["강추", "최고"] }];
 
@@ -25,4 +35,52 @@ assert(real.net > 0, "praise outside the title still scores");
 // Real questions are still discounted.
 assert.equal(reviewSignal({ title: "이거 볼만함?", body: "", comments: [] }).net, 0, "plain questions do not score");
 
-console.log("Community trend scoring tests passed (repeat cap, film-title stripping, question handling).");
+// Festival interest ranking.
+const biffHtml = `
+<div class="list_sec"><h3><strong> 경쟁 </strong><small>설명</small></h3><table><tbody>
+<tr><th><b onclick="location.href='/kor/html/program/prog_view.asp?idx=1&c_idx=442&sp_idx=&QueryStep=2' ">라 그라디바 / La Gradiva</b></th></tr>
+<tr><th><b onclick="location.href='/kor/html/program/prog_view.asp?idx=2&c_idx=442&sp_idx=&QueryStep=2' ">여름 / Summer</b></th></tr>
+<tr><th><b onclick="location.href='/kor/html/program/prog_view.asp?idx=3&c_idx=442&sp_idx=&QueryStep=2' ">가능한 사랑 / Possible Love</b></th></tr>
+</tbody></table></div>
+<div class="list_sec"><h3><strong>오픈 시네마</strong></h3><table><tbody>
+<tr><th><b onclick="location.href='/kor/html/program/prog_view.asp?idx=4&c_idx=437&sp_idx=&QueryStep=2' ">스파이럴 / The Spiral</b></th></tr>
+</tbody></table></div>`;
+const films = parseBiffLineup(biffHtml, "https://www.biff.kr/kor/html/program/prog_all_list.asp?allYear=2026");
+assert.deepEqual(films.map((film) => film.title), ["라 그라디바", "여름", "가능한 사랑", "스파이럴"], "BIFF lineup titles are parsed");
+assert.equal(films[0].section, "경쟁", "BIFF section is kept");
+assert.equal(films[3].section, "오픈 시네마");
+assert.equal(films[0].url, "https://www.biff.kr/kor/html/program/prog_view.asp?idx=1&c_idx=442&sp_idx=&QueryStep=2", "film link is absolute");
+
+const biff = { id: "biff-2026", name: "부산국제영화제", startDate: "2026-10-06", endDate: "2026-10-15", lineup: { url: "https://www.biff.kr/", format: "biff" } };
+assert.equal(activeLineupFestivals([biff], "2026-09-21").length, 0, "too early: more than two weeks before");
+assert.equal(activeLineupFestivals([biff], "2026-09-22").length, 1, "two weeks before the start");
+assert.equal(activeLineupFestivals([biff], "2026-10-16").length, 0, "after the end");
+
+const aliases = festivalAliasesFor(biff);
+const candidates = festivalCandidates(films).map((film) => ({ ...film, requiresAlias: film.title === "가능한 사랑" }));
+const titles = (text) => festivalMatches(text, candidates, aliases).map((film) => film.title);
+assert.deepEqual(titles("금요일 라그라디바 먹으면 만족"), ["라 그라디바"], "spacing differences still match");
+assert.deepEqual(titles("올 여름 너무 덥다"), [], "a short title needs the festival named");
+assert.deepEqual(titles("부국제 여름 표 구함"), ["여름"], "a short title counts next to the festival name");
+assert.deepEqual(titles("가능한 사랑 재밌네"), [], "a film playing in Seoul needs the festival named");
+assert.deepEqual(titles("부국제 가능한 사랑 GV"), ["가능한 사랑"]);
+
+const window = { start: "2026-09-22", end: "2026-10-15" };
+const posts = [
+  { title: "라그라디바 양도", date: "2026-09-30", comments: [{}, {}] },
+  { title: "라 그라디바 vs 스파이럴", date: "2026-09-30", comments: [] },
+  { title: "스파이럴 야외상영 풀림", date: "2026-10-01", comments: [] },
+  { title: "부국제 여름 구함", date: "2026-10-01", comments: [] },
+  { title: "라그라디바 예전 글", date: "2026-09-01", comments: [] }
+];
+const days = buildFestivalDays(posts, candidates, aliases, window);
+assert.equal(days["2026-09-30"]["라그라디바"].mentionCount, 2, "mentions are counted per post");
+assert(!days["2026-09-01"], "posts before the window are ignored");
+const merged = mergeFestivalDays({ "2026-09-29": { 여름: { title: "여름", mentionCount: 1, commentCount: 0 } }, "2026-09-10": {} }, days, ["2026-09-30", "2026-10-01"], window);
+assert(!merged["2026-09-10"], "days outside the window are dropped");
+assert(merged["2026-09-29"], "days not rescanned are kept");
+const ranked = rankFestivalPicks(merged, candidates);
+assert.deepEqual(ranked.map((item) => item.title), ["라 그라디바", "스파이럴", "여름"], "ranked by mentions");
+assert.deepEqual(Object.keys(ranked[0]).sort(), ["englishTitle", "mentionCount", "rank", "section", "title", "url"]);
+
+console.log("Community trend scoring tests passed (repeat cap, film-title stripping, question handling, festival interest ranking).");

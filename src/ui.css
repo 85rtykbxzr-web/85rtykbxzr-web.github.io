@@ -274,7 +274,7 @@ main { padding-top: 72px; }
 .fest-main { min-width: 0; }
 .fest-main h3 { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 18px; line-height: 26px; font-weight: 700; letter-spacing: -0.02em; }
 .fest-main > p { margin-top: 2px; font-size: 14px; line-height: 20px; color: var(--t4); }
-.fest-cta { align-self: center; }
+.fest-cta { align-self: start; }
 .fest-more { margin-top: 10px; display: flex; flex-direction: column; gap: 2px; }
 .fest-more details { border-radius: 12px; }
 .fest-more summary { display: flex; align-items: center; gap: 8px; padding: 8px 0; cursor: pointer; list-style: none; font-size: 14px; font-weight: 600; color: var(--t2); }
@@ -437,3 +437,21 @@ main { padding-top: 72px; }
 .tabbar a:active .tab-ic { transform: scale(0.88); }
 .tabbar a span { margin-top: 1px; }
 @media (prefers-reduced-motion: reduce) { .tab-ic, .tab-pill, .seg-thumb { transition: none; } }
+
+/* festival interest ranking: a plain numbered list, deliberately unlike the poster-led weekly picks */
+.fest-picks { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); }
+.fest-picks-h { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; margin-bottom: 4px; }
+.fest-picks-h strong { font-size: 15px; font-weight: 700; color: var(--t1); }
+.fest-picks-h span { font-size: 13px; color: var(--t4); }
+.fest-picks ol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 24px; }
+.fest-picks li a, .fest-picks .fp-row { display: flex; align-items: center; gap: 10px; min-width: 0; height: 40px; border-bottom: 1px solid var(--line); font-size: 15px; }
+.fest-picks li a:hover .fp-title { text-decoration: underline; text-underline-offset: 3px; }
+.fp-rank { flex: none; width: 18px; font-size: 14px; font-weight: 700; color: var(--t4); font-variant-numeric: tabular-nums; }
+.fest-picks li:nth-child(-n + 3) .fp-rank { color: var(--t1); }
+.fp-title { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 600; color: var(--t1); }
+.fp-sec { flex: none; max-width: 40%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 13px; color: var(--t4); }
+.fp-n { flex: none; margin-left: auto; font-size: 13px; color: var(--t4); font-variant-numeric: tabular-nums; }
+@media (max-width: 767px) {
+  .fest-picks ol { grid-template-columns: 1fr; }
+  .fp-sec { display: none; }
+}

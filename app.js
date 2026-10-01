@@ -1285,12 +1285,32 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
     });
   }
 
+  // Community interest ranking for a festival's lineup, published from two weeks before it opens.
+  function festivalPicksMarkup(festivalId) {
+    const entry = (Array.isArray(state.communityTrends?.festivalPicks) ? state.communityTrends.festivalPicks : []).find((item) => item?.festivalId === festivalId);
+    const items = (entry?.items || []).filter((item) => item?.title).slice(0, 8);
+    if (items.length < 3) return "";
+    return `
+      <div class="fest-picks">
+        <p class="fest-picks-h"><strong>관심작 순위</strong><span>누벨바그 갤러리 언급 많은 순</span></p>
+        <ol>
+          ${items
+            .map((item, index) => {
+              const url = safeExternalUrl(item.url, "");
+              const body = `<span class="fp-rank">${index + 1}</span><span class="fp-title">${escapeHtml(item.title)}</span>${item.section ? `<span class="fp-sec">${escapeHtml(item.section)}</span>` : ""}<span class="fp-n">언급 ${Number(item.mentionCount) || 0}</span>`;
+              return `<li>${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${body}</a>` : `<span class="fp-row">${body}</span>`}</li>`;
+            })
+            .join("")}
+        </ol>
+      </div>`;
+  }
+
   function festivalItemMarkup(group, venues) {
     const lifecycle = festivalGroupLifecycle(group);
     const summary = festivalGroupSummary(group, venues);
     const major = majorFestivalRow(group);
     const logo = major ? majorFestivalLogoMarkup(major) : "";
-    const extra = major ? majorFestivalHighlightsMarkup(major) : festivalScheduleSectionsMarkup(group, venues);
+    const extra = major ? `${majorFestivalHighlightsMarkup(major)}${festivalPicksMarkup(major.festivalId)}` : festivalScheduleSectionsMarkup(group, venues);
     return `
       <div class="fest${logo ? "" : " no-logo"}">
         ${logo}
@@ -1881,6 +1901,7 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
         const periodLabel = festival.periodLabel || formatPeriodLabel(startDate, endDate);
         return {
           id: `major-festival-${festival.id || festival.name}`,
+          festivalId: festival.id || "",
           kind: "major-festival",
           date: startDate,
           time: festival.time || "기간",

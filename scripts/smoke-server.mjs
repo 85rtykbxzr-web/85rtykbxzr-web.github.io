@@ -176,7 +176,7 @@ async function main() {
     expectRevalidated(trendsResponse, "community trends data");
     expectNoIndex(trendsResponse, "community trends data");
     assert(
-      Object.keys(trends || {}).every((key) => ["generatedAt", "items"].includes(key)),
+      Object.keys(trends || {}).every((key) => ["festivalPicks", "generatedAt", "items"].includes(key)),
       "community trends exposes an unexpected top-level field"
     );
     assert(Array.isArray(trends?.items) && trends.items.length === 4, "community trends does not expose four picks");
@@ -189,6 +189,15 @@ async function main() {
         )
       ),
       "community trends exposes an unexpected item field"
+    );
+    assert(Array.isArray(trends?.festivalPicks), "community trends is missing the festival picks list");
+    assert(
+      trends.festivalPicks.every(
+        (festival) =>
+          Object.keys(festival).every((key) => ["festivalId", "items", "name"].includes(key)) &&
+          festival.items.every((item) => Object.keys(item).every((key) => ["mentionCount", "rank", "section", "title", "url"].includes(key)))
+      ),
+      "community trends exposes an unexpected festival pick field"
     );
     const trendsEtag = trendsResponse.headers.get("etag");
     assert(trendsEtag, "community trends data is missing an ETag");

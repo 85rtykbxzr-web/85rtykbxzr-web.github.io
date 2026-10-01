@@ -28,7 +28,9 @@ const compressibleExtensions = new Set([".css", ".html", ".js", ".json", ".svg",
 const minimumCompressionSize = 256;
 const brotliDecompressAsync = promisify(brotliDecompress);
 const gunzipAsync = promisify(gunzip);
-const allowedTrendTopLevelFields = new Set(["generatedAt", "items"]);
+const allowedTrendTopLevelFields = new Set(["festivalPicks", "generatedAt", "items"]);
+const allowedFestivalPickFields = new Set(["festivalId", "items", "name"]);
+const allowedFestivalPickItemFields = new Set(["mentionCount", "rank", "section", "title", "url"]);
 const allowedTrendItemFields = new Set([
   "nextDate",
   "nextTime",
@@ -174,6 +176,12 @@ assert(schedule.sessions.length <= 5_000, "published schedule exceeds 5,000 sess
 assert(Object.keys(trends).every((key) => allowedTrendTopLevelFields.has(key)), "community trends exposes an unexpected top-level field");
 for (const item of trends.items) {
   assert(Object.keys(item).every((key) => allowedTrendItemFields.has(key)), "community trends exposes an unexpected item field");
+}
+for (const festival of trends.festivalPicks || []) {
+  assert(Object.keys(festival).every((key) => allowedFestivalPickFields.has(key)), "community trends exposes an unexpected festival pick field");
+  for (const item of festival.items || []) {
+    assert(Object.keys(item).every((key) => allowedFestivalPickItemFields.has(key)), "community trends exposes an unexpected festival pick item field");
+  }
 }
 assert(!trends.sourceInternal, "community trends exposes internal source metadata");
 assert(trends.items.every((item) => !item.evidence), "community trends exposes source evidence");
