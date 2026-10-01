@@ -423,6 +423,7 @@ main { padding-top: 72px; }
 .tab-ic .dot { stroke-width: 2.4; }
 .tab-ic .dash { stroke-dasharray: 2 2.4; }
 .tab-ic .solid { fill: currentColor; }
+.tab-ic .soft { fill: color-mix(in srgb, currentColor 16%, transparent); }
 .tab-ic .cut { stroke: var(--card); }
 .tab-ic .ic-on { display: none; }
 .tabbar a[aria-current] .tab-ic .ic-on { display: inline; }
