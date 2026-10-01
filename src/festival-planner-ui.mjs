@@ -217,19 +217,9 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
       else from -= 1;
     }
     const days = allDays.slice(from, to + 1);
-    const order = new Map(picked.map((session, index) => [session.id, index]));
     const byDay = days.map((date) => {
       const plan = planDay(picked.filter((session) => session.date === date), films());
-      const flags = new Map();
-      plan.forEach((item, index) => {
-        if (!item.gap) return;
-        const level = item.gap.status === "overlap" ? "bad" : item.gap.status === "tight" ? "warn" : "";
-        if (level) {
-          flags.set(item.session.id, level);
-          if (!flags.has(plan[index - 1].session.id) || level === "bad") flags.set(plan[index - 1].session.id, level);
-        }
-      });
-      return { date, items: layoutLanes(plan), flags };
+      return { date, items: layoutLanes(plan) };
     });
     const spans = byDay.flatMap((day) => day.items.map((item) => item.span));
     const startHour = Math.floor(Math.min(...spans.map((span) => span.start)) / 60);
@@ -242,14 +232,13 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
       })
       .join("");
     const cols = byDay
-      .map(({ date, items, flags }) => {
+      .map(({ date, items }) => {
         const blocks = items
           .map((item) => {
             const session = item.session;
             const place = placeOf(session.venue);
             const hall = hallOf(session.venue, place);
-            const flag = flags.get(session.id);
-            return `<button type="button" class="tt-block tt-c${order.get(session.id) % 8}${flag ? ` is-${flag}` : ""}" data-fp-focus="${escapeHtml(session.id)}" data-tt-top="${item.span.start - startHour * 60}" data-tt-height="${item.span.end - item.span.start}" data-tt-lane="${item.lane}" data-tt-lanes="${item.lanes}"${item.lanes > 1 ? " data-tt-narrow" : ""} aria-label="${escapeHtml(`${session.time} ${session.title} ${place.short}`)}"><b>${escapeHtml(session.title)}</b><span>${escapeHtml(place.id === "bcc" && hall ? hall : `${place.short}${hall ? ` ${hall}` : ""}`)}</span></button>`;
+            return `<button type="button" class="tt-block" data-fp-focus="${escapeHtml(session.id)}" data-tt-top="${item.span.start - startHour * 60}" data-tt-height="${item.span.end - item.span.start}" data-tt-lane="${item.lane}" data-tt-lanes="${item.lanes}"${item.lanes > 1 ? " data-tt-narrow" : ""} aria-label="${escapeHtml(`${session.time} ${session.title} ${place.short}`)}"><b>${escapeHtml(session.title)}</b><span>${escapeHtml(place.id === "bcc" && hall ? hall : `${place.short}${hall ? ` ${hall}` : ""}`)}</span></button>`;
           })
           .join("");
         return `<div class="tt-col${date === state.day ? " is-on" : ""}">${blocks}</div>`;
@@ -273,9 +262,6 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
     const first = plan[0].span.start;
     const last = plan.at(-1).span.end;
     const summary = `<small>${plan.length}편 · ${formatMinutes(first)}–${formatMinutes(last)}${plan.some((item) => item.gap?.status === "overlap") ? ' · <em>겹침 있음</em>' : ""}</small>`;
-    // the same colour as the grid block, so a row and its block read as one screening
-    const picked = (state.data?.sessions || []).filter((session) => picks.has(session.id));
-    const order = new Map(picked.map((session, index) => [session.id, index]));
     const body = plan
       .map((item, index) => {
         const session = item.session;
@@ -283,10 +269,10 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
         const hall = hallOf(session.venue, place);
         const card = `
           <li class="fp-it" id="fp-card-${escapeHtml(session.id)}">
-            <p class="fp-it-time"><strong>${session.time}</strong><span>${formatMinutes(item.span.end)}${item.span.runtimeKnown ? "" : "?"}</span></p>
+            <p class="fp-it-time"><strong>${session.time}</strong><span>${formatMinutes(item.span.end)}${item.span.runtimeKnown ? "" : "?"}까지</span></p>
             <div class="fp-it-main">
-              <p class="fp-it-title"><i class="fp-it-dot tt-c${order.get(session.id) % 8}" aria-hidden="true"></i><span>${escapeHtml(session.title)}</span>${badges(session)}</p>
-              <p class="fp-it-place">${escapeHtml(place.name)}${hall ? ` · ${escapeHtml(hall)}` : ""}</p>
+              <p class="fp-it-title"><span>${escapeHtml(session.title)}</span>${badges(session)}</p>
+              <p class="fp-it-place">${escapeHtml(place.name)}${hall ? ` <b>${escapeHtml(hall)}</b>` : ""}</p>
             </div>
             <div class="fp-it-side">
               <button type="button" class="fp-code" data-fp-copy="${escapeHtml(session.code)}" aria-label="예매코드 ${escapeHtml(session.code)} 복사">${escapeHtml(session.code)}</button>
