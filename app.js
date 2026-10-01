@@ -8,6 +8,7 @@ import {
 import { safePublicUrl } from "./src/public-url-policy.mjs";
 import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
 import { drawStoryTicket } from "./src/story-ticket.mjs";
+import { filmTitleKey } from "./src/film-title.mjs";
 
 (function () {
   const analyticsHostnames = new Set(["seoulcinemaschedule.com", "www.seoulcinemaschedule.com"]);
@@ -2899,7 +2900,7 @@ import { drawStoryTicket } from "./src/story-ticket.mjs";
   // Poster choices for the open session: TMDB artwork first, then the cinema's poster.
   function ticketPosterChoices(posters) {
     const session = ticketState.session;
-    const film = posters?.films?.[normalizeTrendTitle(session?.title)];
+    const film = posters?.films?.[filmTitleKey(session?.title)];
     const base = String(posters?.imageBase || "");
     const choices = (film?.posters || [])
       .map((path) => ({ full: safeImageUrl(`${base}w780${path}`), thumb: safeImageUrl(`${base}w185${path}`) }))
