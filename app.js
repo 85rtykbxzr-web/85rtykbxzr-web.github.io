@@ -868,8 +868,7 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
     document.querySelector('meta[name="theme-color"]')?.setAttribute("content", dark ? "#21201e" : "#ffffff");
   }
 
-  function toggleTheme() {
-    const next = currentTheme() === "dark" ? "light" : "dark";
+  function applyTheme(next) {
     document.documentElement.dataset.theme = next;
     try {
       localStorage.setItem("theme", next);
@@ -877,6 +876,39 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
       // Not persisted; the choice still applies to this page view.
     }
     syncThemeControls();
+  }
+
+  // Night mode dims like house lights going down; day mode brings them back up.
+  function toggleTheme() {
+    const next = currentTheme() === "dark" ? "light" : "dark";
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      applyTheme(next);
+      return;
+    }
+    let veil = document.getElementById("houseLights");
+    if (!veil) {
+      veil = document.createElement("div");
+      veil.id = "houseLights";
+      veil.setAttribute("aria-hidden", "true");
+      document.body.append(veil);
+    }
+    veil.className = `house-lights ${next === "dark" ? "is-dimming" : "is-raising"}`;
+    window.setTimeout(() => applyTheme(next), next === "dark" ? 420 : 0);
+    window.clearTimeout(toggleTheme.timer);
+    toggleTheme.timer = window.setTimeout(() => {
+      veil.className = "house-lights";
+    }, 1100);
+  }
+
+  // Hidden: five quick taps on the site name turn the page into a silent film.
+  function registerSilentFilmTap() {
+    const now = Date.now();
+    registerSilentFilmTap.taps = (registerSilentFilmTap.taps || []).filter((time) => now - time < 2000);
+    registerSilentFilmTap.taps.push(now);
+    if (registerSilentFilmTap.taps.length < 5) return;
+    registerSilentFilmTap.taps = [];
+    const on = document.documentElement.classList.toggle("silent-film");
+    showToast(on ? "무성영화 모드 · 로고를 다섯 번 더 누르면 꺼져요" : "유성영화로 돌아왔어요");
   }
 
   function scrollToSection(id, behavior = "smooth") {
@@ -2955,6 +2987,8 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
         toggleTheme();
         return;
       }
+
+      if (event.target.closest(".brand")) registerSilentFilmTap();
 
       const navLink = event.target.closest("[data-nav-target]");
       if (navLink) {
