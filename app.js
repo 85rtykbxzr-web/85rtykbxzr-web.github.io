@@ -892,7 +892,7 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
       button.setAttribute("aria-pressed", String(dark));
       button.setAttribute("aria-label", dark ? "야간 모드 끄기" : "야간 모드 켜기");
     });
-    document.querySelector('meta[name="theme-color"]')?.setAttribute("content", dark ? "#1c1c21" : "#ffffff");
+    document.querySelector('meta[name="theme-color"]')?.setAttribute("content", dark ? "#21201e" : "#ffffff");
   }
 
   function toggleTheme() {
