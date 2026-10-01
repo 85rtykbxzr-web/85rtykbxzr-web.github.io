@@ -2218,11 +2218,18 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
     });
   }
 
+  // Only the programme post's own image: borrowing a film poster from one of its sessions
+  // made the card look like a single film.
   function hydrateProgramImage(program) {
     if (posterSource(program)) return program;
     if (knownProgramImages[program.id]) return { ...program, posterUrl: knownProgramImages[program.id] };
-    const related = relatedProgramSessions(program).find((session) => posterSource(session));
-    return related ? { ...program, posterUrl: posterSource(related) } : program;
+    return program;
+  }
+
+  // Board scrapers store gnuboard thumbnails ("thumb-<file>_400x300.png", "…_250x180.jpg");
+  // the post's full image sits next to them without the prefix and size suffix.
+  function fullSizeBoardImage(src) {
+    return String(src || "").replace(/\/thumb-([^/]+?)_\d+x\d+(\.(?:jpe?g|png|gif|webp))$/i, "/$1$2");
   }
 
   function liveProgramCards() {
@@ -2247,7 +2254,6 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
           safeExternalUrl(first.bookingUrl, "") ||
           venueOfficialUrl(venue) ||
           "#";
-        const posterSession = sorted.find((session) => posterSource(session)) || first;
         return {
           id: `auto-${key}`,
           title,
@@ -2257,7 +2263,6 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
           kind: majorProgramKind(`${title} ${first.program || ""}`),
           status: "자동 반영",
           url,
-          posterUrl: posterSession.posterUrl,
           sessions: sorted.length,
           titleCount: titles.length,
           sortKey: `${sorted[0].date || ""} ${title}`
@@ -2345,15 +2350,12 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
             const venue = venues[program.venueId];
             const title = cleanProgramTitle(program.title);
             const period = [program.period, program.sessions ? `${program.sessions}회` : ""].filter(Boolean).join(" · ");
-            // Posters (portrait) and programme banners (landscape) share one frame: the image is
-            // shown whole over a blurred copy of itself.
-            const imageSrc = safeImageUrl(posterSource(program));
-            // A film icon sits underneath, so a missing or broken image still leaves a tidy frame.
-            const media = `<span class="prog-media" aria-hidden="true">${iconMarkup("film", "prog-media-ic")}${
-              imageSrc
-                ? `<img class="prog-media-bg" src="${escapeHtml(imageSrc)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" />${posterMarkup(program, title, "prog-media-img", "", { decorative: true })}`
-                : ""
-            }</span>`;
+            // The post's image fills the frame; the full-size file is tried first and the board
+            // thumbnail is the fallback. A film icon sits underneath for posts without an image.
+            const thumb = safeImageUrl(posterSource(program));
+            const full = thumb ? safeImageUrl(fullSizeBoardImage(thumb)) : "";
+            const image = full ? posterMarkup({ posterUrl: full, posterSourceUrl: full !== thumb ? thumb : "" }, title, "prog-media-img", "", { decorative: true }) : "";
+            const media = `<span class="prog-media" aria-hidden="true">${iconMarkup("film", "prog-media-ic")}${image}</span>`;
             return `
               <a class="prog has-media" href="${escapeHref(program.url)}" target="_blank" rel="noopener noreferrer">
                 ${media}
