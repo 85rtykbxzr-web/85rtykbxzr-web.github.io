@@ -3,6 +3,17 @@ import { mkdir, readFile, readdir, unlink } from "node:fs/promises";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import sharp from "sharp";
 import { isPastKstSession } from "../src/session-time.mjs";
+import {
+  activeLineupFestivals,
+  buildFestivalDays,
+  festivalAliasesFor,
+  festivalCandidates,
+  festivalLeadDays,
+  festivalPickWindow,
+  lineupParsers,
+  mergeFestivalDays,
+  rankFestivalPicks
+} from "./festival-picks.mjs";
 import { writeFileAtomic } from "./write-file-atomic.mjs";
 
 const schedulePath = fileURLToPath(new URL("../data/schedule.json", import.meta.url));
@@ -878,14 +889,29 @@ async function readJsonOrEmpty(path) {
   }
 }
 
-function communityScanPlan(existingCache) {
+// The first run inside a festival's window reaches back to its start (at most the lead
+// time) so the interest ranking does not begin from zero.
+function festivalBackfillStart(existingCache, lineupFestivals) {
+  let start = "";
+  for (const festival of lineupFestivals) {
+    const window = festivalPickWindow(festival);
+    const from = [window.start, addDays(todayKey, -festivalLeadDays)].sort().at(-1);
+    const covered = new Set(existingCache.festivals?.[festival.id]?.coverage || []);
+    const missing = dateRange(from, addDays(todayKey, -1)).find((date) => !covered.has(date));
+    if (missing && (!start || missing < start)) start = missing;
+  }
+  return start;
+}
+
+function communityScanPlan(existingCache, lineupFestivals = []) {
   const seedStart = addDays(todayKey, -(seedLookbackDays - 1));
   const seedDates = dateRange(seedStart, todayKey);
   const cachedCoverageDates = new Set((existingCache.scanCoverage?.dates || []).filter(isWithinWindow));
   const cachedSignalDates = new Set(Object.keys(existingCache.days || {}).filter(isWithinWindow));
   const knownDates = new Set([...cachedCoverageDates, ...cachedSignalDates]);
   const missingPastDates = forceBackfill ? seedDates.filter((date) => date < todayKey) : seedDates.filter((date) => date < todayKey && !knownDates.has(date));
-  const listWindowStart = missingPastDates.length ? missingPastDates[0] : todayKey;
+  const festivalStart = festivalBackfillStart(existingCache, lineupFestivals);
+  const listWindowStart = [missingPastDates[0] || todayKey, festivalStart || todayKey].sort()[0];
 
   return {
     scanMode: listWindowStart === todayKey ? "daily" : "backfill",
@@ -1214,14 +1240,69 @@ async function removeUnusedCachedPosters(items) {
   );
 }
 
+async function loadFestivalLineups(lineupFestivals, existingCache) {
+  const lineups = new Map();
+  const errors = [];
+  for (const festival of lineupFestivals) {
+    const cached = existingCache.festivals?.[festival.id];
+    try {
+      const html = await fetchText(festival.lineup.url);
+      const films = lineupParsers[festival.lineup.format](html, festival.lineup.url);
+      if (films.length < 10) throw new Error(`${festival.id} lineup parsed only ${films.length} film(s)`);
+      lineups.set(festival.id, { films, fetchedAt: new Date().toISOString() });
+    } catch (error) {
+      errors.push(error.message);
+      if (Array.isArray(cached?.films) && cached.films.length) lineups.set(festival.id, { films: cached.films, fetchedAt: cached.lineupFetchedAt || "" });
+    }
+  }
+  return { lineups, errors };
+}
+
+// Films already playing in Seoul are mostly talked about for their regular run, so for
+// those only posts that also name the festival count.
+function festivalPickState(lineupFestivals, lineups, candidates, community, existingCache) {
+  const seoulTitles = new Set(candidates.map((candidate) => candidate.normalized));
+  const scannedDates = community.reachedLookbackStart && community.listWindowStart
+    ? dateRange(community.listWindowStart, todayKey)
+    : [...new Set((community.posts || []).map((post) => post.date).filter(Boolean))];
+  const festivals = {};
+  const picks = [];
+  for (const festival of lineupFestivals) {
+    const lineup = lineups.get(festival.id);
+    if (!lineup) continue;
+    const window = festivalPickWindow(festival);
+    const filmCandidates = festivalCandidates(lineup.films).map((film) => ({ ...film, requiresAlias: seoulTitles.has(film.normalized) }));
+    const freshDays = buildFestivalDays(community.posts || [], filmCandidates, festivalAliasesFor(festival), window);
+    const previous = existingCache.festivals?.[festival.id] || {};
+    const days = mergeFestivalDays(previous.days, freshDays, scannedDates, window);
+    const coverage = [...new Set([...(previous.coverage || []), ...scannedDates])].filter((date) => date >= window.start && date <= window.end).sort();
+    festivals[festival.id] = { lineupFetchedAt: lineup.fetchedAt, films: lineup.films, coverage, days };
+    const items = rankFestivalPicks(days, filmCandidates);
+    if (items.length >= 3) {
+      picks.push({
+        festivalId: festival.id,
+        name: festival.name || "",
+        windowStart: window.start,
+        windowEnd: window.end,
+        coverageStart: coverage[0] || "",
+        items
+      });
+    }
+  }
+  return { festivals, picks };
+}
+
 async function main() {
   const schedule = JSON.parse(await readFile(schedulePath, "utf8"));
   const candidates = buildCandidates(schedule);
   const existingCache = await readJsonOrEmpty(cachePath);
-  const scanPlan = communityScanPlan(existingCache);
+  const lineupFestivals = activeLineupFestivals(schedule.majorFestivals, todayKey);
+  const scanPlan = communityScanPlan(existingCache, lineupFestivals);
   const community = await collectCommunityPosts(candidates, scanPlan).catch((error) => ({ ...scanPlan, posts: [], errors: [error.message] }));
   const dailySignals = buildDailySignals(candidates, community.posts);
-  const cache = mergeRollingCache(existingCache, dailySignals, community);
+  const { lineups, errors: lineupErrors } = await loadFestivalLineups(lineupFestivals, existingCache);
+  const festivalState = festivalPickState(lineupFestivals, lineups, candidates, community, existingCache);
+  const cache = { ...mergeRollingCache(existingCache, dailySignals, community), festivals: festivalState.festivals };
   const scored = aggregateSignals(candidates, cache);
   const remoteItems = await outputItems(scored, candidates);
   const items = await Promise.all(remoteItems.map(cacheRecommendationPoster));
@@ -1238,6 +1319,7 @@ async function main() {
       recencyDecay
     },
     items,
+    festivalPicks: festivalState.picks,
     testerOnly,
     promotedToMain: !testerOnly,
     sourceInternal: {
@@ -1275,17 +1357,18 @@ async function main() {
       questionPatterns: questionPatterns.map((pattern) => pattern.source),
       reviewQuestionPatterns: reviewQuestionPatterns.map((pattern) => pattern.source),
       posterProvider: "verified-image-official-source+known-poster-url+wikipedia-pageimage-fallback",
-      errors: (community.errors || []).slice(0, 6)
+      festivalLineups: lineupFestivals.map((festival) => ({ id: festival.id, films: lineups.get(festival.id)?.films.length || 0 })),
+      errors: [...(community.errors || []), ...lineupErrors].slice(0, 8)
     }
   };
 
   await writeFileAtomic(cachePath, `${JSON.stringify(cache, null, 2)}\n`);
   await writeFileAtomic(outputPath, `${JSON.stringify(payload, null, 2)}\n`);
   await removeUnusedCachedPosters(items);
-  console.log(`Wrote ${items.length} weekly positive picks to data/community-trends.json`);
+  console.log(`Wrote ${items.length} weekly positive picks and ${festivalState.picks.length} festival ranking(s) to data/community-trends.json`);
 }
 
-export { countWeightedTerms, reviewSignal, stripFilmTitle };
+export { countWeightedTerms, extractPosts, reviewSignal, stripFilmTitle };
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   main().catch((error) => {

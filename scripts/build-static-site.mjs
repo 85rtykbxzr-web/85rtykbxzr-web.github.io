@@ -86,6 +86,19 @@ function validateTrustedUrls(value, label, path = label) {
   }
 }
 
+function publicFestivalPicks(trends) {
+  return (Array.isArray(trends.festivalPicks) ? trends.festivalPicks : []).slice(0, 4).map((festival) => ({
+    festivalId: String(festival.festivalId || ""),
+    name: String(festival.name || ""),
+    items: (festival.items || []).slice(0, 8).map((item, index) => ({
+      rank: Number(item.rank) || index + 1,
+      title: String(item.title || ""),
+      section: String(item.section || ""),
+      url: String(item.url || "")
+    }))
+  }));
+}
+
 function publicCommunityTrends(trends) {
   return {
     generatedAt: trends.generatedAt || null,
@@ -99,7 +112,8 @@ function publicCommunityTrends(trends) {
       nextDate: String(item.nextDate || ""),
       nextTime: String(item.nextTime || ""),
       scheduleBackfill: item.scheduleBackfill === true
-    }))
+    })),
+    festivalPicks: publicFestivalPicks(trends)
   };
 }
 

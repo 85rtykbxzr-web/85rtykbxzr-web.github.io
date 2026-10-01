@@ -994,21 +994,36 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
     return values.find((value) => isRuntimeMeta(value)) || "";
   }
 
+  // The whole row is the link. Direct booking and the venue's own page look the same;
+  // the latter just says so in the meta line.
   function agendaRow(session, venues) {
     const venue = venues[session.venueId];
     const soldout = isSoldoutSession(session);
     const start = kstSessionStartMs(session);
     const gv = ageLabel(session) === "GV";
     const title = session.title || "제목 확인";
+    const url = actionUrl(session);
+    const linked = !soldout && url !== "#";
+    const viaVenue = linked && session.bookingType !== "booking" ? '<span class="via">극장 사이트</span>' : "";
+    const meta = joinMeta([rowMetaMarkup(session, venue), viaVenue]);
+    const end = soldout
+      ? '<span class="row-state is-soldout">매진</span>'
+      : linked
+        ? '<svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="m9.5 6 6 6-6 6"></path></svg>'
+        : '<span class="row-state" title="링크 확인 중">확인중</span>';
+    const tag = linked ? "a" : "div";
+    const linkAttrs = linked
+      ? ` href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${cleanTime(session)} ${title} ${actionLabel(session)}`)}"`
+      : "";
     return `
-      <div class="row${soldout ? " is-soldout" : ""}"${start ? ` data-start="${start}"` : ""}>
+      <${tag} class="row${linked ? " is-link" : ""}${soldout ? " is-soldout" : ""}"${linkAttrs}${start ? ` data-start="${start}"` : ""}>
         ${thumbMarkup(session)}
         <div class="what">
           <p class="title"><span class="t">${escapeHtml(cleanTime(session))}</span><span class="tt" title="${escapeHtml(title)}">${escapeHtml(title)}</span>${gv ? '<span class="tag-gv">GV</span>' : ""}${start ? '<span class="soon" data-soon hidden></span>' : ""}</p>
-          <p class="meta">${rateBadgeMarkup(session)}${rowMetaMarkup(session, venue)}</p>
+          <p class="meta">${rateBadgeMarkup(session)}${meta}</p>
         </div>
-        ${bookMarkup(session)}
-      </div>`;
+        ${end}
+      </${tag}>`;
   }
 
   function agendaVenueSection(key, sessions, compact = false) {
@@ -1122,28 +1137,11 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
       seat ? `<span class="${seat.low ? "seat-low" : ""}">잔여 ${seat.left}석</span>` : ""
     ];
     if (!runtime && !type && !seat) {
-      const extra = values.find((value) => !formatMeta([value]) && !genericProgramLabel(value) && value !== session.title);
+      // "공식 확인"-style notes repeat what the row's link already says.
+      const extra = values.find((value) => !formatMeta([value]) && !genericProgramLabel(value) && value !== session.title && !/공식/.test(value));
       if (extra) parts.push(`<span class="meta-tail">${escapeHtml(extra)}</span>`);
     }
     return joinMeta(parts);
-  }
-
-  function shortActionLabel(session) {
-    if (session.bookingType === "booking") return "예매";
-    const label = actionLabel(session);
-    if (/공식/.test(label)) return "공식";
-    if (/안내/.test(label)) return "안내";
-    if (/상세/.test(label)) return "상세";
-    return label;
-  }
-
-  function bookMarkup(session) {
-    const url = actionUrl(session);
-    const title = session.title || "상영";
-    if (isSoldoutSession(session)) return `<span class="book is-soldout">매진</span>`;
-    if (url === "#") return `<span class="book is-off" title="링크 확인 중">확인중</span>`;
-    const booking = session.bookingType === "booking";
-    return `<a class="book${booking ? "" : " is-ghost"}" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${title} ${cleanTime(session)} ${actionLabel(session)}`)}">${escapeHtml(shortActionLabel(session))}</a>`;
   }
 
   function timeChipMarkup(session, showDate = !activeDateFilter()) {
@@ -1285,12 +1283,32 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
     });
   }
 
+  // Community interest ranking for a festival's lineup, published from two weeks before it opens.
+  function festivalPicksMarkup(festivalId) {
+    const entry = (Array.isArray(state.communityTrends?.festivalPicks) ? state.communityTrends.festivalPicks : []).find((item) => item?.festivalId === festivalId);
+    const items = (entry?.items || []).filter((item) => item?.title).slice(0, 8);
+    if (items.length < 3) return "";
+    return `
+      <div class="fest-picks">
+        <p class="fest-picks-h"><strong>관심작 순위</strong></p>
+        <ol>
+          ${items
+            .map((item, index) => {
+              const url = safeExternalUrl(item.url, "");
+              const body = `<span class="fp-rank">${index + 1}</span><span class="fp-title">${escapeHtml(item.title)}</span>${item.section ? `<span class="fp-sec">${escapeHtml(item.section)}</span>` : ""}`;
+              return `<li>${url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${body}</a>` : `<span class="fp-row">${body}</span>`}</li>`;
+            })
+            .join("")}
+        </ol>
+      </div>`;
+  }
+
   function festivalItemMarkup(group, venues) {
     const lifecycle = festivalGroupLifecycle(group);
     const summary = festivalGroupSummary(group, venues);
     const major = majorFestivalRow(group);
     const logo = major ? majorFestivalLogoMarkup(major) : "";
-    const extra = major ? majorFestivalHighlightsMarkup(major) : festivalScheduleSectionsMarkup(group, venues);
+    const extra = major ? `${majorFestivalHighlightsMarkup(major)}${festivalPicksMarkup(major.festivalId)}` : festivalScheduleSectionsMarkup(group, venues);
     return `
       <div class="fest${logo ? "" : " no-logo"}">
         ${logo}
@@ -1306,11 +1324,6 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
   function shortVenueName(venue) {
     const names = { cinecube: "씨네큐브", sangsangmadang: "상상마당", momo: "아트하우스 모모", kucine: "KU시네마테크", kofa: "KOFA" };
     return names[venue?.id] || venue?.name || "상영관";
-  }
-
-  // Picks are ranked from reactions in the DC Inside nouvellevague gallery (scripts/update-community-trends.mjs).
-  function trendSourceLabel() {
-    return "누벨바그 갤러리 반응";
   }
 
   function trendFactsText(item) {
@@ -1348,7 +1361,6 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
 
   function trendHeroMarkup(item, index) {
     const posterItem = { posterUrl: item.posterUrl, posterSourceUrl: item.posterSourceUrl };
-    const source = trendSourceLabel();
     const choices = trendTimeChoices(item, 3);
     const times = choices.length
       ? `<div class="hero-times">${choices
@@ -1366,7 +1378,7 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
             ${posterMarkup(posterItem, item.title, "", "", { priority: index === 0 })}
           </a>
           <div class="hero-text">
-            <p class="hero-label">이번 주 추천 ${escapeHtml(String(item.rank || index + 1))}위${source ? `<span class="hero-src">${escapeHtml(source)}</span>` : ""}</p>
+            <p class="hero-label">이번 주 추천 ${escapeHtml(String(item.rank || index + 1))}위</p>
             <h3 class="hero-title">${escapeHtml(item.title)}</h3>
             <p class="hero-facts">${escapeHtml(trendFactsText(item))}</p>
             ${times}
@@ -1881,6 +1893,7 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
         const periodLabel = festival.periodLabel || formatPeriodLabel(startDate, endDate);
         return {
           id: `major-festival-${festival.id || festival.name}`,
+          festivalId: festival.id || "",
           kind: "major-festival",
           date: startDate,
           time: festival.time || "기간",
