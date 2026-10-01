@@ -6,39 +6,20 @@ import { readFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { writeFileAtomic } from "./write-file-atomic.mjs";
+import { browserLiveConfigs, fetchBrowserVenue } from "../src/browser-live-schedule.mjs";
+import { filmSearchTitle, filmTitleKey } from "../src/film-title.mjs";
 
 const API = "https://api.themoviedb.org/3";
 export const tmdbImageBase = "https://image.tmdb.org/t/p/";
-
-// Drops screening tags such as "(기획전)", "(2D)", "[GV]" and add-ons like "+ 시네토크 …",
-// and keeps only the main title before a long " : " subtitle.
-export function cleanFilmTitle(title) {
-  let value = String(title || "")
-    .replace(/\([^)]*\)|\[[^\]]*\]/g, " ")
-    .replace(/\s\+\s.*$/, "")
-    .replace(/\s+/g, " ")
-    .trim();
-  const [head, ...rest] = value.split(/\s:\s/);
-  if (rest.length && head.length >= 2) value = head.trim();
-  return value;
-}
 
 function normalize(value) {
   return String(value || "").replace(/[^\p{Letter}\p{Number}]+/gu, "").toLowerCase();
 }
 
-// Same key as normalizeTrendTitle in app.js, so the page can look a session up by its title.
-export function ticketPosterKey(title) {
-  return String(title || "")
-    .replace(/\([^)]*\)/g, "")
-    .replace(/[^\p{Letter}\p{Number}]+/gu, "")
-    .toLowerCase();
-}
-
 // Prefer an exact Korean title match, then the most popular result that has a poster.
 // Exact Korean or original title matches first, most popular first.
 export function rankTmdbResults(results, title) {
-  const wanted = normalize(cleanFilmTitle(title));
+  const wanted = normalize(filmSearchTitle(title));
   const withPoster = (results || []).filter((item) => item.poster_path);
   const exact = withPoster.filter((item) => normalize(item.title) === wanted || normalize(item.original_title) === wanted);
   return (exact.length ? exact : withPoster).sort((a, b) => (b.popularity || 0) - (a.popularity || 0));
@@ -70,7 +51,7 @@ async function tmdbJson(path, params, { apiKey, fetchImpl }) {
 
 // runtime (minutes, from the cinema listing) breaks ties between films sharing a title.
 export async function searchTmdbPoster(title, { apiKey, runtime = 0, fetchImpl = fetch } = {}) {
-  const query = cleanFilmTitle(title);
+  const query = filmSearchTitle(title);
   if (!apiKey || !query) return null;
   const options = { apiKey, fetchImpl };
   const data = await tmdbJson("/search/movie", { query, language: "ko-KR", include_adult: "false" }, options);
@@ -107,15 +88,26 @@ async function readJson(path, fallback) {
   }
 }
 
+// Venues collected in the visitor's browser never reach schedule.json, so their titles are
+// fetched here the same way; a venue that cannot be reached is simply skipped.
+async function browserLiveSessions(fetchImpl) {
+  const results = await Promise.allSettled(browserLiveConfigs.map((config) => fetchBrowserVenue(config, { fetchImpl })));
+  results.forEach((result, index) => {
+    if (result.status === "rejected") console.warn(`Ticket posters: skipped ${browserLiveConfigs[index].name} (${result.reason?.message || result.reason})`);
+  });
+  return results.flatMap((result) => (result.status === "fulfilled" ? result.value.sessions : []));
+}
+
 // Looks up titles that are new or stale, keeps the rest, and drops films no longer scheduled.
 export async function fillTicketPosters({ apiKey, now = Date.now(), fetchImpl = fetch } = {}) {
   const schedule = await readJson(join(root, "data/schedule.json"), { sessions: [] });
   const existing = await readJson(postersPath, { films: {} });
   const titles = new Map();
-  for (const session of schedule.sessions || []) {
-    const key = ticketPosterKey(session.title);
+  const liveSessions = await browserLiveSessions(fetchImpl);
+  for (const session of [...(schedule.sessions || []), ...liveSessions]) {
+    const key = filmTitleKey(session.title);
     const runtime = Number(String(session.tags || "").match(/(\d{2,3})분/)?.[1] || 0);
-    if (key && !titles.has(key)) titles.set(key, { title: cleanFilmTitle(session.title), runtime });
+    if (key && !titles.has(key)) titles.set(key, { title: filmSearchTitle(session.title), runtime });
   }
   const films = {};
   let lookups = 0;
