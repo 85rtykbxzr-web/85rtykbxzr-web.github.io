@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-01",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-01T06:38:50.748Z",
+  "updatedAt": "2026-10-01T09:14:07.034Z",
   "days": {
     "2026-09-29": {
       "오디세이": {
@@ -347,6 +347,50 @@
       }
     },
     "2026-10-01": {
+      "토리노의말": {
+        "title": "토리노의 말",
+        "positiveSignal": 12,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "와 토리노의 말 이거 여운 좆되네 와",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866967&page=2",
+            "date": "2026-10-01",
+            "positive": 12,
+            "rawPositive": 12,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "여운",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "여운",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 6,
+            "commentPositive": 8,
+            "commentNegative": 0
+          }
+        ]
+      },
       "가능한사랑": {
         "title": "가능한 사랑",
         "positiveSignal": 16,
@@ -354,7 +398,7 @@
         "evidence": [
           {
             "title": "스포) 가능한 사랑 찰나였지만 좋았던 장면",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866912&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866912&page=3",
             "date": "2026-10-01",
             "positive": 2,
             "rawPositive": 2,
@@ -377,7 +421,7 @@
           },
           {
             "title": "가능한 사랑이 버닝 밀양보다 더 재밌었음??",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866853&page=3",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866853&page=4",
             "date": "2026-10-01",
             "positive": 14,
             "rawPositive": 14,
@@ -416,12 +460,12 @@
       },
       "사탄탱고": {
         "title": "사탄탱고(기획전)",
-        "positiveSignal": 6,
-        "mentionCount": 2,
+        "positiveSignal": 4,
+        "mentionCount": 1,
         "evidence": [
           {
             "title": "사탄탱고 예매했다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866744&page=4",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866744&page=6",
             "date": "2026-10-01",
             "positive": 4,
             "rawPositive": 4,
@@ -441,119 +485,6 @@
             "commentCount": 9,
             "commentPositive": 4,
             "commentNegative": 0
-          },
-          {
-            "title": "토리노의말은 드르렁이 아니던데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866484&page=8",
-            "date": "2026-10-01",
-            "positive": 2,
-            "rawPositive": 2,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "볼만",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "베크마이스터하모니즈": {
-        "title": "베크마이스터 하모니즈",
-        "positiveSignal": 4,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "토리노의 말 vs 베크마이스터 하모니즈 둘 중 뭘 볼까요?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866576&page=7",
-            "date": "2026-10-01",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "재밌",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 1,
-            "commentPositive": 4,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "토리노의말": {
-        "title": "토리노의 말",
-        "positiveSignal": 12,
-        "mentionCount": 2,
-        "evidence": [
-          {
-            "title": "토리노의말은 드르렁이 아니던데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866484&page=8",
-            "date": "2026-10-01",
-            "positive": 2,
-            "rawPositive": 2,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "볼만",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "토리노의 말 보다 결국 1시간은 잔듯 ㅋㅋ",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866476&page=8",
-            "date": "2026-10-01",
-            "positive": 10,
-            "rawPositive": 10,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "강추",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              },
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 7,
-            "commentPositive": 10,
-            "commentNegative": 0
           }
         ]
       }
@@ -561,7 +492,7 @@
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-01T06:38:50.740Z",
+      "lineupFetchedAt": "2026-10-01T09:14:07.029Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -2597,6 +2528,26 @@
           }
         },
         "2026-10-01": {
+          "에브리타임": {
+            "title": "에브리타임",
+            "mentionCount": 4,
+            "commentCount": 0
+          },
+          "클럽키드": {
+            "title": "클럽 키드",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "멜랑콜리아": {
+            "title": "멜랑콜리아",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "피오르": {
+            "title": "피오르",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
           "바람불어좋은날": {
             "title": "바람불어 좋은날",
             "mentionCount": 1,
@@ -2630,11 +2581,6 @@
           "나기노트": {
             "title": "나기 노트",
             "mentionCount": 1,
-            "commentCount": 0
-          },
-          "에브리타임": {
-            "title": "에브리타임",
-            "mentionCount": 3,
             "commentCount": 0
           },
           "실버익스프레스": {
@@ -2674,36 +2620,6 @@
           },
           "젠틀몬스터": {
             "title": "젠틀 몬스터",
-            "mentionCount": 1,
-            "commentCount": 0
-          },
-          "마리가뭐어때서": {
-            "title": "마리가 뭐 어때서",
-            "mentionCount": 1,
-            "commentCount": 9
-          },
-          "오아시스": {
-            "title": "오아시스",
-            "mentionCount": 1,
-            "commentCount": 0
-          },
-          "페이퍼타이거": {
-            "title": "페이퍼 타이거",
-            "mentionCount": 1,
-            "commentCount": 0
-          },
-          "장물랭": {
-            "title": "장 물랭",
-            "mentionCount": 1,
-            "commentCount": 0
-          },
-          "베드포드파크": {
-            "title": "베드포드 파크",
-            "mentionCount": 1,
-            "commentCount": 0
-          },
-          "붉은실": {
-            "title": "붉은 실",
             "mentionCount": 1,
             "commentCount": 0
           }
