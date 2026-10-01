@@ -184,12 +184,97 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
       </div>`;
   }
 
-  function renderMine(picks) {
-    const plan = planDay(pickedOn(state.day, picks), films());
-    if (!plan.length) {
-      const anyPick = (state.data?.sessions || []).some((session) => picks.has(session.id));
-      return `<div class="fp-empty is-big"><p>${anyPick ? "이 날은 아직 담은 영화가 없어요" : "보고 싶은 상영에 ♡를 눌러 담아 보세요"}</p><p class="sub">담은 영화 사이 이동 시간과 빈 시간을 여기서 한눈에 볼 수 있어요</p><button type="button" class="fp-fill" data-fp-mode="all">상영 둘러보기</button></div>`;
+  // Lanes for screenings that overlap on one day, so they sit side by side like a class
+  // timetable instead of on top of each other.
+  function layoutLanes(items) {
+    const sorted = [...items].sort((a, b) => a.span.start - b.span.start);
+    const groups = [];
+    for (const item of sorted) {
+      const group = groups.at(-1);
+      if (group && item.span.start < group.end) {
+        group.items.push(item);
+        group.end = Math.max(group.end, item.span.end);
+      } else groups.push({ items: [item], end: item.span.end });
     }
+    for (const group of groups) {
+      const laneEnds = [];
+      for (const item of group.items) {
+        let lane = laneEnds.findIndex((end) => end <= item.span.start);
+        if (lane < 0) lane = laneEnds.length;
+        laneEnds[lane] = item.span.end;
+        item.lane = lane;
+      }
+      for (const item of group.items) item.lanes = laneEnds.length;
+    }
+    return sorted;
+  }
+
+  function gridMarkup(picks) {
+    const picked = (state.data?.sessions || []).filter((session) => picks.has(session.id));
+    // Every day from the first pick to the last, at least four columns, so the grid reads as
+    // a week rather than a lone column.
+    const allDays = festivalDays().filter((date) => sessionsOn(date).length > 5);
+    const pickedDays = [...new Set(picked.map((session) => session.date))].sort();
+    let from = Math.max(0, allDays.indexOf(pickedDays[0]));
+    let to = Math.max(from, allDays.indexOf(pickedDays.at(-1)));
+    while (to - from < 3 && (to < allDays.length - 1 || from > 0)) {
+      if (to < allDays.length - 1) to += 1;
+      else from -= 1;
+    }
+    const days = allDays.slice(from, to + 1);
+    const order = new Map(picked.map((session, index) => [session.id, index]));
+    const byDay = days.map((date) => {
+      const plan = planDay(picked.filter((session) => session.date === date), films());
+      const flags = new Map();
+      plan.forEach((item, index) => {
+        if (!item.gap) return;
+        const level = item.gap.status === "overlap" ? "bad" : item.gap.status === "tight" ? "warn" : "";
+        if (level) {
+          flags.set(item.session.id, level);
+          if (!flags.has(plan[index - 1].session.id) || level === "bad") flags.set(plan[index - 1].session.id, level);
+        }
+      });
+      return { date, items: layoutLanes(plan), flags };
+    });
+    const spans = byDay.flatMap((day) => day.items.map((item) => item.span));
+    const startHour = Math.floor(Math.min(...spans.map((span) => span.start)) / 60);
+    const endHour = Math.min(26, Math.ceil(Math.max(...spans.map((span) => span.end)) / 60));
+    const hours = Array.from({ length: endHour - startHour }, (_, index) => startHour + index);
+    const head = byDay
+      .map(({ date }) => {
+        const label = dayLabel(date);
+        return `<button type="button" class="tt-day${date === state.day ? " is-on" : ""}${label.sun ? " is-sun" : ""}" data-fp-day="${date}" aria-pressed="${date === state.day}"><span>${label.w}</span><b>${label.d}</b></button>`;
+      })
+      .join("");
+    const cols = byDay
+      .map(({ date, items, flags }) => {
+        const blocks = items
+          .map((item) => {
+            const session = item.session;
+            const place = placeOf(session.venue);
+            const hall = hallOf(session.venue, place);
+            const flag = flags.get(session.id);
+            return `<button type="button" class="tt-block tt-c${order.get(session.id) % 8}${flag ? ` is-${flag}` : ""}" data-fp-focus="${escapeHtml(session.id)}" data-tt-top="${item.span.start - startHour * 60}" data-tt-height="${item.span.end - item.span.start}" data-tt-lane="${item.lane}" data-tt-lanes="${item.lanes}" aria-label="${escapeHtml(`${session.time} ${session.title} ${place.short}`)}"><b>${escapeHtml(session.title)}</b><span>${escapeHtml(place.id === "bcc" && hall ? hall : `${place.short}${hall ? ` ${hall}` : ""}`)}</span></button>`;
+          })
+          .join("");
+        return `<div class="tt-col${date === state.day ? " is-on" : ""}">${blocks}</div>`;
+      })
+      .join("");
+    const lines = hours.map((hour) => `<span class="tt-hour"><i>${hour > 23 ? hour - 24 : hour}</i></span>`).join("");
+    return `
+      <div class="tt-wrap">
+        <div class="tt" data-tt-hours="${hours.length}" data-tt-days="${days.length}">
+          <div class="tt-head"><span class="tt-corner"></span>${head}</div>
+          <div class="tt-body"><div class="tt-grid">${lines}</div><div class="tt-cols">${cols}</div></div>
+        </div>
+      </div>`;
+  }
+
+  function dayDetailMarkup(picks) {
+    const plan = planDay(pickedOn(state.day, picks), films());
+    const label = dayLabel(state.day);
+    const title = `<h3 class="fp-detail-h">${Number(state.day.slice(5, 7))}월 ${label.d}일 ${label.w}요일 동선</h3>`;
+    if (!plan.length) return `${title}<p class="fp-empty">이 날은 담은 영화가 없어요. 위 표에서 날짜를 눌러 보세요</p>`;
     const first = plan[0].span.start;
     const last = plan.at(-1).span.end;
     const summary = `<p class="fp-day-summary">${plan.length}편 · ${formatMinutes(first)}~${formatMinutes(last)}${plan.some((item) => item.gap?.status === "overlap") ? ' · <em>겹치는 시간 있음</em>' : ""}</p>`;
@@ -199,7 +284,7 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
         const place = placeOf(session.venue);
         const hall = hallOf(session.venue, place);
         const card = `
-          <article class="fp-card">
+          <article class="fp-card" id="fp-card-${escapeHtml(session.id)}">
             <div class="fp-card-time"><strong>${session.time}</strong><span>${formatMinutes(item.span.end)}${item.span.runtimeKnown ? "" : "?"}</span></div>
             <div class="fp-card-main">
               <p class="fp-card-title">${escapeHtml(session.title)}${badges(session)}</p>
@@ -213,8 +298,35 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
         return (item.gap ? gapMarkup(item.gap, plan[index - 1].session, session) : "") + card;
       })
       .join("");
+    return title + summary + `<div class="fp-timeline">${body}</div>`;
+  }
+
+  function renderMine(picks) {
+    const anyPick = (state.data?.sessions || []).some((session) => picks.has(session.id));
+    if (!anyPick) {
+      return `<div class="fp-empty is-big"><p>보고 싶은 상영에 ♡를 눌러 담아 보세요</p><p class="sub">담은 영화가 시간표로 모이고, 사이사이 이동 시간과 빈 시간을 알려 드려요</p><button type="button" class="fp-fill" data-fp-mode="all">상영 둘러보기</button></div>`;
+    }
     const ticket = state.data.ticketUrl ? `<a class="fp-ticket" href="${escapeHtml(safeExternalUrl(state.data.ticketUrl, "#"))}" target="_blank" rel="noopener noreferrer">공식 예매하러 가기</a>` : "";
-    return summary + `<div class="fp-timeline">${body}</div>` + `<p class="fp-note">도보 시간은 지도 기준 추정이에요. 입장 여유 5분을 더해 계산해요.</p>` + ticket;
+    return gridMarkup(picks) + dayDetailMarkup(picks) + `<p class="fp-note">도보 시간은 지도 기준 추정이에요. 입장 여유 5분을 더해 계산해요.</p>` + ticket;
+  }
+
+  // Block positions come from data attributes: the page's CSP forbids inline style attributes,
+  // but setting styles from script is fine.
+  function placeBlocks() {
+    const grid = $("#fpBody .tt");
+    if (!grid) return;
+    const hourHeight = 52;
+    grid.querySelector(".tt-body").style.height = `${Number(grid.dataset.ttHours) * hourHeight}px`;
+    grid.querySelectorAll(".tt-block").forEach((block) => {
+      const lanes = Number(block.dataset.ttLanes) || 1;
+      const lane = Number(block.dataset.ttLane) || 0;
+      block.style.top = `${(Number(block.dataset.ttTop) / 60) * hourHeight}px`;
+      block.style.height = `${Math.max(22, (Number(block.dataset.ttHeight) / 60) * hourHeight - 2)}px`;
+      block.style.left = `${(lane / lanes) * 100}%`;
+      block.style.width = `calc(${100 / lanes}% - 3px)`;
+    });
+    const days = Number(grid.dataset.ttDays) || 1;
+    grid.style.setProperty("--tt-days", String(days));
   }
 
   function render() {
@@ -224,6 +336,8 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
     const body = $("#fpBody");
     const scroll = body.scrollTop;
     body.innerHTML = state.mode === "mine" ? renderMine(picks) : renderAll(picks);
+    $("#fpDays").hidden = state.mode === "mine";
+    placeBlocks();
     body.scrollTop = scroll;
   }
 
@@ -283,7 +397,7 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
     if (day) {
       state.day = day.dataset.fpDay;
       state.window = null;
-      $("#fpBody").scrollTop = 0;
+      if (state.mode !== "mine") $("#fpBody").scrollTop = 0;
       render();
       return true;
     }
@@ -293,6 +407,16 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
       state.window = null;
       $("#fpBody").scrollTop = 0;
       render();
+      return true;
+    }
+    const focus = target.closest("[data-fp-focus]");
+    if (focus) {
+      const session = byId(focus.dataset.fpFocus);
+      if (session) {
+        state.day = session.date;
+        render();
+        $(`#fp-card-${CSS.escape(session.id)}`)?.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
       return true;
     }
     const pick = target.closest("[data-fp-pick]");
