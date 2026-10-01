@@ -38,8 +38,8 @@
         "description": "서울 독립영화관의 오늘 상영시간표, 기획전, 영화제 일정을 날짜별, 영화별, 상영관별로 확인하세요."
       }
     </script>
-    <link href="/assets/app.css?v=a560a26b6b9f" rel="stylesheet" />
-    <script defer src="/assets/app.js?v=a560a26b6b9f"></script>
+    <link href="/assets/app.css?v=ca0a7055de7e" rel="stylesheet" />
+    <script defer src="/assets/app.js?v=ca0a7055de7e"></script>
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=6" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=6" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=6" />
@@ -305,6 +305,23 @@
           <button id="ticketShare" class="ticket-btn is-primary" type="button">인스타 스토리에 올리기</button>
           <button id="ticketSave" class="ticket-btn" type="button">이미지 저장</button>
         </div>
+      </div>
+    </dialog>
+
+    <dialog id="festPlanner" class="fp-sheet" aria-labelledby="fpTitle" tabindex="-1">
+      <div class="fp-in">
+        <header class="fp-head">
+          <div>
+            <h2 id="fpTitle">영화제</h2>
+            <p id="fpSub"></p>
+          </div>
+          <button class="icon-btn" type="button" data-fp-close aria-label="닫기">
+            <svg class="ui-icon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#x"></use></svg>
+          </button>
+        </header>
+        <div class="fp-modes" id="fpModes" role="group" aria-label="보기"></div>
+        <div class="fp-days dates" id="fpDays" role="group" aria-label="날짜"></div>
+        <div class="fp-body" id="fpBody"></div>
       </div>
     </dialog>
 

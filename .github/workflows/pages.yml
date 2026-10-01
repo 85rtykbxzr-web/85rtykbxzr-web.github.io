@@ -164,6 +164,12 @@ jobs:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
         run: npm run update:ticket-posters
 
+      # Festival timetables come from the festivals' own sites; a failure keeps the last copy.
+      - name: Refresh festival timetables
+        if: steps.mode.outputs.mode == 'full'
+        continue-on-error: true
+        run: npm run update:festival-biff
+
       - name: Check the refreshed data
         if: steps.mode.outputs.mode == 'full'
         run: npm run check
@@ -185,6 +191,7 @@ jobs:
             data/community-trends.json
             data/community-trends-cache.json
             data/ticket-posters.json
+            data/festival-biff.json
             assets/recommendation-posters
           )
           base_commit="$(git rev-parse HEAD)"
