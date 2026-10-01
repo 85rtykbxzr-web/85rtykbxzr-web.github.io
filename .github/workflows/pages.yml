@@ -216,6 +216,8 @@ jobs:
         env:
           STATIC_SITE_INDEXABLE: ${{ vars.PRODUCTION_READY == 'true' }}
           STATIC_DEPLOYMENT_ID: ${{ github.run_id }}
+          # published in the page for its own TMDB poster search
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
         run: |
           set -euo pipefail
           export STATIC_DEPLOYMENT_COMMIT="$(git rev-parse HEAD)"
@@ -233,6 +235,8 @@ jobs:
         env:
           STATIC_SITE_INDEXABLE: ${{ vars.PRODUCTION_READY == 'true' }}
           STATIC_DEPLOYMENT_ID: ${{ github.run_id }}
+          # published in the page for its own TMDB poster search
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
         run: |
           set -euo pipefail
           npm run audit
@@ -245,6 +249,8 @@ jobs:
         env:
           STATIC_SITE_INDEXABLE: ${{ vars.PRODUCTION_READY == 'true' }}
           STATIC_DEPLOYMENT_ID: ${{ github.run_id }}
+          # published in the page for its own TMDB poster search
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
         run: |
           set -euo pipefail
           export STATIC_DEPLOYMENT_COMMIT="$(git rev-parse HEAD)"

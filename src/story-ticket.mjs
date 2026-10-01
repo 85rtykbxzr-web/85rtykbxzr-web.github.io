@@ -343,5 +343,7 @@ export async function drawStoryTicket(ticket, options = {}) {
   const ctx = canvas.getContext("2d");
   ctx.textBaseline = "alphabetic";
   drawPosterStyle(ctx, ticket, poster, options);
+  // lets the caller try another poster when this one could not be drawn
+  canvas.posterDrawn = Boolean(poster);
   return canvas;
 }
