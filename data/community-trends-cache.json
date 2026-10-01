@@ -14,14 +14,74 @@
       "2026-09-30",
       "2026-10-01"
     ],
-    "lastMode": "daily",
-    "lastWindowStart": "2026-10-01",
+    "lastMode": "backfill",
+    "lastWindowStart": "2026-09-22",
     "lastWindowEnd": "2026-10-01",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-01T00:11:45.509Z",
+  "updatedAt": "2026-10-01T03:50:40.070Z",
   "days": {
     "2026-09-29": {
+      "오디세이": {
+        "title": "오디세이(2D)",
+        "positiveSignal": 4,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "오디세이는 각본이 존나 아쉽더라..",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865798&page=16",
+            "date": "2026-09-29",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "재밌",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 4,
+            "commentPositive": 4,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "포르테": {
+        "title": "포르테",
+        "positiveSignal": 2,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "포르테 <~ 이건 뭐냐",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865782&page=16",
+            "date": "2026-09-29",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "봐라",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 2,
+            "commentNegative": 0
+          }
+        ]
+      },
       "25시": {
         "title": "25시",
         "positiveSignal": 8,
@@ -29,7 +89,7 @@
         "evidence": [
           {
             "title": "스파이크리 25시 무리해서 보러갈만큼 괜찮음?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865695&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865695&page=17",
             "date": "2026-09-29",
             "positive": 8,
             "rawPositive": 8,
@@ -66,7 +126,7 @@
         "evidence": [
           {
             "title": "스포) 가능한 사랑이 탐하는 '남'의 것",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865675&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865675&page=18",
             "date": "2026-09-29",
             "positive": 8,
             "rawPositive": 8,
@@ -89,7 +149,7 @@
           },
           {
             "title": "스포) 꿈꾸던 모험은 가능한 사랑이 상영되는 지금 더 추천할만한 영화였음",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865562&page=3",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865562&page=19",
             "date": "2026-09-29",
             "positive": 4,
             "rawPositive": 4,
@@ -113,13 +173,13 @@
         ]
       },
       "꿈꾸던모험": {
-        "title": "꿈꾸던 모험",
+        "title": "꿈꾸던 모험(2D)",
         "positiveSignal": 20,
         "mentionCount": 2,
         "evidence": [
           {
             "title": "꿈꾸던 모험 2회차 하러 갔다가 누갤서 알게된 걸작 예고편보고왔다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865608&page=3",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865608&page=18",
             "date": "2026-09-29",
             "positive": 16,
             "rawPositive": 16,
@@ -143,13 +203,13 @@
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 4,
+            "commentCount": 3,
             "commentPositive": 4,
             "commentNegative": 0
           },
           {
             "title": "스포) 꿈꾸던 모험은 가능한 사랑이 상영되는 지금 더 추천할만한 영화였음",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865562&page=3",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865562&page=19",
             "date": "2026-09-29",
             "positive": 4,
             "rawPositive": 4,
@@ -171,53 +231,46 @@
             "commentNegative": 0
           }
         ]
-      },
-      "셀린느와줄리배타러가다": {
-        "title": "셀린느와 줄리 배 타러 가다(2D)",
-        "positiveSignal": 12,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "셀린느와 줄리 배타러가다 재밌음??",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1865297&page=8",
-            "date": "2026-09-29",
-            "positive": 12,
-            "rawPositive": 12,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              },
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              },
-              {
-                "term": "재미있",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 7,
-            "commentPositive": 12,
-            "commentNegative": 0
-          }
-        ]
       }
     },
     "2026-09-30": {
+      "꿈꾸던모험": {
+        "title": "꿈꾸던 모험(2D)",
+        "positiveSignal": 4,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "꿈꾸던 모험 엔딩곡 듣고 별 반개 올림",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866276&page=8",
+            "date": "2026-09-30",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "좋네",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              },
+              {
+                "term": "좋더라",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 4,
+            "commentPositive": 2,
+            "commentNegative": 0
+          }
+        ]
+      },
       "옵세션": {
         "title": "옵세션(2D)",
         "positiveSignal": 8,
@@ -225,7 +278,7 @@
         "evidence": [
           {
             "title": "혹시 옵세션에 이상한 장면 나옴?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866125&page=3",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866125&page=11",
             "date": "2026-09-30",
             "positive": 8,
             "rawPositive": 8,
@@ -262,7 +315,7 @@
         "evidence": [
           {
             "title": "사탄탱고 예매해서 볼까하다 안봤는데 따로 볼만함?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866043&page=4",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866043&page=12",
             "date": "2026-09-30",
             "positive": 6,
             "rawPositive": 6,
@@ -286,7 +339,7 @@
             "negativeHits": [],
             "questionLike": true,
             "reviewQuestion": true,
-            "commentCount": 9,
+            "commentCount": 10,
             "commentPositive": 6,
             "commentNegative": 0
           }
@@ -294,21 +347,21 @@
       }
     },
     "2026-10-01": {
-      "베크마이스터하모니즈": {
-        "title": "베크마이스터 하모니즈",
-        "positiveSignal": 4,
-        "mentionCount": 1,
+      "사탄탱고": {
+        "title": "사탄탱고(기획전)",
+        "positiveSignal": 6,
+        "mentionCount": 2,
         "evidence": [
           {
-            "title": "토리노의 말 vs 베크마이스터 하모니즈 둘 중 뭘 볼까요?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866576&page=2",
+            "title": "사탄탱고 예매했다",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866744&page=2",
             "date": "2026-10-01",
             "positive": 4,
             "rawPositive": 4,
             "negative": 0,
             "positiveHits": [
               {
-                "term": "재밌",
+                "term": "꿀잼",
                 "count": 1,
                 "weight": 4,
                 "score": 4,
@@ -316,22 +369,15 @@
               }
             ],
             "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 1,
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 9,
             "commentPositive": 4,
             "commentNegative": 0
-          }
-        ]
-      },
-      "사탄탱고": {
-        "title": "사탄탱고(기획전)",
-        "positiveSignal": 2,
-        "mentionCount": 1,
-        "evidence": [
+          },
           {
             "title": "토리노의말은 드르렁이 아니던데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866484&page=3",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866484&page=5",
             "date": "2026-10-01",
             "positive": 2,
             "rawPositive": 2,
@@ -354,6 +400,36 @@
           }
         ]
       },
+      "베크마이스터하모니즈": {
+        "title": "베크마이스터 하모니즈",
+        "positiveSignal": 4,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "토리노의 말 vs 베크마이스터 하모니즈 둘 중 뭘 볼까요?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866576&page=4",
+            "date": "2026-10-01",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "재밌",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 1,
+            "commentPositive": 4,
+            "commentNegative": 0
+          }
+        ]
+      },
       "토리노의말": {
         "title": "토리노의 말",
         "positiveSignal": 12,
@@ -361,7 +437,7 @@
         "evidence": [
           {
             "title": "토리노의말은 드르렁이 아니던데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866484&page=3",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866484&page=5",
             "date": "2026-10-01",
             "positive": 2,
             "rawPositive": 2,
@@ -384,7 +460,7 @@
           },
           {
             "title": "토리노의 말 보다 결국 1시간은 잔듯 ㅋㅋ",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866476&page=4",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866476&page=5",
             "date": "2026-10-01",
             "positive": 10,
             "rawPositive": 10,
@@ -413,6 +489,2118 @@
             "commentNegative": 0
           }
         ]
+      }
+    }
+  },
+  "festivals": {
+    "biff-2026": {
+      "lineupFetchedAt": "2026-10-01T03:50:40.009Z",
+      "films": [
+        {
+          "title": "낮과 밤은 서로에게",
+          "englishTitle": "The Table: Day and Night",
+          "section": "개막작",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91137&c_idx=428&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "그날의 태주",
+          "englishTitle": "Beach Fictions",
+          "section": "경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91170&c_idx=442&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "긴긴밤",
+          "englishTitle": "Long Long Night",
+          "section": "경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91045&c_idx=442&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "마이 마더",
+          "englishTitle": "IBUKU",
+          "section": "경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90984&c_idx=442&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "면도",
+          "englishTitle": "Shaving",
+          "section": "경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91136&c_idx=442&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "바다에 새겨진 이름",
+          "englishTitle": "The Sea Speaks His Name",
+          "section": "경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91155&c_idx=442&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "비트윈 투 러버스",
+          "englishTitle": "Between Two Lovers",
+          "section": "경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=84521&c_idx=442&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "빵과 책",
+          "englishTitle": "Midday Meal",
+          "section": "경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89787&c_idx=442&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "사토코는 언제나",
+          "englishTitle": "Satoko Always",
+          "section": "경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89725&c_idx=442&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "실버 익스프레스",
+          "englishTitle": "silver express",
+          "section": "경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89875&c_idx=442&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "일요일 다음날",
+          "englishTitle": "The Day After Sunday",
+          "section": "경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90841&c_idx=442&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "처음 만난 외로움",
+          "englishTitle": "The First Taste of Loneliness",
+          "section": "경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91147&c_idx=442&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "평범하기 위하여",
+          "englishTitle": "To Be Ordinary",
+          "section": "경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89795&c_idx=442&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "힐롤",
+          "englishTitle": "Hilol",
+          "section": "경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90003&c_idx=442&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "그 소녀의 기억",
+          "englishTitle": "A Girl′s Story",
+          "section": "갈라 프레젠테이션",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91245&c_idx=429&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "내일은 이름이 있다",
+          "englishTitle": "All About Corinne",
+          "section": "갈라 프레젠테이션",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91182&c_idx=429&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "도라",
+          "englishTitle": "Dora",
+          "section": "갈라 프레젠테이션",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91134&c_idx=429&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "룩백",
+          "englishTitle": "Look Back",
+          "section": "갈라 프레젠테이션",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91123&c_idx=429&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "실낙원",
+          "englishTitle": "PARADISE LOST",
+          "section": "갈라 프레젠테이션",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91279&c_idx=429&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "우리 할머니는 큐브왕",
+          "englishTitle": "It′s My Time",
+          "section": "갈라 프레젠테이션",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91125&c_idx=429&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "가능한 사랑",
+          "englishTitle": "Possible Love",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91115&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "갑자기 병세가 악화되다",
+          "englishTitle": "All of a Sudden",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91097&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "겁쟁이",
+          "englishTitle": "Coward",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90305&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "긴 겨울",
+          "englishTitle": "A Long Winter",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91192&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "나기 노트",
+          "englishTitle": "Nagi Notes",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90715&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "내가 사랑하는 남자",
+          "englishTitle": "The Man I Love",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91139&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "눈 둘 데가 없네",
+          "englishTitle": "Nowhere to Lay My Eyes",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91135&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "더스트",
+          "englishTitle": "Dust",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91206&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "라두 주데의 어느 하녀의 일기",
+          "englishTitle": "The Diary of a Chambermaid",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91119&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "레이 건",
+          "englishTitle": "Ray Gunn",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91167&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "로마 엘라스티카",
+          "englishTitle": "Roma Elastica",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91150&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "마더 메리",
+          "englishTitle": "Mother Mary",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91159&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "마키키란 포",
+          "englishTitle": "Let Us Through, Dear Ancestors",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91195&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "미노타우로스",
+          "englishTitle": "Minotaur",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90312&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "백 투 부에노스아이레스",
+          "englishTitle": "Back to Buenos Aires",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91144&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "버킹 패스타드",
+          "englishTitle": "Bucking Fastard",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91151&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "붉은 바위에 아이들이 있다",
+          "englishTitle": "Red Rocks",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89990&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "비터 크리스마스",
+          "englishTitle": "Bitter Christmas",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90119&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "어느 날, 아내가 울었다",
+          "englishTitle": "My Wife Cries",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89793&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "언노운",
+          "englishTitle": "The Unknown",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90120&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "에밀리아, 사랑을 기억하다",
+          "englishTitle": "The Beloved",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90564&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "에코 체임버",
+          "englishTitle": "The Echo Chamber",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91095&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "옐로우 레터스",
+          "englishTitle": "Yellow Letters",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89839&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "오늘 밤, 사랑은 일어난다",
+          "englishTitle": "It Will Happen Tonight",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91201&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "오렌지 맛 웨딩",
+          "englishTitle": "Orange-Flavoured Wedding",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89993&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "와일드 호스 나인",
+          "englishTitle": "Wild Horse Nine",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90557&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "와줘서 고맙다는 거장의 인사",
+          "englishTitle": "Thanks for Coming",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91157&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "장 물랭",
+          "englishTitle": "Moulin",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90250&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "텐더 러빙 케어",
+          "englishTitle": "Tender Loving Care",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91160&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "파더랜드",
+          "englishTitle": "Fatherland",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90251&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "패러렐 테일즈: 데칼로그",
+          "englishTitle": "Parallel Tales",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90245&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "페이퍼 타이거",
+          "englishTitle": "Paper Tiger",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89791&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "페터 춤토르 by 빔 벤더스, 3D",
+          "englishTitle": "From Inside Out - The Architecture of Peter Zumthor",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91152&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "피오르",
+          "englishTitle": "Fjord",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90300&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "zi",
+          "englishTitle": "zi",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90752&c_idx=430&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "1982",
+          "englishTitle": "1982",
+          "section": "비전 - 아시아",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90515&c_idx=431&sp_idx=616&QueryStep=2"
+        },
+        {
+          "title": "노래가 끝난 후",
+          "englishTitle": "After the Song",
+          "section": "비전 - 아시아",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90187&c_idx=431&sp_idx=616&QueryStep=2"
+        },
+        {
+          "title": "다시 눈이 올 거야",
+          "englishTitle": "There Will Be Snow",
+          "section": "비전 - 아시아",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91124&c_idx=431&sp_idx=616&QueryStep=2"
+        },
+        {
+          "title": "데드 엔드",
+          "englishTitle": "Dead End",
+          "section": "비전 - 아시아",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89759&c_idx=431&sp_idx=616&QueryStep=2"
+        },
+        {
+          "title": "리아",
+          "englishTitle": "Ria",
+          "section": "비전 - 아시아",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91175&c_idx=431&sp_idx=616&QueryStep=2"
+        },
+        {
+          "title": "멈춰서다",
+          "englishTitle": "Zogsool",
+          "section": "비전 - 아시아",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=87783&c_idx=431&sp_idx=616&QueryStep=2"
+        },
+        {
+          "title": "미몽",
+          "englishTitle": "Slumber",
+          "section": "비전 - 아시아",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90060&c_idx=431&sp_idx=616&QueryStep=2"
+        },
+        {
+          "title": "부아",
+          "englishTitle": "Bua",
+          "section": "비전 - 아시아",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91202&c_idx=431&sp_idx=616&QueryStep=2"
+        },
+        {
+          "title": "셀비",
+          "englishTitle": "Selvi",
+          "section": "비전 - 아시아",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91096&c_idx=431&sp_idx=616&QueryStep=2"
+        },
+        {
+          "title": "어둠 속의 새들",
+          "englishTitle": "Birds in the Dark",
+          "section": "비전 - 아시아",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90501&c_idx=431&sp_idx=616&QueryStep=2"
+        },
+        {
+          "title": "탯줄",
+          "englishTitle": "The Cord",
+          "section": "비전 - 아시아",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89688&c_idx=431&sp_idx=616&QueryStep=2"
+        },
+        {
+          "title": "환상의 불빛",
+          "englishTitle": "Hinotama: Ball of Fire",
+          "section": "비전 - 아시아",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=84111&c_idx=431&sp_idx=616&QueryStep=2"
+        },
+        {
+          "title": "귀벌레",
+          "englishTitle": "Earbug",
+          "section": "비전 - 한국",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91171&c_idx=431&sp_idx=617&QueryStep=2"
+        },
+        {
+          "title": "극장에 두고 온 것들",
+          "englishTitle": "Things I Left at the Theater",
+          "section": "비전 - 한국",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89762&c_idx=431&sp_idx=617&QueryStep=2"
+        },
+        {
+          "title": "당신을 위한 것은 아닌",
+          "englishTitle": "Not for You",
+          "section": "비전 - 한국",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91112&c_idx=431&sp_idx=617&QueryStep=2"
+        },
+        {
+          "title": "모종의 탐정",
+          "englishTitle": "Some Detective",
+          "section": "비전 - 한국",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91111&c_idx=431&sp_idx=617&QueryStep=2"
+        },
+        {
+          "title": "베일러",
+          "englishTitle": "BALER",
+          "section": "비전 - 한국",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=85132&c_idx=431&sp_idx=617&QueryStep=2"
+        },
+        {
+          "title": "사랑의 지평선 너머로",
+          "englishTitle": "Beyond Love′s Horizon",
+          "section": "비전 - 한국",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91030&c_idx=431&sp_idx=617&QueryStep=2"
+        },
+        {
+          "title": "새",
+          "englishTitle": "The Birds",
+          "section": "비전 - 한국",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91073&c_idx=431&sp_idx=617&QueryStep=2"
+        },
+        {
+          "title": "스페이스",
+          "englishTitle": "Space",
+          "section": "비전 - 한국",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90158&c_idx=431&sp_idx=617&QueryStep=2"
+        },
+        {
+          "title": "아직 아무 일도 일어나지 않은",
+          "englishTitle": "Nothing Has Happened Yet",
+          "section": "비전 - 한국",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90308&c_idx=431&sp_idx=617&QueryStep=2"
+        },
+        {
+          "title": "우주의 흔적",
+          "englishTitle": "Cosmic Trace",
+          "section": "비전 - 한국",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90791&c_idx=431&sp_idx=617&QueryStep=2"
+        },
+        {
+          "title": "풀문",
+          "englishTitle": "FULL MOON",
+          "section": "비전 - 한국",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91173&c_idx=431&sp_idx=617&QueryStep=2"
+        },
+        {
+          "title": "화곡사",
+          "englishTitle": "The Flower",
+          "section": "비전 - 한국",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91172&c_idx=431&sp_idx=617&QueryStep=2"
+        },
+        {
+          "title": "겨울 이야기",
+          "englishTitle": "In Winter",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91235&c_idx=432&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "그대, 별처럼",
+          "englishTitle": "You, Like a Star",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90388&c_idx=432&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "나의 사소하고도 큰 일들",
+          "englishTitle": "Big Little Things",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91106&c_idx=432&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "내 친구로 남아줄래?",
+          "englishTitle": "Will You Still Be My Friend",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89822&c_idx=432&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "눈에는 눈",
+          "englishTitle": "Head to Head",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91102&c_idx=432&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "다라, 흘러감",
+          "englishTitle": "Dhara",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=83938&c_idx=432&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "무명소녀",
+          "englishTitle": "A Girl Unknown",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91126&c_idx=432&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "미친 노인의 일기",
+          "englishTitle": "Diary of a Mad Old Man",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91190&c_idx=432&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "불타는 거인들",
+          "englishTitle": "The Burning Giants",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91174&c_idx=432&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "블루 나이트의 연인들",
+          "englishTitle": "Lovers in the Blue Night",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91161&c_idx=432&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "빙판 위의 새들",
+          "englishTitle": "Birds on Ice",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90577&c_idx=432&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "사적인 일에 관하여",
+          "englishTitle": "About an Intimate Matter",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91198&c_idx=432&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "살인의 문",
+          "englishTitle": "The Gate of Murder",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90720&c_idx=432&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "소울 위스퍼러",
+          "englishTitle": "The Soul Whisperer",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91128&c_idx=432&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "수호전사: 황제의 마지막 비밀",
+          "englishTitle": "Spirit Guardians: The Last Secret Of The First Emperor",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91205&c_idx=432&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "아버지의 방",
+          "englishTitle": "In My Father′s Room",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89329&c_idx=432&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "안개 속의 코끼리",
+          "englishTitle": "Elephants in the Fog",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90096&c_idx=432&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "약속된 공간",
+          "englishTitle": "Promised Spaces",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89788&c_idx=432&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "영웅은 아니지만",
+          "englishTitle": "Not a Hero",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89841&c_idx=432&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "오래오래 행복하게",
+          "englishTitle": "Happily Ever After",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91164&c_idx=432&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "이야기, 이야기",
+          "englishTitle": "Gu Shi",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90867&c_idx=432&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "자바의 사계절",
+          "englishTitle": "Four Seasons in Java",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91183&c_idx=432&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "조용히 귀 기울이면",
+          "englishTitle": "Hearing",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90097&c_idx=432&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "좋은 남자는 없다",
+          "englishTitle": "No Good Men",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89768&c_idx=432&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "천국으로 가는 아홉 사원",
+          "englishTitle": "9 Temples to Heaven",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90091&c_idx=432&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "코리야",
+          "englishTitle": "Khoriya",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90770&c_idx=432&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "필리피냐나",
+          "englishTitle": "Filipiñana",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89840&c_idx=432&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "사피엔스",
+          "englishTitle": "Sapiens",
+          "section": "한국영화의 오늘 - 스페셜 프리미어",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90357&c_idx=433&sp_idx=610&QueryStep=2"
+        },
+        {
+          "title": "세대유감",
+          "englishTitle": "The Sorry Generation",
+          "section": "한국영화의 오늘 - 스페셜 프리미어",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90313&c_idx=433&sp_idx=610&QueryStep=2"
+        },
+        {
+          "title": "정가네",
+          "englishTitle": "Cattle Run",
+          "section": "한국영화의 오늘 - 스페셜 프리미어",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91120&c_idx=433&sp_idx=610&QueryStep=2"
+        },
+        {
+          "title": "수능, 출제의 비밀",
+          "englishTitle": "Ugly Duckling Ms. Maeng",
+          "section": "한국영화의 오늘 - 파노라마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=86121&c_idx=433&sp_idx=611&QueryStep=2"
+        },
+        {
+          "title": "여전히 찬란하게",
+          "englishTitle": "Still Shining",
+          "section": "한국영화의 오늘 - 파노라마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91230&c_idx=433&sp_idx=611&QueryStep=2"
+        },
+        {
+          "title": "자필",
+          "englishTitle": "SINNER",
+          "section": "한국영화의 오늘 - 파노라마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90780&c_idx=433&sp_idx=611&QueryStep=2"
+        },
+        {
+          "title": "첫세계",
+          "englishTitle": "The World Before",
+          "section": "한국영화의 오늘 - 파노라마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91158&c_idx=433&sp_idx=611&QueryStep=2"
+        },
+        {
+          "title": "최종면접",
+          "englishTitle": "Final Interview",
+          "section": "한국영화의 오늘 - 파노라마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90758&c_idx=433&sp_idx=611&QueryStep=2"
+        },
+        {
+          "title": "호프",
+          "englishTitle": "HOPE",
+          "section": "한국영화의 오늘 - 파노라마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91187&c_idx=433&sp_idx=611&QueryStep=2"
+        },
+        {
+          "title": "15/18",
+          "englishTitle": "A Place to Heal",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91130&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "가바초 챔피언",
+          "englishTitle": "Campeón Gabacho",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91142&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "구원은 없다",
+          "englishTitle": "Salvation",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89769&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "굿바이, 이놈의 잔인한 세상",
+          "englishTitle": "Goodbye Cruel World",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91054&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "그날 밤, 클라리사에게",
+          "englishTitle": "Clarissa",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91132&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "내가 사랑한 빌 에반스",
+          "englishTitle": "Everybody Digs Bill Evans",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91103&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "딥 블루",
+          "englishTitle": "Deep Blue",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91168&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "라 그라디바",
+          "englishTitle": "La Gradiva",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90315&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "라 페라",
+          "englishTitle": "La Perra",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89879&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "로즈",
+          "englishTitle": "Rose",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91149&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "마리가 뭐 어때서",
+          "englishTitle": "Woman Unknown",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91240&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "메리 크리스마스, 엄마",
+          "englishTitle": "The Fire Within You",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91145&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "모범 직원 카를라",
+          "englishTitle": "A Good Little Soldier",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91131&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "바이 애니 민즈: 자비는 없다",
+          "englishTitle": "By Any Means",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91203&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "베니마나",
+          "englishTitle": "Ben′imana",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90026&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "비바 카르멘",
+          "englishTitle": "Viva Carmen",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91069&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "스킨타운",
+          "englishTitle": "Skintown",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91186&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "아이언 보이",
+          "englishTitle": "Iron Boy",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91057&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "엄마의 바다",
+          "englishTitle": "Queen at Sea",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89792&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "에브리타임",
+          "englishTitle": "Everytime",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89989&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "올랴와 올레흐: 난 좀처럼 꿈에서 깨어나지 않지",
+          "englishTitle": "I Rarely Wake Up Dreaming",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91231&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "우리, 파도처럼",
+          "englishTitle": "In Waves",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91105&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "이성과 감성",
+          "englishTitle": "Sense and Sensibility",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90592&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "젠틀 몬스터",
+          "englishTitle": "Gentle Monster",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90241&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "짐 퀸",
+          "englishTitle": "Jim Queen",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91133&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "짐승이 너무 많아",
+          "englishTitle": "Too Many Beasts",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90240&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "초대받지 않은 손님",
+          "englishTitle": "The Guest",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91101&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "클럽 키드",
+          "englishTitle": "Club Kid",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91104&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "프레셔",
+          "englishTitle": "Pressure",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91199&c_idx=434&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "노트르 살뤼",
+          "englishTitle": "A Man of His Time",
+          "section": "플래시 포워드",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89988&c_idx=435&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "멜트다운",
+          "englishTitle": "The Meltdown",
+          "section": "플래시 포워드",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90095&c_idx=435&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "베드포드 파크",
+          "englishTitle": "Bedford Park",
+          "section": "플래시 포워드",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90242&c_idx=435&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "블랙 볼",
+          "englishTitle": "La Bola Negra",
+          "section": "플래시 포워드",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90249&c_idx=435&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "블랙 처치 베이",
+          "englishTitle": "Black Church Bay",
+          "section": "플래시 포워드",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91089&c_idx=435&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "새드 걸즈",
+          "englishTitle": "Sad Girlz",
+          "section": "플래시 포워드",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89773&c_idx=435&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "옛날 옛적, 미래에",
+          "englishTitle": "Föa - Once Upon A Future",
+          "section": "플래시 포워드",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91185&c_idx=435&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "오아시스",
+          "englishTitle": "Oasis",
+          "section": "플래시 포워드",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91153&c_idx=435&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "이클립스",
+          "englishTitle": "Eklipse",
+          "section": "플래시 포워드",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91162&c_idx=435&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "조의 하루: 페드라 챕터",
+          "englishTitle": "A Day in the Life of Jo: Chapter Phaedra",
+          "section": "플래시 포워드",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91234&c_idx=435&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "타이타닉 오션",
+          "englishTitle": "Titanic Ocean",
+          "section": "플래시 포워드",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91138&c_idx=435&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "타인에게 속한 것들",
+          "englishTitle": "What Belongs to Others",
+          "section": "플래시 포워드",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91188&c_idx=435&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "개",
+          "englishTitle": "All of Her",
+          "section": "와이드 앵글 - 한국 단편 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91110&c_idx=436&sp_idx=612&QueryStep=2"
+        },
+        {
+          "title": "교량의오후",
+          "englishTitle": "Afternoon on the Bridge",
+          "section": "와이드 앵글 - 한국 단편 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89439&c_idx=436&sp_idx=612&QueryStep=2"
+        },
+        {
+          "title": "낮잠",
+          "englishTitle": "Dear Sunshine",
+          "section": "와이드 앵글 - 한국 단편 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=86259&c_idx=436&sp_idx=612&QueryStep=2"
+        },
+        {
+          "title": "멀리 있는 집",
+          "englishTitle": "The Distant Home",
+          "section": "와이드 앵글 - 한국 단편 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=88164&c_idx=436&sp_idx=612&QueryStep=2"
+        },
+        {
+          "title": "변종",
+          "englishTitle": "The Variety",
+          "section": "와이드 앵글 - 한국 단편 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=88759&c_idx=436&sp_idx=612&QueryStep=2"
+        },
+        {
+          "title": "신원미상",
+          "englishTitle": "Baby Doe",
+          "section": "와이드 앵글 - 한국 단편 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89057&c_idx=436&sp_idx=612&QueryStep=2"
+        },
+        {
+          "title": "아마추어 에너지",
+          "englishTitle": "Amateur Energy",
+          "section": "와이드 앵글 - 한국 단편 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89274&c_idx=436&sp_idx=612&QueryStep=2"
+        },
+        {
+          "title": "여*기의 발가락",
+          "englishTitle": "TOE′S",
+          "section": "와이드 앵글 - 한국 단편 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89453&c_idx=436&sp_idx=612&QueryStep=2"
+        },
+        {
+          "title": "지구에 떨어진 남자",
+          "englishTitle": "The Boy Who Fell to Earth",
+          "section": "와이드 앵글 - 한국 단편 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=88809&c_idx=436&sp_idx=612&QueryStep=2"
+        },
+        {
+          "title": "지민지민지",
+          "englishTitle": "Tale of Tails",
+          "section": "와이드 앵글 - 한국 단편 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89025&c_idx=436&sp_idx=612&QueryStep=2"
+        },
+        {
+          "title": "초대받지 않은 이웃",
+          "englishTitle": "An Uninvited Neighbor",
+          "section": "와이드 앵글 - 한국 단편 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89248&c_idx=436&sp_idx=612&QueryStep=2"
+        },
+        {
+          "title": "토마토 파스타 레시피",
+          "englishTitle": "Tomato Pasta Recipe",
+          "section": "와이드 앵글 - 한국 단편 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=86296&c_idx=436&sp_idx=612&QueryStep=2"
+        },
+        {
+          "title": "그녀가 말했다",
+          "englishTitle": "She Said",
+          "section": "와이드 앵글 - 아시아 단편 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=86619&c_idx=436&sp_idx=613&QueryStep=2"
+        },
+        {
+          "title": "메마른 땅 아래",
+          "englishTitle": "Beneath the Barren",
+          "section": "와이드 앵글 - 아시아 단편 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=84442&c_idx=436&sp_idx=613&QueryStep=2"
+        },
+        {
+          "title": "바람을 타고",
+          "englishTitle": "Downwind",
+          "section": "와이드 앵글 - 아시아 단편 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=87113&c_idx=436&sp_idx=613&QueryStep=2"
+        },
+        {
+          "title": "사라지는 것들",
+          "englishTitle": "The Things That Vanish",
+          "section": "와이드 앵글 - 아시아 단편 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=86452&c_idx=436&sp_idx=613&QueryStep=2"
+        },
+        {
+          "title": "소금 전기",
+          "englishTitle": "Salt Electric",
+          "section": "와이드 앵글 - 아시아 단편 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=83436&c_idx=436&sp_idx=613&QueryStep=2"
+        },
+        {
+          "title": "알파",
+          "englishTitle": "αLPα",
+          "section": "와이드 앵글 - 아시아 단편 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=87852&c_idx=436&sp_idx=613&QueryStep=2"
+        },
+        {
+          "title": "잔치는 끝났다",
+          "englishTitle": "Wild No More",
+          "section": "와이드 앵글 - 아시아 단편 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=88893&c_idx=436&sp_idx=613&QueryStep=2"
+        },
+        {
+          "title": "춤파 인형",
+          "englishTitle": "Chumpa: A Doll Under the Basket",
+          "section": "와이드 앵글 - 아시아 단편 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=87638&c_idx=436&sp_idx=613&QueryStep=2"
+        },
+        {
+          "title": "파티마",
+          "englishTitle": "Fatima",
+          "section": "와이드 앵글 - 아시아 단편 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=87001&c_idx=436&sp_idx=613&QueryStep=2"
+        },
+        {
+          "title": "혼란 속에서",
+          "englishTitle": "In Our Panic",
+          "section": "와이드 앵글 - 아시아 단편 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=85457&c_idx=436&sp_idx=613&QueryStep=2"
+        },
+        {
+          "title": "771일 후",
+          "englishTitle": "771 Days",
+          "section": "와이드 앵글 - 다큐멘터리 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=83554&c_idx=436&sp_idx=614&QueryStep=2"
+        },
+        {
+          "title": "나무는 태어난 곳에서 죽는다",
+          "englishTitle": "Revolving Lanterns",
+          "section": "와이드 앵글 - 다큐멘터리 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=86416&c_idx=436&sp_idx=614&QueryStep=2"
+        },
+        {
+          "title": "리커버리",
+          "englishTitle": "Recovery",
+          "section": "와이드 앵글 - 다큐멘터리 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=86111&c_idx=436&sp_idx=614&QueryStep=2"
+        },
+        {
+          "title": "소리그물",
+          "englishTitle": "Soundweave",
+          "section": "와이드 앵글 - 다큐멘터리 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90598&c_idx=436&sp_idx=614&QueryStep=2"
+        },
+        {
+          "title": "야생 참나무의 꿈",
+          "englishTitle": "Dreams of the Wild Oaks",
+          "section": "와이드 앵글 - 다큐멘터리 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=88907&c_idx=436&sp_idx=614&QueryStep=2"
+        },
+        {
+          "title": "어크로스: 전쟁은 어떻게 잊혀지는가",
+          "englishTitle": "ACROSS: Anatomy of the Forgotten War",
+          "section": "와이드 앵글 - 다큐멘터리 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90746&c_idx=436&sp_idx=614&QueryStep=2"
+        },
+        {
+          "title": "온 더 로드: 압바스 키아로스타미",
+          "englishTitle": "On the Road with Abbas Kiarostami",
+          "section": "와이드 앵글 - 다큐멘터리 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91191&c_idx=436&sp_idx=614&QueryStep=2"
+        },
+        {
+          "title": "지금 얘기해도 돼요?",
+          "englishTitle": "Can I Talk to You?",
+          "section": "와이드 앵글 - 다큐멘터리 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91015&c_idx=436&sp_idx=614&QueryStep=2"
+        },
+        {
+          "title": "초원의 아가르",
+          "englishTitle": "AGAAR",
+          "section": "와이드 앵글 - 다큐멘터리 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90137&c_idx=436&sp_idx=614&QueryStep=2"
+        },
+        {
+          "title": "파도 위에서 춤추는 여자",
+          "englishTitle": "A Woman Dancing on the Waves",
+          "section": "와이드 앵글 - 다큐멘터리 경쟁",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91028&c_idx=436&sp_idx=614&QueryStep=2"
+        },
+        {
+          "title": "58번째",
+          "englishTitle": "58th",
+          "section": "와이드 앵글 - 다큐멘터리 쇼케이스",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=83199&c_idx=436&sp_idx=615&QueryStep=2"
+        },
+        {
+          "title": "권진규: 예술가의 일생",
+          "englishTitle": "A Life of an Artist: Kwon Jinkyu",
+          "section": "와이드 앵글 - 다큐멘터리 쇼케이스",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91237&c_idx=436&sp_idx=615&QueryStep=2"
+        },
+        {
+          "title": "김윤신은 미술관에 없다",
+          "englishTitle": "Kim Yun Shin Punches In",
+          "section": "와이드 앵글 - 다큐멘터리 쇼케이스",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91010&c_idx=436&sp_idx=615&QueryStep=2"
+        },
+        {
+          "title": "리허설 포 레볼루션",
+          "englishTitle": "Rehearsals for a Revolution",
+          "section": "와이드 앵글 - 다큐멘터리 쇼케이스",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91148&c_idx=436&sp_idx=615&QueryStep=2"
+        },
+        {
+          "title": "바람의 빛깔",
+          "englishTitle": "Our Wish, Our Colors",
+          "section": "와이드 앵글 - 다큐멘터리 쇼케이스",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90923&c_idx=436&sp_idx=615&QueryStep=2"
+        },
+        {
+          "title": "베이비 잭프루츠 베이비 구아바",
+          "englishTitle": "Baby Jackfruit Baby Guava",
+          "section": "와이드 앵글 - 다큐멘터리 쇼케이스",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90424&c_idx=436&sp_idx=615&QueryStep=2"
+        },
+        {
+          "title": "새벽에서 다시 새벽으로",
+          "englishTitle": "From Dawn to Dawn",
+          "section": "와이드 앵글 - 다큐멘터리 쇼케이스",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91233&c_idx=436&sp_idx=615&QueryStep=2"
+        },
+        {
+          "title": "시골 소년 가벵과 함께한 10년",
+          "englishTitle": "Gabin",
+          "section": "와이드 앵글 - 다큐멘터리 쇼케이스",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90558&c_idx=436&sp_idx=615&QueryStep=2"
+        },
+        {
+          "title": "안녕, 스텔라",
+          "englishTitle": "Annyeong, Stellar",
+          "section": "와이드 앵글 - 다큐멘터리 쇼케이스",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91019&c_idx=436&sp_idx=615&QueryStep=2"
+        },
+        {
+          "title": "유니온 타운: 뉴욕을 달리는 사람들",
+          "englishTitle": "Union Town",
+          "section": "와이드 앵글 - 다큐멘터리 쇼케이스",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91193&c_idx=436&sp_idx=615&QueryStep=2"
+        },
+        {
+          "title": "전쟁의 새들",
+          "englishTitle": "Birds of War",
+          "section": "와이드 앵글 - 다큐멘터리 쇼케이스",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89789&c_idx=436&sp_idx=615&QueryStep=2"
+        },
+        {
+          "title": "청춘길일",
+          "englishTitle": "The Best Days",
+          "section": "와이드 앵글 - 다큐멘터리 쇼케이스",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90781&c_idx=436&sp_idx=615&QueryStep=2"
+        },
+        {
+          "title": "홈시크: 바다의 끝에서",
+          "englishTitle": "Homesick",
+          "section": "와이드 앵글 - 다큐멘터리 쇼케이스",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91108&c_idx=436&sp_idx=615&QueryStep=2"
+        },
+        {
+          "title": "화이트 록의 색깔",
+          "englishTitle": "Colors of White Rock",
+          "section": "와이드 앵글 - 다큐멘터리 쇼케이스",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91232&c_idx=436&sp_idx=615&QueryStep=2"
+        },
+        {
+          "title": "흐르는 세월",
+          "englishTitle": "Time and Tide",
+          "section": "와이드 앵글 - 다큐멘터리 쇼케이스",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91163&c_idx=436&sp_idx=615&QueryStep=2"
+        },
+        {
+          "title": "그저 환상일 뿐",
+          "englishTitle": "Just an Illusion",
+          "section": "오픈 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91156&c_idx=437&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "바이올리니스트",
+          "englishTitle": "The Violinist",
+          "section": "오픈 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=87906&c_idx=437&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "스파이럴",
+          "englishTitle": "The Spiral",
+          "section": "오픈 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91100&c_idx=437&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "아름다운 초저녁달",
+          "englishTitle": "In the Clear Moonlit Dusk",
+          "section": "오픈 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91127&c_idx=437&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "인헤릿",
+          "englishTitle": "Inherit",
+          "section": "오픈 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91180&c_idx=437&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "불청객",
+          "englishTitle": "L’Autre",
+          "section": "미드나잇 패션",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91197&c_idx=438&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "붉은 실",
+          "englishTitle": "Red Thread",
+          "section": "미드나잇 패션",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91241&c_idx=438&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "스카페이스 캣: 수라도",
+          "englishTitle": "The Scar-Faced Cat: Way of Asura",
+          "section": "미드나잇 패션",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91181&c_idx=438&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "웰컴 투 돌리 하우스",
+          "englishTitle": "Welcome to Dolly′s House",
+          "section": "미드나잇 패션",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89479&c_idx=438&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "장미의 사슬",
+          "englishTitle": "The Chain of Roses",
+          "section": "미드나잇 패션",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89770&c_idx=438&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "천사의 알",
+          "englishTitle": "Angel′s Egg",
+          "section": "미드나잇 패션",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91178&c_idx=438&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "꿀알바",
+          "englishTitle": "Dead-End Job",
+          "section": "온 스크린",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91114&c_idx=439&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "재혼 황후",
+          "englishTitle": "The Remarried Empress",
+          "section": "온 스크린",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91107&c_idx=439&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "푸른길",
+          "englishTitle": "The Blue Road",
+          "section": "온 스크린",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91109&c_idx=439&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "개그맨",
+          "englishTitle": "Gagman",
+          "section": "특별기획 프로그램 - 아름다운 시절, 안성기",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90038&c_idx=440&sp_idx=618&QueryStep=2"
+        },
+        {
+          "title": "고래사냥",
+          "englishTitle": "Whale Hunting",
+          "section": "특별기획 프로그램 - 아름다운 시절, 안성기",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90036&c_idx=440&sp_idx=618&QueryStep=2"
+        },
+        {
+          "title": "바람불어 좋은날",
+          "englishTitle": "A Fine, Windy Day",
+          "section": "특별기획 프로그램 - 아름다운 시절, 안성기",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90034&c_idx=440&sp_idx=618&QueryStep=2"
+        },
+        {
+          "title": "축제",
+          "englishTitle": "Festival",
+          "section": "특별기획 프로그램 - 아름다운 시절, 안성기",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91204&c_idx=440&sp_idx=618&QueryStep=2"
+        },
+        {
+          "title": "칠수와 만수",
+          "englishTitle": "Chil-su and Man-su",
+          "section": "특별기획 프로그램 - 아름다운 시절, 안성기",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90037&c_idx=440&sp_idx=618&QueryStep=2"
+        },
+        {
+          "title": "하얀전쟁",
+          "englishTitle": "White Badge",
+          "section": "특별기획 프로그램 - 아름다운 시절, 안성기",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90039&c_idx=440&sp_idx=618&QueryStep=2"
+        },
+        {
+          "title": "고스트 - 밤의 끝",
+          "englishTitle": "ghost – end of night",
+          "section": "특별기획 프로그램 - 일본 애니메이션 특별전: 광기의 걸작, 전율의 기대작 12+1",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91154&c_idx=440&sp_idx=619&QueryStep=2"
+        },
+        {
+          "title": "마인드 게임",
+          "englishTitle": "MIND GAME",
+          "section": "특별기획 프로그램 - 일본 애니메이션 특별전: 광기의 걸작, 전율의 기대작 12+1",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91177&c_idx=440&sp_idx=619&QueryStep=2"
+        },
+        {
+          "title": "메모리즈",
+          "englishTitle": "MEMORIES",
+          "section": "특별기획 프로그램 - 일본 애니메이션 특별전: 광기의 걸작, 전율의 기대작 12+1",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91247&c_idx=440&sp_idx=619&QueryStep=2"
+        },
+        {
+          "title": "메트로폴리스",
+          "englishTitle": "Metropolis",
+          "section": "특별기획 프로그램 - 일본 애니메이션 특별전: 광기의 걸작, 전율의 기대작 12+1",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91246&c_idx=440&sp_idx=619&QueryStep=2"
+        },
+        {
+          "title": "백사전",
+          "englishTitle": "The White Snake Enchantress",
+          "section": "특별기획 프로그램 - 일본 애니메이션 특별전: 광기의 걸작, 전율의 기대작 12+1",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91146&c_idx=440&sp_idx=619&QueryStep=2"
+        },
+        {
+          "title": "불새 2772 사랑의 코스모존",
+          "englishTitle": "Phoenix 2772（Space Firebird）",
+          "section": "특별기획 프로그램 - 일본 애니메이션 특별전: 광기의 걸작, 전율의 기대작 12+1",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91200&c_idx=440&sp_idx=619&QueryStep=2"
+        },
+        {
+          "title": "숨바꼭질",
+          "englishTitle": "Kakurenbo",
+          "section": "특별기획 프로그램 - 일본 애니메이션 특별전: 광기의 걸작, 전율의 기대작 12+1",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91238&c_idx=440&sp_idx=619&QueryStep=2"
+        },
+        {
+          "title": "슬픔의 벨라돈나",
+          "englishTitle": "Belladonna of Sadness",
+          "section": "특별기획 프로그램 - 일본 애니메이션 특별전: 광기의 걸작, 전율의 기대작 12+1",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91236&c_idx=440&sp_idx=619&QueryStep=2"
+        },
+        {
+          "title": "시라누이",
+          "englishTitle": "Shiranui",
+          "section": "특별기획 프로그램 - 일본 애니메이션 특별전: 광기의 걸작, 전율의 기대작 12+1",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91099&c_idx=440&sp_idx=619&QueryStep=2"
+        },
+        {
+          "title": "왕과 새",
+          "englishTitle": "The King and the Mockingbird",
+          "section": "특별기획 프로그램 - 일본 애니메이션 특별전: 광기의 걸작, 전율의 기대작 12+1",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91176&c_idx=440&sp_idx=619&QueryStep=2"
+        },
+        {
+          "title": "우리는 외계인",
+          "englishTitle": "We Are Aliens",
+          "section": "특별기획 프로그램 - 일본 애니메이션 특별전: 광기의 걸작, 전율의 기대작 12+1",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91143&c_idx=440&sp_idx=619&QueryStep=2"
+        },
+        {
+          "title": "파리스 그린이 밝는 날에",
+          "englishTitle": "A New Dawn",
+          "section": "특별기획 프로그램 - 일본 애니메이션 특별전: 광기의 걸작, 전율의 기대작 12+1",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91098&c_idx=440&sp_idx=619&QueryStep=2"
+        },
+        {
+          "title": "검우강호",
+          "englishTitle": "Reign of Assassins",
+          "section": "특별기획 프로그램 - 모든 시간 모든 곳의 양자경",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91169&c_idx=440&sp_idx=623&QueryStep=2"
+        },
+        {
+          "title": "산디와라",
+          "englishTitle": "Sandiwara",
+          "section": "특별기획 프로그램 - 모든 시간 모든 곳의 양자경",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91166&c_idx=440&sp_idx=623&QueryStep=2"
+        },
+        {
+          "title": "에브리씽 에브리웨어 올 앳 원스",
+          "englishTitle": "Everything Everywhere All at Once",
+          "section": "특별기획 프로그램 - 모든 시간 모든 곳의 양자경",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91165&c_idx=440&sp_idx=623&QueryStep=2"
+        },
+        {
+          "title": "그래비티",
+          "englishTitle": "Gravity",
+          "section": "특별상영 & 까르뜨 블랑슈",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91282&c_idx=441&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "매드 맥스",
+          "englishTitle": "Mad Max",
+          "section": "특별상영 & 까르뜨 블랑슈",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91239&c_idx=441&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "멜랑콜리아",
+          "englishTitle": "Melancholia",
+          "section": "특별상영 & 까르뜨 블랑슈",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91280&c_idx=441&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "버스정류장",
+          "englishTitle": "Bus Stop",
+          "section": "특별상영 & 까르뜨 블랑슈",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91189&c_idx=441&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "세 가지 색 : 블루",
+          "englishTitle": "Three Colours: Blue",
+          "section": "특별상영 & 까르뜨 블랑슈",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91242&c_idx=441&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "아가씨",
+          "englishTitle": "The Handmaiden",
+          "section": "특별상영 & 까르뜨 블랑슈",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91243&c_idx=441&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "콜드 워 1994",
+          "englishTitle": "Cold War 1994",
+          "section": "특별상영 & 까르뜨 블랑슈",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91257&c_idx=441&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "플레시 임팩트",
+          "englishTitle": "Flesh Impact",
+          "section": "특별상영 & 까르뜨 블랑슈",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89213&c_idx=441&sp_idx=&QueryStep=2"
+        },
+        {
+          "title": "M (4K 리마스터링)",
+          "englishTitle": "M (4K Remastering)",
+          "section": "특별상영 & 까르뜨 블랑슈",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91113&c_idx=441&sp_idx=&QueryStep=2"
+        }
+      ],
+      "coverage": [
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25",
+        "2026-09-26",
+        "2026-09-27",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-09-30",
+        "2026-10-01"
+      ],
+      "days": {
+        "2026-09-22": {},
+        "2026-09-23": {
+          "피오르": {
+            "title": "피오르",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "레이건": {
+            "title": "레이 건",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "스페이스": {
+            "title": "스페이스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "메트로폴리스": {
+            "title": "메트로폴리스",
+            "mentionCount": 1,
+            "commentCount": 0
+          }
+        },
+        "2026-09-24": {
+          "오아시스": {
+            "title": "오아시스",
+            "mentionCount": 4,
+            "commentCount": 0
+          },
+          "도라": {
+            "title": "도라",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "zi": {
+            "title": "zi",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "마리가뭐어때서": {
+            "title": "마리가 뭐 어때서",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "불타는거인들": {
+            "title": "불타는 거인들",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "아이언보이": {
+            "title": "아이언 보이",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "에브리타임": {
+            "title": "에브리타임",
+            "mentionCount": 1,
+            "commentCount": 0
+          }
+        },
+        "2026-09-25": {
+          "룩백": {
+            "title": "룩백",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "세가지색블루": {
+            "title": "세 가지 색 : 블루",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "클럽키드": {
+            "title": "클럽 키드",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "오아시스": {
+            "title": "오아시스",
+            "mentionCount": 1,
+            "commentCount": 0
+          }
+        },
+        "2026-09-26": {
+          "새드걸즈": {
+            "title": "새드 걸즈",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "라그라디바": {
+            "title": "라 그라디바",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "오아시스": {
+            "title": "오아시스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "와줘서고맙다는거장의인사": {
+            "title": "와줘서 고맙다는 거장의 인사",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "필리피냐나": {
+            "title": "필리피냐나",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "스파이럴": {
+            "title": "스파이럴",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "에브리타임": {
+            "title": "에브리타임",
+            "mentionCount": 1,
+            "commentCount": 0
+          }
+        },
+        "2026-09-27": {
+          "멜트다운": {
+            "title": "멜트다운",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "스파이럴": {
+            "title": "스파이럴",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "그래비티": {
+            "title": "그래비티",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "세가지색블루": {
+            "title": "세 가지 색 : 블루",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "짐퀸": {
+            "title": "짐 퀸",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "도라": {
+            "title": "도라",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "첫세계": {
+            "title": "첫세계",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "미노타우로스": {
+            "title": "미노타우로스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "블랙볼": {
+            "title": "블랙 볼",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "페이퍼타이거": {
+            "title": "페이퍼 타이거",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "필리피냐나": {
+            "title": "필리피냐나",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "젠틀몬스터": {
+            "title": "젠틀 몬스터",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "텐더러빙케어": {
+            "title": "텐더 러빙 케어",
+            "mentionCount": 1,
+            "commentCount": 0
+          }
+        },
+        "2026-09-28": {
+          "안개속의코끼리": {
+            "title": "안개 속의 코끼리",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "아버지의방": {
+            "title": "아버지의 방",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "오렌지맛웨딩": {
+            "title": "오렌지 맛 웨딩",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "파더랜드": {
+            "title": "파더랜드",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "그래비티": {
+            "title": "그래비티",
+            "mentionCount": 4,
+            "commentCount": 0
+          },
+          "버킹패스타드": {
+            "title": "버킹 패스타드",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "로마엘라스티카": {
+            "title": "로마 엘라스티카",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "노트르살뤼": {
+            "title": "노트르 살뤼",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "눈둘데가없네": {
+            "title": "눈 둘 데가 없네",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "도라": {
+            "title": "도라",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "에브리타임": {
+            "title": "에브리타임",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "눈에는눈": {
+            "title": "눈에는 눈",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "바람불어좋은날": {
+            "title": "바람불어 좋은날",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "소울위스퍼러": {
+            "title": "소울 위스퍼러",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "처음만난외로움": {
+            "title": "처음 만난 외로움",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "오아시스": {
+            "title": "오아시스",
+            "mentionCount": 1,
+            "commentCount": 0
+          }
+        },
+        "2026-09-29": {
+          "노트르살뤼": {
+            "title": "노트르 살뤼",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "백투부에노스아이레스": {
+            "title": "백 투 부에노스아이레스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "겨울이야기": {
+            "title": "겨울 이야기",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "가바초챔피언": {
+            "title": "가바초 챔피언",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "이클립스": {
+            "title": "이클립스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "버킹패스타드": {
+            "title": "버킹 패스타드",
+            "mentionCount": 3,
+            "commentCount": 0
+          },
+          "클럽키드": {
+            "title": "클럽 키드",
+            "mentionCount": 3,
+            "commentCount": 0
+          },
+          "로마엘라스티카": {
+            "title": "로마 엘라스티카",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "오렌지맛웨딩": {
+            "title": "오렌지 맛 웨딩",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "평범하기위하여": {
+            "title": "평범하기 위하여",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "그래비티": {
+            "title": "그래비티",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "비트윈투러버스": {
+            "title": "비트윈 투 러버스",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "눈둘데가없네": {
+            "title": "눈 둘 데가 없네",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "스파이럴": {
+            "title": "스파이럴",
+            "mentionCount": 3,
+            "commentCount": 0
+          },
+          "파더랜드": {
+            "title": "파더랜드",
+            "mentionCount": 3,
+            "commentCount": 0
+          },
+          "에브리타임": {
+            "title": "에브리타임",
+            "mentionCount": 4,
+            "commentCount": 0
+          },
+          "슬픔의벨라돈나": {
+            "title": "슬픔의 벨라돈나",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "아버지의방": {
+            "title": "아버지의 방",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "텐더러빙케어": {
+            "title": "텐더 러빙 케어",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "라그라디바": {
+            "title": "라 그라디바",
+            "mentionCount": 6,
+            "commentCount": 0
+          },
+          "처음만난외로움": {
+            "title": "처음 만난 외로움",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "미친노인의일기": {
+            "title": "미친 노인의 일기",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "천국으로가는아홉사원": {
+            "title": "천국으로 가는 아홉 사원",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "약속된공간": {
+            "title": "약속된 공간",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "와일드호스나인": {
+            "title": "와일드 호스 나인",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "타인에게속한것들": {
+            "title": "타인에게 속한 것들",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "마키키란포": {
+            "title": "마키키란 포",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "필리피냐나": {
+            "title": "필리피냐나",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "살인의문": {
+            "title": "살인의 문",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "붉은바위에아이들이있다": {
+            "title": "붉은 바위에 아이들이 있다",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "내가사랑하는남자": {
+            "title": "내가 사랑하는 남자",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "스킨타운": {
+            "title": "스킨타운",
+            "mentionCount": 1,
+            "commentCount": 0
+          }
+        },
+        "2026-09-30": {
+          "페이퍼타이거": {
+            "title": "페이퍼 타이거",
+            "mentionCount": 4,
+            "commentCount": 0
+          },
+          "룩백": {
+            "title": "룩백",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "미노타우로스": {
+            "title": "미노타우로스",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "라페라": {
+            "title": "라 페라",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "에브리타임": {
+            "title": "에브리타임",
+            "mentionCount": 3,
+            "commentCount": 0
+          },
+          "타인에게속한것들": {
+            "title": "타인에게 속한 것들",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "오아시스": {
+            "title": "오아시스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "로마엘라스티카": {
+            "title": "로마 엘라스티카",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "조용히귀기울이면": {
+            "title": "조용히 귀 기울이면",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "클럽키드": {
+            "title": "클럽 키드",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "붉은바위에아이들이있다": {
+            "title": "붉은 바위에 아이들이 있다",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "파더랜드": {
+            "title": "파더랜드",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "노트르살뤼": {
+            "title": "노트르 살뤼",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "필리피냐나": {
+            "title": "필리피냐나",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "라그라디바": {
+            "title": "라 그라디바",
+            "mentionCount": 4,
+            "commentCount": 0
+          },
+          "버킹패스타드": {
+            "title": "버킹 패스타드",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "축제": {
+            "title": "축제",
+            "mentionCount": 3,
+            "commentCount": 0
+          },
+          "텐더러빙케어": {
+            "title": "텐더 러빙 케어",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "실버익스프레스": {
+            "title": "실버 익스프레스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "아버지의방": {
+            "title": "아버지의 방",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "초대받지않은손님": {
+            "title": "초대받지 않은 손님",
+            "mentionCount": 1,
+            "commentCount": 0
+          }
+        },
+        "2026-10-01": {
+          "더스트": {
+            "title": "더스트",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "갑자기병세가악화되다": {
+            "title": "갑자기 병세가 악화되다",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "안개속의코끼리": {
+            "title": "안개 속의 코끼리",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "버킹패스타드": {
+            "title": "버킹 패스타드",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "인헤릿": {
+            "title": "인헤릿",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "에브리타임": {
+            "title": "에브리타임",
+            "mentionCount": 3,
+            "commentCount": 0
+          },
+          "미노타우로스": {
+            "title": "미노타우로스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "젠틀몬스터": {
+            "title": "젠틀 몬스터",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "마리가뭐어때서": {
+            "title": "마리가 뭐 어때서",
+            "mentionCount": 1,
+            "commentCount": 9
+          },
+          "오아시스": {
+            "title": "오아시스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "페이퍼타이거": {
+            "title": "페이퍼 타이거",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "장물랭": {
+            "title": "장 물랭",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "베드포드파크": {
+            "title": "베드포드 파크",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "붉은실": {
+            "title": "붉은 실",
+            "mentionCount": 1,
+            "commentCount": 0
+          }
+        }
       }
     }
   }
