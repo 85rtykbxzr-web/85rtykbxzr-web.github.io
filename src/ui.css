@@ -479,3 +479,22 @@ a.row:hover .go { stroke: var(--t3); }
   .row { grid-template-columns: 36px minmax(0, 1fr) auto; margin: 0 -8px; padding: 12px 8px; }
   .row::before { left: 8px; right: 8px; }
 }
+
+/* venue map (Kakao Maps, opened from the 지도 chip) */
+.map-toggle .map-ic { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.chip.is-on { background: var(--strong); color: var(--on-strong); }
+.venue-map { margin: -4px 0 16px; border-radius: 20px; overflow: hidden; background: var(--card); }
+.venue-map-canvas { width: 100%; height: 380px; }
+.venue-map-error { padding: 40px 24px; text-align: center; font-size: 15px; color: var(--t3); }
+.map-pin { display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 12px; border-radius: 999px; background: #fff; color: #191f28; font-family: var(--font); font-size: 13px; white-space: nowrap; box-shadow: 0 2px 8px rgb(0 23 51 / 0.18), 0 0 0 1px rgb(0 23 51 / 0.06); cursor: pointer; }
+.map-pin b { font-weight: 700; }
+.map-pin span { font-weight: 600; color: #6b7684; font-variant-numeric: tabular-nums; }
+.map-pin.is-fav { background: #191f28; color: #fff; }
+.map-pin.is-fav span { color: rgb(255 255 255 / 0.72); }
+.map-pin.is-empty { opacity: 0.6; }
+.map-pin:hover { transform: translateY(-1px); }
+@media (max-width: 767px) {
+  .venue-map { margin: -4px -16px 12px; border-radius: 0; }
+  .venue-map-canvas { height: 300px; }
+  .map-pin { height: 30px; padding: 0 10px; font-size: 12px; }
+}

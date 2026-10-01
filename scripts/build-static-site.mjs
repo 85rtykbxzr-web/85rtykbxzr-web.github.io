@@ -121,7 +121,7 @@ function contentSecurityPolicy(structuredData) {
   const structuredDataHash = `sha256-${createHash("sha256").update(structuredData).digest("base64")}`;
   return [
     "default-src 'self'",
-    `script-src 'self' '${structuredDataHash}' https://www.googletagmanager.com`,
+    `script-src 'self' '${structuredDataHash}' https://www.googletagmanager.com https://dapi.kakao.com https://t1.daumcdn.net`,
     "style-src 'self'",
     "style-src-attr 'none'",
     "script-src-attr 'none'",
