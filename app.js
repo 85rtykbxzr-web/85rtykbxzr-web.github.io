@@ -6,7 +6,7 @@ import {
   resolveFestivalName
 } from "./src/festival-labels.mjs";
 import { safePublicUrl } from "./src/public-url-policy.mjs";
-import { isPastKstSession } from "./src/session-time.mjs";
+import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
 
 (function () {
   const analyticsHostnames = new Set(["seoulcinemaschedule.com", "www.seoulcinemaschedule.com"]);
@@ -45,19 +45,6 @@ import { isPastKstSession } from "./src/session-time.mjs";
   const scheduleDataRefreshCooldownMs = 10 * 60 * 1000;
   const dateRolloverCheckMs = 60 * 1000;
   const weekdays = ["일", "월", "화", "수", "목", "금", "토"];
-  const monthNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
-  const kindLabels = {
-    talk: "GV·토크",
-    festival: "영화제",
-    program: "기획전",
-    package: "굿즈",
-    special: "특별상영"
-  };
-  const statusLabels = {
-    confirmed: "확정",
-    "needs-check": "확인 필요",
-    soldout: "매진"
-  };
   const venueAddresses = {
     kofa: "서울 마포구 월드컵북로 400 한국영상자료원",
     sac: "서울 중구 정동길 3 경향아트힐 2층",
@@ -126,7 +113,6 @@ import { isPastKstSession } from "./src/session-time.mjs";
     movieland: "MOVIE LAND",
     heyri: "HEYRI"
   };
-  const compactVenueMarks = new Set(["artnine", "cinecube", "emu", "filmforum"]);
   const knownProgramImages = {
     "p-sac-rossellini": "https://www.cinematheque.seoul.kr/data/file/program/thumb-cd350d699bb6addbeff893b0d2cf9159_5IpMwGuj_ebb50b412a6aa0d39ee6fb254d9d31640c68de5f_400x300.jpg",
     "p-sac-wiseman": "https://www.cinematheque.seoul.kr/data/file/program/thumb-cd350d699bb6addbeff893b0d2cf9159_8S1EGAHr_98b3e011c1e80809f8b95c0286931b524d7ee6a5_400x300.jpg",
@@ -234,48 +220,11 @@ import { isPastKstSession } from "./src/session-time.mjs";
     return sortedVenues.map(createVenueItem);
   }
 
-  function favoriteVenueButton(venueId, venueName, extraClass = "") {
+  function favoriteVenueButton(venueId, venueName) {
     if (!venueId || venueId === "all") return "";
     const favorite = isFavoriteVenue(venueId);
     const title = `${venueName || "상영관"} 즐겨찾기 ${favorite ? "해제" : "추가"}`;
-    const colorClass = favorite ? "text-primary" : "text-on-surface-variant hover:text-primary";
-    return `
-      <button class="inline-flex shrink-0 items-center justify-center rounded-full bg-transparent transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary/40 ${colorClass} ${extraClass}" type="button" data-favorite-venue="${escapeHtml(venueId)}" aria-pressed="${favorite}" aria-label="${escapeHtml(title)}" title="${escapeHtml(title)}">
-        ${iconMarkup(favorite ? "star-fill" : "star")}
-      </button>
-    `;
-  }
-
-  function venueMarkSizeClass(id, compact = false) {
-    if (id === "sac") return compact ? "max-h-8 max-w-[118px]" : "max-h-10 max-w-[160px]";
-    if (compactVenueMarks.has(id)) return compact ? "max-h-9 max-w-[54px]" : "max-h-10 max-w-[70px]";
-    return compact ? "max-h-7 max-w-[86px]" : "max-h-8 max-w-[126px]";
-  }
-
-  function venueMarkHtml(item, compact = false) {
-    if (item.id === "all") {
-      return `
-        <span class="flex ${compact ? "h-8 w-8" : "h-10 w-10"} items-center justify-center border border-primary/10 bg-primary text-surface">
-          ${iconMarkup("film", compact ? "ui-icon-sm" : "")}
-        </span>
-      `;
-    }
-
-    const source = venueMarkAssets[item.id];
-    const markLabel = venueMarkText[item.id] || item.name || "상영관";
-    const maxClass = venueMarkSizeClass(item.id, compact);
-
-    if (!source) {
-      return `
-        <span class="flex ${compact ? "h-7 min-w-7 px-1 text-[10px]" : "h-10 min-w-10 px-2 text-[11px]"} items-center justify-center border border-primary/10 font-bold tracking-normal text-primary">
-          ${escapeHtml(markLabel)}
-        </span>
-      `;
-    }
-
-    return `
-      <img class="venue-mark ${maxClass} object-contain" src="${escapeHtml(source)}" alt="${escapeHtml(item.name)} 로고" width="${compact ? 86 : 126}" height="${compact ? 28 : 40}" loading="lazy" decoding="async" />
-    `;
+    return `<button class="star" type="button" data-favorite-venue="${escapeHtml(venueId)}" aria-pressed="${favorite}" aria-label="${escapeHtml(title)}" title="${escapeHtml(title)}">${iconMarkup(favorite ? "star-fill" : "star")}</button>`;
   }
 
   function toggleFavoriteVenue(venueId) {
@@ -318,17 +267,12 @@ import { isPastKstSession } from "./src/session-time.mjs";
     return `https://map.naver.com/p/search/${encodeURIComponent(query)}`;
   }
 
-  function venueInfoHtml(venue, fallback = "상영일 운영 | 서울", compact = false) {
+  function venueInfoHtml(venue, fallback = "상영일 운영 · 서울") {
     if (!venue) return escapeHtml(fallback);
     const closedDay = venueClosedDays[venue.id] || "상영일 운영";
     const address = venueAddress(venue);
     const venueName = venue.name || "상영관";
-    return `
-      <span>
-        ${escapeHtml(closedDay)} |
-        <a class="text-on-surface-variant underline decoration-primary/20 underline-offset-2 transition-colors hover:text-primary hover:decoration-primary" href="${escapeHref(naverMapUrl(venue))}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${address} · ${venueName} 네이버 지도 열기`)}" title="네이버맵에서 주소 보기">${escapeHtml(address)}</a>
-      </span>
-    `;
+    return `${escapeHtml(closedDay)}<span class="sep" aria-hidden="true">·</span><a href="${escapeHref(naverMapUrl(venue))}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${address} · ${venueName} 네이버 지도 열기`)}" title="네이버 지도에서 주소 보기">${escapeHtml(address)}</a>`;
   }
 
   // For display only: parse as local midnight so calendar getters return the
@@ -524,10 +468,6 @@ import { isPastKstSession } from "./src/session-time.mjs";
     return parseLocalDate(dateString).getDay() === 0;
   }
 
-  function dateToneClass(dateString, fallback = "text-primary") {
-    return isSunday(dateString) ? "text-error" : fallback;
-  }
-
   function getSourcesByVenue() {
     return groupBy(state.data?.sources || [], (source) => source.venueId || "unknown");
   }
@@ -536,36 +476,29 @@ import { isPastKstSession } from "./src/session-time.mjs";
     return Object.fromEntries((state.data?.sources || []).map((source) => [source.id, source]));
   }
 
-  function updateMeta() {
-    const dates = getUpcomingDates();
-    let range = state.data?.meta?.rangeLabel || "상영 일정 확인 중";
-    if (dates.length) {
-      const first = parseLocalDate(dates[0]);
-      const last = parseLocalDate(dates[dates.length - 1]);
-      range =
-        first.getMonth() === last.getMonth()
-          ? `${first.getFullYear()}년 ${first.getMonth() + 1}월`
-          : `${first.getFullYear()}년 ${first.getMonth() + 1}월 - ${last.getMonth() + 1}월`;
-    }
+  function updateMeta(filtered = getFilteredSessions()) {
+    const activeDate = activeDateFilter();
+    const title = activeDate ? longDateLabel(activeDate) : "전체 일정";
+    const venueCount = new Set(filtered.map((session) => session.venueId).filter(Boolean)).size;
+    const summary = filtered.length
+      ? `${venueCount.toLocaleString("ko-KR")}개관에서 ${filtered.length.toLocaleString("ko-KR")}회 상영해요`
+      : "조건에 맞는 회차가 없어요";
+    const status = dataStatusText();
 
-    $("#desktopScheduleTitle").textContent = "상영시간표";
-    $("#desktopMonth").textContent = range;
+    const desktopTitle = $("#desktopScheduleTitle");
+    if (desktopTitle) desktopTitle.textContent = title;
+    const desktopSummary = $("#desktopMonth");
+    if (desktopSummary) desktopSummary.textContent = summary;
     const dataStatus = $("#desktopDataStatus");
     if (dataStatus) {
-      const verifiedAt = formatVerifiedAt(state.data?.meta?.lastVerifiedAt || state.data?.meta?.generatedAt);
-      const venueCount = (state.data?.venues || []).length;
-      dataStatus.textContent = usesBrowserLive(state.data)
-        ? `${venueCount - browserLiveConfigs.length}개관 시간표 ${verifiedAt} 기준 · ${browserLiveConfigs.length}개관 실시간 조회`
-        : verifiedAt ? `${verifiedAt} 기준, ${venueCount}개 상영관` : `${venueCount}개 상영관`;
+      dataStatus.textContent = status;
+      dataStatus.previousElementSibling?.classList.toggle("hidden", !status);
     }
     renderBrowserLiveStatus();
     const mobileHeading = $("#mobileScheduleHeading");
-    if (mobileHeading) {
-      const filterLabel = state.linkFilter === "all" ? "" : `${actionLabel({ bookingType: state.linkFilter })} `;
-      if (state.view === "film") mobileHeading.textContent = "영화별 상영";
-      else if (state.view === "venue") mobileHeading.textContent = "상영관별 시간표";
-      else mobileHeading.textContent = `${filterLabel}상영시간표`;
-    }
+    if (mobileHeading) mobileHeading.textContent = title;
+    const mobileSub = $("#mobileScheduleSub");
+    if (mobileSub) mobileSub.textContent = [summary, status].filter(Boolean).join(" · ");
   }
 
   function startBrowserLiveRefresh(base) {
@@ -603,16 +536,16 @@ import { isPastKstSession } from "./src/session-time.mjs";
       if (!notice) {
         notice = document.createElement("div");
         notice.id = `${id}LiveStatus`;
-        notice.className = `border border-primary/10 bg-surface-container-lowest p-4 text-sm text-on-surface-variant${id === "mobile" ? " mx-6" : ""}`;
+        notice.className = "notice";
         notice.setAttribute("role", "status");
         notice.setAttribute("aria-live", "polite");
         document.getElementById(`${id}Schedule`).before(notice);
       }
       const links = failures.map((row) => {
         const config = browserLiveConfigs.find((item) => item.venueId === row.venueId);
-        return `<a class="underline" href="${escapeHtml(safePublicUrl(config.officialUrl))}" target="_blank" rel="noopener noreferrer">${escapeHtml(config.name)}</a>`;
+        return `<a href="${escapeHtml(safePublicUrl(config.officialUrl))}" target="_blank" rel="noopener noreferrer">${escapeHtml(config.name)}</a>`;
       });
-      notice.innerHTML = `${completeCount}/${browserLiveConfigs.length}개관 실시간 확인 · 연결되지 않은 영화관은 공식 시간표를 확인해 주세요: ${links.join(" · ")} <button class="underline" type="button" data-retry-browser-live>다시 확인</button>`;
+      notice.innerHTML = `${completeCount}/${browserLiveConfigs.length}개관 실시간 확인 · 연결되지 않은 영화관은 공식 시간표를 확인해 주세요: ${links.join(" · ")} <button type="button" data-retry-browser-live>다시 확인</button>`;
       notice.querySelector("button").onclick = () => refreshScheduleData({ force: true });
     }
   }
@@ -693,7 +626,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
       const remoteFallback = optimizedPosterSource(safeImageUrl(item?.posterSourceUrl || ""));
       const fallbackSrc = src !== originalSrc ? originalSrc : remoteFallback && remoteFallback !== src ? remoteFallback : "";
       const fallbackAttribute = fallbackSrc ? ` data-poster-fallback-src="${escapeHtml(fallbackSrc)}"` : "";
-      return `<img alt="${escapeHtml(title)}" class="${className}" src="${escapeHtml(src)}" width="400" height="600" loading="${priority ? "eager" : "lazy"}" decoding="async" ${priority ? 'fetchpriority="high"' : ""} referrerpolicy="no-referrer" data-poster-title="${escapeHtml(title)}" data-poster-kicker="${escapeHtml(kicker)}"${fallbackAttribute} />`;
+      return `<img alt="${options.decorative ? "" : escapeHtml(title)}" class="${className}" src="${escapeHtml(src)}" width="400" height="600" loading="${priority ? "eager" : "lazy"}" decoding="async" ${priority ? 'fetchpriority="high"' : ""} referrerpolicy="no-referrer" data-poster-title="${escapeHtml(title)}" data-poster-kicker="${escapeHtml(kicker)}"${fallbackAttribute} />`;
     }
 
     return posterFallbackHtml(title, className, kicker);
@@ -743,25 +676,6 @@ import { isPastKstSession } from "./src/session-time.mjs";
     return ratingLabel(session) || "INFO";
   }
 
-  function ageClass(label) {
-    if (label === "FEST") return "bg-badge-fest text-white";
-    if (label === "GV") return "bg-primary text-surface";
-    if (label === "19") return "bg-badge-19 text-white";
-    if (label === "15") return "bg-badge-15 text-white";
-    if (label === "12") return "bg-rating-12 text-white";
-    if (label === "INFO") return "bg-outline-variant text-primary";
-    return "bg-rating-all text-white";
-  }
-
-  function ageBadgeClass(label) {
-    const sizeClass = "inline-flex h-5 min-w-10 items-center justify-center px-2 text-[11px]";
-    return `${sizeClass} ${ageClass(label)} shrink-0 rounded-sm font-bold leading-none`;
-  }
-
-  function ageBadgeTitleOffset() {
-    return "mt-1";
-  }
-
   function cleanTime(session) {
     return session.time || "시간 확인";
   }
@@ -771,10 +685,6 @@ import { isPastKstSession } from "./src/session-time.mjs";
     const month = String(date.getMonth() + 1).padStart(2, "0");
     const day = String(date.getDate()).padStart(2, "0");
     return `${month}.${day}`;
-  }
-
-  function scheduleTimeText(session) {
-    return activeDateFilter() ? cleanTime(session) : `${shortDate(session.date)} | ${cleanTime(session)}`;
   }
 
   function sessionSortKey(session) {
@@ -801,12 +711,6 @@ import { isPastKstSession } from "./src/session-time.mjs";
     if (!unique.length) return "";
     const rest = unique.length - limit;
     return `${unique.slice(0, limit).join(" / ")}${rest > 0 ? ` 외 ${rest}` : ""}`;
-  }
-
-  function displayScheduleTitle(value, limit = 16) {
-    const text = String(value || "").trim();
-    const chars = Array.from(text);
-    return chars.length > limit ? `${chars.slice(0, limit).join("")}...` : text;
   }
 
   function groupedSessionEntries(sessions, getKey, options = {}) {
@@ -849,63 +753,6 @@ import { isPastKstSession } from "./src/session-time.mjs";
     return { left, total, step, low: left <= 10 || ratio <= 0.2 };
   }
 
-  function seatBarMarkup(session) {
-    const seat = seatInfo(session);
-    if (!seat) return "";
-    return `<span class="seat-bar${seat.low ? " is-low" : ""}" aria-hidden="true"><span class="seat-fill seat-f-${seat.step}"></span></span>`;
-  }
-
-  function seatGaugeMarkup(seat, compact = false) {
-    return `
-      <span class="seat-gauge${seat.low ? " is-low" : ""}${compact ? " is-compact" : ""}">
-        <span class="seat-track" aria-hidden="true"><span class="seat-fill seat-f-${seat.step}"></span></span>
-        <span class="seat-count">${seat.low ? "마감 임박 · " : ""}잔여 ${seat.left}/${seat.total}석</span>
-      </span>`;
-  }
-
-  function timeLink(session, extraClasses = "", options = {}) {
-    const past = isPastSession(session);
-    const soldout = isSoldoutSession(session);
-    const withSubLabel = options.withSubLabel ?? false;
-    const subLabel = soldout ? statusLabels.soldout : actionLabel(session);
-    const timeText = scheduleTimeText(session);
-    const title = `${session.title || "상영"} ${timeText} ${subLabel}`;
-    const url = actionUrl(session);
-    if (soldout) {
-      return `
-        <span class="time-btn time-soldout ${extraClasses}" aria-label="${escapeHtml(`${session.title || "상영"} ${timeText} 매진`)}" title="매진">
-          <span class="font-schedule-time text-sm leading-none whitespace-nowrap">${escapeHtml(timeText)}</span>
-          <span class="time-soldout-label whitespace-nowrap">매진</span>
-        </span>
-      `;
-    }
-
-    if (past) {
-      return `
-        <span class="time-btn time-ended ${extraClasses}" aria-label="${escapeHtml(`${session.title || "상영"} ${timeText} 종료`)}" title="상영 종료">
-          <span class="font-schedule-time text-sm leading-none whitespace-nowrap">${escapeHtml(timeText)}</span>
-        </span>
-      `;
-    }
-
-    if (url === "#") {
-      return `
-        <span class="time-btn time-ended ${extraClasses}" aria-label="${escapeHtml(`${session.title || "상영"} ${timeText} 링크 확인 필요`)}" title="링크 확인 필요">
-          <span class="font-schedule-time text-sm leading-none whitespace-nowrap">${escapeHtml(timeText)}</span>
-          ${withSubLabel ? `<span class="text-[10px] font-label-caps uppercase whitespace-nowrap">확인중</span>` : ""}
-        </span>
-      `;
-    }
-
-    return `
-      <a class="time-btn ${extraClasses}" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(title)}${seatInfo(session) ? escapeHtml(` 잔여 ${seatInfo(session).left}석`) : ""}">
-        ${seatBarMarkup(session)}
-        <span class="font-schedule-time text-sm leading-none whitespace-nowrap">${escapeHtml(timeText)}</span>
-        ${withSubLabel ? `<span class="text-[10px] font-label-caps uppercase whitespace-nowrap">${escapeHtml(subLabel)}</span>` : ""}
-      </a>
-    `;
-  }
-
   function renderDateBars() {
     const dates = getUpcomingDates();
     const venues = venueMap();
@@ -920,81 +767,24 @@ import { isPastKstSession } from "./src/session-time.mjs";
       .filter((session) => matchesSearch(session, venues, query));
     const sessionsByDate = countBy(dateCountSessions, (session) => session.date);
     const totalSessions = dateCountSessions.length;
-    const desktopAllActive = !activeDate;
     const mobileLayout = isMobileViewport();
+    const target = mobileLayout ? $("#mobileDateBar") : $("#desktopDateBar");
+    (mobileLayout ? $("#desktopDateBar") : $("#mobileDateBar"))?.replaceChildren();
+    if (!target) return;
 
-    if (mobileLayout) {
-      $("#desktopDateBar")?.replaceChildren();
-      const mobileMonthDate = activeDate || dates[0] || todayDate;
-      const mobileMonthParsed = parseLocalDate(mobileMonthDate);
-      const mobileMonth = monthNames[mobileMonthParsed.getMonth()] || "";
-      const mobileMonthNumber = String(mobileMonthParsed.getMonth() + 1).padStart(2, "0");
-      const mobileMonthTarget = $("#mobileDateMonth");
-      if (mobileMonthTarget) {
-        mobileMonthTarget.innerHTML = `
-          <strong class="mobile-date-month-number">${escapeHtml(mobileMonthNumber)}</strong>
-          <span class="mobile-date-month-label mobile-kicker">${escapeHtml(mobileMonth)}</span>
-        `;
-      }
+    const allButton = todayMode
+      ? ""
+      : `<button class="date is-all${activeDate ? "" : " is-on"}" type="button" data-date="" aria-pressed="${!activeDate}" aria-label="${escapeHtml(`전체 날짜 ${totalSessions.toLocaleString("ko-KR")}회`)}"><span class="wd">전체</span><span class="d">${totalSessions.toLocaleString("ko-KR")}</span><span class="c">회</span></button>`;
 
-      const mobileAllButton = `
-        <button class="mobile-date-item flex h-[72px] min-w-[62px] flex-col items-center justify-center transition-opacity ${
-          !activeDate ? "border-b-2 border-primary text-primary" : "text-on-surface-variant hover:text-primary"
-        }" type="button" data-date="" aria-pressed="${!activeDate}" aria-label="ALL ${totalSessions.toLocaleString("ko-KR")} 회차, 전체 날짜">
-          <span class="mobile-kicker">ALL</span>
-          <span class="text-2xl font-bold leading-none">${totalSessions.toLocaleString("ko-KR")}</span>
-          <span class="mobile-kicker">회차</span>
-        </button>
-      `;
-
-      $("#mobileDateBar").innerHTML = (todayMode ? "" : mobileAllButton) + dates
-        .map((date) => {
-          const parsed = parseLocalDate(date);
-          const active = activeDate === date;
-          const sunday = isSunday(date);
-          const stateClass = active
-            ? `border-b-2 ${sunday ? "border-error text-error" : "border-primary text-primary"}`
-            : `${sunday ? "text-error" : "text-on-surface-variant"} hover:text-primary`;
-          const count = sessionsByDate[date] || 0;
-          return `
-            <button class="mobile-date-item flex h-[72px] min-w-[54px] flex-col items-center justify-center transition-colors ${stateClass}" type="button" data-date="${escapeHtml(date)}" aria-pressed="${active}" ${date === todayDate ? 'aria-current="date"' : ""} aria-label="${escapeHtml(`${parsed.getDate()} ${date === todayDate ? "오늘" : weekdays[parsed.getDay()]} · ${count}, ${parsed.getMonth() + 1}월 ${parsed.getDate()}일`)}">
-              <span class="text-2xl font-bold leading-none">${parsed.getDate()}</span>
-              <span class="mobile-kicker mt-2">${date === todayDate ? "오늘" : weekdays[parsed.getDay()]} · ${count}</span>
-            </button>
-          `;
-        })
-        .join("");
-      return;
-    }
-
-    $("#mobileDateBar")?.replaceChildren();
-    const desktopAllButton = `
-      <button class="flex-shrink-0 flex flex-col items-center justify-center w-20 h-16 rounded-sm transition-colors cursor-pointer border border-transparent ${
-        desktopAllActive ? "bg-primary text-surface" : "text-on-surface-variant hover:bg-primary/5 hover:border-primary/10"
-      }" type="button" data-date="" aria-pressed="${desktopAllActive}" aria-label="전체 ${totalSessions.toLocaleString("ko-KR")} 회차, 전체 날짜">
-        <span class="text-[10px] font-medium mb-1">전체</span>
-        <span class="text-lg font-bold">${totalSessions.toLocaleString("ko-KR")}</span>
-        <span class="text-[10px]">회차</span>
-      </button>
-    `;
-
-    $("#desktopDateBar").innerHTML = (todayMode ? "" : desktopAllButton) + dates
+    target.innerHTML = allButton + dates
       .map((date) => {
         const parsed = parseLocalDate(date);
         const active = activeDate === date;
-        const sunday = parsed.getDay() === 0;
-        const label = date === todayDate ? "오늘" : weekdays[parsed.getDay()];
-        const inactiveClass = sunday ? "text-error" : "text-on-surface-variant";
+        const today = date === todayDate;
         const count = sessionsByDate[date] || 0;
-        return `
-          <button class="flex-shrink-0 flex flex-col items-center justify-center w-16 h-16 rounded-sm transition-colors cursor-pointer border border-transparent ${
-            active ? "bg-primary text-surface" : `${inactiveClass} hover:bg-primary/5 hover:border-primary/10`
-          }" type="button" data-date="${escapeHtml(date)}" aria-pressed="${active}" ${date === todayDate ? 'aria-current="date"' : ""} aria-label="${escapeHtml(`${label} ${parsed.getDate()} ${count}회, ${parsed.getMonth() + 1}월 ${parsed.getDate()}일`)}">
-            <span class="text-[10px] font-medium mb-1">${escapeHtml(label)}</span>
-            <span class="text-lg font-bold">${parsed.getDate()}</span>
-            <span class="text-[10px]">${count.toLocaleString("ko-KR")}회</span>
-          </button>
-        `;
+        const classes = ["date", active ? "is-on" : "", isSunday(date) ? "is-sun" : ""].filter(Boolean).join(" ");
+        const label = `${parsed.getMonth() + 1}월 ${parsed.getDate()}일 ${weekdays[parsed.getDay()]}요일${today ? " 오늘" : ""}, ${count}회`;
+        return `<button class="${classes}" type="button" data-date="${escapeHtml(date)}" aria-pressed="${active}" ${today ? 'aria-current="date"' : ""} aria-label="${escapeHtml(label)}"><span class="wd">${today ? "오늘" : weekdays[parsed.getDay()]}</span><span class="d">${parsed.getDate()}</span><span class="c">${count.toLocaleString("ko-KR")}회</span></button>`;
       })
       .join("");
   }
@@ -1003,15 +793,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
     document.querySelectorAll("[data-view]").forEach((button) => {
       const active = button.dataset.view === state.view;
       button.setAttribute("aria-pressed", String(active));
-      if (button.dataset.toggleStyle === "mobile") {
-        button.className = active
-          ? "min-w-0 w-full py-2 text-center text-label-caps uppercase bg-surface text-primary border border-outline-variant/20"
-          : "min-w-0 w-full py-2 text-center text-label-caps uppercase text-on-surface-variant";
-        return;
-      }
-      button.className = active
-        ? "px-6 py-2 text-sm font-bold bg-primary text-surface rounded-sm transition-colors"
-        : "px-6 py-2 text-sm text-on-surface-variant hover:text-primary transition-colors rounded-sm";
+      button.classList.toggle("is-on", active);
     });
   }
 
@@ -1020,7 +802,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
   }
 
   function navOffset() {
-    return isMobileViewport() ? 88 : 92;
+    return isMobileViewport() ? 72 : 84;
   }
 
   function visibleNavIds() {
@@ -1046,21 +828,8 @@ import { isPastKstSession } from "./src/session-time.mjs";
     if (activeId === lastNavActiveId) return;
     lastNavActiveId = activeId;
     document.querySelectorAll("[data-nav-target]").forEach((link) => {
-      const active = link.dataset.navTarget === activeId;
-      if (active) link.setAttribute("aria-current", "location");
+      if (link.dataset.navTarget === activeId) link.setAttribute("aria-current", "location");
       else link.removeAttribute("aria-current");
-      if (link.dataset.navKind === "desktop") {
-        link.className = active
-          ? "font-body-md text-sm font-bold text-primary border-b-2 border-primary pb-1 transition-colors"
-          : "font-body-md text-sm text-on-surface-variant hover:text-primary border-b-2 border-transparent pb-1 transition-colors";
-        return;
-      }
-
-      link.className = active
-        ? "min-w-0 w-full h-full flex flex-col items-center justify-center gap-1 text-primary"
-        : "min-w-0 w-full h-full flex flex-col items-center justify-center gap-1 text-on-surface-variant";
-      const label = link.querySelector("span:last-child");
-      if (label) label.classList.toggle("font-bold", active);
     });
   }
 
@@ -1080,7 +849,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
       button.setAttribute("aria-pressed", String(dark));
       button.setAttribute("aria-label", dark ? "야간 모드 끄기" : "야간 모드 켜기");
     });
-    document.querySelector('meta[name="theme-color"]')?.setAttribute("content", dark ? "#141312" : "#fdf8f6");
+    document.querySelector('meta[name="theme-color"]')?.setAttribute("content", dark ? "#1c1c21" : "#ffffff");
   }
 
   function toggleTheme() {
@@ -1112,7 +881,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
     const id = venueAnchorId(venueId);
     const target = document.getElementById(id);
     if (!target) return false;
-    const offset = navOffset() + (isMobileViewport() ? 72 : 0);
+    const offset = navOffset() + (isMobileViewport() ? 64 : 0);
     const top = target.getBoundingClientRect().top + window.scrollY - offset;
     window.scrollTo({ top: Math.max(0, top), behavior });
     setNavActive(isMobileViewport() ? "mobile-schedule" : "schedule");
@@ -1147,16 +916,6 @@ import { isPastKstSession } from "./src/session-time.mjs";
     });
   }
 
-  function timeChipClass(session, variant = "desktop") {
-    const minWidth = activeDateFilter() ? "min-w-20" : "min-w-28";
-    const size =
-      variant === "mobile"
-        ? `flex flex-col items-center justify-center ${minWidth} h-10 px-2 whitespace-nowrap`
-        : `flex flex-col items-center justify-center ${minWidth} h-10 px-3 whitespace-nowrap`;
-    if (session.bookingType === "booking") return `${size} bg-primary text-surface`;
-    return `${size} border border-primary/20 text-primary bg-surface`;
-  }
-
   function isPastTimedItem(item) {
     return isPastKstSession(item);
   }
@@ -1169,79 +928,6 @@ import { isPastKstSession } from "./src/session-time.mjs";
     if (!session) return false;
     const text = [session.status, session.actionLabel, session.summary, ...(session.tags || [])].filter(Boolean).join(" ");
     return session.status === "soldout" || text.includes("매진") || /sold\s*out/i.test(text);
-  }
-
-  function sessionMeta(sessions, venue, mode = state.view) {
-    const programs = compactValues(sessions.map((session) => session.program), 2);
-    const screens = compactValues(sessions.map((session) => session.screen || "상영관"), 2);
-    const dates = activeDateFilter() ? "" : compactValues(sessions.map((session) => shortDate(session.date)), 3);
-
-    if (mode === "film") {
-      return [venue?.area || venue?.type || "", programs, screens].filter(Boolean).join(" · ");
-    }
-
-    return [programs, screens, dates].filter(Boolean).join(" · ");
-  }
-
-  function desktopRow(group, venues) {
-    const sessions = group.sessions;
-    const first = sessions[0];
-    const venue = venues[first.venueId];
-    const label = ageLabel(first);
-    const title = state.view === "film" ? venue?.name || first.screen || "상영관" : first.title;
-    const displayTitle = displayScheduleTitle(title);
-    const meta = sessionMeta(sessions, venue);
-    const officialUrl = venueOfficialUrl(venue);
-    const titleMarkup =
-      state.view === "film"
-        ? officialUrl
-          ? `<a class="block max-w-full truncate text-left text-base font-bold text-primary hover:underline" href="${escapeHtml(officialUrl)}" target="_blank" rel="noopener noreferrer" title="${escapeHtml(`${title} 공식 사이트`)}">${escapeHtml(displayTitle)}</a>`
-          : `<span class="block max-w-full truncate text-base font-bold text-primary" title="${escapeHtml(title)}">${escapeHtml(displayTitle)}</span>`
-        : `<h4 class="block max-w-full truncate text-base font-bold text-primary leading-tight" title="${escapeHtml(title)}">${escapeHtml(displayTitle)}</h4>`;
-    return `
-      <div class="min-w-0 py-4 border-t border-primary/10 hover:bg-primary/[0.025] transition-colors">
-        <div class="flex items-start justify-between gap-3">
-          <div class="min-w-0 flex items-start gap-2">
-            <span class="${ageBadgeClass(label, true)} ${ageBadgeTitleOffset(true)}">${escapeHtml(label)}</span>
-            <span class="min-w-0">
-              ${titleMarkup}
-              <span class="block mt-1 text-xs text-on-surface-variant leading-relaxed">${escapeHtml(meta)}</span>
-            </span>
-          </div>
-          <span class="shrink-0 pt-1 text-[10px] font-label-caps text-on-surface-variant uppercase">${sessions.length}타임</span>
-        </div>
-        <div class="mt-3 min-w-0 flex flex-wrap gap-2">
-          ${sessions.map((session) => timeLink(session, `${timeChipClass(session)} font-schedule-time`)).join("")}
-        </div>
-      </div>
-    `;
-  }
-
-  function desktopSectionTitle(key, title, meta, cardGroups, sessions) {
-    const venues = venueMap();
-    const venue = venues[key];
-    const infoLineMarkup = state.view === "venue" && venue ? venueInfoHtml(venue) : escapeHtml(meta);
-    const officialUrl = venueOfficialUrl(venue);
-    const titleContent =
-      state.view === "venue"
-        ? officialUrl
-          ? `<a class="block max-w-full truncate text-left text-2xl font-bold font-display-lg text-primary hover:underline" href="${escapeHtml(officialUrl)}" target="_blank" rel="noopener noreferrer" title="${escapeHtml(`${title} 공식 사이트`)}">${escapeHtml(title)}</a>`
-          : `<h3 class="block max-w-full truncate text-2xl font-bold font-display-lg text-primary" title="${escapeHtml(title)}">${escapeHtml(title)}</h3>`
-        : `<h3 class="block max-w-full truncate text-2xl font-bold font-display-lg text-primary" title="${escapeHtml(title)}">${escapeHtml(title)}</h3>`;
-    const favoriteMarkup = state.view === "venue" && venue ? favoriteVenueButton(key, title, "h-9 w-9") : "";
-
-    return `
-      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-2 border-b-2 border-primary pb-3">
-        <div class="min-w-0 overflow-hidden">
-          <div class="flex min-w-0 items-center gap-3">
-            <div class="min-w-0">${titleContent}</div>
-            ${favoriteMarkup}
-          </div>
-          <p class="mt-2 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-on-surface-variant leading-relaxed">${infoLineMarkup}</p>
-        </div>
-        <span class="text-sm text-on-surface-variant">${cardGroups.length}${state.view === "film" ? "곳" : "편"} · ${sessions.length}회차</span>
-      </div>
-    `;
   }
 
   function splitSessionMetaValues(session) {
@@ -1286,330 +972,404 @@ import { isPastKstSession } from "./src/session-time.mjs";
     return values.find((value) => isRuntimeMeta(value)) || "";
   }
 
-  function agendaMeta(session, venue) {
-    const hasGauge = Boolean(seatInfo(session));
-    const values = splitSessionMetaValues(session).filter((value) => {
-      if (hasGauge && seatMeta([value])) return false;
-      if (isScreenMeta(value, session, venue) || isAgeMeta(value)) return false;
-      if (isSoldoutSession(session) && (value.includes("매진") || value.includes("예매할 수 없습니다"))) return false;
-      return true;
-    });
-    const conciseValues = uniqueValues([seatMeta(values), runtimeMeta(values), screeningTypeMeta(values), formatMeta(values)]);
-    if (conciseValues.length) return conciseValues.join(" · ");
-    return values.join(" · ");
-  }
-
-  function agendaRow(session, venues, compact = false) {
+  function agendaRow(session, venues) {
     const venue = venues[session.venueId];
-    const label = ageLabel(session);
-    const meta = agendaMeta(session, venue);
-    const screenLabel = session.screen || venue?.area || "상영관";
-    const detailMeta = compact ? uniqueValues([screenLabel, meta]).join(" · ") : meta || venue?.name || "";
-    const past = isPastSession(session);
     const soldout = isSoldoutSession(session);
-    const displayTitle = displayScheduleTitle(session.title || "제목 확인");
-    const url = actionUrl(session);
-    const interactive = !past && !soldout && url !== "#";
-    const statusLabel = soldout ? statusLabels.soldout : past ? "종료" : actionLabel(session);
-    const statusClass = past
-      ? "border border-outline/40 text-on-surface-variant bg-surface-container-low"
-      : soldout
-        ? "border border-error/30 text-error bg-surface-container-low"
-      : session.bookingType === "booking"
-        ? "bg-primary text-surface"
-        : "border border-primary/20 text-primary";
-    const titleClass = past ? "text-on-surface-variant line-through decoration-1" : soldout ? "text-on-surface-variant" : "text-primary";
-    const timeClass = past || soldout ? "text-on-surface-variant" : "text-error";
-    const rowClass = compact
-      ? "block py-4 border-t border-outline-variant/20"
-      : "block border border-primary/10 bg-surface-container-lowest px-4 py-4 transition-colors hover:border-primary/25 hover:bg-surface";
-
+    const start = kstSessionStartMs(session);
+    const gv = ageLabel(session) === "GV";
+    const title = session.title || "제목 확인";
     return `
-      <div class="${rowClass}">
-        <div class="${compact ? "flex items-start gap-3" : "grid grid-cols-[5.5rem_minmax(0,1fr)_auto] gap-5 items-start"}">
-          <span class="${compact ? "w-16" : ""} shrink-0">
-            <strong class="block font-schedule-time text-lg leading-none tabular-nums ${timeClass}">${escapeHtml(cleanTime(session))}</strong>
-            ${compact ? "" : `<span class="mt-2 block text-xs text-on-surface-variant">${escapeHtml(screenLabel)}</span>`}
-          </span>
-          <span class="min-w-0">
-            <span class="flex min-w-0 items-start gap-2">
-              <span class="${ageBadgeClass(label, compact)} ${ageBadgeTitleOffset(compact)}">${escapeHtml(label)}</span>
-              <strong class="block min-w-0 ${compact ? "mobile-row-title" : "text-lg leading-[22px]"} ${titleClass} truncate" title="${escapeHtml(session.title || "")}">${escapeHtml(displayTitle)}</strong>
-            </span>
-            <span class="${compact ? "mobile-meta mt-1 block break-keep" : "mt-2 block text-sm text-on-surface-variant"}">${escapeHtml(detailMeta)}</span>
-            ${seatInfo(session) ? seatGaugeMarkup(seatInfo(session), compact) : ""}
-          </span>
-          <span class="${compact ? "ml-auto flex shrink-0 flex-col gap-2" : "flex shrink-0 flex-col items-stretch gap-2"}">
-            ${
-              interactive
-                ? `<a class="inline-flex min-w-[3.25rem] justify-center px-3 py-1.5 text-xs font-label-caps ${statusClass}" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(statusLabel)}</a>`
-                : `<span class="inline-flex min-w-[3.25rem] justify-center px-3 py-1.5 text-xs font-label-caps ${statusClass}">${escapeHtml(statusLabel)}</span>`
-            }
-          </span>
+      <div class="row${soldout ? " is-soldout" : ""}"${start ? ` data-start="${start}"` : ""}>
+        ${thumbMarkup(session)}
+        <div class="what">
+          <p class="title"><span class="t">${escapeHtml(cleanTime(session))}</span><span class="tt" title="${escapeHtml(title)}">${escapeHtml(title)}</span>${gv ? '<span class="tag-gv">GV</span>' : ""}${start ? '<span class="soon" data-soon hidden></span>' : ""}</p>
+          <p class="meta">${rateBadgeMarkup(session)}${rowMetaMarkup(session, venue)}</p>
         </div>
-      </div>
-    `;
+        ${bookMarkup(session)}
+      </div>`;
   }
 
   function agendaVenueSection(key, sessions, compact = false) {
     const venues = venueMap();
-    const venue = venues[key];
-    const venueName = venue?.name || key || "상영관";
-    const anchorId = venueAnchorId(key, compact ? "mobile" : "desktop");
     const sorted = sortSessions(sessions);
-    const officialUrl = venueOfficialUrl(venue);
-    const titleClass = compact ? "mobile-card-title" : "text-2xl font-bold font-display-lg";
-    const titleContent = officialUrl
-      ? `<a class="block max-w-full truncate text-left text-primary hover:underline" href="${escapeHtml(officialUrl)}" target="_blank" rel="noopener noreferrer" title="${escapeHtml(`${venueName} 공식 사이트`)}">${escapeHtml(venueName)}</a>`
-      : escapeHtml(venueName);
-    const titleMarkup = `<h3 class="block max-w-full truncate ${titleClass} text-primary" title="${escapeHtml(venueName)}">${titleContent}</h3>`;
-    const favoriteMarkup = venue ? favoriteVenueButton(key, venueName, "h-9 w-9") : "";
-    const favorite = isFavoriteVenue(key);
-    const shellClass = compact
-      ? `border-b border-outline-variant/20 pb-5 scroll-mt-40 ${favorite ? "bg-primary/[0.035] -mx-4 px-4 py-4" : ""}`
-      : `scroll-mt-28 ${favorite ? "border border-primary/25 bg-primary/[0.025] p-4" : ""}`;
-    const headerClass = compact
-      ? "pb-3"
-      : "flex flex-col md:flex-row md:items-end md:justify-between gap-2 border-b-2 border-primary pb-3";
-
-    return `
-      <div id="${escapeHtml(anchorId)}" class="${shellClass}">
-        <div class="${headerClass}">
-          <div class="min-w-0 overflow-hidden">
-            <div class="flex min-w-0 items-center gap-3">
-              <div class="min-w-0">${titleMarkup}</div>
-              ${favoriteMarkup}
-            </div>
-            <p class="${compact ? "mobile-meta mt-2" : "mt-2 text-sm text-on-surface-variant leading-relaxed"} flex flex-wrap items-center gap-x-2 gap-y-1">${venueInfoHtml(venue, "상영일 운영 | 서울", compact)}</p>
-          </div>
-          <span class="${compact ? "mobile-kicker text-on-surface-variant" : "text-sm text-on-surface-variant"}">${sorted.length}회차</span>
-        </div>
-        <div class="${compact ? "" : "agenda-grid"}">
-          ${sorted.map((session) => agendaRow(session, venues, compact)).join("")}
-        </div>
-      </div>
-    `;
-  }
-
-  function renderDesktopTodaySchedule(filtered) {
-    const container = $("#desktopSchedule");
-    const activeDate = activeDateFilter();
-    const groups = groupedSessionEntries(filtered, (session) => session.venueId || "unknown", { sortByFavorites: true });
-
-    if (!groups.length) {
-      container.innerHTML = `<div class="p-10 border-y border-primary/10 bg-surface text-center text-on-surface-variant">${escapeHtml(emptyScheduleMessage(`${formatDate(activeDate)}에 맞는 상영 회차가 없습니다.`))}</div>`;
-      return;
-    }
-
-    container.innerHTML = groups.map((group) => agendaVenueSection(group.key, group.sessions)).join("");
+    return venueCardMarkup(key, venues[key], `${sorted.length}회`, sorted.map((session) => agendaRow(session, venues)).join(""), compact);
   }
 
   function renderDesktopSchedule(filtered) {
-    if (state.view === "today") {
-      renderDesktopTodaySchedule(filtered);
-      return;
-    }
-
-    const venues = venueMap();
-    const groups = groupBy(filtered, (session) => (state.view === "film" ? session.title : session.venueId));
-    const entries =
-      state.view === "venue"
-        ? groupedSessionEntries(filtered, (session) => session.venueId || "unknown", { sortByFavorites: true }).map((group) => [
-            group.key,
-            group.sessions
-          ])
-        : Object.entries(groups);
-    const container = $("#desktopSchedule");
-
-    if (!entries.length) {
-      container.innerHTML = `<div class="p-10 border-y border-primary/10 bg-surface text-center text-on-surface-variant">${escapeHtml(emptyScheduleMessage("조건에 맞는 상영 회차가 없습니다."))}</div>`;
-      return;
-    }
-
-    container.innerHTML = entries
-      .map(([key, sessions]) => {
-        const first = sessions[0];
-        const venue = venues[first.venueId];
-        const title = state.view === "film" ? key : venue?.name || key;
-        const cardGroups = groupedSessionEntries(
-          sessions,
-          (session) => (state.view === "film" ? session.venueId || "unknown" : session.title || "제목 확인"),
-          { sortByFavorites: state.view === "film" }
-        );
-        const meta =
-          state.view === "film"
-            ? compactValues(sessions.map((session) => venues[session.venueId]?.name), 4)
-            : venue?.area || venue?.type || "서울";
-        const anchorId = state.view === "venue" ? venueAnchorId(key, "desktop") : "";
-        return `
-          <div ${anchorId ? `id="${escapeHtml(anchorId)}"` : ""} class="scroll-mt-28">
-            ${desktopSectionTitle(key, title, meta, cardGroups, sessions)}
-            <div class="grid grid-cols-1 xl:grid-cols-2 xl:gap-x-10">
-              ${cardGroups.map((group) => desktopRow(group, venues)).join("")}
-            </div>
-          </div>
-        `;
-      })
-      .join("");
-  }
-
-  function mobileTimeChips(sessions) {
-    return sessions.map((session) => timeLink(session, `${timeChipClass(session, "mobile")} font-schedule-time`, { withSubLabel: false })).join("");
-  }
-
-  function mobileTheaterBlock(venue, sessions) {
-    const first = sessions[0];
-    const meta = sessionMeta(sessions, venue, "film");
-    const venueName = venue?.name || first.screen || "상영관";
-    const favorite = isFavoriteVenue(venue?.id);
-    const officialUrl = venueOfficialUrl(venue);
-    return `
-      <div class="py-3 border-t border-outline-variant/20 ${favorite ? "bg-primary/[0.035] -mx-3 px-3" : ""}">
-        <div class="flex justify-between items-start gap-3">
-          <span class="min-w-0 flex-1">
-            <span class="flex min-w-0 items-start gap-2">
-              <span class="min-w-0">
-                ${
-                  officialUrl
-                    ? `<a class="mobile-row-title block max-w-full truncate text-left text-primary hover:underline" href="${escapeHtml(officialUrl)}" target="_blank" rel="noopener noreferrer" title="${escapeHtml(`${venueName} 공식 사이트`)}">${escapeHtml(venueName)}</a>`
-                    : `<span class="mobile-row-title block max-w-full truncate text-primary" title="${escapeHtml(venueName)}">${escapeHtml(venueName)}</span>`
-                }
-              </span>
-            </span>
-            <span class="mobile-meta block mt-1">${escapeHtml(meta)}</span>
-          </span>
-          <span class="mobile-kicker shrink-0 text-on-surface-variant">${sessions.length}타임</span>
-        </div>
-        <div class="mt-3 flex flex-wrap gap-2">
-          ${mobileTimeChips(sessions)}
-        </div>
-      </div>
-    `;
-  }
-
-  function mobileVenueSessionRow(title, sessions) {
-    const first = sessions[0];
-    const label = ageLabel(first);
-    const meta = sessionMeta(sessions, null, "venue");
-    const fullTitle = title || first.title;
-    const displayTitle = displayScheduleTitle(fullTitle);
-    return `
-      <div class="py-3 border-t border-outline-variant/20">
-        <div class="flex items-start justify-between gap-3">
-          <span class="min-w-0">
-            <span class="flex items-start gap-2 min-w-0">
-              <span class="${ageBadgeClass(label, true)} ${ageBadgeTitleOffset(true)}">${escapeHtml(label)}</span>
-              <strong class="mobile-row-title block min-w-0 truncate text-on-surface" title="${escapeHtml(fullTitle)}">${escapeHtml(displayTitle)}</strong>
-            </span>
-            <span class="mobile-meta block mt-1">${escapeHtml(meta)}</span>
-          </span>
-          <span class="mobile-kicker shrink-0 text-on-surface-variant">${sessions.length}타임</span>
-        </div>
-        <div class="mt-3 flex flex-wrap gap-2">
-          ${mobileTimeChips(sessions)}
-        </div>
-      </div>
-    `;
-  }
-
-  function mobileMovieEntry(title, sessions, index) {
-    const venues = venueMap();
-    const first = sessions[0];
-    const label = ageLabel(first);
-    const venueGroups = groupedSessionEntries(sessions, (session) => session.venueId || "unknown", { sortByFavorites: true });
-    const venueNames = compactValues(sessions.map((session) => venues[session.venueId]?.name), 2);
-    const displayTitle = displayScheduleTitle(title);
-    return `
-      <div class="border-b border-outline-variant/20 pb-5">
-        <div class="min-w-0">
-          <div class="grid grid-cols-[auto_minmax(0,1fr)] items-start gap-x-2">
-            <span class="${ageBadgeClass(label, true)} ${ageBadgeTitleOffset(true, "card")}">${escapeHtml(label)}</span>
-            <span class="min-w-0">
-              <h3 class="mobile-card-title max-w-full truncate text-on-surface" title="${escapeHtml(title)}">${escapeHtml(displayTitle)}</h3>
-            </span>
-            <span class="mobile-meta col-start-2 block mt-1">${escapeHtml(venueNames || first.program || "상영")}</span>
-          </div>
-          <div class="mt-3 flex flex-wrap gap-2">
-            <span class="mobile-kicker text-on-surface-variant">${escapeHtml(kindLabels[first.kind] || first.kind)}</span>
-            <span class="mobile-kicker text-on-surface-variant">${sessions.length}회차</span>
-            <span class="mobile-kicker text-on-surface-variant">${venueGroups.length}곳</span>
-          </div>
-        </div>
-        <div class="mt-3">
-          ${venueGroups.map((group) => mobileTheaterBlock(venues[group.sessions[0].venueId], group.sessions)).join("")}
-        </div>
-      </div>
-    `;
-  }
-
-  function mobileVenueEntry(venue, sessions, index) {
-    const movieGroups = groupedSessionEntries(sessions, (session) => session.title || "제목 확인");
-    const venueName = venue?.name || "상영관";
-    const anchorId = venueAnchorId(venue?.id || sessions[0]?.venueId || index, "mobile");
-    const favoriteMarkup = venue ? favoriteVenueButton(venue.id, venueName, "h-9 w-9") : "";
-    const favorite = isFavoriteVenue(venue?.id);
-    const officialUrl = venueOfficialUrl(venue);
-    return `
-      <div id="${escapeHtml(anchorId)}" class="border-b border-outline-variant/20 pb-5 scroll-mt-40 ${favorite ? "bg-primary/[0.035] -mx-4 px-4 py-4" : ""}">
-        <div class="min-w-0">
-          <div class="flex min-w-0 items-center gap-3">
-            <div class="min-w-0">
-              ${
-                officialUrl
-                  ? `<a class="mobile-card-title block max-w-full truncate text-left text-primary hover:underline" href="${escapeHtml(officialUrl)}" target="_blank" rel="noopener noreferrer" title="${escapeHtml(`${venueName} 공식 사이트`)}">${escapeHtml(venueName)}</a>`
-                  : `<h3 class="mobile-card-title block max-w-full truncate text-primary" title="${escapeHtml(venueName)}">${escapeHtml(venueName)}</h3>`
-              }
-            </div>
-            ${favoriteMarkup}
-          </div>
-          <p class="mobile-meta mt-2 flex flex-wrap items-center gap-x-2 gap-y-1">${venueInfoHtml(venue, "상영일 운영 | 서울", true)}</p>
-          <div class="mt-3 flex flex-wrap gap-2">
-            <span class="mobile-kicker text-on-surface-variant">${sessions.length}회차</span>
-            <span class="mobile-kicker text-on-surface-variant">${movieGroups.length}편</span>
-          </div>
-        </div>
-        <div class="mt-3">
-          ${movieGroups.map((group) => mobileVenueSessionRow(group.key, group.sessions)).join("")}
-        </div>
-      </div>
-    `;
+    $("#desktopSchedule").innerHTML = scheduleMarkup(filtered, false);
   }
 
   function renderMobileSchedule(filtered) {
-    if (state.view === "today") {
-      const activeDate = activeDateFilter();
-      const groups = groupedSessionEntries(filtered, (session) => session.venueId || "unknown", { sortByFavorites: true });
-      $("#mobileSchedule").innerHTML = groups.length
-        ? groups.map((group) => agendaVenueSection(group.key, group.sessions, true)).join("")
-        : `<div class="p-6 border border-outline-variant/20 bg-surface-container-lowest text-center text-on-surface-variant">${escapeHtml(emptyScheduleMessage(`${formatDate(activeDate)}에 맞는 상영 회차가 없습니다.`))}</div>`;
-      return;
-    }
+    $("#mobileSchedule").innerHTML = scheduleMarkup(filtered, true);
+  }
 
+  function longDateLabel(dateString) {
+    const date = parseLocalDate(dateString);
+    if (Number.isNaN(date.getTime())) return "상영시간표";
+    return `${date.getMonth() + 1}월 ${date.getDate()}일 ${weekdays[date.getDay()]}요일`;
+  }
+
+  function dayLabel(dateString) {
+    if (dateString === kstDateString()) return "오늘";
+    const date = parseLocalDate(dateString);
+    if (Number.isNaN(date.getTime())) return "";
+    return `${date.getMonth() + 1}.${date.getDate()} ${weekdays[date.getDay()]}`;
+  }
+
+  function kstClockText(value) {
+    const date = new Date(value || "");
+    if (Number.isNaN(date.getTime())) return "";
+    if (kstDateString(date) !== kstDateString()) return formatVerifiedAt(value);
+    return new Intl.DateTimeFormat("ko-KR", { timeZone: "Asia/Seoul", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).format(date);
+  }
+
+  function dataStatusText() {
+    const meta = state.data?.meta || {};
+    const seatAt = kstClockText(meta.seatStatusVerifiedAt);
+    const verifiedAt = formatVerifiedAt(meta.lastVerifiedAt || meta.generatedAt);
+    const base = seatAt ? `좌석 ${seatAt} 기준` : verifiedAt ? `${verifiedAt} 기준` : "";
+    if (!usesBrowserLive(state.data)) return base;
+    return [base, `${browserLiveConfigs.length}개관 실시간 조회`].filter(Boolean).join(" · ");
+  }
+
+  function posterIndex() {
+    const sessions = state.data?.sessions || [];
+    const trends = Array.isArray(state.communityTrends?.items) ? state.communityTrends.items : [];
+    const cache = posterIndex.cache;
+    if (cache && cache.sessions === sessions && cache.trends === trends) return cache.map;
+    const map = new Map();
+    for (const item of trends) {
+      const key = normalizeTrendTitle(item?.title);
+      if (key && posterSource(item) && !map.has(key)) map.set(key, { posterUrl: posterSource(item), posterSourceUrl: item.posterSourceUrl || "" });
+    }
+    for (const session of sessions) {
+      const key = normalizeTrendTitle(session.title);
+      if (key && posterSource(session) && !map.has(key)) map.set(key, { posterUrl: posterSource(session) });
+    }
+    posterIndex.cache = { sessions, trends, map };
+    return map;
+  }
+
+  // A session without its own poster borrows one from another session or pick with the same title.
+
+  function posterItemFor(session) {
+    if (posterSource(session)) return session;
+    return posterIndex().get(normalizeTrendTitle(session?.title)) || null;
+  }
+
+  function thumbMarkup(session) {
+    const item = posterItemFor(session);
+    const image = item ? posterMarkup(item, session?.title || "", "", "", { decorative: true }) : "";
+    return `<span class="thumb" aria-hidden="true">${image || iconMarkup("film")}</span>`;
+  }
+
+  function rateBadgeMarkup(session) {
+    const label = ratingLabel(session);
+    if (!label) return "";
+    const title = label === "ALL" ? "전체관람가" : label === "19" ? "청소년관람불가" : `${label}세 이상 관람가`;
+    return `<span class="rate${label === "19" ? " is-19" : ""}" title="${title}">${label}</span>`;
+  }
+
+  function sessionRuntime(sessions) {
+    for (const session of sessions) {
+      const runtime = runtimeMeta(splitSessionMetaValues(session));
+      if (runtime) return runtime.replace(/\s+/g, "");
+    }
+    return "";
+  }
+
+  function joinMeta(parts) {
+    return parts.filter(Boolean).join('<span class="sep" aria-hidden="true">·</span>');
+  }
+
+  function rowMetaMarkup(session, venue) {
+    const values = splitSessionMetaValues(session).filter((value) => {
+      if (isScreenMeta(value, session, venue) || isAgeMeta(value) || seatMeta([value])) return false;
+      if (isSoldoutSession(session) && (value.includes("매진") || value.includes("예매할 수 없습니다"))) return false;
+      return true;
+    });
+    const runtime = runtimeMeta(values).replace(/\s+/g, "");
+    const type = screeningTypeMeta(values);
+    const seat = seatInfo(session);
+    const screen = String(session.screen || "").trim();
+    const parts = [
+      screen && screen !== String(venue?.name || "").trim() ? escapeHtml(screen) : "",
+      escapeHtml(runtime),
+      type && type !== "일반" ? escapeHtml(type) : "",
+      session.kind === "festival" ? "영화제" : "",
+      seat ? `<span class="${seat.low ? "seat-low" : ""}">잔여 ${seat.left}석</span>` : ""
+    ];
+    if (!runtime && !type && !seat) {
+      const extra = values.find((value) => !formatMeta([value]) && !genericProgramLabel(value) && value !== session.title);
+      if (extra) parts.push(`<span class="meta-tail">${escapeHtml(extra)}</span>`);
+    }
+    return joinMeta(parts);
+  }
+
+  function shortActionLabel(session) {
+    if (session.bookingType === "booking") return "예매";
+    const label = actionLabel(session);
+    if (/공식/.test(label)) return "공식";
+    if (/안내/.test(label)) return "안내";
+    if (/상세/.test(label)) return "상세";
+    return label;
+  }
+
+  function bookMarkup(session) {
+    const url = actionUrl(session);
+    const title = session.title || "상영";
+    if (isSoldoutSession(session)) return `<span class="book is-soldout">매진</span>`;
+    if (url === "#") return `<span class="book is-off" title="링크 확인 중">확인중</span>`;
+    const booking = session.bookingType === "booking";
+    return `<a class="book${booking ? "" : " is-ghost"}" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${title} ${cleanTime(session)} ${actionLabel(session)}`)}">${escapeHtml(shortActionLabel(session))}</a>`;
+  }
+
+  function timeChipMarkup(session, showDate = !activeDateFilter()) {
+    const time = cleanTime(session);
+    const day = showDate ? dayLabel(session.date) : "";
+    const dayMarkup = day ? `<span class="tc-d">${escapeHtml(day)}</span>` : "";
+    const label = `${session.title || "상영"} ${day ? `${day} ` : ""}${time}`;
+    const url = actionUrl(session);
+    if (isSoldoutSession(session)) {
+      return `<span class="tchip is-soldout" aria-label="${escapeHtml(`${label} 매진`)}" title="매진">${dayMarkup}<span>${escapeHtml(time)}</span></span>`;
+    }
+    if (url === "#") {
+      return `<span class="tchip is-off" aria-label="${escapeHtml(`${label} 링크 확인 중`)}" title="링크 확인 중">${dayMarkup}<span>${escapeHtml(time)}</span></span>`;
+    }
+    const seat = seatInfo(session);
+    const seatMarkup = seat ? `<span class="tc-s${seat.low ? " is-low" : ""}">${seat.left}석</span>` : "";
+    const booking = session.bookingType === "booking";
+    return `<a class="tchip${booking ? "" : " is-ghost"}" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${label} ${actionLabel(session)}${seat ? ` 잔여 ${seat.left}석` : ""}`)}">${dayMarkup}<span>${escapeHtml(time)}</span>${seatMarkup}</a>`;
+  }
+
+  function venueCardMarkup(key, venue, countLabel, body, compact = false) {
+    const venueName = venue?.name || key || "상영관";
+    const anchorId = venueAnchorId(key, compact ? "mobile" : "desktop");
+    const officialUrl = venueOfficialUrl(venue);
+    const nameMarkup = officialUrl
+      ? `<a href="${escapeHtml(officialUrl)}" target="_blank" rel="noopener noreferrer" title="${escapeHtml(`${venueName} 공식 사이트`)}">${escapeHtml(venueName)}</a>`
+      : escapeHtml(venueName);
+    return `
+      <article id="${escapeHtml(anchorId)}" class="venue">
+        <div class="venue-h">
+          <div>
+            <h3>${nameMarkup}</h3>
+            <p>${venueInfoHtml(venue)}</p>
+          </div>
+          <div class="venue-tools">
+            <span class="count">${escapeHtml(countLabel)}</span>
+            ${venue ? favoriteVenueButton(key, venueName) : ""}
+          </div>
+        </div>
+        ${body}
+      </article>`;
+  }
+
+  // Venue view: one card per venue, one line per film with its times.
+  function venueFilmGroupMarkup(title, sessions) {
+    const first = sessions[0];
+    const gv = sessions.some((session) => ageLabel(session) === "GV");
+    const facts = joinMeta([escapeHtml(sessionRuntime(sessions)), `${sessions.length}회`]);
+    return `
+      <div class="group">
+        ${thumbMarkup(first)}
+        <div class="what">
+          <p class="group-title"><span class="tt" title="${escapeHtml(title)}">${escapeHtml(title)}</span>${gv ? '<span class="tag-gv">GV</span>' : ""}</p>
+          <p class="meta">${rateBadgeMarkup(first)}${facts}</p>
+          <div class="times">${sessions.map((session) => timeChipMarkup(session)).join("")}</div>
+        </div>
+      </div>`;
+  }
+
+  function venueViewCard(key, sessions, compact = false) {
     const venues = venueMap();
-    const grouped =
-      state.view === "film"
-        ? groupBy(filtered, (session) => session.title)
-        : groupBy(filtered, (session) => session.venueId);
-    const entries =
-      state.view === "venue"
-        ? groupedSessionEntries(filtered, (session) => session.venueId || "unknown", { sortByFavorites: true }).map((group) => [
-            group.key,
-            group.sessions
-          ])
-        : Object.entries(grouped);
+    const filmGroups = groupedSessionEntries(sessions, (session) => session.title || "제목 확인");
+    const body = filmGroups.map((group) => venueFilmGroupMarkup(group.key, group.sessions)).join("");
+    return venueCardMarkup(key, venues[key], `${filmGroups.length}편 · ${sessions.length}회`, body, compact);
+  }
 
-    if (!entries.length) {
-      $("#mobileSchedule").innerHTML = `<div class="p-6 border border-outline-variant/20 bg-surface-container-lowest text-center text-on-surface-variant">${escapeHtml(emptyScheduleMessage("조건에 맞는 상영 회차가 없습니다."))}</div>`;
-      return;
-    }
+  // Film view: one card per film, one line per venue with its times.
 
-    $("#mobileSchedule").innerHTML = entries
-      .map(([key, sessions], index) => {
-        if (state.view === "film") return mobileMovieEntry(key, sessions, index);
-        const venue = venues[key];
-        return mobileVenueEntry(venue, sessions, index);
+  function filmViewCard(title, sessions) {
+    const venues = venueMap();
+    const first = sessions[0];
+    const venueGroups = groupedSessionEntries(sessions, (session) => session.venueId || "unknown", { sortByFavorites: true });
+    const facts = joinMeta([escapeHtml(sessionRuntime(sessions)), `${venueGroups.length}개관`]);
+    const rows = venueGroups
+      .map((group) => {
+        const venue = venues[group.key];
+        const venueName = venue?.name || group.sessions[0]?.screen || "상영관";
+        const officialUrl = venueOfficialUrl(venue);
+        const nameMarkup = officialUrl
+          ? `<a class="tt" href="${escapeHtml(officialUrl)}" target="_blank" rel="noopener noreferrer" title="${escapeHtml(`${venueName} 공식 사이트`)}">${escapeHtml(venueName)}</a>`
+          : `<span class="tt">${escapeHtml(venueName)}</span>`;
+        return `
+          <div class="group no-thumb">
+            <div class="what">
+              <p class="group-title">${nameMarkup}${isFavoriteVenue(group.key) ? iconMarkup("star-fill", "ui-icon-sm") : ""}</p>
+              <div class="times">${group.sessions.map((session) => timeChipMarkup(session)).join("")}</div>
+            </div>
+          </div>`;
       })
       .join("");
+    return `
+      <article class="venue">
+        <div class="venue-h">
+          <div class="film-id">
+            ${thumbMarkup(first)}
+            <div>
+              <h3 title="${escapeHtml(title)}">${escapeHtml(title)}</h3>
+              <p class="meta">${rateBadgeMarkup(first)}${facts}</p>
+            </div>
+          </div>
+          <div class="venue-tools"><span class="count">${sessions.length}회</span></div>
+        </div>
+        ${rows}
+      </article>`;
+  }
+
+  function emptyMarkup(message) {
+    return `<p class="empty">${escapeHtml(message)}</p>`;
+  }
+
+  function scheduleMarkup(filtered, compact) {
+    const activeDate = activeDateFilter();
+    if (state.view === "film") {
+      const entries = groupedSessionEntries(filtered, (session) => session.title || "제목 확인");
+      return entries.length
+        ? entries.map((group) => filmViewCard(group.key, group.sessions)).join("")
+        : emptyMarkup(emptyScheduleMessage("조건에 맞는 상영 회차가 없습니다."));
+    }
+    const groups = groupedSessionEntries(filtered, (session) => session.venueId || "unknown", { sortByFavorites: true });
+    if (!groups.length) {
+      const message = state.view === "today" ? `${formatDate(activeDate)}에 맞는 상영 회차가 없습니다.` : "조건에 맞는 상영 회차가 없습니다.";
+      return emptyMarkup(emptyScheduleMessage(message));
+    }
+    return groups
+      .map((group) => (state.view === "venue" ? venueViewCard(group.key, group.sessions, compact) : agendaVenueSection(group.key, group.sessions, compact)))
+      .join("");
+  }
+
+  function updateSoonBadges() {
+    const now = Date.now();
+    document.querySelectorAll(".row[data-start]").forEach((row) => {
+      const minutes = Math.ceil((Number(row.dataset.start) - now) / 60000);
+      row.classList.toggle("is-past", minutes <= 0);
+      const badge = row.querySelector("[data-soon]");
+      if (!badge) return;
+      const show = minutes > 0 && minutes <= 60;
+      badge.hidden = !show;
+      badge.textContent = show ? `${minutes}분 후` : "";
+    });
+  }
+
+  function festivalItemMarkup(group, venues) {
+    const lifecycle = festivalGroupLifecycle(group);
+    const summary = festivalGroupSummary(group, venues);
+    const major = majorFestivalRow(group);
+    const logo = major ? majorFestivalLogoMarkup(major) : "";
+    const extra = major ? majorFestivalHighlightsMarkup(major) : festivalScheduleSectionsMarkup(group, venues);
+    return `
+      <div class="fest${logo ? "" : " no-logo"}">
+        ${logo}
+        <div class="fest-main">
+          <h3>${escapeHtml(group.name)}${lifecyclePillMarkup(lifecycle)}</h3>
+          <p>${escapeHtml(summary)}</p>
+          ${extra}
+        </div>
+        ${major ? `<div class="fest-cta">${festivalActionMarkup(major)}</div>` : ""}
+      </div>`;
+  }
+
+  function shortVenueName(venue) {
+    const names = { cinecube: "씨네큐브", sangsangmadang: "상상마당", momo: "아트하우스 모모", kucine: "KU시네마테크", kofa: "KOFA" };
+    return names[venue?.id] || venue?.name || "상영관";
+  }
+
+  // Picks are ranked from reactions in the DC Inside nouvellevague gallery (scripts/update-community-trends.mjs).
+  function trendSourceLabel() {
+    return "누벨바그 갤러리 반응";
+  }
+
+  function trendFactsText(item) {
+    const sessions = item.sessions || [];
+    const rating = sessions.map((session) => ratingLabel(session)).find(Boolean) || "";
+    const ratingText = rating === "ALL" ? "전체관람가" : rating === "19" ? "청소년관람불가" : rating ? `${rating}세` : "";
+    return [ratingText, sessionRuntime(sessions)].filter(Boolean).join(" · ");
+  }
+
+  function trendTimeChoices(item, limit) {
+    const venues = venueMap();
+    const today = kstDateString();
+    const seen = new Set();
+    const choices = [];
+    for (const session of item.sessions || []) {
+      const url = actionUrl(session);
+      if (url === "#" || isSoldoutSession(session) || seen.has(session.venueId)) continue;
+      seen.add(session.venueId);
+      const venue = venues[session.venueId];
+      choices.push({
+        url,
+        venueName: shortVenueName(venue),
+        fullVenueName: venue?.name || "상영관",
+        time: session.date === today ? cleanTime(session) : `${dayLabel(session.date)} ${cleanTime(session)}`
+      });
+      if (choices.length >= limit) break;
+    }
+    return choices;
+  }
+
+  function trendBackdropMarkup(item, className) {
+    const src = safeImageUrl(item.posterUrl);
+    return src ? `<img class="${className}" src="${escapeHtml(optimizedPosterSource(src))}" alt="" aria-hidden="true" loading="lazy" decoding="async" referrerpolicy="no-referrer" />` : "";
+  }
+
+  function trendHeroMarkup(item, index) {
+    const posterItem = { posterUrl: item.posterUrl, posterSourceUrl: item.posterSourceUrl };
+    const source = trendSourceLabel();
+    const choices = trendTimeChoices(item, 3);
+    const times = choices.length
+      ? `<div class="hero-times">${choices
+          .map(
+            (choice) =>
+              `<a class="glass" href="${escapeHref(choice.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${item.title} ${choice.fullVenueName} ${choice.time} 예매`)}"><b>${escapeHtml(choice.time)}</b>${escapeHtml(choice.venueName)}</a>`
+          )
+          .join("")}</div>`
+      : `<p class="hero-note">${escapeHtml(trendMetaText(item))}</p>`;
+    return `
+      <article class="hero${index > 0 ? " is-extra" : ""}">
+        ${trendBackdropMarkup(item, "hero-bg")}
+        <div class="hero-in">
+          <a class="hero-poster" href="${escapeHref(trendTrailerUrl(item))}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(item.title)} 예고편 보기">
+            ${posterMarkup(posterItem, item.title, "", "", { priority: index === 0 })}
+          </a>
+          <div class="hero-text">
+            <p class="hero-label">이번 주 추천 ${escapeHtml(String(item.rank || index + 1))}위${source ? `<span class="hero-src">${escapeHtml(source)}</span>` : ""}</p>
+            <h3 class="hero-title">${escapeHtml(item.title)}</h3>
+            <p class="hero-facts">${escapeHtml(trendFactsText(item))}</p>
+            ${times}
+          </div>
+        </div>
+      </article>`;
+  }
+
+  function trendListItemMarkup(item, index) {
+    const posterItem = { posterUrl: item.posterUrl, posterSourceUrl: item.posterSourceUrl };
+    const choice = trendTimeChoices(item, 1)[0];
+    const href = choice?.url || trendTrailerUrl(item);
+    const next = choice ? `${choice.time} · ${choice.fullVenueName}` : trendMetaText(item);
+    return `
+      <li>
+        <a class="fl" href="${escapeHref(href)}" target="_blank" rel="noopener noreferrer">
+          ${trendBackdropMarkup(item, "fl-bg")}
+          <span class="fl-poster">${posterMarkup(posterItem, item.title, "", "", { decorative: true })}</span>
+          <span class="fl-body">
+            <span class="fl-rank">${escapeHtml(String(item.rank || index + 1))}위</span>
+            <strong class="fl-title">${escapeHtml(item.title)}</strong>
+            <span class="fl-next">${escapeHtml(next)}</span>
+          </span>
+        </a>
+      </li>`;
   }
 
   function renderVenueFilters() {
@@ -1641,42 +1401,17 @@ import { isPastKstSession } from "./src/session-time.mjs";
     const activeTarget = mobileLayout ? $("#mobileVenueFilter") : $("#desktopVenueFilter");
     const inactiveTarget = mobileLayout ? $("#desktopVenueFilter") : $("#mobileVenueFilter");
     inactiveTarget?.replaceChildren();
-    renderVenueFilterTiles(activeTarget, shortcutItems, mobileLayout);
+    renderVenueFilterTiles(activeTarget, shortcutItems);
   }
 
-  // Desktop and mobile venue tiles share one structure; only sizing/color tokens differ.
-  function renderVenueFilterTiles(target, items, compact) {
+  function renderVenueFilterTiles(target, items) {
     if (!target) return;
     target.parentElement?.classList.toggle("hidden", !items.length);
-    const tileClass = compact
-      ? "group flex h-24 w-32 flex-col items-center justify-between border bg-surface-container-lowest px-2 py-2 text-center text-primary transition-colors active:bg-primary/5"
-      : "group flex min-h-28 w-full min-w-0 flex-col items-center justify-between border bg-surface-container-lowest px-3 py-3 text-center text-primary transition-colors hover:border-primary/30 hover:bg-primary/5";
     target.innerHTML = items
       .map((item) => {
-        const itemName = item.displayName || item.name;
-        const favoriteClass = isFavoriteVenue(item.id)
-          ? "border-primary/25 ring-1 ring-primary/35"
-          : compact
-            ? "border-outline-variant/20"
-            : "border-primary/10";
-        const markSpan = compact
-          ? `<span class="flex h-9 w-full items-center justify-center px-1">${venueMarkHtml(item, true)}</span>`
-          : `<span class="flex h-11 w-full items-center justify-center px-1">${venueMarkHtml(item)}</span>`;
-        const nameSpan = compact
-          ? `<span class="mt-1 flex h-8 w-full items-center justify-center overflow-hidden text-[11px] font-bold leading-4">${escapeHtml(itemName)}</span>`
-          : `<span class="mt-2 flex h-9 w-full items-center justify-center overflow-hidden text-sm font-bold leading-[1.2]">${escapeHtml(itemName)}</span>`;
-        const countSpan = compact
-          ? `<span class="mobile-kicker mt-1 block text-on-surface-variant">${escapeHtml(item.shortCountLabel || item.countLabel)}</span>`
-          : `<span class="mt-1 block text-[10px] font-label-caps text-on-surface-variant">${escapeHtml(item.countLabel)}</span>`;
-        return `
-          <div class="relative ${compact ? "w-32 shrink-0 snap-start" : "min-w-0"}">
-            <button class="${tileClass} ${favoriteClass}${item.count ? "" : " [&>span:first-child]:opacity-40"}" type="button" data-venue-jump="${escapeHtml(item.id)}" aria-label="${escapeHtml(`${item.name} ${item.countLabel}`)}">
-              ${markSpan}
-              ${nameSpan}
-              ${countSpan}
-            </button>
-          </div>
-        `;
+        const name = item.displayName || item.name;
+        const favorite = isFavoriteVenue(item.id);
+        return `<button class="chip${item.count ? "" : " is-empty"}" type="button" data-venue-jump="${escapeHtml(item.id)}" aria-label="${escapeHtml(`${item.name} ${item.countLabel}${favorite ? ", 즐겨찾기" : ""}`)}">${favorite ? iconMarkup("star-fill") : ""}${escapeHtml(name)}<span class="n">${item.count.toLocaleString("ko-KR")}</span></button>`;
       })
       .join("");
   }
@@ -1685,66 +1420,6 @@ import { isPastKstSession } from "./src/session-time.mjs";
     const dates = compactValues(sessions.map((session) => shortDate(session.date)), 4);
     const venueCount = new Set(sessions.map((session) => session.venueId).filter(Boolean)).size;
     return [`${venueCount.toLocaleString("ko-KR")}곳`, `${sessions.length.toLocaleString("ko-KR")}회차`, dates].filter(Boolean).join(" · ");
-  }
-
-  function renderSearchVenueTimes(sessions, compact = false) {
-    const venues = venueMap();
-    const venueGroups = groupedSessionEntries(sessions, (session) => session.venueId || "unknown", { sortByFavorites: true });
-    const showDate = new Set(sessions.map((session) => session.date).filter(Boolean)).size > 1;
-    const venueChipClass = compact
-      ? "inline-flex shrink-0 items-center gap-2 border border-outline-variant/15 bg-surface-container-lowest px-3 py-2"
-      : "flex max-w-full min-w-0 items-center gap-2 border border-primary/10 bg-surface-container-lowest px-3 py-2";
-    const venueClass = compact
-      ? "max-w-[7.2rem] truncate text-[12px] font-bold leading-none text-primary"
-      : "max-w-[8.8rem] shrink-0 truncate text-sm font-bold leading-none text-primary";
-    const railClass = compact
-      ? "flex w-full max-w-full min-w-0 gap-2 overflow-x-auto overscroll-x-contain no-scrollbar pb-1"
-      : "flex w-full max-w-full min-w-0 flex-wrap gap-2 pb-1";
-
-    const items = venueGroups
-      .map((group) => {
-        const first = group.sessions[0];
-        const venue = venues[first.venueId];
-        const venueName = venue?.name || first.venueName || first.screen || "상영관";
-        const chips = group.sessions
-          .map((session) => searchTimeLink(session, compact, showDate))
-          .join("");
-        return `
-          <span class="${venueChipClass}">
-            <span class="${venueClass}" title="${escapeHtml(venueName)}">${escapeHtml(venueName)}</span>
-            <span class="${compact ? "flex shrink-0 items-center gap-1" : "flex min-w-0 flex-wrap items-center gap-1"}">${chips}</span>
-          </span>
-        `;
-      })
-      .join("");
-
-    return `<div class="${railClass}">${items}</div>`;
-  }
-
-  function searchTimeLink(session, compact = false, showDate = false) {
-    const past = isPastSession(session);
-    const soldout = isSoldoutSession(session);
-    const timeText = showDate ? `${shortDate(session.date)} | ${cleanTime(session)}` : scheduleTimeText(session);
-    const url = actionUrl(session);
-    const status = soldout ? statusLabels.soldout : past ? "종료" : actionLabel(session);
-    const baseClass = compact
-      ? "inline-flex h-7 min-w-[3.55rem] items-center justify-center px-2 text-[12px] leading-none"
-      : "inline-flex h-8 min-w-16 items-center justify-center px-3 text-sm leading-none";
-    const toneClass =
-      soldout || past || url === "#"
-        ? "border border-primary/20 bg-surface text-on-surface-variant"
-        : session.bookingType === "booking"
-          ? "bg-primary text-surface"
-          : "border border-primary/20 bg-surface text-primary";
-    const label = soldout ? `<span class="ml-1 text-[10px] font-label-caps text-error">${escapeHtml(status)}</span>` : "";
-    const content = `<span class="font-schedule-time whitespace-nowrap">${escapeHtml(timeText)}</span>${label}`;
-    const className = `time-btn ${baseClass} ${toneClass}`;
-
-    if (soldout || past || url === "#") {
-      return `<span class="${className}" aria-label="${escapeHtml(`${session.title || "상영"} ${timeText} ${status}`)}" title="${escapeHtml(status)}">${content}</span>`;
-    }
-
-    return `<a class="${className}" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${session.title || "상영"} ${timeText} ${status}`)}">${content}</a>`;
   }
 
   function setHidden(element, hidden) {
@@ -1768,30 +1443,26 @@ import { isPastKstSession } from "./src/session-time.mjs";
     });
   }
 
-  function renderSearchResultRow(title, sessions, compact = false) {
+  function renderSearchResultRow(title, sessions) {
+    const venues = venueMap();
     const sorted = sortSessions(sessions);
     const first = sorted[0];
-    const label = ageLabel(first);
-    const titleClass = compact ? "mobile-row-title" : "text-lg leading-tight";
-    const metaClass = compact ? "mobile-meta" : "text-xs text-on-surface-variant";
+    const showDate = new Set(sorted.map((session) => session.date).filter(Boolean)).size > 1 || !isTodayScheduleDate(first?.date);
+    const venueGroups = groupedSessionEntries(sorted, (session) => session.venueId || "unknown", { sortByFavorites: true });
     return `
-      <div class="${compact ? "py-4" : "py-5"} border-t border-primary/10">
-        <div class="flex flex-col ${compact ? "gap-3" : "lg:flex-row lg:items-start gap-4"}">
-          <div class="min-w-0 ${compact ? "" : "lg:w-[22rem] shrink-0"}">
-            <div class="flex items-start gap-2">
-              <span class="${ageBadgeClass(label, compact)} ${ageBadgeTitleOffset(compact)}">${escapeHtml(label)}</span>
-              <span class="min-w-0">
-                <strong class="block ${titleClass} line-clamp-1 text-primary" title="${escapeHtml(title)}">${escapeHtml(title)}</strong>
-                <span class="mt-1 block ${metaClass}">${escapeHtml(searchResultMeta(sorted))}</span>
-              </span>
-            </div>
-          </div>
-          <div class="min-w-0 ${compact ? "w-full" : "w-full lg:flex-1"}">
-            ${renderSearchVenueTimes(sorted, compact)}
-          </div>
+      <div class="group">
+        ${thumbMarkup(first)}
+        <div class="what">
+          <p class="group-title"><span class="tt" title="${escapeHtml(title)}">${escapeHtml(title)}</span></p>
+          <p class="meta">${rateBadgeMarkup(first)}${escapeHtml(searchResultMeta(sorted))}</p>
+          ${venueGroups
+            .map((group) => {
+              const venueName = venues[group.key]?.name || group.sessions[0]?.venueName || "상영관";
+              return `<div class="rv"><span class="rv-name">${escapeHtml(venueName)}</span><div class="times">${group.sessions.map((session) => timeChipMarkup(session, showDate)).join("")}</div></div>`;
+            })
+            .join("")}
         </div>
-      </div>
-    `;
+      </div>`;
   }
 
   function renderSearchResults(filtered) {
@@ -1806,53 +1477,28 @@ import { isPastKstSession } from "./src/session-time.mjs";
     if (status) status.textContent = active ? `${groups.length}편, ${filtered.length.toLocaleString("ko-KR")}회차` : "";
 
     toggleSearchOnlyLayout(active);
+    const activeContainer = mobileLayout ? mobile : desktop;
     const inactiveContainer = mobileLayout ? desktop : mobile;
     if (inactiveContainer) {
       inactiveContainer.classList.add("hidden");
       inactiveContainer.replaceChildren();
     }
-
-    if (desktop && !mobileLayout) {
-      desktop.classList.toggle("hidden", !active);
-      desktop.innerHTML = active
-        ? `
-          <div class="border-y-2 border-primary bg-surface">
-            <div class="py-4 flex items-end justify-between gap-4">
-              <span>
-                <strong class="block text-2xl font-bold text-primary">"${escapeHtml(query)}" 검색 결과</strong>
-                <span class="mt-1 block text-sm text-on-surface-variant">${groups.length}편 · ${filtered.length.toLocaleString("ko-KR")}회차</span>
-              </span>
-            </div>
-            <div>
-              ${
-                groups.length
-                  ? groups.map((group) => renderSearchResultRow(group.key, group.sessions)).join("")
-                  : `<div class="py-10 border-t border-primary/10 text-center text-on-surface-variant">${escapeHtml(emptyScheduleMessage("검색 결과가 없습니다."))}</div>`
-              }
-            </div>
+    if (!activeContainer) return;
+    activeContainer.classList.toggle("hidden", !active);
+    activeContainer.innerHTML = active
+      ? `
+        <section class="results" aria-label="검색 결과">
+          <div class="results-h">
+            <strong>‘${escapeHtml(query)}’ 검색 결과</strong>
+            <span>${groups.length}편 · ${filtered.length.toLocaleString("ko-KR")}회</span>
           </div>
-        `
-        : "";
-    }
-
-    if (mobile && mobileLayout) {
-      mobile.classList.toggle("hidden", !active);
-      mobile.innerHTML = active
-        ? `
-          <div class="border-y border-outline-variant/20">
-            <div class="py-3">
-              <strong class="block text-base text-primary">"${escapeHtml(query)}" 검색 결과</strong>
-              <span class="mt-1 block text-xs text-on-surface-variant">${groups.length}편 · ${filtered.length.toLocaleString("ko-KR")}회차</span>
-            </div>
-            ${
-              groups.length
-                ? groups.map((group) => renderSearchResultRow(group.key, group.sessions, true)).join("")
-                : `<div class="py-6 border-t border-outline-variant/20 text-sm text-on-surface-variant">${escapeHtml(emptyScheduleMessage("검색 결과가 없습니다."))}</div>`
-            }
-          </div>
-        `
-        : "";
-    }
+          ${
+            groups.length
+              ? groups.map((group) => renderSearchResultRow(group.key, group.sessions)).join("")
+              : `<p class="empty-line">${escapeHtml(emptyScheduleMessage("검색 결과가 없습니다."))}</p>`
+          }
+        </section>`
+      : "";
   }
 
   function programPeriod(sessions) {
@@ -2110,14 +1756,9 @@ import { isPastKstSession } from "./src/session-time.mjs";
     return lifecycleFromRange(programDateRange(program));
   }
 
-  function lifecyclePillMarkup(lifecycle, compact = false) {
+  function lifecyclePillMarkup(lifecycle) {
     if (!lifecycle?.label) return "";
-    const toneClass = {
-      ending: "border-primary bg-primary text-surface",
-      active: "border-status-active/25 bg-status-active/10 text-status-active",
-      upcoming: "border-primary/15 bg-primary/5 text-on-surface-variant"
-    }[lifecycle.tone] || "border-primary/10 bg-primary/5 text-on-surface-variant";
-    return `<span class="festival-lifecycle-pill inline-flex shrink-0 items-center border ${toneClass} ${compact ? "px-2 py-1 text-[10px]" : "px-3 py-1 text-[11px]"} font-bold leading-none">${escapeHtml(lifecycle.label)}</span>`;
+    return `<span class="pill${lifecycle.tone === "ending" ? " is-ending" : ""}">${escapeHtml(lifecycle.label)}</span>`;
   }
 
   function lifecycleSortRank(lifecycle) {
@@ -2166,67 +1807,31 @@ import { isPastKstSession } from "./src/session-time.mjs";
   }
 
   function programCardLabel(program, venue) {
-    return [program.kind, venue?.name].filter(Boolean).join(" | ") || "프로그램";
+    return [program.kind, venue?.name].filter(Boolean).join(" · ") || "프로그램";
   }
 
   function renderPrograms() {
     const venues = venueMap();
     const programs = programCards();
     const mobileLayout = isMobileViewport();
-    const desktopTarget = $("#programList");
-    const mobileTarget = $("#mobileProgramList");
-
-    if (mobileLayout) {
-      desktopTarget?.replaceChildren();
-      mobileTarget.innerHTML = programs
-        .map((program) => {
-          const venue = venues[program.venueId];
-          const label = programCardLabel(program, venue);
-          const lifecycle = programLifecycle(program);
-          const programUrl = safeExternalUrl(program.url, "#");
-          return `
-            <a class="flex gap-3 p-4 bg-surface-container-lowest border border-outline-variant/10" href="${escapeHtml(programUrl)}" target="_blank" rel="noopener noreferrer">
-              ${posterMarkup(program, program.title, "w-24 h-16 object-cover shrink-0", "")}
-              <span class="flex flex-col justify-center min-w-0">
-                <span class="mb-1 flex flex-wrap items-center gap-x-2 gap-y-1">
-                  <span class="min-w-0 text-sm font-bold text-tertiary">${escapeHtml(label || "프로그램")}</span>
-                  ${lifecyclePillMarkup(lifecycle, true)}
-                </span>
-                <strong class="mobile-row-title line-clamp-2" title="${escapeHtml(cleanProgramTitle(program.title))}">${escapeHtml(cleanProgramTitle(program.title))}</strong>
-                ${program.period ? `<span class="mobile-kicker mt-2 inline-flex w-fit bg-primary/5 px-2 py-1 text-primary">${escapeHtml(program.period)}</span>` : ""}
-              </span>
-            </a>
-          `;
-        })
-        .join("");
-      return;
-    }
-
-    mobileTarget?.replaceChildren();
-    desktopTarget.innerHTML = programs
-      .map((program) => {
-        const venue = venues[program.venueId];
-        const label = programCardLabel(program, venue);
-        const lifecycle = programLifecycle(program);
-        const programUrl = safeExternalUrl(program.url, "#");
-        return `
-          <a class="group flex h-full cursor-pointer flex-col rounded-sm border border-primary/10 bg-surface-container-lowest p-4 transition-colors hover:border-primary/30" href="${escapeHtml(programUrl)}" target="_blank" rel="noopener noreferrer">
-            <div class="aspect-video bg-surface/10 mb-6 overflow-hidden">
-              ${posterMarkup(program, program.title, "w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]", "")}
-            </div>
-            <div class="mb-3 flex items-center justify-between gap-2">
-              <span class="min-w-0 text-base md:text-lg font-bold text-on-surface-variant block line-clamp-1">${escapeHtml(label || "프로그램")}</span>
-              ${lifecyclePillMarkup(lifecycle)}
-            </div>
-            <h3 class="text-xl font-bold leading-snug h-[3.4rem] line-clamp-2 group-hover:text-tertiary transition-colors" title="${escapeHtml(cleanProgramTitle(program.title))}">${escapeHtml(cleanProgramTitle(program.title))}</h3>
-            <div class="mt-5 flex flex-wrap items-center gap-2">
-              ${program.period ? `<span class="text-base md:text-lg font-bold px-3 py-1 bg-primary/5 text-primary">${escapeHtml(program.period)}</span>` : ""}
-              ${program.sessions ? `<span class="text-[10px] font-label-caps px-2 py-1 bg-primary/5 text-primary">${escapeHtml(program.sessions)}회차</span>` : ""}
-            </div>
-          </a>
-        `;
-      })
-      .join("");
+    const target = mobileLayout ? $("#mobileProgramList") : $("#programList");
+    (mobileLayout ? $("#programList") : $("#mobileProgramList"))?.replaceChildren();
+    if (!target) return;
+    target.innerHTML = programs.length
+      ? programs
+          .map((program) => {
+            const venue = venues[program.venueId];
+            const title = cleanProgramTitle(program.title);
+            const period = [program.period, program.sessions ? `${program.sessions}회` : ""].filter(Boolean).join(" · ");
+            return `
+              <a class="prog" href="${escapeHref(program.url)}" target="_blank" rel="noopener noreferrer">
+                <span class="prog-top"><span>${escapeHtml(programCardLabel(program, venue))}</span>${lifecyclePillMarkup(programLifecycle(program))}</span>
+                <h3 title="${escapeHtml(title)}">${escapeHtml(title)}</h3>
+                ${period ? `<p class="prog-period">${escapeHtml(period)}</p>` : ""}
+              </a>`;
+          })
+          .join("")
+      : emptyMarkup("지금 진행 중인 프로그램이 없어요.");
   }
 
   function festivalNameFromSession(session) {
@@ -2426,250 +2031,98 @@ import { isPastKstSession } from "./src/session-time.mjs";
     return group?.lifecycle || lifecycleFromRange(group?.range || parsePeriodRange("", (group?.rows || []).map((row) => row.date)));
   }
 
-  function festivalActionMarkup(row, compact = false) {
-    const label = actionLabel(row);
+  function festivalActionMarkup(row) {
     const url = actionUrl(row);
-    const hasUrl = url !== "#";
-    const buttonClass = row.bookingType === "booking" ? "bg-primary text-surface" : "festival-action text-primary";
-    const sizeClass = compact ? "px-3 py-1 text-[10px]" : "px-3 py-2 text-xs";
-    return hasUrl
-      ? `<a class="inline-flex ${sizeClass} font-bold transition-colors ${buttonClass}" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a>`
-      : `<span class="inline-flex ${sizeClass} font-bold border border-outline-variant/40 text-on-surface-variant">확인중</span>`;
+    if (url === "#") return `<span class="book is-off">확인중</span>`;
+    const label = actionLabel(row);
+    return `<a class="book${row.bookingType === "booking" ? "" : " is-ghost"}" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a>`;
   }
 
-  function majorFestivalLogoMarkup(row, compact = false) {
+  function majorFestivalLogoMarkup(row) {
     if (!row?.logoUrl) return "";
-    const sizeClass = compact ? "h-7 w-16" : "h-9 w-24";
-    const themeClass = row.logoTheme === "dark" ? "festival-logo-dark" : "bg-surface-container-lowest";
-    return `
-      <span class="festival-logo-box festival-logo-inline ${sizeClass} ${themeClass}">
-        <img src="${escapeHtml(row.logoUrl)}" alt="${escapeHtml(row.name)} 로고" loading="lazy" />
-      </span>
-    `;
+    return `<span class="fest-logo${row.logoTheme === "dark" ? " is-dark" : ""}"><img src="${escapeHtml(row.logoUrl)}" alt="${escapeHtml(row.name)} 로고" loading="lazy" /></span>`;
   }
 
-  function majorFestivalHighlightsMarkup(row, compact = false) {
+  function majorFestivalHighlightsMarkup(row) {
     const detailGroups = Array.isArray(row?.highlightGroups) ? row.highlightGroups.filter((group) => group?.label && Array.isArray(group.items) && group.items.length) : [];
     if (detailGroups.length) {
       return `
-        <div class="festival-highlight-details mt-3">
+        <div class="fest-more">
           ${detailGroups
-            .slice(0, compact ? 6 : 6)
+            .slice(0, 6)
             .map((group) => {
               const groupUrl = safeExternalUrl(group.url, "");
               const labelMarkup = groupUrl
-                ? `<a class="festival-highlight-title-link" href="${escapeHtml(groupUrl)}" target="_blank" rel="noopener noreferrer" data-stop-propagation>${escapeHtml(group.label)}</a>`
+                ? `<a href="${escapeHtml(groupUrl)}" target="_blank" rel="noopener noreferrer" data-stop-propagation>${escapeHtml(group.label)}</a>`
                 : `<span>${escapeHtml(group.label)}</span>`;
               return `
-                <details class="festival-highlight-detail">
+                <details>
                   <summary>${labelMarkup}</summary>
-                  <div>
-                    ${group.items
-                      .filter(Boolean)
-                      .slice(0, compact ? 4 : 4)
-                      .map((item) => `<span>${escapeHtml(item)}</span>`)
-                      .join("")}
-                  </div>
-                </details>
-              `;
+                  <div class="items">${group.items.filter(Boolean).slice(0, 4).map((item) => `<span>${escapeHtml(item)}</span>`).join("")}</div>
+                </details>`;
             })
             .join("")}
-        </div>
-      `;
+        </div>`;
     }
 
     const daily = Array.isArray(row?.dailyHighlights) ? row.dailyHighlights : [];
-    const dailyLimit = compact ? 2 : 3;
     if (daily.length) {
       return `
-        <div class="festival-highlight-days mt-3">
+        <div class="fest-days">
           ${daily
-            .slice(0, dailyLimit)
+            .slice(0, 3)
             .map((day) => {
-              const items = Array.isArray(day.items) ? day.items.filter(Boolean).slice(0, compact ? 2 : 3) : [];
+              const items = Array.isArray(day.items) ? day.items.filter(Boolean).slice(0, 3) : [];
               if (!day.date || !items.length) return "";
-              return `
-                <span class="festival-highlight-day">
-                  <strong>${escapeHtml(shortDate(day.date))}</strong>
-                  <span>${escapeHtml(items.join(" · "))}</span>
-                </span>
-              `;
+              return `<p><strong>${escapeHtml(shortDate(day.date))}</strong>${escapeHtml(items.join(" · "))}</p>`;
             })
             .join("")}
-        </div>
-      `;
+        </div>`;
     }
 
     const highlights = Array.isArray(row?.programHighlights) ? row.programHighlights.filter(Boolean) : [];
     if (!highlights.length) return "";
-    return `
-      <div class="festival-highlight-chips mt-3">
-        ${highlights
-          .slice(0, compact ? 4 : 6)
-          .map((item) => `<span>${escapeHtml(item)}</span>`)
-          .join("")}
-      </div>
-    `;
+    return `<div class="fest-chips">${highlights.slice(0, 6).map((item) => `<span>${escapeHtml(item)}</span>`).join("")}</div>`;
   }
 
   function festivalScheduleSectionsMarkup(group, venues) {
     const sections = festivalScheduleSections(group);
     if (!sections.length) return "";
     return `
-      <div class="festival-highlight-details festival-schedule-details mt-3">
+      <div class="fest-more">
         ${sections
           .map(
             (section) => `
-              <details class="festival-highlight-detail festival-schedule-detail">
-                <summary>
-                  <span class="festival-schedule-section-summary">
-                    <strong>${escapeHtml(section.label)}</strong>
-                    <small>${escapeHtml(festivalScheduleSectionMeta(section))}</small>
-                  </span>
-                </summary>
-                <div class="festival-schedule-items">
+              <details>
+                <summary>${escapeHtml(section.label)} <small>${escapeHtml(festivalScheduleSectionMeta(section))}</small></summary>
+                <div class="items">
                   ${section.rows
-                    .map((row) => {
-                      const venueText = festivalVenueLabel(row, venues);
-                      const label = actionLabel(row);
-                      const url = actionUrl(row);
-                      const hasUrl = url !== "#";
-                      const dateClass = dateToneClass(row.date, "text-on-surface-variant");
-                      const badgeClass = row.bookingType === "booking" ? "bg-primary text-surface" : "border border-primary/20 text-primary";
-                      const tagName = hasUrl ? "a" : "span";
-                      const attrs = hasUrl
-                        ? `href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${row.title} ${formatDate(row.date)} ${row.time} ${venueText} ${label}`)}"`
-                        : "";
-                      return `
-                        <${tagName} class="festival-schedule-item" ${attrs}>
-                          <span class="festival-schedule-when ${dateClass}">
-                            <strong>${escapeHtml(formatDate(row.date))}</strong>
-                            <small>${escapeHtml(row.time)}</small>
-                          </span>
-                          <span class="festival-schedule-copy">
-                            <strong title="${escapeHtml(row.title)}">${escapeHtml(row.title)}</strong>
-                            <small>${escapeHtml(venueText)}</small>
-                          </span>
-                          <span class="festival-schedule-action ${hasUrl ? badgeClass : "border border-outline-variant/40 text-on-surface-variant"}">${escapeHtml(hasUrl ? label : "확인중")}</span>
-                        </${tagName}>
-                      `;
-                    })
+                    .map(
+                      (row) => `
+                        <div class="fest-item">
+                          <span class="fw${isSunday(row.date) ? " is-sun" : ""}"><strong>${escapeHtml(formatDate(row.date))}</strong>${escapeHtml(row.time || "")}</span>
+                          <span class="fc"><strong title="${escapeHtml(row.title)}">${escapeHtml(row.title)}</strong><small>${escapeHtml(festivalVenueLabel(row, venues))}</small></span>
+                          ${festivalActionMarkup(row)}
+                        </div>`
+                    )
                     .join("")}
                 </div>
-              </details>
-            `
+              </details>`
           )
           .join("")}
-      </div>
-    `;
+      </div>`;
   }
 
   function renderFestivals() {
     const venues = venueMap();
-    const rows = festivalRows();
-    const groups = festivalGroups(rows);
-    const desktop = $("#festivalRows");
-    const mobile = $("#mobileFestivalList");
+    const groups = festivalGroups(festivalRows());
     const mobileLayout = isMobileViewport();
-
-    if (mobileLayout) desktop?.replaceChildren();
-    else mobile?.replaceChildren();
-
-    if (desktop && !mobileLayout) {
-      desktop.innerHTML = groups.length
-        ? groups
-            .map((group) => {
-              const lifecycle = festivalGroupLifecycle(group);
-              const summary = festivalGroupSummary(group, venues);
-              const major = majorFestivalRow(group);
-              if (major) {
-                const logoMarkup = majorFestivalLogoMarkup(major);
-                const highlightsMarkup = majorFestivalHighlightsMarkup(major);
-                return `
-                  <tr class="festival-group-row major-festival-row">
-                    <td class="px-4 py-5 align-top" colspan="4">
-                      <div class="min-w-0">
-                        <span class="major-festival-heading flex min-w-0 flex-wrap items-center gap-3 md:gap-4">
-                          <strong class="major-festival-title block text-lg text-primary truncate">${escapeHtml(group.name)}</strong>
-                          ${logoMarkup}
-                          ${lifecyclePillMarkup(lifecycle)}
-                        </span>
-                        <small class="major-festival-summary mt-1 block text-on-surface-variant">${escapeHtml(summary)}</small>
-                        ${highlightsMarkup}
-                      </div>
-                    </td>
-                    <td class="px-4 py-5 align-middle whitespace-nowrap">${festivalActionMarkup(major)}</td>
-                  </tr>
-                `;
-              }
-              const sectionsMarkup = festivalScheduleSectionsMarkup(group, venues);
-              return `
-                <tr class="festival-group-row">
-                  <td class="px-4 py-4 align-top" colspan="5">
-                    <div class="flex items-start justify-between gap-4">
-                      <span class="min-w-0">
-                        <span class="flex min-w-0 items-center gap-2">
-                          <strong class="festival-group-title block text-base text-primary truncate">${escapeHtml(group.name)}</strong>
-                          ${lifecyclePillMarkup(lifecycle)}
-                        </span>
-                        <small class="festival-group-summary mt-1 block text-on-surface-variant">${escapeHtml(summary)}</small>
-                      </span>
-                    </div>
-                    ${sectionsMarkup}
-                  </td>
-                </tr>
-              `;
-            })
-            .join("")
-        : `<tr><td class="px-4 py-6 text-on-surface-variant" colspan="5">등록된 영화제 시간표가 없습니다.</td></tr>`;
-    }
-
-    if (mobile && mobileLayout) {
-      mobile.innerHTML = groups.length
-        ? groups
-            .map((group) => {
-              const lifecycle = festivalGroupLifecycle(group);
-              const summary = festivalGroupSummary(group, venues);
-              const major = majorFestivalRow(group);
-              if (major) {
-                const logoMarkup = majorFestivalLogoMarkup(major, true);
-                const highlightsMarkup = majorFestivalHighlightsMarkup(major, true);
-                return `
-                  <div class="festival-mobile-card major-festival-mobile-card">
-                    <div class="major-festival-panel p-4">
-                      <div class="flex items-start justify-between gap-3">
-                        <span class="min-w-0">
-                          <span class="major-festival-heading flex min-w-0 flex-wrap items-center gap-3">
-                            <strong class="major-festival-title block min-w-0 text-base text-primary truncate">${escapeHtml(group.name)}</strong>
-                            ${logoMarkup}
-                            ${lifecyclePillMarkup(lifecycle, true)}
-                          </span>
-                          <span class="major-festival-summary mt-1 block text-xs text-on-surface-variant">${escapeHtml(summary)}</span>
-                        </span>
-                        <span class="shrink-0">${festivalActionMarkup(major, true)}</span>
-                      </div>
-                      ${highlightsMarkup}
-                    </div>
-                  </div>
-                `;
-              }
-              const sectionsMarkup = festivalScheduleSectionsMarkup(group, venues);
-              return `
-              <div class="festival-mobile-card">
-                <div class="festival-group-panel p-4">
-                  <span class="flex items-center gap-2">
-                    <strong class="festival-group-title block min-w-0 text-base text-primary truncate">${escapeHtml(group.name)}</strong>
-                    ${lifecyclePillMarkup(lifecycle, true)}
-                  </span>
-                  <span class="festival-group-summary mt-1 block text-xs text-on-surface-variant">${escapeHtml(summary)}</span>
-                  ${sectionsMarkup}
-                </div>
-              </div>
-            `;
-            })
-            .join("")
-        : `<div class="p-5 bg-surface-container-lowest border border-outline-variant/10 text-sm text-on-surface-variant">등록된 영화제 시간표가 없습니다.</div>`;
-    }
+    const target = mobileLayout ? $("#mobileFestivalList") : $("#festivalRows");
+    (mobileLayout ? $("#festivalRows") : $("#mobileFestivalList"))?.replaceChildren();
+    if (!target) return;
+    target.innerHTML = groups.length
+      ? groups.map((group) => festivalItemMarkup(group, venues)).join("")
+      : `<p class="fest-empty">등록된 영화제 일정이 없어요.</p>`;
   }
 
   function normalizeTrendTitle(value) {
@@ -2720,11 +2173,6 @@ import { isPastKstSession } from "./src/session-time.mjs";
     return `${prefix} ${session.time} · ${venue}`;
   }
 
-  function trendRankText(item) {
-    const rank = Number(item?.rank || 0);
-    return rank > 0 ? String(rank).padStart(2, "0") : "";
-  }
-
   function youtubeTrailerSearchUrl(title) {
     const query = encodeURIComponent(`${title || "영화"} 예고편`);
     return `https://www.youtube.com/results?search_query=${query}`;
@@ -2734,116 +2182,32 @@ import { isPastKstSession } from "./src/session-time.mjs";
     return safeExternalUrl(item?.trailerUrl, "") || youtubeTrailerSearchUrl(item?.title);
   }
 
-  function trendSessionChoices(item, limit = 2) {
-    const venues = venueMap();
-    const seen = new Set();
-    const choices = [];
-    for (const session of item.sessions || []) {
-      const url = actionUrl(session);
-      if (!url || url === "#") continue;
-      const venueId = session.venueId || "";
-      const venueName = venues[venueId]?.name || session.venueName || session.venue || "상영관";
-      const key = venueId || venueName;
-      if (seen.has(key)) continue;
-      seen.add(key);
-      choices.push({
-        url,
-        venueName,
-        timeLabel: `${session.date === kstDateString() ? "오늘" : shortDate(session.date)} ${session.time || ""}`.trim()
-      });
-      if (choices.length >= limit) break;
-    }
-    return choices;
-  }
-
-  function trendVenueLinksMarkup(item, compact = false) {
-    const choices = trendSessionChoices(item, 2);
-    if (!choices.length) {
-      return `<p class="${compact ? "mobile-meta mt-2" : "mt-3 text-sm text-on-surface-variant"}">${escapeHtml(trendMetaText(item))}</p>`;
-    }
-    return `
-      <div class="${compact ? "mt-3 grid gap-2" : "mt-4 grid gap-2"}">
-        ${choices
-          .map(
-            (choice) =>
-              compact
-                ? `
-              <a class="flex min-w-0 flex-col gap-1 border border-primary/10 px-3 py-2 text-primary active:bg-primary active:text-surface" href="${escapeHref(choice.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${choice.venueName} ${choice.timeLabel} 예매`)}">
-                <span class="truncate text-[12px] font-bold">${escapeHtml(choice.venueName)}</span>
-                <span class="text-[10px] font-medium text-on-surface-variant">${escapeHtml(choice.timeLabel)}</span>
-              </a>
-            `
-                : `
-              <a class="flex min-w-0 items-center justify-between gap-3 border border-primary/15 px-3 py-2 text-sm font-bold text-primary transition-colors hover:bg-primary hover:text-surface" href="${escapeHref(choice.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${choice.venueName} ${choice.timeLabel} 예매`)}">
-                <span class="min-w-0 truncate">${escapeHtml(choice.venueName)}</span>
-                <span class="shrink-0 text-xs font-medium">${escapeHtml(choice.timeLabel)}</span>
-              </a>
-            `
-          )
-          .join("")}
-      </div>
-    `;
-  }
-
-  function trendPosterLinkMarkup(item, className, imageClassName, priority = false) {
-    const trailerUrl = trendTrailerUrl(item);
-    const posterItem = { posterUrl: item.posterUrl, posterSourceUrl: item.posterSourceUrl };
-    return `
-      <a class="${className}" href="${escapeHref(trailerUrl)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(item.title)} 예고편 보기">
-        ${posterMarkup(posterItem, item.title, imageClassName, "", { priority })}
-      </a>
-    `;
-  }
-
-  function trendCardMarkup(item, compact = false, priority = false) {
-    if (compact) {
-      return `
-        <article class="grid w-[calc(100vw-4rem)] max-w-[19rem] shrink-0 snap-start grid-cols-[5.5rem_minmax(0,1fr)] gap-3 border border-outline-variant/20 bg-surface-container-lowest p-4">
-          ${trendPosterLinkMarkup(item, "relative block aspect-[2/3] w-full overflow-hidden bg-primary/5", "h-full w-full object-cover", priority)}
-          <div class="flex min-w-0 flex-col justify-start">
-            <span class="mb-1 text-[19px] font-black leading-none text-primary">${escapeHtml(trendRankText(item))}</span>
-            <strong class="mobile-row-title line-clamp-2">${escapeHtml(item.title)}</strong>
-            ${trendVenueLinksMarkup(item, true)}
-          </div>
-        </article>
-      `;
-    }
-
-    return `
-      <article class="group flex min-h-52 flex-col border border-primary/10 bg-surface-container-lowest p-4">
-        ${trendPosterLinkMarkup(item, "relative mx-auto mb-5 block aspect-[2/3] w-full max-w-[13rem] overflow-hidden bg-primary/5", "h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.02]", priority)}
-        <span class="mb-2 block text-[22px] font-black leading-none text-primary">${escapeHtml(trendRankText(item))}</span>
-        <h3 class="line-clamp-2 text-lg font-bold leading-snug">${escapeHtml(item.title)}</h3>
-        ${trendVenueLinksMarkup(item)}
-      </article>
-    `;
-  }
-
   function renderPopularPicks() {
     const items = communityTrendItems();
     const searchActive = Boolean(state.query.trim());
-    const active = state.view === "today" && !searchActive;
-    const desktopSection = $("#popular");
-    const mobileSection = $("#mobile-popular");
-    const desktopList = $("#popularList");
-    const mobileList = $("#mobilePopularList");
+    const active = state.view === "today" && !searchActive && items.length > 0;
     const mobileLayout = isMobileViewport();
-    const activeSection = mobileLayout ? mobileSection : desktopSection;
-    const inactiveSection = mobileLayout ? desktopSection : mobileSection;
-    const activeList = mobileLayout ? mobileList : desktopList;
-    const inactiveList = mobileLayout ? desktopList : mobileList;
+    const activeSection = mobileLayout ? $("#mobile-popular") : $("#popular");
+    const inactiveSection = mobileLayout ? $("#popular") : $("#mobile-popular");
+    const activeList = mobileLayout ? $("#mobilePopularList") : $("#popularList");
+    const inactiveList = mobileLayout ? $("#popularList") : $("#mobilePopularList");
 
-    activeSection?.classList.toggle("hidden", !active || !items.length);
+    activeSection?.classList.toggle("hidden", !active);
     inactiveSection?.classList.add("hidden");
     inactiveList?.replaceChildren();
-    [$("#popularUpdatedAt"), $("#mobilePopularUpdatedAt")].forEach((element) => {
-      if (!element) return;
-      element.textContent = "";
-      element.classList.add("hidden");
-    });
-    if (activeList) {
-      activeList.innerHTML = active && items.length ? items.map((item, index) => trendCardMarkup(item, mobileLayout, index === 0)).join("") : "";
+    if (!activeList) return;
+    if (!active) {
+      activeList.replaceChildren();
+      return;
     }
+    const signature = `${mobileLayout}|${items.map((item) => `${item.title}|${trendTimeChoices(item, 3).map((choice) => `${choice.url}${choice.time}`).join(",")}`).join(";")}`;
+    // Re-rendering resets the carousel's scroll position, so keep the markup when nothing changed.
+    if (activeList.dataset.signature === signature && activeList.childElementCount) return;
+    activeList.dataset.signature = signature;
+    const [lead, ...rest] = items;
+    activeList.innerHTML = mobileLayout
+      ? items.map((item, index) => trendHeroMarkup(item, index)).join("")
+      : `${trendHeroMarkup(lead, 0)}${rest.length ? `<ul class="feature-list">${rest.map((item, index) => trendListItemMarkup(item, index + 1)).join("")}</ul>` : ""}`;
   }
 
   async function loadCommunityTrends() {
@@ -2865,7 +2229,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
     const searchFiltered = state.query.trim()
       ? getFilteredSessions({ includeDate: false, includeLinkFilter: false, includeVenueFilter: false })
       : filtered;
-    updateMeta();
+    updateMeta(filtered);
     renderVenueFilters();
     renderSearchResults(searchFiltered);
     renderDateBars();
@@ -2889,6 +2253,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
       renderFestivals();
     }
     renderPopularPicks();
+    updateSoonBadges();
     repairPosterImages();
     syncInitialHashScroll();
     updateNavActive();
@@ -3167,10 +2532,10 @@ import { isPastKstSession } from "./src/session-time.mjs";
   function renderError() {
     hideBootFallback();
     const block = `
-      <div class="border border-primary/10 bg-surface p-10 text-center text-on-surface-variant" role="alert">
-        <strong class="block text-primary">시간표 데이터를 불러오지 못했습니다.</strong>
-        <span class="mt-2 block text-sm">인터넷 연결을 확인한 뒤 다시 시도해 주세요.</span>
-        <button class="mt-4 inline-flex items-center gap-2 border border-primary bg-primary px-4 py-2 text-sm font-bold text-surface" type="button" data-retry-load>
+      <div class="empty" role="alert">
+        <strong>시간표 데이터를 불러오지 못했습니다.</strong>
+        <span>인터넷 연결을 확인한 뒤 다시 시도해 주세요.</span>
+        <button class="book" type="button" data-retry-load>
           ${iconMarkup("refresh-cw", "ui-icon-sm")}
           다시 시도
         </button>
@@ -3191,6 +2556,7 @@ import { isPastKstSession } from "./src/session-time.mjs";
       render();
       hideBootFallback();
       startBrowserLiveRefresh(scheduleData);
+      window.setInterval(updateSoonBadges, 30 * 1000);
     } catch {
       renderError();
     }
