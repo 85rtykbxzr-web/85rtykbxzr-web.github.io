@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-01T12:20:29.732Z",
+  "generatedAt": "2026-10-01T13:08:07.537Z",
   "weekStart": "2026-09-29",
   "weekEnd": "2026-10-01",
   "windowStart": "2026-09-29",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121723&playDt=20261002&tsId=TS0039&pno=1",
-      "score": 390.8,
-      "signal": 30.2,
-      "positiveSignal": 30.2,
-      "mentionCount": 4,
-      "rawPositiveSignal": 36,
-      "rawMentionCount": 5,
+      "score": 467.8,
+      "signal": 36.2,
+      "positiveSignal": 36.2,
+      "mentionCount": 5,
+      "rawPositiveSignal": 42,
+      "rawMentionCount": 6,
       "scheduleBackfill": false,
       "venueIds": [
         "kucine",
@@ -86,8 +86,32 @@
           "dayWeight": 0.518
         },
         {
+          "title": "스포) 가능한 사랑 놓친부분 알려줄사람",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867212&page=1",
+          "date": "2026-10-01",
+          "positive": 6,
+          "rawPositive": 6,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "최고",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 6,
+          "commentPositive": 6,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
           "title": "레터박스에서 가능한사랑이 버닝 점수 제쳤네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867139&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867139&page=2",
           "date": "2026-10-01",
           "positive": 8,
           "rawPositive": 8,
@@ -118,7 +142,7 @@
         },
         {
           "title": "스포) 가능한 사랑 찰나였지만 좋았던 장면",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866912&page=5",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866912&page=6",
           "date": "2026-10-01",
           "positive": 2,
           "rawPositive": 2,
@@ -137,44 +161,6 @@
           "reviewQuestion": false,
           "commentCount": 3,
           "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        },
-        {
-          "title": "가능한 사랑이 버닝 밀양보다 더 재밌었음??",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866853&page=7",
-          "date": "2026-10-01",
-          "positive": 14,
-          "rawPositive": 14,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "최고",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            },
-            {
-              "term": "재밌",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "재밌",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 4,
-          "commentPositive": 14,
           "commentNegative": 0,
           "dayWeight": 1
         }
@@ -421,7 +407,7 @@
           "englishTitle": "Everytime",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89989&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 14
+          "mentionCount": 15
         },
         {
           "rank": 2,
@@ -429,7 +415,7 @@
           "englishTitle": "La Gradiva",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90315&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 12
+          "mentionCount": 13
         },
         {
           "rank": 3,
@@ -437,7 +423,7 @@
           "englishTitle": "Gravity",
           "section": "특별상영 & 까르뜨 블랑슈",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91282&c_idx=441&sp_idx=&QueryStep=2",
-          "mentionCount": 8
+          "mentionCount": 9
         },
         {
           "rank": 4,
@@ -453,22 +439,22 @@
           "englishTitle": "Roma Elastica",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91150&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 6
+          "mentionCount": 7
         },
         {
           "rank": 6,
-          "title": "버킹 패스타드",
-          "englishTitle": "Bucking Fastard",
-          "section": "아이콘",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91151&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 6
-        },
-        {
-          "rank": 7,
           "title": "클럽 키드",
           "englishTitle": "Club Kid",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91104&c_idx=434&sp_idx=&QueryStep=2",
+          "mentionCount": 7
+        },
+        {
+          "rank": 7,
+          "title": "버킹 패스타드",
+          "englishTitle": "Bucking Fastard",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91151&c_idx=430&sp_idx=&QueryStep=2",
           "mentionCount": 6
         },
         {
@@ -487,13 +473,13 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 441,
-    "listedPostCount": 442,
-    "detailedPostCount": 37,
-    "commentFetchCount": 37,
-    "commentCount": 71,
+    "fetchedPostCount": 491,
+    "listedPostCount": 492,
+    "detailedPostCount": 42,
+    "commentFetchCount": 42,
+    "commentCount": 84,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 9,
+    "scannedPageCount": 10,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-09-27",
     "newestScannedDate": "2026-10-01",
