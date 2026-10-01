@@ -23,7 +23,6 @@ const PLACE_FILTERS = [
 
 const heart = (filled) =>
   `<svg viewBox="0 0 24 24" aria-hidden="true"><path class="${filled ? "is-filled" : ""}" d="M12 20.3s-7.3-4.4-9.1-9.1C1.6 7.9 3.8 4.6 7.2 4.6c2 0 3.6 1.1 4.8 2.7 1.2-1.6 2.8-2.7 4.8-2.7 3.4 0 5.6 3.3 4.3 6.6-1.8 4.7-9.1 9.1-9.1 9.1Z"/></svg>`;
-const walkIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="13" cy="4.5" r="1.8"/><path d="m9.5 21 2-6.5 2.7 2.6V21M8 11.5l2.6-3.2 3.4.6 2.5 3.6M10.6 8.3 9.4 13.4"/></svg>';
 
 export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUrl, kstDateString }) {
   const state = { data: null, festivalId: "", day: "", mode: "all", place: "", gv: false, query: "", window: null, loading: null };
@@ -152,7 +151,7 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
     const route = walk.same
       ? ""
       : `<a class="fp-route" href="${escapeHtml(safeExternalUrl(`https://map.kakao.com/?sName=${encodeURIComponent(walk.from.map)}&eName=${encodeURIComponent(walk.to.map)}`, "#"))}" target="_blank" rel="noopener noreferrer">길찾기</a>`;
-    const walkText = walk.same ? (walk.minutes ? `같은 건물 · 도보 ${walk.minutes}분` : "같은 관") : `${walk.from.short} → ${walk.to.short} 도보 약 ${walk.minutes}분`;
+    const walkText = walk.same ? (walk.minutes ? `같은 건물 도보 ${walk.minutes}분` : "같은 관") : `${walk.from.short} → ${walk.to.short} 도보 ${walk.minutes}분`;
     let headline = "";
     let tone = "";
     if (gap.status === "overlap") {
@@ -174,14 +173,10 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
       : "";
     const gvNote = gap.gvConflict ? `<span class="fp-gv-note">GV까지 보면 빠듯해요</span>` : "";
     return `
-      <div class="fp-gap ${tone}">
-        <span class="fp-gap-line" aria-hidden="true"></span>
-        <div class="fp-gap-body">
-          <p class="fp-gap-head">${escapeHtml(headline)}</p>
-          <p class="fp-gap-walk">${walkIcon}<span>${escapeHtml(walkText)}</span>${route}</p>
-          ${gvNote}${fill}${others}
-        </div>
-      </div>`;
+      <li class="fp-gap ${tone}">
+        <p class="fp-gap-line"><span><b>${escapeHtml(headline)}</b>${escapeHtml(walkText)}</span>${route}</p>
+        ${gvNote}${fill}${others}
+      </li>`;
   }
 
   // Lanes for screenings that overlap on one day, so they sit side by side like a class
@@ -254,7 +249,7 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
             const place = placeOf(session.venue);
             const hall = hallOf(session.venue, place);
             const flag = flags.get(session.id);
-            return `<button type="button" class="tt-block tt-c${order.get(session.id) % 8}${flag ? ` is-${flag}` : ""}" data-fp-focus="${escapeHtml(session.id)}" data-tt-top="${item.span.start - startHour * 60}" data-tt-height="${item.span.end - item.span.start}" data-tt-lane="${item.lane}" data-tt-lanes="${item.lanes}" aria-label="${escapeHtml(`${session.time} ${session.title} ${place.short}`)}"><b>${escapeHtml(session.title)}</b><span>${escapeHtml(place.id === "bcc" && hall ? hall : `${place.short}${hall ? ` ${hall}` : ""}`)}</span></button>`;
+            return `<button type="button" class="tt-block tt-c${order.get(session.id) % 8}${flag ? ` is-${flag}` : ""}" data-fp-focus="${escapeHtml(session.id)}" data-tt-top="${item.span.start - startHour * 60}" data-tt-height="${item.span.end - item.span.start}" data-tt-lane="${item.lane}" data-tt-lanes="${item.lanes}"${item.lanes > 1 ? " data-tt-narrow" : ""} aria-label="${escapeHtml(`${session.time} ${session.title} ${place.short}`)}"><b>${escapeHtml(session.title)}</b><span>${escapeHtml(place.id === "bcc" && hall ? hall : `${place.short}${hall ? ` ${hall}` : ""}`)}</span></button>`;
           })
           .join("");
         return `<div class="tt-col${date === state.day ? " is-on" : ""}">${blocks}</div>`;
@@ -263,7 +258,7 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
     const lines = hours.map((hour) => `<span class="tt-hour"><i>${hour > 23 ? hour - 24 : hour}</i></span>`).join("");
     return `
       <div class="tt-wrap">
-        <div class="fpt v-cal" data-tt-hours="${hours.length}" data-tt-days="${days.length}">
+        <div class="fpt v-ink" data-tt-hours="${hours.length}" data-tt-days="${days.length}">
           <div class="tt-head"><span class="tt-corner"></span>${head}</div>
           <div class="tt-body"><div class="tt-grid">${lines}</div><div class="tt-cols">${cols}</div></div>
         </div>
@@ -273,32 +268,35 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
   function dayDetailMarkup(picks) {
     const plan = planDay(pickedOn(state.day, picks), films());
     const label = dayLabel(state.day);
-    const title = `<h3 class="fp-detail-h">${Number(state.day.slice(5, 7))}월 ${label.d}일 ${label.w}요일 동선</h3>`;
-    if (!plan.length) return `${title}<p class="fp-empty">이 날은 담은 영화가 없어요. 위 표에서 날짜를 눌러 보세요</p>`;
+    const heading = `${Number(state.day.slice(5, 7))}월 ${label.d}일 ${label.w}요일`;
+    if (!plan.length) return `<h3 class="fp-detail-h">${heading}</h3><p class="fp-empty">이 날은 담은 영화가 없어요. 위 표에서 날짜를 눌러 보세요</p>`;
     const first = plan[0].span.start;
     const last = plan.at(-1).span.end;
-    const summary = `<p class="fp-day-summary">${plan.length}편 · ${formatMinutes(first)}~${formatMinutes(last)}${plan.some((item) => item.gap?.status === "overlap") ? ' · <em>겹치는 시간 있음</em>' : ""}</p>`;
+    const summary = `<small>${plan.length}편 · ${formatMinutes(first)}–${formatMinutes(last)}${plan.some((item) => item.gap?.status === "overlap") ? ' · <em>겹침 있음</em>' : ""}</small>`;
+    // the same colour as the grid block, so a row and its block read as one screening
+    const picked = (state.data?.sessions || []).filter((session) => picks.has(session.id));
+    const order = new Map(picked.map((session, index) => [session.id, index]));
     const body = plan
       .map((item, index) => {
         const session = item.session;
         const place = placeOf(session.venue);
         const hall = hallOf(session.venue, place);
         const card = `
-          <article class="fp-card" id="fp-card-${escapeHtml(session.id)}">
-            <div class="fp-card-time"><strong>${session.time}</strong><span>${formatMinutes(item.span.end)}${item.span.runtimeKnown ? "" : "?"}</span></div>
-            <div class="fp-card-main">
-              <p class="fp-card-title">${escapeHtml(session.title)}${badges(session)}</p>
-              <p class="fp-card-place">${escapeHtml(place.name)}${hall ? ` <b>${escapeHtml(hall)}</b>` : ""}</p>
-              <div class="fp-card-actions">
-                <button type="button" class="fp-code" data-fp-copy="${escapeHtml(session.code)}" aria-label="예매코드 ${escapeHtml(session.code)} 복사">예매코드 <b>${escapeHtml(session.code)}</b></button>
-                <button type="button" class="fp-remove" data-fp-pick="${escapeHtml(session.id)}" aria-label="${escapeHtml(session.title)} 빼기">빼기</button>
-              </div>
+          <li class="fp-it" id="fp-card-${escapeHtml(session.id)}">
+            <p class="fp-it-time"><strong>${session.time}</strong><span>${formatMinutes(item.span.end)}${item.span.runtimeKnown ? "" : "?"}</span></p>
+            <div class="fp-it-main">
+              <p class="fp-it-title"><i class="fp-it-dot tt-c${order.get(session.id) % 8}" aria-hidden="true"></i><span>${escapeHtml(session.title)}</span>${badges(session)}</p>
+              <p class="fp-it-place">${escapeHtml(place.name)}${hall ? ` · ${escapeHtml(hall)}` : ""}</p>
             </div>
-          </article>`;
+            <div class="fp-it-side">
+              <button type="button" class="fp-code" data-fp-copy="${escapeHtml(session.code)}" aria-label="예매코드 ${escapeHtml(session.code)} 복사">${escapeHtml(session.code)}</button>
+              <button type="button" class="fp-remove" data-fp-pick="${escapeHtml(session.id)}" aria-label="${escapeHtml(session.title)} 빼기">빼기</button>
+            </div>
+          </li>`;
         return (item.gap ? gapMarkup(item.gap, plan[index - 1].session, session) : "") + card;
       })
       .join("");
-    return title + summary + `<div class="fp-timeline">${body}</div>`;
+    return `<h3 class="fp-detail-h">${heading}${summary}</h3><ol class="fp-itin">${body}</ol>`;
   }
 
   function renderMine(picks) {
@@ -323,7 +321,7 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
       block.style.top = `${(Number(block.dataset.ttTop) / 60) * hourHeight}px`;
       block.style.height = `${Math.max(22, (Number(block.dataset.ttHeight) / 60) * hourHeight - 2)}px`;
       block.style.left = `${(lane / lanes) * 100}%`;
-      block.style.width = `calc(${100 / lanes}% - 3px)`;
+      block.style.width = `calc(${100 / lanes}% - 5px)`;
     });
     const days = Number(grid.dataset.ttDays) || 1;
     grid.style.setProperty("--tt-days", String(days));
