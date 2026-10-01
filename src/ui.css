@@ -464,3 +464,19 @@ main { padding-top: 72px; }
   .fest-picks ol { grid-template-columns: 1fr; }
   .fp-sec { display: none; }
 }
+
+/* Rows are links: no per-row buttons, a chevron at the end, a pressed state instead. */
+.row { position: relative; margin: 0 -10px; padding: 12px 10px; border-top: 0; border-radius: 12px; grid-template-columns: 40px minmax(0, 1fr) auto; -webkit-tap-highlight-color: transparent; transition: background-color 0.15s; }
+.row::before { content: ""; position: absolute; left: 10px; right: 10px; top: 0; border-top: 1px solid var(--line); }
+a.row:hover { background: color-mix(in srgb, var(--fill) 60%, transparent); }
+a.row:active { background: var(--fill); }
+a.row:hover .tt { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--t5); }
+.go { width: 18px; height: 18px; fill: none; stroke: var(--t5); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+a.row:hover .go { stroke: var(--t3); }
+.row-state { font-size: 13px; font-weight: 600; color: var(--t4); white-space: nowrap; }
+.row-state.is-soldout { color: var(--red); }
+.meta .via { color: var(--t4); }
+@media (max-width: 767px) {
+  .row { grid-template-columns: 36px minmax(0, 1fr) auto; margin: 0 -8px; padding: 12px 8px; }
+  .row::before { left: 8px; right: 8px; }
+}

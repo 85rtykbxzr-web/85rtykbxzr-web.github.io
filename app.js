@@ -994,21 +994,36 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
     return values.find((value) => isRuntimeMeta(value)) || "";
   }
 
+  // The whole row is the link. Direct booking and the venue's own page look the same;
+  // the latter just says so in the meta line.
   function agendaRow(session, venues) {
     const venue = venues[session.venueId];
     const soldout = isSoldoutSession(session);
     const start = kstSessionStartMs(session);
     const gv = ageLabel(session) === "GV";
     const title = session.title || "제목 확인";
+    const url = actionUrl(session);
+    const linked = !soldout && url !== "#";
+    const viaVenue = linked && session.bookingType !== "booking" ? '<span class="via">극장 사이트</span>' : "";
+    const meta = joinMeta([rowMetaMarkup(session, venue), viaVenue]);
+    const end = soldout
+      ? '<span class="row-state is-soldout">매진</span>'
+      : linked
+        ? '<svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="m9.5 6 6 6-6 6"></path></svg>'
+        : '<span class="row-state" title="링크 확인 중">확인중</span>';
+    const tag = linked ? "a" : "div";
+    const linkAttrs = linked
+      ? ` href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${cleanTime(session)} ${title} ${actionLabel(session)}`)}"`
+      : "";
     return `
-      <div class="row${soldout ? " is-soldout" : ""}"${start ? ` data-start="${start}"` : ""}>
+      <${tag} class="row${linked ? " is-link" : ""}${soldout ? " is-soldout" : ""}"${linkAttrs}${start ? ` data-start="${start}"` : ""}>
         ${thumbMarkup(session)}
         <div class="what">
           <p class="title"><span class="t">${escapeHtml(cleanTime(session))}</span><span class="tt" title="${escapeHtml(title)}">${escapeHtml(title)}</span>${gv ? '<span class="tag-gv">GV</span>' : ""}${start ? '<span class="soon" data-soon hidden></span>' : ""}</p>
-          <p class="meta">${rateBadgeMarkup(session)}${rowMetaMarkup(session, venue)}</p>
+          <p class="meta">${rateBadgeMarkup(session)}${meta}</p>
         </div>
-        ${bookMarkup(session)}
-      </div>`;
+        ${end}
+      </${tag}>`;
   }
 
   function agendaVenueSection(key, sessions, compact = false) {
@@ -1122,28 +1137,11 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
       seat ? `<span class="${seat.low ? "seat-low" : ""}">잔여 ${seat.left}석</span>` : ""
     ];
     if (!runtime && !type && !seat) {
-      const extra = values.find((value) => !formatMeta([value]) && !genericProgramLabel(value) && value !== session.title);
+      // "공식 확인"-style notes repeat what the row's link already says.
+      const extra = values.find((value) => !formatMeta([value]) && !genericProgramLabel(value) && value !== session.title && !/공식/.test(value));
       if (extra) parts.push(`<span class="meta-tail">${escapeHtml(extra)}</span>`);
     }
     return joinMeta(parts);
-  }
-
-  function shortActionLabel(session) {
-    if (session.bookingType === "booking") return "예매";
-    const label = actionLabel(session);
-    if (/공식/.test(label)) return "공식";
-    if (/안내/.test(label)) return "안내";
-    if (/상세/.test(label)) return "상세";
-    return label;
-  }
-
-  function bookMarkup(session) {
-    const url = actionUrl(session);
-    const title = session.title || "상영";
-    if (isSoldoutSession(session)) return `<span class="book is-soldout">매진</span>`;
-    if (url === "#") return `<span class="book is-off" title="링크 확인 중">확인중</span>`;
-    const booking = session.bookingType === "booking";
-    return `<a class="book${booking ? "" : " is-ghost"}" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${title} ${cleanTime(session)} ${actionLabel(session)}`)}">${escapeHtml(shortActionLabel(session))}</a>`;
   }
 
   function timeChipMarkup(session, showDate = !activeDateFilter()) {
