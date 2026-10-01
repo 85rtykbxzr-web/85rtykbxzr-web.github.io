@@ -472,18 +472,6 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
     return `${month}.${day} ${weekdays[date.getDay()]}`;
   }
 
-  function formatVerifiedAt(value) {
-    const date = new Date(value || "");
-    if (Number.isNaN(date.getTime())) return "";
-    return new Intl.DateTimeFormat("ko-KR", {
-      timeZone: "Asia/Seoul",
-      month: "long",
-      day: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
-      hourCycle: "h23"
-    }).format(date);
-  }
 
   function isSunday(dateString) {
     return parseLocalDate(dateString).getDay() === 0;
@@ -497,29 +485,14 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
     return Object.fromEntries((state.data?.sources || []).map((source) => [source.id, source]));
   }
 
-  function updateMeta(filtered = getFilteredSessions()) {
+  function updateMeta() {
     const activeDate = activeDateFilter();
     const title = activeDate ? longDateLabel(activeDate) : "전체 일정";
-    const venueCount = new Set(filtered.map((session) => session.venueId).filter(Boolean)).size;
-    const summary = filtered.length
-      ? `${venueCount.toLocaleString("ko-KR")}개관에서 ${filtered.length.toLocaleString("ko-KR")}회 상영해요`
-      : "조건에 맞는 회차가 없어요";
-    const status = dataStatusText();
-
     const desktopTitle = $("#desktopScheduleTitle");
     if (desktopTitle) desktopTitle.textContent = title;
-    const desktopSummary = $("#desktopMonth");
-    if (desktopSummary) desktopSummary.textContent = summary;
-    const dataStatus = $("#desktopDataStatus");
-    if (dataStatus) {
-      dataStatus.textContent = status;
-      dataStatus.previousElementSibling?.classList.toggle("hidden", !status);
-    }
-    renderBrowserLiveStatus();
     const mobileHeading = $("#mobileScheduleHeading");
     if (mobileHeading) mobileHeading.textContent = title;
-    const mobileSub = $("#mobileScheduleSub");
-    if (mobileSub) mobileSub.textContent = [summary, status].filter(Boolean).join(" · ");
+    renderBrowserLiveStatus();
   }
 
   function startBrowserLiveRefresh(base) {
@@ -1072,22 +1045,6 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
     const date = parseLocalDate(dateString);
     if (Number.isNaN(date.getTime())) return "";
     return `${date.getMonth() + 1}.${date.getDate()} ${weekdays[date.getDay()]}`;
-  }
-
-  function kstClockText(value) {
-    const date = new Date(value || "");
-    if (Number.isNaN(date.getTime())) return "";
-    if (kstDateString(date) !== kstDateString()) return formatVerifiedAt(value);
-    return new Intl.DateTimeFormat("ko-KR", { timeZone: "Asia/Seoul", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).format(date);
-  }
-
-  function dataStatusText() {
-    const meta = state.data?.meta || {};
-    const seatAt = kstClockText(meta.seatStatusVerifiedAt);
-    const verifiedAt = formatVerifiedAt(meta.lastVerifiedAt || meta.generatedAt);
-    const base = seatAt ? `좌석 ${seatAt} 기준` : verifiedAt ? `${verifiedAt} 기준` : "";
-    if (!usesBrowserLive(state.data)) return base;
-    return [base, `${browserLiveConfigs.length}개관 실시간 조회`].filter(Boolean).join(" · ");
   }
 
   function posterIndex() {
@@ -2765,7 +2722,7 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
     const searchFiltered = state.query.trim()
       ? getFilteredSessions({ includeDate: false, includeLinkFilter: false, includeVenueFilter: false })
       : filtered;
-    updateMeta(filtered);
+    updateMeta();
     renderVenueFilters();
     renderSearchResults(searchFiltered);
     renderDateBars();
