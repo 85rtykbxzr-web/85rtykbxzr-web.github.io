@@ -257,7 +257,7 @@ function drawDayLine(ctx, ticket, cx, y, big, small) {
   ctx.fillText(rest, left + dayWidth + gap, y);
 }
 
-function drawPosterStyle(ctx, ticket, poster, { typeScale: k = 1.05, gap: baseGap = 30, tightGap = 20 } = {}) {
+function drawPosterStyle(ctx, ticket, poster, { typeScale: k = 1.05, gap: baseGap = 26 } = {}) {
   // Fill the story; a 2:3 poster loses about 8% on each side, which keeps the full-bleed look.
   if (poster) drawCover(ctx, poster, 0, 0, W, H);
   else {
@@ -290,7 +290,6 @@ function drawPosterStyle(ctx, ticket, poster, { typeScale: k = 1.05, gap: baseGa
     const m = ctx.measureText(sample);
     return { asc: m.actualBoundingBoxAscent, desc: m.actualBoundingBoxDescent };
   };
-  const gapTight = Math.round(tightGap * k);
   const gap = Math.round(baseGap * k);
   const metaFont = `500 ${Math.round(32 * k)}px ${SANS}`;
   const titleFont = `700 ${titleSize}px ${SANS}`;
@@ -307,14 +306,15 @@ function drawPosterStyle(ctx, ticket, poster, { typeScale: k = 1.05, gap: baseGa
 
   if (ticket.rating) {
     const size = Math.round(48 * k);
-    // a star's points reach r above the centre and about 0.81r below it
-    const cy = bottom - size * 0.405;
+    // Optical box: the star's thin points reach r above / 0.81r below the centre, but its
+    // visible mass sits closer in, so spacing uses a slightly tighter box.
+    const cy = bottom - size * 0.33;
     const width = drawStars(ctx, ticket.rating, x, cy, size, "#ffffff", "rgba(255,255,255,0.26)");
     const digits = ink(ratingFont, "4.5");
     ctx.fillStyle = "#ffffff";
     ctx.font = ratingFont;
     ctx.fillText(ratingText(ticket.rating), x + width + 18, cy + (digits.asc - digits.desc) / 2);
-    bottom = cy - size / 2 - gap;
+    bottom = cy - size * 0.4 - gap;
   }
 
   const titleInk = ink(titleFont);
@@ -328,7 +328,7 @@ function drawPosterStyle(ctx, ticket, poster, { typeScale: k = 1.05, gap: baseGa
   }
   ctx.letterSpacing = "0px";
 
-  const dayBaseline = baseline - titleInk.asc - gapTight - ink(dayFont, "1").desc;
+  const dayBaseline = baseline - titleInk.asc - gap - ink(dayFont, "1").desc;
   const day = d ? `${Number(d.mm)}월 ${Number(d.dd)}일` : ticket.date;
   ctx.fillStyle = "#ffffff";
   ctx.font = dayFont;
