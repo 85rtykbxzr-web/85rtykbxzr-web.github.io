@@ -333,7 +333,7 @@ main { padding-top: 72px; }
 .tabbar:not(:has(a[aria-current])) .tab-pill { opacity: 0; }
 
 /* ---------- toast ---------- */
-.toast { border-radius: 12px; background: var(--strong); color: var(--on-strong); font-weight: 600; box-shadow: var(--shadow); }
+.toast { width: max-content; max-width: calc(100vw - 32px); text-align: center; border-radius: 12px; background: var(--strong); color: var(--on-strong); font-weight: 600; box-shadow: var(--shadow); }
 
 /* ---------- responsive ---------- */
 @media (max-width: 1080px) {
@@ -541,3 +541,15 @@ a.row:hover .go { stroke: var(--t3); }
   .venue-map-canvas { height: 300px; }
   .map-card { position: static; width: auto; padding: 16px 16px 20px; border-radius: 0; border-top: 1px solid var(--line); box-shadow: none; }
 }
+
+/* Theme switch: a smooth crossfade of the whole page through a short dim (see toggleTheme). */
+html[data-theme-switch] *, html[data-theme-switch] *::before, html[data-theme-switch] *::after { transition: none !important; }
+::view-transition-old(root), ::view-transition-new(root) { animation-duration: 0.7s; animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); animation-fill-mode: both; mix-blend-mode: normal; }
+html[data-theme-switch="dark"]::view-transition-old(root) { animation-name: lights-down-out; }
+html[data-theme-switch="dark"]::view-transition-new(root) { animation-name: lights-down-in; }
+html[data-theme-switch="light"]::view-transition-old(root) { animation-name: lights-up-out; }
+html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lights-up-in; }
+@keyframes lights-down-out { from { opacity: 1; filter: brightness(1); } to { opacity: 0; filter: brightness(0.4); } }
+@keyframes lights-down-in { from { opacity: 0; filter: brightness(0.7); } to { opacity: 1; filter: brightness(1); } }
+@keyframes lights-up-out { from { opacity: 1; filter: brightness(1); } to { opacity: 0; filter: brightness(1.6); } }
+@keyframes lights-up-in { from { opacity: 0; filter: brightness(1.25); } to { opacity: 1; filter: brightness(1); } }

@@ -518,8 +518,8 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
     return "영화관의 공식 시간표를 불러오는 중입니다.";
   }
 
-  // Only surface a notice when a venue could not be checked. Successful and in-progress
-  // checks stay silent; the data-status line under the page title already shows freshness.
+  // Only surface a notice when a venue could not be checked; successful and in-progress
+  // checks stay silent.
   function renderBrowserLiveStatus() {
     const rows = usesBrowserLive(state.data) ? state.data.meta.browserLive || [] : [];
     const failures = rows.filter((row) => row.status === "error");
@@ -868,8 +868,7 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
     document.querySelector('meta[name="theme-color"]')?.setAttribute("content", dark ? "#21201e" : "#ffffff");
   }
 
-  function toggleTheme() {
-    const next = currentTheme() === "dark" ? "light" : "dark";
+  function applyTheme(next) {
     document.documentElement.dataset.theme = next;
     try {
       localStorage.setItem("theme", next);
@@ -877,6 +876,22 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
       // Not persisted; the choice still applies to this page view.
     }
     syncThemeControls();
+  }
+
+  // The whole page crossfades through a short dim, like house lights going down (night)
+  // or coming up (day). Element transitions are paused so nothing changes colour on its own.
+  function toggleTheme() {
+    const next = currentTheme() === "dark" ? "light" : "dark";
+    const root = document.documentElement;
+    if (!document.startViewTransition || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      applyTheme(next);
+      return;
+    }
+    root.dataset.themeSwitch = next;
+    const transition = document.startViewTransition(() => applyTheme(next));
+    transition.finished.finally(() => {
+      delete root.dataset.themeSwitch;
+    });
   }
 
   function scrollToSection(id, behavior = "smooth") {

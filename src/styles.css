@@ -890,14 +890,15 @@ a.festival-schedule-item:hover {
 }
 
 .toast {
-  transform: translateY(16px);
+  /* Keeps the horizontal centring from the utility classes while it slides in. */
+  transform: translate(-50%, 16px);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 .toast.visible {
-  transform: translateY(0);
+  transform: translate(-50%, 0);
   opacity: 1;
 }
 
