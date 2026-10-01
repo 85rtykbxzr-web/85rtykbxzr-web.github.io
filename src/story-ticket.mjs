@@ -13,6 +13,10 @@ const SANS = '"Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic
 const WEEKDAYS_EN = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 const WEEKDAYS_KO = ["일", "월", "화", "수", "목", "금", "토"];
 const INK = "#1d1b18";
+// Instagram covers roughly the top 14% (progress bar, profile) and bottom 20% (reply bar)
+// of a story, so everything that must stay readable sits between these two lines.
+const SAFE_TOP = 290;
+const SAFE_BOTTOM = H - 400;
 const PAPER = "#f3eee4";
 
 // Pretendard is tight by design at display sizes; a little negative tracking keeps titles crisp.
@@ -238,17 +242,17 @@ function drawPosterStyle(ctx, ticket, poster) {
     ctx.fillStyle = "#1b1a18";
     ctx.fillRect(0, 0, W, H);
   }
-  const top = ctx.createLinearGradient(0, 0, 0, 360);
-  top.addColorStop(0, "rgba(0,0,0,0.35)");
+  const top = ctx.createLinearGradient(0, 0, 0, 480);
+  top.addColorStop(0, "rgba(0,0,0,0.45)");
   top.addColorStop(1, "rgba(0,0,0,0)");
   ctx.fillStyle = top;
-  ctx.fillRect(0, 0, W, 360);
-  const bottom = ctx.createLinearGradient(0, 940, 0, H);
+  ctx.fillRect(0, 0, W, 480);
+  const bottom = ctx.createLinearGradient(0, 820, 0, H);
   bottom.addColorStop(0, "rgba(0,0,0,0)");
-  bottom.addColorStop(0.55, "rgba(0,0,0,0.62)");
+  bottom.addColorStop(0.5, "rgba(0,0,0,0.66)");
   bottom.addColorStop(1, "rgba(0,0,0,0.86)");
   ctx.fillStyle = bottom;
-  ctx.fillRect(0, 940, W, H - 940);
+  ctx.fillRect(0, 820, W, H - 820);
   grain(ctx, 0.12);
 
   const x = 84;
@@ -257,7 +261,7 @@ function drawPosterStyle(ctx, ticket, poster) {
   const titleLines = wrapLines(ctx, ticket.title, W - x * 2, 3);
   const meta = [ticket.venue, ticket.screen, ticket.seat ? `좌석 ${ticket.seat}` : ""].filter(Boolean).join("  ·  ");
   // laid out from the bottom up so the block always ends above the story reply bar
-  let y = 1600;
+  let y = SAFE_BOTTOM - 12;
   ctx.textAlign = "left";
   ctx.fillStyle = "rgba(255,255,255,0.72)";
   ctx.font = `500 30px ${SANS}`;
@@ -288,10 +292,13 @@ function drawPosterStyle(ctx, ticket, poster) {
   ctx.font = `500 34px ${SANS}`;
   ctx.fillText(d ? `${d.ko}요일  ${ticket.time}` : ticket.time, x + dayWidth + 18, y);
 
-  ctx.textAlign = "center";
-  ctx.fillStyle = "rgba(255,255,255,0.55)";
-  ctx.font = `600 24px ${SANS}`;
-  ctx.fillText("서울독립영화관시간표", W / 2, 1790);
+  ctx.save();
+  ctx.shadowColor = "rgba(0,0,0,0.45)";
+  ctx.shadowBlur = 14;
+  ctx.fillStyle = "rgba(255,255,255,0.92)";
+  ctx.font = `700 28px ${SANS}`;
+  ctx.fillText("서울독립영화관시간표", x, SAFE_TOP + 40);
+  ctx.restore();
 }
 
 function drawTicketStyle(ctx, ticket, poster, seed) {
@@ -311,7 +318,7 @@ function drawTicketStyle(ctx, ticket, poster, seed) {
   const bodyH = 150 + titleLines.length * 84 + ratingH + 44 + rows.length * 78 + 40;
   const stubH = 190;
   const th = bodyH + stubH;
-  const ty = Math.round(260 + (1400 - th) / 2);
+  const ty = Math.round(SAFE_TOP + (SAFE_BOTTOM - SAFE_TOP - th) / 2);
   const cutY = ty + bodyH;
 
   const layer = document.createElement("canvas");
@@ -427,7 +434,7 @@ function drawReceiptStyle(ctx, ticket, poster, seed) {
   ctx.letterSpacing = "0px";
   const rows = [["극장", ticket.venue], ["상영관", ticket.screen], ["좌석", ticket.seat]].filter(([, value]) => value);
   const rh = 232 + titleLines.length * 66 + (ticket.rating ? 70 : 0) + 70 + rows.length * 52 + 134 + 250;
-  const ry = Math.round(260 + (1400 - rh) / 2);
+  const ry = Math.round(SAFE_TOP + (SAFE_BOTTOM - SAFE_TOP - rh) / 2);
 
   const layer = document.createElement("canvas");
   layer.width = W;
