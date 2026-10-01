@@ -176,7 +176,7 @@ const layouts = {
   e: ["pill", ["day", 46, 32], "title", "stars", "meta"]
 };
 
-function drawPosterStyle(ctx, ticket, poster, { typeScale: k = 1.05, gap: baseGap = 26, starColor = "#ffffff", layout = "c", align = "left" } = {}) {
+function drawPosterStyle(ctx, ticket, poster, { typeScale: k = 1.05, gap: baseGap = 30, starColor = "#ffffff", layout = "c", align = "left" } = {}) {
   // Fill the story; a 2:3 poster loses about 8% on each side, which keeps the full-bleed look.
   if (poster) drawCover(ctx, poster, 0, 0, W, H);
   else {
@@ -316,14 +316,24 @@ function drawPosterStyle(ctx, ticket, poster, { typeScale: k = 1.05, gap: baseGa
   };
 
   // Laid out from the bottom up with one even gap; the block ends above the reply bar.
+  // Badge, title, stars and date sit one even gap apart; the venue line hugs the date
+  // above it, so the two read as one caption.
   const gap = px(baseGap);
-  const order = (layouts[layout] || layouts.a).map((name) => (Array.isArray(name) ? pieces[name[0]](...name.slice(1)) : pieces[name]())).filter(Boolean);
+  const tightGap = px(baseGap * 0.4);
+  const order = (layouts[layout] || layouts.a)
+    .map((entry) => {
+      const [name, ...args] = Array.isArray(entry) ? entry : [entry];
+      const piece = pieces[name](...args);
+      return piece && { ...piece, name };
+    })
+    .filter(Boolean);
   let bottom = SAFE_BOTTOM + 20;
   for (let index = order.length - 1; index >= 0; index -= 1) {
     const piece = order[index];
     const baseline = bottom - piece.desc;
     piece.draw(baseline);
-    bottom = baseline - piece.asc - gap;
+    const captionPair = piece.name === "meta" && order[index - 1]?.name === "when";
+    bottom = baseline - piece.asc - (captionPair ? tightGap : gap);
   }
 }
 
