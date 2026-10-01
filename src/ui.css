@@ -600,3 +600,9 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .ticket-btn:hover { filter: brightness(0.96); }
 .ticket-btn[hidden] { display: none; }
 .ticket-seat input:focus, .ticket-seat input:focus-visible { outline: none; box-shadow: none; }
+.ticket-preview-wrap { position: relative; }
+.ticket-photo { position: absolute; right: 24px; bottom: 24px; display: inline-flex; align-items: center; gap: 6px; height: 34px; padding: 0 12px; border-radius: 999px; background: rgb(0 0 0 / 0.55); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); font-size: 13px; font-weight: 600; color: #fff; cursor: pointer; }
+.ticket-photo:hover { background: rgb(0 0 0 / 0.7); }
+.ticket-photo:focus-within { outline: 2px solid #fff; outline-offset: 2px; }
+.ticket-photo input { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.ticket-photo-ic { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }

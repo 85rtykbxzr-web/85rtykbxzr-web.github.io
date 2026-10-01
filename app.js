@@ -2904,7 +2904,7 @@ import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
     setTabletSearchOpen(false);
   }
 
-  const ticketState = { session: null, style: "poster", rating: 0, requestId: 0 };
+  const ticketState = { session: null, style: "poster", rating: 0, photo: "", requestId: 0 };
 
   function ticketTitle(session) {
     return String(session?.title || "").replace(/\s*\((?:2D|3D|4K|자막|영문자막|더빙)[^)]*\)\s*$/i, "").trim() || "오늘의 영화";
@@ -2918,6 +2918,9 @@ import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
     const seat = $("#ticketSeat");
     if (seat) seat.value = "";
     ticketState.rating = 0;
+    ticketState.photo = "";
+    const photo = $("#ticketPhoto");
+    if (photo) photo.value = "";
     $("#ticketSheetTitle").textContent = ticketTitle(session);
     renderTicketStyles();
     renderTicketRating();
@@ -2980,12 +2983,15 @@ import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
       time: cleanTime(session),
       seat: String($("#ticketSeat")?.value || "").trim().slice(0, 8).toUpperCase(),
       rating: ticketState.rating,
-      posterUrl: poster ? safeImageUrl(posterSource(poster)) : ""
+      posterUrl: ticketState.photo || (poster ? safeImageUrl(posterSource(poster)) : "")
     };
   }
 
   async function renderTicketCanvas() {
-    return drawStoryTicket(currentTicketDetails(), ticketState.style);
+    const details = currentTicketDetails();
+    const label = $("#ticketPhotoLabel");
+    if (label) label.textContent = details.posterUrl ? "포스터 바꾸기" : "포스터 넣기";
+    return drawStoryTicket(details, ticketState.style);
   }
 
   async function renderTicketPreview() {
@@ -2999,6 +3005,17 @@ import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
     } finally {
       if (requestId === ticketState.requestId) image?.classList.remove("is-loading");
     }
+  }
+
+  // A picked photo is read as a data URL: the CSP allows data: images but not blob:.
+  function setTicketPhoto(file) {
+    if (!file || !/^image\//.test(file.type)) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      ticketState.photo = String(reader.result || "");
+      renderTicketPreview();
+    };
+    reader.readAsDataURL(file);
   }
 
   function ticketFileName() {
@@ -3068,6 +3085,7 @@ import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
   function bindEvents() {
     $("#searchInput")?.addEventListener("input", (event) => syncSearch(event.target.value));
     let seatTimer = null;
+    $("#ticketPhoto")?.addEventListener("change", (event) => setTicketPhoto(event.target.files?.[0]));
     $("#ticketSeat")?.addEventListener("input", () => {
       window.clearTimeout(seatTimer);
       seatTimer = window.setTimeout(renderTicketPreview, 250);

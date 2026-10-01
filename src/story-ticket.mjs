@@ -10,11 +10,16 @@ export const ticketStyles = {
 const W = 1080;
 const H = 1920;
 const SANS = '"Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic Neo", sans-serif';
-const BRAND = '"BM Kkubulim Brand", ' + SANS;
 const WEEKDAYS_EN = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 const WEEKDAYS_KO = ["일", "월", "화", "수", "목", "금", "토"];
 const INK = "#1d1b18";
 const PAPER = "#f3eee4";
+
+// Pretendard is tight by design at display sizes; a little negative tracking keeps titles crisp.
+function setTitleFont(ctx, size) {
+  ctx.font = `700 ${size}px ${SANS}`;
+  ctx.letterSpacing = `${-Math.round(size * 0.025)}px`;
+}
 
 function roundRectPath(ctx, x, y, w, h, r) {
   ctx.beginPath();
@@ -248,37 +253,45 @@ function drawPosterStyle(ctx, ticket, poster) {
 
   const x = 84;
   const d = dateParts(ticket.date);
-  ctx.font = `800 84px ${SANS}`;
+  setTitleFont(ctx, 80);
   const titleLines = wrapLines(ctx, ticket.title, W - x * 2, 3);
-  const meta = [ticket.venue, ticket.screen, ticket.seat].filter(Boolean).join("  ·  ");
+  const meta = [ticket.venue, ticket.screen, ticket.seat ? `좌석 ${ticket.seat}` : ""].filter(Boolean).join("  ·  ");
   // laid out from the bottom up so the block always ends above the story reply bar
-  let y = 1590;
+  let y = 1600;
   ctx.textAlign = "left";
-  ctx.fillStyle = "rgba(255,255,255,0.74)";
+  ctx.fillStyle = "rgba(255,255,255,0.72)";
   ctx.font = `500 30px ${SANS}`;
   ctx.fillText(meta, x, y);
-  y -= 64;
+  y -= 66;
   if (ticket.rating) {
-    const width = drawStars(ctx, ticket.rating, x, y - 14, 38, "#ffffff", "rgba(255,255,255,0.28)");
+    const width = drawStars(ctx, ticket.rating, x, y - 13, 36, "#ffffff", "rgba(255,255,255,0.26)");
     ctx.fillStyle = "#ffffff";
     ctx.font = `600 30px ${SANS}`;
-    ctx.fillText(ratingText(ticket.rating), x + width + 18, y - 3);
-    y -= 76;
+    ctx.fillText(ratingText(ticket.rating), x + width + 16, y - 2);
+    y -= 74;
   }
   ctx.fillStyle = "#ffffff";
-  ctx.font = `800 84px ${SANS}`;
+  setTitleFont(ctx, 80);
   for (let i = titleLines.length - 1; i >= 0; i--) {
     ctx.fillText(titleLines[i], x, y);
-    y -= 98;
+    y -= 94;
   }
-  ctx.fillStyle = "rgba(255,255,255,0.82)";
-  ctx.font = `600 26px ${SANS}`;
-  drawTracked(ctx, d ? `${d.yyyy}.${d.mm}.${d.dd} ${d.en}   ${ticket.time}` : `${ticket.date} ${ticket.time}`, x, y + 22, 3);
+  ctx.letterSpacing = "0px";
+  // date: big month.day, then weekday and time in a lighter weight on the same baseline
+  y -= 4;
+  ctx.fillStyle = "#ffffff";
+  ctx.font = `700 52px ${SANS}`;
+  const day = d ? `${Number(d.mm)}월 ${Number(d.dd)}일` : ticket.date;
+  ctx.fillText(day, x, y);
+  const dayWidth = ctx.measureText(day).width;
+  ctx.fillStyle = "rgba(255,255,255,0.78)";
+  ctx.font = `500 34px ${SANS}`;
+  ctx.fillText(d ? `${d.ko}요일  ${ticket.time}` : ticket.time, x + dayWidth + 18, y);
 
   ctx.textAlign = "center";
-  ctx.fillStyle = "rgba(255,255,255,0.7)";
-  ctx.font = `400 30px ${BRAND}`;
-  ctx.fillText("서울독립영화관시간표", W / 2, 1788);
+  ctx.fillStyle = "rgba(255,255,255,0.55)";
+  ctx.font = `600 24px ${SANS}`;
+  ctx.fillText("서울독립영화관시간표", W / 2, 1790);
 }
 
 function drawTicketStyle(ctx, ticket, poster, seed) {
@@ -290,8 +303,9 @@ function drawTicketStyle(ctx, ticket, poster, seed) {
   const pad = 64;
   const inner = tw - pad * 2;
   const d = dateParts(ticket.date);
-  ctx.font = `800 70px ${SANS}`;
+  setTitleFont(ctx, 70);
   const titleLines = wrapLines(ctx, ticket.title, inner, 3);
+  ctx.letterSpacing = "0px";
   const rows = [["극장", ticket.venue], ["상영관", ticket.screen], ["시간", ticket.time], ["좌석", ticket.seat]].filter(([, value]) => value);
   const ratingH = ticket.rating ? 76 : 0;
   const bodyH = 150 + titleLines.length * 84 + ratingH + 44 + rows.length * 78 + 40;
@@ -320,12 +334,13 @@ function drawTicketStyle(ctx, ticket, poster, seed) {
   lc.fillRect(tx + pad, ty + 112, inner, 3);
 
   let y = ty + 150 + 56;
-  lc.font = `800 70px ${SANS}`;
+  setTitleFont(lc, 70);
   for (const line of titleLines) {
     lc.fillText(line, tx + pad, y);
     y += 84;
   }
   y -= 84;
+  lc.letterSpacing = "0px";
   if (ticket.rating) {
     const width = drawStars(lc, ticket.rating, tx + pad, y + 56, 36, INK, "rgba(29,27,24,0.16)");
     lc.fillStyle = INK;
@@ -366,7 +381,7 @@ function drawTicketStyle(ctx, ticket, poster, seed) {
 
   lc.fillStyle = INK;
   lc.textAlign = "center";
-  lc.font = `400 38px ${BRAND}`;
+  lc.font = `700 30px ${SANS}`;
   lc.fillText("서울독립영화관시간표", W / 2, cutY + 96);
   lc.fillStyle = "rgba(29,27,24,0.5)";
   lc.font = `500 20px ${SANS}`;
@@ -407,8 +422,9 @@ function drawReceiptStyle(ctx, ticket, poster, seed) {
   const pad = 56;
   const inner = rw - pad * 2;
   const d = dateParts(ticket.date);
-  ctx.font = `800 54px ${SANS}`;
+  setTitleFont(ctx, 54);
   const titleLines = wrapLines(ctx, ticket.title, inner, 3);
+  ctx.letterSpacing = "0px";
   const rows = [["극장", ticket.venue], ["상영관", ticket.screen], ["좌석", ticket.seat]].filter(([, value]) => value);
   const rh = 232 + titleLines.length * 66 + (ticket.rating ? 70 : 0) + 70 + rows.length * 52 + 134 + 250;
   const ry = Math.round(260 + (1400 - rh) / 2);
@@ -445,7 +461,7 @@ function drawReceiptStyle(ctx, ticket, poster, seed) {
   let y = ry + 96;
   lc.textAlign = "center";
   lc.fillStyle = INK;
-  lc.font = `400 40px ${BRAND}`;
+  lc.font = `700 32px ${SANS}`;
   lc.fillText("서울독립영화관시간표", cx, y);
   y += 44;
   lc.fillStyle = "rgba(29,27,24,0.55)";
@@ -460,13 +476,14 @@ function drawReceiptStyle(ctx, ticket, poster, seed) {
   dashed(y);
 
   lc.fillStyle = INK;
-  lc.font = `800 54px ${SANS}`;
+  setTitleFont(lc, 54);
   lc.textAlign = "center";
   y += 22;
   for (const line of titleLines) {
     y += 66;
     lc.fillText(line, cx, y);
   }
+  lc.letterSpacing = "0px";
   if (ticket.rating) {
     drawStars(lc, ticket.rating, cx, y + 50, 34, INK, "rgba(29,27,24,0.16)", "center");
     y += 70;
@@ -515,8 +532,8 @@ function drawReceiptStyle(ctx, ticket, poster, seed) {
  * @param {keyof typeof ticketStyles} styleKey
  */
 export async function drawStoryTicket(ticket, styleKey = "poster") {
-  const fontLoads = [`800 84px ${SANS}`, `600 30px ${SANS}`, `500 26px ${SANS}`, `400 40px ${BRAND}`].map((font) =>
-    document.fonts?.load(font, `${ticket.title}${ticket.venue}${ticket.screen || ""}서울독립영화관시간표극장상영관시간좌석편0123456789.:TOTALSEOUL`).catch(() => null)
+  const fontLoads = [`700 80px ${SANS}`, `600 30px ${SANS}`, `500 26px ${SANS}`].map((font) =>
+    document.fonts?.load(font, `${ticket.title}${ticket.venue}${ticket.screen || ""}서울독립영화관시간표극장상영관시간좌석편월일화수목금토요0123456789.:·TOTALSEOUL`).catch(() => null)
   );
   const [poster] = await Promise.all([loadPoster(ticket.posterUrl), ...fontLoads]);
 
