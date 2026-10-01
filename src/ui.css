@@ -644,3 +644,20 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .prog-media.is-mark { display: grid; place-items: center; }
 .prog-mark { display: grid; place-items: center; width: 96px; height: 96px; padding: 14px; border-radius: 22px; background: #fff; box-shadow: 0 10px 30px -10px rgb(0 0 0 / 0.45); }
 .prog-mark img { max-width: 100%; max-height: 100%; object-fit: contain; }
+
+/* Venue card (design A): a bigger venue name, poster-sized thumbs, softer rules */
+.venue-h { margin-bottom: 8px; }
+.venue-h h3 { font-size: 21px; line-height: 28px; font-weight: 800; }
+.venue-h p { margin-top: 3px; }
+.row { grid-template-columns: 44px minmax(0, 1fr) auto; padding-top: 13px; padding-bottom: 13px; }
+.row::before { border-top-color: color-mix(in srgb, var(--line) 70%, transparent); }
+.venue-h + .row::before, .venue > .row:first-of-type::before { border-top-color: transparent; }
+.thumb { width: 44px; height: 62px; border-radius: 8px; }
+.title .t { font-weight: 800; }
+.meta { font-size: 13px; }
+@media (max-width: 767px) {
+  .venue { padding-top: 20px; }
+  .venue-h h3 { font-size: 20px; line-height: 27px; }
+  .row { grid-template-columns: 42px minmax(0, 1fr) auto; }
+  .thumb { width: 42px; height: 60px; }
+}
