@@ -116,8 +116,24 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
   };
   // Kakao Maps JavaScript key: public by design, only works on the domains registered for it.
   const kakaoMapKey = "9f074c6f34b038341b0dec8dc2ac5566";
-  // [latitude, longitude], filled from the addresses above.
-  const venueCoordinates = {};
+  // [latitude, longitude], geocoded from the addresses above with Kakao's address search.
+  const venueCoordinates = {
+    kofa: [37.58066, 126.88984],
+    sac: [37.56817, 126.96998],
+    laika: [37.56517, 126.93094],
+    indiespace: [37.55725, 126.92499],
+    momo: [37.56446, 126.95029],
+    cinecube: [37.56964, 126.97214],
+    emu: [37.57207, 126.96901],
+    forest: [37.65418, 127.06144],
+    arirang: [37.60012, 127.01389],
+    filmforum: [37.56378, 126.94409],
+    sangsangmadang: [37.55096, 126.92106],
+    movieland: [37.54418, 127.05029],
+    artnine: [37.48461, 126.98167],
+    kucine: [37.53918, 127.07471],
+    heyri: [37.79167, 126.69768]
+  };
   const knownProgramImages = {
     "p-sac-rossellini": "https://www.cinematheque.seoul.kr/data/file/program/thumb-cd350d699bb6addbeff893b0d2cf9159_5IpMwGuj_ebb50b412a6aa0d39ee6fb254d9d31640c68de5f_400x300.jpg",
     "p-sac-wiseman": "https://www.cinematheque.seoul.kr/data/file/program/thumb-cd350d699bb6addbeff893b0d2cf9159_8S1EGAHr_98b3e011c1e80809f8b95c0286931b524d7ee6a5_400x300.jpg",
