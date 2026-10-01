@@ -914,3 +914,5 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .fp-row + .fp-row, .fp-it + .fp-it, .fp-gap, .fp-gap + .fp-it { border-top-color: var(--line-2); }
 .fp-row .fp-meta { margin-top: 8px; }
 .fp-row { padding: 16px 0; }
+/* the list card's outline sat outside its box, under the sticky filter bar, so its top edge vanished */
+.fp-list { box-shadow: none; border: 1px solid var(--line-2); }
