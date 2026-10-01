@@ -571,22 +571,21 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .ticket-sheet-in > * { flex: none; }
 .ticket-sheet-h { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
 .ticket-sheet-h h2 { font-size: 18px; font-weight: 700; line-height: 26px; }
-.ticket-sheet-sub { margin-top: 2px; font-size: 13px; line-height: 18px; color: var(--t4); }
 .ticket-sheet-h .icon-btn { flex: none; margin: -6px -6px 0 0; }
 .ticket-preview-wrap { flex: 1 1 0 !important; min-height: 160px; border-radius: 18px; background: var(--fill); }
 .ticket-preview { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); display: block; height: calc(100% - 24px); max-width: calc(100% - 24px); aspect-ratio: 9 / 16; border-radius: 12px; background: var(--line); box-shadow: 0 8px 24px -10px rgb(0 0 0 / 0.3); object-fit: cover; }
 .ticket-preview:not([src]) { visibility: hidden; }
 .ticket-controls { display: flex; align-items: center; justify-content: center; gap: 12px; }
 .ticket-rating-wrap { display: flex; align-items: center; gap: 8px; min-width: 0; }
-.ticket-rating { display: flex; }
+.ticket-rating { display: flex; touch-action: none; -webkit-user-select: none; user-select: none; }
 .ticket-star { width: 48px; height: 52px; display: grid; place-items: center; -webkit-tap-highlight-color: transparent; }
-.ticket-star svg { width: 40px; height: 40px; }
+.ticket-star svg { width: 40px; height: 40px; transition: transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1); }
+.ticket-star.is-hot svg { transform: scale(1.28); transition-duration: 0.18s; }
 .ticket-star .bg { fill: var(--line-2); }
-.ticket-star .fg { fill: var(--t1); clip-path: inset(0 100% 0 0); }
+.ticket-star .fg { fill: var(--t1); clip-path: inset(0 100% 0 0); transition: clip-path 0.14s ease-out; }
 .ticket-star.is-half .fg { clip-path: inset(0 50% 0 0); }
 .ticket-star.is-full .fg { clip-path: none; }
-.ticket-star:active svg { transform: scale(0.9); }
-.ticket-rating-value { font-size: 15px; font-weight: 600; color: var(--t4); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.ticket-rating-value { min-width: 64px; font-size: 15px; font-weight: 600; color: var(--t4); white-space: nowrap; font-variant-numeric: tabular-nums; }
 .ticket-actions { display: grid; gap: 8px; }
 .ticket-btn { height: 52px; border-radius: 14px; background: var(--fill); font-size: 16px; font-weight: 700; color: var(--t1); transition: filter 0.15s, transform 0.15s; }
 .ticket-btn:active { transform: scale(0.98); }

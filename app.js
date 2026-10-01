@@ -145,6 +145,7 @@ import { filmTitleKey } from "./src/film-title.mjs";
   };
 
   const $ = (selector) => document.querySelector(selector);
+  const $all = (selector) => [...document.querySelectorAll(selector)];
   const iconSpritePath = "/assets/lucide-sprite.svg";
 
   function iconMarkup(name, className = "") {
@@ -3100,8 +3101,68 @@ import { filmTitleKey } from "./src/film-title.mjs";
         return `<button class="ticket-star${fill}" type="button" data-ticket-star="${value}" aria-label="별점 ${value}점">${ticketStarMarkup}</button>`;
       })
       .join("");
-    const value = $("#ticketRatingValue");
-    if (value) value.textContent = rating ? rating.toFixed(1) : "별점 없음";
+    paintTicketStars(rating);
+  }
+
+  // Updates the stars in place (no re-render) so a drag stays smooth; the star under the
+  // finger swells and settles back once the finger moves on.
+  function paintTicketStars(rating, hotValue = 0) {
+    $all("#ticketRating .ticket-star").forEach((star) => {
+      const value = Number(star.dataset.ticketStar);
+      star.classList.toggle("is-full", rating >= value);
+      star.classList.toggle("is-half", rating < value && rating >= value - 0.5);
+      star.classList.toggle("is-hot", value === hotValue);
+    });
+    const label = $("#ticketRatingValue");
+    if (label) label.textContent = rating ? rating.toFixed(1) : "별점 없음";
+  }
+
+  // Half-star value under a pointer x: the left half of a star is .5, the right half whole.
+  function ticketRatingAt(clientX) {
+    const stars = $all("#ticketRating .ticket-star");
+    if (!stars.length) return 0;
+    for (const star of stars) {
+      const rect = star.getBoundingClientRect();
+      if (clientX <= rect.right) {
+        const value = Number(star.dataset.ticketStar);
+        return clientX < rect.left + rect.width / 2 ? Math.max(0.5, value - 0.5) : value;
+      }
+    }
+    return 5;
+  }
+
+  function bindTicketRatingDrag() {
+    const target = $("#ticketRating");
+    if (!target) return;
+    let drag = null;
+    const finish = (event) => {
+      if (!drag) return;
+      const value = ticketRatingAt(event.clientX);
+      // a tap on the current score clears it; a drag always keeps where it ended
+      ticketState.rating = !drag.moved && value === drag.startRating ? 0 : value;
+      drag = null;
+      paintTicketStars(ticketState.rating);
+      renderTicketPreview();
+    };
+    target.addEventListener("pointerdown", (event) => {
+      if (!event.target.closest(".ticket-star")) return;
+      event.preventDefault();
+      target.setPointerCapture?.(event.pointerId);
+      drag = { startX: event.clientX, startRating: ticketState.rating, moved: false };
+      const value = ticketRatingAt(event.clientX);
+      paintTicketStars(value, Math.ceil(value));
+    });
+    target.addEventListener("pointermove", (event) => {
+      if (!drag) return;
+      if (Math.abs(event.clientX - drag.startX) > 4) drag.moved = true;
+      const value = ticketRatingAt(event.clientX);
+      paintTicketStars(value, Math.ceil(value));
+    });
+    target.addEventListener("pointerup", finish);
+    target.addEventListener("pointercancel", () => {
+      drag = null;
+      paintTicketStars(ticketState.rating);
+    });
   }
 
   // Tapping the left half of a star gives a half point; tapping the current score clears it.
@@ -3232,6 +3293,7 @@ import { filmTitleKey } from "./src/film-title.mjs";
     $("#searchInput")?.addEventListener("input", (event) => syncSearch(event.target.value));
     // the picker re-renders its file input, so the change listener is delegated
     $("#ticketSessionSelects")?.addEventListener("change", onTicketSelectChange);
+    bindTicketRatingDrag();
     $("#ticketPicker")?.addEventListener("change", (event) => {
       if (event.target.id === "ticketPhoto") setTicketPhoto(event.target.files?.[0]);
     });
@@ -3344,10 +3406,13 @@ import { filmTitleKey } from "./src/film-title.mjs";
         return;
       }
 
+      // pointer input is handled by the drag code; this path is the keyboard (Enter/Space)
       const starButton = event.target.closest("[data-ticket-star]");
       if (starButton) {
-        setTicketRating(starButton, event);
-        renderTicketPreview();
+        if (event.detail === 0) {
+          setTicketRating(starButton, event);
+          renderTicketPreview();
+        }
         return;
       }
 
