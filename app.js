@@ -791,7 +791,7 @@ import { filmTitleKey } from "./src/film-title.mjs";
 
     const allButton = todayMode
       ? ""
-      : `<button class="date is-all${activeDate ? "" : " is-on"}" type="button" data-date="" aria-pressed="${!activeDate}" aria-label="${escapeHtml(`전체 날짜 ${totalSessions.toLocaleString("ko-KR")}회`)}"><span class="wd">전체</span><span class="d">${totalSessions.toLocaleString("ko-KR")}</span><span class="c">회</span></button>`;
+      : `<button class="date is-all${activeDate ? "" : " is-on"}" type="button" data-date="" aria-pressed="${!activeDate}" aria-label="${escapeHtml(`전체 날짜 ${totalSessions.toLocaleString("ko-KR")}회`)}"><span class="wd">날짜</span><span class="d">전체</span></button>`;
 
     // Rebuilding the strip would jump it back to the start; keep where the visitor scrolled it.
     const scrollLeft = target.scrollLeft;
@@ -803,7 +803,7 @@ import { filmTitleKey } from "./src/film-title.mjs";
         const count = sessionsByDate[date] || 0;
         const classes = ["date", active ? "is-on" : "", isSunday(date) ? "is-sun" : ""].filter(Boolean).join(" ");
         const label = `${parsed.getMonth() + 1}월 ${parsed.getDate()}일 ${weekdays[parsed.getDay()]}요일${today ? " 오늘" : ""}, ${count}회`;
-        return `<button class="${classes}" type="button" data-date="${escapeHtml(date)}" aria-pressed="${active}" ${today ? 'aria-current="date"' : ""} aria-label="${escapeHtml(label)}"><span class="wd">${today ? "오늘" : weekdays[parsed.getDay()]}</span><span class="d">${parsed.getDate()}</span><span class="c">${count.toLocaleString("ko-KR")}회</span></button>`;
+        return `<button class="${classes}" type="button" data-date="${escapeHtml(date)}" aria-pressed="${active}" ${today ? 'aria-current="date"' : ""} aria-label="${escapeHtml(label)}"><span class="wd">${today ? "오늘" : weekdays[parsed.getDay()]}</span><span class="d">${parsed.getDate()}</span></button>`;
       })
       .join("");
     target.scrollLeft = scrollLeft;
