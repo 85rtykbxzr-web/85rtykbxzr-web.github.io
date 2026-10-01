@@ -413,3 +413,16 @@ main { padding-top: 72px; }
 .film-id .meta { margin-top: 2px; }
 .fest-empty { padding: 24px 0; text-align: center; font-size: 15px; color: var(--t3); }
 .venue-h:has(.film-id) { align-items: center; }
+
+/* tab bar icons: outline when idle, filled when current */
+.tab-ic { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; transition: transform 0.2s ease; }
+.tab-ic .dot { stroke-width: 2.4; }
+.tab-ic .dash { stroke-dasharray: 2 2.4; }
+.tab-ic .solid { fill: currentColor; }
+.tab-ic .cut { stroke: var(--card); }
+.tab-ic .ic-on { display: none; }
+.tabbar a[aria-current] .tab-ic .ic-on { display: inline; }
+.tabbar a[aria-current] .tab-ic .ic-off { display: none; }
+.tabbar a:active .tab-ic { transform: scale(0.9); }
+.tabbar a span { margin-top: 1px; }
+@media (prefers-reduced-motion: reduce) { .tab-ic { transition: none; } }
