@@ -100,10 +100,15 @@ body {
 .head h1, .head h2 { font-size: 26px; line-height: 34px; font-weight: 700; letter-spacing: -0.02em; }
 .sub { margin-top: 6px; font-size: 15px; line-height: 22px; color: var(--t3); }
 .sub:empty { display: none; }
-.seg { display: inline-flex; flex: none; padding: 4px; gap: 2px; border-radius: 12px; background: var(--fill-hover); }
-.seg button { height: 36px; padding: 0 18px; border-radius: 9px; font-size: 15px; font-weight: 600; color: var(--t3); transition: color 0.15s; }
+/* Equal columns so one thumb can slide under whichever view is on. */
+.seg { position: relative; display: inline-grid; grid-template-columns: repeat(3, 1fr); flex: none; padding: 4px; gap: 2px; border-radius: 12px; background: var(--fill-hover); }
+.seg button { position: relative; z-index: 1; height: 36px; padding: 0 18px; border-radius: 9px; font-size: 15px; font-weight: 600; color: var(--t3); transition: color 0.25s ease; -webkit-tap-highlight-color: transparent; }
 .seg button:hover { color: var(--t1); }
-.seg button.is-on { background: var(--card); color: var(--t1); box-shadow: var(--shadow); }
+.seg button.is-on { color: var(--t1); }
+.seg-thumb { position: absolute; top: 4px; bottom: 4px; left: 4px; width: calc((100% - 12px) / 3); border-radius: 9px; background: var(--card); box-shadow: var(--shadow); transition: transform 0.38s cubic-bezier(0.32, 0.72, 0, 1); }
+.seg:has(button:nth-child(2).is-on) .seg-thumb { transform: translateX(calc(100% + 2px)); }
+.seg:has(button:nth-child(3).is-on) .seg-thumb { transform: translateX(calc(200% + 4px)); }
+.seg button:active { transform: scale(0.97); }
 
 .sec-h { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 10px; row-gap: 2px; margin-bottom: 16px; }
 .sec-h h2 { font-size: 20px; line-height: 28px; font-weight: 700; letter-spacing: -0.02em; }
@@ -430,4 +435,4 @@ main { padding-top: 72px; }
 .tabbar a[aria-current] .tab-ic .ic-off { display: none; }
 .tabbar a:active .tab-ic { transform: scale(0.88); }
 .tabbar a span { margin-top: 1px; }
-@media (prefers-reduced-motion: reduce) { .tab-ic, .tab-pill { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .tab-ic, .tab-pill, .seg-thumb { transition: none; } }

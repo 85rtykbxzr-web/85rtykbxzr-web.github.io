@@ -38,8 +38,8 @@
         "description": "서울 독립영화관의 오늘 상영시간표, 기획전, 영화제 일정을 날짜별, 영화별, 상영관별로 확인하세요."
       }
     </script>
-    <link href="/assets/app.css?v=abf84a38cd41" rel="stylesheet" />
-    <script defer src="/assets/app.js?v=abf84a38cd41"></script>
+    <link href="/assets/app.css?v=c2c5b64d2216" rel="stylesheet" />
+    <script defer src="/assets/app.js?v=c2c5b64d2216"></script>
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=4" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=4" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=4" />
@@ -116,6 +116,7 @@
             <button class="is-on" type="button" data-view="today" data-toggle-style="desktop" aria-pressed="true">오늘</button>
             <button type="button" data-view="film" data-toggle-style="desktop" aria-pressed="false">영화별</button>
             <button type="button" data-view="venue" data-toggle-style="desktop" aria-pressed="false">상영관별</button>
+            <span class="seg-thumb" aria-hidden="true"></span>
           </div>
         </div>
 
@@ -195,6 +196,7 @@
             <button class="is-on" id="view-today" type="button" data-view="today" data-toggle-style="mobile" aria-pressed="true">오늘</button>
             <button id="view-movie" type="button" data-view="film" data-toggle-style="mobile" aria-pressed="false">영화별</button>
             <button id="view-theater" type="button" data-view="venue" data-toggle-style="mobile" aria-pressed="false">상영관별</button>
+            <span class="seg-thumb" aria-hidden="true"></span>
           </div>
         </div>
       </div>
