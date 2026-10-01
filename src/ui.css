@@ -474,11 +474,11 @@ main { padding-top: 72px; }
 /* Rows are links: no per-row buttons, a chevron at the end, a pressed state instead. */
 .row { position: relative; margin: 0 -10px; padding: 12px 10px; border-top: 0; border-radius: 12px; grid-template-columns: 40px minmax(0, 1fr) auto; -webkit-tap-highlight-color: transparent; transition: background-color 0.15s; }
 .row::before { content: ""; position: absolute; left: 10px; right: 10px; top: 0; border-top: 1px solid var(--line); }
-a.row:hover { background: color-mix(in srgb, var(--fill) 60%, transparent); }
-a.row:active { background: var(--fill); }
-a.row:hover .tt { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--t5); }
+.row.is-link:hover { background: color-mix(in srgb, var(--fill) 60%, transparent); }
+.row.is-link:active { background: var(--fill); }
+.row.is-link:hover .tt { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--t5); }
 .go { width: 18px; height: 18px; fill: none; stroke: var(--t5); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-a.row:hover .go { stroke: var(--t3); }
+.row.is-link:hover .go { stroke: var(--t3); }
 .row-state { font-size: 13px; font-weight: 600; color: var(--t4); white-space: nowrap; }
 .row-state.is-soldout { color: var(--red); }
 .meta .via { color: var(--t4); }
@@ -553,3 +553,46 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 @keyframes lights-down-in { from { opacity: 0; filter: brightness(0.7); } to { opacity: 1; filter: brightness(1); } }
 @keyframes lights-up-out { from { opacity: 1; filter: brightness(1); } to { opacity: 0; filter: brightness(1.6); } }
 @keyframes lights-up-in { from { opacity: 0; filter: brightness(1.25); } to { opacity: 1; filter: brightness(1); } }
+
+/* Row: stretched booking link + "today's ticket" button */
+.row-link { position: absolute; inset: 0; z-index: 1; border-radius: inherit; }
+.row-link:focus-visible { outline: 2px solid var(--t3); outline-offset: -2px; }
+.row-end { position: relative; display: inline-flex; align-items: center; gap: 4px; }
+.row-ticket { position: relative; z-index: 2; width: 36px; height: 36px; display: inline-grid; place-items: center; border-radius: 10px; color: var(--t4); -webkit-tap-highlight-color: transparent; transition: background-color 0.15s, color 0.15s; }
+.row-ticket:hover { background: var(--fill); color: var(--t1); }
+.row-ticket:active { transform: scale(0.94); }
+.ticket-ic { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+
+/* Story ticket sheet */
+.ticket-sheet { width: min(calc(100% - 32px), 420px); max-height: calc(100dvh - 32px); margin: auto; padding: 0; border: 0; border-radius: 24px; background: var(--card); color: var(--t1); box-shadow: 0 24px 60px -12px rgb(0 0 0 / 0.35); overflow: auto; }
+.ticket-sheet::backdrop { background: rgb(0 0 0 / 0.45); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+.ticket-sheet[open] { animation: ticket-in 0.28s cubic-bezier(0.32, 0.72, 0, 1); }
+@keyframes ticket-in { from { opacity: 0; transform: translateY(16px) scale(0.98); } }
+.ticket-sheet-in { display: flex; flex-direction: column; gap: 16px; padding: 18px 18px 20px; }
+.ticket-sheet-h { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.ticket-sheet-h h2 { font-size: 18px; font-weight: 700; line-height: 26px; }
+.ticket-sheet-h p { margin-top: 2px; font-size: 14px; color: var(--t3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ticket-sheet-h .icon-btn { flex: none; margin: -6px -6px 0 0; }
+.ticket-preview-wrap { display: grid; place-items: center; padding: 14px; border-radius: 18px; background: var(--fill); }
+.ticket-preview { display: block; height: min(52dvh, 460px); aspect-ratio: 9 / 16; border-radius: 12px; background: var(--line); box-shadow: 0 8px 24px -10px rgb(0 0 0 / 0.3); object-fit: cover; }
+.ticket-preview:not([src]) { visibility: hidden; }
+.ticket-controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.ticket-themes { display: flex; gap: 10px; }
+.ticket-swatch { position: relative; width: 32px; height: 32px; border-radius: 999px; box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.08); transition: box-shadow 0.15s, transform 0.15s; }
+.ticket-swatch:active { transform: scale(0.92); }
+.ticket-swatch.is-on { box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.08), 0 0 0 2px var(--card), 0 0 0 4px var(--t1); }
+.ticket-swatch.is-butter { background: linear-gradient(#fff7dc, #ffe39a); }
+.ticket-swatch.is-peach { background: linear-gradient(#ffeef2, #ffc6d5); }
+.ticket-swatch.is-mint { background: linear-gradient(#e8f8f1, #b5e8d3); }
+.ticket-swatch.is-night { background: linear-gradient(#26252d, #131217); }
+.ticket-seat { display: flex; align-items: center; gap: 8px; height: 40px; padding: 0 12px; border-radius: 12px; background: var(--fill); font-size: 14px; color: var(--t3); }
+.ticket-seat input { width: 64px; border: 0; background: none; font: inherit; font-weight: 600; color: var(--t1); outline: none; }
+.ticket-seat:focus-within { box-shadow: inset 0 0 0 2px var(--t3); }
+.ticket-actions { display: grid; gap: 8px; }
+.ticket-btn { height: 52px; border-radius: 14px; background: var(--fill); font-size: 16px; font-weight: 700; color: var(--t1); transition: filter 0.15s, transform 0.15s; }
+.ticket-btn:active { transform: scale(0.98); }
+.ticket-btn.is-primary { background: var(--t1); color: var(--card); }
+.ticket-btn:hover { filter: brightness(0.96); }
+.ticket-btn[hidden] { display: none; }
+.ticket-swatch span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.ticket-seat input:focus, .ticket-seat input:focus-visible { outline: none; box-shadow: none; }

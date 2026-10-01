@@ -54,109 +54,6 @@ function hash(text) {
   return value >>> 0;
 }
 
-function sparkle(ctx, x, y, size, color) {
-  ctx.save();
-  ctx.fillStyle = color;
-  ctx.beginPath();
-  ctx.moveTo(x, y - size);
-  ctx.quadraticCurveTo(x, y, x + size, y);
-  ctx.quadraticCurveTo(x, y, x, y + size);
-  ctx.quadraticCurveTo(x, y, x - size, y);
-  ctx.quadraticCurveTo(x, y, x, y - size);
-  ctx.fill();
-  ctx.restore();
-}
-
-// Popcorn-bucket mascot peeking over the ticket edge: body first (the ticket covers it),
-// then the little hands gripping the edge are drawn after the ticket.
-function drawMascotBody(ctx, cx, edgeY, theme) {
-  const top = edgeY - 170;
-  const topW = 230;
-  const bottomW = 190;
-  const h = 260;
-  ctx.save();
-  // popcorn puffs
-  const puffs = [[-80, -8, 44], [-30, -34, 50], [28, -30, 48], [80, -6, 42], [0, -2, 46], [-55, 18, 38], [56, 18, 38]];
-  for (const [dx, dy, r] of puffs) {
-    ctx.beginPath();
-    ctx.arc(cx + dx, top + dy, r, 0, Math.PI * 2);
-    ctx.fillStyle = "#fff6d6";
-    ctx.fill();
-    ctx.lineWidth = 6;
-    ctx.strokeStyle = "#2b2620";
-    ctx.stroke();
-  }
-  // bucket with stripes
-  ctx.beginPath();
-  ctx.moveTo(cx - topW / 2, top + 20);
-  ctx.lineTo(cx + topW / 2, top + 20);
-  ctx.lineTo(cx + bottomW / 2, top + h);
-  ctx.lineTo(cx - bottomW / 2, top + h);
-  ctx.closePath();
-  ctx.save();
-  ctx.clip();
-  ctx.fillStyle = "#ffffff";
-  ctx.fillRect(cx - topW / 2, top, topW, h + 20);
-  ctx.fillStyle = theme === "mint" ? "#25a57c" : "#ff5a5f";
-  for (let i = -3; i <= 3; i += 2) {
-    ctx.beginPath();
-    ctx.moveTo(cx + i * 28 - 14, top + 20);
-    ctx.lineTo(cx + i * 28 + 14, top + 20);
-    ctx.lineTo(cx + i * 23 + 12, top + h);
-    ctx.lineTo(cx + i * 23 - 12, top + h);
-    ctx.closePath();
-    ctx.fill();
-  }
-  ctx.restore();
-  ctx.lineWidth = 7;
-  ctx.strokeStyle = "#2b2620";
-  ctx.stroke();
-  // face (sits above the ticket edge)
-  const faceY = top + 92;
-  ctx.fillStyle = "#ffffff";
-  roundRectPath(ctx, cx - 78, faceY - 44, 156, 96, 40);
-  ctx.fill();
-  ctx.lineWidth = 5;
-  ctx.stroke();
-  ctx.fillStyle = "#2b2620";
-  for (const dx of [-34, 34]) {
-    ctx.beginPath();
-    ctx.ellipse(cx + dx, faceY - 6, 9, 12, 0, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.beginPath();
-    ctx.arc(cx + dx + 3, faceY - 10, 3.5, 0, Math.PI * 2);
-    ctx.fillStyle = "#ffffff";
-    ctx.fill();
-    ctx.fillStyle = "#2b2620";
-  }
-  ctx.fillStyle = "rgba(255, 120, 140, 0.55)";
-  for (const dx of [-56, 56]) {
-    ctx.beginPath();
-    ctx.ellipse(cx + dx, faceY + 16, 14, 9, 0, 0, Math.PI * 2);
-    ctx.fill();
-  }
-  ctx.beginPath();
-  ctx.lineWidth = 5;
-  ctx.lineCap = "round";
-  ctx.arc(cx, faceY + 8, 14, 0.15 * Math.PI, 0.85 * Math.PI);
-  ctx.stroke();
-  ctx.restore();
-}
-
-function drawMascotHands(ctx, cx, edgeY) {
-  ctx.save();
-  for (const dx of [-70, 70]) {
-    ctx.beginPath();
-    ctx.ellipse(cx + dx, edgeY + 4, 24, 18, 0, 0, Math.PI * 2);
-    ctx.fillStyle = "#ffffff";
-    ctx.fill();
-    ctx.lineWidth = 6;
-    ctx.strokeStyle = "#2b2620";
-    ctx.stroke();
-  }
-  ctx.restore();
-}
-
 function loadImage(src) {
   return new Promise((resolve) => {
     if (!src) {
@@ -170,6 +67,16 @@ function loadImage(src) {
     image.onerror = () => resolve(null);
     image.src = src;
   });
+}
+
+// Most cinema sites send no CORS headers, so a direct load would taint the canvas.
+// Fall back to a CORS-enabled image proxy before giving up on the poster.
+async function loadPoster(src) {
+  if (!src) return null;
+  const direct = await loadImage(src);
+  if (direct && posterIsExportable(direct)) return direct;
+  const proxied = await loadImage(`https://wsrv.nl/?url=${encodeURIComponent(src)}&w=900&output=jpg`);
+  return proxied && posterIsExportable(proxied) ? proxied : null;
 }
 
 function drawCover(ctx, image, x, y, w, h) {
@@ -204,8 +111,7 @@ export async function drawStoryTicket(ticket, themeKey = "butter") {
   const fontLoads = [
     `800 64px ${SANS}`, `700 40px ${SANS}`, `600 34px ${SANS}`, `400 44px ${BRAND}`
   ].map((font) => document.fonts?.load(font, `${ticket.title}${ticket.venue}${ticket.screen || ""}서울독립영화관시간표0123456789.:TODAY`).catch(() => null));
-  const [loaded] = await Promise.all([loadImage(ticket.posterUrl), ...fontLoads]);
-  const poster = loaded && posterIsExportable(loaded) ? loaded : null;
+  const [poster] = await Promise.all([loadPoster(ticket.posterUrl), ...fontLoads]);
 
   const canvas = document.createElement("canvas");
   canvas.width = W;
@@ -219,12 +125,6 @@ export async function drawStoryTicket(ticket, themeKey = "butter") {
   ctx.fillStyle = bg;
   ctx.fillRect(0, 0, W, H);
   const seed = hash(`${ticket.id}${ticket.title}`);
-  for (let i = 0; i < 9; i++) {
-    const x = 60 + ((seed >> (i * 3)) % 960);
-    const y = 120 + ((seed >> (i * 2 + 1)) % 1700);
-    if (y > 360 && y < 1600 && x > 110 && x < 970) continue;
-    sparkle(ctx, x, y, 10 + (i % 3) * 8, i % 2 ? theme.accent : "rgba(255,255,255,0.9)");
-  }
 
   // header
   const date = new Date(`${ticket.date}T00:00:00`);
@@ -241,12 +141,17 @@ export async function drawStoryTicket(ticket, themeKey = "butter") {
   ctx.fillText(dateText, 130, 282);
 
   const tx = 130;
-  const ty = 420;
   const tw = 820;
-  const th = 1140;
-  const mascotX = tx + tw - 190;
-
-  drawMascotBody(ctx, mascotX, ty, themeKey);
+  const px = tx + 40;
+  const pw = tw - 80;
+  const ph = 560;
+  ctx.font = `800 64px ${SANS}`;
+  const titleLines = wrapLines(ctx, ticket.title, pw, 2);
+  // body: poster, title, venue, info columns; stub below the perforation
+  const bodyH = 40 + ph + 96 + (titleLines.length - 1) * 78 + 58 + 96 + 58 + 70;
+  const th = bodyH + 230;
+  const ty = Math.round(400 + (1160 - th) / 2);
+  const py = ty + 40;
 
   // ticket on its own layer so the side notches can be punched out
   const layer = document.createElement("canvas");
@@ -262,10 +167,6 @@ export async function drawStoryTicket(ticket, themeKey = "butter") {
   lc.shadowColor = "transparent";
 
   // poster window
-  const px = tx + 40;
-  const py = ty + 40;
-  const pw = tw - 80;
-  const ph = 560;
   lc.save();
   roundRectPath(lc, px, py, pw, ph, 28);
   lc.clip();
@@ -292,7 +193,6 @@ export async function drawStoryTicket(ticket, themeKey = "butter") {
   // title + venue
   lc.fillStyle = theme.ink;
   lc.font = `800 64px ${SANS}`;
-  const titleLines = wrapLines(lc, ticket.title, pw, 2);
   titleLines.forEach((line, index) => lc.fillText(line, px, py + ph + 96 + index * 78));
   const afterTitle = py + ph + 96 + (titleLines.length - 1) * 78;
   lc.fillStyle = theme.sub;
@@ -300,7 +200,7 @@ export async function drawStoryTicket(ticket, themeKey = "butter") {
   lc.fillText([ticket.venue, ticket.screen].filter(Boolean).join(" · "), px, afterTitle + 58);
 
   // perforation + stub
-  const cutY = ty + th - 230;
+  const cutY = ty + bodyH;
   lc.globalCompositeOperation = "destination-out";
   for (const x of [tx, tx + tw]) {
     lc.beginPath();
@@ -317,7 +217,7 @@ export async function drawStoryTicket(ticket, themeKey = "butter") {
   lc.stroke();
   lc.setLineDash([]);
 
-  const infoY = cutY - 150;
+  const infoY = afterTitle + 58 + 96;
   const columns = [["DATE", ticket.date.replaceAll("-", ".").slice(2)], ["TIME", ticket.time], ["SEAT", ticket.seat || "—"]];
   columns.forEach(([label, value], index) => {
     const x = px + index * (pw / 3);
@@ -347,7 +247,6 @@ export async function drawStoryTicket(ticket, themeKey = "butter") {
   }
 
   ctx.drawImage(layer, 0, 0);
-  drawMascotHands(ctx, mascotX, ty);
 
   // footer
   ctx.textAlign = "center";
