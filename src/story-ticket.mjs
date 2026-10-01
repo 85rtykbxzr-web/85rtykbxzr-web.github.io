@@ -257,7 +257,7 @@ function drawDayLine(ctx, ticket, cx, y, big, small) {
   ctx.fillText(rest, left + dayWidth + gap, y);
 }
 
-function drawPosterStyle(ctx, ticket, poster, { typeScale: k = 1.05, gap: baseGap = 26 } = {}) {
+function drawPosterStyle(ctx, ticket, poster, { typeScale: k = 1.05, gap: baseGap = 26, starColor = "#ffffff" } = {}) {
   // Fill the story; a 2:3 poster loses about 8% on each side, which keeps the full-bleed look.
   if (poster) drawCover(ctx, poster, 0, 0, W, H);
   else {
@@ -309,7 +309,7 @@ function drawPosterStyle(ctx, ticket, poster, { typeScale: k = 1.05, gap: baseGa
     // Optical box: the star's thin points reach r above / 0.81r below the centre, but its
     // visible mass sits closer in, so spacing uses a slightly tighter box.
     const cy = bottom - size * 0.33;
-    const width = drawStars(ctx, ticket.rating, x, cy, size, "#ffffff", "rgba(255,255,255,0.26)");
+    const width = drawStars(ctx, ticket.rating, x, cy, size, starColor, "rgba(255,255,255,0.26)");
     const digits = ink(ratingFont, "4.5");
     ctx.fillStyle = "#ffffff";
     ctx.font = ratingFont;
