@@ -1,9 +1,12 @@
-// Applies a saved light/dark choice before first paint; without one the CSS follows the system.
+// Applies the theme before first paint: the visitor's saved choice, otherwise light.
+// The site opens in light mode even when the device is set to dark; the toggle still switches.
 (() => {
+  let theme = "light";
   try {
-    const theme = localStorage.getItem("theme");
-    if (theme === "light" || theme === "dark") document.documentElement.dataset.theme = theme;
+    const saved = localStorage.getItem("theme");
+    if (saved === "light" || saved === "dark") theme = saved;
   } catch {
-    // Storage can be unavailable (private mode); the system preference still applies.
+    // Storage can be unavailable (private mode); light still applies.
   }
+  document.documentElement.dataset.theme = theme;
 })();
