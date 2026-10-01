@@ -2623,7 +2623,7 @@ import { createFestivalPlanner } from "./src/festival-planner-ui.mjs";
     if (shown) {
       const started = today >= festival.startDate;
       const tag = started ? `${daysBetween(festival.startDate, today) + 1}일째` : `D-${daysBetween(today, festival.startDate)}`;
-      markup = `<button type="button" class="fest-strip" data-fest-planner="${escapeHtml(festival.id)}"><span class="fest-strip-tag">${escapeHtml(tag)}</span><span class="fest-strip-t">${festivalLogo(festival.id) ? `<img src="${escapeHtml(festivalLogo(festival.id))}" alt="${escapeHtml(festival.name)}" />` : `<b>${escapeHtml(festival.name)}</b>`}<b>시간표 짜기</b></span><svg class="ui-icon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#arrow-right"></use></svg></button>`;
+      markup = `<button type="button" class="fest-strip" data-fest-planner="${escapeHtml(festival.id)}"><span class="fest-strip-tag">${escapeHtml(tag)}</span><span class="fest-strip-t"><b>${escapeHtml(festival.name)} 시간표 짜기</b></span><svg class="ui-icon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#arrow-right"></use></svg></button>`;
     }
     const mobileLayout = isMobileViewport();
     const target = mobileLayout ? $("#mobileFestStrip") : $("#festStrip");

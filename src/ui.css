@@ -891,5 +891,3 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .fp-head h2 { font-size: 28px; line-height: 32px; font-weight: 700; letter-spacing: -0.05em; font-feature-settings: "ss06", "tnum"; }
 .fp-head { align-items: flex-start; }
 .fp-head .icon-btn { margin-top: -6px; }
-.fest-strip-t { flex-direction: row; align-items: center; gap: 10px; }
-.fest-strip-t img { flex: none; height: 18px; width: auto; }
