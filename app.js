@@ -7,7 +7,7 @@ import {
 } from "./src/festival-labels.mjs";
 import { safePublicUrl } from "./src/public-url-policy.mjs";
 import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
-import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
+import { drawStoryTicket } from "./src/story-ticket.mjs";
 
 (function () {
   const analyticsHostnames = new Set(["seoulcinemaschedule.com", "www.seoulcinemaschedule.com"]);
@@ -515,34 +515,14 @@ import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
   function emptyScheduleMessage(message) {
     if (!browserLiveIncomplete()) return message;
     const rows = state.data.meta.browserLive || [];
-    if (rows.some((row) => row.status === "error")) return "일부 영화관의 시간표를 확인하지 못했습니다. 위의 공식 링크에서 확인해 주세요.";
+    if (rows.some((row) => row.status === "error")) return "일부 영화관의 시간표를 확인하지 못했습니다. 영화관 공식 페이지에서 확인해 주세요.";
     return "영화관의 공식 시간표를 불러오는 중입니다.";
   }
 
-  // Only surface a notice when a venue could not be checked; successful and in-progress
-  // checks stay silent.
+  // The live-check status banner is intentionally not shown; venues that could not be
+  // checked simply list no sessions. Clear any banner left by an older build.
   function renderBrowserLiveStatus() {
-    const rows = usesBrowserLive(state.data) ? state.data.meta.browserLive || [] : [];
-    const failures = rows.filter((row) => row.status === "error");
-    const completeCount = rows.filter((row) => row.status === "ok").length;
-    for (const id of ["desktop", "mobile"]) {
-      let notice = document.getElementById(`${id}LiveStatus`);
-      if (!failures.length) { notice?.remove(); continue; }
-      if (!notice) {
-        notice = document.createElement("div");
-        notice.id = `${id}LiveStatus`;
-        notice.className = "notice";
-        notice.setAttribute("role", "status");
-        notice.setAttribute("aria-live", "polite");
-        document.getElementById(`${id}Schedule`).before(notice);
-      }
-      const links = failures.map((row) => {
-        const config = browserLiveConfigs.find((item) => item.venueId === row.venueId);
-        return `<a href="${escapeHtml(safePublicUrl(config.officialUrl))}" target="_blank" rel="noopener noreferrer">${escapeHtml(config.name)}</a>`;
-      });
-      notice.innerHTML = `${completeCount}/${browserLiveConfigs.length}개관 실시간 확인 · 연결되지 않은 영화관은 공식 시간표를 확인해 주세요: ${links.join(" · ")} <button type="button" data-retry-browser-live>다시 확인</button>`;
-      notice.querySelector("button").onclick = () => refreshScheduleData({ force: true });
-    }
+    for (const id of ["desktop", "mobile"]) document.getElementById(`${id}LiveStatus`)?.remove();
   }
 
   function matchesSearch(session, venues, query) {
@@ -2904,7 +2884,7 @@ import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
     setTabletSearchOpen(false);
   }
 
-  const ticketState = { session: null, style: "poster", rating: 0, photo: "", poster: "", requestId: 0 };
+  const ticketState = { session: null, rating: 0, photo: "", poster: "", requestId: 0 };
   let ticketPostersPromise = null;
 
   // English TMDB artwork per film, refreshed by the data pipeline; the ticket prefers it
@@ -2955,7 +2935,6 @@ import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
     ticketState.poster = "";
     toggleTicketPicker(false);
     $("#ticketSheetTitle").textContent = ticketTitle(session);
-    renderTicketStyles();
     renderTicketRating();
     const canShareFiles = Boolean(navigator.canShare && window.File);
     $("#ticketShare")?.classList.toggle("hidden", !canShareFiles);
@@ -2977,14 +2956,6 @@ import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
   function closeTicketSheet() {
     const sheet = $("#ticketSheet");
     if (sheet?.open) sheet.close?.() ?? sheet.removeAttribute("open");
-  }
-
-  function renderTicketStyles() {
-    const target = $("#ticketStyles");
-    if (!target) return;
-    target.innerHTML = Object.entries(ticketStyles)
-      .map(([key, style]) => `<button class="ticket-style${key === ticketState.style ? " is-on" : ""}" type="button" data-ticket-style="${key}" aria-pressed="${key === ticketState.style}">${escapeHtml(style.label)}</button>`)
-      .join("");
   }
 
   const ticketStarMarkup = '<svg viewBox="0 0 24 24" aria-hidden="true"><path class="bg" d="M12 2.6l2.9 6 6.5.8-4.8 4.5 1.2 6.5L12 17.2l-5.8 3.2 1.2-6.5-4.8-4.5 6.5-.8z"></path><path class="fg" d="M12 2.6l2.9 6 6.5.8-4.8 4.5 1.2 6.5L12 17.2l-5.8 3.2 1.2-6.5-4.8-4.5 6.5-.8z"></path></svg>';
@@ -3035,7 +3006,7 @@ import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
       const first = ticketPosterChoices(await loadTicketPosters())[0];
       if (first) details.posterUrl = first.full;
     }
-    return drawStoryTicket(details, ticketState.style);
+    return drawStoryTicket(details);
   }
 
   async function renderTicketPreview() {
@@ -3218,14 +3189,6 @@ import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
       if (ticketButton) {
         event.preventDefault();
         openTicketSheet(ticketButton.dataset.ticketSession);
-        return;
-      }
-
-      const styleButton = event.target.closest("[data-ticket-style]");
-      if (styleButton) {
-        ticketState.style = styleButton.dataset.ticketStyle;
-        renderTicketStyles();
-        renderTicketPreview();
         return;
       }
 

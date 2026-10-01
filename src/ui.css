@@ -577,9 +577,6 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .ticket-preview { display: block; height: min(52dvh, 460px); aspect-ratio: 9 / 16; border-radius: 12px; background: var(--line); box-shadow: 0 8px 24px -10px rgb(0 0 0 / 0.3); object-fit: cover; }
 .ticket-preview:not([src]) { visibility: hidden; }
 .ticket-controls { display: flex; align-items: center; justify-content: center; gap: 12px; }
-.ticket-styles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; padding: 4px; border-radius: 12px; background: var(--fill); }
-.ticket-style { height: 36px; border-radius: 9px; font-size: 14px; font-weight: 600; color: var(--t3); transition: background-color 0.15s, color 0.15s, box-shadow 0.15s; }
-.ticket-style.is-on { background: var(--card); color: var(--t1); box-shadow: 0 1px 3px rgb(0 0 0 / 0.12); }
 .ticket-rating-wrap { display: flex; align-items: center; gap: 8px; min-width: 0; }
 .ticket-rating { display: flex; }
 .ticket-star { width: 34px; height: 40px; display: grid; place-items: center; -webkit-tap-highlight-color: transparent; }
