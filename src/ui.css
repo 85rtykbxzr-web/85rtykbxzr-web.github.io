@@ -889,3 +889,6 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .fp-head h2 { font-size: 22px; line-height: 28px; font-weight: 700; letter-spacing: -0.03em; }
 /* room between the mode switch and the grid */
 .fp-body > .tt-wrap:first-child { margin-top: 14px; }
+/* long titles give way, badges keep their full width */
+.fp-title-text { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.fp-title .fp-badge { flex: none; }

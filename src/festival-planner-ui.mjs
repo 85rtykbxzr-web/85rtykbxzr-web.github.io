@@ -136,7 +136,7 @@ export function createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUr
               <div class="fp-row${on ? " is-picked" : ""}">
                 <span class="fp-time">${timeRange(session)}</span>
                 <a class="fp-what" href="${escapeHtml(safeExternalUrl(session.url, "#"))}" target="_blank" rel="noopener noreferrer">
-                  <span class="fp-title">${escapeHtml(session.title)}${badges(session)}</span>
+                  <span class="fp-title"><span class="fp-title-text">${escapeHtml(session.title)}</span>${badges(session)}</span>
                   <span class="fp-meta">${clash ? '<em class="fp-clash">겹침</em>' : ""}<span class="fp-meta-text">${escapeHtml(sessionMeta(session))}</span></span>
                 </a>
                 <button type="button" class="fp-heart${on ? " is-on" : ""}" data-fp-pick="${escapeHtml(session.id)}" aria-pressed="${on}" aria-label="${escapeHtml(`${session.title} ${on ? "빼기" : "담기"}`)}">${heart(on)}</button>
