@@ -226,9 +226,9 @@ main { padding-top: 72px; }
 .feature-grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); gap: 12px; }
 .hero { position: relative; overflow: hidden; isolation: isolate; border-radius: 24px; min-height: 336px; background: #1d1d22; color: #fff; }
 /* Blurred at a quarter size and scaled up: same look, a sixteenth of the pixels to blur. */
-.hero-bg { position: absolute; left: -25%; top: -25%; width: 37.5%; height: 37.5%; max-width: none; object-fit: cover; transform-origin: 0 0; transform: scale(4); filter: blur(11px) saturate(1.2); z-index: -2; }
-/* Pins the backdrop to one mid tone but keeps its colour, so every poster gives the same bright, even ground and white text keeps its contrast even over a white poster. A little deeper at the floor. */
-.hero::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(0deg, rgb(0 0 0 / 0.16), rgb(0 0 0 / 0) 55%), rgb(82 82 82 / 0.85); mix-blend-mode: luminosity; }
+.hero-bg { position: absolute; left: -25%; top: -25%; width: 37.5%; height: 37.5%; max-width: none; object-fit: cover; transform-origin: 0 0; transform: scale(4); filter: blur(11px); z-index: -2; }
+/* Pins the backdrop to one dark tone but keeps its colour, so every poster (even a white one) gives the same calm ground for white text. A little deeper at the floor. */
+.hero::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(0deg, rgb(0 0 0 / 0.16), rgb(0 0 0 / 0) 55%), rgb(42 42 42 / 0.88); mix-blend-mode: luminosity; }
 .hero::before, .fl::before { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.08); }
 .hero-in { display: flex; align-items: center; gap: 32px; height: 100%; padding: 32px; }
 .hero-poster { position: relative; flex: none; display: block; width: 184px; aspect-ratio: 2 / 3; border-radius: 14px; overflow: hidden; background: rgb(255 255 255 / 0.08); box-shadow: 0 1px 2px rgb(0 0 0 / 0.2), 0 6px 14px -4px rgb(0 0 0 / 0.32), 0 18px 32px -16px rgb(0 0 0 / 0.4); }
@@ -250,8 +250,8 @@ main { padding-top: 72px; }
 .feature-list { display: flex; flex-direction: column; gap: 12px; }
 .feature-list li { flex: 1; display: flex; }
 .fl { position: relative; overflow: hidden; isolation: isolate; flex: 1; display: flex; align-items: center; gap: 16px; padding: 14px 18px; border-radius: 20px; background: #1d1d22; color: #fff; }
-.fl-bg { position: absolute; left: -25%; top: -25%; width: 37.5%; height: 37.5%; max-width: none; object-fit: cover; transform-origin: 0 0; transform: scale(4); filter: blur(9px) saturate(1.2); z-index: -2; }
-.fl::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(0deg, rgb(0 0 0 / 0.12), rgb(0 0 0 / 0) 60%), rgb(82 82 82 / 0.85); mix-blend-mode: luminosity; }
+.fl-bg { position: absolute; left: -25%; top: -25%; width: 37.5%; height: 37.5%; max-width: none; object-fit: cover; transform-origin: 0 0; transform: scale(4); filter: blur(9px); z-index: -2; }
+.fl::after { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(0deg, rgb(0 0 0 / 0.12), rgb(0 0 0 / 0) 60%), rgb(42 42 42 / 0.88); mix-blend-mode: luminosity; }
 .fl-poster { position: relative; flex: none; width: 56px; aspect-ratio: 2 / 3; border-radius: 8px; overflow: hidden; background: rgb(255 255 255 / 0.08); box-shadow: 0 1px 2px rgb(0 0 0 / 0.2), 0 4px 10px -3px rgb(0 0 0 / 0.36); }
 .fl-poster img, .fl-poster .poster-fallback { width: 100%; height: 100%; object-fit: cover; display: block; }
 .fl-body { display: flex; flex-direction: column; min-width: 0; }
