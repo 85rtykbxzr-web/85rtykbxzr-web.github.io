@@ -465,7 +465,7 @@ function renderIndexHtml(html, req, preloadMarkup = "") {
 
   const rootUrl = `${baseUrl}/`;
   // Bump the query when og-image.png changes so chat apps refetch the preview instead of serving a cached copy.
-  const ogImageUrl = `${baseUrl}/assets/og-image.png?v=2`;
+  const ogImageUrl = `${baseUrl}/assets/og-image.png?v=3`;
   const safeRootUrl = escapeHtmlAttribute(rootUrl);
   const safeOgImageUrl = escapeHtmlAttribute(ogImageUrl);
 

@@ -257,7 +257,7 @@ async function main() {
       "index did not use PUBLIC_BASE_URL for og:url"
     );
     assert(
-      indexHtml.includes('property="og:image" content="https://example.test/assets/og-image.png?v=2"'),
+      indexHtml.includes('property="og:image" content="https://example.test/assets/og-image.png?v=3"'),
       "index did not use PUBLIC_BASE_URL for og:image"
     );
     assert(
