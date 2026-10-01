@@ -776,6 +776,8 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
       ? ""
       : `<button class="date is-all${activeDate ? "" : " is-on"}" type="button" data-date="" aria-pressed="${!activeDate}" aria-label="${escapeHtml(`전체 날짜 ${totalSessions.toLocaleString("ko-KR")}회`)}"><span class="wd">전체</span><span class="d">${totalSessions.toLocaleString("ko-KR")}</span><span class="c">회</span></button>`;
 
+    // Rebuilding the strip would jump it back to the start; keep where the visitor scrolled it.
+    const scrollLeft = target.scrollLeft;
     target.innerHTML = allButton + dates
       .map((date) => {
         const parsed = parseLocalDate(date);
@@ -787,6 +789,7 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
         return `<button class="${classes}" type="button" data-date="${escapeHtml(date)}" aria-pressed="${active}" ${today ? 'aria-current="date"' : ""} aria-label="${escapeHtml(label)}"><span class="wd">${today ? "오늘" : weekdays[parsed.getDay()]}</span><span class="d">${parsed.getDate()}</span><span class="c">${count.toLocaleString("ko-KR")}회</span></button>`;
       })
       .join("");
+    target.scrollLeft = scrollLeft;
   }
 
   function renderViewButtons() {
@@ -2185,7 +2188,8 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
   function renderPopularPicks() {
     const items = communityTrendItems();
     const searchActive = Boolean(state.query.trim());
-    const active = state.view === "today" && !searchActive && items.length > 0;
+    // Stays up in every view so switching views does not shove the schedule up and down.
+    const active = !searchActive && items.length > 0;
     const mobileLayout = isMobileViewport();
     const activeSection = mobileLayout ? $("#mobile-popular") : $("#popular");
     const inactiveSection = mobileLayout ? $("#popular") : $("#mobile-popular");
@@ -2390,6 +2394,36 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
     setTabletSearchOpen(false);
   }
 
+  const viewOrder = ["today", "film", "venue"];
+
+  // Keeps the view control where the finger is (the picks above it come and go between
+  // views) and slides the new schedule in from the side the control moved towards.
+  function switchView(nextView, button) {
+    if (!nextView || nextView === state.view) return;
+    const direction = viewOrder.indexOf(nextView) > viewOrder.indexOf(state.view) ? 1 : -1;
+    const anchorTop = button.getBoundingClientRect().top;
+    state.view = nextView;
+    state.venueFilter = "all";
+    render();
+    const replacement = [...document.querySelectorAll(`[data-view="${nextView}"]`)].find((item) => item.offsetParent);
+    const delta = replacement ? replacement.getBoundingClientRect().top - anchorTop : 0;
+    if (Math.abs(delta) > 1 && window.scrollY > 0) window.scrollTo({ top: Math.max(0, window.scrollY + delta), behavior: "instant" });
+    animateScheduleSwap(direction);
+  }
+
+  function animateScheduleSwap(direction) {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const mobile = isMobileViewport();
+    const from = direction ? `translateX(${direction * 32}px)` : "translateY(10px)";
+    const easing = "cubic-bezier(0.2, 0.8, 0.2, 1)";
+    const title = $(mobile ? "#mobileScheduleHeading" : "#desktopScheduleTitle")?.parentElement;
+    title?.animate([{ opacity: 0.2 }, { opacity: 1 }], { duration: 220, easing });
+    $(mobile ? "#mobileSchedule" : "#desktopSchedule")?.animate(
+      [{ opacity: 0, transform: from }, { opacity: 1, transform: "none" }],
+      { duration: 340, easing }
+    );
+  }
+
   function bindEvents() {
     $("#searchInput")?.addEventListener("input", (event) => syncSearch(event.target.value));
     $("#tabletSearchInput")?.addEventListener("input", (event) => syncSearch(event.target.value));
@@ -2447,21 +2481,20 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
       const dateButton = event.target.closest("[data-date]");
       if (dateButton) {
         const selectedDate = dateButton.dataset.date || "";
+        if ((state.date || "") === selectedDate) return;
         state.date = selectedDate || null;
         render();
         const replacement = [...document.querySelectorAll("[data-date]")].find(
           (button) => button.dataset.date === selectedDate
         );
         replacement?.focus({ preventScroll: true });
+        animateScheduleSwap(0);
         return;
       }
 
       const viewButton = event.target.closest("[data-view]");
       if (viewButton) {
-        const nextView = viewButton.dataset.view;
-        state.view = nextView;
-        state.venueFilter = "all";
-        render();
+        switchView(viewButton.dataset.view, viewButton);
         return;
       }
 
