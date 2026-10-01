@@ -155,7 +155,18 @@ jobs:
           set -euo pipefail
           npm run update:sources
           npm run update:popular
-          npm run check
+
+      # Only this step sees the TMDB key; without it the poster list is left as committed.
+      - name: Refresh TMDB ticket posters
+        if: steps.mode.outputs.mode == 'full'
+        continue-on-error: true
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+        run: npm run update:ticket-posters
+
+      - name: Check the refreshed data
+        if: steps.mode.outputs.mode == 'full'
+        run: npm run check
 
       - name: Audit the refreshed public tree before committing
         if: steps.mode.outputs.mode == 'full'
@@ -173,6 +184,7 @@ jobs:
             data/source-snapshots
             data/community-trends.json
             data/community-trends-cache.json
+            data/ticket-posters.json
             assets/recommendation-posters
           )
           base_commit="$(git rev-parse HEAD)"

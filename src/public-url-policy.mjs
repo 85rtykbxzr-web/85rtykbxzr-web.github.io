@@ -8,6 +8,7 @@ const trustedPublicHostnames = new Set([
   "dmzdocs.com",
   "forms.gle",
   "i1.daumcdn.net",
+  "image.tmdb.org",
   "img.dtryx.com",
   "img1.daumcdn.net",
   "indiespace.kr",

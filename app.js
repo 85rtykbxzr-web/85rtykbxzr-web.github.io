@@ -7,6 +7,7 @@ import {
 } from "./src/festival-labels.mjs";
 import { safePublicUrl } from "./src/public-url-policy.mjs";
 import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
+import { drawStoryTicket, ticketStyles } from "./src/story-ticket.mjs";
 
 (function () {
   const analyticsHostnames = new Set(["seoulcinemaschedule.com", "www.seoulcinemaschedule.com"]);
@@ -1005,6 +1006,9 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
 
   // The whole row is the link. Direct booking and the venue's own page look the same;
   // the latter just says so in the meta line.
+  const ticketIconMarkup = '<svg class="ticket-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9.2V7.5A2.5 2.5 0 0 1 5.5 5h13A2.5 2.5 0 0 1 21 7.5v1.7a2.8 2.8 0 0 0 0 5.6v1.7a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 16.5v-1.7a2.8 2.8 0 0 0 0-5.6Z"></path><path d="M14.5 6.5v11" stroke-dasharray="2 2.4"></path></svg>';
+
+  // The row's booking link is stretched over the whole row; the ticket button sits above it.
   function agendaRow(session, venues) {
     const venue = venues[session.venueId];
     const soldout = isSoldoutSession(session);
@@ -1020,20 +1024,22 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
       : linked
         ? '<svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path d="m9.5 6 6 6-6 6"></path></svg>'
         : '<span class="row-state" title="링크 확인 중">확인중</span>';
-    const tag = linked ? "a" : "div";
-    const linkAttrs = linked
-      ? ` href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${cleanTime(session)} ${title} ${actionLabel(session)}`)}"`
+    const link = linked
+      ? `<a class="row-link" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${cleanTime(session)} ${title} ${actionLabel(session)}`)}"></a>`
       : "";
+    const ticketButton = `<button class="row-ticket" type="button" data-ticket-session="${escapeHtml(session.id)}" aria-label="${escapeHtml(`${title} 오늘 본 영화 티켓 만들기`)}" title="티켓 만들기">${ticketIconMarkup}</button>`;
     return `
-      <${tag} class="row${linked ? " is-link" : ""}${soldout ? " is-soldout" : ""}"${linkAttrs}${start ? ` data-start="${start}"` : ""}>
+      <div class="row${linked ? " is-link" : ""}${soldout ? " is-soldout" : ""}"${start ? ` data-start="${start}"` : ""}>
+        ${link}
         ${thumbMarkup(session)}
         <div class="what">
           <p class="title"><span class="t">${escapeHtml(cleanTime(session))}</span><span class="tt" title="${escapeHtml(title)}">${escapeHtml(title)}</span>${gv ? '<span class="tag-gv">GV</span>' : ""}${start ? '<span class="soon" data-soon hidden></span>' : ""}</p>
           <p class="meta">${rateBadgeMarkup(session)}${meta}</p>
         </div>
-        ${end}
-      </${tag}>`;
+        <span class="row-end">${ticketButton}${end}</span>
+      </div>`;
   }
+
 
   function agendaVenueSection(key, sessions, compact = false) {
     const venues = venueMap();
@@ -2898,6 +2904,199 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
     setTabletSearchOpen(false);
   }
 
+  const ticketState = { session: null, style: "poster", rating: 0, photo: "", poster: "", requestId: 0 };
+  let ticketPostersPromise = null;
+
+  // English TMDB artwork per film, refreshed by the data pipeline; the ticket prefers it
+  // over the cinema's own poster. A missing file just means no TMDB choices.
+  function loadTicketPosters() {
+    ticketPostersPromise ||= fetch("data/ticket-posters.json", { cache: "no-cache" })
+      .then((response) => (response.ok ? response.json() : null))
+      .catch(() => null);
+    return ticketPostersPromise;
+  }
+
+  // Poster choices for the open session: TMDB artwork first, then the cinema's poster.
+  function ticketPosterChoices(posters) {
+    const session = ticketState.session;
+    const film = posters?.films?.[normalizeTrendTitle(session?.title)];
+    const base = String(posters?.imageBase || "");
+    const choices = (film?.posters || [])
+      .map((path) => ({ full: safeImageUrl(`${base}w780${path}`), thumb: safeImageUrl(`${base}w185${path}`) }))
+      .filter((choice) => choice.full && choice.thumb);
+    const own = posterItemFor(session);
+    const ownUrl = own ? safeImageUrl(posterSource(own)) : "";
+    if (ownUrl) choices.push({ full: ownUrl, thumb: safeImageUrl(optimizedPosterSource(posterSource(own))) || ownUrl, cinema: true });
+    return choices;
+  }
+
+  async function renderTicketPicker() {
+    const target = $("#ticketPickerList");
+    if (!target) return;
+    const choices = ticketPosterChoices(await loadTicketPosters());
+    const current = ticketState.photo || ticketState.poster || choices[0]?.full || "";
+    target.innerHTML = [
+      ...choices.map((choice, index) => `<button class="ticket-pick${choice.full === current ? " is-on" : ""}" type="button" data-ticket-poster="${escapeHtml(choice.full)}" aria-pressed="${choice.full === current}" aria-label="${escapeHtml(choice.cinema ? "극장 포스터" : `포스터 ${index + 1}`)}"><img src="${escapeHtml(choice.thumb)}" alt="" loading="lazy" decoding="async" />${choice.cinema ? '<span class="ticket-pick-tag">극장</span>' : ""}</button>`),
+      `<label class="ticket-pick is-upload${ticketState.photo ? " is-on" : ""}"><input id="ticketPhoto" type="file" accept="image/*" /><span aria-hidden="true">+</span><span>내 사진</span></label>`
+    ].join("");
+  }
+
+  function ticketTitle(session) {
+    return String(session?.title || "").replace(/\s*\((?:2D|3D|4K|자막|영문자막|더빙)[^)]*\)\s*$/i, "").trim() || "오늘의 영화";
+  }
+
+  function openTicketSheet(sessionId) {
+    const session = (state.data?.sessions || []).find((item) => item.id === sessionId);
+    const sheet = $("#ticketSheet");
+    if (!session || !sheet) return;
+    ticketState.session = session;
+    ticketState.rating = 0;
+    ticketState.photo = "";
+    ticketState.poster = "";
+    toggleTicketPicker(false);
+    $("#ticketSheetTitle").textContent = ticketTitle(session);
+    renderTicketStyles();
+    renderTicketRating();
+    const canShareFiles = Boolean(navigator.canShare && window.File);
+    $("#ticketShare")?.classList.toggle("hidden", !canShareFiles);
+    if (typeof sheet.showModal === "function") sheet.showModal();
+    else sheet.setAttribute("open", "");
+    renderTicketPreview();
+  }
+
+  function toggleTicketPicker(open) {
+    const picker = $("#ticketPicker");
+    const button = $("#ticketPosterToggle");
+    if (!picker) return;
+    const next = open ?? picker.hidden;
+    picker.hidden = !next;
+    button?.setAttribute("aria-expanded", String(next));
+    if (next) renderTicketPicker();
+  }
+
+  function closeTicketSheet() {
+    const sheet = $("#ticketSheet");
+    if (sheet?.open) sheet.close?.() ?? sheet.removeAttribute("open");
+  }
+
+  function renderTicketStyles() {
+    const target = $("#ticketStyles");
+    if (!target) return;
+    target.innerHTML = Object.entries(ticketStyles)
+      .map(([key, style]) => `<button class="ticket-style${key === ticketState.style ? " is-on" : ""}" type="button" data-ticket-style="${key}" aria-pressed="${key === ticketState.style}">${escapeHtml(style.label)}</button>`)
+      .join("");
+  }
+
+  const ticketStarMarkup = '<svg viewBox="0 0 24 24" aria-hidden="true"><path class="bg" d="M12 2.6l2.9 6 6.5.8-4.8 4.5 1.2 6.5L12 17.2l-5.8 3.2 1.2-6.5-4.8-4.5 6.5-.8z"></path><path class="fg" d="M12 2.6l2.9 6 6.5.8-4.8 4.5 1.2 6.5L12 17.2l-5.8 3.2 1.2-6.5-4.8-4.5 6.5-.8z"></path></svg>';
+
+  function renderTicketRating() {
+    const target = $("#ticketRating");
+    if (!target) return;
+    const rating = ticketState.rating;
+    target.innerHTML = [1, 2, 3, 4, 5]
+      .map((value) => {
+        const fill = rating >= value ? " is-full" : rating >= value - 0.5 ? " is-half" : "";
+        return `<button class="ticket-star${fill}" type="button" data-ticket-star="${value}" aria-label="별점 ${value}점">${ticketStarMarkup}</button>`;
+      })
+      .join("");
+    const value = $("#ticketRatingValue");
+    if (value) value.textContent = rating ? rating.toFixed(1) : "별점 없음";
+  }
+
+  // Tapping the left half of a star gives a half point; tapping the current score clears it.
+  function setTicketRating(button, event) {
+    const value = Number(button.dataset.ticketStar);
+    const rect = button.getBoundingClientRect();
+    const half = event.clientX && event.clientX < rect.left + rect.width / 2;
+    const next = half ? value - 0.5 : value;
+    ticketState.rating = ticketState.rating === next ? 0 : next;
+    renderTicketRating();
+  }
+
+  function currentTicketDetails() {
+    const session = ticketState.session;
+    const venue = venueMap()[session.venueId];
+    const poster = posterItemFor(session);
+    return {
+      id: session.id,
+      title: ticketTitle(session),
+      venue: venue?.name || "상영관",
+      screen: String(session.screen || "").trim() && session.screen !== venue?.name ? session.screen : "",
+      date: session.date,
+      time: cleanTime(session),
+      rating: ticketState.rating,
+      posterUrl: ticketState.photo || ticketState.poster || (poster ? safeImageUrl(posterSource(poster)) : "")
+    };
+  }
+
+  async function renderTicketCanvas() {
+    const details = currentTicketDetails();
+    if (!ticketState.photo && !ticketState.poster) {
+      const first = ticketPosterChoices(await loadTicketPosters())[0];
+      if (first) details.posterUrl = first.full;
+    }
+    return drawStoryTicket(details, ticketState.style);
+  }
+
+  async function renderTicketPreview() {
+    const requestId = ++ticketState.requestId;
+    const image = $("#ticketPreview");
+    image?.classList.add("is-loading");
+    try {
+      const canvas = await renderTicketCanvas();
+      if (requestId !== ticketState.requestId || !image) return;
+      image.src = canvas.toDataURL("image/png");
+    } finally {
+      if (requestId === ticketState.requestId) image?.classList.remove("is-loading");
+    }
+  }
+
+  // A picked photo is read as a data URL: the CSP allows data: images but not blob:.
+  function setTicketPhoto(file) {
+    if (!file || !/^image\//.test(file.type)) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      ticketState.photo = String(reader.result || "");
+      renderTicketPicker();
+      renderTicketPreview();
+    };
+    reader.readAsDataURL(file);
+  }
+
+  function ticketFileName() {
+    const session = ticketState.session;
+    return `ticket-${session?.date || "today"}.png`;
+  }
+
+  async function ticketBlob() {
+    const canvas = await renderTicketCanvas();
+    return new Promise((resolve, reject) => canvas.toBlob((blob) => (blob ? resolve(blob) : reject(new Error("export failed"))), "image/png"));
+  }
+
+  async function shareTicket() {
+    try {
+      const file = new File([await ticketBlob()], ticketFileName(), { type: "image/png" });
+      if (navigator.canShare?.({ files: [file] })) {
+        await navigator.share({ files: [file], title: ticketTitle(ticketState.session) });
+        return;
+      }
+      await saveTicket();
+    } catch (error) {
+      if (error?.name !== "AbortError") showToast("공유하지 못했어요. 이미지 저장을 눌러 주세요.");
+    }
+  }
+
+  async function saveTicket() {
+    const canvas = await renderTicketCanvas();
+    const link = document.createElement("a");
+    link.download = ticketFileName();
+    link.href = canvas.toDataURL("image/png");
+    document.body.append(link);
+    link.click();
+    link.remove();
+    showToast("티켓 이미지를 저장했어요");
+  }
+
   const viewOrder = ["today", "film", "venue"];
 
   // Keeps the view control where the finger is (the picks above it come and go between
@@ -2930,6 +3129,10 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
 
   function bindEvents() {
     $("#searchInput")?.addEventListener("input", (event) => syncSearch(event.target.value));
+    // the picker re-renders its file input, so the change listener is delegated
+    $("#ticketPicker")?.addEventListener("change", (event) => {
+      if (event.target.id === "ticketPhoto") setTicketPhoto(event.target.files?.[0]);
+    });
     $("#tabletSearchInput")?.addEventListener("input", (event) => syncSearch(event.target.value));
     $("#mobileSearchInput")?.addEventListener("input", (event) => syncSearch(event.target.value));
     $("#tabletSearchButton")?.addEventListener("click", () => {
@@ -3008,6 +3211,57 @@ import { isPastKstSession, kstSessionStartMs } from "./src/session-time.mjs";
         event.preventDefault();
         event.stopPropagation();
         toggleFavoriteVenue(favoriteVenueToggle.dataset.favoriteVenue || "");
+        return;
+      }
+
+      const ticketButton = event.target.closest("[data-ticket-session]");
+      if (ticketButton) {
+        event.preventDefault();
+        openTicketSheet(ticketButton.dataset.ticketSession);
+        return;
+      }
+
+      const styleButton = event.target.closest("[data-ticket-style]");
+      if (styleButton) {
+        ticketState.style = styleButton.dataset.ticketStyle;
+        renderTicketStyles();
+        renderTicketPreview();
+        return;
+      }
+
+      if (event.target.closest("#ticketPosterToggle")) {
+        toggleTicketPicker();
+        return;
+      }
+
+      const posterPick = event.target.closest("[data-ticket-poster]");
+      if (posterPick) {
+        ticketState.poster = posterPick.dataset.ticketPoster;
+        ticketState.photo = "";
+        renderTicketPicker();
+        renderTicketPreview();
+        return;
+      }
+
+      const starButton = event.target.closest("[data-ticket-star]");
+      if (starButton) {
+        setTicketRating(starButton, event);
+        renderTicketPreview();
+        return;
+      }
+
+      if (event.target.closest("#ticketShare")) {
+        shareTicket();
+        return;
+      }
+
+      if (event.target.closest("#ticketSave")) {
+        saveTicket();
+        return;
+      }
+
+      if (event.target.closest("[data-ticket-close]") || event.target.id === "ticketSheet") {
+        closeTicketSheet();
         return;
       }
 
