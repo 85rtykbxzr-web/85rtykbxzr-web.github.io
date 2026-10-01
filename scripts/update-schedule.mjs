@@ -732,6 +732,48 @@ function programRecordMatchesSession(program, session) {
   return false;
 }
 
+// A program whose board listing has no thumbnail gets the main image of its own post:
+// og:image when the page declares one, otherwise the first content image that is not
+// site chrome. Pages that cannot be read keep the empty image (the card shows its icon).
+const programImageChrome = /logo|icon|btn|button|banner|sprite|blank|spacer|common|favicon|kakao|naver|insta|facebook|youtube/i;
+
+export function programPostImage(html, pageUrl) {
+  const meta = (name) =>
+    html.match(new RegExp(`<meta[^>]+(?:property|name)=["']${name}["'][^>]+content=["']([^"']+)["']`, "i"))?.[1] ||
+    html.match(new RegExp(`<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["']${name}["']`, "i"))?.[1];
+  const candidates = [meta("og:image"), meta("twitter:image")];
+  for (const match of html.matchAll(/<img\b[^>]*?\s(?:data-src|src)=["']([^"']+\.(?:jpe?g|png|webp)(?:\?[^"']*)?)["'][^>]*>/gi)) {
+    if (!programImageChrome.test(match[0])) candidates.push(match[1]);
+  }
+  for (const candidate of candidates) {
+    if (!candidate) continue;
+    try {
+      const url = new URL(decodeEntities(candidate), pageUrl);
+      if (url.protocol === "https:" || url.protocol === "http:") return url.href;
+    } catch {
+      // ignore malformed image URLs
+    }
+  }
+  return "";
+}
+
+async function fillMissingProgramImages(schedule) {
+  const programs = await Promise.all(
+    (schedule.programs || []).map(async (program) => {
+      if (program.posterUrl || !/^https?:\/\//.test(program.url || "")) return program;
+      try {
+        const { response, text } = await fetchText(program.url, { retries: 1 });
+        const image = response.ok ? programPostImage(text, program.url) : "";
+        return image ? { ...program, posterUrl: image } : program;
+      } catch (error) {
+        console.warn(`Program image skipped for ${program.title}: ${error.message}`);
+        return program;
+      }
+    })
+  );
+  return { ...schedule, programs };
+}
+
 function enrichProgramRecords(schedule) {
   const merged = [];
   for (const program of schedule.programs || []) {
@@ -3444,6 +3486,7 @@ async function main() {
   schedule = enrichProgramRecords(schedule);
   schedule = normalizeFestivalSessions(schedule);
   schedule = refreshCuratedRecords(schedule);
+  schedule = await fillMissingProgramImages(schedule);
   schedule = refreshMeta(schedule, checkedAt, { verificationIncomplete });
   schedule = refreshCoverageScope(schedule, checkedAt);
   schedule = sanitizeScheduleImageUrls(schedule);

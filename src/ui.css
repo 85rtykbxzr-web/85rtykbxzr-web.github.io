@@ -92,6 +92,8 @@ body {
 .nav a { padding: 8px 12px; border-radius: 10px; font-size: 15px; font-weight: 600; color: var(--t4); transition: background-color 0.15s, color 0.15s; }
 .nav a:hover { background: var(--fill); color: var(--t1); }
 .nav a[aria-current] { color: var(--t1); }
+.nav-ticket { margin-left: 4px; padding: 8px 14px; border-radius: 10px; background: var(--fill); font-size: 15px; font-weight: 700; color: var(--t1); transition: filter 0.15s; }
+.nav-ticket:hover { filter: brightness(0.96); }
 .tools { margin-left: auto; display: flex; align-items: center; gap: 8px; }
 .search { display: flex; align-items: center; gap: 8px; height: 40px; width: 280px; padding: 0 14px; border-radius: 12px; background: var(--fill); color: var(--t4); cursor: text; }
 .search input { flex: 1; min-width: 0; height: 100%; padding: 0; border: 0; background: none; outline: none; box-shadow: none; font-size: 15px; color: var(--t1); }
@@ -275,7 +277,6 @@ main { padding-top: 72px; }
 .prog-media { position: relative; display: block; margin: 0 -10px 16px; aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden; isolation: isolate; background: var(--fill); }
 .prog-media .prog-media-img { position: relative; display: block; width: 100%; height: 100%; object-fit: cover; }
 .prog-media .poster-fallback { display: none; }
-.prog-media-ic { position: absolute; left: 50%; top: 50%; width: 28px; height: 28px; margin: -14px 0 0 -14px; color: var(--t5); z-index: -2; }
 .prog:hover .prog-media-img { transform: scale(1.02); }
 .prog-media-img { transition: transform 0.3s ease; }
 
@@ -324,10 +325,10 @@ main { padding-top: 72px; }
 
 /* ---------- mobile tab bar ---------- */
 /* Floating capsule with a pill that slides to the current tab. */
-.tabbar { position: fixed; left: 50%; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 50; transform: translateX(-50%); width: min(calc(100% - 32px), 360px); height: 64px; padding: 6px; display: grid; grid-template-columns: repeat(3, 1fr); border-radius: 999px; background: color-mix(in srgb, var(--card) 88%, transparent); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); box-shadow: 0 0 0 1px color-mix(in srgb, var(--t1) 7%, transparent), 0 10px 30px -8px rgb(0 23 51 / 0.22), 0 2px 6px rgb(0 23 51 / 0.06); }
-.tabbar a { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; border-radius: 999px; font-size: 11px; line-height: 14px; font-weight: 600; color: var(--t4); -webkit-tap-highlight-color: transparent; transition: color 0.2s ease; }
+.tabbar { position: fixed; left: 50%; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 50; transform: translateX(-50%); width: min(calc(100% - 32px), 400px); height: 64px; padding: 6px; display: grid; grid-template-columns: repeat(4, 1fr); border-radius: 999px; background: color-mix(in srgb, var(--card) 88%, transparent); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); box-shadow: 0 0 0 1px color-mix(in srgb, var(--t1) 7%, transparent), 0 10px 30px -8px rgb(0 23 51 / 0.22), 0 2px 6px rgb(0 23 51 / 0.06); }
+.tabbar a, .tabbar button { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; border-radius: 999px; font-size: 11px; line-height: 14px; font-weight: 600; color: var(--t4); -webkit-tap-highlight-color: transparent; transition: color 0.2s ease; }
 .tabbar a[aria-current] { color: var(--t1); }
-.tab-pill { position: absolute; top: 6px; left: 6px; bottom: 6px; width: calc((100% - 12px) / 3); border-radius: 999px; background: var(--fill-hover); transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1); }
+.tab-pill { position: absolute; top: 6px; left: 6px; bottom: 6px; width: calc((100% - 12px) / 4); border-radius: 999px; background: var(--fill-hover); transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1); }
 .tabbar:has(a:nth-child(2)[aria-current]) .tab-pill { transform: translateX(100%); }
 .tabbar:has(a:nth-child(3)[aria-current]) .tab-pill { transform: translateX(200%); }
 .tabbar:not(:has(a[aria-current])) .tab-pill { opacity: 0; }
@@ -448,8 +449,8 @@ main { padding-top: 72px; }
 .tab-ic .ic-on { display: none; }
 .tabbar a[aria-current] .tab-ic .ic-on { display: inline; }
 .tabbar a[aria-current] .tab-ic .ic-off { display: none; }
-.tabbar a:active .tab-ic { transform: scale(0.88); }
-.tabbar a span { margin-top: 1px; }
+.tabbar a:active .tab-ic, .tabbar button:active .tab-ic { transform: scale(0.88); }
+.tabbar a span, .tabbar button span { margin-top: 1px; }
 @media (prefers-reduced-motion: reduce) { .tab-ic, .tab-pill, .seg-thumb { transition: none; } }
 
 /* festival interest ranking: a plain numbered list, deliberately unlike the poster-led weekly picks */
@@ -558,10 +559,6 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .row-link { position: absolute; inset: 0; z-index: 1; border-radius: inherit; }
 .row-link:focus-visible { outline: 2px solid var(--t3); outline-offset: -2px; }
 .row-end { position: relative; display: inline-flex; align-items: center; gap: 4px; }
-.row-ticket { position: relative; z-index: 2; width: 36px; height: 36px; display: inline-grid; place-items: center; border-radius: 10px; color: var(--t4); -webkit-tap-highlight-color: transparent; transition: background-color 0.15s, color 0.15s; }
-.row-ticket:hover { background: var(--fill); color: var(--t1); }
-.row-ticket:active { transform: scale(0.94); }
-.ticket-ic { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 
 /* Story ticket sheet */
 .ticket-sheet { width: min(calc(100% - 32px), 420px); max-height: calc(100dvh - 32px); margin: auto; padding: 0; border: 0; border-radius: 24px; background: var(--card); color: var(--t1); box-shadow: 0 24px 60px -12px rgb(0 0 0 / 0.35); overflow: hidden; outline: none; }
@@ -573,7 +570,6 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .ticket-sheet-in > * { flex: none; }
 .ticket-sheet-h { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
 .ticket-sheet-h h2 { font-size: 18px; font-weight: 700; line-height: 26px; }
-.ticket-sheet-h p { margin-top: 2px; font-size: 14px; color: var(--t3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .ticket-sheet-h .icon-btn { flex: none; margin: -6px -6px 0 0; }
 .ticket-preview-wrap { flex: 1 1 0 !important; min-height: 160px; border-radius: 18px; background: var(--fill); }
 .ticket-preview { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); display: block; height: calc(100% - 24px); max-width: calc(100% - 24px); aspect-ratio: 9 / 16; border-radius: 12px; background: var(--line); box-shadow: 0 8px 24px -10px rgb(0 0 0 / 0.3); object-fit: cover; }
@@ -614,3 +610,21 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .ticket-pick.is-upload input { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
 .ticket-pick.is-upload:focus-within { box-shadow: 0 0 0 2px var(--t3); }
 .ticket-credit { margin-top: 2px; font-size: 11px; color: var(--t4); }
+
+/* Program image placeholder tone, visible only if the post image fails to load */
+.prog-tone { position: absolute; inset: 0; z-index: -1; }
+.prog-tone.is-tone-0 { background: linear-gradient(140deg, #3b2a4d, #1d1726); }
+.prog-tone.is-tone-1 { background: linear-gradient(140deg, #5a2f2a, #24140f); }
+.prog-tone.is-tone-2 { background: linear-gradient(140deg, #23413d, #0f1d1b); }
+.prog-tone.is-tone-3 { background: linear-gradient(140deg, #2c3a5c, #121a2b); }
+.prog-tone.is-tone-4 { background: linear-gradient(140deg, #57472a, #221b0e); }
+.prog-tone.is-tone-5 { background: linear-gradient(140deg, #4a2b3f, #1e1119); }
+
+/* Ticket sheet: pick today's screening (영화관 → 영화 → 시간) */
+.ticket-session { display: grid; grid-template-columns: minmax(0, 1fr) 96px; gap: 6px; }
+.ticket-session .ticket-select:first-child { grid-column: 1 / -1; }
+.ticket-select { position: relative; display: flex; flex-direction: column; justify-content: center; gap: 1px; min-width: 0; height: 50px; padding: 0 24px 0 12px; border-radius: 12px; background: var(--fill); }
+.ticket-select::after { content: ""; position: absolute; right: 11px; top: 50%; width: 7px; height: 7px; margin-top: -5px; border-right: 2px solid var(--t4); border-bottom: 2px solid var(--t4); transform: rotate(45deg); pointer-events: none; }
+.ticket-select span { font-size: 11px; font-weight: 600; color: var(--t4); }
+.ticket-select select { width: 100%; min-width: 0; border: 0; padding: 0; background: none; font: inherit; font-size: 15px; font-weight: 700; color: var(--t1); -webkit-appearance: none; appearance: none; text-overflow: ellipsis; outline: none; cursor: pointer; }
+.ticket-select:focus-within { box-shadow: inset 0 0 0 2px var(--t3); }
