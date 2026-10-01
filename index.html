@@ -38,8 +38,8 @@
         "description": "서울 독립영화관의 오늘 상영시간표, 기획전, 영화제 일정을 날짜별, 영화별, 상영관별로 확인하세요."
       }
     </script>
-    <link href="/assets/app.css?v=095962377fb5" rel="stylesheet" />
-    <script defer src="/assets/app.js?v=095962377fb5"></script>
+    <link href="/assets/app.css?v=e46cd56ad1d3" rel="stylesheet" />
+    <script defer src="/assets/app.js?v=e46cd56ad1d3"></script>
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=6" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=6" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=6" />
@@ -59,6 +59,7 @@
           <a href="#schedule" data-nav-target="schedule" data-nav-kind="desktop" aria-current="location">상영시간표</a>
           <a href="#programs" data-nav-target="programs" data-nav-kind="desktop">프로그램</a>
           <a href="#festivals" data-nav-target="festivals" data-nav-kind="desktop">영화제</a>
+          <button class="nav-ticket" type="button" data-ticket-open>티켓 만들기</button>
         </nav>
         <div class="tools">
           <label class="search hidden lg:flex">
@@ -259,6 +260,12 @@
         </svg>
         <span>영화제</span>
       </a>
+      <button type="button" data-ticket-open aria-label="오늘 본 영화 티켓 만들기">
+        <svg class="tab-ic" viewBox="0 0 24 24" aria-hidden="true">
+          <g class="ic-off"><rect class="soft" x="6" y="2.5" width="12" height="19" rx="3"></rect><path d="m12 8.4 1.1 2.3 2.5.3-1.8 1.7.5 2.5-2.3-1.2-2.3 1.2.5-2.5-1.8-1.7 2.5-.3Z"></path></g>
+        </svg>
+        <span>티켓</span>
+      </button>
       <span class="tab-pill" aria-hidden="true"></span>
     </nav>
 
@@ -267,11 +274,15 @@
         <div class="ticket-sheet-h">
           <div>
             <h2 id="ticketSheetHeading">오늘 본 영화 티켓</h2>
-            <p id="ticketSheetTitle"></p>
           </div>
           <button class="icon-btn" type="button" data-ticket-close aria-label="닫기">
             <svg class="ui-icon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#x"></use></svg>
           </button>
+        </div>
+        <div class="ticket-session" id="ticketSessionSelects">
+          <label class="ticket-select"><span>영화관</span><select id="ticketVenue" aria-label="영화관"></select></label>
+          <label class="ticket-select"><span>영화</span><select id="ticketFilm" aria-label="영화"></select></label>
+          <label class="ticket-select"><span>시간</span><select id="ticketTime" aria-label="상영 시간"></select></label>
         </div>
         <div class="ticket-preview-wrap">
           <img id="ticketPreview" class="ticket-preview" alt="인스타그램 스토리용 티켓 미리보기" />

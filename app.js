@@ -323,6 +323,10 @@ import { filmTitleKey } from "./src/film-title.mjs";
     return `${byType.year}-${byType.month}-${byType.day}`;
   }
 
+  function kstTimeString(value = new Date()) {
+    return new Intl.DateTimeFormat("en-GB", { timeZone: "Asia/Seoul", hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).format(value);
+  }
+
   function dateKeyFromParts(year, month, day) {
     const parsedYear = Number(year);
     const parsedMonth = Number(month);
@@ -987,7 +991,6 @@ import { filmTitleKey } from "./src/film-title.mjs";
 
   // The whole row is the link. Direct booking and the venue's own page look the same;
   // the latter just says so in the meta line.
-  const ticketIconMarkup = '<svg class="ticket-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9.2V7.5A2.5 2.5 0 0 1 5.5 5h13A2.5 2.5 0 0 1 21 7.5v1.7a2.8 2.8 0 0 0 0 5.6v1.7a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 16.5v-1.7a2.8 2.8 0 0 0 0-5.6Z"></path><path d="M14.5 6.5v11" stroke-dasharray="2 2.4"></path></svg>';
 
   // The row's booking link is stretched over the whole row; the ticket button sits above it.
   function agendaRow(session, venues) {
@@ -1008,7 +1011,6 @@ import { filmTitleKey } from "./src/film-title.mjs";
     const link = linked
       ? `<a class="row-link" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(`${cleanTime(session)} ${title} ${actionLabel(session)}`)}"></a>`
       : "";
-    const ticketButton = `<button class="row-ticket" type="button" data-ticket-session="${escapeHtml(session.id)}" aria-label="${escapeHtml(`${title} 오늘 본 영화 티켓 만들기`)}" title="티켓 만들기">${ticketIconMarkup}</button>`;
     return `
       <div class="row${linked ? " is-link" : ""}${soldout ? " is-soldout" : ""}"${start ? ` data-start="${start}"` : ""}>
         ${link}
@@ -1017,7 +1019,7 @@ import { filmTitleKey } from "./src/film-title.mjs";
           <p class="title"><span class="t">${escapeHtml(cleanTime(session))}</span><span class="tt" title="${escapeHtml(title)}">${escapeHtml(title)}</span>${gv ? '<span class="tag-gv">GV</span>' : ""}${start ? '<span class="soon" data-soon hidden></span>' : ""}</p>
           <p class="meta">${rateBadgeMarkup(session)}${meta}</p>
         </div>
-        <span class="row-end">${ticketButton}${end}</span>
+        <span class="row-end">${end}</span>
       </div>`;
   }
 
@@ -2934,8 +2936,77 @@ import { filmTitleKey } from "./src/film-title.mjs";
     return String(session?.title || "").replace(/\s*\((?:2D|3D|4K|자막|영문자막|더빙)[^)]*\)\s*$/i, "").trim() || "오늘의 영화";
   }
 
-  function openTicketSheet(sessionId) {
-    const session = (state.data?.sessions || []).find((item) => item.id === sessionId);
+  // Today's screenings, past ones included: the ticket is made after the film.
+  function ticketTodaySessions() {
+    const today = kstDateString();
+    return sortSessions((state.data?.sessions || []).filter((session) => session.date === today && session.title));
+  }
+
+  // The screening that most likely just ended: the latest one that has already started.
+  function defaultTicketSession(sessions) {
+    const now = kstTimeString();
+    const started = sessions.filter((session) => String(session.timeSort || session.time || "") <= now);
+    return started.at(-1) || sessions[0] || null;
+  }
+
+  function ticketOptionsMarkup(items, selected) {
+    return items.map(([value, label]) => `<option value="${escapeHtml(value)}"${value === selected ? " selected" : ""}>${escapeHtml(label)}</option>`).join("");
+  }
+
+  // 영화관 → 영화 → 시간: each select lists only what the one before it allows.
+  function renderTicketSessionSelects() {
+    const sessions = ticketTodaySessions();
+    const session = ticketState.session;
+    const venues = venueMap();
+    const venueIds = [...new Set(sessions.map((item) => item.venueId))]
+      .sort((a, b) => String(venues[a]?.name || a).localeCompare(String(venues[b]?.name || b), "ko"));
+    const atVenue = sessions.filter((item) => item.venueId === session.venueId);
+    const titles = [...new Set(atVenue.map((item) => ticketTitle(item)))];
+    const showings = atVenue.filter((item) => ticketTitle(item) === ticketTitle(session));
+    const venueSelect = $("#ticketVenue");
+    const filmSelect = $("#ticketFilm");
+    const timeSelect = $("#ticketTime");
+    if (venueSelect) venueSelect.innerHTML = ticketOptionsMarkup(venueIds.map((id) => [id, venues[id]?.name || id]), session.venueId);
+    if (filmSelect) filmSelect.innerHTML = ticketOptionsMarkup(titles.map((title) => [title, title]), ticketTitle(session));
+    if (timeSelect) timeSelect.innerHTML = ticketOptionsMarkup(showings.map((item) => [item.id, cleanTime(item)]), session.id);
+  }
+
+  function selectTicketSession(session) {
+    if (!session) return;
+    const filmChanged = !ticketState.session || ticketTitle(ticketState.session) !== ticketTitle(session);
+    ticketState.session = session;
+    if (filmChanged) {
+      ticketState.photo = "";
+      ticketState.poster = "";
+      if (!$("#ticketPicker")?.hidden) renderTicketPicker();
+    }
+    renderTicketSessionSelects();
+    renderTicketPreview();
+  }
+
+  function onTicketSelectChange(event) {
+    const sessions = ticketTodaySessions();
+    const current = ticketState.session;
+    if (event.target.id === "ticketVenue") {
+      selectTicketSession(defaultTicketSession(sessions.filter((item) => item.venueId === event.target.value)));
+    } else if (event.target.id === "ticketFilm") {
+      selectTicketSession(defaultTicketSession(sessions.filter((item) => item.venueId === current.venueId && ticketTitle(item) === event.target.value)));
+    } else if (event.target.id === "ticketTime") {
+      selectTicketSession(sessions.find((item) => item.id === event.target.value));
+    }
+  }
+
+  function openTicketMaker() {
+    const sessions = ticketTodaySessions();
+    if (!sessions.length) {
+      showToast("오늘 상영 정보가 아직 없어요");
+      return;
+    }
+    const keep = ticketState.session && sessions.some((item) => item.id === ticketState.session.id);
+    openTicketSheet(keep ? ticketState.session : defaultTicketSession(sessions));
+  }
+
+  function openTicketSheet(session) {
     const sheet = $("#ticketSheet");
     if (!session || !sheet) return;
     ticketState.session = session;
@@ -2943,7 +3014,7 @@ import { filmTitleKey } from "./src/film-title.mjs";
     ticketState.photo = "";
     ticketState.poster = "";
     toggleTicketPicker(false);
-    $("#ticketSheetTitle").textContent = ticketTitle(session);
+    renderTicketSessionSelects();
     renderTicketRating();
     const canShareFiles = Boolean(navigator.canShare && window.File);
     $("#ticketShare")?.classList.toggle("hidden", !canShareFiles);
@@ -3112,6 +3183,7 @@ import { filmTitleKey } from "./src/film-title.mjs";
   function bindEvents() {
     $("#searchInput")?.addEventListener("input", (event) => syncSearch(event.target.value));
     // the picker re-renders its file input, so the change listener is delegated
+    $("#ticketSessionSelects")?.addEventListener("change", onTicketSelectChange);
     $("#ticketPicker")?.addEventListener("change", (event) => {
       if (event.target.id === "ticketPhoto") setTicketPhoto(event.target.files?.[0]);
     });
@@ -3196,10 +3268,9 @@ import { filmTitleKey } from "./src/film-title.mjs";
         return;
       }
 
-      const ticketButton = event.target.closest("[data-ticket-session]");
-      if (ticketButton) {
+      if (event.target.closest("[data-ticket-open]")) {
         event.preventDefault();
-        openTicketSheet(ticketButton.dataset.ticketSession);
+        openTicketMaker();
         return;
       }
 
