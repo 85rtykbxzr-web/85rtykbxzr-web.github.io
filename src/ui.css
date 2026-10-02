@@ -872,7 +872,9 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .fp-gap.is-bad { background: var(--fp-soft); }
 /* home strip that opens the festival planner */
 .fest-strip-slot:empty { display: none; }
-.fest-strip-slot { margin-top: 12px; margin-bottom: 4px; }
+/* the strip takes the section's top padding above it and leaves the same below, so it sits evenly */
+.fest-strip-slot { margin-top: 32px; margin-bottom: 0; }
+@media (max-width: 767px) { .fest-strip-slot { margin-top: 16px; } }
 .fest-strip { display: flex; align-items: center; gap: 12px; width: 100%; padding: 13px 16px; border-radius: 16px; background: var(--strong); color: var(--on-strong); text-align: left; -webkit-tap-highlight-color: transparent; transition: transform 0.15s; }
 .fest-strip:active { transform: scale(0.99); }
 .fest-strip-tag { flex: none; padding: 3px 8px; border-radius: 6px; background: color-mix(in srgb, var(--on-strong) 14%, transparent); font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums; }

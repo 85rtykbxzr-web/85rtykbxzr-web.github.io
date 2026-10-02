@@ -2623,18 +2623,27 @@ import { createFestivalPlanner } from "./src/festival-planner-ui.mjs";
     planner().openShared(festivalId, token);
   }
 
-  // Home strip from two weeks before the festival to its last day: the planner, one tap away.
+  // Home strip from two weeks before a major festival to its last day. A festival already
+  // running wins over one still to open, then the earliest opening. Festivals with a collected
+  // timetable open the planner; the rest jump to their card in the 영화제 section.
   function renderFestivalStrip() {
-    const festival = (state.data?.majorFestivals || []).find((item) => plannerFestivalPattern.test(item.id || ""));
     const today = kstDateString();
-    const shown = festival?.startDate && festival?.endDate && today <= festival.endDate && daysBetween(today, festival.startDate) <= 14;
+    const festival = (state.data?.majorFestivals || [])
+      .filter((item) => item.startDate && item.endDate && today <= item.endDate && daysBetween(today, item.startDate) <= 14)
+      .sort((a, b) => Number(a.startDate > today) - Number(b.startDate > today) || a.startDate.localeCompare(b.startDate))[0];
+    const mobileLayout = isMobileViewport();
     let markup = "";
-    if (shown) {
+    if (festival) {
       const started = today >= festival.startDate;
       const tag = started ? `${daysBetween(festival.startDate, today) + 1}일째` : `D-${daysBetween(today, festival.startDate)}`;
-      markup = `<button type="button" class="fest-strip" data-fest-planner="${escapeHtml(festival.id)}"><span class="fest-strip-tag">${escapeHtml(tag)}</span><span class="fest-strip-t"><b>${escapeHtml(festival.name)} 시간표 짜기</b></span><svg class="ui-icon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#arrow-right"></use></svg></button>`;
+      const inner = (label) => `<span class="fest-strip-tag">${escapeHtml(tag)}</span><span class="fest-strip-t"><b>${escapeHtml(festival.name)} ${label}</b></span><svg class="ui-icon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#arrow-right"></use></svg>`;
+      if (plannerFestivalPattern.test(festival.id || "")) {
+        markup = `<button type="button" class="fest-strip" data-fest-planner="${escapeHtml(festival.id)}">${inner("시간표 짜기")}</button>`;
+      } else {
+        const section = mobileLayout ? "mobile-festivals" : "festivals";
+        markup = `<a class="fest-strip" href="#${section}" data-nav-target="${section}" data-nav-kind="strip">${inner("일정 보기")}</a>`;
+      }
     }
-    const mobileLayout = isMobileViewport();
     const target = mobileLayout ? $("#mobileFestStrip") : $("#festStrip");
     (mobileLayout ? $("#festStrip") : $("#mobileFestStrip"))?.replaceChildren();
     if (target) target.innerHTML = markup;
