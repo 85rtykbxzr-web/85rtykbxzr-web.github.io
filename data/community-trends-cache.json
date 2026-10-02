@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-02",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-01T21:09:43.515Z",
+  "updatedAt": "2026-10-02T00:15:36.455Z",
   "days": {
     "2026-09-30": {
       "꿈꾸던모험": {
@@ -326,12 +326,35 @@
     "2026-10-02": {
       "셀린느와줄리배타러가다": {
         "title": "셀린느와 줄리 배 타러 가다(2D)",
-        "positiveSignal": 4,
-        "mentionCount": 1,
+        "positiveSignal": 8,
+        "mentionCount": 2,
         "evidence": [
           {
             "title": "셀린느와 줄리 배타러 가다 후기.",
             "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867363&page=1",
+            "date": "2026-10-02",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 4,
+            "commentNegative": 0
+          },
+          {
+            "title": "셀린느와 줄리 배타러 가다 후기.",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867363&page=2",
             "date": "2026-10-02",
             "positive": 4,
             "rawPositive": 4,
@@ -358,7 +381,7 @@
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-01T21:09:43.512Z",
+      "lineupFetchedAt": "2026-10-02T00:15:36.452Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -2507,9 +2530,9 @@
           }
         },
         "2026-10-02": {
-          "그래비티": {
-            "title": "그래비티",
-            "mentionCount": 1,
+          "젠틀몬스터": {
+            "title": "젠틀 몬스터",
+            "mentionCount": 2,
             "commentCount": 0
           }
         }
