@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-03",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-02T15:17:54.994Z",
+  "updatedAt": "2026-10-02T17:51:37.075Z",
   "days": {
     "2026-10-01": {
       "가능한사랑": {
@@ -355,11 +355,42 @@
         ]
       }
     },
-    "2026-10-03": {}
+    "2026-10-03": {
+      "사탄탱고": {
+        "title": "사탄탱고(기획전)",
+        "positiveSignal": 4,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "사탄탱고 보기전에 점슴 든든하게 먹고 들어갈까",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867848&page=1",
+            "date": "2026-10-03",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "추천",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 7,
+            "commentPositive": 4,
+            "commentNegative": 0
+          }
+        ]
+      }
+    }
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-02T15:17:54.992Z",
+      "lineupFetchedAt": "2026-10-02T17:51:37.071Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -2596,6 +2627,36 @@
           }
         },
         "2026-10-03": {
+          "스킨타운": {
+            "title": "스킨타운",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "무명소녀": {
+            "title": "무명소녀",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "스파이럴": {
+            "title": "스파이럴",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "내가사랑한빌에반스": {
+            "title": "내가 사랑한 빌 에반스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "노트르살뤼": {
+            "title": "노트르 살뤼",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "비터크리스마스": {
+            "title": "비터 크리스마스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
           "마더메리": {
             "title": "마더 메리",
             "mentionCount": 1,
