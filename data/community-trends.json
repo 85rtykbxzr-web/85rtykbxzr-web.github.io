@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-02T03:22:16.504Z",
+  "generatedAt": "2026-10-02T06:13:36.677Z",
   "weekStart": "2026-09-30",
   "weekEnd": "2026-10-02",
   "windowStart": "2026-09-30",
@@ -18,24 +18,24 @@
       "localPosterUrl": "/assets/recommendation-posters/5111b309025797e2.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121723&playDt=20261002&tsId=TS0039&pno=3",
-      "score": 281.6,
-      "signal": 21.6,
-      "positiveSignal": 21.6,
-      "mentionCount": 2.9,
-      "rawPositiveSignal": 30,
-      "rawMentionCount": 4,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-02&movieCd=029672&playSDT=2026-10-02&screenId=01&showSeq=4",
+      "score": 459.6,
+      "signal": 35.6,
+      "positiveSignal": 35.6,
+      "mentionCount": 4.9,
+      "rawPositiveSignal": 44,
+      "rawMentionCount": 6,
       "scheduleBackfill": false,
       "venueIds": [
-        "kucine",
-        "cinecube"
+        "cinecube",
+        "kucine"
       ],
       "venueNames": [
-        "KU시네마테크",
-        "씨네큐브 광화문"
+        "씨네큐브 광화문",
+        "KU시네마테크"
       ],
       "nextDate": "2026-10-02",
-      "nextTime": "15:00",
+      "nextTime": "16:20",
       "evidence": [
         {
           "title": "스포) 가능한 사랑 놓친부분 알려줄사람",
@@ -115,6 +115,61 @@
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.72
+        },
+        {
+          "title": "가능한사랑 씨네21 기자들도 걸작까지는 보지않네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867562&page=1",
+          "date": "2026-10-02",
+          "positive": 12,
+          "rawPositive": 12,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "걸작",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "걸작",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 6,
+          "commentPositive": 6,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "<가능한 사랑> 철이관련 세브란스 어린이병원 원장 글",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867519&page=2",
+          "date": "2026-10-02",
+          "positive": 2,
+          "rawPositive": 2,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "좋네",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 4,
+          "commentPositive": 2,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260911_9a7b3ad7.jpg"
@@ -126,7 +181,7 @@
       "localPosterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121760&playDt=20261002&tsId=TS0057&pno=2",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-02&movieCd=029631&playSDT=2026-10-02&screenId=02&showSeq=4",
       "score": 46.2,
       "signal": 2.9,
       "positiveSignal": 2.9,
@@ -135,19 +190,19 @@
       "rawMentionCount": 1,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum",
         "cinecube",
+        "filmforum",
         "sangsangmadang",
         "kucine"
       ],
       "venueNames": [
-        "필름포럼",
         "씨네큐브 광화문",
+        "필름포럼",
         "KT&G 상상마당 시네마",
         "KU시네마테크"
       ],
       "nextDate": "2026-10-02",
-      "nextTime": "13:20",
+      "nextTime": "15:45",
       "evidence": [
         {
           "title": "오늘 이방인 보고왔는데",
@@ -301,7 +356,7 @@
           "englishTitle": "Gravity",
           "section": "특별상영 & 까르뜨 블랑슈",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91282&c_idx=441&sp_idx=&QueryStep=2",
-          "mentionCount": 10
+          "mentionCount": 11
         },
         {
           "rank": 4,
@@ -325,7 +380,7 @@
           "englishTitle": "Club Kid",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91104&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 7
+          "mentionCount": 8
         },
         {
           "rank": 7,
@@ -351,11 +406,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 153,
+    "fetchedPostCount": 217,
     "listedPostCount": 292,
-    "detailedPostCount": 5,
-    "commentFetchCount": 5,
-    "commentCount": 4,
+    "detailedPostCount": 7,
+    "commentFetchCount": 7,
+    "commentCount": 16,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -364,7 +419,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-02",
     "candidateWindowEnd": "2026-10-16",
-    "candidateCount": 83,
+    "candidateCount": 84,
     "seedLookbackDays": 3,
     "seedStart": "2026-09-30",
     "listLookbackDays": 1,
