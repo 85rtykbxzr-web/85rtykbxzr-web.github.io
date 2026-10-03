@@ -940,3 +940,7 @@ body.is-regional #popular, body.is-regional #mobile-popular { display: none; }
 .hdr.has-art .nav a[aria-current] { color: var(--t1); }
 .hdr.has-art .region-btn { opacity: 1; color: var(--t2); }
 .hdr.has-art .hdr-in { position: relative; z-index: 1; }
+/* Touch screens keep :hover after a tap; don't leave a grey tile on header buttons. */
+@media (hover: none) {
+  .icon-btn:hover { background: transparent; color: var(--t3); }
+}
