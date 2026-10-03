@@ -931,6 +931,7 @@ body.is-regional #popular, body.is-regional #mobile-popular { display: none; }
    keeps the site name and buttons legible over it */
 .hdr.has-art::before, .hdr.has-art::after { content: ""; position: absolute; inset: 0; pointer-events: none; }
 .hdr.has-art::before { background: var(--hdr-art) var(--hdr-pos, 100% 50%) / cover no-repeat; }
+@media (min-width: 768px) { .hdr.has-art::before { background-position: var(--hdr-pos-wide, 100% 50%); } }
 .hdr.has-art::after { background: linear-gradient(90deg, var(--card) 0%, color-mix(in srgb, var(--card) 92%, transparent) 28%, color-mix(in srgb, var(--card) 66%, transparent) 50%, color-mix(in srgb, var(--card) 58%, transparent) 70%, color-mix(in srgb, var(--card) 76%, transparent) 100%); }
 /* the buttons and nav sit on the drawing: a soft halo keeps them readable */
 .hdr.has-art .nav a, .hdr.has-art .region-btn, .hdr.has-art .icon-btn, .hdr.has-art .brand { text-shadow: 0 0 8px var(--card), 0 0 3px var(--card), 0 0 1px var(--card); }

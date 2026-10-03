@@ -2926,16 +2926,17 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
   }
 
   // Header illustrations per view and theme: crayon drawings (2.5:1) behind the bar, which
-  // shows a 6:1 band on phones and an 18:1 band on desktop. `pos` picks the band, so the
+  // shows a 6:1 band on phones and an 18:1 band on desktop. `pos` (phones) and `wide`
+  // (desktop) pick the band, so the
   // landmarks stay in view; the logo side is veiled in CSS.
   const headerArt = {
     seoul: {
-      light: { src: "assets/header-art/seoul-day.webp", pos: "100% 62%" },
-      dark: { src: "assets/header-art/seoul-night.webp", pos: "100% 58%" }
+      light: { src: "assets/header-art/seoul-day.webp", pos: "100% 62%", wide: "100% 82%" },
+      dark: { src: "assets/header-art/seoul-night.webp", pos: "100% 58%", wide: "100% 70%" }
     },
     regional: {
-      light: { src: "assets/header-art/regional-day.webp", pos: "100% 60%" },
-      dark: { src: "assets/header-art/regional-night.webp", pos: "100% 58%" }
+      light: { src: "assets/header-art/regional-day.webp", pos: "100% 60%", wide: "100% 80%" },
+      dark: { src: "assets/header-art/regional-night.webp", pos: "100% 58%", wide: "100% 62%" }
     }
   };
 
@@ -2946,9 +2947,11 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
       if (art) {
         header.style.setProperty("--hdr-art", `url("/${art.src}")`);
         header.style.setProperty("--hdr-pos", art.pos);
+        header.style.setProperty("--hdr-pos-wide", art.wide || art.pos);
       } else {
         header.style.removeProperty("--hdr-art");
         header.style.removeProperty("--hdr-pos");
+        header.style.removeProperty("--hdr-pos-wide");
       }
     });
   }
