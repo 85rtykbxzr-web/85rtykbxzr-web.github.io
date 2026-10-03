@@ -953,3 +953,13 @@ body.is-regional #popular, body.is-regional #mobile-popular { display: none; }
 /* header search/theme buttons: bare icons like the 서울/지역 switch, no tile behind them */
 .hdr .icon-btn, .hdr .icon-btn:hover { background: none; -webkit-tap-highlight-color: transparent; }
 @media (hover: hover) { .hdr .icon-btn:hover { color: var(--t1); } }
+/* press feedback, kept small: buttons, chips and dates give a little when pressed */
+.hdr .icon-btn, .region-btn, .chip, .date { transition-property: background-color, color, opacity, box-shadow, transform; transition-duration: 0.15s; }
+.hdr .icon-btn:active, .region-btn:active { transform: scale(0.94); }
+.chip:active, .date:active { transform: scale(0.97); }
+/* the theme icon turns in only when the theme is switched, not on page load */
+html[data-theme-switch] .hdr .theme-icon-sun, html[data-theme-switch] .hdr .theme-icon-moon { animation: theme-icon-in 0.35s ease-out; }
+@keyframes theme-icon-in { from { opacity: 0; transform: rotate(-45deg) scale(0.8); } }
+@media (prefers-reduced-motion: reduce) {
+  .hdr .icon-btn:active, .region-btn:active, .chip:active, .date:active { transform: none; }
+}
