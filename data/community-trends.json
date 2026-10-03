@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-03T15:21:55.253Z",
+  "generatedAt": "2026-10-03T16:13:55.887Z",
   "weekStart": "2026-10-02",
   "weekEnd": "2026-10-04",
   "windowStart": "2026-10-02",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-04&movieCd=029672&playSDT=2026-10-04&screenId=01&showSeq=2",
-      "score": 379,
-      "signal": 29.5,
-      "positiveSignal": 29.5,
-      "mentionCount": 4.2,
-      "rawPositiveSignal": 46,
-      "rawMentionCount": 7,
+      "score": 408,
+      "signal": 31.5,
+      "positiveSignal": 31.5,
+      "mentionCount": 5.2,
+      "rawPositiveSignal": 48,
+      "rawMentionCount": 8,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -382,35 +382,35 @@
         },
         {
           "rank": 5,
+          "title": "오아시스",
+          "englishTitle": "Oasis",
+          "section": "플래시 포워드",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91153&c_idx=435&sp_idx=&QueryStep=2",
+          "mentionCount": 11
+        },
+        {
+          "rank": 6,
+          "title": "로마 엘라스티카",
+          "englishTitle": "Roma Elastica",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91150&c_idx=430&sp_idx=&QueryStep=2",
+          "mentionCount": 11
+        },
+        {
+          "rank": 7,
+          "title": "클럽 키드",
+          "englishTitle": "Club Kid",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91104&c_idx=434&sp_idx=&QueryStep=2",
+          "mentionCount": 11
+        },
+        {
+          "rank": 8,
           "title": "페이퍼 타이거",
           "englishTitle": "Paper Tiger",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89791&c_idx=430&sp_idx=&QueryStep=2",
           "mentionCount": 11
-        },
-        {
-          "rank": 6,
-          "title": "오아시스",
-          "englishTitle": "Oasis",
-          "section": "플래시 포워드",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91153&c_idx=435&sp_idx=&QueryStep=2",
-          "mentionCount": 10
-        },
-        {
-          "rank": 7,
-          "title": "로마 엘라스티카",
-          "englishTitle": "Roma Elastica",
-          "section": "아이콘",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91150&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 10
-        },
-        {
-          "rank": 8,
-          "title": "클럽 키드",
-          "englishTitle": "Club Kid",
-          "section": "월드 시네마",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91104&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 10
         }
       ]
     }
@@ -420,11 +420,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 23,
+    "fetchedPostCount": 53,
     "listedPostCount": 292,
-    "detailedPostCount": 1,
-    "commentFetchCount": 1,
-    "commentCount": 1,
+    "detailedPostCount": 3,
+    "commentFetchCount": 3,
+    "commentCount": 12,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
