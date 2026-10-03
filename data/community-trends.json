@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-03T00:21:40.632Z",
+  "generatedAt": "2026-10-03T14:24:55.833Z",
   "weekStart": "2026-10-01",
   "weekEnd": "2026-10-03",
   "windowStart": "2026-10-01",
@@ -18,13 +18,13 @@
       "localPosterUrl": "/assets/recommendation-posters/5111b309025797e2.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-03&movieCd=029672&playSDT=2026-10-03&screenId=01&showSeq=1",
-      "score": 374.8,
-      "signal": 28.5,
-      "positiveSignal": 28.5,
-      "mentionCount": 5,
-      "rawPositiveSignal": 48,
-      "rawMentionCount": 8,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-04&movieCd=029672&playSDT=2026-10-04&screenId=01&showSeq=2",
+      "score": 721.8,
+      "signal": 56.5,
+      "positiveSignal": 56.5,
+      "mentionCount": 8,
+      "rawPositiveSignal": 76,
+      "rawMentionCount": 11,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -34,8 +34,8 @@
         "씨네큐브 광화문",
         "KU시네마테크"
       ],
-      "nextDate": "2026-10-03",
-      "nextTime": "09:30",
+      "nextDate": "2026-10-04",
+      "nextTime": "11:20",
       "evidence": [
         {
           "title": "스포) 가능한 사랑 놓친부분 알려줄사람",
@@ -174,28 +174,28 @@
       "localPosterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121760&playDt=20261003&tsId=TS0056&pno=2",
-      "score": 35.5,
-      "signal": 2.1,
-      "positiveSignal": 2.1,
-      "mentionCount": 0.5,
-      "rawPositiveSignal": 4,
-      "rawMentionCount": 1,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-04&movieCd=029631&playSDT=2026-10-04&screenId=01&showSeq=3",
+      "score": 136.5,
+      "signal": 10.1,
+      "positiveSignal": 10.1,
+      "mentionCount": 1.5,
+      "rawPositiveSignal": 12,
+      "rawMentionCount": 2,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum",
         "cinecube",
         "sangsangmadang",
-        "kucine"
+        "kucine",
+        "filmforum"
       ],
       "venueNames": [
-        "필름포럼",
         "씨네큐브 광화문",
         "KT&G 상상마당 시네마",
-        "KU시네마테크"
+        "KU시네마테크",
+        "필름포럼"
       ],
-      "nextDate": "2026-10-03",
-      "nextTime": "10:40",
+      "nextDate": "2026-10-04",
+      "nextTime": "14:20",
       "evidence": [
         {
           "title": "오늘 이방인 보고왔는데",
@@ -220,18 +220,109 @@
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.518
+        },
+        {
+          "title": "이방인 보고 옴",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867994&page=5",
+          "date": "2026-10-03",
+          "positive": 8,
+          "rawPositive": 8,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "만족",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "잘 만들",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 5,
+          "commentPositive": 8,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260903_7e3d6928.jpg"
     },
     {
       "rank": 3,
+      "title": "꿈꾸던 모험",
+      "posterUrl": "/assets/recommendation-posters/730c75bb764294f9.webp",
+      "localPosterUrl": "/assets/recommendation-posters/730c75bb764294f9.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-05&movieCd=029671&playSDT=2026-10-05&screenId=01&showSeq=8",
+      "score": 57,
+      "signal": 4,
+      "positiveSignal": 4,
+      "mentionCount": 1,
+      "rawPositiveSignal": 4,
+      "rawMentionCount": 1,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "cinecube",
+        "filmforum"
+      ],
+      "venueNames": [
+        "씨네큐브 광화문",
+        "필름포럼"
+      ],
+      "nextDate": "2026-10-05",
+      "nextTime": "19:55",
+      "evidence": [
+        {
+          "title": "꿈꾸던 모험 괜찮음?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867958&page=6",
+          "date": "2026-10-03",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "봐라",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            },
+            {
+              "term": "봐라",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 2,
+          "commentPositive": 4,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260910_b6b3a8cc.jpg"
+    },
+    {
+      "rank": 4,
       "title": "철들 무렵",
       "posterUrl": "/assets/recommendation-posters/08cf13afed798dc4.webp",
       "localPosterUrl": "/assets/recommendation-posters/08cf13afed798dc4.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121700&playDt=20261003&tsId=TS0039&pno=4",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121613&playDt=20261004&tsId=TS0044&pno=2",
       "score": 0,
       "signal": 0,
       "positiveSignal": 0,
@@ -240,53 +331,23 @@
       "rawMentionCount": 0,
       "scheduleBackfill": true,
       "venueIds": [
-        "kucine",
         "sangsangmadang",
         "indiespace",
         "cinecube",
+        "kucine",
         "filmforum"
       ],
       "venueNames": [
-        "KU시네마테크",
         "KT&G 상상마당 시네마",
         "인디스페이스",
         "씨네큐브 광화문",
+        "KU시네마테크",
         "필름포럼"
       ],
-      "nextDate": "2026-10-03",
-      "nextTime": "18:00",
+      "nextDate": "2026-10-04",
+      "nextTime": "10:00",
       "evidence": [],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_0c0f92fb.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "더 드라마",
-      "posterUrl": "/assets/recommendation-posters/40f5f0963689ae80.webp",
-      "localPosterUrl": "/assets/recommendation-posters/40f5f0963689ae80.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121681&playDt=20261003&tsId=TS0057&pno=5",
-      "score": 0,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 0,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 0,
-      "scheduleBackfill": true,
-      "venueIds": [
-        "filmforum",
-        "cinecube",
-        "kucine"
-      ],
-      "venueNames": [
-        "필름포럼",
-        "씨네큐브 광화문",
-        "KU시네마테크"
-      ],
-      "nextDate": "2026-10-03",
-      "nextTime": "18:00",
-      "evidence": [],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_177ef811.jpg"
     }
   ],
   "festivalPicks": [
@@ -299,6 +360,14 @@
       "items": [
         {
           "rank": 1,
+          "title": "라 그라디바",
+          "englishTitle": "La Gradiva",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90315&c_idx=434&sp_idx=&QueryStep=2",
+          "mentionCount": 16
+        },
+        {
+          "rank": 2,
           "title": "에브리타임",
           "englishTitle": "Everytime",
           "section": "월드 시네마",
@@ -306,15 +375,15 @@
           "mentionCount": 16
         },
         {
-          "rank": 2,
-          "title": "라 그라디바",
-          "englishTitle": "La Gradiva",
-          "section": "월드 시네마",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90315&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 15
+          "rank": 3,
+          "title": "스파이럴",
+          "englishTitle": "The Spiral",
+          "section": "오픈 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91100&c_idx=437&sp_idx=&QueryStep=2",
+          "mentionCount": 12
         },
         {
-          "rank": 3,
+          "rank": 4,
           "title": "그래비티",
           "englishTitle": "Gravity",
           "section": "특별상영 & 까르뜨 블랑슈",
@@ -322,44 +391,36 @@
           "mentionCount": 11
         },
         {
-          "rank": 4,
+          "rank": 5,
+          "title": "페이퍼 타이거",
+          "englishTitle": "Paper Tiger",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89791&c_idx=430&sp_idx=&QueryStep=2",
+          "mentionCount": 11
+        },
+        {
+          "rank": 6,
           "title": "오아시스",
           "englishTitle": "Oasis",
           "section": "플래시 포워드",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91153&c_idx=435&sp_idx=&QueryStep=2",
-          "mentionCount": 9
+          "mentionCount": 10
         },
         {
-          "rank": 5,
-          "title": "스파이럴",
-          "englishTitle": "The Spiral",
-          "section": "오픈 시네마",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91100&c_idx=437&sp_idx=&QueryStep=2",
-          "mentionCount": 9
-        },
-        {
-          "rank": 6,
+          "rank": 7,
           "title": "로마 엘라스티카",
           "englishTitle": "Roma Elastica",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91150&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 8
+          "mentionCount": 10
         },
         {
-          "rank": 7,
+          "rank": 8,
           "title": "클럽 키드",
           "englishTitle": "Club Kid",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91104&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 8
-        },
-        {
-          "rank": 8,
-          "title": "버킹 패스타드",
-          "englishTitle": "Bucking Fastard",
-          "section": "아이콘",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91151&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 6
+          "mentionCount": 9
         }
       ]
     }
@@ -369,20 +430,20 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 100,
-    "listedPostCount": 292,
-    "detailedPostCount": 5,
-    "commentFetchCount": 5,
-    "commentCount": 17,
+    "fetchedPostCount": 412,
+    "listedPostCount": 442,
+    "detailedPostCount": 22,
+    "commentFetchCount": 22,
+    "commentCount": 52,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 6,
+    "scannedPageCount": 9,
     "reachedLookbackStart": true,
-    "oldestScannedDate": "2026-09-27",
+    "oldestScannedDate": "2026-10-02",
     "newestScannedDate": "2026-10-03",
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-03",
     "candidateWindowEnd": "2026-10-17",
-    "candidateCount": 84,
+    "candidateCount": 77,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-01",
     "listLookbackDays": 1,
