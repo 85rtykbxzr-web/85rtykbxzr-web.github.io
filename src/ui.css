@@ -923,8 +923,8 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 /* hidden ?dtryx-scan check page */
 .dtryx-scan { position: relative; z-index: 60; margin: 80px 12px 12px; padding: 12px; border-radius: 12px; background: var(--card); color: var(--t1); font-size: 11px; line-height: 16px; white-space: pre-wrap; word-break: break-all; box-shadow: 0 0 0 1px var(--line-2); }
 /* 서울/지역 switch beside the theme button */
-.region-btn { flex: none; height: 32px; padding: 0 12px; border-radius: 999px; background: var(--fill); font-size: 14px; font-weight: 700; color: var(--t2); white-space: nowrap; transition: background-color 0.15s; }
-.region-btn:hover { background: var(--fill-hover); }
+.region-btn { flex: none; height: 40px; padding: 0 6px; background: none; font-size: 15px; font-weight: 600; color: var(--t3); white-space: nowrap; -webkit-tap-highlight-color: transparent; transition: color 0.15s; }
+.region-btn:hover { color: var(--t1); }
 /* this week's picks rank Seoul screenings */
 body.is-regional #popular, body.is-regional #mobile-popular { display: none; }
 /* header illustration: the strip sits behind the bar, anchored right; a veil from the left
