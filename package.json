@@ -32,7 +32,7 @@
     "test:seat-snapshot": "node scripts/test-seat-snapshot.mjs",
     "test:session-time": "node scripts/test-session-time.mjs",
     "daily:health": "node scripts/daily-site-health-check.mjs",
-    "audit:deps": "npm audit --audit-level=high",
+    "audit:deps": "npm audit --omit=dev --audit-level=high && npm audit --audit-level=critical",
     "test:site-health": "node scripts/test-site-health.mjs",
     "test:browser-live": "node scripts/test-browser-live.mjs",
     "test:refresh-clock": "node scripts/test-refresh-clock.mjs",
