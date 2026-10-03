@@ -12,7 +12,7 @@ import { filmTitleKey } from "./src/film-title.mjs";
 import { searchTmdbPoster, tmdbImageBase } from "./src/tmdb.mjs";
 import { createFestivalPlanner } from "./src/festival-planner-ui.mjs";
 import { runDtryxScan } from "./src/dtryx-scan.mjs";
-import { regionalVenues, regionalVenueIds, regionalLiveConfigs } from "./src/regional-venues.mjs";
+import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOutsideSeoul } from "./src/regional-venues.mjs";
 
 (function () {
   const analyticsHostnames = new Set(["seoulcinemaschedule.com", "www.seoulcinemaschedule.com"]);
@@ -54,7 +54,7 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs } from "./src/reg
     regionalStarted: false
   };
   const regionStorageKey = "cineRegion:v1";
-  const regionOf = (venueId) => (regionalVenueIds.has(venueId) ? "regional" : "seoul");
+  const regionOf = (venueId) => (regionalVenueIds.has(venueId) || serverVenuesOutsideSeoul.has(venueId) ? "regional" : "seoul");
 
   const favoriteVenueStorageKey = "cineSeoulFavoriteVenues";
   const scheduleDataRefreshCooldownMs = 10 * 60 * 1000;

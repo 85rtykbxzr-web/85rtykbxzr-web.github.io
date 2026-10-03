@@ -26,6 +26,10 @@ export const regionalVenues = [
 
 export const regionalVenueIds = new Set(regionalVenues.map((venue) => venue.id));
 
+// Venues the server schedule already carries that sit outside Seoul: they keep their own
+// collection and only move to the 지역 view.
+export const serverVenuesOutsideSeoul = new Set(["heyri"]);
+
 // Small single-screen houses: a day with one screening is normal, so one session on one date
 // is enough to trust an answer.
 export const regionalLiveConfigs = regionalVenues.map((venue) => ({
