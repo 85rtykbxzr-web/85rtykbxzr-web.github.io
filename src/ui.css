@@ -558,6 +558,12 @@ html[data-theme-switch="dark"]::view-transition-old(root) { animation-name: ligh
 html[data-theme-switch="dark"]::view-transition-new(root) { animation-name: lights-down-in; }
 html[data-theme-switch="light"]::view-transition-old(root) { animation-name: lights-up-out; }
 html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lights-up-in; }
+/* Region switch (see switchRegion): a plain crossfade with a slight lift */
+html[data-region-switch] *, html[data-region-switch] *::before, html[data-region-switch] *::after { transition: none !important; }
+html[data-region-switch]::view-transition-old(root) { animation: region-out 0.32s cubic-bezier(0.4, 0, 1, 1) both; }
+html[data-region-switch]::view-transition-new(root) { animation: region-in 0.4s cubic-bezier(0, 0, 0.2, 1) both; }
+@keyframes region-out { to { opacity: 0; transform: translateY(-6px); } }
+@keyframes region-in { from { opacity: 0; transform: translateY(8px); } }
 @keyframes lights-down-out { from { opacity: 1; filter: brightness(1); } to { opacity: 0; filter: brightness(0.4); } }
 @keyframes lights-down-in { from { opacity: 0; filter: brightness(0.7); } to { opacity: 1; filter: brightness(1); } }
 @keyframes lights-up-out { from { opacity: 1; filter: brightness(1); } to { opacity: 0; filter: brightness(1.6); } }
