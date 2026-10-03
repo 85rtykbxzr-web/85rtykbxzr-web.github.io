@@ -960,22 +960,25 @@ body.is-regional #popular, body.is-regional #mobile-popular { display: none; }
 @media (prefers-reduced-motion: reduce) {
   .hdr .icon-btn:active, .region-btn:active, .chip:active, .date:active { transform: none; }
 }
-/* ── Squarer shapes: a printed-timetable feel instead of soft app bubbles ── */
-.venue, .results, .empty, .prog, .fest-list, .venue-map, .fl, .hero, .notice { border-radius: 6px; }
-.hero-poster, .prog-media, .fest-logo, .prog-mark, .thumb { border-radius: 3px; }
-.search, .icon-btn, .seg, .glass, .map-card, .map-card-btn, .ticket-btn, .ticket-select, .fp-search input, .fp-window, .fp-ticket, .toast, .fest-strip { border-radius: 6px; }
-.seg-thumb { border-radius: 4px; }
-.seg button { border-radius: 4px; }
-.date { border-radius: 4px; }
-.chip, .map-reset, .ticket-photo, .fp-chip, .fp-fill { border-radius: 4px; }
-.book, .tchip, .row { border-radius: 4px; }
-.tabbar { border-radius: 10px; }
-.tabbar a, .tabbar button, .tab-pill { border-radius: 6px; }
-.ticket-sheet, .fp-sheet { border-radius: 10px; }
-.fp-list, .fp-itin, .fpt, .fpt.v-ink, .ticket-preview-wrap { border-radius: 6px; }
-.fp-modes, .fp-modes button { border-radius: 6px; }
+/* ── Less template, more timetable ──
+   The date row and the venue index were rows of identical filled bubbles; they now read
+   as a calendar line and a plain index, and only the chosen date keeps a filled block. */
+.dates { gap: 2px; }
+.date { background: none; border-radius: 10px; }
+.date:hover { box-shadow: none; background: var(--fill); }
+.date.is-on, .date.is-on:hover { background: var(--strong); }
+.chips { gap: 2px 20px; align-items: center; }
+.chip { height: 32px; padding: 0; border-radius: 0; background: none; font-weight: 600; color: var(--t2); }
+.chip:hover { box-shadow: none; color: var(--t1); text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+.chip .n { font-size: 13px; }
+.chip.map-toggle { padding: 0 12px; border-radius: 8px; box-shadow: inset 0 0 0 1px var(--line-2); }
+.chip.map-toggle:hover { text-decoration: none; background: var(--fill); }
+.chip.map-toggle.is-on { box-shadow: none; }
+.chip.is-failed { padding: 0 10px; border-radius: 8px; }
+/* the view switch sits flat: no floating shadow under the thumb */
+.seg-thumb { box-shadow: 0 0 0 1px var(--line-2); }
 @media (max-width: 767px) {
-  .hero, .hero.is-extra, .prog, .fest-list, .date { border-radius: 4px; }
-  .venue { border-radius: 0; }
-  .fest-logo { border-radius: 4px; }
+  .dates { gap: 2px; }
+  .chips { gap: 0 18px; }
+  .chip { height: 34px; padding: 0; }
 }
