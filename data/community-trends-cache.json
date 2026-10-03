@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-04",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-03T18:13:38.096Z",
+  "updatedAt": "2026-10-03T21:11:40.129Z",
   "days": {
     "2026-10-02": {
       "가능한사랑": {
@@ -395,17 +395,24 @@
     "2026-10-04": {
       "사탄탱고": {
         "title": "사탄탱고(기획전)",
-        "positiveSignal": 4,
+        "positiveSignal": 8,
         "mentionCount": 1,
         "evidence": [
           {
             "title": "스포) 영알못 뉴비 사탄탱고 짧은 후기",
             "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868342&page=2",
             "date": "2026-10-04",
-            "positive": 4,
-            "rawPositive": 4,
+            "positive": 8,
+            "rawPositive": 8,
             "negative": 0,
             "positiveHits": [
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
               {
                 "term": "재밌",
                 "count": 1,
@@ -417,8 +424,8 @@
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 6,
-            "commentPositive": 4,
+            "commentCount": 8,
+            "commentPositive": 8,
             "commentNegative": 0
           }
         ]
@@ -457,7 +464,7 @@
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-03T18:13:38.092Z",
+      "lineupFetchedAt": "2026-10-03T21:11:40.126Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -2822,6 +2829,16 @@
           }
         },
         "2026-10-04": {
+          "버킹패스타드": {
+            "title": "버킹 패스타드",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "텐더러빙케어": {
+            "title": "텐더 러빙 케어",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
           "노트르살뤼": {
             "title": "노트르 살뤼",
             "mentionCount": 2,
