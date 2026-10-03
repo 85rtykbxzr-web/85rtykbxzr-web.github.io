@@ -920,3 +920,5 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .fp-list { box-shadow: none; border: 1px solid var(--line-2); }
 /* grid and route cards: outline as a real border; the grid's scroll wrapper clipped an outside outline top and bottom */
 .fpt, .fpt.v-ink, .fp-itin { box-shadow: none; border: 1px solid var(--line-2); }
+/* hidden ?dtryx-scan check page */
+.dtryx-scan { position: relative; z-index: 60; margin: 80px 12px 12px; padding: 12px; border-radius: 12px; background: var(--card); color: var(--t1); font-size: 11px; line-height: 16px; white-space: pre-wrap; word-break: break-all; box-shadow: 0 0 0 1px var(--line-2); }
