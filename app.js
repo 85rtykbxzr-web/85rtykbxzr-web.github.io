@@ -11,6 +11,7 @@ import { drawStoryTicket } from "./src/story-ticket.mjs";
 import { filmTitleKey } from "./src/film-title.mjs";
 import { searchTmdbPoster, tmdbImageBase } from "./src/tmdb.mjs";
 import { createFestivalPlanner } from "./src/festival-planner-ui.mjs";
+import { runDtryxScan } from "./src/dtryx-scan.mjs";
 
 (function () {
   const analyticsHostnames = new Set(["seoulcinemaschedule.com", "www.seoulcinemaschedule.com"]);
@@ -545,6 +546,14 @@ import { createFestivalPlanner } from "./src/festival-planner-ui.mjs";
     const rows = state.data.meta.browserLive || [];
     if (rows.some((row) => row.status === "error")) return "일부 영화관의 시간표를 확인하지 못했습니다. 영화관 공식 페이지에서 확인해 주세요.";
     return "영화관의 공식 시간표를 불러오는 중입니다.";
+  }
+
+  // ?dtryx-scan: list the cinema codes the timetable API answers for (see src/dtryx-scan.mjs).
+  if (new URLSearchParams(location.search).has("dtryx-scan")) {
+    const output = document.createElement("pre");
+    output.className = "dtryx-scan";
+    document.body.prepend(output);
+    runDtryxScan(output);
   }
 
   // The live-check status banner is not shown to visitors; venues that could not be checked
