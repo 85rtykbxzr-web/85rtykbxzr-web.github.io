@@ -2928,13 +2928,13 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs } from "./src/reg
     const regional = state.region === "regional";
     document.body.classList.toggle("is-regional", regional);
     document.querySelectorAll(".brand").forEach((brand) => {
-      brand.textContent = regional ? "지방독립영화관시간표" : "서울독립영화관시간표";
+      brand.textContent = regional ? "지역독립영화관시간표" : "서울독립영화관시간표";
       if (brand.hasAttribute("aria-label")) brand.setAttribute("aria-label", `${brand.textContent} 홈`);
     });
     document.querySelectorAll("[data-region-toggle]").forEach((button) => {
-      button.textContent = regional ? "서울" : "지방";
+      button.textContent = regional ? "서울" : "지역";
       button.setAttribute("aria-pressed", String(regional));
-      button.setAttribute("aria-label", regional ? "서울 영화관 보기" : "지방 영화관 보기");
+      button.setAttribute("aria-label", regional ? "서울 영화관 보기" : "지역 영화관 보기");
     });
   }
 

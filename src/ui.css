@@ -6,7 +6,7 @@
 /* Baemin Kkubulim for the site name only; the file holds just those glyphs. */
 @font-face {
   font-family: "BM Kkubulim Brand";
-  src: url("/assets/fonts/kkubulim/kkubulim-brand.woff2?v=2") format("woff2");
+  src: url("/assets/fonts/kkubulim/kkubulim-brand.woff2?v=3") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -922,7 +922,7 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .fpt, .fpt.v-ink, .fp-itin { box-shadow: none; border: 1px solid var(--line-2); }
 /* hidden ?dtryx-scan check page */
 .dtryx-scan { position: relative; z-index: 60; margin: 80px 12px 12px; padding: 12px; border-radius: 12px; background: var(--card); color: var(--t1); font-size: 11px; line-height: 16px; white-space: pre-wrap; word-break: break-all; box-shadow: 0 0 0 1px var(--line-2); }
-/* 서울/지방 switch beside the theme button */
+/* 서울/지역 switch beside the theme button */
 .region-btn { flex: none; height: 32px; padding: 0 12px; border-radius: 999px; background: var(--fill); font-size: 14px; font-weight: 700; color: var(--t2); white-space: nowrap; transition: background-color 0.15s; }
 .region-btn:hover { background: var(--fill-hover); }
 /* this week's picks rank Seoul screenings */

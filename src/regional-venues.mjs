@@ -1,6 +1,6 @@
 // Independent and art-house cinemas outside Seoul. They all sell through dtryx, whose timetable
 // API answers visitors' browsers but not our servers, so these venues never enter the server
-// schedule: the page fetches them itself when the 지방 view or the map needs them. Cinema codes
+// schedule: the page fetches them itself when the 지역 view or the map needs them. Cinema codes
 // were confirmed with the ?dtryx-scan page on 2026-10-03; coordinates and addresses come from
 // Kakao Map search.
 const companyGuid = "FE8EF4D2-F22D-4802-A39A-D58F23A29C1E";
