@@ -117,7 +117,7 @@ async function apiRows(path, config, values, fetchImpl) {
 export async function fetchBrowserVenue(config, { fetchImpl = fetch, now = new Date() } = {}) {
   const today = todayKst(now);
   const dates = (await apiRows("third-party-type2-timetable-play-date-list", config, { MovieCd: "", WorkGuID: config.dateGuid || config.workGuid }, fetchImpl))
-    .filter((row) => row.HiddenYn !== "Y").map((row) => dateValue(row.PlaySDT)).filter((date) => date >= today).slice(0, 14);
+    .filter((row) => row.HiddenYn !== "Y").map((row) => dateValue(row.PlaySDT)).filter((date) => date >= today).slice(0, config.maxDates || 14);
   if (!dates.length || new Set(dates).size !== dates.length) throw new Error("공식 상영 날짜를 확인하지 못했습니다.");
   const sessions = [];
   for (const date of dates) {
