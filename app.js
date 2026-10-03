@@ -12,6 +12,7 @@ import { filmTitleKey } from "./src/film-title.mjs";
 import { searchTmdbPoster, tmdbImageBase } from "./src/tmdb.mjs";
 import { createFestivalPlanner } from "./src/festival-planner-ui.mjs";
 import { runDtryxScan } from "./src/dtryx-scan.mjs";
+import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOutsideSeoul } from "./src/regional-venues.mjs";
 
 (function () {
   const analyticsHostnames = new Set(["seoulcinemaschedule.com", "www.seoulcinemaschedule.com"]);
@@ -44,8 +45,16 @@ import { runDtryxScan } from "./src/dtryx-scan.mjs";
     lastRenderedMobileLayout: null,
     view: "today",
     communityTrends: null,
-    mapOpen: false
+    mapOpen: false,
+    // "seoul" or "regional"; the map always shows both
+    region: "seoul",
+    serverData: null,
+    fullData: null,
+    regional: { sessions: [], rows: [] },
+    regionalStarted: false
   };
+  const regionStorageKey = "cineRegion:v1";
+  const regionOf = (venueId) => (regionalVenueIds.has(venueId) || serverVenuesOutsideSeoul.has(venueId) ? "regional" : "seoul");
 
   const favoriteVenueStorageKey = "cineSeoulFavoriteVenues";
   const scheduleDataRefreshCooldownMs = 10 * 60 * 1000;
@@ -316,6 +325,10 @@ import { runDtryxScan } from "./src/dtryx-scan.mjs";
     return (state.data?.sessions || []).filter((session) => !isPastSession(session));
   }
 
+  function allRemainingSessions() {
+    return (state.fullData?.sessions || state.data?.sessions || []).filter((session) => !isPastSession(session));
+  }
+
   function kstDateString(value = new Date()) {
     const parts = new Intl.DateTimeFormat("en", {
       timeZone: "Asia/Seoul",
@@ -416,8 +429,58 @@ import { runDtryxScan } from "./src/dtryx-scan.mjs";
     ].join("|");
   }
 
+  // The server schedule holds the Seoul venues; the regional venues are fetched in the browser
+  // and joined here. state.fullData has both (the map uses it), state.data the chosen region.
+  function composeData() {
+    const base = state.serverData;
+    if (!base) return;
+    const full = {
+      ...base,
+      venues: [...base.venues.filter((venue) => !regionalVenueIds.has(venue.id)), ...regionalVenues],
+      sessions: [...base.sessions.filter((session) => !regionalVenueIds.has(session.venueId)), ...state.regional.sessions],
+      meta: { ...base.meta, browserLive: [...(base.meta?.browserLive || []).filter((row) => !regionalVenueIds.has(row.venueId)), ...state.regional.rows] }
+    };
+    const inRegion = (venueId) => regionOf(venueId) === state.region;
+    state.fullData = full;
+    state.data = {
+      ...full,
+      venues: full.venues.filter((venue) => inRegion(venue.id)),
+      sessions: full.sessions.filter((session) => inRegion(session.venueId)),
+      programs: state.region === "seoul" ? full.programs : full.programs.filter((program) => program.venueId && inRegion(program.venueId)),
+      meta: { ...full.meta, browserLive: full.meta.browserLive.filter((row) => inRegion(row.venueId)) }
+    };
+  }
+
+  function startRegionalRefresh() {
+    if (state.regionalStarted) return;
+    state.regionalStarted = true;
+    const base = { meta: { collectionMode: "browser-live", browserLive: [] }, sessions: [] };
+    refreshBrowserLiveSchedule(base, {
+      configs: regionalLiveConfigs,
+      onProgress(result) {
+        state.regional = {
+          sessions: result.sessions.filter((session) => regionalVenueIds.has(session.venueId)),
+          rows: (result.meta.browserLive || []).filter((row) => regionalVenueIds.has(row.venueId))
+        };
+        composeData();
+        render();
+      }
+    }).catch(() => {});
+  }
+
+  function setRegion(region) {
+    if (region === state.region) return;
+    state.region = region;
+    try { localStorage.setItem(regionStorageKey, region); } catch { /* storage blocked */ }
+    state.venueFilter = "all";
+    if (region === "regional") startRegionalRefresh();
+    composeData();
+    normalizeDateSelection();
+  }
+
   function applyScheduleData(data, options = {}) {
-    state.data = data;
+    state.serverData = data;
+    composeData();
     state.dataSignature = scheduleDataSignature(data);
     state.currentKstDate = kstDateString();
     state.lastDataRefreshAt = Date.now();
@@ -900,6 +963,7 @@ import { runDtryxScan } from "./src/dtryx-scan.mjs";
       button.setAttribute("aria-label", dark ? "야간 모드 끄기" : "야간 모드 켜기");
     });
     document.querySelector('meta[name="theme-color"]')?.setAttribute("content", dark ? "#21201e" : "#ffffff");
+    syncHeaderArt();
   }
 
   function applyTheme(next) {
@@ -1461,13 +1525,23 @@ import { runDtryxScan } from "./src/dtryx-scan.mjs";
       })
     );
     const shortcutItems = items;
+    // The map shows every venue, Seoul and regional, whichever view is on.
+    const allCounts = countBy(allRemainingSessions().filter((session) => session.date === jumpDate), (session) => session.venueId);
+    const mapItems = (state.fullData?.venues || venues).map((venue) => ({
+      id: venue.id,
+      name: venue.name,
+      displayName: venue.name,
+      area: venue.area,
+      address: venueAddress(venue),
+      count: allCounts[venue.id] || 0
+    }));
 
     const mobileLayout = isMobileViewport();
     const activeTarget = mobileLayout ? $("#mobileVenueFilter") : $("#desktopVenueFilter");
     const inactiveTarget = mobileLayout ? $("#desktopVenueFilter") : $("#mobileVenueFilter");
     inactiveTarget?.replaceChildren();
     renderVenueFilterTiles(activeTarget, shortcutItems);
-    renderVenueMap(shortcutItems, jumpDate);
+    renderVenueMap(mapItems, jumpDate);
   }
 
   const mapIconMarkup = '<svg class="ui-icon map-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"></path><circle cx="12" cy="10" r="2.4"></circle></svg>';
@@ -1511,6 +1585,12 @@ import { runDtryxScan } from "./src/dtryx-scan.mjs";
     movieland: "무비랜드",
     heyri: "헤이리"
   };
+  for (const venue of regionalVenues) {
+    venueAddresses[venue.id] = venue.address;
+    venueCoordinates[venue.id] = venue.coords;
+    venueMapLabels[venue.id] = venue.mark;
+    venueMarkText[venue.id] = venue.mark;
+  }
   // Marker geometry in px, in step with .map-pin in src/ui.css.
   const mapPinSize = { venue: 28, cluster: 30 };
   const mapPinPadding = { venue: 14, cluster: 12 };
@@ -1740,8 +1820,11 @@ import { runDtryxScan } from "./src/dtryx-scan.mjs";
   }
 
   function fitVenueMap(entry) {
-    const withSessions = entry.items.filter((item) => item.count);
-    const positions = (withSessions.length ? withSessions : entry.items).map((item) => entry.markers.get(item.id).position);
+    // frame the chosen region; the other region's pins are a pan or zoom away
+    const regionItems = entry.items.filter((item) => regionOf(item.id) === state.region);
+    const pool = regionItems.length ? regionItems : entry.items;
+    const withSessions = pool.filter((item) => item.count);
+    const positions = (withSessions.length ? withSessions : pool).map((item) => entry.markers.get(item.id).position);
     if (!positions.length) return;
     const bounds = new entry.maps.LatLngBounds();
     positions.forEach((position) => bounds.extend(position));
@@ -1807,9 +1890,9 @@ import { runDtryxScan } from "./src/dtryx-scan.mjs";
       entry.card.replaceChildren();
       return;
     }
-    const venue = venueMap()[item.id] || { id: item.id, name: item.name };
+    const venue = (state.fullData?.venues || []).find((row) => row.id === item.id) || venueMap()[item.id] || { id: item.id, name: item.name };
     const [lat, lng] = venueCoordinates[item.id];
-    const sessions = sortSessions(getRemainingSessions().filter((session) => session.venueId === item.id && session.date === entry.date));
+    const sessions = sortSessions(allRemainingSessions().filter((session) => session.venueId === item.id && session.date === entry.date));
     const today = isTodayScheduleDate(entry.date);
     const date = parseLocalDate(entry.date);
     const dayLabel = today ? "오늘 남은 상영" : `${date.getMonth() + 1}월 ${date.getDate()}일 상영`;
@@ -1850,7 +1933,8 @@ import { runDtryxScan } from "./src/dtryx-scan.mjs";
     card.setAttribute("aria-label", "상영관 정보");
     panel.append(canvas, reset, card);
     const map = new maps.Map(canvas, { center: new maps.LatLng(37.5665, 126.978), level: 8 });
-    map.setMaxLevel(11);
+    // zoomed all the way out the map holds the whole country, regional venues included
+    map.setMaxLevel(13);
     // Keep the Kakao logo clear of the card, which docks at the bottom left.
     if (maps.CopyrightPosition && typeof map.setCopyrightPosition === "function") map.setCopyrightPosition(maps.CopyrightPosition.BOTTOMRIGHT, true);
     const entry = { maps, map, panel, canvas, card, reset, items: [], date: "", markers: new Map(), clusters: [], selectedId: null, fitKey: "", fitLevel: 0 };
@@ -1921,7 +2005,7 @@ import { runDtryxScan } from "./src/dtryx-scan.mjs";
         entry.date = date;
         if (entry.selectedId && !entry.markers.has(entry.selectedId)) entry.selectedId = null;
         // Re-frame only when the set of venues showing today changes, not on every render.
-        const fitKey = `${date}|${pins.filter((item) => item.count).map((item) => item.id).join(",")}`;
+        const fitKey = `${state.region}|${date}|${pins.filter((item) => item.count && regionOf(item.id) === state.region).map((item) => item.id).join(",")}`;
         if (fitKey !== entry.fitKey) {
           entry.fitKey = fitKey;
           fitVenueMap(entry);
@@ -2841,8 +2925,55 @@ import { runDtryxScan } from "./src/dtryx-scan.mjs";
     }
   }
 
+  // Header illustrations per view and theme: crayon drawings (2.5:1) behind the bar, which
+  // shows a 6:1 band on phones and an 18:1 band on desktop. `pos` (phones) and `wide`
+  // (desktop) pick the band, so the
+  // landmarks stay in view; the logo side is veiled in CSS.
+  const headerArt = {
+    seoul: {
+      light: { src: "assets/header-art/seoul-day.webp", pos: "100% 62%", wide: "100% 72%" },
+      dark: { src: "assets/header-art/seoul-night.webp", pos: "100% 58%", wide: "100% 70%" }
+    },
+    regional: {
+      light: { src: "assets/header-art/regional-day.webp", pos: "100% 60%", wide: "100% 80%" },
+      dark: { src: "assets/header-art/regional-night.webp", pos: "100% 58%", wide: "100% 62%" }
+    }
+  };
+
+  function syncHeaderArt() {
+    const art = headerArt[state.region]?.[currentTheme() === "dark" ? "dark" : "light"];
+    document.querySelectorAll(".hdr").forEach((header) => {
+      header.classList.toggle("has-art", Boolean(art));
+      if (art) {
+        header.style.setProperty("--hdr-art", `url("/${art.src}")`);
+        header.style.setProperty("--hdr-pos", art.pos);
+        header.style.setProperty("--hdr-pos-wide", art.wide || art.pos);
+      } else {
+        header.style.removeProperty("--hdr-art");
+        header.style.removeProperty("--hdr-pos");
+        header.style.removeProperty("--hdr-pos-wide");
+      }
+    });
+  }
+
+  function renderRegionChrome() {
+    syncHeaderArt();
+    const regional = state.region === "regional";
+    document.body.classList.toggle("is-regional", regional);
+    document.querySelectorAll(".brand").forEach((brand) => {
+      brand.textContent = regional ? "지역독립영화관시간표" : "서울독립영화관시간표";
+      if (brand.hasAttribute("aria-label")) brand.setAttribute("aria-label", `${brand.textContent} 홈`);
+    });
+    document.querySelectorAll("[data-region-toggle]").forEach((button) => {
+      button.textContent = regional ? "서울" : "지역";
+      button.setAttribute("aria-pressed", String(regional));
+      button.setAttribute("aria-label", regional ? "서울 영화관 보기" : "지역 영화관 보기");
+    });
+  }
+
   function render() {
     if (!state.data) return;
+    renderRegionChrome();
     const mobileLayout = isMobileViewport();
     state.lastRenderedMobileLayout = mobileLayout;
     normalizeDateSelection();
@@ -3502,7 +3633,10 @@ import { runDtryxScan } from "./src/dtryx-scan.mjs";
       if (retryLive) {
         retryLive.disabled = true;
         retryLive.textContent = "불러오는 중…";
-        refreshScheduleData({ force: true });
+        if (state.region === "regional") {
+          state.regionalStarted = false;
+          startRegionalRefresh();
+        } else refreshScheduleData({ force: true });
         return;
       }
 
@@ -3553,12 +3687,26 @@ import { runDtryxScan } from "./src/dtryx-scan.mjs";
 
       if (event.target.closest("[data-venue-map-toggle]")) {
         state.mapOpen = !state.mapOpen;
+        if (state.mapOpen) startRegionalRefresh();
         render();
+        return;
+      }
+
+      if (event.target.closest("[data-region-toggle]")) {
+        setRegion(state.region === "seoul" ? "regional" : "seoul");
+        render();
+        window.scrollTo({ top: 0, behavior: "smooth" });
         return;
       }
 
       const venueJumpButton = event.target.closest("[data-venue-jump]");
       if (venueJumpButton) {
+        const jumpId = venueJumpButton.dataset.venueJump || "all";
+        // a pin of the other region on the map switches the view first
+        if (jumpId !== "all" && regionOf(jumpId) !== state.region) {
+          setRegion(regionOf(jumpId));
+          render();
+        }
         jumpToVenueSchedule(venueJumpButton.dataset.venueJump || "all");
         return;
       }
@@ -3636,6 +3784,8 @@ import { runDtryxScan } from "./src/dtryx-scan.mjs";
     window.matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", syncThemeControls);
     try {
       state.favoriteVenueIds = loadFavoriteVenueIds();
+      try { if (localStorage.getItem(regionStorageKey) === "regional") state.region = "regional"; } catch { /* storage blocked */ }
+      if (state.region === "regional") startRegionalRefresh();
       const [scheduleData] = await Promise.all([loadData(), loadCommunityTrends()]);
       applyScheduleData(scheduleData, { resetDate: true });
       render();

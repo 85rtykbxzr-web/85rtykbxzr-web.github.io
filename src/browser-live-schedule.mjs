@@ -173,11 +173,15 @@ function cachedVenue(cache, config, now, message) {
   return { venueId: config.venueId, sourceId: config.sourceId, sessions, checkedAt: cached.checkedAt, status: "ok", stale: true, message };
 }
 
-export async function refreshBrowserLiveSchedule(base, { fetchImpl = fetch, onProgress = () => {}, now = new Date(), retryDelayMs = 1500, concurrency = 3, cache = localCache() } = {}) {
+// `configs` defaults to the Seoul venues; the regional venues pass their own list, and the
+// status rows of venues outside it are kept as they are.
+export async function refreshBrowserLiveSchedule(base, { configs = browserLiveConfigs, fetchImpl = fetch, onProgress = () => {}, now = new Date(), retryDelayMs = 1500, concurrency = 3, cache = localCache() } = {}) {
   if (!usesBrowserLive(base)) return base;
-  let result = { ...base, meta: { ...base.meta, browserLive: browserLiveConfigs.map((config) => ({ venueId: config.venueId, status: "pending" })) } };
+  const ids = new Set(configs.map((config) => config.venueId));
+  const otherRows = (base.meta?.browserLive || []).filter((row) => !ids.has(row.venueId));
+  let result = { ...base, meta: { ...base.meta, browserLive: [...otherRows, ...configs.map((config) => ({ venueId: config.venueId, status: "pending" }))] } };
   onProgress(result);
-  const queue = [...browserLiveConfigs];
+  const queue = [...configs];
   const worker = async () => {
     for (let config = queue.shift(); config; config = queue.shift()) {
       let outcome;

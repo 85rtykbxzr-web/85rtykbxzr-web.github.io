@@ -6,7 +6,7 @@
 /* Baemin Kkubulim for the site name only; the file holds just those glyphs. */
 @font-face {
   font-family: "BM Kkubulim Brand";
-  src: url("/assets/fonts/kkubulim/kkubulim-brand.woff2") format("woff2");
+  src: url("/assets/fonts/kkubulim/kkubulim-brand.woff2?v=3") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -922,3 +922,21 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .fpt, .fpt.v-ink, .fp-itin { box-shadow: none; border: 1px solid var(--line-2); }
 /* hidden ?dtryx-scan check page */
 .dtryx-scan { position: relative; z-index: 60; margin: 80px 12px 12px; padding: 12px; border-radius: 12px; background: var(--card); color: var(--t1); font-size: 11px; line-height: 16px; white-space: pre-wrap; word-break: break-all; box-shadow: 0 0 0 1px var(--line-2); }
+/* 서울/지역 switch beside the theme button */
+.region-btn { flex: none; height: 40px; padding: 0 6px; background: none; font-size: 15px; font-weight: 600; color: var(--t3); opacity: 0.7; white-space: nowrap; -webkit-tap-highlight-color: transparent; transition: color 0.15s, opacity 0.15s; }
+.region-btn:hover { color: var(--t1); opacity: 1; }
+/* this week's picks rank Seoul screenings */
+body.is-regional #popular, body.is-regional #mobile-popular { display: none; }
+/* header illustration: the strip sits behind the bar, anchored right; a veil from the left
+   keeps the site name and buttons legible over it */
+.hdr.has-art::before, .hdr.has-art::after { content: ""; position: absolute; inset: 0; pointer-events: none; }
+.hdr.has-art::before { background: var(--hdr-art) var(--hdr-pos, 100% 50%) / cover no-repeat; }
+@media (min-width: 768px) { .hdr.has-art::before { background-position: var(--hdr-pos-wide, 100% 50%); } }
+.hdr.has-art::after { background: linear-gradient(90deg, var(--card) 0%, color-mix(in srgb, var(--card) 92%, transparent) 28%, color-mix(in srgb, var(--card) 66%, transparent) 50%, color-mix(in srgb, var(--card) 58%, transparent) 70%, color-mix(in srgb, var(--card) 76%, transparent) 100%); }
+/* the buttons and nav sit on the drawing: a soft halo keeps them readable */
+.hdr.has-art .nav a, .hdr.has-art .region-btn, .hdr.has-art .icon-btn, .hdr.has-art .brand { text-shadow: 0 0 8px var(--card), 0 0 3px var(--card), 0 0 1px var(--card); }
+.hdr.has-art .icon-btn .ui-icon { filter: drop-shadow(0 0 4px var(--card)) drop-shadow(0 0 1px var(--card)); }
+.hdr.has-art .nav a { color: var(--t2); }
+.hdr.has-art .nav a[aria-current] { color: var(--t1); }
+.hdr.has-art .region-btn { opacity: 1; color: var(--t2); }
+.hdr.has-art .hdr-in { position: relative; z-index: 1; }
