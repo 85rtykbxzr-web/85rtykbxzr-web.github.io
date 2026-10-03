@@ -2933,11 +2933,11 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
   const headerArt = {
     seoul: {
       light: { src: "assets/header-art/seoul-day.webp", pos: "100% 62%", wide: "100% 72%" },
-      dark: { src: "assets/header-art/seoul-night.webp", pos: "100% 58%", wide: "100% 70%" }
+      dark: { src: "assets/header-art/seoul-night.webp", pos: "100% 50%", wide: "100% 64%" }
     },
     regional: {
       light: { src: "assets/header-art/regional-day.webp", pos: "100% 60%", wide: "100% 80%" },
-      dark: { src: "assets/header-art/regional-night.webp", pos: "100% 58%", wide: "100% 62%" }
+      dark: { src: "assets/header-art/regional-night.webp", pos: "100% 50%", wide: "100% 66%" }
     }
   };
 
