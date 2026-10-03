@@ -2931,7 +2931,7 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
   // landmarks stay in view; the logo side is veiled in CSS.
   const headerArt = {
     seoul: {
-      light: { src: "assets/header-art/seoul-day.webp", pos: "100% 62%", wide: "100% 82%" },
+      light: { src: "assets/header-art/seoul-day.webp", pos: "100% 62%", wide: "100% 72%" },
       dark: { src: "assets/header-art/seoul-night.webp", pos: "100% 58%", wide: "100% 70%" }
     },
     regional: {
