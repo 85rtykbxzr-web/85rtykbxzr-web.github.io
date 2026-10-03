@@ -478,6 +478,36 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
     normalizeDateSelection();
   }
 
+  // 서울 <> 지역: the page crossfades to the other view, already scrolled to the top.
+  // The next header drawing is fetched first so it fades in with the rest, not after.
+  let regionSwitching = false;
+  async function switchRegion(region) {
+    if (regionSwitching) return;
+    const apply = () => {
+      setRegion(region);
+      render();
+      window.scrollTo({ top: 0, behavior: "instant" });
+    };
+    if (!document.startViewTransition || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      apply();
+      return;
+    }
+    regionSwitching = true;
+    const art = headerArt[region]?.[currentTheme() === "dark" ? "dark" : "light"];
+    if (art) {
+      const img = new Image();
+      img.src = `/${art.src}`;
+      await Promise.race([img.decode().catch(() => {}), new Promise((resolve) => setTimeout(resolve, 400))]);
+    }
+    const root = document.documentElement;
+    root.dataset.regionSwitch = "";
+    const transition = document.startViewTransition(apply);
+    transition.finished.finally(() => {
+      delete root.dataset.regionSwitch;
+      regionSwitching = false;
+    });
+  }
+
   function applyScheduleData(data, options = {}) {
     state.serverData = data;
     composeData();
@@ -3694,9 +3724,7 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
       }
 
       if (event.target.closest("[data-region-toggle]")) {
-        setRegion(state.region === "seoul" ? "regional" : "seoul");
-        render();
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        switchRegion(state.region === "seoul" ? "regional" : "seoul");
         return;
       }
 
