@@ -944,3 +944,6 @@ body.is-regional #popular, body.is-regional #mobile-popular { display: none; }
 @media (hover: none) {
   .icon-btn:hover { background: transparent; color: var(--t3); }
 }
+/* header search/theme buttons: bare icons like the 서울/지역 switch, no tile behind them */
+.hdr .icon-btn, .hdr .icon-btn:hover { background: none; -webkit-tap-highlight-color: transparent; }
+@media (hover: hover) { .hdr .icon-btn:hover { color: var(--t1); } }
