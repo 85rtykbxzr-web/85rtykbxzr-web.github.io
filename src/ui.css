@@ -96,11 +96,11 @@ body {
 .brand { font-family: "BM Kkubulim Brand", var(--font); font-size: 28px; line-height: 32px; font-weight: 400; letter-spacing: -0.01em; white-space: nowrap; color: var(--t1); }
 .nav { display: flex; gap: 4px; }
 .nav a { padding: 8px 12px; border-radius: 10px; font-size: 15px; font-weight: 600; color: var(--t4); transition: background-color 0.15s, color 0.15s; }
-.nav a:hover { background: var(--fill); color: var(--t1); }
+.nav a:hover { color: var(--t1); }
 .nav a[aria-current] { color: var(--t1); }
 /* same look as the section links beside it */
 .nav-ticket { padding: 8px 12px; border-radius: 10px; font-size: 15px; font-weight: 600; color: var(--t4); transition: background-color 0.15s, color 0.15s; }
-.nav-ticket:hover { background: var(--fill); color: var(--t1); }
+.nav-ticket:hover { color: var(--t1); }
 .tools { margin-left: auto; display: flex; align-items: center; gap: 8px; }
 .search { display: flex; align-items: center; gap: 8px; height: 40px; width: 280px; padding: 0 14px; border-radius: 12px; background: var(--fill); color: var(--t4); cursor: text; }
 .search input { flex: 1; min-width: 0; height: 100%; padding: 0; border: 0; background: none; outline: none; box-shadow: none; font-size: 15px; color: var(--t1); }
@@ -955,11 +955,27 @@ body.is-regional #popular, body.is-regional #mobile-popular { display: none; }
 @media (hover: hover) { .hdr .icon-btn:hover { color: var(--t1); } }
 /* press feedback, kept small: buttons, chips and dates give a little when pressed */
 .hdr .icon-btn, .region-btn, .chip, .date { transition-property: background-color, color, opacity, box-shadow, transform; transition-duration: 0.15s; }
-.hdr .icon-btn:active, .region-btn:active { transform: scale(0.94); }
-.chip:active, .date:active { transform: scale(0.97); }
-/* the theme icon turns in only when the theme is switched, not on page load */
-html[data-theme-switch] .hdr .theme-icon-sun, html[data-theme-switch] .hdr .theme-icon-moon { animation: theme-icon-in 0.35s ease-out; }
-@keyframes theme-icon-in { from { opacity: 0; transform: rotate(-45deg) scale(0.8); } }
+.hdr .icon-btn:active, .region-btn:active { transform: scale(0.86); transition-duration: 0.08s; }
+.chip:active, .date:active { transform: scale(0.93); transition-duration: 0.08s; }
 @media (prefers-reduced-motion: reduce) {
   .hdr .icon-btn:active, .region-btn:active, .chip:active, .date:active { transform: none; }
+}
+/* ── Squarer shapes: a printed-timetable feel instead of soft app bubbles ── */
+.venue, .results, .empty, .prog, .fest-list, .venue-map, .fl, .hero, .notice { border-radius: 6px; }
+.hero-poster, .prog-media, .fest-logo, .prog-mark, .thumb { border-radius: 3px; }
+.search, .icon-btn, .seg, .glass, .map-card, .map-card-btn, .ticket-btn, .ticket-select, .fp-search input, .fp-window, .fp-ticket, .toast, .fest-strip { border-radius: 6px; }
+.seg-thumb { border-radius: 4px; }
+.seg button { border-radius: 4px; }
+.date { border-radius: 4px; }
+.chip, .map-reset, .ticket-photo, .fp-chip, .fp-fill { border-radius: 4px; }
+.book, .tchip, .row { border-radius: 4px; }
+.tabbar { border-radius: 10px; }
+.tabbar a, .tabbar button, .tab-pill { border-radius: 6px; }
+.ticket-sheet, .fp-sheet { border-radius: 10px; }
+.fp-list, .fp-itin, .fpt, .fpt.v-ink, .ticket-preview-wrap { border-radius: 6px; }
+.fp-modes, .fp-modes button { border-radius: 6px; }
+@media (max-width: 767px) {
+  .hero, .hero.is-extra, .prog, .fest-list, .date { border-radius: 4px; }
+  .venue { border-radius: 0; }
+  .fest-logo { border-radius: 4px; }
 }
