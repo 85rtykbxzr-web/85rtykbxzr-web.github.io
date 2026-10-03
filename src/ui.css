@@ -936,8 +936,26 @@ body.is-regional #popular, body.is-regional #mobile-popular { display: none; }
 /* header illustration: the strip sits behind the bar, anchored right; a veil from the left
    keeps the site name and buttons legible over it */
 .hdr.has-art::before, .hdr.has-art::after { content: ""; position: absolute; inset: 0; pointer-events: none; }
-.hdr.has-art::before { background: var(--hdr-art) var(--hdr-pos, 100% 50%) / cover no-repeat; }
-@media (min-width: 768px) { .hdr.has-art::before { background-position: var(--hdr-pos-wide, 100% 50%); } }
+/* --hdr-pan (0 at the top of the page, 1 at the bottom) walks the view across the drawing:
+   sideways on phones, where the strip is wider than the bar, downwards on wide screens */
+.hdr.has-art::before { background: var(--hdr-art) no-repeat; background-size: cover; background-position: calc(var(--hdr-x, 100%) - var(--hdr-pan, 0) * 70%) var(--hdr-y, 50%); }
+@media (min-width: 768px) { .hdr.has-art::before { background-position: var(--hdr-x, 100%) calc(var(--hdr-y-wide, 50%) + var(--hdr-pan, 0) * 30%); } }
+.hdr-stars { display: none; }
+.hdr.has-art.is-night .hdr-stars { display: block; position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+.hdr-stars span { position: absolute; width: 3px; height: 3px; border-radius: 50%; background: #fff6d6; box-shadow: 0 0 3px rgb(255 240 190 / 0.6); opacity: 0.2; animation: star-twinkle 4s ease-in-out infinite; }
+.hdr-stars span:nth-child(3n) { width: 2px; height: 2px; }
+@keyframes star-twinkle { 0%, 100% { opacity: 0.15; transform: scale(0.7); } 50% { opacity: 0.95; transform: scale(1.15); } }
+/* theme icon turns in when it changes */
+.hdr .theme-icon-sun, .hdr .theme-icon-moon { animation: theme-icon-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1); }
+@keyframes theme-icon-in { from { opacity: 0; transform: rotate(-90deg) scale(0.5); } }
+/* buttons give a little when pressed */
+.hdr .icon-btn, .region-btn, .chip, .date { transition-property: background-color, color, opacity, box-shadow, transform; }
+.hdr .icon-btn:active, .region-btn:active { transform: scale(0.88); }
+.chip:active, .date:active { transform: scale(0.95); }
+@media (prefers-reduced-motion: reduce) {
+  .hdr-stars span, .hdr .theme-icon-sun, .hdr .theme-icon-moon { animation: none; }
+  .hdr-stars span { opacity: 0.6; }
+}
 .hdr.has-art::after { background: linear-gradient(90deg, var(--card) 0%, color-mix(in srgb, var(--card) 92%, transparent) 28%, color-mix(in srgb, var(--card) 66%, transparent) 50%, color-mix(in srgb, var(--card) 58%, transparent) 70%, color-mix(in srgb, var(--card) 76%, transparent) 100%); }
 /* the buttons and nav sit on the drawing: a soft halo keeps them readable */
 .hdr.has-art .nav a, .hdr.has-art .region-btn, .hdr.has-art .icon-btn, .hdr.has-art .brand { text-shadow: 0 0 8px var(--card), 0 0 3px var(--card), 0 0 1px var(--card); }

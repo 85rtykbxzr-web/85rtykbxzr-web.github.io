@@ -2972,19 +2972,62 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
   };
 
   function syncHeaderArt() {
-    const art = headerArt[state.region]?.[currentTheme() === "dark" ? "dark" : "light"];
+    const night = currentTheme() === "dark";
+    const art = headerArt[state.region]?.[night ? "dark" : "light"];
     document.querySelectorAll(".hdr").forEach((header) => {
       header.classList.toggle("has-art", Boolean(art));
+      header.classList.toggle("is-night", Boolean(art) && night);
       if (art) {
+        const [x, y] = art.pos.split(" ");
         header.style.setProperty("--hdr-art", `url("/${art.src}")`);
-        header.style.setProperty("--hdr-pos", art.pos);
-        header.style.setProperty("--hdr-pos-wide", art.wide || art.pos);
+        header.style.setProperty("--hdr-x", x);
+        header.style.setProperty("--hdr-y", y);
+        header.style.setProperty("--hdr-y-wide", (art.wide || art.pos).split(" ")[1]);
+        if (night) addHeaderStars(header);
       } else {
-        header.style.removeProperty("--hdr-art");
-        header.style.removeProperty("--hdr-pos");
-        header.style.removeProperty("--hdr-pos-wide");
+        ["--hdr-art", "--hdr-x", "--hdr-y", "--hdr-y-wide"].forEach((name) => header.style.removeProperty(name));
       }
     });
+    startHeaderPan();
+  }
+
+  // A few stars over the night drawing, each on its own slow twinkle.
+  function addHeaderStars(header) {
+    if (header.querySelector(".hdr-stars")) return;
+    const layer = document.createElement("div");
+    layer.className = "hdr-stars";
+    layer.setAttribute("aria-hidden", "true");
+    const spots = [[38, 14], [47, 30], [56, 10], [63, 24], [71, 8], [79, 20], [86, 12], [93, 28], [52, 20], [74, 32]];
+    spots.forEach(([left, top], index) => {
+      const star = document.createElement("span");
+      star.style.left = `${left}%`;
+      star.style.top = `${top}%`;
+      star.style.animationDelay = `${(index * 0.83) % 4}s`;
+      star.style.animationDuration = `${3 + (index % 3) * 1.2}s`;
+      layer.append(star);
+    });
+    header.prepend(layer);
+  }
+
+  // Scrolling slowly walks the camera across the header drawing; it trails the page a
+  // little, so the scene drifts and settles instead of moving in lockstep.
+  const headerPan = { current: 0, frame: 0, bound: false };
+  function startHeaderPan() {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (!headerPan.bound) {
+      headerPan.bound = true;
+      window.addEventListener("scroll", startHeaderPan, { passive: true });
+      window.addEventListener("resize", startHeaderPan, { passive: true });
+    }
+    if (!headerPan.frame) headerPan.frame = requestAnimationFrame(stepHeaderPan);
+  }
+  function stepHeaderPan() {
+    const room = document.documentElement.scrollHeight - window.innerHeight;
+    const target = room > 0 ? Math.min(1, Math.max(0, window.scrollY / room)) : 0;
+    const gap = target - headerPan.current;
+    headerPan.current = Math.abs(gap) < 0.0005 ? target : headerPan.current + gap * 0.08;
+    document.documentElement.style.setProperty("--hdr-pan", headerPan.current.toFixed(4));
+    headerPan.frame = headerPan.current === target ? 0 : requestAnimationFrame(stepHeaderPan);
   }
 
   function renderRegionChrome() {
