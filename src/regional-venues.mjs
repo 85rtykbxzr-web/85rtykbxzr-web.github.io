@@ -41,5 +41,7 @@ export const regionalLiveConfigs = regionalVenues.map((venue) => ({
   workGuid: companyGuid,
   minimum: 1,
   minimumDates: 1,
+  // a week ahead keeps the requests from ten venues modest
+  maxDates: 7,
   officialUrl: venue.url
 }));

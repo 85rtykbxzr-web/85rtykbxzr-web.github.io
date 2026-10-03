@@ -601,7 +601,8 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
   }
 
   function browserLiveIncomplete() {
-    return usesBrowserLive(state.data) && (state.data.meta.browserLive || []).filter((row) => row.status === "ok").length < browserLiveConfigs.length;
+    // rows of the venues in the current view (Seoul or regional); any not yet "ok" is pending or failed
+    return usesBrowserLive(state.data) && (state.data.meta.browserLive || []).some((row) => row.status !== "ok");
   }
 
   function emptyScheduleMessage(message) {
@@ -634,7 +635,7 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
         document.getElementById(`${id}Schedule`)?.before(notice);
       }
       notice.innerHTML = rows.map((row) => {
-        const name = browserLiveConfigs.find((config) => config.venueId === row.venueId)?.name || row.venueId;
+        const name = [...browserLiveConfigs, ...regionalLiveConfigs].find((config) => config.venueId === row.venueId)?.name || row.venueId;
         const detail = row.status === "ok" ? `${row.sessions}회${row.stale ? ` (저장본, ${row.message})` : ""}` : row.message || "";
         return `<div>${escapeHtml(name)} · ${escapeHtml(row.status)}${detail ? ` · ${escapeHtml(detail)}` : ""}</div>`;
       }).join("");
@@ -2932,11 +2933,11 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
   const headerArt = {
     seoul: {
       light: { src: "assets/header-art/seoul-day.webp", pos: "100% 62%", wide: "100% 72%" },
-      dark: { src: "assets/header-art/seoul-night.webp", pos: "100% 58%", wide: "100% 70%" }
+      dark: { src: "assets/header-art/seoul-night.webp", pos: "100% 50%", wide: "100% 64%" }
     },
     regional: {
       light: { src: "assets/header-art/regional-day.webp", pos: "100% 60%", wide: "100% 80%" },
-      dark: { src: "assets/header-art/regional-night.webp", pos: "100% 58%", wide: "100% 62%" }
+      dark: { src: "assets/header-art/regional-night.webp", pos: "100% 50%", wide: "100% 66%" }
     }
   };
 
