@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-03T14:24:55.833Z",
-  "weekStart": "2026-10-01",
-  "weekEnd": "2026-10-03",
-  "windowStart": "2026-10-01",
-  "windowEnd": "2026-10-03",
+  "generatedAt": "2026-10-03T15:21:55.253Z",
+  "weekStart": "2026-10-02",
+  "weekEnd": "2026-10-04",
+  "windowStart": "2026-10-02",
+  "windowEnd": "2026-10-04",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-04&movieCd=029672&playSDT=2026-10-04&screenId=01&showSeq=2",
-      "score": 721.8,
-      "signal": 56.5,
-      "positiveSignal": 56.5,
-      "mentionCount": 8,
-      "rawPositiveSignal": 76,
-      "rawMentionCount": 11,
+      "score": 379,
+      "signal": 29.5,
+      "positiveSignal": 29.5,
+      "mentionCount": 4.2,
+      "rawPositiveSignal": 46,
+      "rawMentionCount": 7,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -37,85 +37,6 @@
       "nextDate": "2026-10-04",
       "nextTime": "11:20",
       "evidence": [
-        {
-          "title": "스포) 가능한 사랑 놓친부분 알려줄사람",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867212&page=1",
-          "date": "2026-10-01",
-          "positive": 6,
-          "rawPositive": 6,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "최고",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 6,
-          "commentPositive": 6,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "레터박스에서 가능한사랑이 버닝 점수 제쳤네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867139&page=2",
-          "date": "2026-10-01",
-          "positive": 8,
-          "rawPositive": 8,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "걸작",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            },
-            {
-              "term": "좋았음",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 4,
-          "commentPositive": 8,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "스포) 가능한 사랑 찰나였지만 좋았던 장면",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1866912&page=6",
-          "date": "2026-10-01",
-          "positive": 2,
-          "rawPositive": 2,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "좋았음",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "가능한 사랑 또 느낀거있음",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867684&page=1",
@@ -138,7 +59,7 @@
           "commentCount": 9,
           "commentPositive": 2,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "가능한 사랑 좋긴좋아 좋은데...",
@@ -162,6 +83,99 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "가능한사랑 씨네21 기자들도 걸작까지는 보지않네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867562&page=3",
+          "date": "2026-10-02",
+          "positive": 12,
+          "rawPositive": 12,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "걸작",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "걸작",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 8,
+          "commentPositive": 6,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "다음주 금~일요일 서울에 가능한사랑 틀어주는곳 있을까",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868194&page=2",
+          "date": "2026-10-03",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "극장가서",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "가능한 사랑 존나 재밌네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868071&page=4",
+          "date": "2026-10-03",
+          "positive": 20,
+          "rawPositive": 20,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "재밌",
+              "count": 3,
+              "weight": 4,
+              "score": 12,
+              "label": "clear"
+            },
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "훌륭",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
           "dayWeight": 0.72
         }
       ],
@@ -175,12 +189,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-04&movieCd=029631&playSDT=2026-10-04&screenId=01&showSeq=3",
-      "score": 136.5,
-      "signal": 10.1,
-      "positiveSignal": 10.1,
-      "mentionCount": 1.5,
-      "rawPositiveSignal": 12,
-      "rawMentionCount": 2,
+      "score": 80.7,
+      "signal": 5.8,
+      "positiveSignal": 5.8,
+      "mentionCount": 0.7,
+      "rawPositiveSignal": 8,
+      "rawMentionCount": 1,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -197,30 +211,6 @@
       "nextDate": "2026-10-04",
       "nextTime": "14:20",
       "evidence": [
-        {
-          "title": "오늘 이방인 보고왔는데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867073&page=3",
-          "date": "2026-10-01",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "감탄",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "이방인 보고 옴",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867994&page=5",
@@ -250,7 +240,7 @@
           "commentCount": 5,
           "commentPositive": 8,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260903_7e3d6928.jpg"
@@ -263,10 +253,10 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-05&movieCd=029671&playSDT=2026-10-05&screenId=01&showSeq=8",
-      "score": 57,
-      "signal": 4,
-      "positiveSignal": 4,
-      "mentionCount": 1,
+      "score": 42.2,
+      "signal": 2.9,
+      "positiveSignal": 2.9,
+      "mentionCount": 0.7,
       "rawPositiveSignal": 4,
       "rawMentionCount": 1,
       "scheduleBackfill": false,
@@ -310,7 +300,7 @@
           "commentCount": 2,
           "commentPositive": 4,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260910_b6b3a8cc.jpg"
@@ -364,7 +354,7 @@
           "englishTitle": "La Gradiva",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90315&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 16
+          "mentionCount": 17
         },
         {
           "rank": 2,
@@ -420,7 +410,7 @@
           "englishTitle": "Club Kid",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91104&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 9
+          "mentionCount": 10
         }
       ]
     }
@@ -430,24 +420,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 412,
-    "listedPostCount": 442,
-    "detailedPostCount": 22,
-    "commentFetchCount": 22,
-    "commentCount": 52,
+    "fetchedPostCount": 23,
+    "listedPostCount": 292,
+    "detailedPostCount": 1,
+    "commentFetchCount": 1,
+    "commentCount": 1,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 9,
+    "scannedPageCount": 6,
     "reachedLookbackStart": true,
-    "oldestScannedDate": "2026-10-02",
-    "newestScannedDate": "2026-10-03",
+    "oldestScannedDate": "2026-10-03",
+    "newestScannedDate": "2026-10-04",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-10-03",
-    "candidateWindowEnd": "2026-10-17",
+    "candidateWindowStart": "2026-10-04",
+    "candidateWindowEnd": "2026-10-18",
     "candidateCount": 77,
     "seedLookbackDays": 3,
-    "seedStart": "2026-10-01",
+    "seedStart": "2026-10-02",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-10-03",
+    "listWindowStart": "2026-10-04",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -455,7 +445,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-10-03"
+      "2026-10-04"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [
