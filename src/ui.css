@@ -927,3 +927,10 @@ html[data-theme-switch="light"]::view-transition-new(root) { animation-name: lig
 .region-btn:hover { background: var(--fill-hover); }
 /* this week's picks rank Seoul screenings */
 body.is-regional #popular, body.is-regional #mobile-popular { display: none; }
+/* header illustration: the strip sits behind the bar, anchored right; a veil from the left
+   keeps the site name and buttons legible over it */
+.hdr.has-art::before, .hdr.has-art::after { content: ""; position: absolute; inset: 0; pointer-events: none; }
+.hdr.has-art::before { background: var(--hdr-art) right center / cover no-repeat; }
+.hdr.has-art::after { background: linear-gradient(90deg, var(--card) 0%, color-mix(in srgb, var(--card) 85%, transparent) 30%, color-mix(in srgb, var(--card) 35%, transparent) 60%, color-mix(in srgb, var(--card) 15%, transparent) 100%); }
+.hdr.has-art .hdr-in { position: relative; z-index: 1; }
+@media (max-width: 767px) { .hdr.has-art::before { background-position: 70% center; } }

@@ -963,6 +963,7 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
       button.setAttribute("aria-label", dark ? "야간 모드 끄기" : "야간 모드 켜기");
     });
     document.querySelector('meta[name="theme-color"]')?.setAttribute("content", dark ? "#21201e" : "#ffffff");
+    syncHeaderArt();
   }
 
   function applyTheme(next) {
@@ -2924,7 +2925,24 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
     }
   }
 
+  // Header illustrations per view and theme (wide 8:1 strips, logo side kept quiet). Drop a
+  // file in assets/header-art/ and name it here; an empty name leaves the plain header.
+  const headerArt = {
+    seoul: { light: "", dark: "" },
+    regional: { light: "", dark: "" }
+  };
+
+  function syncHeaderArt() {
+    const file = headerArt[state.region]?.[currentTheme() === "dark" ? "dark" : "light"] || "";
+    document.querySelectorAll(".hdr").forEach((header) => {
+      header.classList.toggle("has-art", Boolean(file));
+      if (file) header.style.setProperty("--hdr-art", `url("/assets/header-art/${file}")`);
+      else header.style.removeProperty("--hdr-art");
+    });
+  }
+
   function renderRegionChrome() {
+    syncHeaderArt();
     const regional = state.region === "regional";
     document.body.classList.toggle("is-regional", regional);
     document.querySelectorAll(".brand").forEach((brand) => {
