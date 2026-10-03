@@ -930,7 +930,10 @@ body.is-regional #popular, body.is-regional #mobile-popular { display: none; }
 /* header illustration: the strip sits behind the bar, anchored right; a veil from the left
    keeps the site name and buttons legible over it */
 .hdr.has-art::before, .hdr.has-art::after { content: ""; position: absolute; inset: 0; pointer-events: none; }
-.hdr.has-art::before { background: var(--hdr-art) right center / cover no-repeat; }
-.hdr.has-art::after { background: linear-gradient(90deg, var(--card) 0%, color-mix(in srgb, var(--card) 85%, transparent) 30%, color-mix(in srgb, var(--card) 35%, transparent) 60%, color-mix(in srgb, var(--card) 15%, transparent) 100%); }
+.hdr.has-art::before { background: var(--hdr-art) var(--hdr-pos, 100% 50%) / cover no-repeat; }
+.hdr.has-art::after { background: linear-gradient(90deg, var(--card) 0%, color-mix(in srgb, var(--card) 88%, transparent) 26%, color-mix(in srgb, var(--card) 50%, transparent) 50%, color-mix(in srgb, var(--card) 40%, transparent) 72%, color-mix(in srgb, var(--card) 62%, transparent) 100%); }
+/* the buttons and nav sit on the drawing: a soft halo keeps them readable */
+.hdr.has-art .nav a, .hdr.has-art .region-btn, .hdr.has-art .icon-btn { text-shadow: 0 0 6px var(--card), 0 0 2px var(--card); }
+.hdr.has-art .icon-btn .ui-icon, .hdr.has-art .region-btn { filter: drop-shadow(0 0 3px var(--card)) drop-shadow(0 0 1px var(--card)); }
+.hdr.has-art .region-btn { opacity: 0.9; color: var(--t2); }
 .hdr.has-art .hdr-in { position: relative; z-index: 1; }
-@media (max-width: 767px) { .hdr.has-art::before { background-position: 70% center; } }

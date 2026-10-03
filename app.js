@@ -2925,19 +2925,31 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
     }
   }
 
-  // Header illustrations per view and theme (wide 8:1 strips, logo side kept quiet). Drop a
-  // file in assets/header-art/ and name it here; an empty name leaves the plain header.
+  // Header illustrations per view and theme: crayon drawings (2.5:1) behind the bar, which
+  // shows a 6:1 band on phones and an 18:1 band on desktop. `pos` picks the band, so the
+  // landmarks stay in view; the logo side is veiled in CSS.
   const headerArt = {
-    seoul: { light: "", dark: "" },
-    regional: { light: "", dark: "" }
+    seoul: {
+      light: { src: "assets/header-art/seoul-day.webp", pos: "100% 62%" },
+      dark: { src: "assets/header-art/seoul-night.webp", pos: "100% 58%" }
+    },
+    regional: {
+      light: { src: "assets/header-art/regional-day.webp", pos: "100% 60%" },
+      dark: { src: "assets/header-art/regional-night.webp", pos: "100% 58%" }
+    }
   };
 
   function syncHeaderArt() {
-    const file = headerArt[state.region]?.[currentTheme() === "dark" ? "dark" : "light"] || "";
+    const art = headerArt[state.region]?.[currentTheme() === "dark" ? "dark" : "light"];
     document.querySelectorAll(".hdr").forEach((header) => {
-      header.classList.toggle("has-art", Boolean(file));
-      if (file) header.style.setProperty("--hdr-art", `url("/assets/header-art/${file}")`);
-      else header.style.removeProperty("--hdr-art");
+      header.classList.toggle("has-art", Boolean(art));
+      if (art) {
+        header.style.setProperty("--hdr-art", `url("/${art.src}")`);
+        header.style.setProperty("--hdr-pos", art.pos);
+      } else {
+        header.style.removeProperty("--hdr-art");
+        header.style.removeProperty("--hdr-pos");
+      }
     });
   }
 
