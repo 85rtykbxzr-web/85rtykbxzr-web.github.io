@@ -170,12 +170,6 @@ jobs:
         continue-on-error: true
         run: npm run update:festival-biff
 
-      # 지하실 online collections; a failure keeps the last copy.
-      - name: Refresh 지하실 collections
-        if: steps.mode.outputs.mode == 'full'
-        continue-on-error: true
-        run: npm run update:jihasil
-
       - name: Check the refreshed data
         if: steps.mode.outputs.mode == 'full'
         run: npm run check
@@ -198,7 +192,6 @@ jobs:
             data/community-trends-cache.json
             data/ticket-posters.json
             data/festival-biff.json
-            data/jihasil.json
             assets/recommendation-posters
           )
           base_commit="$(git rev-parse HEAD)"

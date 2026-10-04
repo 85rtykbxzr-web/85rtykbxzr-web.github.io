@@ -12,8 +12,6 @@ const trustedPublicHostnames = new Set([
   "img.dtryx.com",
   "img1.daumcdn.net",
   "indiespace.kr",
-  "jihasil.com",
-  "alpha.uscreencdn.com",
   "kucinema.net",
   "laikacinema.com",
   "litt.ly",
