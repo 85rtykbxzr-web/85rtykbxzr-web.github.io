@@ -976,12 +976,12 @@ body.is-regional #popular, body.is-regional #mobile-popular { display: none; }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .fest-strip { background: var(--card); color: var(--t1); box-shadow: inset 0 0 0 1px var(--line-2); }
   :root:not([data-theme="light"]) .fest-strip-tag { background: var(--fill-hover); }
-  :root:not([data-theme="light"]) .date.is-on { background: var(--fill-hover); color: var(--t1); box-shadow: inset 0 0 0 1px var(--line-2); }
+  :root:not([data-theme="light"]) .date.is-on { background: var(--card); color: var(--t1); box-shadow: inset 0 0 0 1px var(--line-2); }
   :root:not([data-theme="light"]) .date.is-on .wd, :root:not([data-theme="light"]) .date.is-on .c { color: var(--t3); }
   :root:not([data-theme="light"]) .date.is-on.is-sun .d { color: var(--red); }
 }
 :root[data-theme="dark"] .fest-strip { background: var(--card); color: var(--t1); box-shadow: inset 0 0 0 1px var(--line-2); }
 :root[data-theme="dark"] .fest-strip-tag { background: var(--fill-hover); }
-:root[data-theme="dark"] .date.is-on { background: var(--fill-hover); color: var(--t1); box-shadow: inset 0 0 0 1px var(--line-2); }
+:root[data-theme="dark"] .date.is-on { background: var(--card); color: var(--t1); box-shadow: inset 0 0 0 1px var(--line-2); }
 :root[data-theme="dark"] .date.is-on .wd, :root[data-theme="dark"] .date.is-on .c { color: var(--t3); }
 :root[data-theme="dark"] .date.is-on.is-sun .d { color: var(--red); }
