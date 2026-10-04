@@ -1036,7 +1036,26 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
     if (!target) return false;
     window.scrollTo({ top: sectionScrollTop(target), behavior });
     setNavActive(id);
+    settleOnSection(id, target);
     return true;
+  }
+
+  // The page keeps growing while it scrolls (theatre timetables fetched in the browser,
+  // posters loading), so the spot computed at the tap goes stale and the heading ends up
+  // under the header or below the fold. Once the scroll stops, aim again — unless the
+  // visitor has taken over and scrolled by hand.
+  let settleToken = 0;
+  function settleOnSection(id, target) {
+    const token = ++settleToken;
+    const cancel = () => { if (token === settleToken) settleToken += 1; };
+    ["wheel", "touchstart", "keydown"].forEach((type) => window.addEventListener(type, cancel, { once: true, passive: true }));
+    const aim = () => {
+      if (token !== settleToken) return;
+      const top = sectionScrollTop(target);
+      if (Math.abs(window.scrollY - top) > 4) window.scrollTo({ top, behavior: "auto" });
+    };
+    if ("onscrollend" in window) window.addEventListener("scrollend", aim, { once: true });
+    [700, 1500].forEach((delay) => window.setTimeout(aim, delay));
   }
 
   function venueAnchorId(venueId, variant = isMobileViewport() ? "mobile" : "desktop") {
