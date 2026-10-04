@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { countWeightedTerms, reviewSignal, stripFilmTitle } from "./update-community-trends.mjs";
+import { candidateMatches, countWeightedTerms, reviewSignal, stripFilmTitle, titleAliases } from "./update-community-trends.mjs";
 import {
   activeLineupFestivals,
   buildFestivalDays,
@@ -34,6 +34,19 @@ assert(real.net > 0, "praise outside the title still scores");
 
 // Real questions are still discounted.
 assert.equal(reviewSignal({ title: "이거 볼만함?", body: "", comments: [] }).net, 0, "plain questions do not score");
+
+// Gallery shorthand finds the film.
+const film = (title) => ({ title, normalized: title.replace(/\([^)]*\)/g, "").replace(/[^\p{Letter}\p{Number}]+/gu, "").toLowerCase(), aliases: titleAliases(title) });
+const pool = [film("셀린느와 줄리 배 타러 가다(2D)"), film("가능한 사랑"), film("사탄탱고(기획전)"), film("꿈꾸던 모험"), film("룩백(2D)"), film("나의 사적인 예술가")];
+const hit = (text) => candidateMatches(text, pool).map((item) => item.title);
+assert.deepEqual(hit("셀줄배 재밌네"), ["셀린느와 줄리 배 타러 가다(2D)"], "initials of each word");
+assert.deepEqual(hit("가능사 어디서 함?"), ["가능한 사랑"], "first word plus the next initial");
+assert.deepEqual(hit("사탱이나 또 볼까"), ["사탄탱고(기획전)"], "two-syllable short form as its own word");
+assert.deepEqual(hit("꿈꾸모험 이런내용임?"), ["꿈꾸던 모험"], "a shortened first word");
+assert.deepEqual(hit("사적인 예술가 봤음"), ["나의 사적인 예술가"], "a curated short title");
+assert.deepEqual(hit("룩백 재관람"), ["룩백(2D)"], "two-letter titles as a word");
+assert.deepEqual(hit("플룩백스 신곡"), [], "two-letter titles not inside other words");
+assert.deepEqual(hit("노래 가사 좋다"), [], "no two-letter initials from two-word titles");
 
 // Festival interest ranking.
 const biffHtml = `

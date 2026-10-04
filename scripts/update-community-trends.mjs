@@ -22,6 +22,8 @@ const cachePath = fileURLToPath(new URL("../data/community-trends-cache.json", i
 const posterAssetDirectory = fileURLToPath(new URL("../assets/recommendation-posters/", import.meta.url));
 const posterAssetPublicBase = "/assets/recommendation-posters";
 const maximumPosterDownloadBytes = 8 * 1024 * 1024;
+// Bumped when matching or scoring changes, so the rolling window is rescanned once.
+const cacheVersion = 3;
 const galleryId = process.env.COMMUNITY_TREND_GALLERY_ID || "nouvellevague";
 const seedLookbackDays = boundedInteger(process.env.COMMUNITY_TREND_LOOKBACK_DAYS || process.env.COMMUNITY_TREND_SEED_DAYS, 3, 1, 14);
 const listPageCap = boundedInteger(
@@ -481,7 +483,8 @@ function extractDesktopPosts(html, baseUrl) {
     const date = extractDateCell(row);
     const dateKey = parseCommunityDate(date.text, date.title);
     if (title.length < 2 || title.length > 120 || !url) continue;
-    posts.push({ title, url, date: dateKey, source: "desktop-list" });
+    const replies = Number(row.match(/class=["'][^"']*reply_num[^"']*["'][^>]*>\s*\[(\d+)/i)?.[1] || 0);
+    posts.push({ title, url, date: dateKey, replies, source: "desktop-list" });
   }
   return posts;
 }
@@ -828,7 +831,8 @@ function buildCandidates(schedule) {
   const grouped = new Map();
   for (const session of schedule.sessions || []) {
     if (!session.date || session.date < todayKey || session.date > horizonEnd || isPastKstSession(session, candidateCutoffMs)) continue;
-    const title = compactTitle(session.title);
+    // "셀린느와 줄리 배타러 가다 + 시네토크 최영민" is the same film as the plain screening
+    const title = compactTitle(session.title).replace(/\s+\+\s+.*$/, "");
     const normalized = normalizeTitle(title);
     if (!title || normalized.length < 2) continue;
     if (!grouped.has(normalized)) {
@@ -854,6 +858,7 @@ function buildCandidates(schedule) {
     return {
       title: candidate.title,
       normalized: candidate.normalized,
+      aliases: titleAliases(candidate.title),
       posterUrl: sortedPosterUrls(candidate.posterUrls)[0] || "",
       posterUrls: sortedPosterUrls(candidate.posterUrls),
       url: candidate.url,
@@ -866,12 +871,64 @@ function buildCandidates(schedule) {
   });
 }
 
-function candidateMatches(text, candidates) {
-  const normalizedText = normalizeTitle(text);
+// The gallery rarely writes a title out in full: 셀줄배 for 셀린느와 줄리 배 타러 가다,
+// 가능사 for 가능한 사랑, 사탱 for 사탄탱고, a subtitle dropped, spacing changed. Each film
+// gets the forms people actually type. Three letters and up match anywhere in the text
+// (spacing ignored); two-letter forms only as a word of their own, since two syllables
+// turn up inside unrelated words.
+const curatedTitleAliases = {
+  사탄탱고: ["사탱"],
+  가능한사랑: ["가능사"],
+  셀린느와줄리배타러가다: ["셀줄배"],
+  나의사적인예술가: ["사적인 예술가", "나사예"],
+  상상의개와거짓말쟁이고양이: ["상개거고"]
+};
+
+function titleWords(value) {
+  return String(value || "")
+    .split(/\s+/)
+    .map((word) => word.replace(/[^\p{Letter}\p{Number}]/gu, ""))
+    .filter(Boolean);
+}
+
+export function titleAliases(rawTitle) {
+  const base = compactTitle(rawTitle).replace(/\([^)]*\)/g, " ").replace(/^\s*(?:기획전|특별전)\s*/, "").replace(/\s+/g, " ").trim();
+  const long = new Set();
+  const short = new Set();
+  const add = (value) => {
+    const key = normalizeTitle(value);
+    if (key.length >= 3) long.add(key);
+    else if (key.length === 2) short.add(key);
+  };
+  add(base);
+  const main = base.split(/\s*[:：]\s*|\s+[-–—]\s+/)[0];
+  if (normalizeTitle(main).length >= 3) add(main);
+  const words = titleWords(main);
+  const hangul = words.length && words.every((word) => /^[가-힣]+$/.test(word));
+  if (hangul && words.length >= 2) {
+    const initials = words.map((word) => word[0]).join("");
+    for (let size = 3; size <= initials.length; size += 1) long.add(initials.slice(0, size));
+    if (words[0].length >= 2) long.add(`${words[0].slice(0, 2)}${words.slice(1).map((word) => word[0]).join("")}`);
+  }
+  if (hangul && words.length === 1 && words[0].length === 4) short.add(`${words[0][0]}${words[0][2]}`);
+  for (const alias of curatedTitleAliases[normalizeTitle(base)] || []) add(alias);
+  return { long: [...long], short: [...short] };
+}
+
+const shortAliasTail = "(?=$|[^가-힣]|[은는이가을를도만의랑과와에])";
+function shortAliasPattern(alias) {
+  return new RegExp(`(?:^|[^가-힣])${alias}${shortAliasTail}`);
+}
+
+export function candidateMatches(text, candidates) {
+  const rawText = String(text || "");
+  const normalizedText = normalizeTitle(rawText);
   if (!normalizedText) return [];
   return candidates.filter((candidate) => {
-    if (candidate.normalized.length < 2) return false;
-    return normalizedText.includes(candidate.normalized) || (normalizedText.length >= 4 && candidate.normalized.includes(normalizedText));
+    const aliases = candidate.aliases || titleAliases(candidate.title);
+    if (aliases.long.some((alias) => normalizedText.includes(alias))) return true;
+    if (aliases.short.some((alias) => shortAliasPattern(alias).test(rawText))) return true;
+    return normalizedText.length >= 4 && candidate.normalized.length >= 3 && candidate.normalized.includes(normalizedText);
   });
 }
 
@@ -909,7 +966,8 @@ function communityScanPlan(existingCache, lineupFestivals = []) {
   const cachedCoverageDates = new Set((existingCache.scanCoverage?.dates || []).filter(isWithinWindow));
   const cachedSignalDates = new Set(Object.keys(existingCache.days || {}).filter(isWithinWindow));
   const knownDates = new Set([...cachedCoverageDates, ...cachedSignalDates]);
-  const missingPastDates = forceBackfill ? seedDates.filter((date) => date < todayKey) : seedDates.filter((date) => date < todayKey && !knownDates.has(date));
+  const staleModel = existingCache.version !== cacheVersion;
+  const missingPastDates = forceBackfill || staleModel ? seedDates.filter((date) => date < todayKey) : seedDates.filter((date) => date < todayKey && !knownDates.has(date));
   const festivalStart = festivalBackfillStart(existingCache, lineupFestivals);
   const listWindowStart = [missingPastDates[0] || todayKey, festivalStart || todayKey].sort()[0];
 
@@ -939,7 +997,9 @@ function buildDailySignals(candidates, posts) {
         },
         { filmTitle: candidate.title }
       );
-      if (!signal.net) continue;
+      // Every post that talks about a film is a mention, praise or not ("가능사 어디서 함?"
+      // is interest too); praise adds on top, and a busy thread counts a little more.
+      const mentionWeight = 1 + Math.min(Math.log2(1 + Number(post.replies || 0)), 3) * 0.5;
 
       days[post.date][candidate.normalized] ||= {
         title: candidate.title,
@@ -949,7 +1009,7 @@ function buildDailySignals(candidates, posts) {
       };
       const entry = days[post.date][candidate.normalized];
       entry.positiveSignal += signal.net;
-      entry.mentionCount += 1;
+      entry.mentionCount += mentionWeight;
       if (entry.evidence.length < 3) {
         entry.evidence.push({
           title: post.title,
@@ -1021,7 +1081,7 @@ function mergeRollingCache(existing, dailySignals, community) {
   }
 
   return {
-    version: 2,
+    version: cacheVersion,
     galleryId,
     rollingDays,
     windowStart,
@@ -1094,10 +1154,10 @@ function aggregateSignals(candidates, cache) {
       mentionCount: roundMetric(candidate.mentionCount),
       rawPositiveSignal: roundMetric(candidate.rawPositiveSignal),
       rawMentionCount: Number(candidate.rawMentionCount || 0),
-      score: roundMetric(candidate.positiveSignal * 12 + candidate.mentionCount * 5 + Math.min(candidate.sessionCount, 8)),
+      score: roundMetric(candidate.positiveSignal * 4 + candidate.mentionCount * 10 + Math.min(candidate.sessionCount, 8) * 0.5),
       evidence: candidate.evidence.slice(0, 5)
     }))
-    .filter((candidate) => candidate.positiveSignal > 0 && candidate.score > 0)
+    .filter((candidate) => candidate.mentionCount > 0 && candidate.score > 0)
     .sort((a, b) => b.score - a.score || b.positiveSignal - a.positiveSignal || b.mentionCount - a.mentionCount || b.sessionCount - a.sessionCount || a.title.localeCompare(b.title, "ko"));
 }
 
@@ -1119,7 +1179,9 @@ function backfillCandidates(scored, candidates) {
 }
 
 async function outputItems(scored, candidates) {
-  const candidatePool = [...scored, ...backfillCandidates(scored, candidates)];
+  // Films nobody mentioned only fill in when the gallery gave nothing at all; otherwise a
+  // quiet film would sit in the ranking looking popular.
+  const candidatePool = scored.length ? scored : backfillCandidates(scored, candidates);
   const items = [];
   const skippedPosterlessTitles = [];
   for (const candidate of candidatePool) {
