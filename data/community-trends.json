@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-04T06:10:13.461Z",
+  "generatedAt": "2026-10-04T09:16:44.755Z",
   "weekStart": "2026-10-02",
   "weekEnd": "2026-10-04",
   "windowStart": "2026-10-02",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-04&movieCd=029672&playSDT=2026-10-04&screenId=01&showSeq=5",
-      "score": 482,
-      "signal": 37.5,
-      "positiveSignal": 37.5,
-      "mentionCount": 6.2,
-      "rawPositiveSignal": 54,
-      "rawMentionCount": 9,
+      "score": 535,
+      "signal": 41.5,
+      "positiveSignal": 41.5,
+      "mentionCount": 7.2,
+      "rawPositiveSignal": 58,
+      "rawMentionCount": 10,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube"
@@ -186,7 +186,7 @@
       "localPosterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121760&playDt=20261004&tsId=TS0044&pno=4",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-05&movieCd=029631&playSDT=2026-10-05&screenId=02&showSeq=2",
       "score": 80.7,
       "signal": 5.8,
       "positiveSignal": 5.8,
@@ -195,19 +195,19 @@
       "rawMentionCount": 1,
       "scheduleBackfill": false,
       "venueIds": [
-        "sangsangmadang",
         "cinecube",
         "kucine",
-        "filmforum"
+        "filmforum",
+        "sangsangmadang"
       ],
       "venueNames": [
-        "KT&G 상상마당 시네마",
         "씨네큐브 광화문",
         "KU시네마테크",
-        "필름포럼"
+        "필름포럼",
+        "KT&G 상상마당 시네마"
       ],
-      "nextDate": "2026-10-04",
-      "nextTime": "17:20",
+      "nextDate": "2026-10-05",
+      "nextTime": "11:50",
       "evidence": [
         {
           "title": "이방인 보고 옴",
@@ -310,7 +310,7 @@
       "localPosterUrl": "/assets/recommendation-posters/08cf13afed798dc4.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://indiespace.kr/notice/5494",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-05&movieCd=028449&playSDT=2026-10-05&screenId=02&showSeq=1",
       "score": 0,
       "signal": 0,
       "positiveSignal": 0,
@@ -319,21 +319,21 @@
       "rawMentionCount": 0,
       "scheduleBackfill": true,
       "venueIds": [
-        "indiespace",
         "cinecube",
+        "indiespace",
         "kucine",
         "filmforum",
         "sangsangmadang"
       ],
       "venueNames": [
-        "인디스페이스",
         "씨네큐브 광화문",
+        "인디스페이스",
         "KU시네마테크",
         "필름포럼",
         "KT&G 상상마당 시네마"
       ],
-      "nextDate": "2026-10-04",
-      "nextTime": "16:50",
+      "nextDate": "2026-10-05",
+      "nextTime": "09:50",
       "evidence": [],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_0c0f92fb.jpg"
     }
@@ -418,20 +418,20 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 227,
-    "listedPostCount": 292,
-    "detailedPostCount": 11,
-    "commentFetchCount": 11,
-    "commentCount": 27,
+    "fetchedPostCount": 300,
+    "listedPostCount": 342,
+    "detailedPostCount": 21,
+    "commentFetchCount": 21,
+    "commentCount": 37,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 6,
+    "scannedPageCount": 7,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-10-03",
     "newestScannedDate": "2026-10-04",
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-04",
     "candidateWindowEnd": "2026-10-18",
-    "candidateCount": 76,
+    "candidateCount": 73,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-02",
     "listLookbackDays": 1,
