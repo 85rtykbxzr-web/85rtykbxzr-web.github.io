@@ -17,6 +17,7 @@ import {
 import { writeFileAtomic } from "./write-file-atomic.mjs";
 
 const schedulePath = fileURLToPath(new URL("../data/schedule.json", import.meta.url));
+const ticketPostersPath = fileURLToPath(new URL("../data/ticket-posters.json", import.meta.url));
 const outputPath = fileURLToPath(new URL("../data/community-trends.json", import.meta.url));
 const cachePath = fileURLToPath(new URL("../data/community-trends-cache.json", import.meta.url));
 const posterAssetDirectory = fileURLToPath(new URL("../assets/recommendation-posters/", import.meta.url));
@@ -220,7 +221,8 @@ const knownTrailerUrls = new Map([
 const knownPosterPages = new Map([
   ["유레카", "Eureka_(2023_film)"],
   ["유레카(2D)", "Eureka_(2023_film)"],
-  ["세일러복과 기관총", "Sailor_Suit_and_Machine_Gun_(film)"]
+  ["세일러복과 기관총", "Sailor_Suit_and_Machine_Gun_(film)"],
+  ["셀린느와 줄리 배 타러 가다", "Céline_and_Julie_Go_Boating"]
 ].map(([title, page]) => [normalizeTitle(title), page]));
 
 const knownPosterUrls = new Map([
@@ -1178,7 +1180,17 @@ function backfillCandidates(scored, candidates) {
     .sort((a, b) => b.sessionCount - a.sessionCount || a.nextDate.localeCompare(b.nextDate) || a.title.localeCompare(b.title, "ko"));
 }
 
+// TMDB posters the ticket maker already looked up: the gallery's favourite repertory
+// screenings often come without a poster from the theatre, and were dropped for it.
+let tmdbPosters = null;
+function tmdbPosterUrls(titleKey) {
+  const film = tmdbPosters?.films?.[titleKey];
+  const base = String(tmdbPosters?.imageBase || "https://image.tmdb.org/t/p/").replace(/\/$/, "").replace(/\/t\/p$/, "/t/p/w500");
+  return (film?.posters || []).slice(0, 2).map((path) => `${base}${path}`);
+}
+
 async function outputItems(scored, candidates) {
+  tmdbPosters ??= await readJsonOrEmpty(ticketPostersPath);
   // Films nobody mentioned only fill in when the gallery gave nothing at all; otherwise a
   // quiet film would sit in the ranking looking popular.
   const candidatePool = scored.length ? scored : backfillCandidates(scored, candidates);
@@ -1191,7 +1203,7 @@ async function outputItems(scored, candidates) {
     const knownPosterUrl = knownPosterUrls.get(candidate.normalized) || knownPosterUrls.get(titleKey) || "";
     const fallbackPosterPage = knownPosterPages.get(candidate.normalized) || knownPosterPages.get(titleKey) || "";
     const fallbackPosterUrl = fallbackPosterPage ? await fetchWikipediaPoster(fallbackPosterPage).catch(() => "") : "";
-    const posterCandidates = [knownPosterUrl, fallbackPosterUrl, ...(candidate.posterUrls || []), candidate.posterUrl].filter(Boolean);
+    const posterCandidates = [knownPosterUrl, fallbackPosterUrl, ...(candidate.posterUrls || []), candidate.posterUrl, ...tmdbPosterUrls(titleKey)].filter(Boolean);
     const posterUrl = await firstReachablePosterUrl(posterCandidates);
     if (!posterUrl) {
       skippedPosterlessTitles.push(title);
