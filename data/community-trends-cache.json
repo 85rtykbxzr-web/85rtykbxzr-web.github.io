@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-04",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-04T00:11:28.758Z",
+  "updatedAt": "2026-10-04T03:49:29.787Z",
   "days": {
     "2026-10-02": {
       "가능한사랑": {
@@ -393,6 +393,59 @@
       }
     },
     "2026-10-04": {
+      "가능한사랑": {
+        "title": "가능한 사랑(GV)",
+        "positiveSignal": 8,
+        "mentionCount": 2,
+        "evidence": [
+          {
+            "title": "스포- 가능한 사랑 해석",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868461&page=1",
+            "date": "2026-10-04",
+            "positive": 6,
+            "rawPositive": 6,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "최고",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "가능한 사랑 무조건 극장 추천임?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868309&page=3",
+            "date": "2026-10-04",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "좋음",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 4,
+            "commentPositive": 2,
+            "commentNegative": 0
+          }
+        ]
+      },
       "사탄탱고": {
         "title": "사탄탱고(기획전)",
         "positiveSignal": 8,
@@ -400,7 +453,7 @@
         "evidence": [
           {
             "title": "스포) 영알못 뉴비 사탄탱고 짧은 후기",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868342&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868342&page=3",
             "date": "2026-10-04",
             "positive": 8,
             "rawPositive": 8,
@@ -429,42 +482,12 @@
             "commentNegative": 0
           }
         ]
-      },
-      "가능한사랑": {
-        "title": "가능한 사랑",
-        "positiveSignal": 2,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "가능한 사랑 무조건 극장 추천임?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868309&page=3",
-            "date": "2026-10-04",
-            "positive": 2,
-            "rawPositive": 2,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "좋음",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 3,
-            "commentPositive": 2,
-            "commentNegative": 0
-          }
-        ]
       }
     }
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-04T00:11:28.755Z",
+      "lineupFetchedAt": "2026-10-04T03:49:29.782Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -2829,6 +2852,26 @@
           }
         },
         "2026-10-04": {
+          "노트르살뤼": {
+            "title": "노트르 살뤼",
+            "mentionCount": 3,
+            "commentCount": 0
+          },
+          "도라": {
+            "title": "도라",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "피오르": {
+            "title": "피오르",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "에브리타임": {
+            "title": "에브리타임",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
           "버킹패스타드": {
             "title": "버킹 패스타드",
             "mentionCount": 1,
@@ -2837,11 +2880,6 @@
           "텐더러빙케어": {
             "title": "텐더 러빙 케어",
             "mentionCount": 1,
-            "commentCount": 0
-          },
-          "노트르살뤼": {
-            "title": "노트르 살뤼",
-            "mentionCount": 2,
             "commentCount": 0
           },
           "타인에게속한것들": {

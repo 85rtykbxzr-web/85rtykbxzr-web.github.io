@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-04T00:11:32.882Z",
+  "generatedAt": "2026-10-04T03:49:33.780Z",
   "weekStart": "2026-10-02",
   "weekEnd": "2026-10-04",
   "windowStart": "2026-10-02",
@@ -13,29 +13,29 @@
   "items": [
     {
       "rank": 1,
-      "title": "가능한 사랑",
+      "title": "가능한 사랑(GV)",
       "posterUrl": "/assets/recommendation-posters/5111b309025797e2.webp",
       "localPosterUrl": "/assets/recommendation-posters/5111b309025797e2.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-04&movieCd=029672&playSDT=2026-10-04&screenId=01&showSeq=2",
-      "score": 408,
-      "signal": 31.5,
-      "positiveSignal": 31.5,
-      "mentionCount": 5.2,
-      "rawPositiveSignal": 48,
-      "rawMentionCount": 8,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121778&playDt=20261004&tsId=TS0039&pno=1",
+      "score": 484,
+      "signal": 37.5,
+      "positiveSignal": 37.5,
+      "mentionCount": 6.2,
+      "rawPositiveSignal": 54,
+      "rawMentionCount": 9,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube",
-        "kucine"
+        "kucine",
+        "cinecube"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
-        "KU시네마테크"
+        "KU시네마테크",
+        "씨네큐브 광화문"
       ],
       "nextDate": "2026-10-04",
-      "nextTime": "11:20",
+      "nextTime": "14:00",
       "evidence": [
         {
           "title": "가능한 사랑 또 느낀거있음",
@@ -312,7 +312,7 @@
       "localPosterUrl": "/assets/recommendation-posters/08cf13afed798dc4.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121613&playDt=20261004&tsId=TS0044&pno=2",
+      "url": "https://indiespace.kr/notice/5494",
       "score": 0,
       "signal": 0,
       "positiveSignal": 0,
@@ -321,21 +321,21 @@
       "rawMentionCount": 0,
       "scheduleBackfill": true,
       "venueIds": [
-        "sangsangmadang",
         "indiespace",
         "cinecube",
         "kucine",
-        "filmforum"
+        "filmforum",
+        "sangsangmadang"
       ],
       "venueNames": [
-        "KT&G 상상마당 시네마",
         "인디스페이스",
         "씨네큐브 광화문",
         "KU시네마테크",
-        "필름포럼"
+        "필름포럼",
+        "KT&G 상상마당 시네마"
       ],
       "nextDate": "2026-10-04",
-      "nextTime": "10:00",
+      "nextTime": "16:50",
       "evidence": [],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_0c0f92fb.jpg"
     }
@@ -350,19 +350,19 @@
       "items": [
         {
           "rank": 1,
+          "title": "에브리타임",
+          "englishTitle": "Everytime",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89989&c_idx=434&sp_idx=&QueryStep=2",
+          "mentionCount": 18
+        },
+        {
+          "rank": 2,
           "title": "라 그라디바",
           "englishTitle": "La Gradiva",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90315&c_idx=434&sp_idx=&QueryStep=2",
           "mentionCount": 17
-        },
-        {
-          "rank": 2,
-          "title": "에브리타임",
-          "englishTitle": "Everytime",
-          "section": "월드 시네마",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89989&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 16
         },
         {
           "rank": 3,
@@ -420,11 +420,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 106,
+    "fetchedPostCount": 151,
     "listedPostCount": 292,
-    "detailedPostCount": 6,
-    "commentFetchCount": 6,
-    "commentCount": 19,
+    "detailedPostCount": 7,
+    "commentFetchCount": 7,
+    "commentCount": 22,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
