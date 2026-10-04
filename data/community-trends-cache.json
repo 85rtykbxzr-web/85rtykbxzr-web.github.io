@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
   "windowStart": "2026-10-03",
@@ -14,130 +14,47 @@
       "2026-10-04",
       "2026-10-05"
     ],
-    "lastMode": "daily",
-    "lastWindowStart": "2026-10-05",
+    "lastMode": "backfill",
+    "lastWindowStart": "2026-10-03",
     "lastWindowEnd": "2026-10-05",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-04T15:17:14.291Z",
+  "updatedAt": "2026-10-04T16:17:20.643Z",
   "days": {
     "2026-10-03": {
-      "가능한사랑": {
-        "title": "가능한 사랑",
-        "positiveSignal": 28,
-        "mentionCount": 3,
+      "오디세이": {
+        "title": "오디세이(2D)",
+        "positiveSignal": 0,
+        "mentionCount": 3.160964047443681,
         "evidence": [
           {
-            "title": "다음주 금~일요일 서울에 가능한사랑 틀어주는곳 있을까",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868194&page=2",
+            "title": "오디세이 용아맥 i16이면 볼만함?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868277&page=12",
             "date": "2026-10-03",
-            "positive": 4,
-            "rawPositive": 4,
+            "positive": 0,
+            "rawPositive": 0,
             "negative": 0,
-            "positiveHits": [
-              {
-                "term": "극장가서",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
+            "positiveHits": [],
             "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 4,
             "commentPositive": 0,
             "commentNegative": 0
           },
           {
-            "title": "가능한 사랑 존나 재밌네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868071&page=4",
+            "title": "히스럽게 영화 만들거면 오디세이급은 되야함",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868082&page=16",
             "date": "2026-10-03",
-            "positive": 20,
-            "rawPositive": 20,
+            "positive": 0,
+            "rawPositive": 0,
             "negative": 0,
-            "positiveHits": [
-              {
-                "term": "재밌",
-                "count": 3,
-                "weight": 4,
-                "score": 12,
-                "label": "clear"
-              },
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              },
-              {
-                "term": "훌륭",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
+            "positiveHits": [],
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
             "commentCount": 0,
             "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "가능한 사랑 좀 능지박살나게 요약하면",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867811&page=8",
-            "date": "2026-10-03",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "여운",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 4,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "옵세션": {
-        "title": "옵세션(2D)",
-        "positiveSignal": 2,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "옵세션보다 레지던트이블이 훨씬 낫네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868159&page=3",
-            "date": "2026-10-03",
-            "positive": 2,
-            "rawPositive": 2,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "괜찮",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 5,
-            "commentPositive": 2,
             "commentNegative": 0
           }
         ]
@@ -145,11 +62,26 @@
       "이방인": {
         "title": "이방인",
         "positiveSignal": 8,
-        "mentionCount": 1,
+        "mentionCount": 3.292481250360578,
         "evidence": [
           {
+            "title": "이방인 어떤 편임??",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868265&page=13",
+            "date": "2026-10-03",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
             "title": "이방인 보고 옴",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867994&page=5",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867994&page=17",
             "date": "2026-10-03",
             "positive": 8,
             "rawPositive": 8,
@@ -179,14 +111,89 @@
           }
         ]
       },
+      "사탄탱고": {
+        "title": "사탄탱고(기획전)",
+        "positiveSignal": 4,
+        "mentionCount": 6.292481250360578,
+        "evidence": [
+          {
+            "title": "사탱 안 보고 토말 봐도 됨?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868215&page=14",
+            "date": "2026-10-03",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 5,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "사탄탱고 상영 끝났나요",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867900&page=19",
+            "date": "2026-10-03",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "사탄탱고 보기전에 점슴 든든하게 먹고 들어갈까",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867848&page=20",
+            "date": "2026-10-03",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "추천",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 8,
+            "commentPositive": 4,
+            "commentNegative": 0
+          }
+        ]
+      },
       "꿈꾸던모험": {
         "title": "꿈꾸던 모험",
         "positiveSignal": 4,
-        "mentionCount": 1,
+        "mentionCount": 3.292481250360578,
         "evidence": [
           {
+            "title": "꿈꾸던 모험 시네토크 어땠음?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868211&page=14",
+            "date": "2026-10-03",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
             "title": "꿈꾸던 모험 괜찮음?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867958&page=6",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867958&page=18",
             "date": "2026-10-03",
             "positive": 4,
             "rawPositive": 4,
@@ -216,21 +223,81 @@
           }
         ]
       },
-      "사탄탱고": {
-        "title": "사탄탱고(기획전)",
-        "positiveSignal": 4,
-        "mentionCount": 1,
+      "옵세션": {
+        "title": "옵세션(2D)",
+        "positiveSignal": 2,
+        "mentionCount": 5.792481250360578,
         "evidence": [
           {
-            "title": "사탄탱고 보기전에 점슴 든든하게 먹고 들어갈까",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867848&page=8",
+            "title": "ㅋㅋ 옵세션 약간 코미디 사이코 공포인데 재밌네 추천함",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868202&page=14",
+            "date": "2026-10-03",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "옵세션보다 레지던트이블이 훨씬 낫네",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868159&page=15",
+            "date": "2026-10-03",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "괜찮",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 5,
+            "commentPositive": 2,
+            "commentNegative": 0
+          },
+          {
+            "title": "옵세션 서브스턴스보다 무서움??",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867904&page=19",
+            "date": "2026-10-03",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 8,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "셀린느와줄리배타러가다": {
+        "title": "셀린느와 줄리 배 타러 가다(2D)",
+        "positiveSignal": 4,
+        "mentionCount": 1.792481250360578,
+        "evidence": [
+          {
+            "title": "셀줄배 시간내서 보러가는데 내상 입을거같아서 두렵다",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868147&page=15",
             "date": "2026-10-03",
             "positive": 4,
             "rawPositive": 4,
             "negative": 0,
             "positiveHits": [
               {
-                "term": "추천",
+                "term": "꿀잼",
                 "count": 1,
                 "weight": 4,
                 "score": 4,
@@ -240,22 +307,281 @@
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 8,
+            "commentCount": 2,
             "commentPositive": 4,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "인디아송": {
+        "title": "인디아 송",
+        "positiveSignal": 0,
+        "mentionCount": 1.5,
+        "evidence": [
+          {
+            "title": "인디아 송 시네마네",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868012&page=17",
+            "date": "2026-10-03",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "알파": {
+        "title": "알파",
+        "positiveSignal": 0,
+        "mentionCount": 3.584962500721156,
+        "evidence": [
+          {
+            "title": "디거 알파 뭐봐야되냐 둘다 관 개씹좆적게 해놨네",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867931&page=18",
+            "date": "2026-10-03",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "알파 보고 나면 기억나는 건",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867855&page=20",
+            "date": "2026-10-03",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 0,
             "commentNegative": 0
           }
         ]
       }
     },
     "2026-10-04": {
-      "더드라마": {
-        "title": "더 드라마(2D)",
-        "positiveSignal": 4,
+      "이방인": {
+        "title": "이방인",
+        "positiveSignal": 0,
         "mentionCount": 1,
         "evidence": [
           {
+            "title": "이방인",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868823&page=3",
+            "date": "2026-10-04",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "셀린느와줄리배타러가다": {
+        "title": "셀린느와 줄리 배 타러 가다(2D)",
+        "positiveSignal": 4,
+        "mentionCount": 7.792481250360578,
+        "evidence": [
+          {
+            "title": "셀줄배 재밌네",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868751&page=4",
+            "date": "2026-10-04",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "셀줄배는 뭔영환데 저렇게 싫어하는 애들이많음",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868692&page=5",
+            "date": "2026-10-04",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "셀린느와 줄리 배타러가다 관련 글추천해줄분",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868666&page=5",
+            "date": "2026-10-04",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "꿈꾸던모험": {
+        "title": "꿈꾸던 모험",
+        "positiveSignal": 0,
+        "mentionCount": 5,
+        "evidence": [
+          {
+            "title": "꿈꾸모험 이런내용임?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868703&page=5",
+            "date": "2026-10-04",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 3,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "꿈꾸던 모험 극장 필관작임?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868590&page=7",
+            "date": "2026-10-04",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 3,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "스포) 꿈꾸던 모험 짧게 후기",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868400&page=10",
+            "date": "2026-10-04",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "룩백": {
+        "title": "룩백(2D)",
+        "positiveSignal": 0,
+        "mentionCount": 2,
+        "evidence": [
+          {
+            "title": "룩백 왜케 빨리냐?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868665&page=5",
+            "date": "2026-10-04",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "룩백 촬영은 존나 이쁘네",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868514&page=8",
+            "date": "2026-10-04",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "고스트버스터즈": {
+        "title": "고스트버스터즈 (4K)",
+        "positiveSignal": 0,
+        "mentionCount": 4,
+        "evidence": [
+          {
+            "title": "고스트 버스터즈는 굉장한 문화현상이엇지",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868640&page=6",
+            "date": "2026-10-04",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "고스트버스터즈 <- 누하냐?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868619&page=6",
+            "date": "2026-10-04",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 8,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "더드라마": {
+        "title": "더 드라마(2D)",
+        "positiveSignal": 4,
+        "mentionCount": 2,
+        "evidence": [
+          {
             "title": "더드라마 누나 히냐?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868628&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868628&page=6",
             "date": "2026-10-04",
             "positive": 4,
             "rawPositive": 4,
@@ -278,14 +604,95 @@
           }
         ]
       },
+      "알파": {
+        "title": "알파",
+        "positiveSignal": 0,
+        "mentionCount": 1.792481250360578,
+        "evidence": [
+          {
+            "title": "노스포) 알파 별루다",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868567&page=7",
+            "date": "2026-10-04",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "트루먼의사랑": {
+        "title": "트루먼의 사랑(2D)",
+        "positiveSignal": 0,
+        "mentionCount": 2,
+        "evidence": [
+          {
+            "title": "유운성이 극찬한 트루먼의 사랑 본 놈 있냐",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868517&page=8",
+            "date": "2026-10-04",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 3,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "옵세션": {
+        "title": "옵세션(2D)",
+        "positiveSignal": 0,
+        "mentionCount": 3.160964047443681,
+        "evidence": [
+          {
+            "title": "옵세션 씹노잼으로 봄",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868377&page=11",
+            "date": "2026-10-04",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 4,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "스포) 옵세션 결말이 내가 예상한거랑 좀 다르게 무난하게간듯",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868372&page=11",
+            "date": "2026-10-04",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "사탄탱고": {
         "title": "사탄탱고(기획전)",
         "positiveSignal": 8,
-        "mentionCount": 1,
+        "mentionCount": 2.5,
         "evidence": [
           {
             "title": "스포) 영알못 뉴비 사탄탱고 짧은 후기",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868342&page=8",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868342&page=11",
             "date": "2026-10-04",
             "positive": 8,
             "rawPositive": 8,
@@ -314,13 +721,125 @@
             "commentNegative": 0
           }
         ]
+      },
+      "오디세이": {
+        "title": "오디세이(2D)",
+        "positiveSignal": 0,
+        "mentionCount": 2.403677461028802,
+        "evidence": [
+          {
+            "title": "치이카와랑 오디세이 보고 왔는데",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868336&page=11",
+            "date": "2026-10-04",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 6,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
       }
     },
-    "2026-10-05": {}
+    "2026-10-05": {
+      "이방인": {
+        "title": "이방인",
+        "positiveSignal": 8,
+        "mentionCount": 1.792481250360578,
+        "evidence": [
+          {
+            "title": "이방인 꿀잼작이네",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868929&page=1",
+            "date": "2026-10-05",
+            "positive": 8,
+            "rawPositive": 8,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "재밌",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "셀린느와줄리배타러가다": {
+        "title": "셀린느와 줄리 배 타러 가다(2D)",
+        "positiveSignal": 2,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "셀줄배 보고 키아로스타미 영화 보니 좋더라",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868927&page=1",
+            "date": "2026-10-05",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "좋더라",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "사탄탱고": {
+        "title": "사탄탱고(기획전)",
+        "positiveSignal": 0,
+        "mentionCount": 2,
+        "evidence": [
+          {
+            "title": "사탱이나 또 볼까",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868905&page=1",
+            "date": "2026-10-05",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 3,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      }
+    }
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-04T15:17:14.288Z",
+      "lineupFetchedAt": "2026-10-04T16:17:20.628Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -2559,6 +3078,31 @@
           }
         },
         "2026-10-03": {
+          "미노타우로스": {
+            "title": "미노타우로스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "마키키란포": {
+            "title": "마키키란 포",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "에코체임버": {
+            "title": "에코 체임버",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "파더랜드": {
+            "title": "파더랜드",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "세가지색블루": {
+            "title": "세 가지 색 : 블루",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
           "짐승이너무많아": {
             "title": "짐승이 너무 많아",
             "mentionCount": 1,
@@ -2572,6 +3116,11 @@
           "라그라디바": {
             "title": "라 그라디바",
             "mentionCount": 1,
+            "commentCount": 0
+          },
+          "가능한사랑": {
+            "title": "가능한 사랑",
+            "mentionCount": 9,
             "commentCount": 0
           },
           "오늘밤사랑은일어난다": {
@@ -2678,37 +3227,102 @@
             "title": "마더 메리",
             "mentionCount": 1,
             "commentCount": 0
-          },
-          "파더랜드": {
-            "title": "파더랜드",
-            "mentionCount": 1,
-            "commentCount": 0
           }
         },
         "2026-10-04": {
-          "필리피냐나": {
-            "title": "필리피냐나",
+          "바이올리니스트": {
+            "title": "바이올리니스트",
             "mentionCount": 1,
             "commentCount": 0
           },
           "가능한사랑": {
             "title": "가능한 사랑",
-            "mentionCount": 11,
+            "mentionCount": 16,
+            "commentCount": 3
+          },
+          "오아시스": {
+            "title": "오아시스",
+            "mentionCount": 2,
             "commentCount": 0
           },
-          "파더랜드": {
-            "title": "파더랜드",
+          "그래비티": {
+            "title": "그래비티",
             "mentionCount": 1,
             "commentCount": 0
           },
-          "리아": {
-            "title": "리아",
+          "아가씨": {
+            "title": "아가씨",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "타이타닉오션": {
+            "title": "타이타닉 오션",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "붉은바위에아이들이있다": {
+            "title": "붉은 바위에 아이들이 있다",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "천국으로가는아홉사원": {
+            "title": "천국으로 가는 아홉 사원",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "이성과감성": {
+            "title": "이성과 감성",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "마키키란포": {
+            "title": "마키키란 포",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "에코체임버": {
+            "title": "에코 체임버",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "비트윈투러버스": {
+            "title": "비트윈 투 러버스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "이클립스": {
+            "title": "이클립스",
             "mentionCount": 1,
             "commentCount": 0
           },
           "노트르살뤼": {
             "title": "노트르 살뤼",
             "mentionCount": 4,
+            "commentCount": 0
+          },
+          "페이퍼타이거": {
+            "title": "페이퍼 타이거",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "그소녀의기억": {
+            "title": "그 소녀의 기억",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "에밀리아사랑을기억하다": {
+            "title": "에밀리아, 사랑을 기억하다",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "필리피냐나": {
+            "title": "필리피냐나",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "파더랜드": {
+            "title": "파더랜드",
+            "mentionCount": 1,
             "commentCount": 0
           },
           "스파이럴": {
@@ -2756,11 +3370,6 @@
             "mentionCount": 1,
             "commentCount": 0
           },
-          "오아시스": {
-            "title": "오아시스",
-            "mentionCount": 1,
-            "commentCount": 0
-          },
           "클럽키드": {
             "title": "클럽 키드",
             "mentionCount": 2,
@@ -2788,6 +3397,11 @@
           }
         },
         "2026-10-05": {
+          "가능한사랑": {
+            "title": "가능한 사랑",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
           "그래비티": {
             "title": "그래비티",
             "mentionCount": 1,

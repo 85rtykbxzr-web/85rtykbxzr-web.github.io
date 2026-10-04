@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-04T15:17:21.811Z",
+  "generatedAt": "2026-10-04T16:17:26.140Z",
   "weekStart": "2026-10-03",
   "weekEnd": "2026-10-05",
   "windowStart": "2026-10-03",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-05&movieCd=029631&playSDT=2026-10-05&screenId=02&showSeq=2",
-      "score": 60.3,
-      "signal": 4.1,
-      "positiveSignal": 4.1,
-      "mentionCount": 0.5,
-      "rawPositiveSignal": 8,
-      "rawMentionCount": 1,
+      "score": 94.8,
+      "signal": 12.1,
+      "positiveSignal": 12.1,
+      "mentionCount": 4.2,
+      "rawPositiveSignal": 16,
+      "rawMentionCount": 6.084962500721156,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -42,8 +42,24 @@
       "nextTime": "11:50",
       "evidence": [
         {
+          "title": "이방인 어떤 편임??",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868265&page=13",
+          "date": "2026-10-03",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
           "title": "이방인 보고 옴",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867994&page=5",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867994&page=17",
           "date": "2026-10-03",
           "positive": 8,
           "rawPositive": 8,
@@ -71,46 +87,38 @@
           "commentPositive": 8,
           "commentNegative": 0,
           "dayWeight": 0.518
-        }
-      ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260903_7e3d6928.jpg"
-    },
-    {
-      "rank": 2,
-      "title": "더 드라마",
-      "posterUrl": "/assets/recommendation-posters/40f5f0963689ae80.webp",
-      "localPosterUrl": "/assets/recommendation-posters/40f5f0963689ae80.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121681&playDt=20261005&tsId=TS0039&pno=2",
-      "score": 46.2,
-      "signal": 2.9,
-      "positiveSignal": 2.9,
-      "mentionCount": 0.7,
-      "rawPositiveSignal": 4,
-      "rawMentionCount": 1,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "kucine",
-        "filmforum",
-        "cinecube"
-      ],
-      "venueNames": [
-        "KU시네마테크",
-        "필름포럼",
-        "씨네큐브 광화문"
-      ],
-      "nextDate": "2026-10-05",
-      "nextTime": "10:10",
-      "evidence": [
+        },
         {
-          "title": "더드라마 누나 히냐?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868628&page=2",
+          "title": "이방인",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868823&page=3",
           "date": "2026-10-04",
-          "positive": 4,
-          "rawPositive": 4,
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "이방인 꿀잼작이네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868929&page=1",
+          "date": "2026-10-05",
+          "positive": 8,
+          "rawPositive": 8,
           "negative": 0,
           "positiveHits": [
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
             {
               "term": "재밌",
               "count": 1,
@@ -120,30 +128,30 @@
             }
           ],
           "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 3,
-          "commentPositive": 4,
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 1
         }
       ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_177ef811.jpg"
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260903_7e3d6928.jpg"
     },
     {
-      "rank": 3,
+      "rank": 2,
       "title": "꿈꾸던 모험",
       "posterUrl": "/assets/recommendation-posters/730c75bb764294f9.webp",
       "localPosterUrl": "/assets/recommendation-posters/730c75bb764294f9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-05&movieCd=029671&playSDT=2026-10-05&screenId=01&showSeq=8",
-      "score": 31.5,
+      "score": 63.3,
       "signal": 2.1,
       "positiveSignal": 2.1,
-      "mentionCount": 0.5,
+      "mentionCount": 5.3,
       "rawPositiveSignal": 4,
-      "rawMentionCount": 1,
+      "rawMentionCount": 8.292481250360577,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -157,8 +165,24 @@
       "nextTime": "19:55",
       "evidence": [
         {
+          "title": "꿈꾸던 모험 시네토크 어땠음?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868211&page=14",
+          "date": "2026-10-03",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
           "title": "꿈꾸던 모험 괜찮음?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867958&page=6",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867958&page=18",
           "date": "2026-10-03",
           "positive": 4,
           "rawPositive": 4,
@@ -186,43 +210,189 @@
           "commentPositive": 4,
           "commentNegative": 0,
           "dayWeight": 0.518
+        },
+        {
+          "title": "꿈꾸모험 이런내용임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868703&page=5",
+          "date": "2026-10-04",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 3,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "꿈꾸던 모험 극장 필관작임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868590&page=7",
+          "date": "2026-10-04",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 3,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "스포) 꿈꾸던 모험 짧게 후기",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868400&page=10",
+          "date": "2026-10-04",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260910_b6b3a8cc.jpg"
     },
     {
-      "rank": 4,
-      "title": "철들 무렵",
-      "posterUrl": "/assets/recommendation-posters/08cf13afed798dc4.webp",
-      "localPosterUrl": "/assets/recommendation-posters/08cf13afed798dc4.webp",
+      "rank": 3,
+      "title": "알파",
+      "posterUrl": "/assets/recommendation-posters/56328ab165d49b90.webp",
+      "localPosterUrl": "/assets/recommendation-posters/56328ab165d49b90.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-05&movieCd=028449&playSDT=2026-10-05&screenId=02&showSeq=1",
-      "score": 0,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-05&movieCd=029606&playSDT=2026-10-05&screenId=02&showSeq=4",
+      "score": 34,
       "signal": 0,
       "positiveSignal": 0,
-      "mentionCount": 0,
+      "mentionCount": 3.1,
       "rawPositiveSignal": 0,
-      "rawMentionCount": 0,
-      "scheduleBackfill": true,
+      "rawMentionCount": 5.377443751081734,
+      "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
-        "indiespace",
-        "kucine",
-        "filmforum",
         "sangsangmadang"
       ],
       "venueNames": [
         "씨네큐브 광화문",
-        "인디스페이스",
-        "KU시네마테크",
-        "필름포럼",
         "KT&G 상상마당 시네마"
       ],
       "nextDate": "2026-10-05",
-      "nextTime": "09:50",
-      "evidence": [],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_0c0f92fb.jpg"
+      "nextTime": "16:00",
+      "evidence": [
+        {
+          "title": "디거 알파 뭐봐야되냐 둘다 관 개씹좆적게 해놨네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867931&page=18",
+          "date": "2026-10-03",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "알파 보고 나면 기억나는 건",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867855&page=20",
+          "date": "2026-10-03",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "노스포) 알파 별루다",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868567&page=7",
+          "date": "2026-10-04",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        }
+      ],
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260903_14d39496.jpg"
+    },
+    {
+      "rank": 4,
+      "title": "더 드라마",
+      "posterUrl": "/assets/recommendation-posters/40f5f0963689ae80.webp",
+      "localPosterUrl": "/assets/recommendation-posters/40f5f0963689ae80.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121681&playDt=20261005&tsId=TS0039&pno=2",
+      "score": 29.9,
+      "signal": 2.9,
+      "positiveSignal": 2.9,
+      "mentionCount": 1.4,
+      "rawPositiveSignal": 4,
+      "rawMentionCount": 2,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "kucine",
+        "filmforum",
+        "cinecube"
+      ],
+      "venueNames": [
+        "KU시네마테크",
+        "필름포럼",
+        "씨네큐브 광화문"
+      ],
+      "nextDate": "2026-10-05",
+      "nextTime": "10:10",
+      "evidence": [
+        {
+          "title": "더드라마 누나 히냐?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868628&page=6",
+          "date": "2026-10-04",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 3,
+          "commentPositive": 4,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        }
+      ],
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_177ef811.jpg"
     }
   ],
   "festivalPicks": [
@@ -235,6 +405,14 @@
       "items": [
         {
           "rank": 1,
+          "title": "가능한 사랑",
+          "englishTitle": "Possible Love",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91115&c_idx=430&sp_idx=&QueryStep=2",
+          "mentionCount": 26
+        },
+        {
+          "rank": 2,
           "title": "에브리타임",
           "englishTitle": "Everytime",
           "section": "월드 시네마",
@@ -242,7 +420,7 @@
           "mentionCount": 18
         },
         {
-          "rank": 2,
+          "rank": 3,
           "title": "라 그라디바",
           "englishTitle": "La Gradiva",
           "section": "월드 시네마",
@@ -250,7 +428,15 @@
           "mentionCount": 17
         },
         {
-          "rank": 3,
+          "rank": 4,
+          "title": "그래비티",
+          "englishTitle": "Gravity",
+          "section": "특별상영 & 까르뜨 블랑슈",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91282&c_idx=441&sp_idx=&QueryStep=2",
+          "mentionCount": 13
+        },
+        {
+          "rank": 5,
           "title": "스파이럴",
           "englishTitle": "The Spiral",
           "section": "오픈 시네마",
@@ -258,43 +444,27 @@
           "mentionCount": 13
         },
         {
-          "rank": 4,
-          "title": "그래비티",
-          "englishTitle": "Gravity",
-          "section": "특별상영 & 까르뜨 블랑슈",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91282&c_idx=441&sp_idx=&QueryStep=2",
-          "mentionCount": 12
-        },
-        {
-          "rank": 5,
+          "rank": 6,
           "title": "오아시스",
           "englishTitle": "Oasis",
           "section": "플래시 포워드",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91153&c_idx=435&sp_idx=&QueryStep=2",
-          "mentionCount": 11
-        },
-        {
-          "rank": 6,
-          "title": "가능한 사랑",
-          "englishTitle": "Possible Love",
-          "section": "아이콘",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91115&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 11
+          "mentionCount": 12
         },
         {
           "rank": 7,
+          "title": "페이퍼 타이거",
+          "englishTitle": "Paper Tiger",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89791&c_idx=430&sp_idx=&QueryStep=2",
+          "mentionCount": 12
+        },
+        {
+          "rank": 8,
           "title": "로마 엘라스티카",
           "englishTitle": "Roma Elastica",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91150&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 11
-        },
-        {
-          "rank": 8,
-          "title": "클럽 키드",
-          "englishTitle": "Club Kid",
-          "section": "월드 시네마",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91104&c_idx=434&sp_idx=&QueryStep=2",
           "mentionCount": 11
         }
       ]
@@ -305,24 +475,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 24,
-    "listedPostCount": 292,
-    "detailedPostCount": 0,
-    "commentFetchCount": 0,
-    "commentCount": 0,
+    "fetchedPostCount": 1009,
+    "listedPostCount": 1042,
+    "detailedPostCount": 39,
+    "commentFetchCount": 39,
+    "commentCount": 99,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 6,
+    "scannedPageCount": 21,
     "reachedLookbackStart": true,
-    "oldestScannedDate": "2026-10-04",
+    "oldestScannedDate": "2026-10-02",
     "newestScannedDate": "2026-10-05",
-    "scanMode": "daily",
+    "scanMode": "backfill",
     "candidateWindowStart": "2026-10-05",
     "candidateWindowEnd": "2026-10-19",
-    "candidateCount": 73,
+    "candidateCount": 72,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-03",
-    "listLookbackDays": 1,
-    "listWindowStart": "2026-10-05",
+    "listLookbackDays": 3,
+    "listWindowStart": "2026-10-03",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -330,6 +500,8 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
+      "2026-10-03",
+      "2026-10-04",
       "2026-10-05"
     ],
     "signalMode": "positive-only",
