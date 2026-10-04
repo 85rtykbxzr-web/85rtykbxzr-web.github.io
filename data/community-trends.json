@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-04T16:17:26.140Z",
+  "generatedAt": "2026-10-04T16:34:22.161Z",
   "weekStart": "2026-10-03",
   "weekEnd": "2026-10-05",
   "windowStart": "2026-10-03",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-05&movieCd=029631&playSDT=2026-10-05&screenId=02&showSeq=2",
-      "score": 94.8,
-      "signal": 12.1,
-      "positiveSignal": 12.1,
-      "mentionCount": 4.2,
-      "rawPositiveSignal": 16,
-      "rawMentionCount": 6.084962500721156,
+      "score": 149.8,
+      "signal": 24.1,
+      "positiveSignal": 24.1,
+      "mentionCount": 4.9,
+      "rawPositiveSignal": 28,
+      "rawMentionCount": 6.792481250360578,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -108,6 +108,136 @@
           "title": "이방인 꿀잼작이네",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868929&page=1",
           "date": "2026-10-05",
+          "positive": 20,
+          "rawPositive": 20,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "압도",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "압도",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 7,
+          "commentPositive": 12,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260903_7e3d6928.jpg"
+    },
+    {
+      "rank": 2,
+      "title": "사탄탱고(기획전)",
+      "posterUrl": "/assets/recommendation-posters/704a6f92e45d6139.webp",
+      "localPosterUrl": "/assets/recommendation-posters/704a6f92e45d6139.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121789&playDt=20261005&tsId=TS0039&pno=3",
+      "score": 118.4,
+      "signal": 7.8,
+      "positiveSignal": 7.8,
+      "mentionCount": 8.6,
+      "rawPositiveSignal": 12,
+      "rawMentionCount": 12.292481250360577,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "kucine",
+        "cinecube"
+      ],
+      "venueNames": [
+        "KU시네마테크",
+        "씨네큐브 광화문"
+      ],
+      "nextDate": "2026-10-05",
+      "nextTime": "14:30",
+      "evidence": [
+        {
+          "title": "사탱 안 보고 토말 봐도 됨?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868215&page=14",
+          "date": "2026-10-03",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 5,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "사탄탱고 상영 끝났나요",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867900&page=19",
+          "date": "2026-10-03",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "사탄탱고 보기전에 점슴 든든하게 먹고 들어갈까",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867848&page=20",
+          "date": "2026-10-03",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "추천",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 8,
+          "commentPositive": 4,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "스포) 영알못 뉴비 사탄탱고 짧은 후기",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868342&page=11",
+          "date": "2026-10-04",
           "positive": 8,
           "rawPositive": 8,
           "negative": 0,
@@ -130,16 +260,157 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 2,
+          "commentCount": 8,
+          "commentPositive": 8,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "베크마이스터 하모니즈",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868938&page=1",
+          "date": "2026-10-05",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
         }
       ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260903_7e3d6928.jpg"
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/qLTuJAltCfYTrVUpfNrVz8w2RRS.jpg"
     },
     {
-      "rank": 2,
+      "rank": 3,
+      "title": "셀린느와 줄리 배 타러 가다",
+      "posterUrl": "/assets/recommendation-posters/8aac803cf6309561.webp",
+      "localPosterUrl": "/assets/recommendation-posters/8aac803cf6309561.webp",
+      "posterSource": "wikipedia-pageimage",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121769&playDt=20261007&tsId=TS0056&pno=2",
+      "score": 104.2,
+      "signal": 7,
+      "positiveSignal": 7,
+      "mentionCount": 7.5,
+      "rawPositiveSignal": 10,
+      "rawMentionCount": 10.584962500721156,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "filmforum",
+        "sac"
+      ],
+      "venueNames": [
+        "필름포럼",
+        "서울아트시네마"
+      ],
+      "nextDate": "2026-10-07",
+      "nextTime": "12:20",
+      "evidence": [
+        {
+          "title": "셀줄배 시간내서 보러가는데 내상 입을거같아서 두렵다",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868147&page=15",
+          "date": "2026-10-03",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 4,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "셀줄배 재밌네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868751&page=4",
+          "date": "2026-10-04",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "셀줄배는 뭔영환데 저렇게 싫어하는 애들이많음",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868692&page=5",
+          "date": "2026-10-04",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "셀린느와 줄리 배타러가다 관련 글추천해줄분",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868666&page=5",
+          "date": "2026-10-04",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "셀줄배 보고 키아로스타미 영화 보니 좋더라",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868927&page=1",
+          "date": "2026-10-05",
+          "positive": 2,
+          "rawPositive": 2,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "좋더라",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://upload.wikimedia.org/wikipedia/en/3/34/Celine_and_Julie_Go_Boating_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    {
+      "rank": 4,
       "title": "꿈꾸던 모험",
       "posterUrl": "/assets/recommendation-posters/730c75bb764294f9.webp",
       "localPosterUrl": "/assets/recommendation-posters/730c75bb764294f9.webp",
@@ -261,138 +532,6 @@
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260910_b6b3a8cc.jpg"
-    },
-    {
-      "rank": 3,
-      "title": "알파",
-      "posterUrl": "/assets/recommendation-posters/56328ab165d49b90.webp",
-      "localPosterUrl": "/assets/recommendation-posters/56328ab165d49b90.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-05&movieCd=029606&playSDT=2026-10-05&screenId=02&showSeq=4",
-      "score": 34,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 3.1,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 5.377443751081734,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "cinecube",
-        "sangsangmadang"
-      ],
-      "venueNames": [
-        "씨네큐브 광화문",
-        "KT&G 상상마당 시네마"
-      ],
-      "nextDate": "2026-10-05",
-      "nextTime": "16:00",
-      "evidence": [
-        {
-          "title": "디거 알파 뭐봐야되냐 둘다 관 개씹좆적게 해놨네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867931&page=18",
-          "date": "2026-10-03",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "알파 보고 나면 기억나는 건",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867855&page=20",
-          "date": "2026-10-03",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "노스포) 알파 별루다",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868567&page=7",
-          "date": "2026-10-04",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260903_14d39496.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "더 드라마",
-      "posterUrl": "/assets/recommendation-posters/40f5f0963689ae80.webp",
-      "localPosterUrl": "/assets/recommendation-posters/40f5f0963689ae80.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121681&playDt=20261005&tsId=TS0039&pno=2",
-      "score": 29.9,
-      "signal": 2.9,
-      "positiveSignal": 2.9,
-      "mentionCount": 1.4,
-      "rawPositiveSignal": 4,
-      "rawMentionCount": 2,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "kucine",
-        "filmforum",
-        "cinecube"
-      ],
-      "venueNames": [
-        "KU시네마테크",
-        "필름포럼",
-        "씨네큐브 광화문"
-      ],
-      "nextDate": "2026-10-05",
-      "nextTime": "10:10",
-      "evidence": [
-        {
-          "title": "더드라마 누나 히냐?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868628&page=6",
-          "date": "2026-10-04",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "재밌",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 3,
-          "commentPositive": 4,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_177ef811.jpg"
     }
   ],
   "festivalPicks": [
@@ -475,24 +614,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 1009,
-    "listedPostCount": 1042,
-    "detailedPostCount": 39,
-    "commentFetchCount": 39,
-    "commentCount": 99,
+    "fetchedPostCount": 63,
+    "listedPostCount": 292,
+    "detailedPostCount": 4,
+    "commentFetchCount": 4,
+    "commentCount": 11,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 21,
+    "scannedPageCount": 6,
     "reachedLookbackStart": true,
-    "oldestScannedDate": "2026-10-02",
+    "oldestScannedDate": "2026-10-04",
     "newestScannedDate": "2026-10-05",
-    "scanMode": "backfill",
+    "scanMode": "daily",
     "candidateWindowStart": "2026-10-05",
     "candidateWindowEnd": "2026-10-19",
     "candidateCount": 72,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-03",
-    "listLookbackDays": 3,
-    "listWindowStart": "2026-10-03",
+    "listLookbackDays": 1,
+    "listWindowStart": "2026-10-05",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -500,8 +639,6 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-10-03",
-      "2026-10-04",
       "2026-10-05"
     ],
     "signalMode": "positive-only",

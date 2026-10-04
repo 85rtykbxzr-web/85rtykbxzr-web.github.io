@@ -14,12 +14,12 @@
       "2026-10-04",
       "2026-10-05"
     ],
-    "lastMode": "backfill",
-    "lastWindowStart": "2026-10-03",
+    "lastMode": "daily",
+    "lastWindowStart": "2026-10-05",
     "lastWindowEnd": "2026-10-05",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-04T16:17:20.643Z",
+  "updatedAt": "2026-10-04T16:34:16.996Z",
   "days": {
     "2026-10-03": {
       "오디세이": {
@@ -746,19 +746,92 @@
       }
     },
     "2026-10-05": {
+      "사탄탱고": {
+        "title": "사탄탱고(기획전)",
+        "positiveSignal": 0,
+        "mentionCount": 3.5,
+        "evidence": [
+          {
+            "title": "베크마이스터 하모니즈",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868938&page=1",
+            "date": "2026-10-05",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "사탱이나 또 볼까",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868905&page=1",
+            "date": "2026-10-05",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 3,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "베크마이스터하모니즈": {
+        "title": "베크마이스터 하모니즈",
+        "positiveSignal": 0,
+        "mentionCount": 1.5,
+        "evidence": [
+          {
+            "title": "베크마이스터 하모니즈",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868938&page=1",
+            "date": "2026-10-05",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "이방인": {
         "title": "이방인",
-        "positiveSignal": 8,
-        "mentionCount": 1.792481250360578,
+        "positiveSignal": 20,
+        "mentionCount": 2.5,
         "evidence": [
           {
             "title": "이방인 꿀잼작이네",
             "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868929&page=1",
             "date": "2026-10-05",
-            "positive": 8,
-            "rawPositive": 8,
+            "positive": 20,
+            "rawPositive": 20,
             "negative": 0,
             "positiveHits": [
+              {
+                "term": "압도",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "압도",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
               {
                 "term": "꿀잼",
                 "count": 1,
@@ -777,8 +850,8 @@
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
+            "commentCount": 7,
+            "commentPositive": 12,
             "commentNegative": 0
           }
         ]
@@ -812,34 +885,12 @@
             "commentNegative": 0
           }
         ]
-      },
-      "사탄탱고": {
-        "title": "사탄탱고(기획전)",
-        "positiveSignal": 0,
-        "mentionCount": 2,
-        "evidence": [
-          {
-            "title": "사탱이나 또 볼까",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868905&page=1",
-            "date": "2026-10-05",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 3,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
       }
     }
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-04T16:17:20.628Z",
+      "lineupFetchedAt": "2026-10-04T16:34:16.992Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
