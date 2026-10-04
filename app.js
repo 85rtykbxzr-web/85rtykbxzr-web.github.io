@@ -45,6 +45,7 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
     lastRenderedMobileLayout: null,
     view: "today",
     communityTrends: null,
+    jihasil: null,
     mapOpen: false,
     // "seoul" or "regional"; the map always shows both
     region: "seoul",
@@ -2864,6 +2865,60 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
     target.innerHTML = groups.length
       ? groups.map((group) => festivalItemMarkup(group, venues)).join("")
       : `<p class="fest-empty">등록된 영화제 일정이 없어요.</p>`;
+    renderJihasil(mobileLayout);
+  }
+
+  // 지하실's online collections: streamed, not screened, so they sit apart from the festival
+  // list in their own charcoal block and every card leads off to 지하실.
+  function renderJihasil(mobileLayout) {
+    const target = mobileLayout ? $("#mobileJihasilRows") : $("#jihasilRows");
+    const other = mobileLayout ? $("#jihasilRows") : $("#mobileJihasilRows");
+    if (other) { other.hidden = true; other.replaceChildren(); }
+    if (!target) return;
+    // a copy nobody has checked for a week may list ended collections: show nothing instead
+    const checkedOn = state.jihasil?.checkedOn || "";
+    const fresh = checkedOn && checkedOn >= addDays(kstDateString(), -7);
+    const collections = (fresh ? state.jihasil?.collections || [] : []).filter((item) => item.films?.length && safeExternalUrl(item.url, ""));
+    target.hidden = !collections.length;
+    if (!collections.length) { target.replaceChildren(); return; }
+    const home = escapeHref(state.jihasil.source || "https://jihasil.com");
+    const cards = collections.map((item) => {
+      const image = item.films.map((film) => safeImageUrl(film.image)).find(Boolean);
+      const opened = /^(\d{4})-(\d{2})-(\d{2})/.exec(item.publishedAt || "");
+      const meta = [opened ? `${Number(opened[2])}월 ${Number(opened[3])}일 공개` : "", `${item.films.length}편`].filter(Boolean).join(" · ");
+      const films = item.films
+        .map((film) => `<li><b>${escapeHtml(film.title)}</b>${film.year ? `<span>${escapeHtml(film.year)}</span>` : ""}</li>`)
+        .join("");
+      return `
+        <a class="jh-card" href="${escapeHref(item.url)}" target="_blank" rel="noopener noreferrer">
+          <span class="jh-media" aria-hidden="true">${image ? `<img src="${escapeHtml(image)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" />` : ""}</span>
+          <span class="jh-body">
+            <span class="jh-meta">${escapeHtml(meta)}</span>
+            <strong>${escapeHtml(item.title)}</strong>
+            <ul class="jh-films">${films}</ul>
+          </span>
+        </a>`;
+    }).join("");
+    target.innerHTML = `
+      <div class="jh-h">
+        <div>
+          <h3>온라인 기획전</h3>
+          <p>지하실에서 스트리밍으로 볼 수 있어요</p>
+        </div>
+        <a class="jh-go" href="${home}" target="_blank" rel="noopener noreferrer">지하실에서 보기${iconMarkup("arrow-right")}</a>
+      </div>
+      <div class="jh-grid">${cards}</div>`;
+  }
+
+  async function loadJihasil() {
+    try {
+      const response = await fetch("data/jihasil.json", { cache: "no-cache" });
+      if (!response.ok) return;
+      state.jihasil = await response.json();
+      renderJihasil(isMobileViewport());
+    } catch {
+      // optional block: nothing to show
+    }
   }
 
   function normalizeTrendTitle(value) {
@@ -3825,6 +3880,7 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
       render();
       hideBootFallback();
       startBrowserLiveRefresh(scheduleData);
+      loadJihasil();
       window.setInterval(updateSoonBadges, 30 * 1000);
     } catch {
       renderError();
