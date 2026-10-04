@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-04T03:49:33.780Z",
+  "generatedAt": "2026-10-04T05:47:10.660Z",
   "weekStart": "2026-10-02",
   "weekEnd": "2026-10-04",
   "windowStart": "2026-10-02",
@@ -13,13 +13,13 @@
   "items": [
     {
       "rank": 1,
-      "title": "가능한 사랑(GV)",
+      "title": "가능한 사랑",
       "posterUrl": "/assets/recommendation-posters/5111b309025797e2.webp",
       "localPosterUrl": "/assets/recommendation-posters/5111b309025797e2.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121778&playDt=20261004&tsId=TS0039&pno=1",
-      "score": 484,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-04&movieCd=029672&playSDT=2026-10-04&screenId=01&showSeq=5",
+      "score": 482,
       "signal": 37.5,
       "positiveSignal": 37.5,
       "mentionCount": 6.2,
@@ -27,15 +27,13 @@
       "rawMentionCount": 9,
       "scheduleBackfill": false,
       "venueIds": [
-        "kucine",
         "cinecube"
       ],
       "venueNames": [
-        "KU시네마테크",
         "씨네큐브 광화문"
       ],
       "nextDate": "2026-10-04",
-      "nextTime": "14:00",
+      "nextTime": "19:30",
       "evidence": [
         {
           "title": "가능한 사랑 또 느낀거있음",
@@ -188,7 +186,7 @@
       "localPosterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-04&movieCd=029631&playSDT=2026-10-04&screenId=01&showSeq=3",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121760&playDt=20261004&tsId=TS0044&pno=4",
       "score": 80.7,
       "signal": 5.8,
       "positiveSignal": 5.8,
@@ -197,19 +195,19 @@
       "rawMentionCount": 1,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube",
         "sangsangmadang",
+        "cinecube",
         "kucine",
         "filmforum"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
         "KT&G 상상마당 시네마",
+        "씨네큐브 광화문",
         "KU시네마테크",
         "필름포럼"
       ],
       "nextDate": "2026-10-04",
-      "nextTime": "14:20",
+      "nextTime": "17:20",
       "evidence": [
         {
           "title": "이방인 보고 옴",
@@ -370,7 +368,7 @@
           "englishTitle": "The Spiral",
           "section": "오픈 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91100&c_idx=437&sp_idx=&QueryStep=2",
-          "mentionCount": 12
+          "mentionCount": 13
         },
         {
           "rank": 4,
@@ -420,11 +418,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 151,
+    "fetchedPostCount": 217,
     "listedPostCount": 292,
-    "detailedPostCount": 7,
-    "commentFetchCount": 7,
-    "commentCount": 22,
+    "detailedPostCount": 11,
+    "commentFetchCount": 11,
+    "commentCount": 24,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -433,7 +431,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-04",
     "candidateWindowEnd": "2026-10-18",
-    "candidateCount": 77,
+    "candidateCount": 76,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-02",
     "listLookbackDays": 1,
