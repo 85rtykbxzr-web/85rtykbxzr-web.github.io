@@ -1023,11 +1023,17 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
     });
   }
 
+  // Land on a section's content, not on its top padding, so the block above it
+  // (the picks banner) doesn't peek out under the header.
+  function sectionScrollTop(target) {
+    const padding = parseFloat(getComputedStyle(target).paddingTop) || 0;
+    return Math.max(0, target.getBoundingClientRect().top + window.scrollY + padding - navOffset() - 8);
+  }
+
   function scrollToSection(id, behavior = "smooth") {
     const target = document.getElementById(id);
     if (!target) return false;
-    const top = target.getBoundingClientRect().top + window.scrollY - navOffset();
-    window.scrollTo({ top: Math.max(0, top), behavior });
+    window.scrollTo({ top: sectionScrollTop(target), behavior });
     setNavActive(id);
     return true;
   }
@@ -3062,8 +3068,7 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
       const id = safeDecodeURIComponent(hash.slice(1));
       const target = id ? document.getElementById(id) : null;
       if (!target) return;
-      const top = target.getBoundingClientRect().top + window.scrollY - navOffset();
-      window.scrollTo({ top: Math.max(0, top), behavior: "auto" });
+      window.scrollTo({ top: sectionScrollTop(target), behavior: "auto" });
       setNavActive(id);
     };
     window.requestAnimationFrame(sync);
