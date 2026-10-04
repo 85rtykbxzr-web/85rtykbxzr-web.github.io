@@ -314,7 +314,8 @@ function recommendationTitle(value) {
   while (title && title !== previous) {
     previous = title;
     title = title
-      .replace(/\s*\((?:2D|3D|4D|IMAX|SCREENX|자막|더빙|한글자막|영문자막)\)\s*$/i, "")
+      .replace(/\s*\((?:2D|3D|4D|4K|IMAX|SCREENX|자막|더빙|한글자막|영문자막|기획전|특별전|GV)\)\s*$/i, "")
+      .replace(/^\s*\((?:기획전|특별전)\)\s*/, "")
       .trim();
   }
   return title || fallback;
