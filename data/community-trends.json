@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-05T05:31:13.476Z",
+  "generatedAt": "2026-10-05T06:16:28.251Z",
   "weekStart": "2026-10-03",
   "weekEnd": "2026-10-05",
   "windowStart": "2026-10-03",
@@ -273,7 +273,7 @@
         },
         {
           "title": "셀줄배 핵꿀잼이었는데 자크 리베트 영화 추천좀",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869009&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869009&page=3",
           "date": "2026-10-05",
           "positive": 0,
           "rawPositive": 0,
@@ -298,12 +298,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-10&movieCd=026180&playSDT=2026-10-10&screenId=01&showSeq=2",
-      "score": 127,
+      "score": 104.5,
       "signal": 7.8,
       "positiveSignal": 7.8,
-      "mentionCount": 9.5,
+      "mentionCount": 7.2,
       "rawPositiveSignal": 12,
-      "rawMentionCount": 13.19615871138938,
+      "rawMentionCount": 10.953445297804258,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -404,8 +404,8 @@
           "dayWeight": 0.72
         },
         {
-          "title": "베크마이스터 하모니즈",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868938&page=4",
+          "title": "사탱이나 또 볼까",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868905&page=5",
           "date": "2026-10-05",
           "positive": 0,
           "rawPositive": 0,
@@ -414,7 +414,7 @@
           "negativeHits": [],
           "questionLike": true,
           "reviewQuestion": true,
-          "commentCount": 0,
+          "commentCount": 4,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
@@ -561,7 +561,7 @@
           "englishTitle": "Possible Love",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91115&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 32
+          "mentionCount": 33
         },
         {
           "rank": 2,
@@ -581,18 +581,18 @@
         },
         {
           "rank": 4,
-          "title": "그래비티",
-          "englishTitle": "Gravity",
-          "section": "특별상영 & 까르뜨 블랑슈",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91282&c_idx=441&sp_idx=&QueryStep=2",
-          "mentionCount": 13
-        },
-        {
-          "rank": 5,
           "title": "스파이럴",
           "englishTitle": "The Spiral",
           "section": "오픈 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91100&c_idx=437&sp_idx=&QueryStep=2",
+          "mentionCount": 14
+        },
+        {
+          "rank": 5,
+          "title": "그래비티",
+          "englishTitle": "Gravity",
+          "section": "특별상영 & 까르뜨 블랑슈",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91282&c_idx=441&sp_idx=&QueryStep=2",
           "mentionCount": 13
         },
         {
@@ -627,11 +627,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 204,
+    "fetchedPostCount": 225,
     "listedPostCount": 292,
-    "detailedPostCount": 7,
-    "commentFetchCount": 7,
-    "commentCount": 21,
+    "detailedPostCount": 6,
+    "commentFetchCount": 6,
+    "commentCount": 16,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,

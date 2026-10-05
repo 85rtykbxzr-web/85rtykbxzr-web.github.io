@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-05",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-05T05:31:09.352Z",
+  "updatedAt": "2026-10-05T06:16:24.146Z",
   "days": {
     "2026-10-03": {
       "오디세이": {
@@ -753,7 +753,7 @@
         "evidence": [
           {
             "title": "룩백 메가박스 단독임?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869013&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869013&page=3",
             "date": "2026-10-05",
             "positive": 0,
             "rawPositive": 0,
@@ -775,7 +775,7 @@
         "evidence": [
           {
             "title": "셀줄배 핵꿀잼이었는데 자크 리베트 영화 추천좀",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869009&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869009&page=3",
             "date": "2026-10-05",
             "positive": 0,
             "rawPositive": 0,
@@ -837,65 +837,6 @@
             "questionLike": true,
             "reviewQuestion": false,
             "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "베크마이스터하모니즈": {
-        "title": "베크마이스터 하모니즈",
-        "positiveSignal": 0,
-        "mentionCount": 2.403677461028802,
-        "evidence": [
-          {
-            "title": "베크마이스터 하모니즈",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868938&page=4",
-            "date": "2026-10-05",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "사탄탱고": {
-        "title": "사탄탱고",
-        "positiveSignal": 0,
-        "mentionCount": 4.403677461028802,
-        "evidence": [
-          {
-            "title": "베크마이스터 하모니즈",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868938&page=4",
-            "date": "2026-10-05",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "사탱이나 또 볼까",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868905&page=4",
-            "date": "2026-10-05",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 3,
             "commentPositive": 0,
             "commentNegative": 0
           }
@@ -972,12 +913,34 @@
             "commentNegative": 0
           }
         ]
+      },
+      "사탄탱고": {
+        "title": "사탄탱고",
+        "positiveSignal": 0,
+        "mentionCount": 2.160964047443681,
+        "evidence": [
+          {
+            "title": "사탱이나 또 볼까",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868905&page=5",
+            "date": "2026-10-05",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 4,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
       }
     }
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-05T05:31:09.346Z",
+      "lineupFetchedAt": "2026-10-05T06:16:24.141Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -3535,6 +3498,21 @@
           }
         },
         "2026-10-05": {
+          "가능한사랑": {
+            "title": "가능한 사랑",
+            "mentionCount": 8,
+            "commentCount": 0
+          },
+          "에코체임버": {
+            "title": "에코 체임버",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "스파이럴": {
+            "title": "스파이럴",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
           "아버지의방": {
             "title": "아버지의 방",
             "mentionCount": 1,
@@ -3543,11 +3521,6 @@
           "이클립스": {
             "title": "이클립스",
             "mentionCount": 1,
-            "commentCount": 0
-          },
-          "가능한사랑": {
-            "title": "가능한 사랑",
-            "mentionCount": 7,
             "commentCount": 0
           },
           "그래비티": {
