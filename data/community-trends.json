@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-05T12:15:02.577Z",
+  "generatedAt": "2026-10-05T14:29:53.897Z",
   "weekStart": "2026-10-03",
   "weekEnd": "2026-10-05",
   "windowStart": "2026-10-03",
@@ -106,7 +106,7 @@
         },
         {
           "title": "이방인 꿀잼작이네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868929&page=7",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868929&page=9",
           "date": "2026-10-05",
           "positive": 30,
           "rawPositive": 30,
@@ -181,12 +181,12 @@
       "posterSource": "wikipedia-pageimage",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121769&playDt=20261007&tsId=TS0056&pno=2",
-      "score": 150.2,
+      "score": 160.2,
       "signal": 11,
       "positiveSignal": 11,
-      "mentionCount": 10.5,
+      "mentionCount": 11.5,
       "rawPositiveSignal": 14,
-      "rawMentionCount": 13.584962500721156,
+      "rawMentionCount": 14.584962500721156,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum",
@@ -272,15 +272,15 @@
           "dayWeight": 0.72
         },
         {
-          "title": "셀줄배 728회차 관람 끝났다.",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869161&page=3",
+          "title": "( 스포) 셀줄배 이거 무슨 의도 인것 같음?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869326&page=1",
           "date": "2026-10-05",
           "positive": 0,
           "rawPositive": 0,
           "negative": 0,
           "positiveHits": [],
           "negativeHits": [],
-          "questionLike": false,
+          "questionLike": true,
           "reviewQuestion": false,
           "commentCount": 0,
           "commentPositive": 0,
@@ -405,7 +405,7 @@
         },
         {
           "title": "사탱이나 또 볼까",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868905&page=8",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868905&page=9",
           "date": "2026-10-05",
           "positive": 0,
           "rawPositive": 0,
@@ -430,12 +430,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121738&playDt=20261007&tsId=TS0057&pno=2",
-      "score": 85.8,
+      "score": 84.5,
       "signal": 2.1,
       "positiveSignal": 2.1,
-      "mentionCount": 7.6,
+      "mentionCount": 7.5,
       "rawPositiveSignal": 4,
-      "rawMentionCount": 10.584962500721154,
+      "rawMentionCount": 10.453445297804258,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum",
@@ -561,7 +561,7 @@
           "englishTitle": "Possible Love",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91115&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 34
+          "mentionCount": 35
         },
         {
           "rank": 2,
@@ -569,7 +569,7 @@
           "englishTitle": "Everytime",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89989&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 21
+          "mentionCount": 20
         },
         {
           "rank": 3,
@@ -585,7 +585,7 @@
           "englishTitle": "The Spiral",
           "section": "오픈 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91100&c_idx=437&sp_idx=&QueryStep=2",
-          "mentionCount": 14
+          "mentionCount": 15
         },
         {
           "rank": 5,
@@ -605,19 +605,19 @@
         },
         {
           "rank": 7,
-          "title": "페이퍼 타이거",
-          "englishTitle": "Paper Tiger",
-          "section": "아이콘",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89791&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 12
-        },
-        {
-          "rank": 8,
           "title": "로마 엘라스티카",
           "englishTitle": "Roma Elastica",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91150&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 11
+          "mentionCount": 12
+        },
+        {
+          "rank": 8,
+          "title": "클럽 키드",
+          "englishTitle": "Club Kid",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91104&c_idx=434&sp_idx=&QueryStep=2",
+          "mentionCount": 12
         }
       ]
     }
@@ -627,13 +627,13 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 374,
-    "listedPostCount": 392,
-    "detailedPostCount": 13,
-    "commentFetchCount": 13,
-    "commentCount": 30,
+    "fetchedPostCount": 449,
+    "listedPostCount": 492,
+    "detailedPostCount": 16,
+    "commentFetchCount": 16,
+    "commentCount": 29,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 8,
+    "scannedPageCount": 10,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-10-04",
     "newestScannedDate": "2026-10-05",
