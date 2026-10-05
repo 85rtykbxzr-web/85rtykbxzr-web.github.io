@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-05",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-05T06:16:24.146Z",
+  "updatedAt": "2026-10-05T09:23:50.286Z",
   "days": {
     "2026-10-03": {
       "오디세이": {
@@ -746,23 +746,23 @@
       }
     },
     "2026-10-05": {
-      "룩백": {
-        "title": "룩백(2D)",
+      "꿈꾸던모험": {
+        "title": "꿈꾸던 모험",
         "positiveSignal": 0,
-        "mentionCount": 1.5,
+        "mentionCount": 2,
         "evidence": [
           {
-            "title": "룩백 메가박스 단독임?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869013&page=3",
+            "title": "유운성쌤 말씀받들어 꿈꾸던모험 많이들봐줬으면…(feat. 아사코)",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869202&page=1",
             "date": "2026-10-05",
             "positive": 0,
             "rawPositive": 0,
             "negative": 0,
             "positiveHits": [],
             "negativeHits": [],
-            "questionLike": true,
+            "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 1,
+            "commentCount": 3,
             "commentPositive": 0,
             "commentNegative": 0
           }
@@ -771,11 +771,26 @@
       "셀린느와줄리배타러가다": {
         "title": "셀린느와 줄리 배 타러 가다(2D)",
         "positiveSignal": 6,
-        "mentionCount": 3,
+        "mentionCount": 4,
         "evidence": [
           {
+            "title": "셀줄배 728회차 관람 끝났다.",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869161&page=2",
+            "date": "2026-10-05",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
             "title": "셀줄배 핵꿀잼이었는데 자크 리베트 영화 추천좀",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869009&page=3",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869009&page=4",
             "date": "2026-10-05",
             "positive": 0,
             "rawPositive": 0,
@@ -790,7 +805,7 @@
           },
           {
             "title": "셀줄배 보고 키아로스타미 영화 보니 좋더라",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868927&page=4",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868927&page=6",
             "date": "2026-10-05",
             "positive": 6,
             "rawPositive": 6,
@@ -820,6 +835,110 @@
           }
         ]
       },
+      "토리노의말": {
+        "title": "토리노의 말",
+        "positiveSignal": 4,
+        "mentionCount": 2.160964047443681,
+        "evidence": [
+          {
+            "title": "토리노의 말 볼만해?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869132&page=2",
+            "date": "2026-10-05",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 4,
+            "commentPositive": 4,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "25시": {
+        "title": "25시",
+        "positiveSignal": 2,
+        "mentionCount": 2,
+        "evidence": [
+          {
+            "title": "스파이크 리 <25시> 핵꿀잼 명작인가요?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869118&page=2",
+            "date": "2026-10-05",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "볼만",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 3,
+            "commentPositive": 2,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "워리어": {
+        "title": "워리어 (4K)",
+        "positiveSignal": 0,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "영자원 워리어 필관작임????",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869114&page=2",
+            "date": "2026-10-05",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "룩백": {
+        "title": "룩백(2D)",
+        "positiveSignal": 0,
+        "mentionCount": 1.5,
+        "evidence": [
+          {
+            "title": "룩백 메가박스 단독임?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869013&page=4",
+            "date": "2026-10-05",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "철들무렵": {
         "title": "철들 무렵",
         "positiveSignal": 0,
@@ -827,7 +946,7 @@
         "evidence": [
           {
             "title": "철들 무렵 이거",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868973&page=3",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868973&page=5",
             "date": "2026-10-05",
             "positive": 0,
             "rawPositive": 0,
@@ -849,7 +968,7 @@
         "evidence": [
           {
             "title": "이방인 꿀잼작이네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868929&page=4",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868929&page=6",
             "date": "2026-10-05",
             "positive": 30,
             "rawPositive": 30,
@@ -921,7 +1040,7 @@
         "evidence": [
           {
             "title": "사탱이나 또 볼까",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868905&page=5",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868905&page=6",
             "date": "2026-10-05",
             "positive": 0,
             "rawPositive": 0,
@@ -940,7 +1059,7 @@
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-05T06:16:24.141Z",
+      "lineupFetchedAt": "2026-10-05T09:23:50.280Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -3498,9 +3617,39 @@
           }
         },
         "2026-10-05": {
+          "나의사소하고도큰일들": {
+            "title": "나의 사소하고도 큰 일들",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "노트르살뤼": {
+            "title": "노트르 살뤼",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "에브리타임": {
+            "title": "에브리타임",
+            "mentionCount": 3,
+            "commentCount": 0
+          },
+          "버킹패스타드": {
+            "title": "버킹 패스타드",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "리허설포레볼루션": {
+            "title": "리허설 포 레볼루션",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "스페이스": {
+            "title": "스페이스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
           "가능한사랑": {
             "title": "가능한 사랑",
-            "mentionCount": 8,
+            "mentionCount": 9,
             "commentCount": 0
           },
           "에코체임버": {
