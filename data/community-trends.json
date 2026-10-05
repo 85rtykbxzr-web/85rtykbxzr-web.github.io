@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-05T03:10:38.333Z",
+  "generatedAt": "2026-10-05T05:31:13.476Z",
   "weekStart": "2026-10-03",
   "weekEnd": "2026-10-05",
   "windowStart": "2026-10-03",
@@ -18,7 +18,7 @@
       "localPosterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121760&playDt=20261005&tsId=TS0057&pno=2",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-06&movieCd=029631&playSDT=2026-10-06&screenId=01&showSeq=4",
       "score": 189.8,
       "signal": 34.1,
       "positiveSignal": 34.1,
@@ -27,19 +27,19 @@
       "rawMentionCount": 6.792481250360578,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum",
         "cinecube",
         "kucine",
-        "sangsangmadang"
+        "sangsangmadang",
+        "filmforum"
       ],
       "venueNames": [
-        "필름포럼",
         "씨네큐브 광화문",
         "KU시네마테크",
-        "KT&G 상상마당 시네마"
+        "KT&G 상상마당 시네마",
+        "필름포럼"
       ],
-      "nextDate": "2026-10-05",
-      "nextTime": "12:20",
+      "nextDate": "2026-10-06",
+      "nextTime": "15:10",
       "evidence": [
         {
           "title": "이방인 어떤 편임??",
@@ -106,7 +106,7 @@
         },
         {
           "title": "이방인 꿀잼작이네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868929&page=3",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868929&page=4",
           "date": "2026-10-05",
           "positive": 30,
           "rawPositive": 30,
@@ -175,29 +175,146 @@
     },
     {
       "rank": 2,
+      "title": "셀린느와 줄리 배 타러 가다",
+      "posterUrl": "/assets/recommendation-posters/8aac803cf6309561.webp",
+      "localPosterUrl": "/assets/recommendation-posters/8aac803cf6309561.webp",
+      "posterSource": "wikipedia-pageimage",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121769&playDt=20261007&tsId=TS0056&pno=2",
+      "score": 140.2,
+      "signal": 11,
+      "positiveSignal": 11,
+      "mentionCount": 9.5,
+      "rawPositiveSignal": 14,
+      "rawMentionCount": 12.584962500721156,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "filmforum",
+        "sac"
+      ],
+      "venueNames": [
+        "필름포럼",
+        "서울아트시네마"
+      ],
+      "nextDate": "2026-10-07",
+      "nextTime": "12:20",
+      "evidence": [
+        {
+          "title": "셀줄배 시간내서 보러가는데 내상 입을거같아서 두렵다",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868147&page=15",
+          "date": "2026-10-03",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 4,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "셀줄배 재밌네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868751&page=4",
+          "date": "2026-10-04",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "셀줄배는 뭔영환데 저렇게 싫어하는 애들이많음",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868692&page=5",
+          "date": "2026-10-04",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "셀린느와 줄리 배타러가다 관련 글추천해줄분",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868666&page=5",
+          "date": "2026-10-04",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "셀줄배 핵꿀잼이었는데 자크 리베트 영화 추천좀",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869009&page=2",
+          "date": "2026-10-05",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://upload.wikimedia.org/wikipedia/en/3/34/Celine_and_Julie_Go_Boating_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    {
+      "rank": 3,
       "title": "사탄탱고",
       "posterUrl": "/assets/recommendation-posters/704a6f92e45d6139.webp",
       "localPosterUrl": "/assets/recommendation-posters/704a6f92e45d6139.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121789&playDt=20261005&tsId=TS0039&pno=3",
-      "score": 126.3,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-10&movieCd=026180&playSDT=2026-10-10&screenId=01&showSeq=2",
+      "score": 127,
       "signal": 7.8,
       "positiveSignal": 7.8,
-      "mentionCount": 9.4,
+      "mentionCount": 9.5,
       "rawPositiveSignal": 12,
-      "rawMentionCount": 13.084962500721154,
+      "rawMentionCount": 13.19615871138938,
       "scheduleBackfill": false,
       "venueIds": [
-        "kucine",
-        "cinecube"
+        "cinecube",
+        "kucine"
       ],
       "venueNames": [
-        "KU시네마테크",
-        "씨네큐브 광화문"
+        "씨네큐브 광화문",
+        "KU시네마테크"
       ],
-      "nextDate": "2026-10-05",
-      "nextTime": "14:30",
+      "nextDate": "2026-10-10",
+      "nextTime": "11:00",
       "evidence": [
         {
           "title": "사탱 안 보고 토말 봐도 됨?",
@@ -288,7 +405,7 @@
         },
         {
           "title": "베크마이스터 하모니즈",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868938&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868938&page=4",
           "date": "2026-10-05",
           "positive": 0,
           "rawPositive": 0,
@@ -304,123 +421,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/qLTuJAltCfYTrVUpfNrVz8w2RRS.jpg"
-    },
-    {
-      "rank": 3,
-      "title": "셀린느와 줄리 배 타러 가다",
-      "posterUrl": "/assets/recommendation-posters/8aac803cf6309561.webp",
-      "localPosterUrl": "/assets/recommendation-posters/8aac803cf6309561.webp",
-      "posterSource": "wikipedia-pageimage",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121769&playDt=20261007&tsId=TS0056&pno=2",
-      "score": 119.2,
-      "signal": 7,
-      "positiveSignal": 7,
-      "mentionCount": 9,
-      "rawPositiveSignal": 10,
-      "rawMentionCount": 12.084962500721156,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "filmforum",
-        "sac"
-      ],
-      "venueNames": [
-        "필름포럼",
-        "서울아트시네마"
-      ],
-      "nextDate": "2026-10-07",
-      "nextTime": "12:20",
-      "evidence": [
-        {
-          "title": "셀줄배 시간내서 보러가는데 내상 입을거같아서 두렵다",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868147&page=15",
-          "date": "2026-10-03",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "꿀잼",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 4,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "셀줄배 재밌네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868751&page=4",
-          "date": "2026-10-04",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "셀줄배는 뭔영환데 저렇게 싫어하는 애들이많음",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868692&page=5",
-          "date": "2026-10-04",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "셀린느와 줄리 배타러가다 관련 글추천해줄분",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868666&page=5",
-          "date": "2026-10-04",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "셀줄배 핵꿀잼이었는데 자크 리베트 영화 추천좀",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869009&page=1",
-          "date": "2026-10-05",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://upload.wikimedia.org/wikipedia/en/3/34/Celine_and_Julie_Go_Boating_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     {
       "rank": 4,
@@ -561,7 +561,7 @@
           "englishTitle": "Possible Love",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91115&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 30
+          "mentionCount": 32
         },
         {
           "rank": 2,
@@ -627,11 +627,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 145,
+    "fetchedPostCount": 204,
     "listedPostCount": 292,
     "detailedPostCount": 7,
     "commentFetchCount": 7,
-    "commentCount": 19,
+    "commentCount": 21,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -640,7 +640,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-05",
     "candidateWindowEnd": "2026-10-19",
-    "candidateCount": 72,
+    "candidateCount": 70,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-03",
     "listLookbackDays": 1,
