@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-05T14:29:53.897Z",
-  "weekStart": "2026-10-03",
-  "weekEnd": "2026-10-05",
-  "windowStart": "2026-10-03",
-  "windowEnd": "2026-10-05",
+  "generatedAt": "2026-10-05T15:21:42.817Z",
+  "weekStart": "2026-10-04",
+  "weekEnd": "2026-10-06",
+  "windowStart": "2026-10-04",
+  "windowEnd": "2026-10-06",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-06&movieCd=029631&playSDT=2026-10-06&screenId=01&showSeq=4",
-      "score": 189.8,
-      "signal": 34.1,
-      "positiveSignal": 34.1,
-      "mentionCount": 4.9,
-      "rawPositiveSignal": 38,
-      "rawMentionCount": 6.792481250360578,
+      "score": 113.6,
+      "signal": 21.6,
+      "positiveSignal": 21.6,
+      "mentionCount": 2.3,
+      "rawPositiveSignal": 30,
+      "rawMentionCount": 3.5,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -42,53 +42,6 @@
       "nextTime": "15:10",
       "evidence": [
         {
-          "title": "이방인 어떤 편임??",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868265&page=13",
-          "date": "2026-10-03",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "이방인 보고 옴",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867994&page=17",
-          "date": "2026-10-03",
-          "positive": 8,
-          "rawPositive": 8,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "만족",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "잘 만들",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 5,
-          "commentPositive": 8,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
           "title": "이방인",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868823&page=3",
           "date": "2026-10-04",
@@ -102,7 +55,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "이방인 꿀잼작이네",
@@ -168,7 +121,7 @@
           "commentCount": 9,
           "commentPositive": 22,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260903_7e3d6928.jpg"
@@ -181,12 +134,12 @@
       "posterSource": "wikipedia-pageimage",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121769&playDt=20261007&tsId=TS0056&pno=2",
-      "score": 160.2,
-      "signal": 11,
-      "positiveSignal": 11,
-      "mentionCount": 11.5,
-      "rawPositiveSignal": 14,
-      "rawMentionCount": 14.584962500721156,
+      "score": 102.9,
+      "signal": 6.4,
+      "positiveSignal": 6.4,
+      "mentionCount": 7.6,
+      "rawPositiveSignal": 10,
+      "rawMentionCount": 12.792481250360577,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum",
@@ -199,30 +152,6 @@
       "nextDate": "2026-10-07",
       "nextTime": "12:20",
       "evidence": [
-        {
-          "title": "셀줄배 시간내서 보러가는데 내상 입을거같아서 두렵다",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868147&page=15",
-          "date": "2026-10-03",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "꿀잼",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 4,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "셀줄배 재밌네",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868751&page=4",
@@ -237,7 +166,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "셀줄배는 뭔영환데 저렇게 싫어하는 애들이많음",
@@ -253,7 +182,7 @@
           "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "셀린느와 줄리 배타러가다 관련 글추천해줄분",
@@ -269,7 +198,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "( 스포) 셀줄배 이거 무슨 의도 인것 같음?",
@@ -285,7 +214,23 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
+        },
+        {
+          "title": "셀줄배 728회차 관람 끝났다.",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869161&page=4",
+          "date": "2026-10-05",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://upload.wikimedia.org/wikipedia/en/3/34/Celine_and_Julie_Go_Boating_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
@@ -298,12 +243,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-10&movieCd=026180&playSDT=2026-10-10&screenId=01&showSeq=2",
-      "score": 104.5,
-      "signal": 7.8,
-      "positiveSignal": 7.8,
-      "mentionCount": 7.2,
-      "rawPositiveSignal": 12,
-      "rawMentionCount": 10.953445297804258,
+      "score": 46.1,
+      "signal": 4.1,
+      "positiveSignal": 4.1,
+      "mentionCount": 2.9,
+      "rawPositiveSignal": 8,
+      "rawMentionCount": 4.660964047443681,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -316,62 +261,6 @@
       "nextDate": "2026-10-10",
       "nextTime": "11:00",
       "evidence": [
-        {
-          "title": "사탱 안 보고 토말 봐도 됨?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868215&page=14",
-          "date": "2026-10-03",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 5,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "사탄탱고 상영 끝났나요",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867900&page=19",
-          "date": "2026-10-03",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "사탄탱고 보기전에 점슴 든든하게 먹고 들어갈까",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867848&page=20",
-          "date": "2026-10-03",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "추천",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 8,
-          "commentPositive": 4,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "스포) 영알못 뉴비 사탄탱고 짧은 후기",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868342&page=11",
@@ -401,7 +290,7 @@
           "commentCount": 8,
           "commentPositive": 8,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "사탱이나 또 볼까",
@@ -417,7 +306,7 @@
           "commentCount": 4,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/qLTuJAltCfYTrVUpfNrVz8w2RRS.jpg"
@@ -430,12 +319,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121738&playDt=20261007&tsId=TS0057&pno=2",
-      "score": 84.5,
-      "signal": 2.1,
-      "positiveSignal": 2.1,
-      "mentionCount": 7.5,
-      "rawPositiveSignal": 4,
-      "rawMentionCount": 10.453445297804258,
+      "score": 43,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 4.1,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 7.160964047443681,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum",
@@ -448,53 +337,6 @@
       "nextDate": "2026-10-07",
       "nextTime": "12:20",
       "evidence": [
-        {
-          "title": "꿈꾸던 모험 시네토크 어땠음?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868211&page=14",
-          "date": "2026-10-03",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "꿈꾸던 모험 괜찮음?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1867958&page=18",
-          "date": "2026-10-03",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "봐라",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            },
-            {
-              "term": "봐라",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 2,
-          "commentPositive": 4,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "꿈꾸모험 이런내용임?",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1868703&page=5",
@@ -509,7 +351,7 @@
           "commentCount": 3,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "꿈꾸던 모험 극장 필관작임?",
@@ -525,7 +367,7 @@
           "commentCount": 3,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "스포) 꿈꾸던 모험 짧게 후기",
@@ -539,6 +381,22 @@
           "questionLike": true,
           "reviewQuestion": true,
           "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "유운성쌤 말씀받들어 꿈꾸던모험 많이들봐줬으면…(feat. 아사코)",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869202&page=4",
+          "date": "2026-10-05",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 3,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.72
@@ -593,7 +451,7 @@
           "englishTitle": "Gravity",
           "section": "특별상영 & 까르뜨 블랑슈",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91282&c_idx=441&sp_idx=&QueryStep=2",
-          "mentionCount": 13
+          "mentionCount": 14
         },
         {
           "rank": 6,
@@ -627,24 +485,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 449,
-    "listedPostCount": 492,
-    "detailedPostCount": 16,
-    "commentFetchCount": 16,
-    "commentCount": 29,
+    "fetchedPostCount": 19,
+    "listedPostCount": 292,
+    "detailedPostCount": 0,
+    "commentFetchCount": 0,
+    "commentCount": 0,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 10,
+    "scannedPageCount": 6,
     "reachedLookbackStart": true,
-    "oldestScannedDate": "2026-10-04",
-    "newestScannedDate": "2026-10-05",
+    "oldestScannedDate": "2026-10-05",
+    "newestScannedDate": "2026-10-06",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-10-05",
-    "candidateWindowEnd": "2026-10-19",
+    "candidateWindowStart": "2026-10-06",
+    "candidateWindowEnd": "2026-10-20",
     "candidateCount": 68,
     "seedLookbackDays": 3,
-    "seedStart": "2026-10-03",
+    "seedStart": "2026-10-04",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-10-05",
+    "listWindowStart": "2026-10-06",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -652,7 +510,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-10-05"
+      "2026-10-06"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [
