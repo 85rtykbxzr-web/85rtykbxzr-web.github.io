@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-06T06:10:25.918Z",
+  "generatedAt": "2026-10-06T06:14:49.101Z",
   "weekStart": "2026-10-04",
   "weekEnd": "2026-10-06",
   "windowStart": "2026-10-04",
@@ -243,12 +243,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261008&tsId=TS0044&pno=2",
-      "score": 47.4,
+      "score": 57.4,
       "signal": 0,
       "positiveSignal": 0,
-      "mentionCount": 4.3,
+      "mentionCount": 5.3,
       "rawPositiveSignal": 0,
-      "rawMentionCount": 6,
+      "rawMentionCount": 7,
       "scheduleBackfill": false,
       "venueIds": [
         "sangsangmadang",
@@ -330,8 +330,8 @@
           "dayWeight": 0.72
         },
         {
-          "title": "룩백 인기 뭐고",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869517&page=3",
+          "title": "룩백 메박에서만 개봉하네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869630&page=1",
           "date": "2026-10-06",
           "positive": 0,
           "rawPositive": 0,
@@ -340,7 +340,7 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 1,
+          "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
@@ -505,10 +505,10 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 212,
+    "fetchedPostCount": 214,
     "listedPostCount": 292,
-    "detailedPostCount": 3,
-    "commentFetchCount": 3,
+    "detailedPostCount": 4,
+    "commentFetchCount": 4,
     "commentCount": 2,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
