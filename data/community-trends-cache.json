@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-06",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-06T00:13:28.797Z",
+  "updatedAt": "2026-10-06T03:19:53.820Z",
   "days": {
     "2026-10-04": {
       "이방인": {
@@ -782,7 +782,7 @@
       "룩백": {
         "title": "룩백(2D)",
         "positiveSignal": 0,
-        "mentionCount": 1,
+        "mentionCount": 1.5,
         "evidence": [
           {
             "title": "룩백 인기 뭐고",
@@ -795,20 +795,42 @@
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 0,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "사랑의역사": {
+        "title": "사랑의 역사 (35mm)",
+        "positiveSignal": 0,
+        "mentionCount": 1.5,
+        "evidence": [
+          {
+            "title": "시네마테크 KOFA ‘사랑의 역사’ 신상옥·최은희 특별전",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869507&page=2",
+            "date": "2026-10-06",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
             "commentPositive": 0,
             "commentNegative": 0
           }
         ]
       },
       "철들무렵": {
-        "title": "철들 무렵",
+        "title": "철들 무렵(영문자막)",
         "positiveSignal": 0,
         "mentionCount": 1,
         "evidence": [
           {
             "title": "철들 무렵 영노자",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869505&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869505&page=2",
             "date": "2026-10-06",
             "positive": 0,
             "rawPositive": 0,
@@ -827,7 +849,7 @@
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-06T00:13:28.793Z",
+      "lineupFetchedAt": "2026-10-06T03:19:53.817Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -3478,6 +3500,26 @@
           }
         },
         "2026-10-06": {
+          "눈에는눈": {
+            "title": "눈에는 눈",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "스킨타운": {
+            "title": "스킨타운",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "텐더러빙케어": {
+            "title": "텐더 러빙 케어",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "그날밤클라리사에게": {
+            "title": "그날 밤, 클라리사에게",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
           "눈둘데가없네": {
             "title": "눈 둘 데가 없네",
             "mentionCount": 2,
