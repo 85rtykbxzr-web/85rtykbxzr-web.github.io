@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-06T06:14:49.101Z",
+  "generatedAt": "2026-10-06T09:17:06.262Z",
   "weekStart": "2026-10-04",
   "weekEnd": "2026-10-06",
   "windowStart": "2026-10-04",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121760&playDt=20261006&tsId=TS0039&pno=3",
-      "score": 113.6,
+      "score": 151.5,
       "signal": 21.6,
       "positiveSignal": 21.6,
-      "mentionCount": 2.3,
+      "mentionCount": 6.1,
       "rawPositiveSignal": 30,
-      "rawMentionCount": 3.5,
+      "rawMentionCount": 7.292481250360578,
       "scheduleBackfill": false,
       "venueIds": [
         "kucine",
@@ -122,6 +122,54 @@
           "commentPositive": 22,
           "commentNegative": 0,
           "dayWeight": 0.72
+        },
+        {
+          "title": "이방인 너무 밋밋하네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869686&page=1",
+          "date": "2026-10-06",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "이방인 아쉽노",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869653&page=2",
+          "date": "2026-10-06",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "이방인 1만명 넘었던데 이 영화 뒷북 개봉좀",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869638&page=2",
+          "date": "2026-10-06",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260903_7e3d6928.jpg"
@@ -243,12 +291,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261008&tsId=TS0044&pno=2",
-      "score": 57.4,
+      "score": 65.3,
       "signal": 0,
       "positiveSignal": 0,
-      "mentionCount": 5.3,
+      "mentionCount": 6.1,
       "rawPositiveSignal": 0,
-      "rawMentionCount": 7,
+      "rawMentionCount": 7.792481250360578,
       "scheduleBackfill": false,
       "venueIds": [
         "sangsangmadang",
@@ -331,7 +379,7 @@
         },
         {
           "title": "룩백 메박에서만 개봉하네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869630&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869630&page=2",
           "date": "2026-10-06",
           "positive": 0,
           "rawPositive": 0,
@@ -340,7 +388,7 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 0,
+          "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
@@ -439,7 +487,7 @@
           "englishTitle": "Possible Love",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91115&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 37
+          "mentionCount": 38
         },
         {
           "rank": 2,
@@ -447,7 +495,7 @@
           "englishTitle": "Everytime",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89989&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 20
+          "mentionCount": 22
         },
         {
           "rank": 3,
@@ -455,7 +503,7 @@
           "englishTitle": "La Gradiva",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90315&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 17
+          "mentionCount": 18
         },
         {
           "rank": 4,
@@ -505,11 +553,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 214,
+    "fetchedPostCount": 287,
     "listedPostCount": 292,
-    "detailedPostCount": 4,
-    "commentFetchCount": 4,
-    "commentCount": 2,
+    "detailedPostCount": 7,
+    "commentFetchCount": 7,
+    "commentCount": 6,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -518,7 +566,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-06",
     "candidateWindowEnd": "2026-10-20",
-    "candidateCount": 86,
+    "candidateCount": 96,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-04",
     "listLookbackDays": 1,
