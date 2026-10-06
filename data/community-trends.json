@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-06T03:19:56.100Z",
+  "generatedAt": "2026-10-06T06:10:25.918Z",
   "weekStart": "2026-10-04",
   "weekEnd": "2026-10-06",
   "windowStart": "2026-10-04",
@@ -18,7 +18,7 @@
       "localPosterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-06&movieCd=029631&playSDT=2026-10-06&screenId=01&showSeq=4",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121760&playDt=20261006&tsId=TS0039&pno=3",
       "score": 113.6,
       "signal": 21.6,
       "positiveSignal": 21.6,
@@ -27,19 +27,19 @@
       "rawMentionCount": 3.5,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube",
         "kucine",
         "sangsangmadang",
+        "cinecube",
         "filmforum"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
         "KU시네마테크",
         "KT&G 상상마당 시네마",
+        "씨네큐브 광화문",
         "필름포럼"
       ],
       "nextDate": "2026-10-06",
-      "nextTime": "15:10",
+      "nextTime": "19:30",
       "evidence": [
         {
           "title": "이방인",
@@ -331,7 +331,7 @@
         },
         {
           "title": "룩백 인기 뭐고",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869517&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869517&page=3",
           "date": "2026-10-06",
           "positive": 0,
           "rawPositive": 0,
@@ -439,7 +439,7 @@
           "englishTitle": "Possible Love",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91115&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 35
+          "mentionCount": 37
         },
         {
           "rank": 2,
@@ -505,7 +505,7 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 151,
+    "fetchedPostCount": 212,
     "listedPostCount": 292,
     "detailedPostCount": 3,
     "commentFetchCount": 3,
@@ -518,7 +518,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-06",
     "candidateWindowEnd": "2026-10-20",
-    "candidateCount": 87,
+    "candidateCount": 86,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-04",
     "listLookbackDays": 1,
