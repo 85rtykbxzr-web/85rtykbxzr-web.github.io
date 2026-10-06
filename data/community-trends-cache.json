@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-06",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-05T21:59:52.468Z",
+  "updatedAt": "2026-10-06T00:13:28.797Z",
   "days": {
     "2026-10-04": {
       "이방인": {
@@ -778,11 +778,56 @@
         ]
       }
     },
-    "2026-10-06": {}
+    "2026-10-06": {
+      "룩백": {
+        "title": "룩백(2D)",
+        "positiveSignal": 0,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "룩백 인기 뭐고",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869517&page=1",
+            "date": "2026-10-06",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "철들무렵": {
+        "title": "철들 무렵",
+        "positiveSignal": 0,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "철들 무렵 영노자",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869505&page=1",
+            "date": "2026-10-06",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      }
+    }
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-05T21:59:52.462Z",
+      "lineupFetchedAt": "2026-10-06T00:13:28.793Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -3433,6 +3478,11 @@
           }
         },
         "2026-10-06": {
+          "눈둘데가없네": {
+            "title": "눈 둘 데가 없네",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
           "그래비티": {
             "title": "그래비티",
             "mentionCount": 3,
