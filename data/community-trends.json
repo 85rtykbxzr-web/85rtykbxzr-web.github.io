@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-07T03:44:00.484Z",
+  "generatedAt": "2026-10-07T05:51:38.979Z",
   "weekStart": "2026-10-05",
   "weekEnd": "2026-10-07",
   "windowStart": "2026-10-05",
@@ -166,12 +166,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261008&tsId=TS0044&pno=2",
-      "score": 75.7,
+      "score": 55.7,
       "signal": 0,
       "positiveSignal": 0,
-      "mentionCount": 7.2,
+      "mentionCount": 5.2,
       "rawPositiveSignal": 0,
-      "rawMentionCount": 9.292481250360577,
+      "rawMentionCount": 7.292481250360578,
       "scheduleBackfill": false,
       "venueIds": [
         "sangsangmadang",
@@ -254,7 +254,7 @@
         },
         {
           "title": "오늘 상영하는 003 룩백 2장 양도합니다 !",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870006&page=3",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870006&page=4",
           "date": "2026-10-07",
           "positive": 0,
           "rawPositive": 0,
@@ -355,8 +355,8 @@
       "localPosterUrl": "/assets/recommendation-posters/939742ae5aac2bc8.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.tinyticket.net/event/EVqyFe1vaqDE",
-      "score": 33.9,
+      "url": "https://www.tinyticket.net/event/EVs3toyy4bdT",
+      "score": 33.4,
       "signal": 2.1,
       "positiveSignal": 2.1,
       "mentionCount": 2.4,
@@ -369,7 +369,7 @@
       "venueNames": [
         "서울아트시네마"
       ],
-      "nextDate": "2026-10-07",
+      "nextDate": "2026-10-08",
       "nextTime": "14:00",
       "evidence": [
         {
@@ -430,7 +430,7 @@
           "englishTitle": "Possible Love",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91115&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 42
+          "mentionCount": 46
         },
         {
           "rank": 2,
@@ -496,11 +496,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 157,
+    "fetchedPostCount": 209,
     "listedPostCount": 292,
-    "detailedPostCount": 4,
-    "commentFetchCount": 4,
-    "commentCount": 9,
+    "detailedPostCount": 3,
+    "commentFetchCount": 3,
+    "commentCount": 6,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
