@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-07T12:16:45.703Z",
+  "generatedAt": "2026-10-07T13:16:01.271Z",
   "weekStart": "2026-10-05",
   "weekEnd": "2026-10-07",
   "windowStart": "2026-10-05",
@@ -107,7 +107,7 @@
         },
         {
           "title": "룩백 7시 45분쯤 가면 좌석 구림??",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870272&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870272&page=3",
           "date": "2026-10-07",
           "positive": 0,
           "rawPositive": 0,
@@ -331,7 +331,7 @@
         },
         {
           "title": "꿈꾸던 모험 자막 어디서 만든거냐 존나 뻐킹 아마추어같던데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870162&page=4",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870162&page=5",
           "date": "2026-10-07",
           "positive": 0,
           "rawPositive": 0,
@@ -350,80 +350,54 @@
     },
     {
       "rank": 4,
-      "title": "셀린느와 줄리 배타러 가다",
-      "posterUrl": "/assets/recommendation-posters/8aac803cf6309561.webp",
-      "localPosterUrl": "/assets/recommendation-posters/8aac803cf6309561.webp",
-      "posterSource": "wikipedia-pageimage",
+      "title": "옵세션",
+      "posterUrl": "/assets/recommendation-posters/c1b7c09b74373fa5.webp",
+      "localPosterUrl": "/assets/recommendation-posters/c1b7c09b74373fa5.webp",
+      "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.tinyticket.net/event/EVmoJmWJ7SaL",
-      "score": 39.3,
-      "signal": 3.1,
-      "positiveSignal": 3.1,
-      "mentionCount": 2.6,
-      "rawPositiveSignal": 6,
-      "rawMentionCount": 5,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121558&playDt=20261009&tsId=TS0044&pno=8",
+      "score": 41,
+      "signal": 4,
+      "positiveSignal": 4,
+      "mentionCount": 2.4,
+      "rawPositiveSignal": 4,
+      "rawMentionCount": 2.403677461028802,
       "scheduleBackfill": false,
       "venueIds": [
-        "sac",
-        "filmforum"
+        "sangsangmadang"
       ],
       "venueNames": [
-        "서울아트시네마",
-        "필름포럼"
+        "KT&G 상상마당 시네마"
       ],
       "nextDate": "2026-10-09",
-      "nextTime": "17:40",
+      "nextTime": "18:10",
       "evidence": [
         {
-          "title": "( 스포) 셀줄배 이거 무슨 의도 인것 같음?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869326&page=1",
-          "date": "2026-10-05",
-          "positive": 0,
-          "rawPositive": 0,
+          "title": "옵세션 보고 든 생각",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870370&page=1",
+          "date": "2026-10-07",
+          "positive": 4,
+          "rawPositive": 4,
           "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "셀줄배 728회차 관람 끝났다.",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869161&page=4",
-          "date": "2026-10-05",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
+          "positiveHits": [
+            {
+              "term": "재밋",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 0,
+          "commentCount": 6,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "셀줄배 핵꿀잼이었는데 자크 리베트 영화 추천좀",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869009&page=7",
-          "date": "2026-10-05",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
+          "dayWeight": 1
         }
       ],
-      "posterSourceUrl": "https://upload.wikimedia.org/wikipedia/en/3/34/Celine_and_Julie_Go_Boating_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/iR0eC0eIWB8OjZ9abBz4FepfwkC.jpg"
     }
   ],
   "festivalPicks": [
@@ -444,6 +418,14 @@
         },
         {
           "rank": 2,
+          "title": "그래비티",
+          "englishTitle": "Gravity",
+          "section": "특별상영 & 까르뜨 블랑슈",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91282&c_idx=441&sp_idx=&QueryStep=2",
+          "mentionCount": 25
+        },
+        {
+          "rank": 3,
           "title": "라 그라디바",
           "englishTitle": "La Gradiva",
           "section": "월드 시네마",
@@ -451,20 +433,12 @@
           "mentionCount": 25
         },
         {
-          "rank": 3,
-          "title": "그래비티",
-          "englishTitle": "Gravity",
-          "section": "특별상영 & 까르뜨 블랑슈",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91282&c_idx=441&sp_idx=&QueryStep=2",
-          "mentionCount": 23
-        },
-        {
           "rank": 4,
           "title": "에브리타임",
           "englishTitle": "Everytime",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89989&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 23
+          "mentionCount": 24
         },
         {
           "rank": 5,
@@ -506,11 +480,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 396,
+    "fetchedPostCount": 424,
     "listedPostCount": 442,
-    "detailedPostCount": 11,
-    "commentFetchCount": 11,
-    "commentCount": 24,
+    "detailedPostCount": 12,
+    "commentFetchCount": 12,
+    "commentCount": 30,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 9,
     "reachedLookbackStart": true,

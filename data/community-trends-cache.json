@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-07",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-07T12:16:41.579Z",
+  "updatedAt": "2026-10-07T13:15:57.057Z",
   "days": {
     "2026-10-05": {
       "흐르는여정": {
@@ -586,6 +586,36 @@
       }
     },
     "2026-10-07": {
+      "옵세션": {
+        "title": "옵세션(2D)",
+        "positiveSignal": 4,
+        "mentionCount": 2.403677461028802,
+        "evidence": [
+          {
+            "title": "옵세션 보고 든 생각",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870370&page=1",
+            "date": "2026-10-07",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "재밋",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 6,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "사탄탱고": {
         "title": "사탄탱고",
         "positiveSignal": 0,
@@ -615,7 +645,7 @@
         "evidence": [
           {
             "title": "룩백 7시 45분쯤 가면 좌석 구림??",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870272&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870272&page=3",
             "date": "2026-10-07",
             "positive": 0,
             "rawPositive": 0,
@@ -630,7 +660,7 @@
           },
           {
             "title": "룩백 줄 벌써부터 매표소까지 감았네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870265&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870265&page=3",
             "date": "2026-10-07",
             "positive": 0,
             "rawPositive": 0,
@@ -645,7 +675,7 @@
           },
           {
             "title": "룩백vs디거 뭐가 낫냐",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870230&page=3",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870230&page=4",
             "date": "2026-10-07",
             "positive": 2,
             "rawPositive": 2,
@@ -675,7 +705,7 @@
         "evidence": [
           {
             "title": "내일 영자원 25시 명작인가염?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870270&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870270&page=3",
             "date": "2026-10-07",
             "positive": 0,
             "rawPositive": 0,
@@ -697,7 +727,7 @@
         "evidence": [
           {
             "title": "영자원 쇼트 서킷 보신분 계심?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870269&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870269&page=3",
             "date": "2026-10-07",
             "positive": 0,
             "rawPositive": 0,
@@ -719,7 +749,7 @@
         "evidence": [
           {
             "title": "눈둘데 좋네 권해효랑 같이봄",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870173&page=4",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870173&page=5",
             "date": "2026-10-07",
             "positive": 2,
             "rawPositive": 2,
@@ -749,7 +779,7 @@
         "evidence": [
           {
             "title": "꿈꾸던 모험 자막 어디서 만든거냐 존나 뻐킹 아마추어같던데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870162&page=4",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870162&page=5",
             "date": "2026-10-07",
             "positive": 0,
             "rawPositive": 0,
@@ -790,7 +820,7 @@
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-07T12:16:41.570Z",
+      "lineupFetchedAt": "2026-10-07T13:15:57.049Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -3559,14 +3589,29 @@
           }
         },
         "2026-10-07": {
-          "사토코는언제나": {
-            "title": "사토코는 언제나",
+          "필리피냐나": {
+            "title": "필리피냐나",
+            "mentionCount": 5,
+            "commentCount": 0
+          },
+          "에브리타임": {
+            "title": "에브리타임",
             "mentionCount": 2,
+            "commentCount": 0
+          },
+          "아이언보이": {
+            "title": "아이언 보이",
+            "mentionCount": 3,
             "commentCount": 0
           },
           "그래비티": {
             "title": "그래비티",
-            "mentionCount": 6,
+            "mentionCount": 8,
+            "commentCount": 0
+          },
+          "사토코는언제나": {
+            "title": "사토코는 언제나",
+            "mentionCount": 2,
             "commentCount": 0
           },
           "텐더러빙케어": {
@@ -3602,11 +3647,6 @@
           "가능한사랑": {
             "title": "가능한 사랑",
             "mentionCount": 8,
-            "commentCount": 0
-          },
-          "필리피냐나": {
-            "title": "필리피냐나",
-            "mentionCount": 3,
             "commentCount": 0
           },
           "무명소녀": {
@@ -3674,11 +3714,6 @@
             "mentionCount": 1,
             "commentCount": 0
           },
-          "아이언보이": {
-            "title": "아이언 보이",
-            "mentionCount": 2,
-            "commentCount": 0
-          },
           "룩백": {
             "title": "룩백",
             "mentionCount": 1,
@@ -3736,11 +3771,6 @@
           },
           "젠틀몬스터": {
             "title": "젠틀 몬스터",
-            "mentionCount": 1,
-            "commentCount": 0
-          },
-          "에브리타임": {
-            "title": "에브리타임",
             "mentionCount": 1,
             "commentCount": 0
           },
