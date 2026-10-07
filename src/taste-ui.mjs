@@ -69,7 +69,7 @@ export function createTastePicks({ $, escapeHtml, showToast, onTheater }) {
       <section class="tp-intro">
         <p class="tp-kicker">왓챠피디아 · 레터박스드 별점 기록으로</p>
         <h3>내 별점이 고른<br />오늘 밤 영화</h3>
-        <p>평가 기록 CSV를 올리면 취향을 읽어서, <b>내가 쓰는 OTT에서 지금 볼 수 있는 영화</b>만 골라드려요.</p>
+        <p>평가 기록 CSV를 올리면 내 별점을 바탕으로, <b>내가 쓰는 OTT에서 지금 볼 수 있는 영화</b>만 골라드려요.</p>
       </section>
       <section class="tp-step">
         <h4><span>1</span>쓰는 OTT</h4>
@@ -107,28 +107,11 @@ export function createTastePicks({ $, escapeHtml, showToast, onTheater }) {
     return `
       <section class="tp-loading" aria-live="polite">
         <div class="tp-reel" aria-hidden="true"><span></span><span></span><span></span></div>
-        <h3>취향을 읽는 중</h3>
+        <h3>추천을 고르는 중</h3>
         ${stats ? `<p class="tp-loading-sub">평가 ${stats.total.toLocaleString("ko-KR")}개 · 평균 ${stats.avg.toFixed(2)}점</p>` : ""}
         <div class="tp-bar"><i data-tp-progress></i></div>
         <ul class="tp-log">${lines}</ul>
       </section>`;
-  }
-
-  function stars(score) {
-    return `${score}`;
-  }
-
-  function renderHistogram(stats) {
-    const max = Math.max(1, ...stats.buckets.map((bucket) => bucket.count));
-    return `
-      <div class="tp-hist" role="img" aria-label="별점 분포">
-        ${stats.buckets.map((bucket) => `<div class="tp-hist-col${Math.abs(bucket.score - stats.avg) < 0.25 ? " is-avg" : ""}"><span data-tp-h="${Math.round((bucket.count / max) * 100)}"></span><b>${bucket.score % 1 ? "" : stars(bucket.score)}</b></div>`).join("")}
-      </div>`;
-  }
-
-  function chipRow(label, values, className = "") {
-    if (!values?.length) return "";
-    return `<div class="tp-taste-row"><span>${escapeHtml(label)}</span><p>${values.map((value) => `<em class="${className}">${escapeHtml(value)}</em>`).join("")}</p></div>`;
   }
 
   function serviceBadges(where) {
@@ -168,9 +151,7 @@ export function createTastePicks({ $, escapeHtml, showToast, onTheater }) {
   }
 
   function renderResult() {
-    const { stats, profile, seeds, recs, theater } = state.result;
-    const mosaic = seeds.filter((seed) => seed.detail.poster_path && seed.rating >= 4).slice(0, 12)
-      .map((seed) => `<img src="${posterBase}w185${escapeHtml(seed.detail.poster_path)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" />`).join("");
+    const { recs, theater } = state.result;
     const filtered = state.filter === "all" ? recs : recs.filter((rec) => rec.where?.services.some((service) => service.id === state.filter));
     const visible = filtered.slice(0, state.shown);
     const filters = [["all", "전체"], ...ottServices.filter((service) => state.selected.includes(service.id)).map((service) => [service.id, service.name])]
@@ -178,42 +159,7 @@ export function createTastePicks({ $, escapeHtml, showToast, onTheater }) {
         const count = id === "all" ? recs.length : recs.filter((rec) => rec.where?.services.some((service) => service.id === id)).length;
         return `<button type="button" class="tp-filter${state.filter === id ? " is-on" : ""}" data-tp-filter="${id}"${count ? "" : " disabled"}>${escapeHtml(name)} <small>${count}</small></button>`;
       }).join("");
-    const topCountries = stats.countries.slice(0, 4).map((entry) => `${entry.key} ${entry.count}`);
-    const facts = [
-      ["평가", `${stats.total.toLocaleString("ko-KR")}편`],
-      ["평균 별점", stats.avg.toFixed(2)],
-      ["5점 비율", `${(stats.fiveShare * 100).toFixed(1)}%`],
-      stats.oldest ? ["가장 오래된 영화", `${stats.oldest}년`] : null,
-      stats.busiestMonth ? ["가장 많이 본 달", stats.busiestMonth.key.replace("-", ".")] : null
-    ].filter(Boolean);
     return `
-      <section class="tp-report">
-        <div class="tp-mosaic" aria-hidden="true">${mosaic}</div>
-        <div class="tp-report-in">
-          <p class="tp-kicker">당신의 영화 취향은</p>
-          <h3>${escapeHtml(profile.persona.title)}</h3>
-          ${profile.persona.why ? `<p>${escapeHtml(profile.persona.why)}</p>` : ""}
-          <p>${escapeHtml(profile.persona.adjectiveWhy)}</p>
-        </div>
-      </section>
-      <section class="tp-facts">${facts.map(([label, value]) => `<div><span>${escapeHtml(label)}</span><b>${escapeHtml(value)}</b></div>`).join("")}</section>
-      <section class="tp-card">
-        <h4>내 별점 분포</h4>
-        ${renderHistogram(stats)}
-      </section>
-      <section class="tp-card tp-taste">
-        <h4>취향 지도</h4>
-        ${chipRow("끌리는 장르", profile.lovedGenres.map((genre) => genre.name))}
-        ${chipRow("좋아하는 감독", profile.directors)}
-        ${chipRow("자주 고른 이야기", profile.keywords.map((keyword) => `#${keyword}`), "is-tag")}
-        ${chipRow("많이 본 나라", topCountries)}
-        ${chipRow("덜 맞는 장르", profile.avoidedGenres, "is-off")}
-      </section>
-      ${theater.length ? `
-        <section class="tp-card">
-          <h4>지금 서울 극장에서 하는 취향 영화</h4>
-          <div class="tp-theaters">${theater.map(theaterCard).join("")}</div>
-        </section>` : ""}
       <section class="tp-recs">
         <div class="tp-recs-head">
           <h4>내 OTT에서 지금 볼 수 있는 영화 <b>${recs.length}</b></h4>
@@ -224,6 +170,11 @@ export function createTastePicks({ $, escapeHtml, showToast, onTheater }) {
         ${visible.length ? `<div class="tp-rec-list">${visible.map(recCard).join("")}</div>` : `<p class="tp-empty">고른 OTT에서 찾은 영화가 없어요. OTT를 더 고르거나 대여·구매를 포함해 보세요.</p>`}
         ${filtered.length > state.shown ? `<button type="button" class="tp-more" data-tp-more>더 보기 <small>${filtered.length - state.shown}편 더</small></button>` : ""}
       </section>
+      ${theater.length ? `
+        <section class="tp-card">
+          <h4>지금 서울 극장에서 하는 추천 영화</h4>
+          <div class="tp-theaters">${theater.map(theaterCard).join("")}</div>
+        </section>` : ""}
       <p class="tp-credit">작품 정보 TMDB · OTT 정보 JustWatch. 쿠팡플레이·라프텔은 데이터가 없어 고를 수 없어요. 추천은 내 별점과 TMDB 정보로만 계산해요.</p>`;
   }
 
@@ -241,8 +192,7 @@ export function createTastePicks({ $, escapeHtml, showToast, onTheater }) {
     if (!target) return;
     const html = state.step === "loading" ? renderLoading() : state.step === "result" ? renderResult() : state.step === "error" ? renderError() : renderStart();
     target.innerHTML = html;
-    // bar heights and progress go through the CSSOM: the page's CSP has no inline style attributes
-    target.querySelectorAll("[data-tp-h]").forEach((bar) => { bar.style.height = `${Math.max(2, Number(bar.dataset.tpH))}%`; });
+    // the progress bar goes through the CSSOM: the page's CSP has no inline style attributes
     const progress = target.querySelector("[data-tp-progress]");
     if (progress) progress.style.width = `${Math.round(state.progress * 100)}%`;
     sheet()?.classList.toggle("is-result", state.step === "result");
@@ -310,7 +260,7 @@ export function createTastePicks({ $, escapeHtml, showToast, onTheater }) {
         onStep(step) {
           if (runId !== state.runId) return;
           if (step.phase === "match") { state.progress = 0.05 + 0.25 * (step.done / Math.max(1, step.total)); say(`좋아한 영화와 싫어한 영화 ${step.total}편을 찾는 중`); }
-          else if (step.phase === "read") { state.progress = 0.3 + 0.25 * (step.done / Math.max(1, step.total)); say(`‘${step.title}’에서 취향을 뽑는 중`); }
+          else if (step.phase === "read") { state.progress = 0.3 + 0.25 * (step.done / Math.max(1, step.total)); say(`‘${step.title}’ 살펴보는 중`); }
           else if (step.phase === "gather") { state.progress = 0.58; say("내 OTT에 있는 후보를 모으는 중"); }
           else if (step.phase === "score") { state.progress = 0.6 + 0.38 * (step.done / Math.max(1, step.total)); if (step.done % 20 === 0) say(`후보 ${step.total}편에 점수를 매기는 중 (${step.done})`); }
         }

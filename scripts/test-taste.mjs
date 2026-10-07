@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { availability, parseCsv, persona, pickMatch, ratingStats, readRatings } from "../src/taste-engine.mjs";
+import { availability, parseCsv, pickMatch, ratingStats, readRatings } from "../src/taste-engine.mjs";
 
 // CSV: quotes, doubled quotes, CRLF, BOM
 assert.deepEqual(parseCsv('﻿a,b\r\n"x, y","say ""hi"""\r\n'), [["a", "b"], ["x, y", 'say "hi"']]);
@@ -38,10 +38,8 @@ assert.deepEqual(availability(detail, ["watcha", "wavve"], false).services.map((
 assert.deepEqual(availability(detail, ["watcha", "wavve"], true).services.map((service) => `${service.id}:${service.mode}`), ["watcha:구독", "wavve:대여"]);
 assert.deepEqual(availability(detail, ["netflix"], true).services, []);
 
-// stats and persona
+// the average the ratings are weighed against
 const stats = ratingStats(readRatings("title,year,rating\nA,1950,5\nB,1960,4\nC,2000,2\nD,2010,3\n").items);
 assert.equal(stats.avg, 3.5);
-assert.equal(stats.classicShare, 0.5);
-assert.match(persona(stats).title, /고전 발굴가/);
 
 console.log("Taste checks passed (CSV formats, matching, providers, stats).");

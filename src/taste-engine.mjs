@@ -524,7 +524,6 @@ export async function runTaste({ items, selected, includeRent = false, hiddenGem
   return {
     stats,
     seeds: seeds.sort((a, b) => b.rating - a.rating || (b.detail.vote_count || 0) - (a.detail.vote_count || 0)),
-    profile: summarizeProfile({ vector, seeds, stats, favouriteDirectors, directorName }),
     recs,
     theater
   };
@@ -566,54 +565,4 @@ function describe(candidate, { idf, vector, directorName }) {
     where: candidate.where || null,
     reasons
   };
-}
-
-function summarizeProfile({ vector, seeds, stats, favouriteDirectors, directorName }) {
-  const genreNames = new Map();
-  const keywordNames = new Map();
-  const languages = new Map();
-  for (const seed of seeds) {
-    for (const genre of seed.detail.genres || []) genreNames.set(`g:${genre.id}`, genre.name);
-    for (const keyword of seed.detail.keywords?.keywords || []) keywordNames.set(`k:${keyword.id}`, keyword.name);
-    if (seed.weight > 0 && seed.detail.original_language) languages.set(seed.detail.original_language, (languages.get(seed.detail.original_language) || 0) + 1);
-  }
-  const ranked = (prefix, names) => [...vector].filter(([feature]) => feature.startsWith(prefix) && names.has(feature)).sort((a, b) => b[1] - a[1]);
-  const lovedGenres = ranked("g:", genreNames).filter(([, value]) => value > 0).slice(0, 5).map(([feature, value]) => ({ name: genreNames.get(feature), value }));
-  const avoidedGenres = ranked("g:", genreNames).filter(([, value]) => value < 0).slice(-3).reverse().map(([feature]) => genreNames.get(feature));
-  const keywords = ranked("k:", keywordNames).filter(([, value]) => value > 0).slice(0, 8).map(([feature]) => keywordNames.get(feature));
-  const likedSeeds = seeds.filter((seed) => seed.weight > 0);
-  const foreignShare = likedSeeds.length ? likedSeeds.filter((seed) => !["en", "ko"].includes(seed.detail.original_language)).length / likedSeeds.length : 0;
-  const avgVotes = likedSeeds.length ? likedSeeds.reduce((sum, seed) => sum + (seed.detail.vote_count || 0), 0) / likedSeeds.length : 0;
-  return {
-    lovedGenres,
-    avoidedGenres,
-    keywords,
-    directors: favouriteDirectors.slice(0, 5).map(([id]) => directorName.get(id)),
-    languages: [...languages].sort((a, b) => b[1] - a[1]).slice(0, 4),
-    foreignShare,
-    obscurity: avgVotes,
-    persona: persona(stats, { foreignShare, avgVotes, lovedGenres })
-  };
-}
-
-// a two-word name for the person's taste, plus a line on why
-export function persona(stats, { foreignShare = 0, avgVotes = 0, lovedGenres = [] } = {}) {
-  const adjective =
-    stats.avg <= 2.9 ? "칼 같은" :
-      stats.avg <= 3.3 ? "깐깐한" :
-        stats.avg <= 3.7 ? "균형 잡힌" : "다정한";
-  const top = lovedGenres[0]?.name || "";
-  let noun = "시네필";
-  let why = "";
-  if (stats.classicShare >= 0.25) { noun = "고전 발굴가"; why = `본 영화의 ${Math.round(stats.classicShare * 100)}%가 1980년 이전 작품`; }
-  else if (foreignShare >= 0.5) { noun = "세계영화 순례자"; why = `좋아한 영화의 ${Math.round(foreignShare * 100)}%가 영어·한국어 밖의 영화`; }
-  else if (avgVotes && avgVotes < 1500) { noun = "숨은 영화 사냥꾼"; why = "좋아한 영화들이 대체로 덜 알려진 작품"; }
-  else if (/공포|스릴러/.test(top)) { noun = "장르 마니아"; why = `${top}에 유독 후함`; }
-  else if (/애니메이션/.test(top)) { noun = "애니메이션 덕후"; why = "애니메이션에 유독 후함"; }
-  else if (/다큐/.test(top)) { noun = "다큐 탐구가"; why = "다큐멘터리에 유독 후함"; }
-  else if (/로맨스/.test(top)) { noun = "로맨티스트"; why = "로맨스에 유독 후함"; }
-  else if (/SF|판타지/.test(top)) { noun = "몽상가"; why = `${top}에 유독 후함`; }
-  else if (/드라마/.test(top)) { noun = "드라마 감식가"; why = "인물 드라마에 유독 후함"; }
-  if (stats.total >= 1500) noun = `${noun}`;
-  return { title: `${adjective} ${noun}`, why, adjectiveWhy: `평균 별점 ${stats.avg.toFixed(2)}점 · 5점은 ${(stats.fiveShare * 100).toFixed(1)}%에게만` };
 }
