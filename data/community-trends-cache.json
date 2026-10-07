@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-07",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-07T06:17:15.913Z",
+  "updatedAt": "2026-10-07T09:24:06.272Z",
   "days": {
     "2026-10-05": {
       "흐르는여정": {
@@ -586,14 +586,29 @@
       }
     },
     "2026-10-07": {
-      "꿈꾸던모험": {
-        "title": "꿈꾸던 모험(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 2,
+      "룩백": {
+        "title": "룩백(2D)",
+        "positiveSignal": 2,
+        "mentionCount": 7,
         "evidence": [
           {
-            "title": "꿈꾸던 모험 자막 어디서 만든거냐 존나 뻐킹 아마추어같던데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870162&page=1",
+            "title": "룩백 7시 45분쯤 가면 좌석 구림??",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870272&page=1",
+            "date": "2026-10-07",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "룩백 줄 벌써부터 매표소까지 감았네",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870265&page=1",
             "date": "2026-10-07",
             "positive": 0,
             "rawPositive": 0,
@@ -602,7 +617,126 @@
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 3,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "룩백vs디거 뭐가 낫냐",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870230&page=2",
+            "date": "2026-10-07",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "좋았음",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 2,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "25시": {
+        "title": "25시",
+        "positiveSignal": 0,
+        "mentionCount": 1.792481250360578,
+        "evidence": [
+          {
+            "title": "내일 영자원 25시 명작인가염?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870270&page=1",
+            "date": "2026-10-07",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 2,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "쇼트서킷": {
+        "title": "쇼트 서킷",
+        "positiveSignal": 0,
+        "mentionCount": 1.792481250360578,
+        "evidence": [
+          {
+            "title": "영자원 쇼트 서킷 보신분 계심?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870269&page=1",
+            "date": "2026-10-07",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "눈둘데가없네": {
+        "title": "눈 둘 데가 없네",
+        "positiveSignal": 2,
+        "mentionCount": 1.5,
+        "evidence": [
+          {
+            "title": "눈둘데 좋네 권해효랑 같이봄",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870173&page=3",
+            "date": "2026-10-07",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "좋네",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "꿈꾸던모험": {
+        "title": "꿈꾸던 모험(2D)",
+        "positiveSignal": 0,
+        "mentionCount": 2.160964047443681,
+        "evidence": [
+          {
+            "title": "꿈꾸던 모험 자막 어디서 만든거냐 존나 뻐킹 아마추어같던데",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870162&page=3",
+            "date": "2026-10-07",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 4,
             "commentPositive": 0,
             "commentNegative": 0
           }
@@ -615,7 +749,7 @@
         "evidence": [
           {
             "title": "암컷소동도 더러움?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870101&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870101&page=4",
             "date": "2026-10-07",
             "positive": 0,
             "rawPositive": 0,
@@ -637,7 +771,7 @@
         "evidence": [
           {
             "title": "난 김종관이 <최악의하루> 좋아함",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870034&page=3",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870034&page=5",
             "date": "2026-10-07",
             "positive": 0,
             "rawPositive": 0,
@@ -651,34 +785,12 @@
             "commentNegative": 0
           }
         ]
-      },
-      "룩백": {
-        "title": "룩백(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "오늘 상영하는 003 룩백 2장 양도합니다 !",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870006&page=4",
-            "date": "2026-10-07",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
       }
     }
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-07T06:17:15.908Z",
+      "lineupFetchedAt": "2026-10-07T09:24:06.265Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -3447,14 +3559,104 @@
           }
         },
         "2026-10-07": {
-          "비터크리스마스": {
-            "title": "비터 크리스마스",
+          "필리피냐나": {
+            "title": "필리피냐나",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "이야기이야기": {
+            "title": "이야기, 이야기",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "이성과감성": {
+            "title": "이성과 감성",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "라그라디바": {
+            "title": "라 그라디바",
+            "mentionCount": 5,
+            "commentCount": 0
+          },
+          "겨울이야기": {
+            "title": "겨울 이야기",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "내가사랑하는남자": {
+            "title": "내가 사랑하는 남자",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "오아시스": {
+            "title": "오아시스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "타이타닉오션": {
+            "title": "타이타닉 오션",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "타인에게속한것들": {
+            "title": "타인에게 속한 것들",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "우리는외계인": {
+            "title": "우리는 외계인",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "버킹패스타드": {
+            "title": "버킹 패스타드",
+            "mentionCount": 6,
+            "commentCount": 0
+          },
+          "처음만난외로움": {
+            "title": "처음 만난 외로움",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "멜트다운": {
+            "title": "멜트다운",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "라두주데의어느하녀의일기": {
+            "title": "라두 주데의 어느 하녀의 일기",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "아이언보이": {
+            "title": "아이언 보이",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "룩백": {
+            "title": "룩백",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "무명소녀": {
+            "title": "무명소녀",
+            "mentionCount": 3,
+            "commentCount": 0
+          },
+          "새드걸즈": {
+            "title": "새드 걸즈",
             "mentionCount": 1,
             "commentCount": 0
           },
           "아버지의방": {
             "title": "아버지의 방",
-            "mentionCount": 3,
+            "mentionCount": 4,
+            "commentCount": 0
+          },
+          "비터크리스마스": {
+            "title": "비터 크리스마스",
+            "mentionCount": 1,
             "commentCount": 0
           },
           "에코체임버": {
@@ -3462,24 +3664,9 @@
             "mentionCount": 1,
             "commentCount": 0
           },
-          "필리피냐나": {
-            "title": "필리피냐나",
-            "mentionCount": 1,
-            "commentCount": 0
-          },
           "텐더러빙케어": {
             "title": "텐더 러빙 케어",
             "mentionCount": 4,
-            "commentCount": 0
-          },
-          "겨울이야기": {
-            "title": "겨울 이야기",
-            "mentionCount": 1,
-            "commentCount": 0
-          },
-          "아이언보이": {
-            "title": "아이언 보이",
-            "mentionCount": 1,
             "commentCount": 0
           },
           "가능한사랑": {
@@ -3497,34 +3684,14 @@
             "mentionCount": 1,
             "commentCount": 0
           },
-          "버킹패스타드": {
-            "title": "버킹 패스타드",
-            "mentionCount": 2,
-            "commentCount": 0
-          },
-          "무명소녀": {
-            "title": "무명소녀",
-            "mentionCount": 1,
-            "commentCount": 0
-          },
           "아름다운초저녁달": {
             "title": "아름다운 초저녁달",
-            "mentionCount": 1,
-            "commentCount": 0
-          },
-          "우리는외계인": {
-            "title": "우리는 외계인",
             "mentionCount": 1,
             "commentCount": 0
           },
           "안개속의코끼리": {
             "title": "안개 속의 코끼리",
             "mentionCount": 1,
-            "commentCount": 0
-          },
-          "라그라디바": {
-            "title": "라 그라디바",
-            "mentionCount": 4,
             "commentCount": 0
           },
           "사토코는언제나": {

@@ -4,12 +4,12 @@
     "rangeStart": "2026-10-07",
     "rangeEnd": "2026-10-31",
     "rangeLabel": "2026.10.07 - 10.31",
-    "generatedAt": "2026-10-07T06:16:36.436Z",
-    "lastVerifiedAt": "2026-10-07T06:16:36.436Z",
+    "generatedAt": "2026-10-07T09:23:23.079Z",
+    "lastVerifiedAt": "2026-10-07T09:23:23.079Z",
     "sourceMode": "official-source monitor + curated timetable",
     "notice": "시간이 이미지 공지에만 있는 항목은 확인 필요로 표시합니다.",
-    "seatStatusVerifiedAt": "2026-10-07T06:16:36.436Z",
-    "lastRefreshAttemptAt": "2026-10-07T06:16:36.436Z",
+    "seatStatusVerifiedAt": "2026-10-07T09:23:23.079Z",
+    "lastRefreshAttemptAt": "2026-10-07T09:23:23.079Z",
     "collectionMode": "browser-live",
     "browserLiveVenueIds": [
       "momo",
@@ -217,7 +217,7 @@
       "posterUrl": ""
     },
     {
-      "id": "live-kucine-20261007-PT20261007000756",
+      "id": "live-kucine-20261007-PT20261007001881",
       "date": "2026-10-07",
       "time": "11:00",
       "timeSort": "11:00",
@@ -333,7 +333,7 @@
       "posterUrl": ""
     },
     {
-      "id": "live-kucine-20261007-PT20261007000755",
+      "id": "live-kucine-20261007-PT20261007001880",
       "date": "2026-10-07",
       "time": "13:00",
       "timeSort": "13:00",
@@ -424,7 +424,7 @@
       "posterUrl": ""
     },
     {
-      "id": "live-kucine-20261007-PT20261007000757",
+      "id": "live-kucine-20261007-PT20261007001882",
       "date": "2026-10-07",
       "time": "15:00",
       "timeSort": "15:00",
@@ -472,28 +472,6 @@
       "posterUrl": ""
     },
     {
-      "id": "live-cinecube-2026-10-07-029394-01-4",
-      "date": "2026-10-07",
-      "time": "15:30",
-      "timeSort": "15:30",
-      "title": "사진의 얼굴",
-      "venueId": "cinecube",
-      "screen": "1관",
-      "program": "날짜별 시간표",
-      "kind": "program",
-      "status": "confirmed",
-      "tags": [
-        "98분",
-        "12세"
-      ],
-      "summary": "1관 · 잔여 286/293석",
-      "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-07&movieCd=029394&playSDT=2026-10-07&screenId=01&showSeq=4",
-      "bookingType": "booking",
-      "actionLabel": "예매",
-      "sourceId": "cinecube-time-order",
-      "posterUrl": "https://img.dtryx.com/poster/2026/08/6EB29A88-A344-4A40-AC5D-9C9367C74681.small.jpg"
-    },
-    {
       "id": "live-filmforum-20261007-PT20261007001740",
       "date": "2026-10-07",
       "time": "15:40",
@@ -503,41 +481,19 @@
       "screen": "1관",
       "program": "2D",
       "kind": "program",
-      "status": "confirmed",
+      "status": "needs-check",
       "tags": [
         "15세이상관람가",
         "106분",
         "2D"
       ],
-      "summary": "1관 · 잔여 85/90석",
+      "summary": "1관 · 온라인 예매 마감 여부 공식 확인",
       "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121681&playDt=20261007&tsId=TS0056&pno=3",
       "detailUrl": "http://www.filmforum.kr/movie/ticketing.asp",
-      "bookingType": "booking",
-      "actionLabel": "예매",
+      "bookingType": "official",
+      "actionLabel": "공식 확인",
       "sourceId": "filmforum-moviee-showtimes",
       "posterUrl": ""
-    },
-    {
-      "id": "live-cinecube-2026-10-07-029552-02-2",
-      "date": "2026-10-07",
-      "time": "15:55",
-      "timeSort": "15:55",
-      "title": "나의 사적인 예술가",
-      "venueId": "cinecube",
-      "screen": "2관",
-      "program": "날짜별 시간표",
-      "kind": "program",
-      "status": "confirmed",
-      "tags": [
-        "97분",
-        "12세"
-      ],
-      "summary": "2관 · 잔여 22/72석",
-      "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-07&movieCd=029552&playSDT=2026-10-07&screenId=02&showSeq=2",
-      "bookingType": "booking",
-      "actionLabel": "예매",
-      "sourceId": "cinecube-time-order",
-      "posterUrl": "https://img.dtryx.com/poster/2026/08/74BD5DA6-C14B-489F-A52B-AA8DAD2D5428.small.jpg"
     },
     {
       "id": "live-kofa-2026-10-07-1645f3f7c2",
@@ -572,17 +528,17 @@
       "screen": "1관",
       "program": "2D",
       "kind": "program",
-      "status": "confirmed",
+      "status": "needs-check",
       "tags": [
         "15세이상관람가",
         "127분",
         "2D"
       ],
-      "summary": "1관 · 잔여 75/76석",
+      "summary": "1관 · 온라인 예매 마감 여부 공식 확인",
       "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121763&playDt=20261007&tsId=TS0044&pno=4",
       "detailUrl": "https://www.sangsangmadang.com/movie/list",
-      "bookingType": "booking",
-      "actionLabel": "예매",
+      "bookingType": "official",
+      "actionLabel": "공식 확인",
       "sourceId": "sangsangmadang-cinema",
       "posterUrl": ""
     },
@@ -616,22 +572,22 @@
       "screen": "2관",
       "program": "2D",
       "kind": "program",
-      "status": "confirmed",
+      "status": "needs-check",
       "tags": [
         "15세이상관람가",
         "96분",
         "2D"
       ],
-      "summary": "2관 · 잔여 51/52석",
+      "summary": "2관 · 온라인 예매 마감 여부 공식 확인",
       "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121719&playDt=20261007&tsId=TS0057&pno=4",
       "detailUrl": "http://www.filmforum.kr/movie/ticketing.asp",
-      "bookingType": "booking",
-      "actionLabel": "예매",
+      "bookingType": "official",
+      "actionLabel": "공식 확인",
       "sourceId": "filmforum-moviee-showtimes",
       "posterUrl": ""
     },
     {
-      "id": "live-kucine-20261007-PT20261007000758",
+      "id": "live-kucine-20261007-PT20261007001883",
       "date": "2026-10-07",
       "time": "17:20",
       "timeSort": "17:20",
@@ -640,61 +596,19 @@
       "screen": "1관",
       "program": "기획전",
       "kind": "program",
-      "status": "confirmed",
+      "status": "needs-check",
       "tags": [
         "15세이상관람가",
         "121분",
         "기획전"
       ],
-      "summary": "1관 · 잔여 141/152석",
+      "summary": "1관 · 온라인 예매 마감 여부 공식 확인",
       "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121791&playDt=20261007&tsId=TS0039&pno=1",
       "detailUrl": "https://kucinema.net/reservation/",
-      "bookingType": "booking",
-      "actionLabel": "예매",
+      "bookingType": "official",
+      "actionLabel": "공식 확인",
       "sourceId": "kucine-moviee-showtimes",
       "posterUrl": ""
-    },
-    {
-      "id": "live-cinecube-2026-10-07-029296-01-5",
-      "date": "2026-10-07",
-      "time": "17:25",
-      "timeSort": "17:25",
-      "title": "착지연습",
-      "venueId": "cinecube",
-      "screen": "1관",
-      "program": "날짜별 시간표",
-      "kind": "program",
-      "status": "confirmed",
-      "tags": [
-        "107분",
-        "15세"
-      ],
-      "summary": "1관 · 잔여 289/293석",
-      "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-07&movieCd=029296&playSDT=2026-10-07&screenId=01&showSeq=5",
-      "bookingType": "booking",
-      "actionLabel": "예매",
-      "sourceId": "cinecube-time-order",
-      "posterUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260920_62eeba13.jpg"
-    },
-    {
-      "id": "live-sac-2026-10-07-5ec341d9dc",
-      "date": "2026-10-07",
-      "time": "17:30",
-      "timeSort": "17:30",
-      "title": "파멸",
-      "venueId": "sac",
-      "screen": "서울아트시네마",
-      "program": "상영시간표",
-      "kind": "program",
-      "status": "confirmed",
-      "tags": [
-        "121분"
-      ],
-      "summary": "서울아트시네마 · 121분",
-      "bookingUrl": "https://www.tinyticket.net/event/EVAhNz84XnhS",
-      "bookingType": "booking",
-      "actionLabel": "예매",
-      "sourceId": "sac-timetable"
     },
     {
       "id": "live-filmforum-20261007-PT20261007001743",
@@ -706,41 +620,19 @@
       "screen": "1관",
       "program": "2D",
       "kind": "program",
-      "status": "confirmed",
+      "status": "needs-check",
       "tags": [
         "15세이상관람가",
         "122분",
         "2D"
       ],
-      "summary": "1관 · 잔여 83/90석",
+      "summary": "1관 · 온라인 예매 마감 여부 공식 확인",
       "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121760&playDt=20261007&tsId=TS0056&pno=4",
       "detailUrl": "http://www.filmforum.kr/movie/ticketing.asp",
-      "bookingType": "booking",
-      "actionLabel": "예매",
+      "bookingType": "official",
+      "actionLabel": "공식 확인",
       "sourceId": "filmforum-moviee-showtimes",
       "posterUrl": ""
-    },
-    {
-      "id": "live-cinecube-2026-10-07-029606-02-6",
-      "date": "2026-10-07",
-      "time": "17:45",
-      "timeSort": "17:45",
-      "title": "알파",
-      "venueId": "cinecube",
-      "screen": "2관",
-      "program": "날짜별 시간표",
-      "kind": "program",
-      "status": "confirmed",
-      "tags": [
-        "128분",
-        "15세"
-      ],
-      "summary": "2관 · 잔여 61/72석",
-      "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-07&movieCd=029606&playSDT=2026-10-07&screenId=02&showSeq=6",
-      "bookingType": "booking",
-      "actionLabel": "예매",
-      "sourceId": "cinecube-time-order",
-      "posterUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260903_14d39496.jpg"
     },
     {
       "id": "live-sangsangmadang-20261007-PT20261007001796",
@@ -752,17 +644,17 @@
       "screen": "1관",
       "program": "2D",
       "kind": "program",
-      "status": "confirmed",
+      "status": "needs-check",
       "tags": [
         "청소년관람불가",
         "95분",
         "2D"
       ],
-      "summary": "1관 · 잔여 66/76석",
+      "summary": "1관 · 온라인 예매 마감 여부 공식 확인",
       "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121542&playDt=20261007&tsId=TS0044&pno=5",
       "detailUrl": "https://www.sangsangmadang.com/movie/list",
-      "bookingType": "booking",
-      "actionLabel": "예매",
+      "bookingType": "official",
+      "actionLabel": "공식 확인",
       "sourceId": "sangsangmadang-cinema",
       "posterUrl": ""
     },
@@ -848,7 +740,7 @@
         "105분",
         "12세"
       ],
-      "summary": "1관 · 잔여 133/293석",
+      "summary": "1관 · 잔여 126/293석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-07&movieCd=028449&playSDT=2026-10-07&screenId=01&showSeq=6",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -856,7 +748,7 @@
       "posterUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_0c0f92fb.jpg"
     },
     {
-      "id": "live-kucine-20261007-PT20261007000759",
+      "id": "live-kucine-20261007-PT20261007001884",
       "date": "2026-10-07",
       "time": "19:40",
       "timeSort": "19:40",
@@ -871,7 +763,7 @@
         "146분",
         "기획전"
       ],
-      "summary": "1관 · 잔여 124/152석",
+      "summary": "1관 · 잔여 127/152석",
       "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121793&playDt=20261007&tsId=TS0039&pno=2",
       "detailUrl": "https://kucinema.net/reservation/",
       "bookingType": "booking",
@@ -938,7 +830,7 @@
         "122분",
         "15세"
       ],
-      "summary": "2관 · 잔여 34/72석",
+      "summary": "2관 · 잔여 30/72석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-07&movieCd=029631&playSDT=2026-10-07&screenId=02&showSeq=4",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -1006,7 +898,7 @@
         "97분",
         "12세"
       ],
-      "summary": "1관 · 잔여 156/293석",
+      "summary": "1관 · 잔여 152/293석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-08&movieCd=029552&playSDT=2026-10-08&screenId=01&showSeq=7",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -1086,7 +978,7 @@
       "posterUrl": ""
     },
     {
-      "id": "live-kucine-20261008-PT20261008000833",
+      "id": "live-kucine-20261008-PT20261008001977",
       "date": "2026-10-08",
       "time": "10:30",
       "timeSort": "10:30",
@@ -1144,7 +1036,7 @@
         "92분",
         "12세"
       ],
-      "summary": "2관 · 잔여 62/72석",
+      "summary": "2관 · 잔여 59/72석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-08&movieCd=028014&playSDT=2026-10-08&screenId=02&showSeq=2",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -1167,7 +1059,7 @@
         "100분",
         "2D"
       ],
-      "summary": "1관 · 잔여 75/76석",
+      "summary": "1관 · 잔여 74/76석",
       "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261008&tsId=TS0044&pno=2",
       "detailUrl": "https://www.sangsangmadang.com/movie/list",
       "bookingType": "booking",
@@ -1200,7 +1092,7 @@
       "posterUrl": ""
     },
     {
-      "id": "live-kucine-20261008-PT20261008000832",
+      "id": "live-kucine-20261008-PT20261008001976",
       "date": "2026-10-08",
       "time": "12:30",
       "timeSort": "12:30",
@@ -1239,7 +1131,7 @@
         "96분",
         "2D"
       ],
-      "summary": "2관 · 잔여 52/52석",
+      "summary": "2관 · 잔여 50/52석",
       "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121719&playDt=20261008&tsId=TS0057&pno=2",
       "detailUrl": "http://www.filmforum.kr/movie/ticketing.asp",
       "bookingType": "booking",
@@ -1369,7 +1261,7 @@
         "98분",
         "2D"
       ],
-      "summary": "1관 · 잔여 71/76석",
+      "summary": "1관 · 잔여 68/76석",
       "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121704&playDt=20261008&tsId=TS0044&pno=3",
       "detailUrl": "https://www.sangsangmadang.com/movie/list",
       "bookingType": "booking",
@@ -1393,7 +1285,7 @@
         "116분",
         "영문자막"
       ],
-      "summary": "2관 · 잔여 49/52석",
+      "summary": "2관 · 잔여 48/52석",
       "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121720&playDt=20261008&tsId=TS0057&pno=3",
       "detailUrl": "http://www.filmforum.kr/movie/ticketing.asp",
       "bookingType": "booking",
@@ -1416,7 +1308,7 @@
         "122분",
         "15세"
       ],
-      "summary": "1관 · 잔여 257/293석",
+      "summary": "1관 · 잔여 256/293석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-08&movieCd=029631&playSDT=2026-10-08&screenId=01&showSeq=4",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -1529,7 +1421,7 @@
         "97분",
         "12세"
       ],
-      "summary": "2관 · 잔여 61/72석",
+      "summary": "2관 · 잔여 59/72석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-08&movieCd=029552&playSDT=2026-10-08&screenId=02&showSeq=4",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -1639,7 +1531,7 @@
         "100분",
         "ALL세"
       ],
-      "summary": "1관 · 잔여 223/293석",
+      "summary": "1관 · 잔여 224/293석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-08&movieCd=029713&playSDT=2026-10-08&screenId=01&showSeq=5",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -1671,7 +1563,7 @@
       "posterUrl": ""
     },
     {
-      "id": "live-kucine-20261008-PT20261008000834",
+      "id": "live-kucine-20261008-PT20261008001978",
       "date": "2026-10-08",
       "time": "18:20",
       "timeSort": "18:20",
@@ -1793,12 +1685,12 @@
       "screen": "1관",
       "program": "날짜별 시간표",
       "kind": "program",
-      "status": "confirmed",
+      "status": "soldout",
       "tags": [
         "104분",
         "12세"
       ],
-      "summary": "1관 · 잔여 1/293석",
+      "summary": "1관 · 잔여 0/293석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-08&movieCd=026083&playSDT=2026-10-08&screenId=01&showSeq=6",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -1874,7 +1766,7 @@
       "sourceId": "sac-timetable"
     },
     {
-      "id": "live-kucine-20261008-PT20261008000835",
+      "id": "live-kucine-20261008-PT20261008001979",
       "date": "2026-10-08",
       "time": "20:10",
       "timeSort": "20:10",
@@ -1889,7 +1781,7 @@
         "100분",
         "2D"
       ],
-      "summary": "1관 · 잔여 140/152석",
+      "summary": "1관 · 잔여 138/152석",
       "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121765&playDt=20261008&tsId=TS0039&pno=4",
       "detailUrl": "https://kucinema.net/reservation/",
       "bookingType": "booking",
@@ -1936,7 +1828,7 @@
         "100분",
         "ALL세"
       ],
-      "summary": "2관 · 잔여 22/72석",
+      "summary": "2관 · 잔여 24/72석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-08&movieCd=029713&playSDT=2026-10-08&screenId=02&showSeq=6",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -1980,7 +1872,7 @@
         "100분",
         "ALL세"
       ],
-      "summary": "1관 · 잔여 246/293석",
+      "summary": "1관 · 잔여 245/293석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-09&movieCd=029713&playSDT=2026-10-09&screenId=01&showSeq=1",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -1988,7 +1880,7 @@
       "posterUrl": "https://img.dtryx.com/poster/2026/09/56655D09-17C4-44B5-BB10-5703E030591A.small.jpg"
     },
     {
-      "id": "live-kucine-20261009-PT20261009000918",
+      "id": "live-kucine-20261009-PT20261009002111",
       "date": "2026-10-09",
       "time": "10:00",
       "timeSort": "10:00",
@@ -2120,7 +2012,7 @@
         "122분",
         "15세"
       ],
-      "summary": "1관 · 잔여 223/293석",
+      "summary": "1관 · 잔여 225/293석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-09&movieCd=029631&playSDT=2026-10-09&screenId=01&showSeq=2",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -2172,7 +2064,7 @@
       "posterUrl": ""
     },
     {
-      "id": "live-kucine-20261009-PT20261009000920",
+      "id": "live-kucine-20261009-PT20261009002113",
       "date": "2026-10-09",
       "time": "12:10",
       "timeSort": "12:10",
@@ -2278,7 +2170,7 @@
         "97분",
         "12세"
       ],
-      "summary": "2관 · 잔여 45/72석",
+      "summary": "2관 · 잔여 44/72석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-09&movieCd=029552&playSDT=2026-10-09&screenId=02&showSeq=3",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -2322,7 +2214,7 @@
         "100분",
         "ALL세"
       ],
-      "summary": "1관 · 잔여 141/293석",
+      "summary": "1관 · 잔여 132/293석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-09&movieCd=029713&playSDT=2026-10-09&screenId=01&showSeq=3",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -2350,7 +2242,7 @@
       "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbASlRj%2FdJMcablixRw%2FAAAAAAAAAAAAAAAAAAAAAEh-56RYgTNyIyumYzEUMpUoQI_GoY9EQxysfjk97JWW%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DiOzCfmAQfkZQjb9xLFMZ0CJJ4Mo%253D"
     },
     {
-      "id": "live-kucine-20261009-PT20261009000922",
+      "id": "live-kucine-20261009-PT20261009002115",
       "date": "2026-10-09",
       "time": "14:00",
       "timeSort": "14:00",
@@ -2389,7 +2281,7 @@
         "100분",
         "2D"
       ],
-      "summary": "1관 · 잔여 57/76석",
+      "summary": "1관 · 잔여 55/76석",
       "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261009&tsId=TS0044&pno=7",
       "detailUrl": "https://www.sangsangmadang.com/movie/list",
       "bookingType": "booking",
@@ -2413,7 +2305,7 @@
         "94분",
         "2D"
       ],
-      "summary": "2관 · 잔여 52/52석",
+      "summary": "2관 · 잔여 50/52석",
       "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000120820&playDt=20261009&tsId=TS0057&pno=3",
       "detailUrl": "http://www.filmforum.kr/movie/ticketing.asp",
       "bookingType": "booking",
@@ -2480,7 +2372,7 @@
         "106분",
         "15세"
       ],
-      "summary": "2관 · 잔여 10/72석",
+      "summary": "2관 · 잔여 7/72석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-09&movieCd=029462&playSDT=2026-10-09&screenId=02&showSeq=4",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -2502,7 +2394,7 @@
         "146분",
         "15세"
       ],
-      "summary": "1관 · 잔여 177/293석",
+      "summary": "1관 · 잔여 176/293석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-09&movieCd=029602&playSDT=2026-10-09&screenId=01&showSeq=4",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -2553,7 +2445,7 @@
       "reservationId": "19093"
     },
     {
-      "id": "live-kucine-20261009-PT20261009000919",
+      "id": "live-kucine-20261009-PT20261009002112",
       "date": "2026-10-09",
       "time": "16:00",
       "timeSort": "16:00",
@@ -2737,7 +2629,7 @@
       "posterUrl": ""
     },
     {
-      "id": "live-kucine-20261009-PT20261009000923",
+      "id": "live-kucine-20261009-PT20261009002116",
       "date": "2026-10-09",
       "time": "18:00",
       "timeSort": "18:00",
@@ -2752,7 +2644,7 @@
         "100분",
         "2D"
       ],
-      "summary": "1관 · 잔여 152/152석",
+      "summary": "1관 · 잔여 150/152석",
       "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121765&playDt=20261009&tsId=TS0039&pno=5",
       "detailUrl": "https://kucinema.net/reservation/",
       "bookingType": "booking",
@@ -2776,7 +2668,7 @@
         "108분",
         "2D"
       ],
-      "summary": "1관 · 잔여 29/76석",
+      "summary": "1관 · 잔여 27/76석",
       "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121558&playDt=20261009&tsId=TS0044&pno=8",
       "detailUrl": "https://www.sangsangmadang.com/movie/list",
       "bookingType": "booking",
@@ -2887,7 +2779,7 @@
         "134분",
         "2D"
       ],
-      "summary": "1관 · 잔여 84/90석",
+      "summary": "1관 · 잔여 85/90석",
       "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121802&playDt=20261009&tsId=TS0056&pno=5",
       "detailUrl": "http://www.filmforum.kr/movie/ticketing.asp",
       "bookingType": "booking",
@@ -2911,7 +2803,7 @@
         "106분",
         "2D"
       ],
-      "summary": "2관 · 잔여 52/52석",
+      "summary": "2관 · 잔여 50/52석",
       "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121681&playDt=20261009&tsId=TS0057&pno=6",
       "detailUrl": "http://www.filmforum.kr/movie/ticketing.asp",
       "bookingType": "booking",
@@ -2920,7 +2812,7 @@
       "posterUrl": ""
     },
     {
-      "id": "live-kucine-20261009-PT20261009000921",
+      "id": "live-kucine-20261009-PT20261009002114",
       "date": "2026-10-09",
       "time": "20:00",
       "timeSort": "20:00",
@@ -2935,7 +2827,7 @@
         "122분",
         "2D"
       ],
-      "summary": "1관 · 잔여 149/152석",
+      "summary": "1관 · 잔여 148/152석",
       "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121760&playDt=20261009&tsId=TS0039&pno=6",
       "detailUrl": "https://kucinema.net/reservation/",
       "bookingType": "booking",
@@ -2958,7 +2850,7 @@
         "100분",
         "ALL세"
       ],
-      "summary": "1관 · 잔여 252/293석",
+      "summary": "1관 · 잔여 253/293석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-09&movieCd=029713&playSDT=2026-10-09&screenId=01&showSeq=6",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -3004,7 +2896,7 @@
         "92분",
         "12세"
       ],
-      "summary": "1관 · 잔여 287/293석",
+      "summary": "1관 · 잔여 286/293석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-10&movieCd=028014&playSDT=2026-10-10&screenId=01&showSeq=1",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -3026,7 +2918,7 @@
         "122분",
         "15세"
       ],
-      "summary": "2관 · 잔여 57/72석",
+      "summary": "2관 · 잔여 56/72석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-10&movieCd=029631&playSDT=2026-10-10&screenId=02&showSeq=1",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -3106,7 +2998,7 @@
       "posterUrl": ""
     },
     {
-      "id": "live-kucine-20261010-PT20261010000861",
+      "id": "live-kucine-20261010-PT20261010002049",
       "date": "2026-10-10",
       "time": "10:30",
       "timeSort": "10:30",
@@ -3121,7 +3013,7 @@
         "122분",
         "2D"
       ],
-      "summary": "1관 · 잔여 146/152석",
+      "summary": "1관 · 잔여 145/152석",
       "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121760&playDt=20261010&tsId=TS0039&pno=1",
       "detailUrl": "https://kucinema.net/reservation/",
       "bookingType": "booking",
@@ -3164,7 +3056,7 @@
         "440분",
         "15세"
       ],
-      "summary": "1관 · 잔여 96/293석",
+      "summary": "1관 · 잔여 98/293석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-10&movieCd=026180&playSDT=2026-10-10&screenId=01&showSeq=2",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -3309,7 +3201,7 @@
       "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FsBFg1%2FdJMcajpRTix%2FAAAAAAAAAAAAAAAAAAAAACtm98ThXkDM3ejnxLhE_F6NnnxCZwB7Ja2GSU6O5au3%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DT5gYd1Pcyo6iUOpowtYK8SBxti8%253D"
     },
     {
-      "id": "live-kucine-20261010-PT20261010000862",
+      "id": "live-kucine-20261010-PT20261010002050",
       "date": "2026-10-10",
       "time": "12:50",
       "timeSort": "12:50",
@@ -3411,7 +3303,7 @@
         "100분",
         "ALL세"
       ],
-      "summary": "2관 · 잔여 11/72석",
+      "summary": "2관 · 잔여 3/72석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-10&movieCd=029713&playSDT=2026-10-10&screenId=02&showSeq=3",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -3467,7 +3359,7 @@
       "posterUrl": ""
     },
     {
-      "id": "live-kucine-20261010-PT20261010000863",
+      "id": "live-kucine-20261010-PT20261010002051",
       "date": "2026-10-10",
       "time": "14:50",
       "timeSort": "14:50",
@@ -3482,7 +3374,7 @@
         "121분",
         "기획전"
       ],
-      "summary": "1관 · 잔여 148/152석",
+      "summary": "1관 · 잔여 147/152석",
       "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121791&playDt=20261010&tsId=TS0039&pno=3",
       "detailUrl": "https://kucinema.net/reservation/",
       "bookingType": "booking",
@@ -3568,7 +3460,7 @@
         "122분",
         "15세"
       ],
-      "summary": "2관 · 잔여 38/72석",
+      "summary": "2관 · 잔여 40/72석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-10&movieCd=029631&playSDT=2026-10-10&screenId=02&showSeq=4",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -3611,7 +3503,7 @@
         "98분",
         "2D"
       ],
-      "summary": "2관 · 잔여 51/52석",
+      "summary": "2관 · 잔여 48/52석",
       "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121704&playDt=20261010&tsId=TS0057&pno=4",
       "detailUrl": "http://www.filmforum.kr/movie/ticketing.asp",
       "bookingType": "booking",
@@ -3688,7 +3580,7 @@
       "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fc79q99%2FdJMcaaUohnn%2FAAAAAAAAAAAAAAAAAAAAANV33Og0pcI7HmBVuiDyugpgWjmPDDYQ_26VbGmM_cRW%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3Da9i3bddwCcyE5DSmMLZWURUWZEQ%253D"
     },
     {
-      "id": "live-kucine-20261010-PT20261010000864",
+      "id": "live-kucine-20261010-PT20261010002052",
       "date": "2026-10-10",
       "time": "17:10",
       "timeSort": "17:10",
@@ -3813,7 +3705,7 @@
         "100분",
         "ALL세"
       ],
-      "summary": "2관 · 잔여 28/72석",
+      "summary": "2관 · 잔여 26/72석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-10&movieCd=029713&playSDT=2026-10-10&screenId=02&showSeq=5",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -3903,7 +3795,7 @@
         "97분",
         "12세"
       ],
-      "summary": "1관 · 잔여 169/293석",
+      "summary": "1관 · 잔여 166/293석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-10&movieCd=029552&playSDT=2026-10-10&screenId=01&showSeq=3",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -3911,7 +3803,7 @@
       "posterUrl": "https://img.dtryx.com/poster/2026/08/74BD5DA6-C14B-489F-A52B-AA8DAD2D5428.small.jpg"
     },
     {
-      "id": "live-kucine-20261010-PT20261010000860",
+      "id": "live-kucine-20261010-PT20261010002048",
       "date": "2026-10-10",
       "time": "19:50",
       "timeSort": "19:50",
@@ -3926,7 +3818,7 @@
         "106분",
         "2D"
       ],
-      "summary": "1관 · 잔여 151/152석",
+      "summary": "1관 · 잔여 150/152석",
       "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121681&playDt=20261010&tsId=TS0039&pno=5",
       "detailUrl": "https://kucinema.net/reservation/",
       "bookingType": "booking",
@@ -3949,7 +3841,7 @@
         "106분",
         "15세"
       ],
-      "summary": "2관 · 잔여 53/72석",
+      "summary": "2관 · 잔여 54/72석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-10&movieCd=029462&playSDT=2026-10-10&screenId=02&showSeq=6",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -4027,7 +3919,7 @@
       "posterUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260827_0c0f92fb.jpg"
     },
     {
-      "id": "live-kucine-20261011-PT20261011000842",
+      "id": "live-kucine-20261011-PT20261011001997",
       "date": "2026-10-11",
       "time": "10:00",
       "timeSort": "10:00",
@@ -4089,7 +3981,7 @@
         "97분",
         "12세"
       ],
-      "summary": "1관 · 잔여 287/293석",
+      "summary": "1관 · 잔여 286/293석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-11&movieCd=029552&playSDT=2026-10-11&screenId=01&showSeq=1",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -4139,7 +4031,7 @@
       "posterUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260920_62eeba13.jpg"
     },
     {
-      "id": "live-kucine-20261011-PT20261011000843",
+      "id": "live-kucine-20261011-PT20261011001998",
       "date": "2026-10-11",
       "time": "12:00",
       "timeSort": "12:00",
@@ -4201,7 +4093,7 @@
         "100분",
         "ALL세"
       ],
-      "summary": "1관 · 잔여 259/293석",
+      "summary": "1관 · 잔여 257/293석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-11&movieCd=029713&playSDT=2026-10-11&screenId=01&showSeq=2",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -4321,7 +4213,7 @@
       "posterUrl": ""
     },
     {
-      "id": "live-kucine-20261011-PT20261011000844",
+      "id": "live-kucine-20261011-PT20261011001999",
       "date": "2026-10-11",
       "time": "14:00",
       "timeSort": "14:00",
@@ -4336,7 +4228,7 @@
         "469분",
         "기획전"
       ],
-      "summary": "1관 · 잔여 116/152석",
+      "summary": "1관 · 잔여 115/152석",
       "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121789&playDt=20261011&tsId=TS0039&pno=3",
       "detailUrl": "https://kucinema.net/reservation/",
       "bookingType": "booking",
@@ -4403,7 +4295,7 @@
         "122분",
         "15세"
       ],
-      "summary": "1관 · 잔여 235/293석",
+      "summary": "1관 · 잔여 233/293석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-11&movieCd=029631&playSDT=2026-10-11&screenId=01&showSeq=3",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -4447,7 +4339,7 @@
         "128분",
         "15세"
       ],
-      "summary": "2관 · 잔여 61/72석",
+      "summary": "2관 · 잔여 58/72석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-11&movieCd=029606&playSDT=2026-10-11&screenId=02&showSeq=4",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -4563,7 +4455,7 @@
         "100분",
         "ALL세"
       ],
-      "summary": "1관 · 잔여 257/293석",
+      "summary": "1관 · 잔여 259/293석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-11&movieCd=029713&playSDT=2026-10-11&screenId=01&showSeq=4",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -4721,7 +4613,7 @@
         "97분",
         "12세"
       ],
-      "summary": "1관 · 잔여 281/293석",
+      "summary": "1관 · 잔여 278/293석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-11&movieCd=029552&playSDT=2026-10-11&screenId=01&showSeq=5",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -5203,6 +5095,30 @@
       "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FDtdsV%2FdJMcab6veDR%2FAAAAAAAAAAAAAAAAAAAAANtntLn3hABHm6XB0DWFej5FjwNOMLOEP1u4RZZF9nBa%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DblJyJGFTluMLpA%252BH29ZvX7hEotw%253D"
     },
     {
+      "id": "live-kucine-20261012-PT20261012001505",
+      "date": "2026-10-12",
+      "time": "15:30",
+      "timeSort": "15:30",
+      "title": "룩백(2D)",
+      "venueId": "kucine",
+      "screen": "1관",
+      "program": "2D",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [
+        "전체관람가",
+        "100분",
+        "2D"
+      ],
+      "summary": "1관 · 잔여 152/152석",
+      "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121765&playDt=20261012&tsId=TS0039&pno=1",
+      "detailUrl": "https://kucinema.net/reservation/",
+      "bookingType": "booking",
+      "actionLabel": "예매",
+      "sourceId": "kucine-moviee-showtimes",
+      "posterUrl": ""
+    },
+    {
       "id": "live-filmforum-20261012-PT20261012001403",
       "date": "2026-10-12",
       "time": "16:10",
@@ -5293,6 +5209,30 @@
       "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FsBFg1%2FdJMcajpRTix%2FAAAAAAAAAAAAAAAAAAAAACtm98ThXkDM3ejnxLhE_F6NnnxCZwB7Ja2GSU6O5au3%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DT5gYd1Pcyo6iUOpowtYK8SBxti8%253D"
     },
     {
+      "id": "live-kucine-20261012-PT20261012001503",
+      "date": "2026-10-12",
+      "time": "17:30",
+      "timeSort": "17:30",
+      "title": "더 드라마(2D)",
+      "venueId": "kucine",
+      "screen": "1관",
+      "program": "2D",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [
+        "15세이상관람가",
+        "106분",
+        "2D"
+      ],
+      "summary": "1관 · 잔여 152/152석",
+      "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121681&playDt=20261012&tsId=TS0039&pno=2",
+      "detailUrl": "https://kucinema.net/reservation/",
+      "bookingType": "booking",
+      "actionLabel": "예매",
+      "sourceId": "kucine-moviee-showtimes",
+      "posterUrl": ""
+    },
+    {
       "id": "live-cinecube-2026-10-12-028449-02-5",
       "date": "2026-10-12",
       "time": "17:50",
@@ -5329,7 +5269,7 @@
         "122분",
         "15세"
       ],
-      "summary": "1관 · 잔여 290/293석",
+      "summary": "1관 · 잔여 289/293석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-12&movieCd=029631&playSDT=2026-10-12&screenId=01&showSeq=5",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -5405,6 +5345,30 @@
       "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbJls3D%2FdJMcadJqj1f%2FAAAAAAAAAAAAAAAAAAAAACeMfcsEnFeBQJWMcvIohcvB_4ORkerlfY_wDyJXwSo3%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DXLmI06Dbh9dng3lwXGY0yjOEnSo%253D"
     },
     {
+      "id": "live-kucine-20261012-PT20261012001504",
+      "date": "2026-10-12",
+      "time": "19:30",
+      "timeSort": "19:30",
+      "title": "이방인(2D)",
+      "venueId": "kucine",
+      "screen": "1관",
+      "program": "2D",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [
+        "15세이상관람가",
+        "122분",
+        "2D"
+      ],
+      "summary": "1관 · 잔여 152/152석",
+      "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121760&playDt=20261012&tsId=TS0039&pno=3",
+      "detailUrl": "https://kucinema.net/reservation/",
+      "bookingType": "booking",
+      "actionLabel": "예매",
+      "sourceId": "kucine-moviee-showtimes",
+      "posterUrl": ""
+    },
+    {
       "id": "live-cinecube-2026-10-12-029296-02-6",
       "date": "2026-10-12",
       "time": "19:50",
@@ -5466,7 +5430,7 @@
         "77분",
         "2D"
       ],
-      "summary": "1관 · 잔여 85/90석",
+      "summary": "1관 · 잔여 83/90석",
       "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121780&playDt=20261012&tsId=TS0056&pno=6",
       "detailUrl": "http://www.filmforum.kr/movie/ticketing.asp",
       "bookingType": "booking",
@@ -5489,7 +5453,7 @@
         "100분",
         "ALL세"
       ],
-      "summary": "1관 · 잔여 287/293석",
+      "summary": "1관 · 잔여 285/293석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-12&movieCd=029713&playSDT=2026-10-12&screenId=01&showSeq=6",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -5677,6 +5641,30 @@
       "posterUrl": ""
     },
     {
+      "id": "live-kucine-20261013-PT20261013001536",
+      "date": "2026-10-13",
+      "time": "13:20",
+      "timeSort": "13:20",
+      "title": "나의 사적인 예술가(2D)",
+      "venueId": "kucine",
+      "screen": "1관",
+      "program": "2D",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [
+        "15세이상관람가",
+        "96분",
+        "2D"
+      ],
+      "summary": "1관 · 잔여 152/152석",
+      "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121719&playDt=20261013&tsId=TS0039&pno=2",
+      "detailUrl": "https://kucinema.net/reservation/",
+      "bookingType": "booking",
+      "actionLabel": "예매",
+      "sourceId": "kucine-moviee-showtimes",
+      "posterUrl": ""
+    },
+    {
       "id": "live-filmforum-20261013-PT20261013001434",
       "date": "2026-10-13",
       "time": "13:30",
@@ -5767,6 +5755,30 @@
       "actionLabel": "예매",
       "sourceId": "cinecube-time-order",
       "posterUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260920_62eeba13.jpg"
+    },
+    {
+      "id": "live-kucine-20261013-PT20261013001537",
+      "date": "2026-10-13",
+      "time": "15:10",
+      "timeSort": "15:10",
+      "title": "이방인(2D)",
+      "venueId": "kucine",
+      "screen": "1관",
+      "program": "2D",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [
+        "15세이상관람가",
+        "122분",
+        "2D"
+      ],
+      "summary": "1관 · 잔여 152/152석",
+      "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121760&playDt=20261013&tsId=TS0039&pno=3",
+      "detailUrl": "https://kucinema.net/reservation/",
+      "bookingType": "booking",
+      "actionLabel": "예매",
+      "sourceId": "kucine-moviee-showtimes",
+      "posterUrl": ""
     },
     {
       "id": "live-filmforum-20261013-PT20261013001436",
@@ -5922,6 +5934,30 @@
       "bookingType": "booking",
       "actionLabel": "예매",
       "sourceId": "sac-timetable"
+    },
+    {
+      "id": "live-kucine-20261013-PT20261013001538",
+      "date": "2026-10-13",
+      "time": "17:30",
+      "timeSort": "17:30",
+      "title": "룩백(2D)",
+      "venueId": "kucine",
+      "screen": "1관",
+      "program": "2D",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [
+        "전체관람가",
+        "100분",
+        "2D"
+      ],
+      "summary": "1관 · 잔여 152/152석",
+      "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121765&playDt=20261013&tsId=TS0039&pno=4",
+      "detailUrl": "https://kucinema.net/reservation/",
+      "bookingType": "booking",
+      "actionLabel": "예매",
+      "sourceId": "kucine-moviee-showtimes",
+      "posterUrl": ""
     },
     {
       "id": "live-filmforum-20261013-PT20261013001437",
@@ -6083,7 +6119,7 @@
       "posterUrl": ""
     },
     {
-      "id": "live-kucine-20261013-PT20261013000453",
+      "id": "live-kucine-20261013-PT20261013001539",
       "date": "2026-10-13",
       "time": "19:30",
       "timeSort": "19:30",
@@ -6287,6 +6323,30 @@
       "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbJls3D%2FdJMcadJqj1f%2FAAAAAAAAAAAAAAAAAAAAACeMfcsEnFeBQJWMcvIohcvB_4ORkerlfY_wDyJXwSo3%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DXLmI06Dbh9dng3lwXGY0yjOEnSo%253D"
     },
     {
+      "id": "live-kucine-20261014-PT20261014000617",
+      "date": "2026-10-14",
+      "time": "11:00",
+      "timeSort": "11:00",
+      "title": "이방인(2D)",
+      "venueId": "kucine",
+      "screen": "1관",
+      "program": "2D",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [
+        "15세이상관람가",
+        "122분",
+        "2D"
+      ],
+      "summary": "1관 · 잔여 152/152석",
+      "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121760&playDt=20261014&tsId=TS0039&pno=1",
+      "detailUrl": "https://kucinema.net/reservation/",
+      "bookingType": "booking",
+      "actionLabel": "예매",
+      "sourceId": "kucine-moviee-showtimes",
+      "posterUrl": ""
+    },
+    {
       "id": "live-cinecube-2026-10-14-029394-02-2",
       "date": "2026-10-14",
       "time": "11:30",
@@ -6397,6 +6457,30 @@
       "detailUrl": "https://indiespace.kr/491620",
       "sourceId": "indiespace-official-posts",
       "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FsBFg1%2FdJMcajpRTix%2FAAAAAAAAAAAAAAAAAAAAACtm98ThXkDM3ejnxLhE_F6NnnxCZwB7Ja2GSU6O5au3%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DT5gYd1Pcyo6iUOpowtYK8SBxti8%253D"
+    },
+    {
+      "id": "live-kucine-20261014-PT20261014000616",
+      "date": "2026-10-14",
+      "time": "13:20",
+      "timeSort": "13:20",
+      "title": "더 드라마(2D)",
+      "venueId": "kucine",
+      "screen": "1관",
+      "program": "2D",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [
+        "15세이상관람가",
+        "106분",
+        "2D"
+      ],
+      "summary": "1관 · 잔여 152/152석",
+      "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121681&playDt=20261014&tsId=TS0039&pno=2",
+      "detailUrl": "https://kucinema.net/reservation/",
+      "bookingType": "booking",
+      "actionLabel": "예매",
+      "sourceId": "kucine-moviee-showtimes",
+      "posterUrl": ""
     },
     {
       "id": "live-cinecube-2026-10-14-029606-02-3",
@@ -6554,6 +6638,30 @@
       "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fc79q99%2FdJMcaaUohnn%2FAAAAAAAAAAAAAAAAAAAAANV33Og0pcI7HmBVuiDyugpgWjmPDDYQ_26VbGmM_cRW%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3Da9i3bddwCcyE5DSmMLZWURUWZEQ%253D"
     },
     {
+      "id": "live-kucine-20261014-PT20261014000619",
+      "date": "2026-10-14",
+      "time": "15:20",
+      "timeSort": "15:20",
+      "title": "침묵의 빛(2D)",
+      "venueId": "kucine",
+      "screen": "1관",
+      "program": "2D",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [
+        "15세이상관람가",
+        "136분",
+        "2D"
+      ],
+      "summary": "1관 · 잔여 152/152석",
+      "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121808&playDt=20261014&tsId=TS0039&pno=3",
+      "detailUrl": "https://kucinema.net/reservation/",
+      "bookingType": "booking",
+      "actionLabel": "예매",
+      "sourceId": "kucine-moviee-showtimes",
+      "posterUrl": ""
+    },
+    {
       "id": "live-cinecube-2026-10-14-029462-02-4",
       "date": "2026-10-14",
       "time": "15:50",
@@ -6634,7 +6742,7 @@
         "100분",
         "ALL세"
       ],
-      "summary": "1관 · 잔여 285/293석",
+      "summary": "1관 · 잔여 284/293석",
       "bookingUrl": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-14&movieCd=029713&playSDT=2026-10-14&screenId=01&showSeq=4",
       "bookingType": "booking",
       "actionLabel": "예매",
@@ -6755,6 +6863,30 @@
       "posterUrl": ""
     },
     {
+      "id": "live-kucine-20261014-PT20261014000620",
+      "date": "2026-10-14",
+      "time": "17:50",
+      "timeSort": "17:50",
+      "title": "헤븐 노우즈 왓(2D)",
+      "venueId": "kucine",
+      "screen": "1관",
+      "program": "2D",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [
+        "청소년관람불가",
+        "92분",
+        "2D"
+      ],
+      "summary": "1관 · 잔여 152/152석",
+      "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121810&playDt=20261014&tsId=TS0039&pno=4",
+      "detailUrl": "https://kucinema.net/reservation/",
+      "bookingType": "booking",
+      "actionLabel": "예매",
+      "sourceId": "kucine-moviee-showtimes",
+      "posterUrl": ""
+    },
+    {
       "id": "live-cinecube-2026-10-14-029552-01-5",
       "date": "2026-10-14",
       "time": "18:35",
@@ -6832,7 +6964,7 @@
         "100분",
         "2D"
       ],
-      "summary": "1관 · 잔여 83/90석",
+      "summary": "1관 · 잔여 82/90석",
       "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121765&playDt=20261014&tsId=TS0056&pno=5",
       "detailUrl": "http://www.filmforum.kr/movie/ticketing.asp",
       "bookingType": "booking",
@@ -6862,6 +6994,30 @@
       "actionLabel": "공식 시간표",
       "sourceId": "kofa-schedule",
       "reservationId": "19102"
+    },
+    {
+      "id": "live-kucine-20261014-PT20261014000618",
+      "date": "2026-10-14",
+      "time": "19:40",
+      "timeSort": "19:40",
+      "title": "룩백(2D)",
+      "venueId": "kucine",
+      "screen": "1관",
+      "program": "2D",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [
+        "전체관람가",
+        "100분",
+        "2D"
+      ],
+      "summary": "1관 · 잔여 152/152석",
+      "bookingUrl": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121765&playDt=20261014&tsId=TS0039&pno=5",
+      "detailUrl": "https://kucinema.net/reservation/",
+      "bookingType": "booking",
+      "actionLabel": "예매",
+      "sourceId": "kucine-moviee-showtimes",
+      "posterUrl": ""
     },
     {
       "id": "live-filmforum-20261014-PT20261014000524",
@@ -6974,6 +7130,26 @@
       "sourceId": "sac-timetable"
     },
     {
+      "id": "live-indiespace-20261015-40393d7c09",
+      "date": "2026-10-15",
+      "time": "14:20",
+      "timeSort": "14:20",
+      "title": "아가미",
+      "venueId": "indiespace",
+      "screen": "인디스페이스",
+      "program": "작품별 상영일정",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [],
+      "summary": "작품별 상영일정 · 공식 상세글 기준",
+      "bookingUrl": "https://indiespace.kr/notice/5494",
+      "bookingType": "guide",
+      "actionLabel": "예매 안내",
+      "detailUrl": "https://indiespace.kr/491610",
+      "sourceId": "indiespace-official-posts",
+      "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FDtdsV%2FdJMcab6veDR%2FAAAAAAAAAAAAAAAAAAAAANtntLn3hABHm6XB0DWFej5FjwNOMLOEP1u4RZZF9nBa%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DblJyJGFTluMLpA%252BH29ZvX7hEotw%253D"
+    },
+    {
       "id": "live-kofa-2026-10-15-207eb0a7e1",
       "date": "2026-10-15",
       "time": "16:00",
@@ -6995,6 +7171,26 @@
       "actionLabel": "공식 시간표",
       "sourceId": "kofa-schedule",
       "reservationId": "19103"
+    },
+    {
+      "id": "live-indiespace-20261015-b14a945430",
+      "date": "2026-10-15",
+      "time": "16:30",
+      "timeSort": "16:30",
+      "title": "환희의 얼굴",
+      "venueId": "indiespace",
+      "screen": "인디스페이스",
+      "program": "작품별 상영일정",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [],
+      "summary": "작품별 상영일정 · 공식 상세글 기준",
+      "bookingUrl": "https://indiespace.kr/notice/5494",
+      "bookingType": "guide",
+      "actionLabel": "예매 안내",
+      "detailUrl": "https://indiespace.kr/491611",
+      "sourceId": "indiespace-official-posts",
+      "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FccrQBm%2FdJMcabldjgk%2FAAAAAAAAAAAAAAAAAAAAAHWSjhG5Lx3xXqNNsDyYTWzmqqGADwg3Ne1k_sfpkXFC%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3D8GVLRTDz%252FysD%252FhwlLt6VCXcHCYo%253D"
     },
     {
       "id": "live-sac-2026-10-15-3fd3e3395a",
@@ -7038,6 +7234,26 @@
       "actionLabel": "공식 시간표",
       "sourceId": "kofa-schedule",
       "reservationId": "19104"
+    },
+    {
+      "id": "live-indiespace-20261015-5959b50edb",
+      "date": "2026-10-15",
+      "time": "19:00",
+      "timeSort": "19:00",
+      "title": "담요를 입은 사람",
+      "venueId": "indiespace",
+      "screen": "인디스페이스",
+      "program": "작품별 상영일정",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [],
+      "summary": "작품별 상영일정 · 공식 상세글 기준",
+      "bookingUrl": "https://indiespace.kr/notice/5494",
+      "bookingType": "guide",
+      "actionLabel": "예매 안내",
+      "detailUrl": "https://indiespace.kr/491612",
+      "sourceId": "indiespace-official-posts",
+      "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbmjWL5%2FdJMcacYDr5n%2FAAAAAAAAAAAAAAAAAAAAAEaZ66-CDh5JQ3c3g70DVOuNh8S6T0aFvM4s7NBVPXhU%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DG4E9LnZO51zcBzheEUY0zMpmRsI%253D"
     },
     {
       "id": "live-sangsangmadang-20261015-PT20261015000434",
@@ -7084,6 +7300,46 @@
       "sourceId": "sac-timetable"
     },
     {
+      "id": "live-indiespace-20261016-29c44d3cc2",
+      "date": "2026-10-16",
+      "time": "10:50",
+      "timeSort": "10:50",
+      "title": "착지연습",
+      "venueId": "indiespace",
+      "screen": "인디스페이스",
+      "program": "작품별 상영일정",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [],
+      "summary": "작품별 상영일정 · 공식 상세글 기준",
+      "bookingUrl": "https://indiespace.kr/notice/5494",
+      "bookingType": "guide",
+      "actionLabel": "예매 안내",
+      "detailUrl": "https://indiespace.kr/491620",
+      "sourceId": "indiespace-official-posts",
+      "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FsBFg1%2FdJMcajpRTix%2FAAAAAAAAAAAAAAAAAAAAACtm98ThXkDM3ejnxLhE_F6NnnxCZwB7Ja2GSU6O5au3%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DT5gYd1Pcyo6iUOpowtYK8SBxti8%253D"
+    },
+    {
+      "id": "live-indiespace-20261016-40ffa26ba7",
+      "date": "2026-10-16",
+      "time": "13:00",
+      "timeSort": "13:00",
+      "title": "포르테",
+      "venueId": "indiespace",
+      "screen": "인디스페이스",
+      "program": "작품별 상영일정",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [],
+      "summary": "작품별 상영일정 · 공식 상세글 기준",
+      "bookingUrl": "https://indiespace.kr/notice/5494",
+      "bookingType": "guide",
+      "actionLabel": "예매 안내",
+      "detailUrl": "https://indiespace.kr/491643",
+      "sourceId": "indiespace-official-posts",
+      "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fc79q99%2FdJMcaaUohnn%2FAAAAAAAAAAAAAAAAAAAAANV33Og0pcI7HmBVuiDyugpgWjmPDDYQ_26VbGmM_cRW%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3Da9i3bddwCcyE5DSmMLZWURUWZEQ%253D"
+    },
+    {
       "id": "live-kofa-2026-10-16-8e7a3ade77",
       "date": "2026-10-16",
       "time": "14:00",
@@ -7107,6 +7363,26 @@
       "reservationId": "19105"
     },
     {
+      "id": "live-indiespace-20261016-b81694b98c",
+      "date": "2026-10-16",
+      "time": "14:40",
+      "timeSort": "14:40",
+      "title": "아가미",
+      "venueId": "indiespace",
+      "screen": "인디스페이스",
+      "program": "작품별 상영일정",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [],
+      "summary": "작품별 상영일정 · 공식 상세글 기준",
+      "bookingUrl": "https://indiespace.kr/notice/5494",
+      "bookingType": "guide",
+      "actionLabel": "예매 안내",
+      "detailUrl": "https://indiespace.kr/491610",
+      "sourceId": "indiespace-official-posts",
+      "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FDtdsV%2FdJMcab6veDR%2FAAAAAAAAAAAAAAAAAAAAANtntLn3hABHm6XB0DWFej5FjwNOMLOEP1u4RZZF9nBa%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DblJyJGFTluMLpA%252BH29ZvX7hEotw%253D"
+    },
+    {
       "id": "live-sac-2026-10-16-eaedd99e49",
       "date": "2026-10-16",
       "time": "16:00",
@@ -7125,6 +7401,26 @@
       "bookingType": "booking",
       "actionLabel": "예매",
       "sourceId": "sac-timetable"
+    },
+    {
+      "id": "live-indiespace-20261016-f094a5a22d",
+      "date": "2026-10-16",
+      "time": "16:50",
+      "timeSort": "16:50",
+      "title": "철들 무렵",
+      "venueId": "indiespace",
+      "screen": "인디스페이스",
+      "program": "작품별 상영일정",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [],
+      "summary": "작품별 상영일정 · 공식 상세글 기준",
+      "bookingUrl": "https://indiespace.kr/notice/5494",
+      "bookingType": "guide",
+      "actionLabel": "예매 안내",
+      "detailUrl": "https://indiespace.kr/491623",
+      "sourceId": "indiespace-official-posts",
+      "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbASlRj%2FdJMcablixRw%2FAAAAAAAAAAAAAAAAAAAAAEh-56RYgTNyIyumYzEUMpUoQI_GoY9EQxysfjk97JWW%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DiOzCfmAQfkZQjb9xLFMZ0CJJ4Mo%253D"
     },
     {
       "id": "live-kofa-2026-10-16-831dfcfa57",
@@ -7213,6 +7509,26 @@
       "sourceId": "sac-timetable"
     },
     {
+      "id": "live-indiespace-20261017-ad10c7cc8c",
+      "date": "2026-10-17",
+      "time": "11:00",
+      "timeSort": "11:00",
+      "title": "어떻게 해야 했을까?",
+      "venueId": "indiespace",
+      "screen": "인디스페이스",
+      "program": "작품별 상영일정",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [],
+      "summary": "작품별 상영일정 · 공식 상세글 기준",
+      "bookingUrl": "https://indiespace.kr/notice/5494",
+      "bookingType": "guide",
+      "actionLabel": "예매 안내",
+      "detailUrl": "https://indiespace.kr/491552",
+      "sourceId": "indiespace-official-posts",
+      "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbJls3D%2FdJMcadJqj1f%2FAAAAAAAAAAAAAAAAAAAAACeMfcsEnFeBQJWMcvIohcvB_4ORkerlfY_wDyJXwSo3%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DXLmI06Dbh9dng3lwXGY0yjOEnSo%253D"
+    },
+    {
       "id": "live-kofa-2026-10-17-9b0965ffad",
       "date": "2026-10-17",
       "time": "12:00",
@@ -7234,6 +7550,26 @@
       "actionLabel": "공식 시간표",
       "sourceId": "kofa-schedule",
       "reservationId": "19108"
+    },
+    {
+      "id": "live-indiespace-20261017-abe9ef46b6",
+      "date": "2026-10-17",
+      "time": "13:10",
+      "timeSort": "13:10",
+      "title": "담요를 입은 사람",
+      "venueId": "indiespace",
+      "screen": "인디스페이스",
+      "program": "작품별 상영일정",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [],
+      "summary": "작품별 상영일정 · 공식 상세글 기준",
+      "bookingUrl": "https://indiespace.kr/notice/5494",
+      "bookingType": "guide",
+      "actionLabel": "예매 안내",
+      "detailUrl": "https://indiespace.kr/491612",
+      "sourceId": "indiespace-official-posts",
+      "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbmjWL5%2FdJMcacYDr5n%2FAAAAAAAAAAAAAAAAAAAAAEaZ66-CDh5JQ3c3g70DVOuNh8S6T0aFvM4s7NBVPXhU%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DG4E9LnZO51zcBzheEUY0zMpmRsI%253D"
     },
     {
       "id": "live-movieland-20261017-298-1330",
@@ -7321,6 +7657,28 @@
       "sourceId": "sac-timetable"
     },
     {
+      "id": "live-indiespace-20261017-937c08f769",
+      "date": "2026-10-17",
+      "time": "18:30",
+      "timeSort": "18:30",
+      "title": "착지연습",
+      "venueId": "indiespace",
+      "screen": "인디스페이스",
+      "program": "작품별 상영일정",
+      "kind": "talk",
+      "status": "confirmed",
+      "tags": [
+        "인디토크"
+      ],
+      "summary": "작품별 상영일정 · 공식 상세글 기준",
+      "bookingUrl": "https://indiespace.kr/notice/5494",
+      "bookingType": "guide",
+      "actionLabel": "예매 안내",
+      "detailUrl": "https://indiespace.kr/491620",
+      "sourceId": "indiespace-official-posts",
+      "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FsBFg1%2FdJMcajpRTix%2FAAAAAAAAAAAAAAAAAAAAACtm98ThXkDM3ejnxLhE_F6NnnxCZwB7Ja2GSU6O5au3%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DT5gYd1Pcyo6iUOpowtYK8SBxti8%253D"
+    },
+    {
       "id": "live-sac-2026-10-17-385d073b8d",
       "date": "2026-10-17",
       "time": "18:40",
@@ -7339,6 +7697,46 @@
       "bookingType": "booking",
       "actionLabel": "예매",
       "sourceId": "sac-timetable"
+    },
+    {
+      "id": "live-indiespace-20261018-b65c8c2bbf",
+      "date": "2026-10-18",
+      "time": "11:00",
+      "timeSort": "11:00",
+      "title": "포르테",
+      "venueId": "indiespace",
+      "screen": "인디스페이스",
+      "program": "작품별 상영일정",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [],
+      "summary": "작품별 상영일정 · 공식 상세글 기준",
+      "bookingUrl": "https://indiespace.kr/notice/5494",
+      "bookingType": "guide",
+      "actionLabel": "예매 안내",
+      "detailUrl": "https://indiespace.kr/491643",
+      "sourceId": "indiespace-official-posts",
+      "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fc79q99%2FdJMcaaUohnn%2FAAAAAAAAAAAAAAAAAAAAANV33Og0pcI7HmBVuiDyugpgWjmPDDYQ_26VbGmM_cRW%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3Da9i3bddwCcyE5DSmMLZWURUWZEQ%253D"
+    },
+    {
+      "id": "live-indiespace-20261018-17336d0196",
+      "date": "2026-10-18",
+      "time": "12:40",
+      "timeSort": "12:40",
+      "title": "철들 무렵",
+      "venueId": "indiespace",
+      "screen": "인디스페이스",
+      "program": "작품별 상영일정",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [],
+      "summary": "작품별 상영일정 · 공식 상세글 기준",
+      "bookingUrl": "https://indiespace.kr/notice/5494",
+      "bookingType": "guide",
+      "actionLabel": "예매 안내",
+      "detailUrl": "https://indiespace.kr/491623",
+      "sourceId": "indiespace-official-posts",
+      "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbASlRj%2FdJMcablixRw%2FAAAAAAAAAAAAAAAAAAAAAEh-56RYgTNyIyumYzEUMpUoQI_GoY9EQxysfjk97JWW%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DiOzCfmAQfkZQjb9xLFMZ0CJJ4Mo%253D"
     },
     {
       "id": "live-movieland-20261018-297-1330",
@@ -7425,6 +7823,26 @@
       "sourceId": "sac-timetable"
     },
     {
+      "id": "live-indiespace-20261018-f20bbda03a",
+      "date": "2026-10-18",
+      "time": "18:20",
+      "timeSort": "18:20",
+      "title": "아가미",
+      "venueId": "indiespace",
+      "screen": "인디스페이스",
+      "program": "작품별 상영일정",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [],
+      "summary": "작품별 상영일정 · 공식 상세글 기준",
+      "bookingUrl": "https://indiespace.kr/notice/5494",
+      "bookingType": "guide",
+      "actionLabel": "예매 안내",
+      "detailUrl": "https://indiespace.kr/491610",
+      "sourceId": "indiespace-official-posts",
+      "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FDtdsV%2FdJMcab6veDR%2FAAAAAAAAAAAAAAAAAAAAANtntLn3hABHm6XB0DWFej5FjwNOMLOEP1u4RZZF9nBa%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DblJyJGFTluMLpA%252BH29ZvX7hEotw%253D"
+    },
+    {
       "id": "live-sac-2026-10-18-51d269d473",
       "date": "2026-10-18",
       "time": "18:30",
@@ -7443,6 +7861,86 @@
       "bookingType": "booking",
       "actionLabel": "예매",
       "sourceId": "sac-timetable"
+    },
+    {
+      "id": "live-indiespace-20261019-556653ed57",
+      "date": "2026-10-19",
+      "time": "12:00",
+      "timeSort": "12:00",
+      "title": "담요를 입은 사람",
+      "venueId": "indiespace",
+      "screen": "인디스페이스",
+      "program": "작품별 상영일정",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [],
+      "summary": "작품별 상영일정 · 공식 상세글 기준",
+      "bookingUrl": "https://indiespace.kr/notice/5494",
+      "bookingType": "guide",
+      "actionLabel": "예매 안내",
+      "detailUrl": "https://indiespace.kr/491612",
+      "sourceId": "indiespace-official-posts",
+      "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbmjWL5%2FdJMcacYDr5n%2FAAAAAAAAAAAAAAAAAAAAAEaZ66-CDh5JQ3c3g70DVOuNh8S6T0aFvM4s7NBVPXhU%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DG4E9LnZO51zcBzheEUY0zMpmRsI%253D"
+    },
+    {
+      "id": "live-indiespace-20261019-e9e0bb12ac",
+      "date": "2026-10-19",
+      "time": "14:20",
+      "timeSort": "14:20",
+      "title": "착지연습",
+      "venueId": "indiespace",
+      "screen": "인디스페이스",
+      "program": "작품별 상영일정",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [],
+      "summary": "작품별 상영일정 · 공식 상세글 기준",
+      "bookingUrl": "https://indiespace.kr/notice/5494",
+      "bookingType": "guide",
+      "actionLabel": "예매 안내",
+      "detailUrl": "https://indiespace.kr/491620",
+      "sourceId": "indiespace-official-posts",
+      "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FsBFg1%2FdJMcajpRTix%2FAAAAAAAAAAAAAAAAAAAAACtm98ThXkDM3ejnxLhE_F6NnnxCZwB7Ja2GSU6O5au3%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DT5gYd1Pcyo6iUOpowtYK8SBxti8%253D"
+    },
+    {
+      "id": "live-indiespace-20261019-131feb2170",
+      "date": "2026-10-19",
+      "time": "19:00",
+      "timeSort": "19:00",
+      "title": "철들 무렵",
+      "venueId": "indiespace",
+      "screen": "인디스페이스",
+      "program": "작품별 상영일정",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [],
+      "summary": "작품별 상영일정 · 공식 상세글 기준",
+      "bookingUrl": "https://indiespace.kr/notice/5494",
+      "bookingType": "guide",
+      "actionLabel": "예매 안내",
+      "detailUrl": "https://indiespace.kr/491623",
+      "sourceId": "indiespace-official-posts",
+      "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbASlRj%2FdJMcablixRw%2FAAAAAAAAAAAAAAAAAAAAAEh-56RYgTNyIyumYzEUMpUoQI_GoY9EQxysfjk97JWW%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DiOzCfmAQfkZQjb9xLFMZ0CJJ4Mo%253D"
+    },
+    {
+      "id": "live-indiespace-20261020-794895fd55",
+      "date": "2026-10-20",
+      "time": "10:50",
+      "timeSort": "10:50",
+      "title": "아가미",
+      "venueId": "indiespace",
+      "screen": "인디스페이스",
+      "program": "작품별 상영일정",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [],
+      "summary": "작품별 상영일정 · 공식 상세글 기준",
+      "bookingUrl": "https://indiespace.kr/notice/5494",
+      "bookingType": "guide",
+      "actionLabel": "예매 안내",
+      "detailUrl": "https://indiespace.kr/491610",
+      "sourceId": "indiespace-official-posts",
+      "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FDtdsV%2FdJMcab6veDR%2FAAAAAAAAAAAAAAAAAAAAANtntLn3hABHm6XB0DWFej5FjwNOMLOEP1u4RZZF9nBa%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DblJyJGFTluMLpA%252BH29ZvX7hEotw%253D"
     },
     {
       "id": "live-kofa-2026-10-20-21497db76c",
@@ -7468,6 +7966,46 @@
       "reservationId": ""
     },
     {
+      "id": "live-indiespace-20261020-c390342e76",
+      "date": "2026-10-20",
+      "time": "13:00",
+      "timeSort": "13:00",
+      "title": "어떻게 해야 했을까?",
+      "venueId": "indiespace",
+      "screen": "인디스페이스",
+      "program": "작품별 상영일정",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [],
+      "summary": "작품별 상영일정 · 공식 상세글 기준",
+      "bookingUrl": "https://indiespace.kr/notice/5494",
+      "bookingType": "guide",
+      "actionLabel": "예매 안내",
+      "detailUrl": "https://indiespace.kr/491552",
+      "sourceId": "indiespace-official-posts",
+      "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbJls3D%2FdJMcadJqj1f%2FAAAAAAAAAAAAAAAAAAAAACeMfcsEnFeBQJWMcvIohcvB_4ORkerlfY_wDyJXwSo3%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DXLmI06Dbh9dng3lwXGY0yjOEnSo%253D"
+    },
+    {
+      "id": "live-indiespace-20261020-675e497004",
+      "date": "2026-10-20",
+      "time": "15:10",
+      "timeSort": "15:10",
+      "title": "숨어드는 산",
+      "venueId": "indiespace",
+      "screen": "인디스페이스",
+      "program": "작품별 상영일정",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [],
+      "summary": "작품별 상영일정 · 공식 상세글 기준",
+      "bookingUrl": "https://indiespace.kr/notice/5494",
+      "bookingType": "guide",
+      "actionLabel": "예매 안내",
+      "detailUrl": "https://indiespace.kr/491602",
+      "sourceId": "indiespace-official-posts",
+      "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbGJbVL%2FdJMcabSVC0J%2FAAAAAAAAAAAAAAAAAAAAALxbbAQH4D-s-CR-qB1OnlXj80x_ofP36kUoz_VRgg8b%2Fimg.png%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3D6CiVw6eYmd8m4lzVcrThR62lNHs%253D"
+    },
+    {
       "id": "live-kofa-2026-10-20-131366d2c0",
       "date": "2026-10-20",
       "time": "15:30",
@@ -7489,6 +8027,26 @@
       "actionLabel": "공식 시간표",
       "sourceId": "kofa-schedule",
       "reservationId": ""
+    },
+    {
+      "id": "live-indiespace-20261020-f7bd51a0d7",
+      "date": "2026-10-20",
+      "time": "17:20",
+      "timeSort": "17:20",
+      "title": "포르테",
+      "venueId": "indiespace",
+      "screen": "인디스페이스",
+      "program": "작품별 상영일정",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [],
+      "summary": "작품별 상영일정 · 공식 상세글 기준",
+      "bookingUrl": "https://indiespace.kr/notice/5494",
+      "bookingType": "guide",
+      "actionLabel": "예매 안내",
+      "detailUrl": "https://indiespace.kr/491643",
+      "sourceId": "indiespace-official-posts",
+      "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fc79q99%2FdJMcaaUohnn%2FAAAAAAAAAAAAAAAAAAAAANV33Og0pcI7HmBVuiDyugpgWjmPDDYQ_26VbGmM_cRW%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3Da9i3bddwCcyE5DSmMLZWURUWZEQ%253D"
     },
     {
       "id": "live-sac-2026-10-20-57f071045d",
@@ -7534,6 +8092,26 @@
       "reservationId": ""
     },
     {
+      "id": "live-indiespace-20261020-bdc24059d9",
+      "date": "2026-10-20",
+      "time": "19:00",
+      "timeSort": "19:00",
+      "title": "환희의 얼굴",
+      "venueId": "indiespace",
+      "screen": "인디스페이스",
+      "program": "작품별 상영일정",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [],
+      "summary": "작품별 상영일정 · 공식 상세글 기준",
+      "bookingUrl": "https://indiespace.kr/notice/5494",
+      "bookingType": "guide",
+      "actionLabel": "예매 안내",
+      "detailUrl": "https://indiespace.kr/491611",
+      "sourceId": "indiespace-official-posts",
+      "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FccrQBm%2FdJMcabldjgk%2FAAAAAAAAAAAAAAAAAAAAAHWSjhG5Lx3xXqNNsDyYTWzmqqGADwg3Ne1k_sfpkXFC%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3D8GVLRTDz%252FysD%252FhwlLt6VCXcHCYo%253D"
+    },
+    {
       "id": "live-sac-2026-10-20-bbc77a2205",
       "date": "2026-10-20",
       "time": "20:00",
@@ -7552,6 +8130,46 @@
       "bookingType": "booking",
       "actionLabel": "예매",
       "sourceId": "sac-timetable"
+    },
+    {
+      "id": "live-indiespace-20261021-f4da94e490",
+      "date": "2026-10-21",
+      "time": "11:00",
+      "timeSort": "11:00",
+      "title": "철들 무렵",
+      "venueId": "indiespace",
+      "screen": "인디스페이스",
+      "program": "작품별 상영일정",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [],
+      "summary": "작품별 상영일정 · 공식 상세글 기준",
+      "bookingUrl": "https://indiespace.kr/notice/5494",
+      "bookingType": "guide",
+      "actionLabel": "예매 안내",
+      "detailUrl": "https://indiespace.kr/491623",
+      "sourceId": "indiespace-official-posts",
+      "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbASlRj%2FdJMcablixRw%2FAAAAAAAAAAAAAAAAAAAAAEh-56RYgTNyIyumYzEUMpUoQI_GoY9EQxysfjk97JWW%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DiOzCfmAQfkZQjb9xLFMZ0CJJ4Mo%253D"
+    },
+    {
+      "id": "live-indiespace-20261021-c73d738415",
+      "date": "2026-10-21",
+      "time": "13:10",
+      "timeSort": "13:10",
+      "title": "포르테",
+      "venueId": "indiespace",
+      "screen": "인디스페이스",
+      "program": "작품별 상영일정",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [],
+      "summary": "작품별 상영일정 · 공식 상세글 기준",
+      "bookingUrl": "https://indiespace.kr/notice/5494",
+      "bookingType": "guide",
+      "actionLabel": "예매 안내",
+      "detailUrl": "https://indiespace.kr/491643",
+      "sourceId": "indiespace-official-posts",
+      "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fc79q99%2FdJMcaaUohnn%2FAAAAAAAAAAAAAAAAAAAAANV33Og0pcI7HmBVuiDyugpgWjmPDDYQ_26VbGmM_cRW%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3Da9i3bddwCcyE5DSmMLZWURUWZEQ%253D"
     },
     {
       "id": "live-kofa-2026-10-21-3e18b62866",
@@ -7597,6 +8215,26 @@
       "sourceId": "sac-timetable"
     },
     {
+      "id": "live-indiespace-20261021-a8bdcb5d9f",
+      "date": "2026-10-21",
+      "time": "15:00",
+      "timeSort": "15:00",
+      "title": "담요를 입은 사람",
+      "venueId": "indiespace",
+      "screen": "인디스페이스",
+      "program": "작품별 상영일정",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [],
+      "summary": "작품별 상영일정 · 공식 상세글 기준",
+      "bookingUrl": "https://indiespace.kr/notice/5494",
+      "bookingType": "guide",
+      "actionLabel": "예매 안내",
+      "detailUrl": "https://indiespace.kr/491612",
+      "sourceId": "indiespace-official-posts",
+      "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbmjWL5%2FdJMcacYDr5n%2FAAAAAAAAAAAAAAAAAAAAAEaZ66-CDh5JQ3c3g70DVOuNh8S6T0aFvM4s7NBVPXhU%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DG4E9LnZO51zcBzheEUY0zMpmRsI%253D"
+    },
+    {
       "id": "live-kofa-2026-10-21-60a3de5734",
       "date": "2026-10-21",
       "time": "16:30",
@@ -7640,6 +8278,26 @@
       "sourceId": "sac-timetable"
     },
     {
+      "id": "live-indiespace-20261021-80bbb0381b",
+      "date": "2026-10-21",
+      "time": "17:20",
+      "timeSort": "17:20",
+      "title": "눈 둘 데가 없네",
+      "venueId": "indiespace",
+      "screen": "인디스페이스",
+      "program": "작품별 상영일정",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [],
+      "summary": "작품별 상영일정 · 공식 상세글 기준",
+      "bookingUrl": "https://indiespace.kr/notice/5494",
+      "bookingType": "guide",
+      "actionLabel": "예매 안내",
+      "detailUrl": "https://indiespace.kr/491662",
+      "sourceId": "indiespace-official-posts",
+      "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FKQ3U4%2FdJMcagtJijO%2FAAAAAAAAAAAAAAAAAAAAAKH4gcbmONCbAZfz-yMnnRvJMuh7ha9n8OfVoQ04Vj1U%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DBz4UTof%252BDblZAy%252BDwGuV3tXMP2s%253D"
+    },
+    {
       "id": "live-sac-2026-10-21-04dbccd35e",
       "date": "2026-10-21",
       "time": "18:40",
@@ -7658,6 +8316,26 @@
       "bookingType": "booking",
       "actionLabel": "예매",
       "sourceId": "sac-timetable"
+    },
+    {
+      "id": "live-indiespace-20261021-7a675d381a",
+      "date": "2026-10-21",
+      "time": "19:00",
+      "timeSort": "19:00",
+      "title": "구제역에서 살아 돌아온 돼지",
+      "venueId": "indiespace",
+      "screen": "인디스페이스",
+      "program": "작품별 상영일정",
+      "kind": "program",
+      "status": "confirmed",
+      "tags": [],
+      "summary": "작품별 상영일정 · 공식 상세글 기준",
+      "bookingUrl": "https://indiespace.kr/notice/5494",
+      "bookingType": "guide",
+      "actionLabel": "예매 안내",
+      "detailUrl": "https://indiespace.kr/491661",
+      "sourceId": "indiespace-official-posts",
+      "posterUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fd0eOWZ%2FdJMcaiLLBWR%2FAAAAAAAAAAAAAAAAAAAAAPgcosejCHBrBYxQarbmXQUV1Z_2ViZOOS5gU8TFbgMk%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DV9SdfWkmQo4fZM5ff5X%252B%252FcKSDcI%253D"
     },
     {
       "id": "live-kofa-2026-10-21-da873cde64",
@@ -9073,7 +9751,7 @@
       "venueId": "kofa",
       "url": "https://www.koreafilm.or.kr/cinematheque/screenings",
       "parserStatus": "live-html",
-      "lastCheckedAt": "2026-10-07T06:16:36.436Z",
+      "lastCheckedAt": "2026-10-07T09:23:23.079Z",
       "lastOk": true,
       "lastStatus": 200,
       "lastError": "",
@@ -9094,7 +9772,7 @@
       "venueId": "sac",
       "url": "https://www.cinematheque.seoul.kr/bbs/board.php?sfl=wr_30&bo_table=program&stx=1",
       "parserStatus": "live-html",
-      "lastCheckedAt": "2026-10-07T06:16:36.436Z",
+      "lastCheckedAt": "2026-10-07T09:23:23.079Z",
       "lastOk": true,
       "lastStatus": 200,
       "lastError": "",
@@ -9119,7 +9797,7 @@
       "venueId": "laika",
       "url": "https://laikacinema.com/program/",
       "parserStatus": "live-html",
-      "lastCheckedAt": "2026-10-07T06:16:36.436Z",
+      "lastCheckedAt": "2026-10-07T09:23:23.079Z",
       "lastOk": true,
       "lastStatus": 200,
       "lastError": "",
@@ -9140,7 +9818,7 @@
       "venueId": "indiespace",
       "url": "https://indiespace.kr/",
       "parserStatus": "live-html",
-      "lastCheckedAt": "2026-10-07T06:16:36.436Z",
+      "lastCheckedAt": "2026-10-07T09:23:23.079Z",
       "lastOk": true,
       "lastStatus": 200,
       "lastError": "",
@@ -9161,7 +9839,7 @@
       "venueId": "cinecube",
       "url": "https://www.cinecube.co.kr/event",
       "parserStatus": "live-html",
-      "lastCheckedAt": "2026-10-07T06:16:36.436Z",
+      "lastCheckedAt": "2026-10-07T09:23:23.079Z",
       "lastOk": true,
       "lastStatus": 200,
       "lastError": "",
@@ -9182,7 +9860,7 @@
       "venueId": "momo",
       "url": "https://www.arthousemomo.co.kr/pages/board.php?bo_table=special_program",
       "parserStatus": "live-html",
-      "lastCheckedAt": "2026-10-07T06:16:36.436Z",
+      "lastCheckedAt": "2026-10-07T09:23:23.079Z",
       "lastOk": false,
       "lastStatus": 0,
       "lastError": "",
@@ -9203,11 +9881,11 @@
       "venueId": "cinecube",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table",
       "parserStatus": "live-api",
-      "lastCheckedAt": "2026-10-07T06:16:36.436Z",
+      "lastCheckedAt": "2026-10-07T09:23:23.079Z",
       "lastOk": true,
       "lastStatus": 200,
       "lastError": "",
-      "liveSessionCount": 85,
+      "liveSessionCount": 81,
       "lastSeatCheckedAt": "2026-07-31T10:40:10.953Z",
       "lastSeatOk": true,
       "lastSeatError": "",
@@ -9277,11 +9955,11 @@
       "venueId": "sac",
       "url": "https://www.cinematheque.seoul.kr/bbs/content.php?co_id=timetable",
       "parserStatus": "live-html",
-      "lastCheckedAt": "2026-10-07T06:16:36.436Z",
+      "lastCheckedAt": "2026-10-07T09:23:23.079Z",
       "lastOk": true,
       "lastStatus": 200,
       "lastError": "",
-      "liveSessionCount": 50,
+      "liveSessionCount": 49,
       "lastWarning": "",
       "preservedExisting": false,
       "lastFallbackUsed": false,
@@ -9297,11 +9975,11 @@
       "venueId": "kofa",
       "url": "https://www.koreafilm.or.kr/cinematheque/schedule",
       "parserStatus": "live-html",
-      "lastCheckedAt": "2026-10-07T06:16:36.436Z",
+      "lastCheckedAt": "2026-10-07T09:23:23.079Z",
       "lastOk": true,
       "lastStatus": 200,
       "lastError": "",
-      "liveSessionCount": 49,
+      "liveSessionCount": 48,
       "lastWarning": "",
       "preservedExisting": false,
       "lastFallbackUsed": false,
@@ -9317,7 +9995,7 @@
       "venueId": "filmforum",
       "url": "http://www.filmforum.kr/movie/schedule/list.asp",
       "parserStatus": "manual-image-heavy",
-      "lastCheckedAt": "2026-10-07T06:16:36.436Z",
+      "lastCheckedAt": "2026-10-07T09:23:23.079Z",
       "lastOk": true,
       "lastStatus": 200,
       "lastError": "",
@@ -9387,11 +10065,11 @@
       "venueId": "sangsangmadang",
       "url": "https://www.sangsangmadang.com/movie/list",
       "parserStatus": "live-api",
-      "lastCheckedAt": "2026-10-07T06:16:36.436Z",
+      "lastCheckedAt": "2026-10-07T09:23:23.079Z",
       "lastOk": true,
       "lastStatus": 200,
       "lastError": "",
-      "liveSessionCount": 28,
+      "liveSessionCount": 27,
       "lastSeatCheckedAt": "2026-07-31T10:40:10.953Z",
       "lastSeatOk": true,
       "lastSeatError": "",
@@ -9436,11 +10114,11 @@
       "venueId": "kucine",
       "url": "https://kucinema.net/reservation/",
       "parserStatus": "live-api",
-      "lastCheckedAt": "2026-10-07T06:16:36.436Z",
+      "lastCheckedAt": "2026-10-07T09:23:23.079Z",
       "lastOk": true,
       "lastStatus": 200,
       "lastError": "",
-      "liveSessionCount": 21,
+      "liveSessionCount": 31,
       "lastSeatCheckedAt": "2026-07-31T10:40:10.953Z",
       "lastSeatOk": true,
       "lastSeatError": "",
@@ -9450,7 +10128,7 @@
       "lastFallbackUsed": false,
       "lastFallbackReason": "",
       "lastFallbackSessionCount": 0,
-      "liveDateCount": 6,
+      "liveDateCount": 8,
       "upstreamDateCount": null,
       "upstreamActiveDateCount": null
     },
@@ -9460,11 +10138,11 @@
       "venueId": "filmforum",
       "url": "http://www.filmforum.kr/movie/ticketing.asp",
       "parserStatus": "live-api",
-      "lastCheckedAt": "2026-10-07T06:16:36.436Z",
+      "lastCheckedAt": "2026-10-07T09:23:23.079Z",
       "lastOk": true,
       "lastStatus": 200,
       "lastError": "",
-      "liveSessionCount": 81,
+      "liveSessionCount": 77,
       "lastSeatCheckedAt": "2026-07-31T10:40:10.953Z",
       "lastSeatOk": true,
       "lastSeatError": "",
@@ -9509,17 +10187,17 @@
       "venueId": "indiespace",
       "url": "https://indiespace.kr/",
       "parserStatus": "live-html",
-      "lastCheckedAt": "2026-10-07T06:16:36.436Z",
+      "lastCheckedAt": "2026-10-07T09:23:23.079Z",
       "lastOk": true,
       "lastStatus": 200,
       "lastError": "",
-      "liveSessionCount": 34,
+      "liveSessionCount": 59,
       "lastWarning": "",
       "preservedExisting": false,
       "lastFallbackUsed": false,
       "lastFallbackReason": "",
       "lastFallbackSessionCount": 0,
-      "liveDateCount": 10,
+      "liveDateCount": 17,
       "upstreamDateCount": null,
       "upstreamActiveDateCount": null
     },
@@ -9529,7 +10207,7 @@
       "venueId": "movieland",
       "url": "https://movieland.co/category/now-showing/24/",
       "parserStatus": "live-html",
-      "lastCheckedAt": "2026-10-07T06:16:36.436Z",
+      "lastCheckedAt": "2026-10-07T09:23:23.079Z",
       "lastOk": true,
       "lastStatus": 206,
       "lastError": "",
@@ -9578,7 +10256,7 @@
       "venueId": "emu",
       "url": "http://www.emuartspace.com/bbs/m/all_data_list.php?type=mcb&ep=ep205032292582d223ceaa81&gp=all&menu=hm18722239235a0ea04f620a1",
       "parserStatus": "live-html",
-      "lastCheckedAt": "2026-10-07T06:16:36.436Z",
+      "lastCheckedAt": "2026-10-07T09:23:23.079Z",
       "lastOk": true,
       "lastStatus": 200,
       "lastError": "",
@@ -9599,7 +10277,7 @@
       "url": "https://cine.arirang.go.kr:8443/arirang/event/plan.do",
       "parserStatus": "live-html",
       "programParser": "arirang",
-      "lastCheckedAt": "2026-10-07T06:16:36.436Z",
+      "lastCheckedAt": "2026-10-07T09:23:23.079Z",
       "lastOk": null,
       "lastStatus": null,
       "lastError": "",
@@ -9623,7 +10301,7 @@
       "url": "http://www.filmforum.kr/community/news/list.asp",
       "parserStatus": "watch-html",
       "programParser": "strict-event",
-      "lastCheckedAt": "2026-10-07T06:16:36.436Z",
+      "lastCheckedAt": "2026-10-07T09:23:23.079Z",
       "lastOk": true,
       "lastStatus": 200,
       "lastError": "",
@@ -9644,7 +10322,7 @@
       "url": "https://kucinema.net/make/",
       "parserStatus": "watch-html",
       "programParser": "strict-event",
-      "lastCheckedAt": "2026-10-07T06:16:36.436Z",
+      "lastCheckedAt": "2026-10-07T09:23:23.079Z",
       "lastOk": true,
       "lastStatus": 200,
       "lastError": "",
@@ -9665,7 +10343,7 @@
       "url": "https://litt.ly/artnine",
       "parserStatus": "watch-html",
       "programParser": "strict-event",
-      "lastCheckedAt": "2026-10-07T06:16:36.436Z",
+      "lastCheckedAt": "2026-10-07T09:23:23.079Z",
       "lastOk": true,
       "lastStatus": 200,
       "lastError": "",
@@ -9686,7 +10364,7 @@
       "url": "https://movieland.co/",
       "parserStatus": "watch-html",
       "programParser": "strict-event",
-      "lastCheckedAt": "2026-10-07T06:16:36.436Z",
+      "lastCheckedAt": "2026-10-07T09:23:23.079Z",
       "lastOk": true,
       "lastStatus": 200,
       "lastError": "",
@@ -9702,7 +10380,7 @@
     }
   ],
   "coverageScope": {
-    "reviewedAt": "2026-10-07T06:16:36.436Z",
+    "reviewedAt": "2026-10-07T09:23:23.079Z",
     "policy": "정기 상영시간표를 공개하는 서울 독립·예술 단관/시네마테크를 우선 반영합니다.",
     "includedVenueIds": [
       "kofa",

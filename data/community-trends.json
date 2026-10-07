@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-07T06:17:20.081Z",
+  "generatedAt": "2026-10-07T09:24:10.012Z",
   "weekStart": "2026-10-05",
   "weekEnd": "2026-10-07",
   "windowStart": "2026-10-05",
@@ -13,12 +13,125 @@
   "items": [
     {
       "rank": 1,
+      "title": "룩백",
+      "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
+      "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261008&tsId=TS0044&pno=2",
+      "score": 118.7,
+      "signal": 2,
+      "positiveSignal": 2,
+      "mentionCount": 10.7,
+      "rawPositiveSignal": 2,
+      "rawMentionCount": 12.792481250360577,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "sangsangmadang",
+        "cinecube",
+        "filmforum",
+        "kucine"
+      ],
+      "venueNames": [
+        "KT&G 상상마당 시네마",
+        "씨네큐브 광화문",
+        "필름포럼",
+        "KU시네마테크"
+      ],
+      "nextDate": "2026-10-08",
+      "nextTime": "12:05",
+      "evidence": [
+        {
+          "title": "룩백이랑 일욜 패러렐 테일즈 먹을 사람 있음?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869299&page=2",
+          "date": "2026-10-05",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "룩백 메가박스 단독임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869013&page=7",
+          "date": "2026-10-05",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "룩백 메박에서만 개봉하네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869630&page=4",
+          "date": "2026-10-06",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "룩백 인기 뭐고",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869517&page=6",
+          "date": "2026-10-06",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "룩백 7시 45분쯤 가면 좌석 구림??",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870272&page=1",
+          "date": "2026-10-07",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/feIEhh07azcRtn2MocbFX3kWcjw.jpg"
+    },
+    {
+      "rank": 2,
       "title": "이방인",
       "posterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
       "localPosterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121760&playDt=20261007&tsId=TS0056&pno=4",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-07&movieCd=029631&playSDT=2026-10-07&screenId=02&showSeq=4",
       "score": 106.4,
       "signal": 15.5,
       "positiveSignal": 15.5,
@@ -27,19 +140,19 @@
       "rawMentionCount": 6.292481250360578,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum",
         "cinecube",
+        "filmforum",
         "sangsangmadang",
         "kucine"
       ],
       "venueNames": [
-        "필름포럼",
         "씨네큐브 광화문",
+        "필름포럼",
         "KT&G 상상마당 시네마",
         "KU시네마테크"
       ],
       "nextDate": "2026-10-07",
-      "nextTime": "17:40",
+      "nextTime": "20:10",
       "evidence": [
         {
           "title": "이방인 꿀잼작이네",
@@ -159,119 +272,6 @@
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260903_7e3d6928.jpg"
     },
     {
-      "rank": 2,
-      "title": "룩백",
-      "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
-      "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261008&tsId=TS0044&pno=2",
-      "score": 55.7,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 5.2,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 7.292481250360578,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "sangsangmadang",
-        "cinecube",
-        "filmforum",
-        "kucine"
-      ],
-      "venueNames": [
-        "KT&G 상상마당 시네마",
-        "씨네큐브 광화문",
-        "필름포럼",
-        "KU시네마테크"
-      ],
-      "nextDate": "2026-10-08",
-      "nextTime": "12:05",
-      "evidence": [
-        {
-          "title": "룩백이랑 일욜 패러렐 테일즈 먹을 사람 있음?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869299&page=2",
-          "date": "2026-10-05",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "룩백 메가박스 단독임?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869013&page=7",
-          "date": "2026-10-05",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "룩백 메박에서만 개봉하네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869630&page=4",
-          "date": "2026-10-06",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "룩백 인기 뭐고",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869517&page=6",
-          "date": "2026-10-06",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "오늘 상영하는 003 룩백 2장 양도합니다 !",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870006&page=4",
-          "date": "2026-10-07",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/feIEhh07azcRtn2MocbFX3kWcjw.jpg"
-    },
-    {
       "rank": 3,
       "title": "꿈꾸던 모험",
       "posterUrl": "/assets/recommendation-posters/730c75bb764294f9.webp",
@@ -279,12 +279,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121738&playDt=20261008&tsId=TS0056&pno=2",
-      "score": 45.6,
+      "score": 47.2,
       "signal": 0,
       "positiveSignal": 0,
-      "mentionCount": 4.4,
+      "mentionCount": 4.6,
       "rawPositiveSignal": 0,
-      "rawMentionCount": 5.953445297804259,
+      "rawMentionCount": 6.11440934524794,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum",
@@ -331,7 +331,7 @@
         },
         {
           "title": "꿈꾸던 모험 자막 어디서 만든거냐 존나 뻐킹 아마추어같던데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870162&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870162&page=3",
           "date": "2026-10-07",
           "positive": 0,
           "rawPositive": 0,
@@ -340,7 +340,7 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 3,
+          "commentCount": 4,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
@@ -448,7 +448,7 @@
           "englishTitle": "La Gradiva",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90315&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 23
+          "mentionCount": 24
         },
         {
           "rank": 3,
@@ -468,6 +468,14 @@
         },
         {
           "rank": 5,
+          "title": "버킹 패스타드",
+          "englishTitle": "Bucking Fastard",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91151&c_idx=430&sp_idx=&QueryStep=2",
+          "mentionCount": 15
+        },
+        {
+          "rank": 6,
           "title": "스파이럴",
           "englishTitle": "The Spiral",
           "section": "오픈 시네마",
@@ -475,7 +483,7 @@
           "mentionCount": 15
         },
         {
-          "rank": 6,
+          "rank": 7,
           "title": "클럽 키드",
           "englishTitle": "Club Kid",
           "section": "월드 시네마",
@@ -483,19 +491,11 @@
           "mentionCount": 14
         },
         {
-          "rank": 7,
-          "title": "로마 엘라스티카",
-          "englishTitle": "Roma Elastica",
-          "section": "아이콘",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91150&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 13
-        },
-        {
           "rank": 8,
-          "title": "페이퍼 타이거",
-          "englishTitle": "Paper Tiger",
-          "section": "아이콘",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89791&c_idx=430&sp_idx=&QueryStep=2",
+          "title": "오아시스",
+          "englishTitle": "Oasis",
+          "section": "플래시 포워드",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91153&c_idx=435&sp_idx=&QueryStep=2",
           "mentionCount": 13
         }
       ]
@@ -506,13 +506,13 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 221,
-    "listedPostCount": 292,
-    "detailedPostCount": 4,
-    "commentFetchCount": 4,
-    "commentCount": 9,
+    "fetchedPostCount": 319,
+    "listedPostCount": 342,
+    "detailedPostCount": 11,
+    "commentFetchCount": 11,
+    "commentCount": 16,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 6,
+    "scannedPageCount": 7,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-10-06",
     "newestScannedDate": "2026-10-07",
