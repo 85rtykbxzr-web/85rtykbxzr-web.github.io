@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-07T15:23:01.820Z",
+  "generatedAt": "2026-10-07T20:36:29.114Z",
   "weekStart": "2026-10-06",
   "weekEnd": "2026-10-08",
   "windowStart": "2026-10-06",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261008&tsId=TS0044&pno=2",
-      "score": 103.5,
+      "score": 113.5,
       "signal": 1.4,
       "positiveSignal": 1.4,
-      "mentionCount": 9.4,
+      "mentionCount": 10.4,
       "rawPositiveSignal": 2,
-      "rawMentionCount": 13.245926548164835,
+      "rawMentionCount": 14.245926548164835,
       "scheduleBackfill": false,
       "venueIds": [
         "sangsangmadang",
@@ -246,38 +246,34 @@
     },
     {
       "rank": 4,
-      "title": "이방인",
-      "posterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
-      "localPosterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
-      "posterSource": "verified-official",
+      "title": "셀린느와 줄리 배타러 가다",
+      "posterUrl": "/assets/recommendation-posters/8aac803cf6309561.webp",
+      "localPosterUrl": "/assets/recommendation-posters/8aac803cf6309561.webp",
+      "posterSource": "wikipedia-pageimage",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-08&movieCd=029631&playSDT=2026-10-08&screenId=01&showSeq=4",
-      "score": 23.6,
+      "url": "https://www.tinyticket.net/event/EVmoJmWJ7SaL",
+      "score": 26,
       "signal": 0,
       "positiveSignal": 0,
-      "mentionCount": 2,
+      "mentionCount": 2.5,
       "rawPositiveSignal": 0,
-      "rawMentionCount": 3.792481250360578,
+      "rawMentionCount": 2.5,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube",
-        "filmforum",
-        "sangsangmadang",
-        "kucine"
+        "sac",
+        "filmforum"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
-        "필름포럼",
-        "KT&G 상상마당 시네마",
-        "KU시네마테크"
+        "서울아트시네마",
+        "필름포럼"
       ],
-      "nextDate": "2026-10-08",
-      "nextTime": "15:10",
+      "nextDate": "2026-10-09",
+      "nextTime": "17:40",
       "evidence": [
         {
-          "title": "이방인 너무 밋밋하네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869686&page=3",
-          "date": "2026-10-06",
+          "title": "셀줄배 화장실 안가고 다보는거 가능한가",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870532&page=1",
+          "date": "2026-10-08",
           "positive": 0,
           "rawPositive": 0,
           "negative": 0,
@@ -285,45 +281,13 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 0,
+          "commentCount": 16,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "이방인 아쉽노",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869653&page=4",
-          "date": "2026-10-06",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "이방인 1만명 넘었던데 이 영화 뒷북 개봉좀",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869638&page=4",
-          "date": "2026-10-06",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
+          "dayWeight": 1
         }
       ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260903_7e3d6928.jpg"
+      "posterSourceUrl": "https://upload.wikimedia.org/wikipedia/en/3/34/Celine_and_Julie_Go_Boating_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     }
   ],
   "festivalPicks": [
@@ -348,7 +312,7 @@
           "englishTitle": "Gravity",
           "section": "특별상영 & 까르뜨 블랑슈",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91282&c_idx=441&sp_idx=&QueryStep=2",
-          "mentionCount": 25
+          "mentionCount": 26
         },
         {
           "rank": 3,
@@ -392,11 +356,11 @@
         },
         {
           "rank": 8,
-          "title": "오아시스",
-          "englishTitle": "Oasis",
-          "section": "플래시 포워드",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91153&c_idx=435&sp_idx=&QueryStep=2",
-          "mentionCount": 13
+          "title": "페이퍼 타이거",
+          "englishTitle": "Paper Tiger",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89791&c_idx=430&sp_idx=&QueryStep=2",
+          "mentionCount": 14
         }
       ]
     }
@@ -406,11 +370,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 18,
+    "fetchedPostCount": 74,
     "listedPostCount": 292,
-    "detailedPostCount": 1,
-    "commentFetchCount": 1,
-    "commentCount": 2,
+    "detailedPostCount": 3,
+    "commentFetchCount": 3,
+    "commentCount": 18,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
