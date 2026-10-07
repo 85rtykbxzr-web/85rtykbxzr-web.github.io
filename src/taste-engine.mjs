@@ -111,52 +111,12 @@ function mean(values) {
   return values.length ? values.reduce((sum, value) => sum + value, 0) / values.length : 0;
 }
 
-function tally(items, pick) {
-  const map = new Map();
-  for (const item of items) {
-    for (const key of pick(item)) {
-      if (!key) continue;
-      const entry = map.get(key) || { key, count: 0, sum: 0, rated: 0 };
-      entry.count += 1;
-      if (item.rating != null) { entry.sum += item.rating; entry.rated += 1; }
-      map.set(key, entry);
-    }
-  }
-  return [...map.values()].map((entry) => ({ ...entry, avg: entry.rated ? entry.sum / entry.rated : null }));
-}
-
+// the person's own scale: how generous they are and how spread out
 export function ratingStats(items) {
-  const rated = items.filter((item) => item.rating != null);
-  const ratings = rated.map((item) => item.rating);
+  const ratings = items.filter((item) => item.rating != null).map((item) => item.rating);
   const avg = mean(ratings);
   const sd = Math.sqrt(mean(ratings.map((value) => (value - avg) ** 2))) || 1;
-  const buckets = Array.from({ length: 10 }, (_, slot) => ({ score: (slot + 1) / 2, count: 0 }));
-  for (const value of ratings) buckets[Math.min(9, Math.max(0, Math.round(value * 2) - 1))].count += 1;
-  const movies = items.filter((item) => item.type === "movie");
-  const decades = tally(movies.filter((item) => item.year), (item) => [`${Math.floor(item.year / 10) * 10}`]).sort((a, b) => a.key.localeCompare(b.key));
-  const genres = tally(movies, (item) => item.genres).filter((entry) => entry.count >= 3).sort((a, b) => b.count - a.count);
-  const countries = tally(movies, (item) => item.countries).filter((entry) => entry.count >= 3).sort((a, b) => b.count - a.count);
-  const directors = tally(movies, (item) => item.directors).filter((entry) => entry.count >= 2).sort((a, b) => b.count - a.count || (b.avg || 0) - (a.avg || 0));
-  const months = tally(items.filter((item) => /^\d{4}-\d{2}/.test(item.date)), (item) => [item.date.slice(0, 7)]).sort((a, b) => b.count - a.count);
-  const years = movies.filter((item) => item.year).map((item) => item.year);
-  return {
-    total: items.length,
-    movies: movies.length,
-    series: items.length - movies.length,
-    rated: rated.length,
-    avg,
-    sd,
-    buckets,
-    fiveShare: ratings.length ? ratings.filter((value) => value >= 5).length / ratings.length : 0,
-    lowShare: ratings.length ? ratings.filter((value) => value <= 2).length / ratings.length : 0,
-    decades,
-    genres,
-    countries,
-    directors,
-    busiestMonth: months[0] || null,
-    oldest: years.length ? Math.min(...years) : null,
-    classicShare: years.length ? years.filter((year) => year < 1980).length / years.length : 0
-  };
+  return { total: items.length, rated: ratings.length, avg, sd };
 }
 
 // ---------- TMDB ----------
@@ -236,7 +196,13 @@ export async function matchRated(get, item) {
 
 // ---------- features and the taste vector ----------
 
-const featureWeight = { g: 1, k: 1.5, d: 3, c: 0.7, l: 0.7, y: 0.4, n: 0.5 };
+// Features fall into blocks that are compared separately, so a film with thirty keywords can't
+// win on themes alone and a film with none isn't sunk by them.
+const blockOf = { g: "genre", k: "theme", d: "people", c: "people", l: "place", n: "place", y: "era" };
+// "reach" is not a feature block: it is how far a film's vote count sits from those of the
+// liked films, so someone who loves 300-vote festival films isn't handed blockbusters
+const blockWeight = { genre: 0.18, theme: 0.32, people: 0.24, place: 0.12, era: 0.04, reach: 0.1 };
+const featureWeight = { g: 1, k: 1, d: 2.5, c: 0.8, l: 0.8, y: 1, n: 1 };
 
 function directorsOf(detail) {
   return (detail.credits?.crew || []).filter((person) => person.job === "Director");
@@ -246,7 +212,7 @@ export function filmFeatures(detail) {
   const features = new Map();
   const add = (key, value = 1) => features.set(key, (features.get(key) || 0) + value);
   for (const genre of detail.genres || []) add(`g:${genre.id}`);
-  for (const id of detail.genre_ids || []) add(`g:${id}`);
+  if (!detail.genres) for (const id of detail.genre_ids || []) add(`g:${id}`);
   for (const keyword of (detail.keywords?.keywords || []).slice(0, 30)) add(`k:${keyword.id}`);
   for (const person of directorsOf(detail)) add(`d:${person.id}`);
   for (const person of (detail.credits?.cast || []).slice(0, 4)) add(`c:${person.id}`);
@@ -259,15 +225,16 @@ export function filmFeatures(detail) {
 
 function weightOf(feature, idf) {
   const kind = feature[0];
-  return (featureWeight[kind] || 0.5) * (kind === "k" ? idf.get(feature) || 1 : 1);
+  return (featureWeight[kind] || 0.5) * (idf.get(feature) || 1);
 }
 
 // Each rated film pulls the profile toward its features by how far its rating sits above or
-// below the person's own average, so a harsh rater's 4 counts like a generous rater's 5.
+// below the person's own average, so a harsh rater's 4 counts like a generous rater's 5. Rare
+// features (a keyword three liked films share) count for more than ones every film has.
 export function buildProfile(seeds, stats) {
   const docFreq = new Map();
-  for (const seed of seeds) for (const feature of seed.features.keys()) if (feature[0] === "k") docFreq.set(feature, (docFreq.get(feature) || 0) + 1);
-  const idf = new Map([...docFreq].map(([feature, count]) => [feature, Math.min(2.2, 0.6 + Math.log(1 + seeds.length / count) / 2)]));
+  for (const seed of seeds) for (const feature of seed.features.keys()) docFreq.set(feature, (docFreq.get(feature) || 0) + 1);
+  const idf = new Map([...docFreq].map(([feature, count]) => [feature, feature[0] === "k" ? Math.min(2.2, 0.6 + Math.log(1 + seeds.length / count) / 2) : 1]));
   const vector = new Map();
   for (const seed of seeds) {
     const weight = Math.max(-1.6, Math.min(2, (seed.rating - stats.avg) / stats.sd));
@@ -276,27 +243,84 @@ export function buildProfile(seeds, stats) {
       vector.set(feature, (vector.get(feature) || 0) + weight * value * weightOf(feature, idf));
     }
   }
-  return { vector, idf };
-}
-
-function cosine(profile, features, idf) {
-  let dot = 0;
-  let norm = 0;
-  for (const [feature, value] of features) {
-    const weighted = value * weightOf(feature, idf);
-    dot += (profile.get(feature) || 0) * weighted;
-    norm += weighted * weighted;
+  const norms = {};
+  for (const [feature, value] of vector) {
+    const block = blockOf[feature[0]];
+    norms[block] = (norms[block] || 0) + value * value;
   }
-  let profileNorm = 0;
-  for (const value of profile.values()) profileNorm += value * value;
-  return norm && profileNorm ? dot / Math.sqrt(norm * profileNorm) : 0;
+  const reachOf = seeds.filter((seed) => seed.weight > 0 && seed.detail).map((seed) => Math.log10(1 + (seed.detail.vote_count || 0)));
+  const reachMean = mean(reachOf);
+  const reach = reachOf.length >= 5 ? { mean: reachMean, sd: Math.max(0.35, Math.sqrt(mean(reachOf.map((value) => (value - reachMean) ** 2)))) } : null;
+  return { vector, idf, norms, reach };
 }
 
+// how well a film fits the profile, block by block: a cosine in -1..1, or null when the film
+// has nothing in that block
+export function blockSimilarity(profile, features, votes) {
+  const { vector, idf, norms, reach } = profile;
+  const dot = {};
+  const norm = {};
+  for (const [feature, value] of features) {
+    const block = blockOf[feature[0]];
+    const weighted = value * weightOf(feature, idf);
+    dot[block] = (dot[block] || 0) + (vector.get(feature) || 0) * weighted;
+    norm[block] = (norm[block] || 0) + weighted * weighted;
+  }
+  const out = {};
+  for (const block of Object.keys(blockWeight)) {
+    out[block] = norm[block] && norms[block] ? dot[block] / Math.sqrt(norm[block] * norms[block]) : null;
+  }
+  out.reach = reach && votes != null ? -Math.abs(Math.log10(1 + votes) - reach.mean) / reach.sd : null;
+  return out;
+}
+
+// The blocks live on very different scales: nearly every drama scores 0.7 on genre while
+// keyword cosines against a profile of hundreds of keywords stay under 0.15, even though
+// keywords say far more. So each block is measured against the spread of the candidate
+// pool and the standard scores are mixed.
+export function blockScale(blockList) {
+  const scale = {};
+  for (const block of Object.keys(blockWeight)) {
+    const values = blockList.map((blocks) => blocks[block]).filter((value) => value != null);
+    const average = mean(values);
+    const spread = Math.sqrt(mean(values.map((value) => (value - average) ** 2)));
+    scale[block] = { mean: average, sd: spread > 1e-6 ? spread : 1 };
+  }
+  return scale;
+}
+
+export function similarity(blocks, scale) {
+  let total = 0;
+  let used = 0;
+  for (const [block, weight] of Object.entries(blockWeight)) {
+    if (blocks[block] == null) continue;
+    const z = (blocks[block] - scale[block].mean) / scale[block].sd;
+    total += weight * Math.max(-2.5, Math.min(2.5, z));
+    used += weight;
+  }
+  return used ? total / used : 0;
+}
+
+// how alike two candidates are, for keeping the list varied
+function filmOverlap(a, b, idf) {
+  let dot = 0;
+  let na = 0;
+  let nb = 0;
+  for (const [feature, value] of a) {
+    const weighted = value * weightOf(feature, idf);
+    na += weighted * weighted;
+    if (b.has(feature)) dot += weighted * b.get(feature) * weightOf(feature, idf);
+  }
+  for (const [feature, value] of b) nb += (value * weightOf(feature, idf)) ** 2;
+  return na && nb ? dot / Math.sqrt(na * nb) : 0;
+}
+
+// TMDB averages run high for films with few, devoted voters; pull them toward a sober prior
 function bayesQuality(film) {
   const votes = film.vote_count || 0;
   const average = film.vote_average || 0;
-  const prior = 6.6;
-  const weight = 250;
+  const prior = 6.4;
+  const weight = 400;
   return (votes * average + weight * prior) / (votes + weight);
 }
 
@@ -348,7 +372,7 @@ function isSeen(film, keys, ratedIds) {
   return false;
 }
 
-function chooseSeeds(items, stats, { liked = 60, disliked = 18 } = {}) {
+function chooseSeeds(items, stats, { liked = 80, disliked = 20 } = {}) {
   const movies = items.filter((item) => item.type === "movie" && item.rating != null);
   const byRecent = (a, b) => b.rating - a.rating || String(b.date).localeCompare(String(a.date));
   const likedCut = Math.max(3.5, Math.min(4.5, stats.avg + 0.5));
@@ -359,11 +383,13 @@ function chooseSeeds(items, stats, { liked = 60, disliked = 18 } = {}) {
 }
 
 const detailAppend = "credits,keywords,recommendations,similar,watch/providers";
+// below this a "nearest liked film" shares little more than a genre; checked by eye on real runs
+const nearMin = 0.18;
 
 export async function runTaste({ items, selected, includeRent = false, hiddenGems = false, get, theaterIds = [], onStep = () => {} }) {
   const stats = ratingStats(items);
   const ratedMovies = items.filter((item) => item.type === "movie");
-  if (ratedMovies.filter((item) => item.rating != null).length < 5) throw new Error("별점 준 영화가 5편은 넘어야 취향을 읽을 수 있어요.");
+  if (ratedMovies.filter((item) => item.rating != null).length < 5) throw new Error("별점 준 영화가 5편은 넘어야 추천할 수 있어요.");
 
   // 1. find the rated films on TMDB
   const seedItems = chooseSeeds(items, stats);
@@ -386,17 +412,18 @@ export async function runTaste({ items, selected, includeRent = false, hiddenGem
     const detail = await get(`/movie/${id}`, { language: "ko-KR", append_to_response: detailAppend }).catch(() => null);
     if (!detail) return;
     seeds.push({ item, id, rating: item.rating, detail, features: filmFeatures(detail) });
-    onStep({ phase: "read", total: seedItems.length, done: seeds.length, title: detail.title || item.title });
+    onStep({ phase: "read", total: seedItems.length, done: seeds.length, title: item.title || detail.title, poster: detail.poster_path || "", rating: item.rating });
   }));
   if (seeds.filter((seed) => seed.rating >= stats.avg).length < 3) throw new Error("좋아한 영화를 TMDB에서 충분히 찾지 못했어요. 제목이 원제·한글 제목과 많이 다른지 확인해 주세요.");
 
-  const { vector, idf } = buildProfile(seeds, stats);
+  const profile = buildProfile(seeds, stats);
+  const { vector } = profile;
   // someone whose favourites average 7.8 on TMDB isn't served 6.2 thrillers; the floor follows them
   const likedVotes = seeds.filter((seed) => seed.weight > 0 && seed.detail.vote_count > 30).map((seed) => seed.detail.vote_average);
   const qualityFloor = Math.max(5.9, Math.min(6.9, (likedVotes.length ? mean(likedVotes) : 7) - 1.1));
   const keys = seenKeys(items);
 
-  // favourite directors: rated twice or more among the liked seeds, by summed weight
+  // favourite directors: liked twice or more, by summed weight
   const directorScore = new Map();
   const directorName = new Map();
   for (const seed of seeds) {
@@ -404,17 +431,18 @@ export async function runTaste({ items, selected, includeRent = false, hiddenGem
     for (const person of directors) {
       directorScore.set(person.id, (directorScore.get(person.id) || 0) + seed.weight);
       // the CSV often carries the Korean name; use it when the film has a single director
-      const korean = directors.length === 1 && seed.item.directors.length === 1 ? seed.item.directors[0] : "";
-      if (!directorName.has(person.id) || (korean && /[가-힣]/.test(korean))) directorName.set(person.id, korean && /[가-힣]/.test(korean) ? korean : person.name);
+      const korean = directors.length === 1 && seed.item.directors.length === 1 && /[가-힣]/.test(seed.item.directors[0]) ? seed.item.directors[0] : "";
+      if (korean || !directorName.has(person.id)) directorName.set(person.id, korean || person.name);
     }
   }
   const favouriteDirectors = [...directorScore].filter(([, score]) => score >= 1.2).sort((a, b) => b[1] - a[1]).slice(0, 8);
   const favouriteDirectorIds = new Set(favouriteDirectors.map(([id]) => id));
 
-  // 3. gather candidates: films the liked ones lead to, and well-rated films in the person's
-  // favourite genres that are on their services right now
+  // 3. gather candidates. TMDB's recommendations ("people who liked this also liked") of the
+  // liked films are the strongest lead; the same lists from disliked films count against.
   onStep({ phase: "gather" });
   const pool = new Map();
+  const against = new Map();
   const touch = (film, source) => {
     if (!film?.id || film.adult || isSeen(film, keys, ratedIds)) return null;
     const entry = pool.get(film.id) || { film, links: [], discovered: false };
@@ -423,10 +451,13 @@ export async function runTaste({ items, selected, includeRent = false, hiddenGem
     return entry;
   };
   for (const seed of seeds) {
-    if (seed.weight <= 0) continue;
-    const lists = [[seed.detail.recommendations?.results || [], 1], [seed.detail.similar?.results || [], 0.35]];
+    const lists = [[seed.detail.recommendations?.results || [], 1], [seed.detail.similar?.results || [], 0.3]];
     for (const [list, strength] of lists) {
-      list.slice(0, 20).forEach((film, rank) => touch(film, { seed, value: seed.weight * strength * (1 - rank / 30) }));
+      list.slice(0, 20).forEach((film, rank) => {
+        const value = seed.weight * strength * (1 - rank / 30);
+        if (seed.weight > 0) touch(film, { seed, value });
+        else if (seed.weight < 0) against.set(film.id, (against.get(film.id) || 0) + value); // value is negative here
+      });
     }
   }
   const services = providerIds(selected);
@@ -434,19 +465,20 @@ export async function runTaste({ items, selected, includeRent = false, hiddenGem
   const genreScore = new Map();
   for (const [feature, value] of vector) if (feature.startsWith("g:")) genreScore.set(Number(feature.slice(2)), value);
   const topGenres = [...genreScore].sort((a, b) => b[1] - a[1]).slice(0, 4).map(([id]) => id);
-  const keywordScore = [...vector].filter(([feature]) => feature.startsWith("k:")).sort((a, b) => b[1] - a[1]);
-  const topKeywords = keywordScore.slice(0, 6).map(([feature]) => feature.slice(2));
+  const topKeywords = [...vector].filter(([feature]) => feature.startsWith("k:")).sort((a, b) => b[1] - a[1]).slice(0, 8).map(([feature]) => feature.slice(2));
+  const topCountries = [...vector].filter(([feature, value]) => feature.startsWith("n:") && value > 0).sort((a, b) => b[1] - a[1]).slice(0, 3).map(([feature]) => feature.slice(2));
   if (services.length) {
     const discover = (params) => get("/discover/movie", {
       language: "ko-KR", watch_region: "KR", with_watch_providers: services.join("|"), with_watch_monetization_types: monetization,
-      include_adult: "false", "vote_count.gte": hiddenGems ? "60" : "150", sort_by: "vote_average.desc", ...params
+      include_adult: "false", "vote_count.gte": hiddenGems ? "50" : "150", sort_by: "vote_average.desc", ...params
     }).catch(() => ({ results: [] }));
     const runs = [
       ...topGenres.map((genre) => discover({ with_genres: String(genre) })),
       ...topGenres.slice(0, 2).map((genre) => discover({ with_genres: String(genre), page: "2" })),
-      discover({ with_keywords: topKeywords.join("|") }),
-      favouriteDirectors.length ? discover({ with_crew: favouriteDirectors.map(([id]) => id).join("|"), "vote_count.gte": "20" }) : null,
-      discover({ sort_by: "popularity.desc", "vote_average.gte": "7" })
+      discover({ with_keywords: topKeywords.slice(0, 4).join("|") }),
+      discover({ with_keywords: topKeywords.slice(4, 8).join("|") }),
+      ...topCountries.map((country) => discover({ with_origin_country: country })),
+      favouriteDirectors.length ? discover({ with_crew: favouriteDirectors.map(([id]) => id).join("|"), "vote_count.gte": "20" }) : null
     ].filter(Boolean);
     for (const result of await Promise.all(runs)) for (const film of result.results || []) {
       const entry = touch(film, null);
@@ -458,54 +490,85 @@ export async function runTaste({ items, selected, includeRent = false, hiddenGem
   const prelim = [...pool.values()].map((entry) => {
     const graph = entry.links.reduce((sum, link) => sum + link.value, 0);
     const genres = (entry.film.genre_ids || []).reduce((sum, id) => sum + Math.max(0, genreScore.get(id) || 0), 0);
-    return { entry, pre: graph * 2 + genres * 0.05 + (entry.discovered ? 0.6 : 0) + bayesQuality(entry.film) / 10 };
-  }).sort((a, b) => b.pre - a.pre).slice(0, 140);
+    return { entry, pre: graph * 2 + genres * 0.04 + (entry.discovered ? 0.6 : 0) + bayesQuality(entry.film) / 10 + (against.get(entry.film.id) || 0) };
+  }).sort((a, b) => b.pre - a.pre).slice(0, 160);
 
   onStep({ phase: "score", total: prelim.length, done: 0 });
-  let read = 0;
-  const scored = (await Promise.all(prelim.map(async ({ entry }) => {
+  let done = 0;
+  const read = (await Promise.all(prelim.map(async ({ entry }) => {
     const detail = await get(`/movie/${entry.film.id}`, { language: "ko-KR", append_to_response: "credits,keywords,watch/providers" }).catch(() => null);
-    read += 1;
-    onStep({ phase: "score", total: prelim.length, done: read });
-    if (!detail || isSeen(detail, keys, ratedIds)) return null;
+    done += 1;
+    onStep({ phase: "score", total: prelim.length, done });
+    if (!detail || isSeen(detail, keys, ratedIds) || (detail.runtime && detail.runtime < 40)) return null;
+    if (hiddenGems && (detail.vote_count || 0) > 2500) return null;
     const where = availability(detail, selected, includeRent);
     if (selected.length && !where.services.length) return null;
-    const features = filmFeatures(detail);
-    const taste = cosine(vector, features, idf);
-    const graph = entry.links.reduce((sum, link) => sum + Math.max(0, link.value), 0);
     const directors = directorsOf(detail);
     const director = directors.find((person) => favouriteDirectorIds.has(person.id));
-    const quality = (bayesQuality(detail) - 5.8) / 2.5;
-    const popularity = Math.min(1, Math.log10(1 + (detail.vote_count || 0)) / 4.3);
     // a film people rate poorly needs a favourite director to get in
     if (bayesQuality(detail) < qualityFloor && !director) return null;
-    let score = taste * 1.25 + Math.min(1.6, graph) * 0.22 + quality * 0.35 + (director ? 0.25 : 0);
-    if (hiddenGems) score -= popularity * 0.35;
-    if (where.rentOnly) score -= 0.08;
-    return { detail, entry, where, taste, graph, director, directors, score, features };
+    const features = filmFeatures(detail);
+    return { detail, entry, where, director, directors, features, blocks: blockSimilarity(profile, features, detail.vote_count) };
   }))).filter(Boolean);
+  const scale = blockScale(read.map((candidate) => candidate.blocks));
+  const scored = read.map((candidate) => {
+    const { detail, entry, where, director } = candidate;
+    const taste = similarity(candidate.blocks, scale);
+    // TMDB's lists drift toward whatever is popular; a film that resembles the liked ones less
+    // than most candidates do doesn't get in on links alone
+    if (taste < -0.6 && !director) return null;
+    // several liked films pointing at the same one matters, with diminishing returns, and in
+    // full only for a film that also fits
+    const support = entry.links.reduce((sum, link) => sum + link.value, 0);
+    const fit = 0.4 + 0.6 * Math.max(0, Math.min(1, taste + 0.5));
+    const graph = Math.log1p(Math.max(0, support)) * fit + (against.get(detail.id) || 0) * 0.6;
+    const quality = (bayesQuality(detail) - 6.2) / 2;
+    const popularity = Math.min(1, Math.log10(1 + (detail.vote_count || 0)) / 4.3);
+    let score = taste * 0.25 + graph * 0.35 + quality * 0.3 + (director ? 0.2 : 0);
+    if (hiddenGems) score -= popularity * 0.7;
+    if (where.rentOnly) score -= 0.08;
+    return { ...candidate, taste, score };
+  }).filter(Boolean);
 
-  // 4. pick with variety: a director or a franchise doesn't fill the list
-  scored.sort((a, b) => b.score - a.score);
+  // 4. pick with variety: each next film is weighed against how much it repeats the ones
+  // already picked; a director gets two places at most, a franchise one
   const picks = [];
+  const remaining = scored.sort((a, b) => b.score - a.score);
   const directorCount = new Map();
   const collections = new Set();
-  for (const candidate of scored) {
-    if (picks.length >= 36) break;
-    const directorId = candidate.directors[0]?.id;
-    const collection = candidate.detail.belongs_to_collection?.id;
-    if (collection && collections.has(collection)) continue;
-    if (directorId && (directorCount.get(directorId) || 0) >= 2) continue;
-    picks.push(candidate);
+  while (picks.length < 36 && remaining.length) {
+    let bestIndex = -1;
+    let bestValue = -Infinity;
+    for (let index = 0; index < Math.min(remaining.length, 60); index += 1) {
+      const candidate = remaining[index];
+      const directorId = candidate.directors[0]?.id;
+      const collection = candidate.detail.belongs_to_collection?.id;
+      if ((collection && collections.has(collection)) || (directorId && (directorCount.get(directorId) || 0) >= 2)) continue;
+      const repeat = picks.reduce((max, pick) => Math.max(max, filmOverlap(candidate.features, pick.features, profile.idf)), 0);
+      const value = candidate.score - 0.3 * repeat;
+      if (value > bestValue) { bestValue = value; bestIndex = index; }
+    }
+    if (bestIndex < 0) break;
+    const [pick] = remaining.splice(bestIndex, 1);
+    picks.push(pick);
+    const directorId = pick.directors[0]?.id;
     if (directorId) directorCount.set(directorId, (directorCount.get(directorId) || 0) + 1);
-    if (collection) collections.add(collection);
+    if (pick.detail.belongs_to_collection?.id) collections.add(pick.detail.belongs_to_collection.id);
   }
-  const best = picks[0]?.score || 1;
-  const worst = picks.at(-1)?.score ?? 0;
-  const recs = picks.map((candidate) => ({
-    ...describe(candidate, { idf, vector, directorName }),
-    match: Math.round(72 + 27 * Math.pow(Math.max(0, (candidate.score - worst) / ((best - worst) || 1)), 0.8))
-  }));
+  // films that came in through discover have no liked film pointing at them; name the liked
+  // film they share the most with, when the overlap is real
+  const likedSeeds = seeds.filter((seed) => seed.weight > 0.3);
+  const nearest = (candidate) => {
+    if (candidate.entry.links?.length) return null;
+    let best = null;
+    for (const seed of likedSeeds) {
+      const overlap = filmOverlap(candidate.features, seed.features, profile.idf);
+      if (!best || overlap * (1 + seed.weight / 4) > best.value) best = { seed, overlap, value: overlap * (1 + seed.weight / 4) };
+    }
+    return best && best.overlap >= nearMin ? best.seed : null;
+  };
+  const context = { directorName, nearest };
+  const recs = picks.map((candidate) => describe(candidate, context));
 
   // 5. what's on in Seoul theatres right now, scored the same way
   let theater = [];
@@ -516,53 +579,58 @@ export async function runTaste({ items, selected, includeRent = false, hiddenGem
       const features = filmFeatures(detail);
       const directors = directorsOf(detail);
       const director = directors.find((person) => favouriteDirectorIds.has(person.id));
-      const taste = cosine(vector, features, idf);
-      return { detail, entry: { links: [] }, taste, director, directors, features, score: taste + (director ? 0.25 : 0) + (bayesQuality(detail) - 6) / 10 };
-    }))).filter(Boolean).sort((a, b) => b.score - a.score).slice(0, 4).map((candidate) => describe(candidate, { idf, vector, directorName }));
+      const taste = similarity(blockSimilarity(profile, features, detail.vote_count), scale);
+      return { detail, entry: { links: [] }, taste, director, directors, features, score: taste * 0.25 + (director ? 0.2 : 0) + (bayesQuality(detail) - 6.2) / 6 };
+    }))).filter((candidate) => candidate && (candidate.taste > 0.15 || candidate.director)).sort((a, b) => b.score - a.score).slice(0, 4).map((candidate) => describe(candidate, context));
   }
 
-  return {
-    stats,
-    seeds: seeds.sort((a, b) => b.rating - a.rating || (b.detail.vote_count || 0) - (a.detail.vote_count || 0)),
-    recs,
-    theater
-  };
+  return { stats, seeds, recs, theater };
 }
 
-function describe(candidate, { idf, vector, directorName }) {
+const regionNames = (() => {
+  try { return new Intl.DisplayNames(["ko"], { type: "region" }); } catch { return null; }
+})();
+// Intl's Korean names are formal ("홍콩(중국 특별행정구)"); film listings use the short ones
+const shortRegion = { HK: "홍콩", MO: "마카오", KR: "한국", KP: "북한", US: "미국", GB: "영국", PS: "팔레스타인", SU: "소련", XC: "체코슬로바키아", YU: "유고슬라비아", XG: "동독" };
+
+function countryName(country) {
+  return shortRegion[country.iso_3166_1] || regionNames?.of(country.iso_3166_1) || country.name;
+}
+
+function stars(rating) {
+  return `★${Number.isInteger(rating) ? rating : rating.toFixed(1)}`;
+}
+
+function describe(candidate, { directorName, nearest }) {
   const { detail } = candidate;
-  const reasons = [];
-  const links = [...(candidate.entry.links || [])].sort((a, b) => b.value - a.value);
-  const fromSeeds = [];
-  for (const link of links) {
-    const name = link.seed.detail.title || link.seed.item.title;
-    if (!fromSeeds.includes(name)) fromSeeds.push(name);
-    if (fromSeeds.length === 2) break;
+  // the liked films that lead here, strongest first
+  const leads = [];
+  for (const link of [...(candidate.entry.links || [])].sort((a, b) => b.value - a.value)) {
+    if (leads.some((lead) => lead.id === link.seed.id)) continue;
+    // the title as the person wrote it in their own records
+    leads.push({ id: link.seed.id, title: link.seed.item.title || link.seed.detail.title, rating: link.seed.rating });
+    if (leads.length === 2) break;
   }
-  if (fromSeeds.length) reasons.push({ kind: "seed", text: `${fromSeeds.map((name) => `‘${name}’`).join(", ")}에 높은 별점을 준 당신에게` });
-  if (candidate.director) reasons.push({ kind: "director", text: `좋아하는 감독 ${directorName.get(candidate.director.id) || candidate.director.name}` });
-  const sharedKeywords = (detail.keywords?.keywords || [])
-    .map((keyword) => ({ keyword, value: (vector.get(`k:${keyword.id}`) || 0) * (idf.get(`k:${keyword.id}`) || 1) }))
-    .filter((entry) => entry.value > 0.6)
-    .sort((a, b) => b.value - a.value)
-    .slice(0, 3)
-    .map((entry) => entry.keyword.name);
-  if (sharedKeywords.length) reasons.push({ kind: "keywords", text: sharedKeywords.map((name) => `#${name}`).join(" ") });
+  const near = leads.length ? null : nearest(candidate);
+  if (near) leads.push({ id: near.id, title: near.item.title || near.detail.title, rating: near.rating });
+  const year = releaseYear(detail);
   const directors = candidate.directors || [];
   return {
     id: detail.id,
     title: detail.title || detail.original_title,
     originalTitle: detail.original_title && detail.original_title !== detail.title ? detail.original_title : "",
-    year: releaseYear(detail),
+    year,
     runtime: detail.runtime || null,
     poster: detail.poster_path || "",
-    backdrop: detail.backdrop_path || "",
     overview: detail.overview || "",
-    genres: (detail.genres || []).map((genre) => genre.name).slice(0, 3),
+    genres: (detail.genres || []).map((genre) => genre.name).slice(0, 2),
     director: directors.map((person) => directorName.get(person.id) || person.name).slice(0, 2).join(", "),
+    favouriteDirector: candidate.director ? directorName.get(candidate.director.id) || candidate.director.name : "",
+    leads: leads.map((lead) => ({ title: lead.title, stars: stars(lead.rating) })),
+    countries: (detail.production_countries || []).slice(0, 2).map(countryName),
     voteAverage: detail.vote_average ? Math.round(detail.vote_average * 10) / 10 : null,
     voteCount: detail.vote_count || 0,
-    where: candidate.where || null,
-    reasons
+    score: candidate.score,
+    where: candidate.where || null
   };
 }
