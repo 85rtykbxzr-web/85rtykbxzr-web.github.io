@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-07T09:24:10.012Z",
+  "generatedAt": "2026-10-07T12:16:45.703Z",
   "weekStart": "2026-10-05",
   "weekEnd": "2026-10-07",
   "windowStart": "2026-10-05",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261008&tsId=TS0044&pno=2",
-      "score": 118.7,
+      "score": 130.3,
       "signal": 2,
       "positiveSignal": 2,
-      "mentionCount": 10.7,
+      "mentionCount": 11.8,
       "rawPositiveSignal": 2,
-      "rawMentionCount": 12.792481250360577,
+      "rawMentionCount": 13.953445297804258,
       "scheduleBackfill": false,
       "venueIds": [
         "sangsangmadang",
@@ -107,7 +107,7 @@
         },
         {
           "title": "룩백 7시 45분쯤 가면 좌석 구림??",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870272&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870272&page=2",
           "date": "2026-10-07",
           "positive": 0,
           "rawPositive": 0,
@@ -116,7 +116,7 @@
           "negativeHits": [],
           "questionLike": true,
           "reviewQuestion": false,
-          "commentCount": 0,
+          "commentCount": 4,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
@@ -131,7 +131,7 @@
       "localPosterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-07&movieCd=029631&playSDT=2026-10-07&screenId=02&showSeq=4",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-08&movieCd=029631&playSDT=2026-10-08&screenId=01&showSeq=4",
       "score": 106.4,
       "signal": 15.5,
       "positiveSignal": 15.5,
@@ -151,8 +151,8 @@
         "KT&G 상상마당 시네마",
         "KU시네마테크"
       ],
-      "nextDate": "2026-10-07",
-      "nextTime": "20:10",
+      "nextDate": "2026-10-08",
+      "nextTime": "15:10",
       "evidence": [
         {
           "title": "이방인 꿀잼작이네",
@@ -331,7 +331,7 @@
         },
         {
           "title": "꿈꾸던 모험 자막 어디서 만든거냐 존나 뻐킹 아마추어같던데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870162&page=3",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870162&page=4",
           "date": "2026-10-07",
           "positive": 0,
           "rawPositive": 0,
@@ -440,7 +440,7 @@
           "englishTitle": "Possible Love",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91115&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 46
+          "mentionCount": 47
         },
         {
           "rank": 2,
@@ -448,23 +448,23 @@
           "englishTitle": "La Gradiva",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90315&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 24
+          "mentionCount": 25
         },
         {
           "rank": 3,
+          "title": "그래비티",
+          "englishTitle": "Gravity",
+          "section": "특별상영 & 까르뜨 블랑슈",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91282&c_idx=441&sp_idx=&QueryStep=2",
+          "mentionCount": 23
+        },
+        {
+          "rank": 4,
           "title": "에브리타임",
           "englishTitle": "Everytime",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89989&c_idx=434&sp_idx=&QueryStep=2",
           "mentionCount": 23
-        },
-        {
-          "rank": 4,
-          "title": "그래비티",
-          "englishTitle": "Gravity",
-          "section": "특별상영 & 까르뜨 블랑슈",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91282&c_idx=441&sp_idx=&QueryStep=2",
-          "mentionCount": 17
         },
         {
           "rank": 5,
@@ -506,20 +506,20 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 319,
-    "listedPostCount": 342,
+    "fetchedPostCount": 396,
+    "listedPostCount": 442,
     "detailedPostCount": 11,
     "commentFetchCount": 11,
-    "commentCount": 16,
+    "commentCount": 24,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 7,
+    "scannedPageCount": 9,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-10-06",
     "newestScannedDate": "2026-10-07",
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-07",
     "candidateWindowEnd": "2026-10-21",
-    "candidateCount": 99,
+    "candidateCount": 95,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-05",
     "listLookbackDays": 1,
