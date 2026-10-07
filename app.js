@@ -11,6 +11,7 @@ import { drawStoryTicket } from "./src/story-ticket.mjs";
 import { filmTitleKey } from "./src/film-title.mjs";
 import { searchTmdbPoster, tmdbImageBase } from "./src/tmdb.mjs";
 import { createFestivalPlanner } from "./src/festival-planner-ui.mjs";
+import { createTastePicks } from "./src/taste-ui.mjs";
 import { runDtryxScan } from "./src/dtryx-scan.mjs";
 import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOutsideSeoul } from "./src/regional-venues.mjs";
 
@@ -2745,6 +2746,22 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
   // Festivals with a collected timetable get the planner; BIFF only for now.
   const plannerFestivalPattern = /^biff-/;
   let festivalPlanner = null;
+  // 취향 추천: a ratings CSV in, films on the visitor's streaming services out (src/taste-ui.mjs)
+  let tastePicks = null;
+  function taste() {
+    tastePicks ||= createTastePicks({
+      $,
+      escapeHtml,
+      showToast,
+      onTheater(title) {
+        syncSearch(title);
+        // after the search re-render (debounced) and the dialog handing focus back
+        window.setTimeout(() => scrollToSection(isMobileViewport() ? "mobile-schedule" : "schedule"), 260);
+      }
+    });
+    return tastePicks;
+  }
+
   function planner() {
     festivalPlanner ||= createFestivalPlanner({ $, escapeHtml, showToast, safeExternalUrl, kstDateString });
     return festivalPlanner;
@@ -2755,6 +2772,14 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
     const lifecycle = lifecycleFromRange({ start: row.startDate, end: row.endDate });
     if (lifecycle?.expired) return "";
     return `<button class="book fest-plan-btn" type="button" data-fest-planner="${escapeHtml(row.festivalId)}">시간표 짜기</button>`;
+  }
+
+  // ?taste opens the 취향 추천 sheet once on arrival
+  let tasteLinkHandled = false;
+  function openTasteFromLink() {
+    if (tasteLinkHandled) return;
+    tasteLinkHandled = true;
+    if (new URLSearchParams(window.location.search).has("taste")) taste().open();
   }
 
   // A shared festival plan (?fp=biff-2026&p=…) opens once, then the address is cleaned up.
@@ -3063,6 +3088,7 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
     renderPopularPicks();
     renderFestivalStrip();
     openSharedFestivalPlan();
+    openTasteFromLink();
     updateSoonBadges();
     repairPosterImages();
     syncInitialHashScroll();
@@ -3629,6 +3655,12 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
     document.addEventListener("click", (event) => {
       if (event.target.closest("[data-stop-propagation]")) {
         event.stopPropagation();
+      }
+
+      if (event.target.closest("[data-taste-open]")) {
+        event.preventDefault();
+        taste().open();
+        return;
       }
 
       const plannerOpen = event.target.closest("[data-fest-planner]");

@@ -38,8 +38,8 @@
         "description": "서울 독립영화관의 오늘 상영시간표, 기획전, 영화제 일정을 날짜별, 영화별, 상영관별로 확인하세요."
       }
     </script>
-    <link href="/assets/app.css?v=1e68f9fc8295" rel="stylesheet" />
-    <script defer src="/assets/app.js?v=1e68f9fc8295"></script>
+    <link href="/assets/app.css?v=4a63be5f9028" rel="stylesheet" />
+    <script defer src="/assets/app.js?v=4a63be5f9028"></script>
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=6" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=6" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=6" />
@@ -60,6 +60,7 @@
           <a href="#programs" data-nav-target="programs" data-nav-kind="desktop">프로그램</a>
           <a href="#festivals" data-nav-target="festivals" data-nav-kind="desktop">영화제</a>
           <button class="nav-ticket" type="button" data-ticket-open>티켓 만들기</button>
+          <button class="nav-ticket" type="button" data-taste-open>취향 추천</button>
         </nav>
         <div class="tools">
           <label class="search hidden lg:flex">
@@ -105,6 +106,7 @@
 
     <main class="hidden md:block">
       <div class="wrap fest-strip-slot" id="festStrip"></div>
+      <div class="wrap taste-entry-slot"><button class="taste-entry" type="button" data-taste-open><span class="taste-entry-k">NEW</span><span class="taste-entry-t"><b>내 별점으로 OTT 영화 추천받기</b><small>왓챠피디아·레터박스드 기록을 올리면 지금 볼 수 있는 영화만</small></span><svg class="ui-icon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#arrow-right"></use></svg></button></div>
       <section class="feature wrap hidden" id="popular" aria-labelledby="popularTitle">
         <h2 class="sr-only" id="popularTitle">이번 주 추천</h2>
         <div class="feature-grid" id="popularList"></div>
@@ -186,6 +188,7 @@
       </div>
 
       <div class="wrap fest-strip-slot" id="mobileFestStrip"></div>
+      <div class="wrap taste-entry-slot"><button class="taste-entry" type="button" data-taste-open><span class="taste-entry-k">NEW</span><span class="taste-entry-t"><b>내 별점으로 OTT 영화 추천받기</b><small>왓챠피디아·레터박스드 기록을 올리면 지금 볼 수 있는 영화만</small></span><svg class="ui-icon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#arrow-right"></use></svg></button></div>
       <section class="feature wrap hidden" id="mobile-popular" aria-labelledby="mobilePopularTitle">
         <h2 class="sr-only" id="mobilePopularTitle">이번 주 추천</h2>
         <div class="feature-grid" id="mobilePopularList"></div>
@@ -312,6 +315,18 @@
           <button id="ticketShare" class="ticket-btn is-primary" type="button">인스타 스토리에 올리기</button>
           <button id="ticketSave" class="ticket-btn" type="button">이미지 저장</button>
         </div>
+      </div>
+    </dialog>
+
+    <dialog id="tasteSheet" class="tp-sheet" aria-labelledby="tpTitle" tabindex="-1">
+      <div class="tp-in">
+        <header class="tp-head">
+          <h2 id="tpTitle">취향 추천</h2>
+          <button class="icon-btn" type="button" data-tp-close aria-label="닫기">
+            <svg class="ui-icon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#x"></use></svg>
+          </button>
+        </header>
+        <div class="tp-body" id="tpBody"></div>
       </div>
     </dialog>
 
