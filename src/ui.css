@@ -333,10 +333,10 @@ main { padding-top: 72px; }
 
 /* ---------- mobile tab bar ---------- */
 /* Floating capsule with a pill that slides to the current tab. */
-.tabbar { position: fixed; left: 50%; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 50; transform: translateX(-50%); width: min(calc(100% - 32px), 400px); height: 64px; padding: 6px; display: grid; grid-template-columns: repeat(4, 1fr); border-radius: 999px; background: color-mix(in srgb, var(--card) 88%, transparent); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); box-shadow: 0 0 0 1px color-mix(in srgb, var(--t1) 7%, transparent), 0 10px 30px -8px rgb(0 23 51 / 0.22), 0 2px 6px rgb(0 23 51 / 0.06); }
+.tabbar { position: fixed; left: 50%; bottom: calc(12px + env(safe-area-inset-bottom)); z-index: 50; transform: translateX(-50%); width: min(calc(100% - 32px), 400px); height: 64px; padding: 6px; display: grid; grid-template-columns: repeat(5, 1fr); border-radius: 999px; background: color-mix(in srgb, var(--card) 88%, transparent); -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); box-shadow: 0 0 0 1px color-mix(in srgb, var(--t1) 7%, transparent), 0 10px 30px -8px rgb(0 23 51 / 0.22), 0 2px 6px rgb(0 23 51 / 0.06); }
 .tabbar a, .tabbar button { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; border-radius: 999px; font-size: 11px; line-height: 14px; font-weight: 600; color: var(--t4); -webkit-tap-highlight-color: transparent; transition: color 0.2s ease; }
 .tabbar a[aria-current] { color: var(--t1); }
-.tab-pill { position: absolute; top: 6px; left: 6px; bottom: 6px; width: calc((100% - 12px) / 4); border-radius: 999px; background: var(--fill-hover); transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1); }
+.tab-pill { position: absolute; top: 6px; left: 6px; bottom: 6px; width: calc((100% - 12px) / 5); border-radius: 999px; background: var(--fill-hover); transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1); }
 .tabbar:has(a:nth-child(2)[aria-current]) .tab-pill { transform: translateX(100%); }
 .tabbar:has(a:nth-child(3)[aria-current]) .tab-pill { transform: translateX(200%); }
 .tabbar:not(:has(a[aria-current])) .tab-pill { opacity: 0; }
@@ -987,13 +987,6 @@ body.is-regional #popular, body.is-regional #mobile-popular { display: none; }
 :root[data-theme="dark"] .date.is-on.is-sun .d { color: var(--red); }
 
 /* ---------- 취향 추천 (src/taste-ui.mjs) ---------- */
-.taste-entry-slot { margin-top: 12px; }
-.taste-entry { display: flex; align-items: center; gap: 12px; width: 100%; padding: 13px 16px; border-radius: 16px; background: var(--card); color: var(--t1); text-align: left; box-shadow: inset 0 0 0 1px var(--line-2); -webkit-tap-highlight-color: transparent; transition: box-shadow 0.15s, transform 0.15s; }
-.taste-entry:active { transform: scale(0.99); }
-.taste-entry-t { display: flex; flex-direction: column; min-width: 0; flex: 1; }
-.taste-entry-t b { font-size: 15px; line-height: 21px; font-weight: 700; letter-spacing: -0.01em; }
-.taste-entry-t small { font-size: 13px; line-height: 18px; color: var(--t4); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.taste-entry .ui-icon { flex: none; width: 18px; height: 18px; color: var(--t4); }
 
 .tp-sheet { --tp-pad: 28px; width: min(100%, 720px); height: min(100dvh, 920px); max-width: 100%; max-height: 100dvh; margin: auto; padding: 0; border: 0; border-radius: 20px; background: var(--card); color: var(--t1); box-shadow: 0 24px 60px -12px rgb(0 0 0 / 0.35); overflow: hidden; outline: none; }
 .tp-sheet::backdrop { background: rgb(0 0 0 / 0.5); }
@@ -1138,8 +1131,7 @@ body.is-regional #popular, body.is-regional #mobile-popular { display: none; }
 @media (hover: none) { .tp-drop-hint { display: none; } }
 /* hover looks only where there is a pointer, so a tap doesn't leave one stuck on */
 @media (hover: hover) {
-  .taste-entry:hover { box-shadow: inset 0 0 0 1px var(--t5); }
-  .tp-ott:not(.is-on):hover { background: var(--fill-hover); }
+    .tp-ott:not(.is-on):hover { background: var(--fill-hover); }
   .tp-check:not(.is-on):hover span { box-shadow: inset 0 0 0 1.5px var(--t3); }
   .tp-reuse:hover { opacity: 0.9; }
   .tp-link:hover { color: var(--t1); }

@@ -38,8 +38,8 @@
         "description": "서울 독립영화관의 오늘 상영시간표, 기획전, 영화제 일정을 날짜별, 영화별, 상영관별로 확인하세요."
       }
     </script>
-    <link href="/assets/app.css?v=1dc1ed9c6ffd" rel="stylesheet" />
-    <script defer src="/assets/app.js?v=1dc1ed9c6ffd"></script>
+    <link href="/assets/app.css?v=dc5e2d5b09c6" rel="stylesheet" />
+    <script defer src="/assets/app.js?v=dc5e2d5b09c6"></script>
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png?v=6" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png?v=6" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png?v=6" />
@@ -106,7 +106,6 @@
 
     <main class="hidden md:block">
       <div class="wrap fest-strip-slot" id="festStrip"></div>
-      <div class="wrap taste-entry-slot"><button class="taste-entry" type="button" data-taste-open><span class="taste-entry-t"><b>내 별점으로 OTT 영화 고르기</b><small>왓챠피디아·레터박스드 별점 기록으로</small></span><svg class="ui-icon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#arrow-right"></use></svg></button></div>
       <section class="feature wrap hidden" id="popular" aria-labelledby="popularTitle">
         <h2 class="sr-only" id="popularTitle">이번 주 추천</h2>
         <div class="feature-grid" id="popularList"></div>
@@ -188,7 +187,6 @@
       </div>
 
       <div class="wrap fest-strip-slot" id="mobileFestStrip"></div>
-      <div class="wrap taste-entry-slot"><button class="taste-entry" type="button" data-taste-open><span class="taste-entry-t"><b>내 별점으로 OTT 영화 고르기</b><small>왓챠피디아·레터박스드 별점 기록으로</small></span><svg class="ui-icon" aria-hidden="true"><use href="/assets/lucide-sprite.svg#arrow-right"></use></svg></button></div>
       <section class="feature wrap hidden" id="mobile-popular" aria-labelledby="mobilePopularTitle">
         <h2 class="sr-only" id="mobilePopularTitle">이번 주 추천</h2>
         <div class="feature-grid" id="mobilePopularList"></div>
@@ -275,6 +273,12 @@
           <g class="ic-off"><rect class="soft" x="6" y="2.5" width="12" height="19" rx="3"></rect><path d="m12 8.4 1.1 2.3 2.5.3-1.8 1.7.5 2.5-2.3-1.2-2.3 1.2.5-2.5-1.8-1.7 2.5-.3Z"></path></g>
         </svg>
         <span>티켓</span>
+      </button>
+      <button type="button" data-taste-open aria-label="내 별점으로 OTT 영화 추천받기">
+        <svg class="tab-ic" viewBox="0 0 24 24" aria-hidden="true">
+          <g class="ic-off"><rect class="soft" x="3" y="4.5" width="18" height="13" rx="3"></rect><path d="M9 20.5h6"></path><path d="m10.5 8.6 4 2.4-4 2.4Z"></path></g>
+        </svg>
+        <span>취향</span>
       </button>
       <span class="tab-pill" aria-hidden="true"></span>
     </nav>
