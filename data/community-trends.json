@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-08T00:58:29.354Z",
+  "generatedAt": "2026-10-08T03:11:48.836Z",
   "weekStart": "2026-10-06",
   "weekEnd": "2026-10-08",
   "windowStart": "2026-10-06",
@@ -18,28 +18,28 @@
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261008&tsId=TS0044&pno=2",
-      "score": 113.5,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-08&movieCd=029713&playSDT=2026-10-08&screenId=01&showSeq=3",
+      "score": 131.4,
       "signal": 1.4,
       "positiveSignal": 1.4,
-      "mentionCount": 10.4,
+      "mentionCount": 12.2,
       "rawPositiveSignal": 2,
-      "rawMentionCount": 14.245926548164835,
+      "rawMentionCount": 16.038407798525412,
       "scheduleBackfill": false,
       "venueIds": [
-        "sangsangmadang",
         "cinecube",
+        "sangsangmadang",
         "filmforum",
         "kucine"
       ],
       "venueNames": [
-        "KT&G 상상마당 시네마",
         "씨네큐브 광화문",
+        "KT&G 상상마당 시네마",
         "필름포럼",
         "KU시네마테크"
       ],
       "nextDate": "2026-10-08",
-      "nextTime": "12:05",
+      "nextTime": "13:15",
       "evidence": [
         {
           "title": "룩백 메박에서만 개봉하네",
@@ -272,7 +272,7 @@
       "evidence": [
         {
           "title": "셀줄배 화장실 안가고 다보는거 가능한가",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870532&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870532&page=3",
           "date": "2026-10-08",
           "positive": 0,
           "rawPositive": 0,
@@ -304,7 +304,7 @@
           "englishTitle": "Possible Love",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91115&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 47
+          "mentionCount": 48
         },
         {
           "rank": 2,
@@ -370,11 +370,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 112,
+    "fetchedPostCount": 187,
     "listedPostCount": 292,
-    "detailedPostCount": 3,
-    "commentFetchCount": 3,
-    "commentCount": 18,
+    "detailedPostCount": 4,
+    "commentFetchCount": 4,
+    "commentCount": 20,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,

@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-08",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-08T00:58:24.504Z",
+  "updatedAt": "2026-10-08T03:11:44.885Z",
   "days": {
     "2026-10-06": {
       "꿈꾸던모험": {
@@ -433,36 +433,29 @@
       }
     },
     "2026-10-08": {
-      "셀린느와줄리배타러가다": {
-        "title": "셀린느와 줄리 배타러 가다",
+      "룩백": {
+        "title": "룩백",
         "positiveSignal": 0,
-        "mentionCount": 2.5,
+        "mentionCount": 4.584962500721156,
         "evidence": [
           {
-            "title": "셀줄배 화장실 안가고 다보는거 가능한가",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870532&page=2",
+            "title": "룩백 vs 가능한사랑 둘 다 본 사람 머가 더 좋았음?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870665&page=1",
             "date": "2026-10-08",
             "positive": 0,
             "rawPositive": 0,
             "negative": 0,
             "positiveHits": [],
             "negativeHits": [],
-            "questionLike": false,
+            "questionLike": true,
             "reviewQuestion": false,
-            "commentCount": 16,
+            "commentCount": 2,
             "commentPositive": 0,
             "commentNegative": 0
-          }
-        ]
-      },
-      "룩백": {
-        "title": "룩백(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 2.792481250360578,
-        "evidence": [
+          },
           {
             "title": "룩백 오늘 개봉이누",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870507&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870507&page=4",
             "date": "2026-10-08",
             "positive": 0,
             "rawPositive": 0,
@@ -477,7 +470,7 @@
           },
           {
             "title": "룩백은 상영전 무인만 했지?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870493&page=3",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870493&page=4",
             "date": "2026-10-08",
             "positive": 0,
             "rawPositive": 0,
@@ -491,12 +484,34 @@
             "commentNegative": 0
           }
         ]
+      },
+      "셀린느와줄리배타러가다": {
+        "title": "셀린느와 줄리 배타러 가다",
+        "positiveSignal": 0,
+        "mentionCount": 2.5,
+        "evidence": [
+          {
+            "title": "셀줄배 화장실 안가고 다보는거 가능한가",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870532&page=3",
+            "date": "2026-10-08",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 16,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
       }
     }
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-08T00:58:24.498Z",
+      "lineupFetchedAt": "2026-10-08T03:11:44.880Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -3458,6 +3473,41 @@
           }
         },
         "2026-10-08": {
+          "미친노인의일기": {
+            "title": "미친 노인의 일기",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "가능한사랑": {
+            "title": "가능한 사랑",
+            "mentionCount": 1,
+            "commentCount": 2
+          },
+          "웰컴투돌리하우스": {
+            "title": "웰컴 투 돌리 하우스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "구원은없다": {
+            "title": "구원은 없다",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "환상의불빛": {
+            "title": "환상의 불빛",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "그대별처럼": {
+            "title": "그대, 별처럼",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "필리피냐나": {
+            "title": "필리피냐나",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
           "로마엘라스티카": {
             "title": "로마 엘라스티카",
             "mentionCount": 1,
@@ -3503,18 +3553,8 @@
             "mentionCount": 2,
             "commentCount": 0
           },
-          "필리피냐나": {
-            "title": "필리피냐나",
-            "mentionCount": 1,
-            "commentCount": 0
-          },
           "실버익스프레스": {
             "title": "실버 익스프레스",
-            "mentionCount": 1,
-            "commentCount": 0
-          },
-          "미친노인의일기": {
-            "title": "미친 노인의 일기",
             "mentionCount": 1,
             "commentCount": 0
           },
@@ -3530,16 +3570,6 @@
           },
           "내친구로남아줄래": {
             "title": "내 친구로 남아줄래?",
-            "mentionCount": 1,
-            "commentCount": 0
-          },
-          "그대별처럼": {
-            "title": "그대, 별처럼",
-            "mentionCount": 1,
-            "commentCount": 0
-          },
-          "구원은없다": {
-            "title": "구원은 없다",
             "mentionCount": 1,
             "commentCount": 0
           },
