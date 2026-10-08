@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-08T10:29:56.165Z",
+  "generatedAt": "2026-10-08T12:16:48.236Z",
   "weekStart": "2026-10-06",
   "weekEnd": "2026-10-08",
   "windowStart": "2026-10-06",
@@ -18,28 +18,28 @@
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121765&playDt=20261008&tsId=TS0039&pno=4",
-      "score": 496.3,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-09&movieCd=029713&playSDT=2026-10-09&screenId=01&showSeq=1",
+      "score": 530.7,
       "signal": 23.4,
       "positiveSignal": 23.4,
-      "mentionCount": 39.9,
+      "mentionCount": 43.3,
       "rawPositiveSignal": 24,
-      "rawMentionCount": 43.72641960624446,
+      "rawMentionCount": 47.165291731218964,
       "scheduleBackfill": false,
       "venueIds": [
+        "cinecube",
         "kucine",
         "sangsangmadang",
-        "cinecube",
         "filmforum"
       ],
       "venueNames": [
+        "씨네큐브 광화문",
         "KU시네마테크",
         "KT&G 상상마당 시네마",
-        "씨네큐브 광화문",
         "필름포럼"
       ],
-      "nextDate": "2026-10-08",
-      "nextTime": "20:10",
+      "nextDate": "2026-10-09",
+      "nextTime": "09:30",
       "evidence": [
         {
           "title": "룩백 메박에서만 개봉하네",
@@ -160,7 +160,7 @@
       "evidence": [
         {
           "title": "셀줄배 존나 재밌네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870716&page=4",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870716&page=6",
           "date": "2026-10-08",
           "positive": 8,
           "rawPositive": 8,
@@ -191,7 +191,7 @@
         },
         {
           "title": "셀줄배 화장실 안가고 다보는거 가능한가",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870532&page=8",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870532&page=9",
           "date": "2026-10-08",
           "positive": 0,
           "rawPositive": 0,
@@ -258,7 +258,7 @@
         },
         {
           "title": "옵세션은 미소녀 미저리 같은거임?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870886&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870886&page=3",
           "date": "2026-10-08",
           "positive": 0,
           "rawPositive": 0,
@@ -274,7 +274,7 @@
         },
         {
           "title": "옵세션 보고 새로운 취향에 눈뜨게됨",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870880&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870880&page=3",
           "date": "2026-10-08",
           "positive": 0,
           "rawPositive": 0,
@@ -341,7 +341,7 @@
         },
         {
           "title": "113 눈둘데가없네 오늘건데 볼사람?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870713&page=4",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870713&page=6",
           "date": "2026-10-08",
           "positive": 0,
           "rawPositive": 0,
@@ -373,7 +373,7 @@
           "englishTitle": "Possible Love",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91115&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 50
+          "mentionCount": 52
         },
         {
           "rank": 2,
@@ -385,6 +385,14 @@
         },
         {
           "rank": 3,
+          "title": "에브리타임",
+          "englishTitle": "Everytime",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89989&c_idx=434&sp_idx=&QueryStep=2",
+          "mentionCount": 28
+        },
+        {
+          "rank": 4,
           "title": "그래비티",
           "englishTitle": "Gravity",
           "section": "특별상영 & 까르뜨 블랑슈",
@@ -392,43 +400,35 @@
           "mentionCount": 26
         },
         {
-          "rank": 4,
-          "title": "에브리타임",
-          "englishTitle": "Everytime",
-          "section": "월드 시네마",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89989&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 26
-        },
-        {
           "rank": 5,
-          "title": "스파이럴",
-          "englishTitle": "The Spiral",
-          "section": "오픈 시네마",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91100&c_idx=437&sp_idx=&QueryStep=2",
-          "mentionCount": 16
-        },
-        {
-          "rank": 6,
-          "title": "페이퍼 타이거",
-          "englishTitle": "Paper Tiger",
-          "section": "아이콘",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89791&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 16
-        },
-        {
-          "rank": 7,
           "title": "필리피냐나",
           "englishTitle": "Filipiñana",
           "section": "아시아영화의 창",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89840&c_idx=432&sp_idx=&QueryStep=2",
+          "mentionCount": 18
+        },
+        {
+          "rank": 6,
+          "title": "파더랜드",
+          "englishTitle": "Fatherland",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90251&c_idx=430&sp_idx=&QueryStep=2",
           "mentionCount": 16
         },
         {
-          "rank": 8,
+          "rank": 7,
           "title": "버킹 패스타드",
           "englishTitle": "Bucking Fastard",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91151&c_idx=430&sp_idx=&QueryStep=2",
+          "mentionCount": 15
+        },
+        {
+          "rank": 8,
+          "title": "스파이럴",
+          "englishTitle": "The Spiral",
+          "section": "오픈 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91100&c_idx=437&sp_idx=&QueryStep=2",
           "mentionCount": 15
         }
       ]
@@ -439,20 +439,20 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 413,
-    "listedPostCount": 442,
-    "detailedPostCount": 27,
-    "commentFetchCount": 27,
-    "commentCount": 69,
+    "fetchedPostCount": 480,
+    "listedPostCount": 492,
+    "detailedPostCount": 28,
+    "commentFetchCount": 28,
+    "commentCount": 78,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 9,
+    "scannedPageCount": 10,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-10-06",
     "newestScannedDate": "2026-10-08",
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-08",
     "candidateWindowEnd": "2026-10-22",
-    "candidateCount": 96,
+    "candidateCount": 94,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-06",
     "listLookbackDays": 1,
