@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-08T03:11:48.836Z",
+  "generatedAt": "2026-10-08T06:18:46.235Z",
   "weekStart": "2026-10-06",
   "weekEnd": "2026-10-08",
   "windowStart": "2026-10-06",
@@ -18,28 +18,28 @@
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-08&movieCd=029713&playSDT=2026-10-08&screenId=01&showSeq=3",
-      "score": 131.4,
-      "signal": 1.4,
-      "positiveSignal": 1.4,
-      "mentionCount": 12.2,
-      "rawPositiveSignal": 2,
-      "rawMentionCount": 16.038407798525412,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261008&tsId=TS0044&pno=4",
+      "score": 274.9,
+      "signal": 5.4,
+      "positiveSignal": 5.4,
+      "mentionCount": 24.9,
+      "rawPositiveSignal": 6,
+      "rawMentionCount": 28.78433434669025,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube",
         "sangsangmadang",
         "filmforum",
+        "cinecube",
         "kucine"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
         "KT&G 상상마당 시네마",
         "필름포럼",
+        "씨네큐브 광화문",
         "KU시네마테크"
       ],
       "nextDate": "2026-10-08",
-      "nextTime": "13:15",
+      "nextTime": "15:55",
       "evidence": [
         {
           "title": "룩백 메박에서만 개봉하네",
@@ -134,6 +134,82 @@
     },
     {
       "rank": 2,
+      "title": "셀린느와 줄리 배타러 가다",
+      "posterUrl": "/assets/recommendation-posters/8aac803cf6309561.webp",
+      "localPosterUrl": "/assets/recommendation-posters/8aac803cf6309561.webp",
+      "posterSource": "wikipedia-pageimage",
+      "trailerUrl": "",
+      "url": "https://www.tinyticket.net/event/EVmoJmWJ7SaL",
+      "score": 68,
+      "signal": 8,
+      "positiveSignal": 8,
+      "mentionCount": 3.5,
+      "rawPositiveSignal": 8,
+      "rawMentionCount": 3.5,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "sac",
+        "filmforum"
+      ],
+      "venueNames": [
+        "서울아트시네마",
+        "필름포럼"
+      ],
+      "nextDate": "2026-10-09",
+      "nextTime": "17:40",
+      "evidence": [
+        {
+          "title": "셀줄배 존나 재밌네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870716&page=2",
+          "date": "2026-10-08",
+          "positive": 8,
+          "rawPositive": 8,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "셀줄배 화장실 안가고 다보는거 가능한가",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870532&page=5",
+          "date": "2026-10-08",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 16,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://upload.wikimedia.org/wikipedia/en/3/34/Celine_and_Julie_Go_Boating_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+    },
+    {
+      "rank": 3,
       "title": "옵세션",
       "posterUrl": "/assets/recommendation-posters/c1b7c09b74373fa5.webp",
       "localPosterUrl": "/assets/recommendation-posters/c1b7c09b74373fa5.webp",
@@ -184,110 +260,71 @@
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/iR0eC0eIWB8OjZ9abBz4FepfwkC.jpg"
     },
     {
-      "rank": 3,
-      "title": "꿈꾸던 모험",
-      "posterUrl": "/assets/recommendation-posters/730c75bb764294f9.webp",
-      "localPosterUrl": "/assets/recommendation-posters/730c75bb764294f9.webp",
+      "rank": 4,
+      "title": "눈 둘 데가 없네",
+      "posterUrl": "/assets/recommendation-posters/242c9b28acea884f.webp",
+      "localPosterUrl": "/assets/recommendation-posters/242c9b28acea884f.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121738&playDt=20261008&tsId=TS0056&pno=2",
-      "score": 26.3,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 2.5,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 3.953445297804259,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "filmforum",
-        "cinecube"
-      ],
-      "venueNames": [
-        "필름포럼",
-        "씨네큐브 광화문"
-      ],
-      "nextDate": "2026-10-08",
-      "nextTime": "12:20",
-      "evidence": [
-        {
-          "title": "토리노의 말 보다가 잠들었는데 꿈꾸던 모험 괜찮음?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869718&page=3",
-          "date": "2026-10-06",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "꿈꾸던 모험 자막 어디서 만든거냐 존나 뻐킹 아마추어같던데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870162&page=5",
-          "date": "2026-10-07",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 4,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260910_b6b3a8cc.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "셀린느와 줄리 배타러 가다",
-      "posterUrl": "/assets/recommendation-posters/8aac803cf6309561.webp",
-      "localPosterUrl": "/assets/recommendation-posters/8aac803cf6309561.webp",
-      "posterSource": "wikipedia-pageimage",
-      "trailerUrl": "",
-      "url": "https://www.tinyticket.net/event/EVmoJmWJ7SaL",
-      "score": 26,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 2.5,
-      "rawPositiveSignal": 0,
+      "url": "https://indiespace.kr/notice/5494",
+      "score": 27.1,
+      "signal": 1.4,
+      "positiveSignal": 1.4,
+      "mentionCount": 2.1,
+      "rawPositiveSignal": 2,
       "rawMentionCount": 2.5,
       "scheduleBackfill": false,
       "venueIds": [
-        "sac",
-        "filmforum"
+        "indiespace"
       ],
       "venueNames": [
-        "서울아트시네마",
-        "필름포럼"
+        "인디스페이스"
       ],
-      "nextDate": "2026-10-09",
-      "nextTime": "17:40",
+      "nextDate": "2026-10-21",
+      "nextTime": "17:20",
       "evidence": [
         {
-          "title": "셀줄배 화장실 안가고 다보는거 가능한가",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870532&page=3",
+          "title": "눈둘데 좋네 권해효랑 같이봄",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870173&page=5",
+          "date": "2026-10-07",
+          "positive": 2,
+          "rawPositive": 2,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "좋네",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "113 눈둘데가없네 오늘건데 볼사람?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870713&page=2",
           "date": "2026-10-08",
           "positive": 0,
           "rawPositive": 0,
           "negative": 0,
           "positiveHits": [],
           "negativeHits": [],
-          "questionLike": false,
+          "questionLike": true,
           "reviewQuestion": false,
-          "commentCount": 16,
+          "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
         }
       ],
-      "posterSourceUrl": "https://upload.wikimedia.org/wikipedia/en/3/34/Celine_and_Julie_Go_Boating_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+      "posterSourceUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FKQ3U4%2FdJMcagtJijO%2FAAAAAAAAAAAAAAAAAAAAAKH4gcbmONCbAZfz-yMnnRvJMuh7ha9n8OfVoQ04Vj1U%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DBz4UTof%252BDblZAy%252BDwGuV3tXMP2s%253D"
     }
   ],
   "festivalPicks": [
@@ -304,7 +341,7 @@
           "englishTitle": "Possible Love",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91115&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 48
+          "mentionCount": 50
         },
         {
           "rank": 2,
@@ -348,18 +385,18 @@
         },
         {
           "rank": 7,
+          "title": "페이퍼 타이거",
+          "englishTitle": "Paper Tiger",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89791&c_idx=430&sp_idx=&QueryStep=2",
+          "mentionCount": 15
+        },
+        {
+          "rank": 8,
           "title": "로마 엘라스티카",
           "englishTitle": "Roma Elastica",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91150&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 14
-        },
-        {
-          "rank": 8,
-          "title": "클럽 키드",
-          "englishTitle": "Club Kid",
-          "section": "월드 시네마",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91104&c_idx=434&sp_idx=&QueryStep=2",
           "mentionCount": 14
         }
       ]
@@ -370,11 +407,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 187,
+    "fetchedPostCount": 283,
     "listedPostCount": 292,
-    "detailedPostCount": 4,
-    "commentFetchCount": 4,
-    "commentCount": 20,
+    "detailedPostCount": 15,
+    "commentFetchCount": 15,
+    "commentCount": 41,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -383,7 +420,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-08",
     "candidateWindowEnd": "2026-10-22",
-    "candidateCount": 99,
+    "candidateCount": 98,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-06",
     "listLookbackDays": 1,
