@@ -2,204 +2,25 @@
   "version": 3,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-10-06",
-  "windowEnd": "2026-10-08",
+  "windowStart": "2026-10-07",
+  "windowEnd": "2026-10-09",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-10-06",
       "2026-10-07",
-      "2026-10-08"
+      "2026-10-08",
+      "2026-10-09"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-10-08",
-    "lastWindowEnd": "2026-10-08",
+    "lastWindowStart": "2026-10-09",
+    "lastWindowEnd": "2026-10-09",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-08T12:16:45.517Z",
+  "updatedAt": "2026-10-08T15:23:51.767Z",
   "days": {
-    "2026-10-06": {
-      "꿈꾸던모험": {
-        "title": "꿈꾸던 모험(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 1.792481250360578,
-        "evidence": [
-          {
-            "title": "토리노의 말 보다가 잠들었는데 꿈꾸던 모험 괜찮음?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869718&page=3",
-            "date": "2026-10-06",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "토리노의말": {
-        "title": "토리노의 말",
-        "positiveSignal": 0,
-        "mentionCount": 1.792481250360578,
-        "evidence": [
-          {
-            "title": "토리노의 말 보다가 잠들었는데 꿈꾸던 모험 괜찮음?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869718&page=3",
-            "date": "2026-10-06",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "이방인": {
-        "title": "이방인(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 3.792481250360578,
-        "evidence": [
-          {
-            "title": "이방인 너무 밋밋하네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869686&page=3",
-            "date": "2026-10-06",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "이방인 아쉽노",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869653&page=4",
-            "date": "2026-10-06",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "이방인 1만명 넘었던데 이 영화 뒷북 개봉좀",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869638&page=4",
-            "date": "2026-10-06",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "룩백": {
-        "title": "룩백(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 3.292481250360578,
-        "evidence": [
-          {
-            "title": "룩백 메박에서만 개봉하네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869630&page=4",
-            "date": "2026-10-06",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "룩백 인기 뭐고",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869517&page=6",
-            "date": "2026-10-06",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "사랑의역사": {
-        "title": "사랑의 역사 (35mm)",
-        "positiveSignal": 0,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "시네마테크 KOFA ‘사랑의 역사’ 신상옥·최은희 특별전",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869507&page=6",
-            "date": "2026-10-06",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "철들무렵": {
-        "title": "철들 무렵",
-        "positiveSignal": 0,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "철들 무렵 영노자",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869505&page=6",
-            "date": "2026-10-06",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-10-07": {
       "옵세션": {
         "title": "옵세션(2D)",
@@ -684,11 +505,57 @@
           }
         ]
       }
+    },
+    "2026-10-09": {
+      "프란체스코": {
+        "title": "프란체스코(2D)",
+        "positiveSignal": 0,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "프란체스코 홀리보이",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871116&page=1",
+            "date": "2026-10-09",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "룩백": {
+        "title": "룩백",
+        "positiveSignal": 0,
+        "mentionCount": 2.292481250360578,
+        "evidence": [
+          {
+            "title": "상자속의양도 별로였는데 룩백은 더 구리네",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871105&page=1",
+            "date": "2026-10-09",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 5,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      }
     }
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-08T12:16:45.508Z",
+      "lineupFetchedAt": "2026-10-08T15:23:51.763Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -2190,7 +2057,8 @@
         "2026-10-05",
         "2026-10-06",
         "2026-10-07",
-        "2026-10-08"
+        "2026-10-08",
+        "2026-10-09"
       ],
       "days": {
         "2026-09-22": {},
@@ -3882,6 +3750,28 @@
           },
           "젠틀몬스터": {
             "title": "젠틀 몬스터",
+            "mentionCount": 1,
+            "commentCount": 0
+          }
+        },
+        "2026-10-09": {
+          "매드맥스": {
+            "title": "매드 맥스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "파더랜드": {
+            "title": "파더랜드",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "짐승이너무많아": {
+            "title": "짐승이 너무 많아",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "노트르살뤼": {
+            "title": "노트르 살뤼",
             "mentionCount": 1,
             "commentCount": 0
           }

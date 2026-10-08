@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-08T12:16:48.236Z",
-  "weekStart": "2026-10-06",
-  "weekEnd": "2026-10-08",
-  "windowStart": "2026-10-06",
-  "windowEnd": "2026-10-08",
+  "generatedAt": "2026-10-08T15:23:55.077Z",
+  "weekStart": "2026-10-07",
+  "weekEnd": "2026-10-09",
+  "windowStart": "2026-10-07",
+  "windowEnd": "2026-10-09",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-09&movieCd=029713&playSDT=2026-10-09&screenId=01&showSeq=1",
-      "score": 530.7,
-      "signal": 23.4,
-      "positiveSignal": 23.4,
-      "mentionCount": 43.3,
+      "score": 393.8,
+      "signal": 16.9,
+      "positiveSignal": 16.9,
+      "mentionCount": 32.2,
       "rawPositiveSignal": 24,
-      "rawMentionCount": 47.165291731218964,
+      "rawMentionCount": 46.16529173121897,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -42,38 +42,6 @@
       "nextTime": "09:30",
       "evidence": [
         {
-          "title": "룩백 메박에서만 개봉하네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869630&page=4",
-          "date": "2026-10-06",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "룩백 인기 뭐고",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1869517&page=6",
-          "date": "2026-10-06",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
           "title": "룩백 7시 45분쯤 가면 좌석 구림??",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870272&page=3",
           "date": "2026-10-07",
@@ -87,7 +55,7 @@
           "commentCount": 4,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "룩백 줄 벌써부터 매표소까지 감았네",
@@ -103,7 +71,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "룩백vs디거 뭐가 낫냐",
@@ -127,6 +95,38 @@
           "commentCount": 1,
           "commentPositive": 2,
           "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "룩백 그냥 그렇네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870923&page=2",
+          "date": "2026-10-08",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 5,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "룩백 진짜 개쓰레기네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870891&page=3",
+          "date": "2026-10-08",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
           "dayWeight": 0.72
         }
       ],
@@ -140,10 +140,10 @@
       "posterSource": "wikipedia-pageimage",
       "trailerUrl": "",
       "url": "https://www.tinyticket.net/event/EVmoJmWJ7SaL",
-      "score": 73,
-      "signal": 8,
-      "positiveSignal": 8,
-      "mentionCount": 4,
+      "score": 52.8,
+      "signal": 5.8,
+      "positiveSignal": 5.8,
+      "mentionCount": 2.9,
       "rawPositiveSignal": 8,
       "rawMentionCount": 4,
       "scheduleBackfill": false,
@@ -187,7 +187,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "셀줄배 화장실 안가고 다보는거 가능한가",
@@ -203,7 +203,7 @@
           "commentCount": 16,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://upload.wikimedia.org/wikipedia/en/3/34/Celine_and_Julie_Go_Boating_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
@@ -216,10 +216,10 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121558&playDt=20261009&tsId=TS0044&pno=8",
-      "score": 66.4,
-      "signal": 2.9,
-      "positiveSignal": 2.9,
-      "mentionCount": 5.4,
+      "score": 48.1,
+      "signal": 2.1,
+      "positiveSignal": 2.1,
+      "mentionCount": 3.9,
       "rawPositiveSignal": 4,
       "rawMentionCount": 6.064641508472483,
       "scheduleBackfill": false,
@@ -254,7 +254,7 @@
           "commentCount": 6,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "옵세션은 미소녀 미저리 같은거임?",
@@ -270,7 +270,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "옵세션 보고 새로운 취향에 눈뜨게됨",
@@ -286,7 +286,7 @@
           "commentCount": 4,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/iR0eC0eIWB8OjZ9abBz4FepfwkC.jpg"
@@ -299,10 +299,10 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://indiespace.kr/notice/5494",
-      "score": 27.1,
-      "signal": 1.4,
-      "positiveSignal": 1.4,
-      "mentionCount": 2.1,
+      "score": 19.6,
+      "signal": 1,
+      "positiveSignal": 1,
+      "mentionCount": 1.5,
       "rawPositiveSignal": 2,
       "rawMentionCount": 2.5,
       "scheduleBackfill": false,
@@ -337,7 +337,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "113 눈둘데가없네 오늘건데 볼사람?",
@@ -353,7 +353,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FKQ3U4%2FdJMcagtJijO%2FAAAAAAAAAAAAAAAAAAAAAKH4gcbmONCbAZfz-yMnnRvJMuh7ha9n8OfVoQ04Vj1U%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DBz4UTof%252BDblZAy%252BDwGuV3tXMP2s%253D"
@@ -413,7 +413,7 @@
           "englishTitle": "Fatherland",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90251&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 16
+          "mentionCount": 17
         },
         {
           "rank": 7,
@@ -439,24 +439,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 480,
-    "listedPostCount": 492,
-    "detailedPostCount": 28,
-    "commentFetchCount": 28,
-    "commentCount": 78,
+    "fetchedPostCount": 28,
+    "listedPostCount": 292,
+    "detailedPostCount": 2,
+    "commentFetchCount": 2,
+    "commentCount": 5,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 10,
+    "scannedPageCount": 6,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-10-06",
-    "newestScannedDate": "2026-10-08",
+    "newestScannedDate": "2026-10-09",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-10-08",
-    "candidateWindowEnd": "2026-10-22",
-    "candidateCount": 94,
+    "candidateWindowStart": "2026-10-09",
+    "candidateWindowEnd": "2026-10-23",
+    "candidateCount": 97,
     "seedLookbackDays": 3,
-    "seedStart": "2026-10-06",
+    "seedStart": "2026-10-07",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-10-08",
+    "listWindowStart": "2026-10-09",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -464,7 +464,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-10-08"
+      "2026-10-09"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [
