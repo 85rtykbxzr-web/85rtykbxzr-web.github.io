@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-08T09:09:55.141Z",
+  "generatedAt": "2026-10-08T10:29:56.165Z",
   "weekStart": "2026-10-06",
   "weekEnd": "2026-10-08",
   "windowStart": "2026-10-06",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121765&playDt=20261008&tsId=TS0039&pno=4",
-      "score": 465.2,
+      "score": 496.3,
       "signal": 23.4,
       "positiveSignal": 23.4,
-      "mentionCount": 36.7,
+      "mentionCount": 39.9,
       "rawPositiveSignal": 24,
-      "rawMentionCount": 40.61522339557624,
+      "rawMentionCount": 43.72641960624446,
       "scheduleBackfill": false,
       "venueIds": [
         "kucine",
@@ -160,7 +160,7 @@
       "evidence": [
         {
           "title": "셀줄배 존나 재밌네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870716&page=3",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870716&page=4",
           "date": "2026-10-08",
           "positive": 8,
           "rawPositive": 8,
@@ -191,7 +191,7 @@
         },
         {
           "title": "셀줄배 화장실 안가고 다보는거 가능한가",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870532&page=7",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870532&page=8",
           "date": "2026-10-08",
           "positive": 0,
           "rawPositive": 0,
@@ -216,12 +216,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121558&playDt=20261009&tsId=TS0044&pno=8",
-      "score": 29.8,
+      "score": 66.4,
       "signal": 2.9,
       "positiveSignal": 2.9,
-      "mentionCount": 1.7,
+      "mentionCount": 5.4,
       "rawPositiveSignal": 4,
-      "rawMentionCount": 2.403677461028802,
+      "rawMentionCount": 6.064641508472483,
       "scheduleBackfill": false,
       "venueIds": [
         "sangsangmadang"
@@ -255,6 +255,38 @@
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.72
+        },
+        {
+          "title": "옵세션은 미소녀 미저리 같은거임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870886&page=1",
+          "date": "2026-10-08",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "옵세션 보고 새로운 취향에 눈뜨게됨",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870880&page=1",
+          "date": "2026-10-08",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 4,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/iR0eC0eIWB8OjZ9abBz4FepfwkC.jpg"
@@ -309,7 +341,7 @@
         },
         {
           "title": "113 눈둘데가없네 오늘건데 볼사람?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870713&page=3",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870713&page=4",
           "date": "2026-10-08",
           "positive": 0,
           "rawPositive": 0,
@@ -349,7 +381,7 @@
           "englishTitle": "La Gradiva",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90315&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 28
+          "mentionCount": 42
         },
         {
           "rank": 3,
@@ -365,10 +397,18 @@
           "englishTitle": "Everytime",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89989&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 25
+          "mentionCount": 26
         },
         {
           "rank": 5,
+          "title": "스파이럴",
+          "englishTitle": "The Spiral",
+          "section": "오픈 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91100&c_idx=437&sp_idx=&QueryStep=2",
+          "mentionCount": 16
+        },
+        {
+          "rank": 6,
           "title": "페이퍼 타이거",
           "englishTitle": "Paper Tiger",
           "section": "아이콘",
@@ -376,7 +416,7 @@
           "mentionCount": 16
         },
         {
-          "rank": 6,
+          "rank": 7,
           "title": "필리피냐나",
           "englishTitle": "Filipiñana",
           "section": "아시아영화의 창",
@@ -384,19 +424,11 @@
           "mentionCount": 16
         },
         {
-          "rank": 7,
+          "rank": 8,
           "title": "버킹 패스타드",
           "englishTitle": "Bucking Fastard",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91151&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 15
-        },
-        {
-          "rank": 8,
-          "title": "스파이럴",
-          "englishTitle": "The Spiral",
-          "section": "오픈 시네마",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91100&c_idx=437&sp_idx=&QueryStep=2",
           "mentionCount": 15
         }
       ]
@@ -407,20 +439,20 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 357,
-    "listedPostCount": 392,
-    "detailedPostCount": 21,
-    "commentFetchCount": 21,
-    "commentCount": 63,
+    "fetchedPostCount": 413,
+    "listedPostCount": 442,
+    "detailedPostCount": 27,
+    "commentFetchCount": 27,
+    "commentCount": 69,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 8,
+    "scannedPageCount": 9,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-10-06",
     "newestScannedDate": "2026-10-08",
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-08",
     "candidateWindowEnd": "2026-10-22",
-    "candidateCount": 97,
+    "candidateCount": 96,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-06",
     "listLookbackDays": 1,
