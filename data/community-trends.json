@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-08T15:23:55.077Z",
+  "generatedAt": "2026-10-08T18:14:52.137Z",
   "weekStart": "2026-10-07",
   "weekEnd": "2026-10-09",
   "windowStart": "2026-10-07",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-09&movieCd=029713&playSDT=2026-10-09&screenId=01&showSeq=1",
-      "score": 393.8,
-      "signal": 16.9,
-      "positiveSignal": 16.9,
-      "mentionCount": 32.2,
-      "rawPositiveSignal": 24,
-      "rawMentionCount": 46.16529173121897,
+      "score": 453,
+      "signal": 20.9,
+      "positiveSignal": 20.9,
+      "mentionCount": 36.6,
+      "rawPositiveSignal": 28,
+      "rawMentionCount": 50.48721982610633,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -293,70 +293,54 @@
     },
     {
       "rank": 4,
-      "title": "눈 둘 데가 없네",
-      "posterUrl": "/assets/recommendation-posters/242c9b28acea884f.webp",
-      "localPosterUrl": "/assets/recommendation-posters/242c9b28acea884f.webp",
+      "title": "프란체스코",
+      "posterUrl": "/assets/recommendation-posters/281544475eb9397f.webp",
+      "localPosterUrl": "/assets/recommendation-posters/281544475eb9397f.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://indiespace.kr/notice/5494",
-      "score": 19.6,
-      "signal": 1,
-      "positiveSignal": 1,
-      "mentionCount": 1.5,
-      "rawPositiveSignal": 2,
-      "rawMentionCount": 2.5,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121802&playDt=20261009&tsId=TS0056&pno=5",
+      "score": 34.9,
+      "signal": 4,
+      "positiveSignal": 4,
+      "mentionCount": 1.8,
+      "rawPositiveSignal": 4,
+      "rawMentionCount": 1.792481250360578,
       "scheduleBackfill": false,
       "venueIds": [
-        "indiespace"
+        "filmforum"
       ],
       "venueNames": [
-        "인디스페이스"
+        "필름포럼"
       ],
-      "nextDate": "2026-10-21",
-      "nextTime": "17:20",
+      "nextDate": "2026-10-09",
+      "nextTime": "19:20",
       "evidence": [
         {
-          "title": "눈둘데 좋네 권해효랑 같이봄",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870173&page=5",
-          "date": "2026-10-07",
-          "positive": 2,
-          "rawPositive": 2,
+          "title": "프란체스코 홀리보이",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871116&page=2",
+          "date": "2026-10-09",
+          "positive": 4,
+          "rawPositive": 4,
           "negative": 0,
           "positiveHits": [
             {
-              "term": "좋네",
+              "term": "추천",
               "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
             }
           ],
           "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "113 눈둘데가없네 오늘건데 볼사람?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870713&page=6",
-          "date": "2026-10-08",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
           "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
+          "reviewQuestion": true,
+          "commentCount": 2,
+          "commentPositive": 4,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 1
         }
       ],
-      "posterSourceUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FKQ3U4%2FdJMcagtJijO%2FAAAAAAAAAAAAAAAAAAAAAKH4gcbmONCbAZfz-yMnnRvJMuh7ha9n8OfVoQ04Vj1U%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DBz4UTof%252BDblZAy%252BDwGuV3tXMP2s%253D"
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/8hfyrgk66U2KkT49dvJUy5oWQ0d.jpg"
     }
   ],
   "festivalPicks": [
@@ -381,7 +365,7 @@
           "englishTitle": "La Gradiva",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90315&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 42
+          "mentionCount": 44
         },
         {
           "rank": 3,
@@ -405,7 +389,7 @@
           "englishTitle": "Filipiñana",
           "section": "아시아영화의 창",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89840&c_idx=432&sp_idx=&QueryStep=2",
-          "mentionCount": 18
+          "mentionCount": 19
         },
         {
           "rank": 6,
@@ -413,7 +397,7 @@
           "englishTitle": "Fatherland",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90251&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 17
+          "mentionCount": 18
         },
         {
           "rank": 7,
@@ -439,11 +423,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 28,
+    "fetchedPostCount": 80,
     "listedPostCount": 292,
-    "detailedPostCount": 2,
-    "commentFetchCount": 2,
-    "commentCount": 5,
+    "detailedPostCount": 5,
+    "commentFetchCount": 5,
+    "commentCount": 15,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,

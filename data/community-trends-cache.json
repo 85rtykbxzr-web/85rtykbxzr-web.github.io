@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-09",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-08T15:23:51.767Z",
+  "updatedAt": "2026-10-08T18:14:51.493Z",
   "days": {
     "2026-10-07": {
       "옵세션": {
@@ -507,22 +507,30 @@
       }
     },
     "2026-10-09": {
-      "프란체스코": {
-        "title": "프란체스코(2D)",
-        "positiveSignal": 0,
+      "특근": {
+        "title": "특근 (4K)",
+        "positiveSignal": 6,
         "mentionCount": 1,
         "evidence": [
           {
-            "title": "프란체스코 홀리보이",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871116&page=1",
+            "title": "오늘 영자원 특근 ㅈㄴ기대되노",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871176&page=1",
             "date": "2026-10-09",
-            "positive": 0,
-            "rawPositive": 0,
+            "positive": 6,
+            "rawPositive": 6,
             "negative": 0,
-            "positiveHits": [],
+            "positiveHits": [
+              {
+                "term": "걸작",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              }
+            ],
             "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
+            "questionLike": false,
+            "reviewQuestion": false,
             "commentCount": 0,
             "commentPositive": 0,
             "commentNegative": 0
@@ -531,12 +539,50 @@
       },
       "룩백": {
         "title": "룩백",
-        "positiveSignal": 0,
-        "mentionCount": 2.292481250360578,
+        "positiveSignal": 4,
+        "mentionCount": 6.61440934524794,
         "evidence": [
           {
+            "title": "룩백은 거의 사랑이야기라서 아유무나 쿄모토같은 성향인 사람이 아니면",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871137&page=2",
+            "date": "2026-10-09",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "감동",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 4,
+            "commentPositive": 4,
+            "commentNegative": 0
+          },
+          {
+            "title": "애니메이션 룩백 다시 봤는데",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871131&page=2",
+            "date": "2026-10-09",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 4,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
             "title": "상자속의양도 별로였는데 룩백은 더 구리네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871105&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871105&page=2",
             "date": "2026-10-09",
             "positive": 0,
             "rawPositive": 0,
@@ -550,12 +596,42 @@
             "commentNegative": 0
           }
         ]
+      },
+      "프란체스코": {
+        "title": "프란체스코(2D)",
+        "positiveSignal": 4,
+        "mentionCount": 1.792481250360578,
+        "evidence": [
+          {
+            "title": "프란체스코 홀리보이",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871116&page=2",
+            "date": "2026-10-09",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "추천",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 2,
+            "commentPositive": 4,
+            "commentNegative": 0
+          }
+        ]
       }
     }
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-08T15:23:51.763Z",
+      "lineupFetchedAt": "2026-10-08T18:14:51.489Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -3755,23 +3831,78 @@
           }
         },
         "2026-10-09": {
-          "매드맥스": {
-            "title": "매드 맥스",
-            "mentionCount": 1,
-            "commentCount": 0
-          },
-          "파더랜드": {
-            "title": "파더랜드",
-            "mentionCount": 1,
-            "commentCount": 0
-          },
-          "짐승이너무많아": {
-            "title": "짐승이 너무 많아",
+          "1518": {
+            "title": "15/18",
             "mentionCount": 1,
             "commentCount": 0
           },
           "노트르살뤼": {
             "title": "노트르 살뤼",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "라그라디바": {
+            "title": "라 그라디바",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "짐승이너무많아": {
+            "title": "짐승이 너무 많아",
+            "mentionCount": 3,
+            "commentCount": 0
+          },
+          "나의사소하고도큰일들": {
+            "title": "나의 사소하고도 큰 일들",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "무명소녀": {
+            "title": "무명소녀",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "오아시스": {
+            "title": "오아시스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "옐로우레터스": {
+            "title": "옐로우 레터스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "파더랜드": {
+            "title": "파더랜드",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "자바의사계절": {
+            "title": "자바의 사계절",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "우리파도처럼": {
+            "title": "우리, 파도처럼",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "내가사랑하는남자": {
+            "title": "내가 사랑하는 남자",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "필리피냐나": {
+            "title": "필리피냐나",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "웰컴투돌리하우스": {
+            "title": "웰컴 투 돌리 하우스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "매드맥스": {
+            "title": "매드 맥스",
             "mentionCount": 1,
             "commentCount": 0
           }
