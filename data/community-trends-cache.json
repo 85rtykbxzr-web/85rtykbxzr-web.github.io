@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-09",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-08T18:50:21.059Z",
+  "updatedAt": "2026-10-08T21:22:23.311Z",
   "days": {
     "2026-10-07": {
       "옵세션": {
@@ -507,41 +507,26 @@
       }
     },
     "2026-10-09": {
-      "특근": {
-        "title": "특근 (4K)",
-        "positiveSignal": 6,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "오늘 영자원 특근 ㅈㄴ기대되노",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871176&page=1",
-            "date": "2026-10-09",
-            "positive": 6,
-            "rawPositive": 6,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "걸작",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
       "룩백": {
         "title": "룩백",
         "positiveSignal": 4,
-        "mentionCount": 6.61440934524794,
+        "mentionCount": 8.406890595608518,
         "evidence": [
+          {
+            "title": "룩백 어떰?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871189&page=1",
+            "date": "2026-10-09",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 2,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
           {
             "title": "룩백은 거의 사랑이야기라서 아유무나 쿄모토같은 성향인 사람이 아니면",
             "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871137&page=2",
@@ -579,19 +564,34 @@
             "commentCount": 4,
             "commentPositive": 0,
             "commentNegative": 0
-          },
+          }
+        ]
+      },
+      "특근": {
+        "title": "특근 (4K)",
+        "positiveSignal": 6,
+        "mentionCount": 1,
+        "evidence": [
           {
-            "title": "상자속의양도 별로였는데 룩백은 더 구리네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871105&page=2",
+            "title": "오늘 영자원 특근 ㅈㄴ기대되노",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871176&page=1",
             "date": "2026-10-09",
-            "positive": 0,
-            "rawPositive": 0,
+            "positive": 6,
+            "rawPositive": 6,
             "negative": 0,
-            "positiveHits": [],
+            "positiveHits": [
+              {
+                "term": "걸작",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              }
+            ],
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 5,
+            "commentCount": 0,
             "commentPositive": 0,
             "commentNegative": 0
           }
@@ -631,7 +631,7 @@
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-08T18:50:21.054Z",
+      "lineupFetchedAt": "2026-10-08T21:22:23.307Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
