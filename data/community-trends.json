@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-08T06:18:46.235Z",
+  "generatedAt": "2026-10-08T09:09:55.141Z",
   "weekStart": "2026-10-06",
   "weekEnd": "2026-10-08",
   "windowStart": "2026-10-06",
@@ -18,28 +18,28 @@
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261008&tsId=TS0044&pno=4",
-      "score": 274.9,
-      "signal": 5.4,
-      "positiveSignal": 5.4,
-      "mentionCount": 24.9,
-      "rawPositiveSignal": 6,
-      "rawMentionCount": 28.78433434669025,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121765&playDt=20261008&tsId=TS0039&pno=4",
+      "score": 465.2,
+      "signal": 23.4,
+      "positiveSignal": 23.4,
+      "mentionCount": 36.7,
+      "rawPositiveSignal": 24,
+      "rawMentionCount": 40.61522339557624,
       "scheduleBackfill": false,
       "venueIds": [
+        "kucine",
         "sangsangmadang",
-        "filmforum",
         "cinecube",
-        "kucine"
+        "filmforum"
       ],
       "venueNames": [
+        "KU시네마테크",
         "KT&G 상상마당 시네마",
-        "필름포럼",
         "씨네큐브 광화문",
-        "KU시네마테크"
+        "필름포럼"
       ],
       "nextDate": "2026-10-08",
-      "nextTime": "15:55",
+      "nextTime": "20:10",
       "evidence": [
         {
           "title": "룩백 메박에서만 개봉하네",
@@ -140,12 +140,12 @@
       "posterSource": "wikipedia-pageimage",
       "trailerUrl": "",
       "url": "https://www.tinyticket.net/event/EVmoJmWJ7SaL",
-      "score": 68,
+      "score": 73,
       "signal": 8,
       "positiveSignal": 8,
-      "mentionCount": 3.5,
+      "mentionCount": 4,
       "rawPositiveSignal": 8,
-      "rawMentionCount": 3.5,
+      "rawMentionCount": 4,
       "scheduleBackfill": false,
       "venueIds": [
         "sac",
@@ -160,7 +160,7 @@
       "evidence": [
         {
           "title": "셀줄배 존나 재밌네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870716&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870716&page=3",
           "date": "2026-10-08",
           "positive": 8,
           "rawPositive": 8,
@@ -184,14 +184,14 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 0,
+          "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
         },
         {
           "title": "셀줄배 화장실 안가고 다보는거 가능한가",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870532&page=5",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870532&page=7",
           "date": "2026-10-08",
           "positive": 0,
           "rawPositive": 0,
@@ -309,7 +309,7 @@
         },
         {
           "title": "113 눈둘데가없네 오늘건데 볼사람?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870713&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870713&page=3",
           "date": "2026-10-08",
           "positive": 0,
           "rawPositive": 0,
@@ -345,18 +345,18 @@
         },
         {
           "rank": 2,
-          "title": "그래비티",
-          "englishTitle": "Gravity",
-          "section": "특별상영 & 까르뜨 블랑슈",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91282&c_idx=441&sp_idx=&QueryStep=2",
-          "mentionCount": 26
-        },
-        {
-          "rank": 3,
           "title": "라 그라디바",
           "englishTitle": "La Gradiva",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90315&c_idx=434&sp_idx=&QueryStep=2",
+          "mentionCount": 28
+        },
+        {
+          "rank": 3,
+          "title": "그래비티",
+          "englishTitle": "Gravity",
+          "section": "특별상영 & 까르뜨 블랑슈",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91282&c_idx=441&sp_idx=&QueryStep=2",
           "mentionCount": 26
         },
         {
@@ -369,6 +369,22 @@
         },
         {
           "rank": 5,
+          "title": "페이퍼 타이거",
+          "englishTitle": "Paper Tiger",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89791&c_idx=430&sp_idx=&QueryStep=2",
+          "mentionCount": 16
+        },
+        {
+          "rank": 6,
+          "title": "필리피냐나",
+          "englishTitle": "Filipiñana",
+          "section": "아시아영화의 창",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89840&c_idx=432&sp_idx=&QueryStep=2",
+          "mentionCount": 16
+        },
+        {
+          "rank": 7,
           "title": "버킹 패스타드",
           "englishTitle": "Bucking Fastard",
           "section": "아이콘",
@@ -376,28 +392,12 @@
           "mentionCount": 15
         },
         {
-          "rank": 6,
+          "rank": 8,
           "title": "스파이럴",
           "englishTitle": "The Spiral",
           "section": "오픈 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91100&c_idx=437&sp_idx=&QueryStep=2",
           "mentionCount": 15
-        },
-        {
-          "rank": 7,
-          "title": "페이퍼 타이거",
-          "englishTitle": "Paper Tiger",
-          "section": "아이콘",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89791&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 15
-        },
-        {
-          "rank": 8,
-          "title": "로마 엘라스티카",
-          "englishTitle": "Roma Elastica",
-          "section": "아이콘",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91150&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 14
         }
       ]
     }
@@ -407,20 +407,20 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 283,
-    "listedPostCount": 292,
-    "detailedPostCount": 15,
-    "commentFetchCount": 15,
-    "commentCount": 41,
+    "fetchedPostCount": 357,
+    "listedPostCount": 392,
+    "detailedPostCount": 21,
+    "commentFetchCount": 21,
+    "commentCount": 63,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 6,
+    "scannedPageCount": 8,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-10-06",
     "newestScannedDate": "2026-10-08",
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-08",
     "candidateWindowEnd": "2026-10-22",
-    "candidateCount": 98,
+    "candidateCount": 97,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-06",
     "listLookbackDays": 1,
