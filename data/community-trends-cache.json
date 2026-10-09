@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-10",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-09T18:20:50.943Z",
+  "updatedAt": "2026-10-09T21:12:08.337Z",
   "days": {
     "2026-10-08": {
       "룩백": {
@@ -517,7 +517,7 @@
       "룩백": {
         "title": "룩백(2D)",
         "positiveSignal": 8,
-        "mentionCount": 4.953445297804259,
+        "mentionCount": 5.321928094887362,
         "evidence": [
           {
             "title": "룩백은 왜 개쳐망했냐",
@@ -530,7 +530,7 @@
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 2,
+            "commentCount": 4,
             "commentPositive": 0,
             "commentNegative": 0
           },
@@ -591,11 +591,11 @@
       "셀린느와줄리배타러가다": {
         "title": "셀린느와 줄리 배 타러 가다(2D)",
         "positiveSignal": 0,
-        "mentionCount": 4.453445297804259,
+        "mentionCount": 4.69615871138938,
         "evidence": [
           {
             "title": "261009 서아시 셀줄배 최영민 시네토크 전사 (2)",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871830&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871830&page=3",
             "date": "2026-10-10",
             "positive": 0,
             "rawPositive": 0,
@@ -604,7 +604,7 @@
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 4,
+            "commentCount": 5,
             "commentPositive": 0,
             "commentNegative": 0
           },
@@ -619,7 +619,7 @@
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 5,
+            "commentCount": 6,
             "commentPositive": 0,
             "commentNegative": 0
           }
@@ -627,17 +627,24 @@
       },
       "베크마이스터하모니즈": {
         "title": "베크마이스터 하모니즈(기획전)",
-        "positiveSignal": 4,
-        "mentionCount": 1,
+        "positiveSignal": 8,
+        "mentionCount": 1.5,
         "evidence": [
           {
             "title": "베크마이스터 하모니즈 보고 왔음",
             "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871807&page=3",
             "date": "2026-10-10",
-            "positive": 4,
-            "rawPositive": 4,
+            "positive": 8,
+            "rawPositive": 8,
             "negative": 0,
             "positiveHits": [
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
               {
                 "term": "꿀잼",
                 "count": 1,
@@ -649,8 +656,8 @@
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
+            "commentCount": 1,
+            "commentPositive": 4,
             "commentNegative": 0
           }
         ]
@@ -659,7 +666,7 @@
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-09T18:20:50.938Z",
+      "lineupFetchedAt": "2026-10-09T21:12:08.332Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",

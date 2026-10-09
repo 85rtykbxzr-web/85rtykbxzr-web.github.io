@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-09T18:20:53.168Z",
+  "generatedAt": "2026-10-09T21:12:10.556Z",
   "weekStart": "2026-10-08",
   "weekEnd": "2026-10-10",
   "windowStart": "2026-10-08",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261010&tsId=TS0044&pno=1",
-      "score": 427.4,
+      "score": 431.1,
       "signal": 22.3,
       "positiveSignal": 22.3,
-      "mentionCount": 33.4,
+      "mentionCount": 33.8,
       "rawPositiveSignal": 34,
-      "rawMentionCount": 54.525627624631746,
+      "rawMentionCount": 54.89411042171485,
       "scheduleBackfill": false,
       "venueIds": [
         "sangsangmadang",
@@ -132,12 +132,12 @@
       "posterSource": "wikipedia-pageimage",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121769&playDt=20261013&tsId=TS0056&pno=1",
-      "score": 82.3,
+      "score": 84.8,
       "signal": 4.1,
       "positiveSignal": 4.1,
-      "mentionCount": 6.5,
+      "mentionCount": 6.8,
       "rawPositiveSignal": 8,
-      "rawMentionCount": 8.453445297804258,
+      "rawMentionCount": 8.69615871138938,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum"
@@ -197,7 +197,7 @@
         },
         {
           "title": "261009 서아시 셀줄배 최영민 시네토크 전사 (2)",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871830&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871830&page=3",
           "date": "2026-10-10",
           "positive": 0,
           "rawPositive": 0,
@@ -206,7 +206,7 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 4,
+          "commentCount": 5,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
@@ -222,7 +222,7 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 5,
+          "commentCount": 6,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
@@ -232,6 +232,66 @@
     },
     {
       "rank": 3,
+      "title": "베크마이스터 하모니즈",
+      "posterUrl": "/assets/recommendation-posters/ebcc0fc7349ed6cb.webp",
+      "localPosterUrl": "/assets/recommendation-posters/ebcc0fc7349ed6cb.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121793&playDt=20261010&tsId=TS0039&pno=4",
+      "score": 48.5,
+      "signal": 8,
+      "positiveSignal": 8,
+      "mentionCount": 1.5,
+      "rawPositiveSignal": 8,
+      "rawMentionCount": 1.5,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "kucine",
+        "sac"
+      ],
+      "venueNames": [
+        "KU시네마테크",
+        "서울아트시네마"
+      ],
+      "nextDate": "2026-10-10",
+      "nextTime": "17:10",
+      "evidence": [
+        {
+          "title": "베크마이스터 하모니즈 보고 왔음",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871807&page=3",
+          "date": "2026-10-10",
+          "positive": 8,
+          "rawPositive": 8,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 4,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/ix3pquGqTkCW86UbVTdRcrhGEFm.jpg"
+    },
+    {
+      "rank": 4,
       "title": "이방인",
       "posterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
       "localPosterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
@@ -302,59 +362,6 @@
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260903_7e3d6928.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "베크마이스터 하모니즈",
-      "posterUrl": "/assets/recommendation-posters/ebcc0fc7349ed6cb.webp",
-      "localPosterUrl": "/assets/recommendation-posters/ebcc0fc7349ed6cb.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121793&playDt=20261010&tsId=TS0039&pno=4",
-      "score": 27.5,
-      "signal": 4,
-      "positiveSignal": 4,
-      "mentionCount": 1,
-      "rawPositiveSignal": 4,
-      "rawMentionCount": 1,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "kucine",
-        "sac"
-      ],
-      "venueNames": [
-        "KU시네마테크",
-        "서울아트시네마"
-      ],
-      "nextDate": "2026-10-10",
-      "nextTime": "17:10",
-      "evidence": [
-        {
-          "title": "베크마이스터 하모니즈 보고 왔음",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871807&page=3",
-          "date": "2026-10-10",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "꿀잼",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/ix3pquGqTkCW86UbVTdRcrhGEFm.jpg"
     }
   ],
   "festivalPicks": [
@@ -437,11 +444,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 111,
+    "fetchedPostCount": 118,
     "listedPostCount": 292,
     "detailedPostCount": 6,
     "commentFetchCount": 6,
-    "commentCount": 15,
+    "commentCount": 20,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
