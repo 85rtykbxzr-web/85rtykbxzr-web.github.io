@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-09T03:19:34.588Z",
+  "generatedAt": "2026-10-09T06:11:43.929Z",
   "weekStart": "2026-10-07",
   "weekEnd": "2026-10-09",
   "windowStart": "2026-10-07",
@@ -14,32 +14,32 @@
     {
       "rank": 1,
       "title": "룩백",
-      "posterUrl": "/assets/recommendation-posters/eb4c5451cda00929.webp",
-      "localPosterUrl": "/assets/recommendation-posters/eb4c5451cda00929.webp",
+      "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
+      "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-09&movieCd=029713&playSDT=2026-10-09&screenId=01&showSeq=3",
-      "score": 492.6,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121765&playDt=20261009&tsId=TS0057&pno=5",
+      "score": 493.9,
       "signal": 20.9,
       "positiveSignal": 20.9,
-      "mentionCount": 40.5,
+      "mentionCount": 40.6,
       "rawPositiveSignal": 28,
-      "rawMentionCount": 54.44066512391059,
+      "rawMentionCount": 54.57218232682749,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube",
+        "filmforum",
         "kucine",
-        "sangsangmadang",
-        "filmforum"
+        "cinecube",
+        "sangsangmadang"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
+        "필름포럼",
         "KU시네마테크",
-        "KT&G 상상마당 시네마",
-        "필름포럼"
+        "씨네큐브 광화문",
+        "KT&G 상상마당 시네마"
       ],
       "nextDate": "2026-10-09",
-      "nextTime": "13:45",
+      "nextTime": "18:00",
       "evidence": [
         {
           "title": "룩백 7시 45분쯤 가면 좌석 구림??",
@@ -211,8 +211,8 @@
     {
       "rank": 3,
       "title": "옵세션",
-      "posterUrl": "/assets/recommendation-posters/926bf3c9c693a4b7.webp",
-      "localPosterUrl": "/assets/recommendation-posters/926bf3c9c693a4b7.webp",
+      "posterUrl": "/assets/recommendation-posters/c1b7c09b74373fa5.webp",
+      "localPosterUrl": "/assets/recommendation-posters/c1b7c09b74373fa5.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121558&playDt=20261009&tsId=TS0044&pno=8",
@@ -293,54 +293,70 @@
     },
     {
       "rank": 4,
-      "title": "프란체스코",
-      "posterUrl": "/assets/recommendation-posters/d235c346fa2491a2.webp",
-      "localPosterUrl": "/assets/recommendation-posters/d235c346fa2491a2.webp",
+      "title": "특근",
+      "posterUrl": "/assets/recommendation-posters/387472d66077021a.webp",
+      "localPosterUrl": "/assets/recommendation-posters/387472d66077021a.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121802&playDt=20261009&tsId=TS0056&pno=5",
-      "score": 34.9,
-      "signal": 4,
-      "positiveSignal": 4,
-      "mentionCount": 1.8,
-      "rawPositiveSignal": 4,
-      "rawMentionCount": 1.792481250360578,
+      "url": "https://www.koreafilm.or.kr/cinematheque/schedule",
+      "score": 44.5,
+      "signal": 6,
+      "positiveSignal": 6,
+      "mentionCount": 2,
+      "rawPositiveSignal": 6,
+      "rawMentionCount": 2,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum"
+        "kofa"
       ],
       "venueNames": [
-        "필름포럼"
+        "시네마테크KOFA"
       ],
       "nextDate": "2026-10-09",
-      "nextTime": "19:20",
+      "nextTime": "16:00",
       "evidence": [
         {
-          "title": "프란체스코 홀리보이",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871116&page=3",
+          "title": "오늘 영자원 특근 ㅈㄴ기대되노~~",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871287&page=2",
           "date": "2026-10-09",
-          "positive": 4,
-          "rawPositive": 4,
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "오늘 영자원 특근 ㅈㄴ기대되노",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871176&page=4",
+          "date": "2026-10-09",
+          "positive": 6,
+          "rawPositive": 6,
           "negative": 0,
           "positiveHits": [
             {
-              "term": "추천",
+              "term": "걸작",
               "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
             }
           ],
           "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 2,
-          "commentPositive": 4,
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
         }
       ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/8hfyrgk66U2KkT49dvJUy5oWQ0d.jpg"
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/8upjM945SVY99tu2Z8OG27Jd4m6.jpg"
     }
   ],
   "festivalPicks": [
@@ -373,7 +389,7 @@
           "englishTitle": "Everytime",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89989&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 28
+          "mentionCount": 29
         },
         {
           "rank": 4,
@@ -389,10 +405,18 @@
           "englishTitle": "A Man of His Time",
           "section": "플래시 포워드",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89988&c_idx=435&sp_idx=&QueryStep=2",
-          "mentionCount": 20
+          "mentionCount": 22
         },
         {
           "rank": 6,
+          "title": "파더랜드",
+          "englishTitle": "Fatherland",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90251&c_idx=430&sp_idx=&QueryStep=2",
+          "mentionCount": 19
+        },
+        {
+          "rank": 7,
           "title": "필리피냐나",
           "englishTitle": "Filipiñana",
           "section": "아시아영화의 창",
@@ -400,20 +424,12 @@
           "mentionCount": 19
         },
         {
-          "rank": 7,
-          "title": "파더랜드",
-          "englishTitle": "Fatherland",
-          "section": "아이콘",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90251&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 18
-        },
-        {
           "rank": 8,
           "title": "스파이럴",
           "englishTitle": "The Spiral",
           "section": "오픈 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91100&c_idx=437&sp_idx=&QueryStep=2",
-          "mentionCount": 16
+          "mentionCount": 17
         }
       ]
     }
@@ -423,11 +439,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 155,
+    "fetchedPostCount": 234,
     "listedPostCount": 292,
-    "detailedPostCount": 9,
-    "commentFetchCount": 9,
-    "commentCount": 25,
+    "detailedPostCount": 11,
+    "commentFetchCount": 11,
+    "commentCount": 26,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,

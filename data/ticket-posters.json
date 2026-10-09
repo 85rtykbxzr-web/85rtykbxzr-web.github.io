@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T03:19:34.694Z",
+  "generatedAt": "2026-10-09T06:11:44.053Z",
   "source": "TMDB",
   "imageBase": "https://image.tmdb.org/t/p/",
   "films": {
@@ -93,12 +93,6 @@
       ],
       "checkedAt": "2026-10-06T03:19:56.202Z"
     },
-    "자크타티단편선": {
-      "title": "자크 타티 단편선",
-      "tmdbId": null,
-      "posters": [],
-      "checkedAt": "2026-10-07T06:17:20.236Z"
-    },
     "강변의무코리타": {
       "title": "강변의 무코리타",
       "tmdbId": 749927,
@@ -106,6 +100,19 @@
         "/hhUKvUUdY8ernzWRw1xMTkEIZQX.jpg",
         "/bArvYefa29TY7uAYIH6nNh7XGLo.jpg",
         "/6QamO785rEJ9WSgFAh5absqH5eh.jpg"
+      ],
+      "checkedAt": "2026-10-01T06:00:43.896Z"
+    },
+    "철들무렵": {
+      "title": "철들 무렵",
+      "tmdbId": 1532365,
+      "posters": [
+        "/tR9kbyoS34wl11oQ6YJoNkn5F8e.jpg",
+        "/x020a9PscrtOkEi7zUa1xAu4f6p.jpg",
+        "/ah6c0LKAvnhW6iiFPyLTpSG7fbG.jpg",
+        "/ptqZq7Hhe0gETAxwjQQdykRd9sT.jpg",
+        "/7gBqPAjf7jLZxbp61Zn2oak2SUW.jpg",
+        "/mr2h1O8oMcBUZe7y7mmY34H1n1U.jpg"
       ],
       "checkedAt": "2026-10-01T06:00:43.896Z"
     },
@@ -124,19 +131,6 @@
       ],
       "checkedAt": "2026-10-01T06:00:43.896Z"
     },
-    "철들무렵": {
-      "title": "철들 무렵",
-      "tmdbId": 1532365,
-      "posters": [
-        "/tR9kbyoS34wl11oQ6YJoNkn5F8e.jpg",
-        "/x020a9PscrtOkEi7zUa1xAu4f6p.jpg",
-        "/ah6c0LKAvnhW6iiFPyLTpSG7fbG.jpg",
-        "/ptqZq7Hhe0gETAxwjQQdykRd9sT.jpg",
-        "/7gBqPAjf7jLZxbp61Zn2oak2SUW.jpg",
-        "/mr2h1O8oMcBUZe7y7mmY34H1n1U.jpg"
-      ],
-      "checkedAt": "2026-10-01T06:00:43.896Z"
-    },
     "아비정전": {
       "title": "아비정전",
       "tmdbId": 18311,
@@ -149,21 +143,6 @@
         "/zIcbXbK7GrHKBeKXxTf5AfDMrGh.jpg",
         "/bKGAizX16GY0PJPDi6hqzipzuj.jpg",
         "/sI7M08vIc7GuCPcWdSviXIxhbpa.jpg"
-      ],
-      "checkedAt": "2026-10-01T06:00:43.896Z"
-    },
-    "플레이타임": {
-      "title": "플레이타임",
-      "tmdbId": 10227,
-      "posters": [
-        "/kQOrS0DLUXYsqPMedM2G6NJcJBq.jpg",
-        "/l82SOzxn78mlBaqKRkFPYWFlkdk.jpg",
-        "/h0jUOIr8LKESwelppaNkqQrVu7C.jpg",
-        "/9ht1yjmQiCqeDFzwQGaJ2ZKorxJ.jpg",
-        "/kpoXyBsTNDPwSLSNrfRuLiZJPq8.jpg",
-        "/kzc1DHKwWBxVb3b3rT4bRpEDPZP.jpg",
-        "/iEmV0mw5yPmH3uUYrKMO2R5P9Mq.jpg",
-        "/caNVn8ejR7sNyGlnv9RLct1h0wV.jpg"
       ],
       "checkedAt": "2026-10-01T06:00:43.896Z"
     },
@@ -506,6 +485,21 @@
       "posters": [],
       "checkedAt": "2026-10-07T06:17:20.236Z"
     },
+    "플레이타임": {
+      "title": "플레이타임",
+      "tmdbId": 10227,
+      "posters": [
+        "/kQOrS0DLUXYsqPMedM2G6NJcJBq.jpg",
+        "/l82SOzxn78mlBaqKRkFPYWFlkdk.jpg",
+        "/h0jUOIr8LKESwelppaNkqQrVu7C.jpg",
+        "/9ht1yjmQiCqeDFzwQGaJ2ZKorxJ.jpg",
+        "/kpoXyBsTNDPwSLSNrfRuLiZJPq8.jpg",
+        "/kzc1DHKwWBxVb3b3rT4bRpEDPZP.jpg",
+        "/iEmV0mw5yPmH3uUYrKMO2R5P9Mq.jpg",
+        "/caNVn8ejR7sNyGlnv9RLct1h0wV.jpg"
+      ],
+      "checkedAt": "2026-10-01T06:00:43.896Z"
+    },
     "알파": {
       "title": "알파",
       "tmdbId": 1284460,
@@ -685,6 +679,12 @@
       ],
       "checkedAt": "2026-10-01T06:00:43.896Z"
     },
+    "자크타티단편선": {
+      "title": "자크 타티 단편선",
+      "tmdbId": null,
+      "posters": [],
+      "checkedAt": "2026-10-07T06:17:20.236Z"
+    },
     "퍼플스왈로우": {
       "title": "퍼플 스왈로우",
       "tmdbId": 1361545,
@@ -779,7 +779,7 @@
       "title": "오프닝 세션",
       "tmdbId": null,
       "posters": [],
-      "checkedAt": "2026-10-06T03:19:56.202Z"
+      "checkedAt": "2026-10-09T06:11:44.053Z"
     },
     "성춘향": {
       "title": "성춘향",
@@ -951,7 +951,7 @@
       "title": "로맨스빠빠",
       "tmdbId": null,
       "posters": [],
-      "checkedAt": "2026-10-06T03:19:56.202Z"
+      "checkedAt": "2026-10-09T06:11:44.053Z"
     },
     "열녀문": {
       "title": "열녀문",
@@ -967,7 +967,7 @@
       "title": "이조 여인잔혹사",
       "tmdbId": null,
       "posters": [],
-      "checkedAt": "2026-10-06T03:19:56.202Z"
+      "checkedAt": "2026-10-09T06:11:44.053Z"
     },
     "구제역에서살아돌아온돼지": {
       "title": "구제역에서 살아 돌아온 돼지",
@@ -996,7 +996,7 @@
       "title": "독립협회와 청년 리승만",
       "tmdbId": null,
       "posters": [],
-      "checkedAt": "2026-10-06T03:19:56.202Z"
+      "checkedAt": "2026-10-09T06:11:44.053Z"
     },
     "찰칵소리와함께한시절": {
       "title": "찰칵 소리와 함께한 시절",
@@ -1037,7 +1037,7 @@
       "title": "닌자키드",
       "tmdbId": null,
       "posters": [],
-      "checkedAt": "2026-10-06T03:19:56.202Z"
+      "checkedAt": "2026-10-09T06:11:44.053Z"
     },
     "어느여대생의고백": {
       "title": "어느 여대생의 고백",
@@ -1110,7 +1110,7 @@
       "title": "아이 러브 마마",
       "tmdbId": null,
       "posters": [],
-      "checkedAt": "2026-10-06T03:19:56.202Z"
+      "checkedAt": "2026-10-09T06:11:44.053Z"
     },
     "꿈": {
       "title": "꿈",
