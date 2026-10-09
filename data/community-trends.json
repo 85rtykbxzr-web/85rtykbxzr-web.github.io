@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-09T01:12:30.915Z",
+  "generatedAt": "2026-10-09T03:19:34.588Z",
   "weekStart": "2026-10-07",
   "weekEnd": "2026-10-09",
   "windowStart": "2026-10-07",
@@ -14,8 +14,8 @@
     {
       "rank": 1,
       "title": "룩백",
-      "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
-      "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
+      "posterUrl": "/assets/recommendation-posters/eb4c5451cda00929.webp",
+      "localPosterUrl": "/assets/recommendation-posters/eb4c5451cda00929.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-09&movieCd=029713&playSDT=2026-10-09&screenId=01&showSeq=3",
@@ -211,8 +211,8 @@
     {
       "rank": 3,
       "title": "옵세션",
-      "posterUrl": "/assets/recommendation-posters/c1b7c09b74373fa5.webp",
-      "localPosterUrl": "/assets/recommendation-posters/c1b7c09b74373fa5.webp",
+      "posterUrl": "/assets/recommendation-posters/926bf3c9c693a4b7.webp",
+      "localPosterUrl": "/assets/recommendation-posters/926bf3c9c693a4b7.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121558&playDt=20261009&tsId=TS0044&pno=8",
@@ -294,8 +294,8 @@
     {
       "rank": 4,
       "title": "프란체스코",
-      "posterUrl": "/assets/recommendation-posters/281544475eb9397f.webp",
-      "localPosterUrl": "/assets/recommendation-posters/281544475eb9397f.webp",
+      "posterUrl": "/assets/recommendation-posters/d235c346fa2491a2.webp",
+      "localPosterUrl": "/assets/recommendation-posters/d235c346fa2491a2.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121802&playDt=20261009&tsId=TS0056&pno=5",
@@ -385,6 +385,14 @@
         },
         {
           "rank": 5,
+          "title": "노트르 살뤼",
+          "englishTitle": "A Man of His Time",
+          "section": "플래시 포워드",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89988&c_idx=435&sp_idx=&QueryStep=2",
+          "mentionCount": 20
+        },
+        {
+          "rank": 6,
           "title": "필리피냐나",
           "englishTitle": "Filipiñana",
           "section": "아시아영화의 창",
@@ -392,20 +400,12 @@
           "mentionCount": 19
         },
         {
-          "rank": 6,
+          "rank": 7,
           "title": "파더랜드",
           "englishTitle": "Fatherland",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90251&c_idx=430&sp_idx=&QueryStep=2",
           "mentionCount": 18
-        },
-        {
-          "rank": 7,
-          "title": "노트르 살뤼",
-          "englishTitle": "A Man of His Time",
-          "section": "플래시 포워드",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89988&c_idx=435&sp_idx=&QueryStep=2",
-          "mentionCount": 17
         },
         {
           "rank": 8,
@@ -423,11 +423,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 118,
+    "fetchedPostCount": 155,
     "listedPostCount": 292,
-    "detailedPostCount": 8,
-    "commentFetchCount": 8,
-    "commentCount": 23,
+    "detailedPostCount": 9,
+    "commentFetchCount": 9,
+    "commentCount": 25,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
