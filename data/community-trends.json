@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-09T06:11:43.929Z",
+  "generatedAt": "2026-10-09T09:18:46.568Z",
   "weekStart": "2026-10-07",
   "weekEnd": "2026-10-09",
   "windowStart": "2026-10-07",
@@ -18,28 +18,28 @@
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121765&playDt=20261009&tsId=TS0057&pno=5",
-      "score": 493.9,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-09&movieCd=029713&playSDT=2026-10-09&screenId=01&showSeq=6",
+      "score": 515.5,
       "signal": 20.9,
       "positiveSignal": 20.9,
-      "mentionCount": 40.6,
+      "mentionCount": 42.8,
       "rawPositiveSignal": 28,
-      "rawMentionCount": 54.57218232682749,
+      "rawMentionCount": 56.73314637427117,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum",
-        "kucine",
         "cinecube",
-        "sangsangmadang"
+        "sangsangmadang",
+        "kucine",
+        "filmforum"
       ],
       "venueNames": [
-        "필름포럼",
-        "KU시네마테크",
         "씨네큐브 광화문",
-        "KT&G 상상마당 시네마"
+        "KT&G 상상마당 시네마",
+        "KU시네마테크",
+        "필름포럼"
       ],
       "nextDate": "2026-10-09",
-      "nextTime": "18:00",
+      "nextTime": "20:10",
       "evidence": [
         {
           "title": "룩백 7시 45분쯤 가면 좌석 구림??",
@@ -134,13 +134,13 @@
     },
     {
       "rank": 2,
-      "title": "셀린느와 줄리 배타러 가다",
+      "title": "셀린느와 줄리 배 타러 가다",
       "posterUrl": "/assets/recommendation-posters/8aac803cf6309561.webp",
       "localPosterUrl": "/assets/recommendation-posters/8aac803cf6309561.webp",
       "posterSource": "wikipedia-pageimage",
       "trailerUrl": "",
-      "url": "https://www.tinyticket.net/event/EVmoJmWJ7SaL",
-      "score": 52.8,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121769&playDt=20261013&tsId=TS0056&pno=1",
+      "score": 52.3,
       "signal": 5.8,
       "positiveSignal": 5.8,
       "mentionCount": 2.9,
@@ -148,15 +148,13 @@
       "rawMentionCount": 4,
       "scheduleBackfill": false,
       "venueIds": [
-        "sac",
         "filmforum"
       ],
       "venueNames": [
-        "서울아트시네마",
         "필름포럼"
       ],
-      "nextDate": "2026-10-09",
-      "nextTime": "17:40",
+      "nextDate": "2026-10-13",
+      "nextTime": "10:10",
       "evidence": [
         {
           "title": "셀줄배 존나 재밌네",
@@ -210,13 +208,86 @@
     },
     {
       "rank": 3,
+      "title": "이방인",
+      "posterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
+      "localPosterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121760&playDt=20261009&tsId=TS0039&pno=6",
+      "score": 47.9,
+      "signal": 4,
+      "positiveSignal": 4,
+      "mentionCount": 2.8,
+      "rawPositiveSignal": 4,
+      "rawMentionCount": 2.792481250360578,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "kucine",
+        "cinecube",
+        "filmforum",
+        "sangsangmadang"
+      ],
+      "venueNames": [
+        "KU시네마테크",
+        "씨네큐브 광화문",
+        "필름포럼",
+        "KT&G 상상마당 시네마"
+      ],
+      "nextDate": "2026-10-09",
+      "nextTime": "20:00",
+      "evidence": [
+        {
+          "title": "추해의 원조 이방인",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871447&page=3",
+          "date": "2026-10-09",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "노스포) <이방인> 난 상당히 만족하고 봄",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871334&page=4",
+          "date": "2026-10-09",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "만족",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260903_7e3d6928.jpg"
+    },
+    {
+      "rank": 4,
       "title": "옵세션",
       "posterUrl": "/assets/recommendation-posters/c1b7c09b74373fa5.webp",
       "localPosterUrl": "/assets/recommendation-posters/c1b7c09b74373fa5.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121558&playDt=20261009&tsId=TS0044&pno=8",
-      "score": 48.1,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121558&playDt=20261010&tsId=TS0044&pno=6",
+      "score": 47.6,
       "signal": 2.1,
       "positiveSignal": 2.1,
       "mentionCount": 3.9,
@@ -229,8 +300,8 @@
       "venueNames": [
         "KT&G 상상마당 시네마"
       ],
-      "nextDate": "2026-10-09",
-      "nextTime": "18:10",
+      "nextDate": "2026-10-10",
+      "nextTime": "20:30",
       "evidence": [
         {
           "title": "옵세션 보고 든 생각",
@@ -290,73 +361,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/iR0eC0eIWB8OjZ9abBz4FepfwkC.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "특근",
-      "posterUrl": "/assets/recommendation-posters/387472d66077021a.webp",
-      "localPosterUrl": "/assets/recommendation-posters/387472d66077021a.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.koreafilm.or.kr/cinematheque/schedule",
-      "score": 44.5,
-      "signal": 6,
-      "positiveSignal": 6,
-      "mentionCount": 2,
-      "rawPositiveSignal": 6,
-      "rawMentionCount": 2,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "kofa"
-      ],
-      "venueNames": [
-        "시네마테크KOFA"
-      ],
-      "nextDate": "2026-10-09",
-      "nextTime": "16:00",
-      "evidence": [
-        {
-          "title": "오늘 영자원 특근 ㅈㄴ기대되노~~",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871287&page=2",
-          "date": "2026-10-09",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        },
-        {
-          "title": "오늘 영자원 특근 ㅈㄴ기대되노",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871176&page=4",
-          "date": "2026-10-09",
-          "positive": 6,
-          "rawPositive": 6,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "걸작",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/8upjM945SVY99tu2Z8OG27Jd4m6.jpg"
     }
   ],
   "festivalPicks": [
@@ -369,19 +373,19 @@
       "items": [
         {
           "rank": 1,
-          "title": "가능한 사랑",
-          "englishTitle": "Possible Love",
-          "section": "아이콘",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91115&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 52
-        },
-        {
-          "rank": 2,
           "title": "라 그라디바",
           "englishTitle": "La Gradiva",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90315&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 46
+          "mentionCount": 68
+        },
+        {
+          "rank": 2,
+          "title": "가능한 사랑",
+          "englishTitle": "Possible Love",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91115&c_idx=430&sp_idx=&QueryStep=2",
+          "mentionCount": 53
         },
         {
           "rank": 3,
@@ -389,7 +393,7 @@
           "englishTitle": "Everytime",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89989&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 29
+          "mentionCount": 31
         },
         {
           "rank": 4,
@@ -409,18 +413,18 @@
         },
         {
           "rank": 6,
-          "title": "파더랜드",
-          "englishTitle": "Fatherland",
-          "section": "아이콘",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90251&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 19
-        },
-        {
-          "rank": 7,
           "title": "필리피냐나",
           "englishTitle": "Filipiñana",
           "section": "아시아영화의 창",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89840&c_idx=432&sp_idx=&QueryStep=2",
+          "mentionCount": 20
+        },
+        {
+          "rank": 7,
+          "title": "파더랜드",
+          "englishTitle": "Fatherland",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90251&c_idx=430&sp_idx=&QueryStep=2",
           "mentionCount": 19
         },
         {
@@ -439,20 +443,20 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 234,
-    "listedPostCount": 292,
-    "detailedPostCount": 11,
-    "commentFetchCount": 11,
-    "commentCount": 26,
+    "fetchedPostCount": 397,
+    "listedPostCount": 442,
+    "detailedPostCount": 13,
+    "commentFetchCount": 13,
+    "commentCount": 32,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 6,
+    "scannedPageCount": 9,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-10-06",
     "newestScannedDate": "2026-10-09",
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-09",
     "candidateWindowEnd": "2026-10-23",
-    "candidateCount": 97,
+    "candidateCount": 96,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-07",
     "listLookbackDays": 1,
