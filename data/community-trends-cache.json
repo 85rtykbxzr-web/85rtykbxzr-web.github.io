@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-10",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-09T15:15:37.635Z",
+  "updatedAt": "2026-10-09T18:20:50.943Z",
   "days": {
     "2026-10-08": {
       "룩백": {
@@ -514,14 +514,29 @@
       }
     },
     "2026-10-10": {
-      "셀린느와줄리배타러가다": {
-        "title": "셀린느와 줄리 배 타러 가다(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 1,
+      "룩백": {
+        "title": "룩백(2D)",
+        "positiveSignal": 8,
+        "mentionCount": 4.953445297804259,
         "evidence": [
           {
-            "title": "261010 서아시 셀줄배 최영민 시네토크 전사",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871818&page=1",
+            "title": "룩백은 왜 개쳐망했냐",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871917&page=1",
+            "date": "2026-10-10",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "난 룩백 이쁘게찍어서 좋던데",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871891&page=1",
             "date": "2026-10-10",
             "positive": 0,
             "rawPositive": 0,
@@ -531,6 +546,80 @@
             "questionLike": false,
             "reviewQuestion": false,
             "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "스포) 고히 룩백, 애니보다 낫네",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871862&page=2",
+            "date": "2026-10-10",
+            "positive": 8,
+            "rawPositive": 8,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "좋았음",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              },
+              {
+                "term": "좋았음",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 4,
+            "commentPositive": 8,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "셀린느와줄리배타러가다": {
+        "title": "셀린느와 줄리 배 타러 가다(2D)",
+        "positiveSignal": 0,
+        "mentionCount": 4.453445297804259,
+        "evidence": [
+          {
+            "title": "261009 서아시 셀줄배 최영민 시네토크 전사 (2)",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871830&page=2",
+            "date": "2026-10-10",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 4,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "261009 서아시 셀줄배 최영민 시네토크 전사 (1)",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871818&page=3",
+            "date": "2026-10-10",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 5,
             "commentPositive": 0,
             "commentNegative": 0
           }
@@ -543,7 +632,7 @@
         "evidence": [
           {
             "title": "베크마이스터 하모니즈 보고 왔음",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871807&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871807&page=3",
             "date": "2026-10-10",
             "positive": 4,
             "rawPositive": 4,
@@ -570,7 +659,7 @@
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-09T15:15:37.632Z",
+      "lineupFetchedAt": "2026-10-09T18:20:50.938Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -3983,23 +4072,103 @@
           }
         },
         "2026-10-10": {
+          "1518": {
+            "title": "15/18",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
           "파더랜드": {
             "title": "파더랜드",
             "mentionCount": 1,
             "commentCount": 0
           },
+          "초대받지않은손님": {
+            "title": "초대받지 않은 손님",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "노트르살뤼": {
+            "title": "노트르 살뤼",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "텐더러빙케어": {
+            "title": "텐더 러빙 케어",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "오렌지맛웨딩": {
+            "title": "오렌지 맛 웨딩",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "멜트다운": {
+            "title": "멜트다운",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "미노타우로스": {
+            "title": "미노타우로스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "페이퍼타이거": {
+            "title": "페이퍼 타이거",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
           "스파이럴": {
             "title": "스파이럴",
+            "mentionCount": 5,
+            "commentCount": 0
+          },
+          "불타는거인들": {
+            "title": "불타는 거인들",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "이야기이야기": {
+            "title": "이야기, 이야기",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "타이타닉오션": {
+            "title": "타이타닉 오션",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "에코체임버": {
+            "title": "에코 체임버",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "베드포드파크": {
+            "title": "베드포드 파크",
             "mentionCount": 1,
             "commentCount": 0
           },
           "라그라디바": {
             "title": "라 그라디바",
-            "mentionCount": 1,
+            "mentionCount": 2,
             "commentCount": 0
           },
           "에브리타임": {
             "title": "에브리타임",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "아이언보이": {
+            "title": "아이언 보이",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "구원은없다": {
+            "title": "구원은 없다",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "58번째": {
+            "title": "58번째",
             "mentionCount": 1,
             "commentCount": 0
           }

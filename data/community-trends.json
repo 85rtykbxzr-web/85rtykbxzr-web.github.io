@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-09T15:15:40.979Z",
+  "generatedAt": "2026-10-09T18:20:53.168Z",
   "weekStart": "2026-10-08",
   "weekEnd": "2026-10-10",
   "windowStart": "2026-10-08",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261010&tsId=TS0044&pno=1",
-      "score": 345.9,
-      "signal": 14.3,
-      "positiveSignal": 14.3,
-      "mentionCount": 28.5,
-      "rawPositiveSignal": 26,
-      "rawMentionCount": 49.57218232682749,
+      "score": 427.4,
+      "signal": 22.3,
+      "positiveSignal": 22.3,
+      "mentionCount": 33.4,
+      "rawPositiveSignal": 34,
+      "rawMentionCount": 54.525627624631746,
       "scheduleBackfill": false,
       "venueIds": [
         "sangsangmadang",
@@ -132,12 +132,12 @@
       "posterSource": "wikipedia-pageimage",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121769&playDt=20261013&tsId=TS0056&pno=1",
-      "score": 47.8,
+      "score": 82.3,
       "signal": 4.1,
       "positiveSignal": 4.1,
-      "mentionCount": 3.1,
+      "mentionCount": 6.5,
       "rawPositiveSignal": 8,
-      "rawMentionCount": 5,
+      "rawMentionCount": 8.453445297804258,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum"
@@ -196,8 +196,8 @@
           "dayWeight": 0.518
         },
         {
-          "title": "261010 서아시 셀줄배 최영민 시네토크 전사",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871818&page=1",
+          "title": "261009 서아시 셀줄배 최영민 시네토크 전사 (2)",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871830&page=2",
           "date": "2026-10-10",
           "positive": 0,
           "rawPositive": 0,
@@ -206,7 +206,23 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 0,
+          "commentCount": 4,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "261009 서아시 셀줄배 최영민 시네토크 전사 (1)",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871818&page=3",
+          "date": "2026-10-10",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 5,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
@@ -315,7 +331,7 @@
       "evidence": [
         {
           "title": "베크마이스터 하모니즈 보고 왔음",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871807&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871807&page=3",
           "date": "2026-10-10",
           "positive": 4,
           "rawPositive": 4,
@@ -355,7 +371,7 @@
           "englishTitle": "La Gradiva",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90315&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 71
+          "mentionCount": 72
         },
         {
           "rank": 2,
@@ -371,7 +387,7 @@
           "englishTitle": "Everytime",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89989&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 37
+          "mentionCount": 38
         },
         {
           "rank": 4,
@@ -387,10 +403,18 @@
           "englishTitle": "A Man of His Time",
           "section": "플래시 포워드",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89988&c_idx=435&sp_idx=&QueryStep=2",
-          "mentionCount": 23
+          "mentionCount": 24
         },
         {
           "rank": 6,
+          "title": "스파이럴",
+          "englishTitle": "The Spiral",
+          "section": "오픈 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91100&c_idx=437&sp_idx=&QueryStep=2",
+          "mentionCount": 22
+        },
+        {
+          "rank": 7,
           "title": "파더랜드",
           "englishTitle": "Fatherland",
           "section": "아이콘",
@@ -398,20 +422,12 @@
           "mentionCount": 20
         },
         {
-          "rank": 7,
-          "title": "필리피냐나",
-          "englishTitle": "Filipiñana",
-          "section": "아시아영화의 창",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89840&c_idx=432&sp_idx=&QueryStep=2",
-          "mentionCount": 20
-        },
-        {
           "rank": 8,
-          "title": "스파이럴",
-          "englishTitle": "The Spiral",
-          "section": "오픈 시네마",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91100&c_idx=437&sp_idx=&QueryStep=2",
-          "mentionCount": 18
+          "title": "페이퍼 타이거",
+          "englishTitle": "Paper Tiger",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89791&c_idx=430&sp_idx=&QueryStep=2",
+          "mentionCount": 20
         }
       ]
     }
@@ -421,11 +437,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 17,
+    "fetchedPostCount": 111,
     "listedPostCount": 292,
-    "detailedPostCount": 2,
-    "commentFetchCount": 2,
-    "commentCount": 0,
+    "detailedPostCount": 6,
+    "commentFetchCount": 6,
+    "commentCount": 15,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
