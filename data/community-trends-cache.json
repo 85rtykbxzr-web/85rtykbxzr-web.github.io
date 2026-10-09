@@ -2,257 +2,25 @@
   "version": 3,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-10-07",
-  "windowEnd": "2026-10-09",
+  "windowStart": "2026-10-08",
+  "windowEnd": "2026-10-10",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-10-07",
       "2026-10-08",
-      "2026-10-09"
+      "2026-10-09",
+      "2026-10-10"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-10-09",
-    "lastWindowEnd": "2026-10-09",
+    "lastWindowStart": "2026-10-10",
+    "lastWindowEnd": "2026-10-10",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-09T12:09:27.319Z",
+  "updatedAt": "2026-10-09T15:15:37.635Z",
   "days": {
-    "2026-10-07": {
-      "옵세션": {
-        "title": "옵세션(2D)",
-        "positiveSignal": 4,
-        "mentionCount": 2.403677461028802,
-        "evidence": [
-          {
-            "title": "옵세션 보고 든 생각",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870370&page=1",
-            "date": "2026-10-07",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "재밋",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 6,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "사탄탱고": {
-        "title": "사탄탱고",
-        "positiveSignal": 0,
-        "mentionCount": 2.292481250360578,
-        "evidence": [
-          {
-            "title": "아니 사탄탱고 보러 부산가려고 하는데 기차표가 없네 ㅅㅂ",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870306&page=2",
-            "date": "2026-10-07",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 5,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "룩백": {
-        "title": "룩백(2D)",
-        "positiveSignal": 2,
-        "mentionCount": 8.16096404744368,
-        "evidence": [
-          {
-            "title": "룩백 7시 45분쯤 가면 좌석 구림??",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870272&page=3",
-            "date": "2026-10-07",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 4,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "룩백 줄 벌써부터 매표소까지 감았네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870265&page=3",
-            "date": "2026-10-07",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "룩백vs디거 뭐가 낫냐",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870230&page=4",
-            "date": "2026-10-07",
-            "positive": 2,
-            "rawPositive": 2,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "좋았음",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 2,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "25시": {
-        "title": "25시",
-        "positiveSignal": 0,
-        "mentionCount": 1.792481250360578,
-        "evidence": [
-          {
-            "title": "내일 영자원 25시 명작인가염?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870270&page=3",
-            "date": "2026-10-07",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "쇼트서킷": {
-        "title": "쇼트 서킷",
-        "positiveSignal": 0,
-        "mentionCount": 2.160964047443681,
-        "evidence": [
-          {
-            "title": "영자원 쇼트 서킷 보신분 계심?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870269&page=3",
-            "date": "2026-10-07",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 3,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "눈둘데가없네": {
-        "title": "눈 둘 데가 없네",
-        "positiveSignal": 2,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "눈둘데 좋네 권해효랑 같이봄",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870173&page=5",
-            "date": "2026-10-07",
-            "positive": 2,
-            "rawPositive": 2,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "좋네",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "꿈꾸던모험": {
-        "title": "꿈꾸던 모험(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 2.160964047443681,
-        "evidence": [
-          {
-            "title": "꿈꾸던 모험 자막 어디서 만든거냐 존나 뻐킹 아마추어같던데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870162&page=5",
-            "date": "2026-10-07",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 4,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "최악의하루": {
-        "title": "(기획전) 최악의 하루",
-        "positiveSignal": 0,
-        "mentionCount": 1.792481250360578,
-        "evidence": [
-          {
-            "title": "난 김종관이 <최악의하루> 좋아함",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870034&page=7",
-            "date": "2026-10-07",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-10-08": {
       "룩백": {
         "title": "룩백",
@@ -744,11 +512,65 @@
           }
         ]
       }
+    },
+    "2026-10-10": {
+      "셀린느와줄리배타러가다": {
+        "title": "셀린느와 줄리 배 타러 가다(2D)",
+        "positiveSignal": 0,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "261010 서아시 셀줄배 최영민 시네토크 전사",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871818&page=1",
+            "date": "2026-10-10",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "베크마이스터하모니즈": {
+        "title": "베크마이스터 하모니즈(기획전)",
+        "positiveSignal": 4,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "베크마이스터 하모니즈 보고 왔음",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871807&page=1",
+            "date": "2026-10-10",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      }
     }
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-09T12:09:27.311Z",
+      "lineupFetchedAt": "2026-10-09T15:15:37.632Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -2251,7 +2073,8 @@
         "2026-10-06",
         "2026-10-07",
         "2026-10-08",
-        "2026-10-09"
+        "2026-10-09",
+        "2026-10-10"
       ],
       "days": {
         "2026-09-22": {},
@@ -4155,6 +3978,28 @@
           },
           "웰컴투돌리하우스": {
             "title": "웰컴 투 돌리 하우스",
+            "mentionCount": 1,
+            "commentCount": 0
+          }
+        },
+        "2026-10-10": {
+          "파더랜드": {
+            "title": "파더랜드",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "스파이럴": {
+            "title": "스파이럴",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "라그라디바": {
+            "title": "라 그라디바",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "에브리타임": {
+            "title": "에브리타임",
             "mentionCount": 1,
             "commentCount": 0
           }
