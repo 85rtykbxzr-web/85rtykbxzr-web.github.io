@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-10T12:12:15.975Z",
-  "weekStart": "2026-10-08",
-  "weekEnd": "2026-10-10",
-  "windowStart": "2026-10-08",
-  "windowEnd": "2026-10-10",
+  "generatedAt": "2026-10-10T15:17:08.469Z",
+  "weekStart": "2026-10-09",
+  "weekEnd": "2026-10-11",
+  "windowStart": "2026-10-09",
+  "windowEnd": "2026-10-11",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121765&playDt=20261011&tsId=TS0039&pno=2",
-      "score": 727.3,
-      "signal": 38.3,
-      "positiveSignal": 38.3,
-      "mentionCount": 57,
-      "rawPositiveSignal": 50,
-      "rawMentionCount": 78.1105901253529,
+      "score": 358.7,
+      "signal": 19.4,
+      "positiveSignal": 19.4,
+      "mentionCount": 27.7,
+      "rawPositiveSignal": 28,
+      "rawMentionCount": 42.39874369193819,
       "scheduleBackfill": false,
       "venueIds": [
         "kucine",
@@ -42,54 +42,6 @@
       "nextTime": "12:00",
       "evidence": [
         {
-          "title": "룩백 그냥 그렇네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870923&page=2",
-          "date": "2026-10-08",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 5,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "룩백 진짜 개쓰레기네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870891&page=3",
-          "date": "2026-10-08",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "룩백 기대 안했는데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870869&page=3",
-          "date": "2026-10-08",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
           "title": "( 스포) 룩백 실사판 이 장면은 어땠음?",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871626&page=1",
           "date": "2026-10-09",
@@ -103,7 +55,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "고히 룩백 봤음",
@@ -119,6 +71,54 @@
           "commentCount": 4,
           "commentPositive": 0,
           "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "룩백은 불판 제외라니깐 댓글 남기는 저지능아들 뭐임",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871193&page=9",
+          "date": "2026-10-09",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "룩백 실사를 애니보다 재밌게 봤으면 영알못인가요?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872381&page=1",
+          "date": "2026-10-10",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "스포) 룩백 실사화",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872315&page=3",
+          "date": "2026-10-10",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
           "dayWeight": 0.72
         }
       ],
@@ -126,138 +126,16 @@
     },
     {
       "rank": 2,
-      "title": "셀린느와 줄리 배 타러 가다",
-      "posterUrl": "/assets/recommendation-posters/8aac803cf6309561.webp",
-      "localPosterUrl": "/assets/recommendation-posters/8aac803cf6309561.webp",
-      "posterSource": "wikipedia-pageimage",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121769&playDt=20261013&tsId=TS0056&pno=1",
-      "score": 94.8,
-      "signal": 4.1,
-      "positiveSignal": 4.1,
-      "mentionCount": 7.8,
-      "rawPositiveSignal": 8,
-      "rawMentionCount": 9.69615871138938,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "filmforum"
-      ],
-      "venueNames": [
-        "필름포럼"
-      ],
-      "nextDate": "2026-10-13",
-      "nextTime": "10:10",
-      "evidence": [
-        {
-          "title": "셀줄배 존나 재밌네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870716&page=6",
-          "date": "2026-10-08",
-          "positive": 8,
-          "rawPositive": 8,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "꿀잼",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "재밌",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "셀줄배 화장실 안가고 다보는거 가능한가",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870532&page=9",
-          "date": "2026-10-08",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 16,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "어제 셀줄배 gv. 최영민이 있는 라이트하우스",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872226&page=4",
-          "date": "2026-10-10",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        },
-        {
-          "title": "261009 서아시 셀줄배 최영민 시네토크 전사 (2)",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871830&page=11",
-          "date": "2026-10-10",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 5,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        },
-        {
-          "title": "261009 서아시 셀줄배 최영민 시네토크 전사 (1)",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871818&page=11",
-          "date": "2026-10-10",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 6,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://upload.wikimedia.org/wikipedia/en/3/34/Celine_and_Julie_Go_Boating_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
-    },
-    {
-      "rank": 3,
       "title": "이방인",
       "posterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
       "localPosterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-11&movieCd=029631&playSDT=2026-10-11&screenId=01&showSeq=3",
-      "score": 77.6,
-      "signal": 8.9,
-      "positiveSignal": 8.9,
-      "mentionCount": 3.8,
+      "score": 56.9,
+      "signal": 6.4,
+      "positiveSignal": 6.4,
+      "mentionCount": 2.7,
       "rawPositiveSignal": 10,
       "rawMentionCount": 4.584962500721156,
       "scheduleBackfill": false,
@@ -290,7 +168,7 @@
           "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "노스포) <이방인> 난 상당히 만족하고 봄",
@@ -314,7 +192,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "이방인 뭐 먼저 보는 게 좋음?",
@@ -338,10 +216,85 @@
           "commentCount": 2,
           "commentPositive": 6,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260903_7e3d6928.jpg"
+    },
+    {
+      "rank": 3,
+      "title": "셀린느와 줄리 배 타러 가다",
+      "posterUrl": "/assets/recommendation-posters/8aac803cf6309561.webp",
+      "localPosterUrl": "/assets/recommendation-posters/8aac803cf6309561.webp",
+      "posterSource": "wikipedia-pageimage",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121769&playDt=20261013&tsId=TS0056&pno=1",
+      "score": 41.5,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 4.1,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 5.69615871138938,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "filmforum"
+      ],
+      "venueNames": [
+        "필름포럼"
+      ],
+      "nextDate": "2026-10-13",
+      "nextTime": "10:10",
+      "evidence": [
+        {
+          "title": "어제 셀줄배 gv. 최영민이 있는 라이트하우스",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872226&page=4",
+          "date": "2026-10-10",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "261009 서아시 셀줄배 최영민 시네토크 전사 (2)",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871830&page=11",
+          "date": "2026-10-10",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 5,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "261009 서아시 셀줄배 최영민 시네토크 전사 (1)",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871818&page=11",
+          "date": "2026-10-10",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 6,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        }
+      ],
+      "posterSourceUrl": "https://upload.wikimedia.org/wikipedia/en/3/34/Celine_and_Julie_Go_Boating_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     },
     {
       "rank": 4,
@@ -351,12 +304,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-11&movieCd=029552&playSDT=2026-10-11&screenId=01&showSeq=1",
-      "score": 59.2,
-      "signal": 6,
-      "positiveSignal": 6,
-      "mentionCount": 3.1,
+      "score": 35.7,
+      "signal": 4.3,
+      "positiveSignal": 4.3,
+      "mentionCount": 1.4,
       "rawPositiveSignal": 6,
-      "rawMentionCount": 4.160964047443681,
+      "rawMentionCount": 2,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -373,22 +326,6 @@
       "nextDate": "2026-10-11",
       "nextTime": "10:20",
       "evidence": [
-        {
-          "title": "나의 사적인 예술가 수작 이상임?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1870738&page=5",
-          "date": "2026-10-08",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 4,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "ㅅㅍ)나의 사적인 예술가 이거 걍 누갤인데",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872032&page=8",
@@ -418,7 +355,7 @@
           "commentCount": 3,
           "commentPositive": 6,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/5FGPyozt9zhFdlr80bSZRIOmHpc.jpg"
@@ -438,7 +375,7 @@
           "englishTitle": "La Gradiva",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90315&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 78
+          "mentionCount": 79
         },
         {
           "rank": 2,
@@ -504,24 +441,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 552,
-    "listedPostCount": 592,
-    "detailedPostCount": 27,
-    "commentFetchCount": 27,
-    "commentCount": 57,
+    "fetchedPostCount": 15,
+    "listedPostCount": 292,
+    "detailedPostCount": 0,
+    "commentFetchCount": 0,
+    "commentCount": 0,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 12,
+    "scannedPageCount": 6,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-10-06",
-    "newestScannedDate": "2026-10-10",
+    "newestScannedDate": "2026-10-11",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-10-10",
-    "candidateWindowEnd": "2026-10-24",
+    "candidateWindowStart": "2026-10-11",
+    "candidateWindowEnd": "2026-10-25",
     "candidateCount": 89,
     "seedLookbackDays": 3,
-    "seedStart": "2026-10-08",
+    "seedStart": "2026-10-09",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-10-10",
+    "listWindowStart": "2026-10-11",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -529,7 +466,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-10-10"
+      "2026-10-11"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [
