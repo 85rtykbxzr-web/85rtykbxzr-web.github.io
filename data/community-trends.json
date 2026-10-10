@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-10T06:14:32.155Z",
+  "generatedAt": "2026-10-10T09:20:59.665Z",
   "weekStart": "2026-10-08",
   "weekEnd": "2026-10-10",
   "windowStart": "2026-10-08",
@@ -18,28 +18,28 @@
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261010&tsId=TS0044&pno=4",
-      "score": 607.1,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121765&playDt=20261010&tsId=TS0056&pno=5",
+      "score": 662.1,
       "signal": 36.3,
       "positiveSignal": 36.3,
-      "mentionCount": 45.8,
+      "mentionCount": 51.3,
       "rawPositiveSignal": 48,
-      "rawMentionCount": 66.89411042171486,
+      "rawMentionCount": 72.39411042171486,
       "scheduleBackfill": false,
       "venueIds": [
-        "sangsangmadang",
-        "cinecube",
         "filmforum",
-        "kucine"
+        "kucine",
+        "cinecube",
+        "sangsangmadang"
       ],
       "venueNames": [
-        "KT&G 상상마당 시네마",
-        "씨네큐브 광화문",
         "필름포럼",
-        "KU시네마테크"
+        "KU시네마테크",
+        "씨네큐브 광화문",
+        "KT&G 상상마당 시네마"
       ],
       "nextDate": "2026-10-10",
-      "nextTime": "17:00",
+      "nextTime": "19:20",
       "evidence": [
         {
           "title": "룩백 그냥 그렇네",
@@ -132,12 +132,12 @@
       "posterSource": "wikipedia-pageimage",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121769&playDt=20261013&tsId=TS0056&pno=1",
-      "score": 84.8,
+      "score": 94.8,
       "signal": 4.1,
       "positiveSignal": 4.1,
-      "mentionCount": 6.8,
+      "mentionCount": 7.8,
       "rawPositiveSignal": 8,
-      "rawMentionCount": 8.69615871138938,
+      "rawMentionCount": 9.69615871138938,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum"
@@ -196,8 +196,24 @@
           "dayWeight": 0.518
         },
         {
+          "title": "어제 셀줄배 gv. 최영민이 있는 라이트하우스",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872226&page=2",
+          "date": "2026-10-10",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
           "title": "261009 서아시 셀줄배 최영민 시네토크 전사 (2)",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871830&page=7",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871830&page=9",
           "date": "2026-10-10",
           "positive": 0,
           "rawPositive": 0,
@@ -213,7 +229,7 @@
         },
         {
           "title": "261009 서아시 셀줄배 최영민 시네토크 전사 (1)",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871818&page=7",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871818&page=9",
           "date": "2026-10-10",
           "positive": 0,
           "rawPositive": 0,
@@ -232,6 +248,103 @@
     },
     {
       "rank": 3,
+      "title": "이방인",
+      "posterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
+      "localPosterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-11&movieCd=029631&playSDT=2026-10-11&screenId=01&showSeq=3",
+      "score": 77.6,
+      "signal": 8.9,
+      "positiveSignal": 8.9,
+      "mentionCount": 3.8,
+      "rawPositiveSignal": 10,
+      "rawMentionCount": 4.584962500721156,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "cinecube",
+        "filmforum",
+        "sangsangmadang",
+        "kucine"
+      ],
+      "venueNames": [
+        "씨네큐브 광화문",
+        "필름포럼",
+        "KT&G 상상마당 시네마",
+        "KU시네마테크"
+      ],
+      "nextDate": "2026-10-11",
+      "nextTime": "14:05",
+      "evidence": [
+        {
+          "title": "추해의 원조 이방인",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871447&page=4",
+          "date": "2026-10-09",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "노스포) <이방인> 난 상당히 만족하고 봄",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871334&page=6",
+          "date": "2026-10-09",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "만족",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "이방인 뭐 먼저 보는 게 좋음?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872230&page=2",
+          "date": "2026-10-10",
+          "positive": 6,
+          "rawPositive": 6,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "강추",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 2,
+          "commentPositive": 6,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260903_7e3d6928.jpg"
+    },
+    {
+      "rank": 4,
       "title": "나의 사적인 예술가",
       "posterUrl": "/assets/recommendation-posters/9c0ac8b8454d1b3b.webp",
       "localPosterUrl": "/assets/recommendation-posters/9c0ac8b8454d1b3b.webp",
@@ -278,7 +391,7 @@
         },
         {
           "title": "ㅅㅍ)나의 사적인 예술가 이거 걍 누갤인데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872032&page=3",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872032&page=5",
           "date": "2026-10-10",
           "positive": 6,
           "rawPositive": 6,
@@ -309,66 +422,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/5FGPyozt9zhFdlr80bSZRIOmHpc.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "베크마이스터 하모니즈",
-      "posterUrl": "/assets/recommendation-posters/ebcc0fc7349ed6cb.webp",
-      "localPosterUrl": "/assets/recommendation-posters/ebcc0fc7349ed6cb.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121793&playDt=20261010&tsId=TS0039&pno=4",
-      "score": 48.5,
-      "signal": 8,
-      "positiveSignal": 8,
-      "mentionCount": 1.5,
-      "rawPositiveSignal": 8,
-      "rawMentionCount": 1.5,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "kucine",
-        "sac"
-      ],
-      "venueNames": [
-        "KU시네마테크",
-        "서울아트시네마"
-      ],
-      "nextDate": "2026-10-10",
-      "nextTime": "17:10",
-      "evidence": [
-        {
-          "title": "베크마이스터 하모니즈 보고 왔음",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871807&page=7",
-          "date": "2026-10-10",
-          "positive": 8,
-          "rawPositive": 8,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "꿀잼",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "꿀잼",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 4,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/ix3pquGqTkCW86UbVTdRcrhGEFm.jpg"
     }
   ],
   "festivalPicks": [
@@ -393,7 +446,7 @@
           "englishTitle": "Possible Love",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91115&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 55
+          "mentionCount": 56
         },
         {
           "rank": 3,
@@ -401,7 +454,7 @@
           "englishTitle": "Everytime",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89989&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 45
+          "mentionCount": 47
         },
         {
           "rank": 4,
@@ -433,7 +486,7 @@
           "englishTitle": "Fatherland",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90251&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 21
+          "mentionCount": 22
         },
         {
           "rank": 8,
@@ -451,20 +504,20 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 332,
-    "listedPostCount": 342,
-    "detailedPostCount": 15,
-    "commentFetchCount": 15,
-    "commentCount": 40,
+    "fetchedPostCount": 430,
+    "listedPostCount": 442,
+    "detailedPostCount": 21,
+    "commentFetchCount": 21,
+    "commentCount": 46,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 7,
+    "scannedPageCount": 9,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-10-06",
     "newestScannedDate": "2026-10-10",
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-10",
     "candidateWindowEnd": "2026-10-24",
-    "candidateCount": 94,
+    "candidateCount": 89,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-08",
     "listLookbackDays": 1,
