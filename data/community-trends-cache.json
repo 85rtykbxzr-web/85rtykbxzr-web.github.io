@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-10",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-10T00:46:48.672Z",
+  "updatedAt": "2026-10-10T03:24:03.526Z",
   "days": {
     "2026-10-08": {
       "룩백": {
@@ -516,45 +516,75 @@
     "2026-10-10": {
       "룩백": {
         "title": "룩백(2D)",
-        "positiveSignal": 8,
-        "mentionCount": 5.453445297804259,
+        "positiveSignal": 10,
+        "mentionCount": 9.321928094887362,
         "evidence": [
           {
+            "title": "룩백 vs 초속5cm 더 여운남는게 머임?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872052&page=1",
+            "date": "2026-10-10",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 4,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "레제편 vs 룩백 뭐가 더 슬픈거 같음?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872000&page=2",
+            "date": "2026-10-10",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
             "title": "룩백은 왜 개쳐망했냐",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871917&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871917&page=3",
             "date": "2026-10-10",
-            "positive": 0,
-            "rawPositive": 0,
+            "positive": 2,
+            "rawPositive": 2,
             "negative": 0,
-            "positiveHits": [],
+            "positiveHits": [
+              {
+                "term": "좋음",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 5,
-            "commentPositive": 0,
+            "commentCount": 8,
+            "commentPositive": 2,
             "commentNegative": 0
-          },
+          }
+        ]
+      },
+      "나의사적인예술가": {
+        "title": "나의 사적인 예술가",
+        "positiveSignal": 6,
+        "mentionCount": 2,
+        "evidence": [
           {
-            "title": "난 룩백 이쁘게찍어서 좋던데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871891&page=2",
+            "title": "ㅅㅍ)나의 사적인 예술가 이거 걍 누갤인데",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872032&page=1",
             "date": "2026-10-10",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "스포) 고히 룩백, 애니보다 낫네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871862&page=3",
-            "date": "2026-10-10",
-            "positive": 8,
-            "rawPositive": 8,
+            "positive": 6,
+            "rawPositive": 6,
             "negative": 0,
             "positiveHits": [
               {
@@ -565,14 +595,7 @@
                 "label": "clear"
               },
               {
-                "term": "좋았음",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              },
-              {
-                "term": "좋았음",
+                "term": "볼만",
                 "count": 1,
                 "weight": 2,
                 "score": 2,
@@ -582,8 +605,8 @@
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 4,
-            "commentPositive": 8,
+            "commentCount": 3,
+            "commentPositive": 6,
             "commentNegative": 0
           }
         ]
@@ -595,7 +618,7 @@
         "evidence": [
           {
             "title": "261009 서아시 셀줄배 최영민 시네토크 전사 (2)",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871830&page=3",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871830&page=5",
             "date": "2026-10-10",
             "positive": 0,
             "rawPositive": 0,
@@ -610,7 +633,7 @@
           },
           {
             "title": "261009 서아시 셀줄배 최영민 시네토크 전사 (1)",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871818&page=4",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871818&page=5",
             "date": "2026-10-10",
             "positive": 0,
             "rawPositive": 0,
@@ -632,7 +655,7 @@
         "evidence": [
           {
             "title": "베크마이스터 하모니즈 보고 왔음",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871807&page=4",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871807&page=5",
             "date": "2026-10-10",
             "positive": 8,
             "rawPositive": 8,
@@ -666,7 +689,7 @@
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-10T00:46:48.668Z",
+      "lineupFetchedAt": "2026-10-10T03:24:03.522Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -4084,6 +4107,36 @@
             "mentionCount": 3,
             "commentCount": 0
           },
+          "에브리타임": {
+            "title": "에브리타임",
+            "mentionCount": 7,
+            "commentCount": 0
+          },
+          "라그라디바": {
+            "title": "라 그라디바",
+            "mentionCount": 4,
+            "commentCount": 0
+          },
+          "에코체임버": {
+            "title": "에코 체임버",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "스파이럴": {
+            "title": "스파이럴",
+            "mentionCount": 6,
+            "commentCount": 0
+          },
+          "아버지의방": {
+            "title": "아버지의 방",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "멜트다운": {
+            "title": "멜트다운",
+            "mentionCount": 3,
+            "commentCount": 0
+          },
           "축제": {
             "title": "축제",
             "mentionCount": 1,
@@ -4114,11 +4167,6 @@
             "mentionCount": 2,
             "commentCount": 0
           },
-          "라그라디바": {
-            "title": "라 그라디바",
-            "mentionCount": 3,
-            "commentCount": 0
-          },
           "초대받지않은손님": {
             "title": "초대받지 않은 손님",
             "mentionCount": 1,
@@ -4139,19 +4187,9 @@
             "mentionCount": 1,
             "commentCount": 0
           },
-          "멜트다운": {
-            "title": "멜트다운",
-            "mentionCount": 2,
-            "commentCount": 0
-          },
           "페이퍼타이거": {
             "title": "페이퍼 타이거",
             "mentionCount": 2,
-            "commentCount": 0
-          },
-          "스파이럴": {
-            "title": "스파이럴",
-            "mentionCount": 5,
             "commentCount": 0
           },
           "불타는거인들": {
@@ -4169,19 +4207,9 @@
             "mentionCount": 1,
             "commentCount": 0
           },
-          "에코체임버": {
-            "title": "에코 체임버",
-            "mentionCount": 1,
-            "commentCount": 0
-          },
           "베드포드파크": {
             "title": "베드포드 파크",
             "mentionCount": 1,
-            "commentCount": 0
-          },
-          "에브리타임": {
-            "title": "에브리타임",
-            "mentionCount": 2,
             "commentCount": 0
           },
           "아이언보이": {
