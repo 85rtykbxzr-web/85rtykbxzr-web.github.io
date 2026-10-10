@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-10T15:17:08.469Z",
+  "generatedAt": "2026-10-10T17:20:23.747Z",
   "weekStart": "2026-10-09",
   "weekEnd": "2026-10-11",
   "windowStart": "2026-10-09",
@@ -391,10 +391,18 @@
           "englishTitle": "Everytime",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89989&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 46
+          "mentionCount": 47
         },
         {
           "rank": 4,
+          "title": "파더랜드",
+          "englishTitle": "Fatherland",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90251&c_idx=430&sp_idx=&QueryStep=2",
+          "mentionCount": 29
+        },
+        {
+          "rank": 5,
           "title": "그래비티",
           "englishTitle": "Gravity",
           "section": "특별상영 & 까르뜨 블랑슈",
@@ -402,7 +410,7 @@
           "mentionCount": 26
         },
         {
-          "rank": 5,
+          "rank": 6,
           "title": "노트르 살뤼",
           "englishTitle": "A Man of His Time",
           "section": "플래시 포워드",
@@ -410,19 +418,11 @@
           "mentionCount": 25
         },
         {
-          "rank": 6,
+          "rank": 7,
           "title": "스파이럴",
           "englishTitle": "The Spiral",
           "section": "오픈 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91100&c_idx=437&sp_idx=&QueryStep=2",
-          "mentionCount": 23
-        },
-        {
-          "rank": 7,
-          "title": "파더랜드",
-          "englishTitle": "Fatherland",
-          "section": "아이콘",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90251&c_idx=430&sp_idx=&QueryStep=2",
           "mentionCount": 23
         },
         {
@@ -441,7 +441,7 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 15,
+    "fetchedPostCount": 96,
     "listedPostCount": 292,
     "detailedPostCount": 0,
     "commentFetchCount": 0,
