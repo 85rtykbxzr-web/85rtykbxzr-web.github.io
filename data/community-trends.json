@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-10T03:24:05.056Z",
+  "generatedAt": "2026-10-10T06:14:32.155Z",
   "weekStart": "2026-10-08",
   "weekEnd": "2026-10-10",
   "windowStart": "2026-10-08",
@@ -18,28 +18,28 @@
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121765&playDt=20261010&tsId=TS0039&pno=2",
-      "score": 479.1,
-      "signal": 24.3,
-      "positiveSignal": 24.3,
-      "mentionCount": 37.8,
-      "rawPositiveSignal": 36,
-      "rawMentionCount": 58.89411042171485,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261010&tsId=TS0044&pno=4",
+      "score": 607.1,
+      "signal": 36.3,
+      "positiveSignal": 36.3,
+      "mentionCount": 45.8,
+      "rawPositiveSignal": 48,
+      "rawMentionCount": 66.89411042171486,
       "scheduleBackfill": false,
       "venueIds": [
-        "kucine",
-        "cinecube",
         "sangsangmadang",
-        "filmforum"
+        "cinecube",
+        "filmforum",
+        "kucine"
       ],
       "venueNames": [
-        "KU시네마테크",
-        "씨네큐브 광화문",
         "KT&G 상상마당 시네마",
-        "필름포럼"
+        "씨네큐브 광화문",
+        "필름포럼",
+        "KU시네마테크"
       ],
       "nextDate": "2026-10-10",
-      "nextTime": "12:50",
+      "nextTime": "17:00",
       "evidence": [
         {
           "title": "룩백 그냥 그렇네",
@@ -197,7 +197,7 @@
         },
         {
           "title": "261009 서아시 셀줄배 최영민 시네토크 전사 (2)",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871830&page=5",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871830&page=7",
           "date": "2026-10-10",
           "positive": 0,
           "rawPositive": 0,
@@ -213,7 +213,7 @@
         },
         {
           "title": "261009 서아시 셀줄배 최영민 시네토크 전사 (1)",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871818&page=5",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871818&page=7",
           "date": "2026-10-10",
           "positive": 0,
           "rawPositive": 0,
@@ -248,12 +248,14 @@
       "venueIds": [
         "cinecube",
         "filmforum",
-        "kucine"
+        "kucine",
+        "sangsangmadang"
       ],
       "venueNames": [
         "씨네큐브 광화문",
         "필름포럼",
-        "KU시네마테크"
+        "KU시네마테크",
+        "KT&G 상상마당 시네마"
       ],
       "nextDate": "2026-10-10",
       "nextTime": "19:30",
@@ -276,7 +278,7 @@
         },
         {
           "title": "ㅅㅍ)나의 사적인 예술가 이거 걍 누갤인데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872032&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872032&page=3",
           "date": "2026-10-10",
           "positive": 6,
           "rawPositive": 6,
@@ -311,8 +313,8 @@
     {
       "rank": 4,
       "title": "베크마이스터 하모니즈",
-      "posterUrl": "/assets/recommendation-posters/e74b2711058973bf.webp",
-      "localPosterUrl": "/assets/recommendation-posters/e74b2711058973bf.webp",
+      "posterUrl": "/assets/recommendation-posters/ebcc0fc7349ed6cb.webp",
+      "localPosterUrl": "/assets/recommendation-posters/ebcc0fc7349ed6cb.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121793&playDt=20261010&tsId=TS0039&pno=4",
@@ -336,7 +338,7 @@
       "evidence": [
         {
           "title": "베크마이스터 하모니즈 보고 왔음",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871807&page=5",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871807&page=7",
           "date": "2026-10-10",
           "positive": 8,
           "rawPositive": 8,
@@ -383,7 +385,7 @@
           "englishTitle": "La Gradiva",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90315&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 74
+          "mentionCount": 75
         },
         {
           "rank": 2,
@@ -399,7 +401,7 @@
           "englishTitle": "Everytime",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89989&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 43
+          "mentionCount": 45
         },
         {
           "rank": 4,
@@ -449,20 +451,20 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 244,
-    "listedPostCount": 292,
-    "detailedPostCount": 9,
-    "commentFetchCount": 9,
-    "commentCount": 32,
+    "fetchedPostCount": 332,
+    "listedPostCount": 342,
+    "detailedPostCount": 15,
+    "commentFetchCount": 15,
+    "commentCount": 40,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 6,
+    "scannedPageCount": 7,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-10-06",
     "newestScannedDate": "2026-10-10",
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-10",
     "candidateWindowEnd": "2026-10-24",
-    "candidateCount": 98,
+    "candidateCount": 94,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-08",
     "listLookbackDays": 1,
