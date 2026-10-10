@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-09T21:12:10.556Z",
+  "generatedAt": "2026-10-10T00:18:04.588Z",
   "weekStart": "2026-10-08",
   "weekEnd": "2026-10-10",
   "windowStart": "2026-10-08",
@@ -14,17 +14,17 @@
     {
       "rank": 1,
       "title": "룩백",
-      "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
-      "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
+      "posterUrl": "/assets/recommendation-posters/eb4c5451cda00929.webp",
+      "localPosterUrl": "/assets/recommendation-posters/eb4c5451cda00929.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261010&tsId=TS0044&pno=1",
-      "score": 431.1,
+      "score": 432.4,
       "signal": 22.3,
       "positiveSignal": 22.3,
-      "mentionCount": 33.8,
+      "mentionCount": 33.9,
       "rawPositiveSignal": 34,
-      "rawMentionCount": 54.89411042171485,
+      "rawMentionCount": 55.025627624631746,
       "scheduleBackfill": false,
       "venueIds": [
         "sangsangmadang",
@@ -233,8 +233,8 @@
     {
       "rank": 3,
       "title": "베크마이스터 하모니즈",
-      "posterUrl": "/assets/recommendation-posters/ebcc0fc7349ed6cb.webp",
-      "localPosterUrl": "/assets/recommendation-posters/ebcc0fc7349ed6cb.webp",
+      "posterUrl": "/assets/recommendation-posters/8e070abc417d0c07.webp",
+      "localPosterUrl": "/assets/recommendation-posters/8e070abc417d0c07.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121793&playDt=20261010&tsId=TS0039&pno=4",
@@ -258,7 +258,7 @@
       "evidence": [
         {
           "title": "베크마이스터 하모니즈 보고 왔음",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871807&page=3",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871807&page=4",
           "date": "2026-10-10",
           "positive": 8,
           "rawPositive": 8,
@@ -378,7 +378,7 @@
           "englishTitle": "La Gradiva",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90315&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 72
+          "mentionCount": 73
         },
         {
           "rank": 2,
@@ -394,7 +394,7 @@
           "englishTitle": "Everytime",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89989&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 38
+          "mentionCount": 39
         },
         {
           "rank": 4,
@@ -426,7 +426,7 @@
           "englishTitle": "Fatherland",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90251&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 20
+          "mentionCount": 21
         },
         {
           "rank": 8,
@@ -444,11 +444,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 118,
+    "fetchedPostCount": 151,
     "listedPostCount": 292,
     "detailedPostCount": 6,
     "commentFetchCount": 6,
-    "commentCount": 20,
+    "commentCount": 21,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -457,7 +457,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-10",
     "candidateWindowEnd": "2026-10-24",
-    "candidateCount": 98,
+    "candidateCount": 97,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-08",
     "listLookbackDays": 1,
