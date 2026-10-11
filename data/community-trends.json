@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-11T12:13:01.853Z",
+  "generatedAt": "2026-10-11T12:43:37.096Z",
   "weekStart": "2026-10-09",
   "weekEnd": "2026-10-11",
   "windowStart": "2026-10-09",
@@ -307,78 +307,62 @@
     },
     {
       "rank": 4,
-      "title": "셀린느와 줄리 배 타러 가다",
-      "posterUrl": "/assets/recommendation-posters/8aac803cf6309561.webp",
-      "localPosterUrl": "/assets/recommendation-posters/8aac803cf6309561.webp",
-      "posterSource": "wikipedia-pageimage",
+      "title": "오데트",
+      "posterUrl": "/assets/recommendation-posters/be9a6c64e7aad395.webp",
+      "localPosterUrl": "/assets/recommendation-posters/be9a6c64e7aad395.webp",
+      "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121769&playDt=20261013&tsId=TS0056&pno=1",
-      "score": 41.5,
+      "url": "https://www.tinyticket.net/event/EVff3eL4uj3T",
+      "score": 42.5,
       "signal": 0,
       "positiveSignal": 0,
-      "mentionCount": 4.1,
+      "mentionCount": 4.2,
       "rawPositiveSignal": 0,
-      "rawMentionCount": 5.69615871138938,
+      "rawMentionCount": 4.19615871138938,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum"
+        "sac"
       ],
       "venueNames": [
-        "필름포럼"
+        "서울아트시네마"
       ],
-      "nextDate": "2026-10-13",
-      "nextTime": "10:10",
+      "nextDate": "2026-10-24",
+      "nextTime": "16:40",
       "evidence": [
         {
-          "title": "어제 셀줄배 gv. 최영민이 있는 라이트하우스",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872226&page=4",
-          "date": "2026-10-10",
+          "title": "침묵의빛 보려는데 오데트 봐야하냐",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873072&page=2",
+          "date": "2026-10-11",
           "positive": 0,
           "rawPositive": 0,
           "negative": 0,
           "positiveHits": [],
           "negativeHits": [],
-          "questionLike": false,
+          "questionLike": true,
           "reviewQuestion": false,
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 1
         },
         {
-          "title": "261009 서아시 셀줄배 최영민 시네토크 전사 (2)",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871830&page=11",
-          "date": "2026-10-10",
+          "title": "오데트vs사랑방 손님과 어머니",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872761&page=8",
+          "date": "2026-10-11",
           "positive": 0,
           "rawPositive": 0,
           "negative": 0,
           "positiveHits": [],
           "negativeHits": [],
-          "questionLike": false,
+          "questionLike": true,
           "reviewQuestion": false,
-          "commentCount": 5,
+          "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "261009 서아시 셀줄배 최영민 시네토크 전사 (1)",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871818&page=11",
-          "date": "2026-10-10",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 6,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 1
         }
       ],
-      "posterSourceUrl": "https://upload.wikimedia.org/wikipedia/en/3/34/Celine_and_Julie_Go_Boating_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/c9Oef9uQEuadZlnvv8hphRmTIgx.jpg"
     }
   ],
   "festivalPicks": [
@@ -461,11 +445,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 456,
+    "fetchedPostCount": 484,
     "listedPostCount": 492,
-    "detailedPostCount": 14,
-    "commentFetchCount": 14,
-    "commentCount": 25,
+    "detailedPostCount": 15,
+    "commentFetchCount": 15,
+    "commentCount": 26,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 10,
     "reachedLookbackStart": true,
