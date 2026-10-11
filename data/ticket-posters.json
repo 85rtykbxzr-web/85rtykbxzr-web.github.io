@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T06:16:11.942Z",
+  "generatedAt": "2026-10-11T09:22:28.933Z",
   "source": "TMDB",
   "imageBase": "https://image.tmdb.org/t/p/",
   "films": {
@@ -155,21 +155,6 @@
       ],
       "checkedAt": "2026-10-01T06:00:43.896Z"
     },
-    "나의아저씨": {
-      "title": "나의 아저씨",
-      "tmdbId": 427,
-      "posters": [
-        "/wH6RyPiXFy8INLbViVkchLVOmBc.jpg",
-        "/tkST365LCJ7yNc1A1vrBX0cEewa.jpg",
-        "/85S8MHCWh2Xx94F6RZe3p1TRqxE.jpg",
-        "/zYwg6jRtxuvOhrE6DQEHBy10wX5.jpg",
-        "/lJDLcqNvgoAL6PxPvDZ3CO4Pmun.jpg",
-        "/A7MLMHHbMjZaat0FncdwVX3qrPB.jpg",
-        "/qNzbPrrdItUIKbbcYTsYJTfoTdR.jpg",
-        "/fnEgHK6M64LdSwLM47YGakbishA.jpg"
-      ],
-      "checkedAt": "2026-10-01T06:00:43.896Z"
-    },
     "더드라마": {
       "title": "더 드라마",
       "tmdbId": 1325734,
@@ -197,21 +182,6 @@
         "/zuBoZm91ftImUclSPP2It9vbB0o.jpg",
         "/gJCB6UMPvh38l9QcJxxxLwScLUB.jpg",
         "/rwxr4yw1uou4cQVruOXhPXIPbSh.jpg"
-      ],
-      "checkedAt": "2026-10-01T06:00:43.896Z"
-    },
-    "나의사적인예술가": {
-      "title": "나의 사적인 예술가",
-      "tmdbId": 1285895,
-      "posters": [
-        "/bcyXE0p4XmZUlcxvTDbvdG9lgsN.jpg",
-        "/5FGPyozt9zhFdlr80bSZRIOmHpc.jpg",
-        "/iCLsQ34OMyOS1zN8yUhE59SZnfK.jpg",
-        "/xJwofix6BFw4zAHvWRw5mEgYtAt.jpg",
-        "/UlpRMZmTcrfP9v9rHeCaiNVZeu.jpg",
-        "/a6NdIW7SBLgullUIxT8Ad277Q3r.jpg",
-        "/3SoNc63O12Dns83BuZtj3xbLjri.jpg",
-        "/flrtC1vmJZhcrS2nCCo3J8zgS5F.jpg"
       ],
       "checkedAt": "2026-10-01T06:00:43.896Z"
     },
@@ -281,6 +251,21 @@
         "/53yTiV0XOIQ0tUaqToO6yUfZFNA.jpg",
         "/x2HR3PqCZmial9obztOZdoqqEQV.jpg",
         "/mHhjEZr0gp0ZSss5iUpy0R7PWs7.jpg"
+      ],
+      "checkedAt": "2026-10-01T06:00:43.896Z"
+    },
+    "나의사적인예술가": {
+      "title": "나의 사적인 예술가",
+      "tmdbId": 1285895,
+      "posters": [
+        "/bcyXE0p4XmZUlcxvTDbvdG9lgsN.jpg",
+        "/5FGPyozt9zhFdlr80bSZRIOmHpc.jpg",
+        "/iCLsQ34OMyOS1zN8yUhE59SZnfK.jpg",
+        "/xJwofix6BFw4zAHvWRw5mEgYtAt.jpg",
+        "/UlpRMZmTcrfP9v9rHeCaiNVZeu.jpg",
+        "/a6NdIW7SBLgullUIxT8Ad277Q3r.jpg",
+        "/3SoNc63O12Dns83BuZtj3xbLjri.jpg",
+        "/flrtC1vmJZhcrS2nCCo3J8zgS5F.jpg"
       ],
       "checkedAt": "2026-10-01T06:00:43.896Z"
     },
@@ -538,6 +523,21 @@
         "/mUV0NACMCnxmGxZ3OuI65AlwiEJ.jpg",
         "/5fA2ANeKo1qGnOHDmb0o4vEOvHw.jpg",
         "/l0Lruo6vFbCDL4dqNdqwQHM78R6.jpg"
+      ],
+      "checkedAt": "2026-10-01T06:00:43.896Z"
+    },
+    "나의아저씨": {
+      "title": "나의 아저씨",
+      "tmdbId": 427,
+      "posters": [
+        "/wH6RyPiXFy8INLbViVkchLVOmBc.jpg",
+        "/tkST365LCJ7yNc1A1vrBX0cEewa.jpg",
+        "/85S8MHCWh2Xx94F6RZe3p1TRqxE.jpg",
+        "/zYwg6jRtxuvOhrE6DQEHBy10wX5.jpg",
+        "/lJDLcqNvgoAL6PxPvDZ3CO4Pmun.jpg",
+        "/A7MLMHHbMjZaat0FncdwVX3qrPB.jpg",
+        "/qNzbPrrdItUIKbbcYTsYJTfoTdR.jpg",
+        "/fnEgHK6M64LdSwLM47YGakbishA.jpg"
       ],
       "checkedAt": "2026-10-01T06:00:43.896Z"
     },
@@ -1115,7 +1115,7 @@
       "title": "가끔은 여정이 아름답기도 하다",
       "tmdbId": null,
       "posters": [],
-      "checkedAt": "2026-10-08T06:18:46.377Z"
+      "checkedAt": "2026-10-11T09:22:28.933Z"
     },
     "로맨스그레이": {
       "title": "로맨스그레이",
@@ -1138,7 +1138,7 @@
       "title": "파기상접: 깨진 그릇 붙이기",
       "tmdbId": null,
       "posters": [],
-      "checkedAt": "2026-10-08T06:18:46.377Z"
+      "checkedAt": "2026-10-11T09:22:28.933Z"
     },
     "만종": {
       "title": "만종",
@@ -1152,7 +1152,7 @@
       "title": "무색무취+섬섬옥수",
       "tmdbId": null,
       "posters": [],
-      "checkedAt": "2026-10-08T06:18:46.377Z"
+      "checkedAt": "2026-10-11T09:22:28.933Z"
     },
     "자매의화원": {
       "title": "자매의 화원",
@@ -1175,7 +1175,7 @@
       "title": "제4회 전쟁과여성영화제",
       "tmdbId": null,
       "posters": [],
-      "checkedAt": "2026-10-08T09:09:55.281Z"
+      "checkedAt": "2026-10-11T09:22:28.933Z"
     }
   }
 }
