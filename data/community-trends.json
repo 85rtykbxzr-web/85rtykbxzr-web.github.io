@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-11T09:22:28.803Z",
+  "generatedAt": "2026-10-11T12:13:01.853Z",
   "weekStart": "2026-10-09",
   "weekEnd": "2026-10-11",
   "windowStart": "2026-10-09",
@@ -18,28 +18,28 @@
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121765&playDt=20261011&tsId=TS0057&pno=4",
-      "score": 435.3,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121765&playDt=20261012&tsId=TS0039&pno=1",
+      "score": 506.1,
       "signal": 19.4,
       "positiveSignal": 19.4,
-      "mentionCount": 35.4,
+      "mentionCount": 42.5,
       "rawPositiveSignal": 28,
-      "rawMentionCount": 50.05970773938188,
+      "rawMentionCount": 57.14467024010303,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum",
+        "kucine",
         "cinecube",
         "sangsangmadang",
-        "kucine"
+        "filmforum"
       ],
       "venueNames": [
-        "필름포럼",
+        "KU시네마테크",
         "씨네큐브 광화문",
         "KT&G 상상마당 시네마",
-        "KU시네마테크"
+        "필름포럼"
       ],
-      "nextDate": "2026-10-11",
-      "nextTime": "19:50",
+      "nextDate": "2026-10-12",
+      "nextTime": "15:30",
       "evidence": [
         {
           "title": "( 스포) 룩백 실사판 이 장면은 어땠음?",
@@ -126,6 +126,90 @@
     },
     {
       "rank": 2,
+      "title": "베크마이스터 하모니즈",
+      "posterUrl": "/assets/recommendation-posters/ebcc0fc7349ed6cb.webp",
+      "localPosterUrl": "/assets/recommendation-posters/ebcc0fc7349ed6cb.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121793&playDt=20261015&tsId=TS0039&pno=1",
+      "score": 65.8,
+      "signal": 9.8,
+      "positiveSignal": 9.8,
+      "mentionCount": 2.6,
+      "rawPositiveSignal": 12,
+      "rawMentionCount": 3,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "kucine",
+        "sac"
+      ],
+      "venueNames": [
+        "KU시네마테크",
+        "서울아트시네마"
+      ],
+      "nextDate": "2026-10-15",
+      "nextTime": "14:40",
+      "evidence": [
+        {
+          "title": "베크마이스터 하모니즈 보고 왔음",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871807&page=12",
+          "date": "2026-10-10",
+          "positive": 8,
+          "rawPositive": 8,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 4,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "토리노의 말 보고 왔는데 생각보다 훨씬 누하네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872998&page=3",
+          "date": "2026-10-11",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/ix3pquGqTkCW86UbVTdRcrhGEFm.jpg"
+    },
+    {
+      "rank": 3,
       "title": "이방인",
       "posterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
       "localPosterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
@@ -222,7 +306,7 @@
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260903_7e3d6928.jpg"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "title": "셀린느와 줄리 배 타러 가다",
       "posterUrl": "/assets/recommendation-posters/8aac803cf6309561.webp",
       "localPosterUrl": "/assets/recommendation-posters/8aac803cf6309561.webp",
@@ -295,70 +379,6 @@
         }
       ],
       "posterSourceUrl": "https://upload.wikimedia.org/wikipedia/en/3/34/Celine_and_Julie_Go_Boating_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
-    },
-    {
-      "rank": 4,
-      "title": "나의 사적인 예술가",
-      "posterUrl": "/assets/recommendation-posters/9c0ac8b8454d1b3b.webp",
-      "localPosterUrl": "/assets/recommendation-posters/9c0ac8b8454d1b3b.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-12&movieCd=029552&playSDT=2026-10-12&screenId=01&showSeq=2",
-      "score": 35.7,
-      "signal": 4.3,
-      "positiveSignal": 4.3,
-      "mentionCount": 1.4,
-      "rawPositiveSignal": 6,
-      "rawMentionCount": 2,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "cinecube",
-        "filmforum",
-        "kucine",
-        "sangsangmadang"
-      ],
-      "venueNames": [
-        "씨네큐브 광화문",
-        "필름포럼",
-        "KU시네마테크",
-        "KT&G 상상마당 시네마"
-      ],
-      "nextDate": "2026-10-12",
-      "nextTime": "12:05",
-      "evidence": [
-        {
-          "title": "ㅅㅍ)나의 사적인 예술가 이거 걍 누갤인데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872032&page=8",
-          "date": "2026-10-10",
-          "positive": 6,
-          "rawPositive": 6,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "꿀잼",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "볼만",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 6,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/5FGPyozt9zhFdlr80bSZRIOmHpc.jpg"
     }
   ],
   "festivalPicks": [
@@ -375,7 +395,7 @@
           "englishTitle": "La Gradiva",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90315&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 81
+          "mentionCount": 82
         },
         {
           "rank": 2,
@@ -391,23 +411,23 @@
           "englishTitle": "Everytime",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89989&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 53
+          "mentionCount": 54
         },
         {
           "rank": 4,
+          "title": "노트르 살뤼",
+          "englishTitle": "A Man of His Time",
+          "section": "플래시 포워드",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89988&c_idx=435&sp_idx=&QueryStep=2",
+          "mentionCount": 30
+        },
+        {
+          "rank": 5,
           "title": "파더랜드",
           "englishTitle": "Fatherland",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90251&c_idx=430&sp_idx=&QueryStep=2",
           "mentionCount": 30
-        },
-        {
-          "rank": 5,
-          "title": "노트르 살뤼",
-          "englishTitle": "A Man of His Time",
-          "section": "플래시 포워드",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89988&c_idx=435&sp_idx=&QueryStep=2",
-          "mentionCount": 28
         },
         {
           "rank": 6,
@@ -423,7 +443,7 @@
           "englishTitle": "The Spiral",
           "section": "오픈 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91100&c_idx=437&sp_idx=&QueryStep=2",
-          "mentionCount": 24
+          "mentionCount": 25
         },
         {
           "rank": 8,
@@ -431,7 +451,7 @@
           "englishTitle": "Roma Elastica",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91150&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 22
+          "mentionCount": 23
         }
       ]
     }
@@ -441,20 +461,20 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 359,
-    "listedPostCount": 392,
-    "detailedPostCount": 8,
-    "commentFetchCount": 8,
-    "commentCount": 16,
+    "fetchedPostCount": 456,
+    "listedPostCount": 492,
+    "detailedPostCount": 14,
+    "commentFetchCount": 14,
+    "commentCount": 25,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 8,
+    "scannedPageCount": 10,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-10-06",
     "newestScannedDate": "2026-10-11",
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-11",
     "candidateWindowEnd": "2026-10-25",
-    "candidateCount": 87,
+    "candidateCount": 85,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-09",
     "listLookbackDays": 1,
