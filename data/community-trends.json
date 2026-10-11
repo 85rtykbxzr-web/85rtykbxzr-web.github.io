@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-11T03:10:02.536Z",
+  "generatedAt": "2026-10-11T05:40:30.509Z",
   "weekStart": "2026-10-09",
   "weekEnd": "2026-10-11",
   "windowStart": "2026-10-09",
@@ -18,28 +18,28 @@
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-11&movieCd=029713&playSDT=2026-10-11&screenId=01&showSeq=2",
-      "score": 368.7,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-11&movieCd=029713&playSDT=2026-10-11&screenId=01&showSeq=4",
+      "score": 425.3,
       "signal": 19.4,
       "positiveSignal": 19.4,
-      "mentionCount": 28.7,
+      "mentionCount": 34.4,
       "rawPositiveSignal": 28,
-      "rawMentionCount": 43.39874369193819,
+      "rawMentionCount": 49.05970773938188,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
-        "sangsangmadang",
         "filmforum",
+        "sangsangmadang",
         "kucine"
       ],
       "venueNames": [
         "씨네큐브 광화문",
-        "KT&G 상상마당 시네마",
         "필름포럼",
+        "KT&G 상상마당 시네마",
         "KU시네마테크"
       ],
       "nextDate": "2026-10-11",
-      "nextTime": "12:10",
+      "nextTime": "16:25",
       "evidence": [
         {
           "title": "( 스포) 룩백 실사판 이 장면은 어땠음?",
@@ -131,7 +131,7 @@
       "localPosterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-11&movieCd=029631&playSDT=2026-10-11&screenId=01&showSeq=3",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121760&playDt=20261011&tsId=TS0057&pno=2",
       "score": 56.9,
       "signal": 6.4,
       "positiveSignal": 6.4,
@@ -140,19 +140,19 @@
       "rawMentionCount": 4.584962500721156,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube",
         "filmforum",
         "sangsangmadang",
+        "cinecube",
         "kucine"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
         "필름포럼",
         "KT&G 상상마당 시네마",
+        "씨네큐브 광화문",
         "KU시네마테크"
       ],
       "nextDate": "2026-10-11",
-      "nextTime": "14:05",
+      "nextTime": "15:50",
       "evidence": [
         {
           "title": "추해의 원조 이방인",
@@ -375,7 +375,7 @@
           "englishTitle": "La Gradiva",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90315&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 80
+          "mentionCount": 81
         },
         {
           "rank": 2,
@@ -399,10 +399,18 @@
           "englishTitle": "Fatherland",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90251&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 29
+          "mentionCount": 30
         },
         {
           "rank": 5,
+          "title": "노트르 살뤼",
+          "englishTitle": "A Man of His Time",
+          "section": "플래시 포워드",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89988&c_idx=435&sp_idx=&QueryStep=2",
+          "mentionCount": 27
+        },
+        {
+          "rank": 6,
           "title": "그래비티",
           "englishTitle": "Gravity",
           "section": "특별상영 & 까르뜨 블랑슈",
@@ -410,20 +418,12 @@
           "mentionCount": 26
         },
         {
-          "rank": 6,
-          "title": "노트르 살뤼",
-          "englishTitle": "A Man of His Time",
-          "section": "플래시 포워드",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89988&c_idx=435&sp_idx=&QueryStep=2",
-          "mentionCount": 25
-        },
-        {
           "rank": 7,
           "title": "스파이럴",
           "englishTitle": "The Spiral",
           "section": "오픈 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91100&c_idx=437&sp_idx=&QueryStep=2",
-          "mentionCount": 23
+          "mentionCount": 24
         },
         {
           "rank": 8,
@@ -441,11 +441,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 202,
+    "fetchedPostCount": 264,
     "listedPostCount": 292,
-    "detailedPostCount": 3,
-    "commentFetchCount": 3,
-    "commentCount": 10,
+    "detailedPostCount": 7,
+    "commentFetchCount": 7,
+    "commentCount": 16,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -454,7 +454,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-11",
     "candidateWindowEnd": "2026-10-25",
-    "candidateCount": 89,
+    "candidateCount": 87,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-09",
     "listLookbackDays": 1,
