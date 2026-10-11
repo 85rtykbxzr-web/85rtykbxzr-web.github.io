@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-11",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-11T00:19:27.517Z",
+  "updatedAt": "2026-10-11T03:09:59.378Z",
   "days": {
     "2026-10-09": {
       "룩백": {
@@ -649,14 +649,36 @@
       }
     },
     "2026-10-11": {
-      "파멸": {
-        "title": "파멸(기획전)",
+      "룩백": {
+        "title": "룩백",
         "positiveSignal": 0,
-        "mentionCount": 2,
+        "mentionCount": 1,
         "evidence": [
           {
-            "title": "파멸 베크마이스터 하모니카",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872714&page=1",
+            "title": "룩백은 애니영화 나오기전에 나왔어야함",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872812&page=1",
+            "date": "2026-10-11",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "오데트": {
+        "title": "오데트",
+        "positiveSignal": 0,
+        "mentionCount": 2.403677461028802,
+        "evidence": [
+          {
+            "title": "오데트vs사랑방 손님과 어머니",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872761&page=2",
             "date": "2026-10-11",
             "positive": 0,
             "rawPositive": 0,
@@ -665,7 +687,51 @@
             "negativeHits": [],
             "questionLike": true,
             "reviewQuestion": false,
-            "commentCount": 3,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "사랑방손님과어머니": {
+        "title": "사랑방 손님과 어머니 (4K)",
+        "positiveSignal": 0,
+        "mentionCount": 2.403677461028802,
+        "evidence": [
+          {
+            "title": "오데트vs사랑방 손님과 어머니",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872761&page=2",
+            "date": "2026-10-11",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "파멸": {
+        "title": "파멸(기획전)",
+        "positiveSignal": 0,
+        "mentionCount": 2.160964047443681,
+        "evidence": [
+          {
+            "title": "파멸 베크마이스터 하모니카",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872714&page=3",
+            "date": "2026-10-11",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 4,
             "commentPositive": 0,
             "commentNegative": 0
           }
@@ -675,7 +741,7 @@
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-11T00:19:27.511Z",
+      "lineupFetchedAt": "2026-10-11T03:09:59.372Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -4256,9 +4322,19 @@
             "mentionCount": 1,
             "commentCount": 0
           },
-          "로마엘라스티카": {
-            "title": "로마 엘라스티카",
-            "mentionCount": 3,
+          "버킹패스타드": {
+            "title": "버킹 패스타드",
+            "mentionCount": 5,
+            "commentCount": 0
+          },
+          "와줘서고맙다는거장의인사": {
+            "title": "와줘서 고맙다는 거장의 인사",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "에브리타임": {
+            "title": "에브리타임",
+            "mentionCount": 6,
             "commentCount": 0
           },
           "아버지의방": {
@@ -4268,11 +4344,6 @@
           },
           "라그라디바": {
             "title": "라 그라디바",
-            "mentionCount": 2,
-            "commentCount": 0
-          },
-          "에브리타임": {
-            "title": "에브리타임",
             "mentionCount": 2,
             "commentCount": 0
           },
@@ -4289,6 +4360,11 @@
           "파더랜드": {
             "title": "파더랜드",
             "mentionCount": 6,
+            "commentCount": 0
+          },
+          "로마엘라스티카": {
+            "title": "로마 엘라스티카",
+            "mentionCount": 2,
             "commentCount": 0
           },
           "어둠속의새들": {

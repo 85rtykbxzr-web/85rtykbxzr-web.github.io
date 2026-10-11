@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-11T00:19:30.362Z",
+  "generatedAt": "2026-10-11T03:10:02.536Z",
   "weekStart": "2026-10-09",
   "weekEnd": "2026-10-11",
   "windowStart": "2026-10-09",
@@ -18,28 +18,28 @@
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121765&playDt=20261011&tsId=TS0039&pno=2",
-      "score": 358.7,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-11&movieCd=029713&playSDT=2026-10-11&screenId=01&showSeq=2",
+      "score": 368.7,
       "signal": 19.4,
       "positiveSignal": 19.4,
-      "mentionCount": 27.7,
+      "mentionCount": 28.7,
       "rawPositiveSignal": 28,
-      "rawMentionCount": 42.39874369193819,
+      "rawMentionCount": 43.39874369193819,
       "scheduleBackfill": false,
       "venueIds": [
-        "kucine",
         "cinecube",
         "sangsangmadang",
-        "filmforum"
+        "filmforum",
+        "kucine"
       ],
       "venueNames": [
-        "KU시네마테크",
         "씨네큐브 광화문",
         "KT&G 상상마당 시네마",
-        "필름포럼"
+        "필름포럼",
+        "KU시네마테크"
       ],
       "nextDate": "2026-10-11",
-      "nextTime": "12:00",
+      "nextTime": "12:10",
       "evidence": [
         {
           "title": "( 스포) 룩백 실사판 이 장면은 어땠음?",
@@ -303,7 +303,7 @@
       "localPosterUrl": "/assets/recommendation-posters/9c0ac8b8454d1b3b.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-11&movieCd=029552&playSDT=2026-10-11&screenId=01&showSeq=1",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-11&movieCd=029552&playSDT=2026-10-11&screenId=01&showSeq=5",
       "score": 35.7,
       "signal": 4.3,
       "positiveSignal": 4.3,
@@ -324,7 +324,7 @@
         "KT&G 상상마당 시네마"
       ],
       "nextDate": "2026-10-11",
-      "nextTime": "10:20",
+      "nextTime": "18:20",
       "evidence": [
         {
           "title": "ㅅㅍ)나의 사적인 예술가 이거 걍 누갤인데",
@@ -391,7 +391,7 @@
           "englishTitle": "Everytime",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89989&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 48
+          "mentionCount": 52
         },
         {
           "rank": 4,
@@ -427,10 +427,10 @@
         },
         {
           "rank": 8,
-          "title": "로마 엘라스티카",
-          "englishTitle": "Roma Elastica",
+          "title": "버킹 패스타드",
+          "englishTitle": "Bucking Fastard",
           "section": "아이콘",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91150&c_idx=430&sp_idx=&QueryStep=2",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91151&c_idx=430&sp_idx=&QueryStep=2",
           "mentionCount": 21
         }
       ]
@@ -441,11 +441,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 135,
+    "fetchedPostCount": 202,
     "listedPostCount": 292,
-    "detailedPostCount": 1,
-    "commentFetchCount": 1,
-    "commentCount": 3,
+    "detailedPostCount": 3,
+    "commentFetchCount": 3,
+    "commentCount": 10,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
