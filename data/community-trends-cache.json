@@ -2,413 +2,25 @@
   "version": 3,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-10-10",
-  "windowEnd": "2026-10-12",
+  "windowStart": "2026-10-11",
+  "windowEnd": "2026-10-13",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-10-10",
       "2026-10-11",
-      "2026-10-12"
+      "2026-10-12",
+      "2026-10-13"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-10-12",
-    "lastWindowEnd": "2026-10-12",
+    "lastWindowStart": "2026-10-13",
+    "lastWindowEnd": "2026-10-13",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-12T12:16:22.493Z",
+  "updatedAt": "2026-10-12T15:23:03.766Z",
   "days": {
-    "2026-10-10": {
-      "더드라마": {
-        "title": "더 드라마",
-        "positiveSignal": 4,
-        "mentionCount": 2,
-        "evidence": [
-          {
-            "title": "더 드라마 어떰? 볼만함?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872384&page=1",
-            "date": "2026-10-10",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "수작",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 3,
-            "commentPositive": 4,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "룩백": {
-        "title": "룩백(2D)",
-        "positiveSignal": 24,
-        "mentionCount": 28.538407798525412,
-        "evidence": [
-          {
-            "title": "룩백 실사를 애니보다 재밌게 봤으면 영알못인가요?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872381&page=1",
-            "date": "2026-10-10",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "스포) 룩백 실사화",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872315&page=3",
-            "date": "2026-10-10",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "룩백 다른건 몰라도 계절 연출은 넘 좋더라",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872294&page=3",
-            "date": "2026-10-10",
-            "positive": 2,
-            "rawPositive": 2,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "좋더라",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 3,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "플레이타임": {
-        "title": "플레이타임",
-        "positiveSignal": 0,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "더쿱 이 씹새들이 플레이타임 개봉해줄까",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872340&page=2",
-            "date": "2026-10-10",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "사탄탱고": {
-        "title": "사탄탱고(기획전)",
-        "positiveSignal": 0,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "런온사 필관작이냐?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872291&page=3",
-            "date": "2026-10-10",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "런던에서온사나이": {
-        "title": "런던에서 온 사나이",
-        "positiveSignal": 0,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "런온사 필관작이냐?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872291&page=3",
-            "date": "2026-10-10",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "토리노의말": {
-        "title": "토리노의 말",
-        "positiveSignal": 0,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "런온사 필관작이냐?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872291&page=3",
-            "date": "2026-10-10",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "파멸": {
-        "title": "파멸(기획전)",
-        "positiveSignal": 0,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "런온사 필관작이냐?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872291&page=3",
-            "date": "2026-10-10",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "이방인": {
-        "title": "이방인",
-        "positiveSignal": 6,
-        "mentionCount": 1.792481250360578,
-        "evidence": [
-          {
-            "title": "이방인 뭐 먼저 보는 게 좋음?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872230&page=4",
-            "date": "2026-10-10",
-            "positive": 6,
-            "rawPositive": 6,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "강추",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 2,
-            "commentPositive": 6,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "셀린느와줄리배타러가다": {
-        "title": "셀린느와 줄리 배 타러 가다(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 5.69615871138938,
-        "evidence": [
-          {
-            "title": "어제 셀줄배 gv. 최영민이 있는 라이트하우스",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872226&page=4",
-            "date": "2026-10-10",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "261009 서아시 셀줄배 최영민 시네토크 전사 (2)",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871830&page=11",
-            "date": "2026-10-10",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 5,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "261009 서아시 셀줄배 최영민 시네토크 전사 (1)",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871818&page=11",
-            "date": "2026-10-10",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 6,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "옵세션": {
-        "title": "옵세션(2D)",
-        "positiveSignal": 2,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "옵세션 진짜 평범하던데..",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872145&page=6",
-            "date": "2026-10-10",
-            "positive": 2,
-            "rawPositive": 2,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "볼만",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "나의사적인예술가": {
-        "title": "나의 사적인 예술가",
-        "positiveSignal": 6,
-        "mentionCount": 2,
-        "evidence": [
-          {
-            "title": "ㅅㅍ)나의 사적인 예술가 이거 걍 누갤인데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872032&page=8",
-            "date": "2026-10-10",
-            "positive": 6,
-            "rawPositive": 6,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              },
-              {
-                "term": "볼만",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 3,
-            "commentPositive": 6,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "베크마이스터하모니즈": {
-        "title": "베크마이스터 하모니즈(기획전)",
-        "positiveSignal": 8,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "베크마이스터 하모니즈 보고 왔음",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871807&page=12",
-            "date": "2026-10-10",
-            "positive": 8,
-            "rawPositive": 8,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              },
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 4,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-10-11": {
       "괴물": {
         "title": "괴물",
@@ -840,11 +452,12 @@
           }
         ]
       }
-    }
+    },
+    "2026-10-13": {}
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-12T12:16:22.485Z",
+      "lineupFetchedAt": "2026-10-12T15:23:03.763Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -2350,7 +1963,8 @@
         "2026-10-09",
         "2026-10-10",
         "2026-10-11",
-        "2026-10-12"
+        "2026-10-12",
+        "2026-10-13"
       ],
       "days": {
         "2026-09-22": {},
@@ -4790,6 +4404,43 @@
           },
           "미노타우로스": {
             "title": "미노타우로스",
+            "mentionCount": 1,
+            "commentCount": 0
+          }
+        },
+        "2026-10-13": {
+          "다시눈이올거야": {
+            "title": "다시 눈이 올 거야",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "오렌지맛웨딩": {
+            "title": "오렌지 맛 웨딩",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "엄마의바다": {
+            "title": "엄마의 바다",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "노트르살뤼": {
+            "title": "노트르 살뤼",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "라그라디바": {
+            "title": "라 그라디바",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "천국으로가는아홉사원": {
+            "title": "천국으로 가는 아홉 사원",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "클럽키드": {
+            "title": "클럽 키드",
             "mentionCount": 1,
             "commentCount": 0
           }

@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-12T12:16:26.191Z",
-  "weekStart": "2026-10-10",
-  "weekEnd": "2026-10-12",
-  "windowStart": "2026-10-10",
-  "windowEnd": "2026-10-12",
+  "generatedAt": "2026-10-12T15:23:07.472Z",
+  "weekStart": "2026-10-11",
+  "weekEnd": "2026-10-13",
+  "windowStart": "2026-10-11",
+  "windowEnd": "2026-10-13",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -14,17 +14,17 @@
     {
       "rank": 1,
       "title": "룩백",
-      "posterUrl": "/assets/recommendation-posters/eb4c5451cda00929.webp",
-      "localPosterUrl": "/assets/recommendation-posters/eb4c5451cda00929.webp",
+      "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
+      "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-13&movieCd=029713&playSDT=2026-10-13&screenId=02&showSeq=3",
-      "score": 390.7,
-      "signal": 12.4,
-      "positiveSignal": 12.4,
-      "mentionCount": 33.7,
-      "rawPositiveSignal": 24,
-      "rawMentionCount": 51.576815597050825,
+      "score": 140.1,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 13.6,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 23.038407798525412,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -42,62 +42,6 @@
       "nextTime": "14:05",
       "evidence": [
         {
-          "title": "룩백 실사를 애니보다 재밌게 봤으면 영알못인가요?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872381&page=1",
-          "date": "2026-10-10",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "스포) 룩백 실사화",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872315&page=3",
-          "date": "2026-10-10",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "룩백 다른건 몰라도 계절 연출은 넘 좋더라",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872294&page=3",
-          "date": "2026-10-10",
-          "positive": 2,
-          "rawPositive": 2,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "좋더라",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
           "title": "고레에다 필모 대부분 봤는데 룩백이 최악이네",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873077&page=2",
           "date": "2026-10-11",
@@ -111,7 +55,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "헐 룩백 후지노 언니 역할 어느가족 유리였어?",
@@ -127,6 +71,54 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "룩백 쿄모토 배우 은은하게 이쁘다",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873062&page=2",
+          "date": "2026-10-11",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 3,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "룩백 보고 확신한점",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873656&page=2",
+          "date": "2026-10-12",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "스포) 룩백 실사 이해 안가는점",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873644&page=2",
+          "date": "2026-10-12",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
           "dayWeight": 0.72
         }
       ],
@@ -140,10 +132,10 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-21&movieCd=019765&playSDT=2026-10-21&screenId=01&showSeq=6",
-      "score": 81.5,
-      "signal": 14,
-      "positiveSignal": 14,
-      "mentionCount": 2.5,
+      "score": 58.8,
+      "signal": 10.1,
+      "positiveSignal": 10.1,
+      "mentionCount": 1.8,
       "rawPositiveSignal": 14,
       "rawMentionCount": 2.5,
       "scheduleBackfill": false,
@@ -199,107 +191,23 @@
           "commentCount": 8,
           "commentPositive": 14,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
     },
     {
       "rank": 3,
-      "title": "베크마이스터 하모니즈",
-      "posterUrl": "/assets/recommendation-posters/8e070abc417d0c07.webp",
-      "localPosterUrl": "/assets/recommendation-posters/8e070abc417d0c07.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121793&playDt=20261015&tsId=TS0039&pno=1",
-      "score": 47.7,
-      "signal": 7,
-      "positiveSignal": 7,
-      "mentionCount": 1.9,
-      "rawPositiveSignal": 12,
-      "rawMentionCount": 3,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "kucine",
-        "sac"
-      ],
-      "venueNames": [
-        "KU시네마테크",
-        "서울아트시네마"
-      ],
-      "nextDate": "2026-10-15",
-      "nextTime": "14:40",
-      "evidence": [
-        {
-          "title": "베크마이스터 하모니즈 보고 왔음",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871807&page=12",
-          "date": "2026-10-10",
-          "positive": 8,
-          "rawPositive": 8,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "꿀잼",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "꿀잼",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 4,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "토리노의 말 보고 왔는데 생각보다 훨씬 누하네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872998&page=3",
-          "date": "2026-10-11",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "꿀잼",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/ix3pquGqTkCW86UbVTdRcrhGEFm.jpg"
-    },
-    {
-      "rank": 4,
       "title": "오데트",
-      "posterUrl": "/assets/recommendation-posters/1f6ecc6d4514ddd7.webp",
-      "localPosterUrl": "/assets/recommendation-posters/1f6ecc6d4514ddd7.webp",
+      "posterUrl": "/assets/recommendation-posters/be9a6c64e7aad395.webp",
+      "localPosterUrl": "/assets/recommendation-posters/be9a6c64e7aad395.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.tinyticket.net/event/EVff3eL4uj3T",
-      "score": 30.7,
+      "score": 22.2,
       "signal": 0,
       "positiveSignal": 0,
-      "mentionCount": 3,
+      "mentionCount": 2.2,
       "rawPositiveSignal": 0,
       "rawMentionCount": 4.19615871138938,
       "scheduleBackfill": false,
@@ -326,7 +234,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "오데트vs사랑방 손님과 어머니",
@@ -342,10 +250,63 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/c9Oef9uQEuadZlnvv8hphRmTIgx.jpg"
+    },
+    {
+      "rank": 4,
+      "title": "베크마이스터 하모니즈",
+      "posterUrl": "/assets/recommendation-posters/e74b2711058973bf.webp",
+      "localPosterUrl": "/assets/recommendation-posters/e74b2711058973bf.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121793&playDt=20261015&tsId=TS0039&pno=1",
+      "score": 17.1,
+      "signal": 2.1,
+      "positiveSignal": 2.1,
+      "mentionCount": 0.8,
+      "rawPositiveSignal": 4,
+      "rawMentionCount": 1.5,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "kucine",
+        "sac"
+      ],
+      "venueNames": [
+        "KU시네마테크",
+        "서울아트시네마"
+      ],
+      "nextDate": "2026-10-15",
+      "nextTime": "14:40",
+      "evidence": [
+        {
+          "title": "토리노의 말 보고 왔는데 생각보다 훨씬 누하네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872998&page=3",
+          "date": "2026-10-11",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/ix3pquGqTkCW86UbVTdRcrhGEFm.jpg"
     }
   ],
   "festivalPicks": [
@@ -362,7 +323,7 @@
           "englishTitle": "La Gradiva",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90315&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 85
+          "mentionCount": 86
         },
         {
           "rank": 2,
@@ -386,7 +347,7 @@
           "englishTitle": "A Man of His Time",
           "section": "플래시 포워드",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89988&c_idx=435&sp_idx=&QueryStep=2",
-          "mentionCount": 41
+          "mentionCount": 42
         },
         {
           "rank": 5,
@@ -398,18 +359,18 @@
         },
         {
           "rank": 6,
-          "title": "그래비티",
-          "englishTitle": "Gravity",
-          "section": "특별상영 & 까르뜨 블랑슈",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91282&c_idx=441&sp_idx=&QueryStep=2",
-          "mentionCount": 27
-        },
-        {
-          "rank": 7,
           "title": "클럽 키드",
           "englishTitle": "Club Kid",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91104&c_idx=434&sp_idx=&QueryStep=2",
+          "mentionCount": 28
+        },
+        {
+          "rank": 7,
+          "title": "그래비티",
+          "englishTitle": "Gravity",
+          "section": "특별상영 & 까르뜨 블랑슈",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91282&c_idx=441&sp_idx=&QueryStep=2",
           "mentionCount": 27
         },
         {
@@ -428,24 +389,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 387,
-    "listedPostCount": 392,
-    "detailedPostCount": 9,
-    "commentFetchCount": 9,
-    "commentCount": 28,
+    "fetchedPostCount": 12,
+    "listedPostCount": 292,
+    "detailedPostCount": 0,
+    "commentFetchCount": 0,
+    "commentCount": 0,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 8,
+    "scannedPageCount": 6,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-10-06",
-    "newestScannedDate": "2026-10-12",
+    "newestScannedDate": "2026-10-13",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-10-12",
-    "candidateWindowEnd": "2026-10-26",
-    "candidateCount": 87,
+    "candidateWindowStart": "2026-10-13",
+    "candidateWindowEnd": "2026-10-27",
+    "candidateCount": 89,
     "seedLookbackDays": 3,
-    "seedStart": "2026-10-10",
+    "seedStart": "2026-10-11",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-10-12",
+    "listWindowStart": "2026-10-13",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -453,7 +414,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-10-12"
+      "2026-10-13"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [
