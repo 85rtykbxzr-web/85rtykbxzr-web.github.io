@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-12T06:18:39.366Z",
+  "generatedAt": "2026-10-12T09:09:34.893Z",
   "weekStart": "2026-10-10",
   "weekEnd": "2026-10-12",
   "windowStart": "2026-10-10",
@@ -18,28 +18,28 @@
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121765&playDt=20261012&tsId=TS0039&pno=1",
-      "score": 330.7,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-12&movieCd=029713&playSDT=2026-10-12&screenId=01&showSeq=6",
+      "score": 365.7,
       "signal": 12.4,
       "positiveSignal": 12.4,
-      "mentionCount": 27.7,
+      "mentionCount": 31.2,
       "rawPositiveSignal": 24,
-      "rawMentionCount": 45.57681559705083,
+      "rawMentionCount": 49.07681559705083,
       "scheduleBackfill": false,
       "venueIds": [
-        "kucine",
         "cinecube",
+        "kucine",
         "sangsangmadang",
         "filmforum"
       ],
       "venueNames": [
-        "KU시네마테크",
         "씨네큐브 광화문",
+        "KU시네마테크",
         "KT&G 상상마당 시네마",
         "필름포럼"
       ],
       "nextDate": "2026-10-12",
-      "nextTime": "15:30",
+      "nextTime": "20:25",
       "evidence": [
         {
           "title": "룩백 실사를 애니보다 재밌게 봤으면 영알못인가요?",
@@ -158,7 +158,7 @@
       "evidence": [
         {
           "title": "아사코 재개봉 보러갈꺼임??",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873503&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873503&page=3",
           "date": "2026-10-12",
           "positive": 14,
           "rawPositive": 14,
@@ -386,7 +386,7 @@
           "englishTitle": "A Man of His Time",
           "section": "플래시 포워드",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89988&c_idx=435&sp_idx=&QueryStep=2",
-          "mentionCount": 40
+          "mentionCount": 41
         },
         {
           "rank": 5,
@@ -418,7 +418,7 @@
           "englishTitle": "The Spiral",
           "section": "오픈 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91100&c_idx=437&sp_idx=&QueryStep=2",
-          "mentionCount": 25
+          "mentionCount": 26
         }
       ]
     }
@@ -428,13 +428,13 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 250,
-    "listedPostCount": 292,
-    "detailedPostCount": 4,
-    "commentFetchCount": 4,
-    "commentCount": 15,
+    "fetchedPostCount": 292,
+    "listedPostCount": 342,
+    "detailedPostCount": 6,
+    "commentFetchCount": 6,
+    "commentCount": 23,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 6,
+    "scannedPageCount": 7,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-10-06",
     "newestScannedDate": "2026-10-12",
