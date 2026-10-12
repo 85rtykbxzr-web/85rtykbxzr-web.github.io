@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-12T03:11:55.386Z",
+  "generatedAt": "2026-10-12T06:18:39.366Z",
   "weekStart": "2026-10-10",
   "weekEnd": "2026-10-12",
   "windowStart": "2026-10-10",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121765&playDt=20261012&tsId=TS0039&pno=1",
-      "score": 317.7,
+      "score": 330.7,
       "signal": 12.4,
       "positiveSignal": 12.4,
-      "mentionCount": 26.4,
+      "mentionCount": 27.7,
       "rawPositiveSignal": 24,
-      "rawMentionCount": 44.28433434669025,
+      "rawMentionCount": 45.57681559705083,
       "scheduleBackfill": false,
       "venueIds": [
         "kucine",
@@ -134,9 +134,81 @@
     },
     {
       "rank": 2,
+      "title": "아사코",
+      "posterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
+      "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-21&movieCd=019765&playSDT=2026-10-21&screenId=01&showSeq=6",
+      "score": 81.5,
+      "signal": 14,
+      "positiveSignal": 14,
+      "mentionCount": 2.5,
+      "rawPositiveSignal": 14,
+      "rawMentionCount": 2.5,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "cinecube"
+      ],
+      "venueNames": [
+        "씨네큐브 광화문"
+      ],
+      "nextDate": "2026-10-21",
+      "nextTime": "16:40",
+      "evidence": [
+        {
+          "title": "아사코 재개봉 보러갈꺼임??",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873503&page=2",
+          "date": "2026-10-12",
+          "positive": 14,
+          "rawPositive": 14,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "걸작",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "개좋",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "봐라",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            },
+            {
+              "term": "좋음",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 8,
+          "commentPositive": 14,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
+    },
+    {
+      "rank": 3,
       "title": "베크마이스터 하모니즈",
-      "posterUrl": "/assets/recommendation-posters/ebcc0fc7349ed6cb.webp",
-      "localPosterUrl": "/assets/recommendation-posters/ebcc0fc7349ed6cb.webp",
+      "posterUrl": "/assets/recommendation-posters/e74b2711058973bf.webp",
+      "localPosterUrl": "/assets/recommendation-posters/e74b2711058973bf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121793&playDt=20261015&tsId=TS0039&pno=1",
@@ -217,7 +289,7 @@
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/ix3pquGqTkCW86UbVTdRcrhGEFm.jpg"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "title": "오데트",
       "posterUrl": "/assets/recommendation-posters/be9a6c64e7aad395.webp",
       "localPosterUrl": "/assets/recommendation-posters/be9a6c64e7aad395.webp",
@@ -274,81 +346,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/c9Oef9uQEuadZlnvv8hphRmTIgx.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "셀린느와 줄리 배 타러 가다",
-      "posterUrl": "/assets/recommendation-posters/8aac803cf6309561.webp",
-      "localPosterUrl": "/assets/recommendation-posters/8aac803cf6309561.webp",
-      "posterSource": "wikipedia-pageimage",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121769&playDt=20261013&tsId=TS0056&pno=1",
-      "score": 30,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 3,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 5.69615871138938,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "filmforum"
-      ],
-      "venueNames": [
-        "필름포럼"
-      ],
-      "nextDate": "2026-10-13",
-      "nextTime": "10:10",
-      "evidence": [
-        {
-          "title": "어제 셀줄배 gv. 최영민이 있는 라이트하우스",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872226&page=4",
-          "date": "2026-10-10",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "261009 서아시 셀줄배 최영민 시네토크 전사 (2)",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871830&page=11",
-          "date": "2026-10-10",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 5,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "261009 서아시 셀줄배 최영민 시네토크 전사 (1)",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1871818&page=11",
-          "date": "2026-10-10",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 6,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        }
-      ],
-      "posterSourceUrl": "https://upload.wikimedia.org/wikipedia/en/3/34/Celine_and_Julie_Go_Boating_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
     }
   ],
   "festivalPicks": [
@@ -389,7 +386,7 @@
           "englishTitle": "A Man of His Time",
           "section": "플래시 포워드",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89988&c_idx=435&sp_idx=&QueryStep=2",
-          "mentionCount": 39
+          "mentionCount": 40
         },
         {
           "rank": 5,
@@ -409,19 +406,19 @@
         },
         {
           "rank": 7,
+          "title": "클럽 키드",
+          "englishTitle": "Club Kid",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91104&c_idx=434&sp_idx=&QueryStep=2",
+          "mentionCount": 27
+        },
+        {
+          "rank": 8,
           "title": "스파이럴",
           "englishTitle": "The Spiral",
           "section": "오픈 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91100&c_idx=437&sp_idx=&QueryStep=2",
           "mentionCount": 25
-        },
-        {
-          "rank": 8,
-          "title": "클럽 키드",
-          "englishTitle": "Club Kid",
-          "section": "월드 시네마",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91104&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 24
         }
       ]
     }
@@ -431,11 +428,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 191,
+    "fetchedPostCount": 250,
     "listedPostCount": 292,
-    "detailedPostCount": 2,
-    "commentFetchCount": 2,
-    "commentCount": 1,
+    "detailedPostCount": 4,
+    "commentFetchCount": 4,
+    "commentCount": 15,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,

@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-12",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-12T03:11:54.883Z",
+  "updatedAt": "2026-10-12T06:18:35.686Z",
   "days": {
     "2026-10-10": {
       "더드라마": {
@@ -649,14 +649,14 @@
       }
     },
     "2026-10-12": {
-      "룩백": {
-        "title": "룩백(2D)",
+      "어쩔수가없다": {
+        "title": "어쩔수가없다(확장판)",
         "positiveSignal": 0,
-        "mentionCount": 1,
+        "mentionCount": 1.5,
         "evidence": [
           {
-            "title": "룩백을 보니 부갤주가 고히에 2.5 박는 걸 보고 싶어졌다.",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873488&page=1",
+            "title": "미노타우르스= 어쩔수가 없다 + 끝까지간다",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873538&page=1",
             "date": "2026-10-12",
             "positive": 0,
             "rawPositive": 0,
@@ -665,7 +665,80 @@
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 0,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "아사코": {
+        "title": "아사코",
+        "positiveSignal": 14,
+        "mentionCount": 2.5,
+        "evidence": [
+          {
+            "title": "아사코 재개봉 보러갈꺼임??",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873503&page=2",
+            "date": "2026-10-12",
+            "positive": 14,
+            "rawPositive": 14,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "걸작",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "개좋",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "봐라",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              },
+              {
+                "term": "좋음",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 8,
+            "commentPositive": 14,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "룩백": {
+        "title": "룩백(2D)",
+        "positiveSignal": 0,
+        "mentionCount": 2.292481250360578,
+        "evidence": [
+          {
+            "title": "룩백을 보니 부갤주가 고히에 2.5 박는 걸 보고 싶어졌다.",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873488&page=2",
+            "date": "2026-10-12",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 5,
             "commentPositive": 0,
             "commentNegative": 0
           }
@@ -678,7 +751,7 @@
         "evidence": [
           {
             "title": "블랙볼vs문라이트 뭐가 나음",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873413&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873413&page=3",
             "date": "2026-10-12",
             "positive": 0,
             "rawPositive": 0,
@@ -697,7 +770,7 @@
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-12T03:11:54.877Z",
+      "lineupFetchedAt": "2026-10-12T06:18:35.681Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -4461,10 +4534,40 @@
           }
         },
         "2026-10-12": {
-          "아이언보이": {
-            "title": "아이언 보이",
-            "mentionCount": 2,
+          "겨울이야기": {
+            "title": "겨울 이야기",
+            "mentionCount": 1,
             "commentCount": 0
+          },
+          "로마엘라스티카": {
+            "title": "로마 엘라스티카",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "다시눈이올거야": {
+            "title": "다시 눈이 올 거야",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "클럽키드": {
+            "title": "클럽 키드",
+            "mentionCount": 6,
+            "commentCount": 0
+          },
+          "페이퍼타이거": {
+            "title": "페이퍼 타이거",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "노트르살뤼": {
+            "title": "노트르 살뤼",
+            "mentionCount": 10,
+            "commentCount": 0
+          },
+          "이성과감성": {
+            "title": "이성과 감성",
+            "mentionCount": 1,
+            "commentCount": 8
           },
           "모범직원카를라": {
             "title": "모범 직원 카를라",
@@ -4474,11 +4577,6 @@
           "파더랜드": {
             "title": "파더랜드",
             "mentionCount": 2,
-            "commentCount": 0
-          },
-          "클럽키드": {
-            "title": "클럽 키드",
-            "mentionCount": 3,
             "commentCount": 0
           },
           "가능한사랑": {
@@ -4504,11 +4602,6 @@
           "아버지의방": {
             "title": "아버지의 방",
             "mentionCount": 2,
-            "commentCount": 0
-          },
-          "노트르살뤼": {
-            "title": "노트르 살뤼",
-            "mentionCount": 9,
             "commentCount": 0
           },
           "사토코는언제나": {
@@ -4573,6 +4666,11 @@
           },
           "실버익스프레스": {
             "title": "실버 익스프레스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "아이언보이": {
+            "title": "아이언 보이",
             "mentionCount": 1,
             "commentCount": 0
           },
