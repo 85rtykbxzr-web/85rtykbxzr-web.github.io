@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-13",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-13T09:14:24.305Z",
+  "updatedAt": "2026-10-13T12:21:16.984Z",
   "days": {
     "2026-10-11": {
       "괴물": {
@@ -457,21 +457,169 @@
       "룩백": {
         "title": "룩백(2D)",
         "positiveSignal": 0,
-        "mentionCount": 1.792481250360578,
+        "mentionCount": 10.877443751081735,
         "evidence": [
           {
-            "title": "룩백 별로다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874129&page=1",
+            "title": "스포) 룩백 실사판 최고 명장면은 뭐같음?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874210&page=1",
             "date": "2026-10-13",
             "positive": 0,
             "rawPositive": 0,
             "negative": 0,
             "positiveHits": [],
             "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "룩백도 하는데ㅜ자몽살구클럽은 영화화 안 하냐",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874193&page=2",
+            "date": "2026-10-13",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 5,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "디거를 볼까 룩백을 볼까",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874181&page=2",
+            "date": "2026-10-13",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 3,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "괴물": {
+        "title": "괴물",
+        "positiveSignal": 10,
+        "mentionCount": 4.453445297804259,
+        "evidence": [
+          {
+            "title": "학원 선생님이 괴물(2023) 추천해줘서",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874185&page=2",
+            "date": "2026-10-13",
+            "positive": 8,
+            "rawPositive": 8,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "재밌",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "추천",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 2,
+            "commentCount": 4,
             "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "고레에다는 괴물 호인지 불호인지로 갈리는듯",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874170&page=2",
+            "date": "2026-10-13",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "괜찮",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 5,
+            "commentPositive": 2,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "트레인스포팅": {
+        "title": "트레인스포팅(2D)",
+        "positiveSignal": 22,
+        "mentionCount": 2.403677461028802,
+        "evidence": [
+          {
+            "title": "트레인스포팅 걸작임?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874178&page=2",
+            "date": "2026-10-13",
+            "positive": 22,
+            "rawPositive": 22,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "걸작",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "걸작",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "명작",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "재밌",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "볼만",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 6,
+            "commentPositive": 22,
             "commentNegative": 0
           }
         ]
@@ -483,7 +631,7 @@
         "evidence": [
           {
             "title": "아사코 vs 하나비",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873972&page=4",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873972&page=6",
             "date": "2026-10-13",
             "positive": 0,
             "rawPositive": 0,
@@ -505,7 +653,7 @@
         "evidence": [
           {
             "title": "생각해보니 이방인 부갤주 점수",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873850&page=6",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873850&page=8",
             "date": "2026-10-13",
             "positive": 0,
             "rawPositive": 0,
@@ -524,7 +672,7 @@
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-13T09:14:24.300Z",
+      "lineupFetchedAt": "2026-10-13T12:21:16.978Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -4476,9 +4624,59 @@
           }
         },
         "2026-10-13": {
+          "1518": {
+            "title": "15/18",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "에브리타임": {
+            "title": "에브리타임",
+            "mentionCount": 5,
+            "commentCount": 0
+          },
+          "어느날아내가울었다": {
+            "title": "어느 날, 아내가 울었다",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "와일드호스나인": {
+            "title": "와일드 호스 나인",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "천국으로가는아홉사원": {
+            "title": "천국으로 가는 아홉 사원",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "엄마의바다": {
+            "title": "엄마의 바다",
+            "mentionCount": 4,
+            "commentCount": 0
+          },
+          "고스트밤의끝": {
+            "title": "고스트 - 밤의 끝",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
           "필리피냐나": {
             "title": "필리피냐나",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "베드포드파크": {
+            "title": "베드포드 파크",
             "mentionCount": 1,
+            "commentCount": 0
+          },
+          "아버지의방": {
+            "title": "아버지의 방",
+            "mentionCount": 3,
+            "commentCount": 0
+          },
+          "라그라디바": {
+            "title": "라 그라디바",
+            "mentionCount": 3,
             "commentCount": 0
           },
           "짐승이너무많아": {
@@ -4499,21 +4697,6 @@
           "미노타우로스": {
             "title": "미노타우로스",
             "mentionCount": 2,
-            "commentCount": 0
-          },
-          "라그라디바": {
-            "title": "라 그라디바",
-            "mentionCount": 2,
-            "commentCount": 0
-          },
-          "에브리타임": {
-            "title": "에브리타임",
-            "mentionCount": 2,
-            "commentCount": 0
-          },
-          "어느날아내가울었다": {
-            "title": "어느 날, 아내가 울었다",
-            "mentionCount": 1,
             "commentCount": 0
           },
           "젠틀몬스터": {
@@ -4546,16 +4729,6 @@
             "mentionCount": 1,
             "commentCount": 0
           },
-          "아버지의방": {
-            "title": "아버지의 방",
-            "mentionCount": 2,
-            "commentCount": 0
-          },
-          "엄마의바다": {
-            "title": "엄마의 바다",
-            "mentionCount": 1,
-            "commentCount": 0
-          },
           "옐로우레터스": {
             "title": "옐로우 레터스",
             "mentionCount": 1,
@@ -4568,11 +4741,6 @@
           },
           "다시눈이올거야": {
             "title": "다시 눈이 올 거야",
-            "mentionCount": 1,
-            "commentCount": 0
-          },
-          "천국으로가는아홉사원": {
-            "title": "천국으로 가는 아홉 사원",
             "mentionCount": 1,
             "commentCount": 0
           },

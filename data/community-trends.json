@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-13T09:14:27.366Z",
+  "generatedAt": "2026-10-13T12:21:20.723Z",
   "weekStart": "2026-10-11",
   "weekEnd": "2026-10-13",
   "windowStart": "2026-10-11",
@@ -14,17 +14,17 @@
     {
       "rank": 1,
       "title": "룩백",
-      "posterUrl": "/assets/recommendation-posters/eb4c5451cda00929.webp",
-      "localPosterUrl": "/assets/recommendation-posters/eb4c5451cda00929.webp",
+      "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
+      "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261014&tsId=TS0044&pno=2",
-      "score": 158,
+      "score": 248.9,
       "signal": 0,
       "positiveSignal": 0,
-      "mentionCount": 15.4,
+      "mentionCount": 24.5,
       "rawPositiveSignal": 0,
-      "rawMentionCount": 24.83088904888599,
+      "rawMentionCount": 33.91585154960715,
       "scheduleBackfill": false,
       "venueIds": [
         "sangsangmadang",
@@ -126,6 +126,199 @@
     },
     {
       "rank": 2,
+      "title": "트레인스포팅",
+      "posterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
+      "localPosterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121831&playDt=20261021&tsId=TS0057&pno=3",
+      "score": 112.5,
+      "signal": 22,
+      "positiveSignal": 22,
+      "mentionCount": 2.4,
+      "rawPositiveSignal": 22,
+      "rawMentionCount": 2.403677461028802,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "filmforum"
+      ],
+      "venueNames": [
+        "필름포럼"
+      ],
+      "nextDate": "2026-10-21",
+      "nextTime": "13:50",
+      "evidence": [
+        {
+          "title": "트레인스포팅 걸작임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874178&page=2",
+          "date": "2026-10-13",
+          "positive": 22,
+          "rawPositive": 22,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "걸작",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "걸작",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "명작",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "볼만",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 6,
+          "commentPositive": 22,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/1jUC02qsqS2NxBMFarbIhcQtazV.jpg"
+    },
+    {
+      "rank": 3,
+      "title": "괴물",
+      "posterUrl": "/assets/recommendation-posters/ccbc5087b974f131.webp",
+      "localPosterUrl": "/assets/recommendation-posters/ccbc5087b974f131.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.tinyticket.net/event/EVcGiptnvBtW",
+      "score": 101,
+      "signal": 10,
+      "positiveSignal": 10,
+      "mentionCount": 6.1,
+      "rawPositiveSignal": 10,
+      "rawMentionCount": 6.953445297804259,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "sac"
+      ],
+      "venueNames": [
+        "서울아트시네마"
+      ],
+      "nextDate": "2026-10-21",
+      "nextTime": "18:40",
+      "evidence": [
+        {
+          "title": "오랜만에 gv가 괴물과 겹치네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873118&page=1",
+          "date": "2026-10-11",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "스포?) 룩백 만화도 애니도 안 보고 이번에 첨 봤는데",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873561&page=3",
+          "date": "2026-10-12",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "학원 선생님이 괴물(2023) 추천해줘서",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874185&page=2",
+          "date": "2026-10-13",
+          "positive": 8,
+          "rawPositive": 8,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "추천",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 4,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "고레에다는 괴물 호인지 불호인지로 갈리는듯",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874170&page=2",
+          "date": "2026-10-13",
+          "positive": 2,
+          "rawPositive": 2,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "괜찮",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 5,
+          "commentPositive": 2,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cecXXWJ5YINoUFPU8tMMUqz0yqG.jpg"
+    },
+    {
+      "rank": 4,
       "title": "아사코",
       "posterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
       "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
@@ -197,7 +390,7 @@
         },
         {
           "title": "아사코 vs 하나비",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873972&page=4",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873972&page=6",
           "date": "2026-10-13",
           "positive": 0,
           "rawPositive": 0,
@@ -213,118 +406,6 @@
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
-    },
-    {
-      "rank": 3,
-      "title": "오데트",
-      "posterUrl": "/assets/recommendation-posters/1f6ecc6d4514ddd7.webp",
-      "localPosterUrl": "/assets/recommendation-posters/1f6ecc6d4514ddd7.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.tinyticket.net/event/EVff3eL4uj3T",
-      "score": 22.2,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 2.2,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 4.19615871138938,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "sac"
-      ],
-      "venueNames": [
-        "서울아트시네마"
-      ],
-      "nextDate": "2026-10-24",
-      "nextTime": "16:40",
-      "evidence": [
-        {
-          "title": "침묵의빛 보려는데 오데트 봐야하냐",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873072&page=2",
-          "date": "2026-10-11",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "오데트vs사랑방 손님과 어머니",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872761&page=8",
-          "date": "2026-10-11",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/c9Oef9uQEuadZlnvv8hphRmTIgx.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "베크마이스터 하모니즈",
-      "posterUrl": "/assets/recommendation-posters/8e070abc417d0c07.webp",
-      "localPosterUrl": "/assets/recommendation-posters/8e070abc417d0c07.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121793&playDt=20261015&tsId=TS0039&pno=1",
-      "score": 17.1,
-      "signal": 2.1,
-      "positiveSignal": 2.1,
-      "mentionCount": 0.8,
-      "rawPositiveSignal": 4,
-      "rawMentionCount": 1.5,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "kucine",
-        "sac"
-      ],
-      "venueNames": [
-        "KU시네마테크",
-        "서울아트시네마"
-      ],
-      "nextDate": "2026-10-15",
-      "nextTime": "14:40",
-      "evidence": [
-        {
-          "title": "토리노의 말 보고 왔는데 생각보다 훨씬 누하네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872998&page=3",
-          "date": "2026-10-11",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "꿀잼",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/ix3pquGqTkCW86UbVTdRcrhGEFm.jpg"
     }
   ],
   "festivalPicks": [
@@ -341,23 +422,23 @@
           "englishTitle": "La Gradiva",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90315&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 87
+          "mentionCount": 88
         },
         {
           "rank": 2,
+          "title": "에브리타임",
+          "englishTitle": "Everytime",
+          "section": "월드 시네마",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89989&c_idx=434&sp_idx=&QueryStep=2",
+          "mentionCount": 61
+        },
+        {
+          "rank": 3,
           "title": "가능한 사랑",
           "englishTitle": "Possible Love",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91115&c_idx=430&sp_idx=&QueryStep=2",
           "mentionCount": 59
-        },
-        {
-          "rank": 3,
-          "title": "에브리타임",
-          "englishTitle": "Everytime",
-          "section": "월드 시네마",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89989&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 58
         },
         {
           "rank": 4,
@@ -407,20 +488,20 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 285,
-    "listedPostCount": 292,
-    "detailedPostCount": 3,
-    "commentFetchCount": 3,
-    "commentCount": 5,
+    "fetchedPostCount": 373,
+    "listedPostCount": 392,
+    "detailedPostCount": 11,
+    "commentFetchCount": 11,
+    "commentCount": 32,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 6,
+    "scannedPageCount": 8,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-10-06",
     "newestScannedDate": "2026-10-13",
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-13",
     "candidateWindowEnd": "2026-10-27",
-    "candidateCount": 94,
+    "candidateCount": 92,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-11",
     "listLookbackDays": 1,
