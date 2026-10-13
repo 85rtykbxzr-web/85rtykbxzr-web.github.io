@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-13T03:17:04.406Z",
+  "generatedAt": "2026-10-13T06:23:17.900Z",
   "weekStart": "2026-10-11",
   "weekEnd": "2026-10-13",
   "windowStart": "2026-10-11",
@@ -18,7 +18,7 @@
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-13&movieCd=029713&playSDT=2026-10-13&screenId=02&showSeq=3",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121765&playDt=20261013&tsId=TS0039&pno=4",
       "score": 140.1,
       "signal": 0,
       "positiveSignal": 0,
@@ -27,19 +27,19 @@
       "rawMentionCount": 23.038407798525412,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube",
         "kucine",
+        "cinecube",
         "sangsangmadang",
         "filmforum"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
         "KU시네마테크",
+        "씨네큐브 광화문",
         "KT&G 상상마당 시네마",
         "필름포럼"
       ],
       "nextDate": "2026-10-13",
-      "nextTime": "14:05",
+      "nextTime": "17:30",
       "evidence": [
         {
           "title": "고레에다 필모 대부분 봤는데 룩백이 최악이네",
@@ -132,12 +132,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-21&movieCd=019765&playSDT=2026-10-21&screenId=01&showSeq=6",
-      "score": 74.3,
+      "score": 79.3,
       "signal": 10.1,
       "positiveSignal": 10.1,
-      "mentionCount": 3.3,
+      "mentionCount": 3.8,
       "rawPositiveSignal": 14,
-      "rawMentionCount": 4,
+      "rawMentionCount": 4.5,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -197,7 +197,7 @@
         },
         {
           "title": "아사코 vs 하나비",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873972&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873972&page=2",
           "date": "2026-10-13",
           "positive": 0,
           "rawPositive": 0,
@@ -206,7 +206,7 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 1,
+          "commentCount": 3,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
@@ -349,7 +349,7 @@
           "englishTitle": "Possible Love",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91115&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 60
+          "mentionCount": 59
         },
         {
           "rank": 3,
@@ -407,11 +407,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 128,
+    "fetchedPostCount": 209,
     "listedPostCount": 292,
     "detailedPostCount": 2,
     "commentFetchCount": 2,
-    "commentCount": 1,
+    "commentCount": 3,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -420,7 +420,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-13",
     "candidateWindowEnd": "2026-10-27",
-    "candidateCount": 98,
+    "candidateCount": 96,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-11",
     "listLookbackDays": 1,
