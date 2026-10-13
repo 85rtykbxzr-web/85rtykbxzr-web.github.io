@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-13T00:10:22.153Z",
+  "generatedAt": "2026-10-13T03:17:04.406Z",
   "weekStart": "2026-10-11",
   "weekEnd": "2026-10-13",
   "windowStart": "2026-10-11",
@@ -132,18 +132,20 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-21&movieCd=019765&playSDT=2026-10-21&screenId=01&showSeq=6",
-      "score": 58.8,
+      "score": 74.3,
       "signal": 10.1,
       "positiveSignal": 10.1,
-      "mentionCount": 1.8,
+      "mentionCount": 3.3,
       "rawPositiveSignal": 14,
-      "rawMentionCount": 2.5,
+      "rawMentionCount": 4,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube"
+        "cinecube",
+        "filmforum"
       ],
       "venueNames": [
-        "씨네큐브 광화문"
+        "씨네큐브 광화문",
+        "필름포럼"
       ],
       "nextDate": "2026-10-21",
       "nextTime": "16:40",
@@ -192,6 +194,22 @@
           "commentPositive": 14,
           "commentNegative": 0,
           "dayWeight": 0.72
+        },
+        {
+          "title": "아사코 vs 하나비",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873972&page=1",
+          "date": "2026-10-13",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
@@ -347,7 +365,7 @@
           "englishTitle": "A Man of His Time",
           "section": "플래시 포워드",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89988&c_idx=435&sp_idx=&QueryStep=2",
-          "mentionCount": 43
+          "mentionCount": 44
         },
         {
           "rank": 5,
@@ -389,11 +407,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 84,
+    "fetchedPostCount": 128,
     "listedPostCount": 292,
-    "detailedPostCount": 1,
-    "commentFetchCount": 1,
-    "commentCount": 0,
+    "detailedPostCount": 2,
+    "commentFetchCount": 2,
+    "commentCount": 1,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -402,7 +420,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-13",
     "candidateWindowEnd": "2026-10-27",
-    "candidateCount": 89,
+    "candidateCount": 98,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-11",
     "listLookbackDays": 1,

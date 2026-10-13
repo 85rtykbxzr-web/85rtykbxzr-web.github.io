@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-13",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-13T00:10:18.001Z",
+  "updatedAt": "2026-10-13T03:16:57.955Z",
   "days": {
     "2026-10-11": {
       "괴물": {
@@ -454,14 +454,36 @@
       }
     },
     "2026-10-13": {
+      "아사코": {
+        "title": "아사코",
+        "positiveSignal": 0,
+        "mentionCount": 1.5,
+        "evidence": [
+          {
+            "title": "아사코 vs 하나비",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873972&page=1",
+            "date": "2026-10-13",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "이방인": {
-        "title": "이방인",
+        "title": "이방인(2D)",
         "positiveSignal": 0,
         "mentionCount": 1,
         "evidence": [
           {
             "title": "생각해보니 이방인 부갤주 점수",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873850&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873850&page=3",
             "date": "2026-10-13",
             "positive": 0,
             "rawPositive": 0,
@@ -480,7 +502,7 @@
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-13T00:10:17.999Z",
+      "lineupFetchedAt": "2026-10-13T03:16:57.951Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -4432,6 +4454,26 @@
           }
         },
         "2026-10-13": {
+          "굿바이이놈의잔인한세상": {
+            "title": "굿바이, 이놈의 잔인한 세상",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "구원은없다": {
+            "title": "구원은 없다",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "노트르살뤼": {
+            "title": "노트르 살뤼",
+            "mentionCount": 3,
+            "commentCount": 0
+          },
+          "로마엘라스티카": {
+            "title": "로마 엘라스티카",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
           "아버지의방": {
             "title": "아버지의 방",
             "mentionCount": 2,
@@ -4450,11 +4492,6 @@
           "옐로우레터스": {
             "title": "옐로우 레터스",
             "mentionCount": 1,
-            "commentCount": 0
-          },
-          "노트르살뤼": {
-            "title": "노트르 살뤼",
-            "mentionCount": 2,
             "commentCount": 0
           },
           "모범직원카를라": {
