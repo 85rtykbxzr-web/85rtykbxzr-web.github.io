@@ -2,264 +2,25 @@
   "version": 3,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-10-11",
-  "windowEnd": "2026-10-13",
+  "windowStart": "2026-10-12",
+  "windowEnd": "2026-10-14",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-10-11",
       "2026-10-12",
-      "2026-10-13"
+      "2026-10-13",
+      "2026-10-14"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-10-13",
-    "lastWindowEnd": "2026-10-13",
+    "lastWindowStart": "2026-10-14",
+    "lastWindowEnd": "2026-10-14",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-13T12:21:16.984Z",
+  "updatedAt": "2026-10-13T15:13:14.330Z",
   "days": {
-    "2026-10-11": {
-      "괴물": {
-        "title": "괴물",
-        "positiveSignal": 0,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "오랜만에 gv가 괴물과 겹치네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873118&page=1",
-            "date": "2026-10-11",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "룩백": {
-        "title": "룩백(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 14.745926548164837,
-        "evidence": [
-          {
-            "title": "고레에다 필모 대부분 봤는데 룩백이 최악이네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873077&page=2",
-            "date": "2026-10-11",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "헐 룩백 후지노 언니 역할 어느가족 유리였어?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873064&page=2",
-            "date": "2026-10-11",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "룩백 쿄모토 배우 은은하게 이쁘다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873062&page=2",
-            "date": "2026-10-11",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 3,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "침묵의빛": {
-        "title": "침묵의 빛(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 1.792481250360578,
-        "evidence": [
-          {
-            "title": "침묵의빛 보려는데 오데트 봐야하냐",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873072&page=2",
-            "date": "2026-10-11",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "오데트": {
-        "title": "오데트",
-        "positiveSignal": 0,
-        "mentionCount": 4.19615871138938,
-        "evidence": [
-          {
-            "title": "침묵의빛 보려는데 오데트 봐야하냐",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873072&page=2",
-            "date": "2026-10-11",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "오데트vs사랑방 손님과 어머니",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872761&page=8",
-            "date": "2026-10-11",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "토리노의말": {
-        "title": "토리노의 말",
-        "positiveSignal": 4,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "토리노의 말 보고 왔는데 생각보다 훨씬 누하네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872998&page=3",
-            "date": "2026-10-11",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "베크마이스터하모니즈": {
-        "title": "베크마이스터 하모니즈(기획전)",
-        "positiveSignal": 4,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "토리노의 말 보고 왔는데 생각보다 훨씬 누하네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872998&page=3",
-            "date": "2026-10-11",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "사랑방손님과어머니": {
-        "title": "사랑방 손님과 어머니 (4K)",
-        "positiveSignal": 0,
-        "mentionCount": 2.403677461028802,
-        "evidence": [
-          {
-            "title": "오데트vs사랑방 손님과 어머니",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872761&page=8",
-            "date": "2026-10-11",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "파멸": {
-        "title": "파멸(기획전)",
-        "positiveSignal": 0,
-        "mentionCount": 2.292481250360578,
-        "evidence": [
-          {
-            "title": "파멸 베크마이스터 하모니카",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1872714&page=8",
-            "date": "2026-10-11",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 5,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-10-12": {
       "룩백": {
         "title": "룩백",
@@ -668,11 +429,12 @@
           }
         ]
       }
-    }
+    },
+    "2026-10-14": {}
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-13T12:21:16.978Z",
+      "lineupFetchedAt": "2026-10-13T15:13:14.328Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -2179,7 +1941,8 @@
         "2026-10-10",
         "2026-10-11",
         "2026-10-12",
-        "2026-10-13"
+        "2026-10-13",
+        "2026-10-14"
       ],
       "days": {
         "2026-09-22": {},
@@ -4746,6 +4509,18 @@
           },
           "클럽키드": {
             "title": "클럽 키드",
+            "mentionCount": 1,
+            "commentCount": 0
+          }
+        },
+        "2026-10-14": {
+          "마리가뭐어때서": {
+            "title": "마리가 뭐 어때서",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "아이언보이": {
+            "title": "아이언 보이",
             "mentionCount": 1,
             "commentCount": 0
           }
