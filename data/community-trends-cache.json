@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-14",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-14T04:47:56.052Z",
+  "updatedAt": "2026-10-14T06:13:35.825Z",
   "days": {
     "2026-10-12": {
       "룩백": {
@@ -431,44 +431,73 @@
       }
     },
     "2026-10-14": {
-      "세계의주인": {
-        "title": "세계의 주인(가치봄 버전)",
-        "positiveSignal": 6,
-        "mentionCount": 2.160964047443681,
+      "사탄탱고": {
+        "title": "사탄탱고(기획전)",
+        "positiveSignal": 12,
+        "mentionCount": 3,
         "evidence": [
           {
-            "title": "세계의 주인 일본 포스터",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874544&page=1",
+            "title": "사탄탱고 극장에서 볼때는 몰랐는데 다시 재관람하고싶음",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874566&page=1",
             "date": "2026-10-14",
-            "positive": 6,
-            "rawPositive": 6,
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "사탄탱고 후기",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874557&page=1",
+            "date": "2026-10-14",
+            "positive": 12,
+            "rawPositive": 12,
             "negative": 0,
             "positiveHits": [
               {
-                "term": "걸작",
+                "term": "꿀잼",
                 "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
               }
             ],
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 4,
-            "commentPositive": 6,
+            "commentCount": 3,
+            "commentPositive": 12,
             "commentNegative": 0
           }
         ]
       },
-      "아사코": {
-        "title": "아사코",
-        "positiveSignal": 0,
-        "mentionCount": 1.5,
+      "드라이브마이카": {
+        "title": "드라이브 마이 카(하루키전)",
+        "positiveSignal": 4,
+        "mentionCount": 3.5,
         "evidence": [
           {
-            "title": "아사코 못 보려나 씨지비에서",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874518&page=1",
+            "title": "드라이브 마이 카는 왜 빨리는거냐",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874563&page=1",
             "date": "2026-10-14",
             "positive": 0,
             "rawPositive": 0,
@@ -480,17 +509,10 @@
             "commentCount": 1,
             "commentPositive": 0,
             "commentNegative": 0
-          }
-        ]
-      },
-      "드라이브마이카": {
-        "title": "드라이브 마이 카(하루키전)",
-        "positiveSignal": 4,
-        "mentionCount": 2,
-        "evidence": [
+          },
           {
             "title": "드마카는 드르렁했는데 갑병악은 재밋더라",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874455&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874455&page=3",
             "date": "2026-10-14",
             "positive": 4,
             "rawPositive": 4,
@@ -508,6 +530,28 @@
             "questionLike": false,
             "reviewQuestion": false,
             "commentCount": 2,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "아사코": {
+        "title": "아사코",
+        "positiveSignal": 0,
+        "mentionCount": 1.5,
+        "evidence": [
+          {
+            "title": "아사코 못 보려나 씨지비에서",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874518&page=2",
+            "date": "2026-10-14",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
             "commentPositive": 0,
             "commentNegative": 0
           }
@@ -535,28 +579,6 @@
           }
         ]
       },
-      "헤븐노우즈왓": {
-        "title": "헤븐 노우즈 왓(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "침묵의 빛, 헤븐 노우즈 왓 상영관 ㅈㄴ없네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874377&page=4",
-            "date": "2026-10-14",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
       "침묵의빛": {
         "title": "침묵의 빛(2D)",
         "positiveSignal": 0,
@@ -579,8 +601,30 @@
           }
         ]
       },
+      "헤븐노우즈왓": {
+        "title": "헤븐 노우즈 왓(2D)",
+        "positiveSignal": 0,
+        "mentionCount": 1.5,
+        "evidence": [
+          {
+            "title": "침묵의 빛, 헤븐 노우즈 왓 상영관 ㅈㄴ없네",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874377&page=4",
+            "date": "2026-10-14",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "이방인": {
-        "title": "이방인",
+        "title": "이방인(2D)",
         "positiveSignal": 0,
         "mentionCount": 1.792481250360578,
         "evidence": [
@@ -605,7 +649,7 @@
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-14T04:47:56.047Z",
+      "lineupFetchedAt": "2026-10-14T06:13:35.819Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -4685,6 +4729,16 @@
           }
         },
         "2026-10-14": {
+          "빙판위의새들": {
+            "title": "빙판 위의 새들",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "오아시스": {
+            "title": "오아시스",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
           "아이언보이": {
             "title": "아이언 보이",
             "mentionCount": 2,
@@ -4728,11 +4782,6 @@
           "갑자기병세가악화되다": {
             "title": "갑자기 병세가 악화되다",
             "mentionCount": 2,
-            "commentCount": 0
-          },
-          "오아시스": {
-            "title": "오아시스",
-            "mentionCount": 1,
             "commentCount": 0
           },
           "무명소녀": {
