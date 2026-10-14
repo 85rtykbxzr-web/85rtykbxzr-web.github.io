@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-14T18:08:51.496Z",
+  "generatedAt": "2026-10-14T21:15:25.428Z",
   "weekStart": "2026-10-13",
   "weekEnd": "2026-10-15",
   "windowStart": "2026-10-13",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261015&tsId=TS0044&pno=2",
-      "score": 60.3,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 5.6,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 10.877443751081735,
+      "score": 78.3,
+      "signal": 2,
+      "positiveSignal": 2,
+      "mentionCount": 6.6,
+      "rawPositiveSignal": 2,
+      "rawMentionCount": 11.877443751081735,
       "scheduleBackfill": false,
       "venueIds": [
         "sangsangmadang",
@@ -88,6 +88,30 @@
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.518
+        },
+        {
+          "title": "이방인vs룩백vs알파 뛰어난 순서 매겨봐라",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874868&page=1",
+          "date": "2026-10-15",
+          "positive": 2,
+          "rawPositive": 2,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "봐라",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/feIEhh07azcRtn2MocbFX3kWcjw.jpg"
@@ -415,10 +439,10 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 44,
+    "fetchedPostCount": 46,
     "listedPostCount": 292,
-    "detailedPostCount": 2,
-    "commentFetchCount": 2,
+    "detailedPostCount": 3,
+    "commentFetchCount": 3,
     "commentCount": 1,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,

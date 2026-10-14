@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-15",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-14T18:08:49.614Z",
+  "updatedAt": "2026-10-14T21:15:24.595Z",
   "days": {
     "2026-10-13": {
       "룩백": {
@@ -491,6 +491,96 @@
       }
     },
     "2026-10-15": {
+      "이방인": {
+        "title": "이방인",
+        "positiveSignal": 2,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "이방인vs룩백vs알파 뛰어난 순서 매겨봐라",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874868&page=1",
+            "date": "2026-10-15",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "봐라",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "룩백": {
+        "title": "룩백(2D)",
+        "positiveSignal": 2,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "이방인vs룩백vs알파 뛰어난 순서 매겨봐라",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874868&page=1",
+            "date": "2026-10-15",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "봐라",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "알파": {
+        "title": "알파(2D)",
+        "positiveSignal": 2,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "이방인vs룩백vs알파 뛰어난 순서 매겨봐라",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874868&page=1",
+            "date": "2026-10-15",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "봐라",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "침묵의빛": {
         "title": "침묵의 빛(2D)",
         "positiveSignal": 0,
@@ -532,7 +622,7 @@
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-14T18:08:49.611Z",
+      "lineupFetchedAt": "2026-10-14T21:15:24.591Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
