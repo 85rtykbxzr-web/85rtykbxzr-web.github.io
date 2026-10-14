@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-14",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-14T00:16:48.955Z",
+  "updatedAt": "2026-10-14T03:23:16.733Z",
   "days": {
     "2026-10-12": {
       "룩백": {
@@ -431,6 +431,36 @@
       }
     },
     "2026-10-14": {
+      "드라이브마이카": {
+        "title": "드라이브 마이 카(하루키전)",
+        "positiveSignal": 4,
+        "mentionCount": 2,
+        "evidence": [
+          {
+            "title": "드마카는 드르렁했는데 갑병악은 재밋더라",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874455&page=2",
+            "date": "2026-10-14",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "재밋",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "나의사적인예술가": {
         "title": "나의 사적인 예술가",
         "positiveSignal": 0,
@@ -438,7 +468,7 @@
         "evidence": [
           {
             "title": "나의 사적인 예술가에서 주인공 말이야",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874432&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874432&page=2",
             "date": "2026-10-14",
             "positive": 0,
             "rawPositive": 0,
@@ -460,7 +490,7 @@
         "evidence": [
           {
             "title": "침묵의 빛, 헤븐 노우즈 왓 상영관 ㅈㄴ없네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874377&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874377&page=3",
             "date": "2026-10-14",
             "positive": 0,
             "rawPositive": 0,
@@ -482,7 +512,7 @@
         "evidence": [
           {
             "title": "침묵의 빛, 헤븐 노우즈 왓 상영관 ㅈㄴ없네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874377&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874377&page=3",
             "date": "2026-10-14",
             "positive": 0,
             "rawPositive": 0,
@@ -498,13 +528,13 @@
         ]
       },
       "이방인": {
-        "title": "이방인(2D)",
+        "title": "이방인",
         "positiveSignal": 0,
         "mentionCount": 1.792481250360578,
         "evidence": [
           {
             "title": "이방인 시작하고 15분정도 놓쳐도 노상관이야?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874370&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874370&page=3",
             "date": "2026-10-14",
             "positive": 0,
             "rawPositive": 0,
@@ -523,7 +553,7 @@
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-14T00:16:48.950Z",
+      "lineupFetchedAt": "2026-10-14T03:23:16.728Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -4603,6 +4633,46 @@
           }
         },
         "2026-10-14": {
+          "그저환상일뿐": {
+            "title": "그저 환상일 뿐",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "이성과감성": {
+            "title": "이성과 감성",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "갑자기병세가악화되다": {
+            "title": "갑자기 병세가 악화되다",
+            "mentionCount": 2,
+            "commentCount": 0
+          },
+          "오아시스": {
+            "title": "오아시스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "무명소녀": {
+            "title": "무명소녀",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "굿바이이놈의잔인한세상": {
+            "title": "굿바이, 이놈의 잔인한 세상",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "마이마더": {
+            "title": "마이 마더",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
+          "실버익스프레스": {
+            "title": "실버 익스프레스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
           "에브리타임": {
             "title": "에브리타임",
             "mentionCount": 1,
@@ -4610,11 +4680,6 @@
           },
           "클럽키드": {
             "title": "클럽 키드",
-            "mentionCount": 1,
-            "commentCount": 0
-          },
-          "갑자기병세가악화되다": {
-            "title": "갑자기 병세가 악화되다",
             "mentionCount": 1,
             "commentCount": 0
           },
