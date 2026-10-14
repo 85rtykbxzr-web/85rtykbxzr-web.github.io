@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-14T06:13:38.639Z",
+  "generatedAt": "2026-10-14T09:20:22.424Z",
   "weekStart": "2026-10-12",
   "weekEnd": "2026-10-14",
   "windowStart": "2026-10-12",
@@ -18,7 +18,7 @@
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-14&movieCd=029713&playSDT=2026-10-14&screenId=01&showSeq=4",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121765&playDt=20261014&tsId=TS0056&pno=5",
       "score": 125.3,
       "signal": 0,
       "positiveSignal": 0,
@@ -27,19 +27,19 @@
       "rawMentionCount": 19.169925001442312,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube",
         "filmforum",
         "kucine",
-        "sangsangmadang"
+        "sangsangmadang",
+        "cinecube"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
         "필름포럼",
         "KU시네마테크",
-        "KT&G 상상마당 시네마"
+        "KT&G 상상마당 시네마",
+        "씨네큐브 광화문"
       ],
       "nextDate": "2026-10-14",
-      "nextTime": "16:40",
+      "nextTime": "19:30",
       "evidence": [
         {
           "title": "룩백 보고 확신한점",
@@ -211,12 +211,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121789&playDt=20261016&tsId=TS0039&pno=1",
-      "score": 78.5,
+      "score": 80.1,
       "signal": 12,
       "positiveSignal": 12,
-      "mentionCount": 3,
+      "mentionCount": 3.2,
       "rawPositiveSignal": 12,
-      "rawMentionCount": 3,
+      "rawMentionCount": 3.160964047443681,
       "scheduleBackfill": false,
       "venueIds": [
         "kucine"
@@ -229,7 +229,7 @@
       "evidence": [
         {
           "title": "사탄탱고 극장에서 볼때는 몰랐는데 다시 재관람하고싶음",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874566&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874566&page=2",
           "date": "2026-10-14",
           "positive": 0,
           "rawPositive": 0,
@@ -245,7 +245,7 @@
         },
         {
           "title": "사탄탱고 후기",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874557&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874557&page=2",
           "date": "2026-10-14",
           "positive": 12,
           "rawPositive": 12,
@@ -276,7 +276,7 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 3,
+          "commentCount": 4,
           "commentPositive": 12,
           "commentNegative": 0,
           "dayWeight": 1
@@ -373,7 +373,7 @@
         },
         {
           "title": "아사코 못 보려나 씨지비에서",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874518&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874518&page=3",
           "date": "2026-10-14",
           "positive": 0,
           "rawPositive": 0,
@@ -421,7 +421,7 @@
           "englishTitle": "Possible Love",
           "section": "아이콘",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91115&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 60
+          "mentionCount": 61
         },
         {
           "rank": 4,
@@ -457,11 +457,11 @@
         },
         {
           "rank": 8,
-          "title": "스파이럴",
-          "englishTitle": "The Spiral",
-          "section": "오픈 시네마",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91100&c_idx=437&sp_idx=&QueryStep=2",
-          "mentionCount": 26
+          "title": "로마 엘라스티카",
+          "englishTitle": "Roma Elastica",
+          "section": "아이콘",
+          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91150&c_idx=430&sp_idx=&QueryStep=2",
+          "mentionCount": 27
         }
       ]
     }
@@ -471,11 +471,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 194,
+    "fetchedPostCount": 255,
     "listedPostCount": 292,
-    "detailedPostCount": 8,
-    "commentFetchCount": 8,
-    "commentCount": 11,
+    "detailedPostCount": 9,
+    "commentFetchCount": 9,
+    "commentCount": 15,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -484,7 +484,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-14",
     "candidateWindowEnd": "2026-10-28",
-    "candidateCount": 96,
+    "candidateCount": 95,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-12",
     "listLookbackDays": 1,
