@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-15",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-14T15:17:20.125Z",
+  "updatedAt": "2026-10-14T17:06:14.716Z",
   "days": {
     "2026-10-13": {
       "룩백": {
@@ -490,11 +490,49 @@
         ]
       }
     },
-    "2026-10-15": {}
+    "2026-10-15": {
+      "침묵의빛": {
+        "title": "침묵의 빛(2D)",
+        "positiveSignal": 0,
+        "mentionCount": 2.5,
+        "evidence": [
+          {
+            "title": "침묵의 빛 필관작인가요?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874836&page=1",
+            "date": "2026-10-15",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "침묵의 빛 상영관 졸라 없네",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874829&page=1",
+            "date": "2026-10-15",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      }
+    }
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-14T15:17:20.122Z",
+      "lineupFetchedAt": "2026-10-14T17:06:14.713Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -4722,6 +4760,11 @@
           }
         },
         "2026-10-15": {
+          "비터크리스마스": {
+            "title": "비터 크리스마스",
+            "mentionCount": 1,
+            "commentCount": 0
+          },
           "페이퍼타이거": {
             "title": "페이퍼 타이거",
             "mentionCount": 1,
