@@ -2,218 +2,25 @@
   "version": 3,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-10-12",
-  "windowEnd": "2026-10-14",
+  "windowStart": "2026-10-13",
+  "windowEnd": "2026-10-15",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-10-12",
       "2026-10-13",
-      "2026-10-14"
+      "2026-10-14",
+      "2026-10-15"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-10-14",
-    "lastWindowEnd": "2026-10-14",
+    "lastWindowStart": "2026-10-15",
+    "lastWindowEnd": "2026-10-15",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-14T12:10:54.602Z",
+  "updatedAt": "2026-10-14T15:17:20.125Z",
   "days": {
-    "2026-10-12": {
-      "룩백": {
-        "title": "룩백",
-        "positiveSignal": 0,
-        "mentionCount": 8.292481250360577,
-        "evidence": [
-          {
-            "title": "룩백 보고 확신한점",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873656&page=2",
-            "date": "2026-10-12",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "스포) 룩백 실사 이해 안가는점",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873644&page=2",
-            "date": "2026-10-12",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "“룩백”팀 부국제 후기",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873570&page=3",
-            "date": "2026-10-12",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 10,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "씽씽": {
-        "title": "씽씽",
-        "positiveSignal": 0,
-        "mentionCount": 1.792481250360578,
-        "evidence": [
-          {
-            "title": "씽씽 드뎌 개봉",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873600&page=3",
-            "date": "2026-10-12",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "괴물": {
-        "title": "괴물",
-        "positiveSignal": 0,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "스포?) 룩백 만화도 애니도 안 보고 이번에 첨 봤는데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873561&page=3",
-            "date": "2026-10-12",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "어쩔수가없다": {
-        "title": "어쩔수가없다(확장판)",
-        "positiveSignal": 0,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "미노타우르스= 어쩔수가 없다 + 끝까지간다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873538&page=4",
-            "date": "2026-10-12",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "아사코": {
-        "title": "아사코",
-        "positiveSignal": 14,
-        "mentionCount": 2.5,
-        "evidence": [
-          {
-            "title": "아사코 재개봉 보러갈꺼임??",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873503&page=4",
-            "date": "2026-10-12",
-            "positive": 14,
-            "rawPositive": 14,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "걸작",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              },
-              {
-                "term": "개좋",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              },
-              {
-                "term": "봐라",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              },
-              {
-                "term": "좋음",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 8,
-            "commentPositive": 14,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "문라이트": {
-        "title": "문라이트",
-        "positiveSignal": 0,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "블랙볼vs문라이트 뭐가 나음",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873413&page=6",
-            "date": "2026-10-12",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-10-13": {
       "룩백": {
         "title": "룩백(2D)",
@@ -682,11 +489,12 @@
           }
         ]
       }
-    }
+    },
+    "2026-10-15": {}
   },
   "festivals": {
     "biff-2026": {
-      "lineupFetchedAt": "2026-10-14T12:10:54.595Z",
+      "lineupFetchedAt": "2026-10-14T15:17:20.122Z",
       "films": [
         {
           "title": "낮과 밤은 서로에게",
@@ -2194,7 +2002,8 @@
         "2026-10-11",
         "2026-10-12",
         "2026-10-13",
-        "2026-10-14"
+        "2026-10-14",
+        "2026-10-15"
       ],
       "days": {
         "2026-09-22": {},
@@ -4908,6 +4717,13 @@
           },
           "마리가뭐어때서": {
             "title": "마리가 뭐 어때서",
+            "mentionCount": 1,
+            "commentCount": 0
+          }
+        },
+        "2026-10-15": {
+          "페이퍼타이거": {
+            "title": "페이퍼 타이거",
             "mentionCount": 1,
             "commentCount": 0
           }
