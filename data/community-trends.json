@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-14T09:20:22.424Z",
+  "generatedAt": "2026-10-14T11:45:57.026Z",
   "weekStart": "2026-10-12",
   "weekEnd": "2026-10-14",
   "windowStart": "2026-10-12",
@@ -18,7 +18,7 @@
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121765&playDt=20261014&tsId=TS0056&pno=5",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261015&tsId=TS0044&pno=2",
       "score": 125.3,
       "signal": 0,
       "positiveSignal": 0,
@@ -27,19 +27,19 @@
       "rawMentionCount": 19.169925001442312,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum",
-        "kucine",
         "sangsangmadang",
-        "cinecube"
+        "kucine",
+        "cinecube",
+        "filmforum"
       ],
       "venueNames": [
-        "필름포럼",
-        "KU시네마테크",
         "KT&G 상상마당 시네마",
-        "씨네큐브 광화문"
+        "KU시네마테크",
+        "씨네큐브 광화문",
+        "필름포럼"
       ],
-      "nextDate": "2026-10-14",
-      "nextTime": "19:30",
+      "nextDate": "2026-10-15",
+      "nextTime": "09:55",
       "evidence": [
         {
           "title": "룩백 보고 확신한점",
@@ -126,6 +126,87 @@
     },
     {
       "rank": 2,
+      "title": "사탄탱고",
+      "posterUrl": "/assets/recommendation-posters/704a6f92e45d6139.webp",
+      "localPosterUrl": "/assets/recommendation-posters/704a6f92e45d6139.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121789&playDt=20261016&tsId=TS0039&pno=1",
+      "score": 81.4,
+      "signal": 12,
+      "positiveSignal": 12,
+      "mentionCount": 3.3,
+      "rawPositiveSignal": 12,
+      "rawMentionCount": 3.292481250360578,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "kucine"
+      ],
+      "venueNames": [
+        "KU시네마테크"
+      ],
+      "nextDate": "2026-10-16",
+      "nextTime": "10:30",
+      "evidence": [
+        {
+          "title": "사탄탱고 극장에서 볼때는 몰랐는데 다시 재관람하고싶음",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874566&page=3",
+          "date": "2026-10-14",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "사탄탱고 후기",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874557&page=3",
+          "date": "2026-10-14",
+          "positive": 12,
+          "rawPositive": 12,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 5,
+          "commentPositive": 12,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/qLTuJAltCfYTrVUpfNrVz8w2RRS.jpg"
+    },
+    {
+      "rank": 3,
       "title": "트레인스포팅",
       "posterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
       "localPosterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
@@ -202,87 +283,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/1jUC02qsqS2NxBMFarbIhcQtazV.jpg"
-    },
-    {
-      "rank": 3,
-      "title": "사탄탱고",
-      "posterUrl": "/assets/recommendation-posters/704a6f92e45d6139.webp",
-      "localPosterUrl": "/assets/recommendation-posters/704a6f92e45d6139.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121789&playDt=20261016&tsId=TS0039&pno=1",
-      "score": 80.1,
-      "signal": 12,
-      "positiveSignal": 12,
-      "mentionCount": 3.2,
-      "rawPositiveSignal": 12,
-      "rawMentionCount": 3.160964047443681,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "kucine"
-      ],
-      "venueNames": [
-        "KU시네마테크"
-      ],
-      "nextDate": "2026-10-16",
-      "nextTime": "10:30",
-      "evidence": [
-        {
-          "title": "사탄탱고 극장에서 볼때는 몰랐는데 다시 재관람하고싶음",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874566&page=2",
-          "date": "2026-10-14",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        },
-        {
-          "title": "사탄탱고 후기",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874557&page=2",
-          "date": "2026-10-14",
-          "positive": 12,
-          "rawPositive": 12,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "꿀잼",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "꿀잼",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "꿀잼",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 4,
-          "commentPositive": 12,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/qLTuJAltCfYTrVUpfNrVz8w2RRS.jpg"
     },
     {
       "rank": 4,
@@ -373,7 +373,7 @@
         },
         {
           "title": "아사코 못 보려나 씨지비에서",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874518&page=3",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874518&page=4",
           "date": "2026-10-14",
           "positive": 0,
           "rawPositive": 0,
@@ -413,7 +413,7 @@
           "englishTitle": "Everytime",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89989&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 62
+          "mentionCount": 64
         },
         {
           "rank": 3,
@@ -445,7 +445,7 @@
           "englishTitle": "Club Kid",
           "section": "월드 시네마",
           "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91104&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 29
+          "mentionCount": 30
         },
         {
           "rank": 7,
@@ -471,20 +471,20 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 255,
-    "listedPostCount": 292,
-    "detailedPostCount": 9,
-    "commentFetchCount": 9,
-    "commentCount": 15,
+    "fetchedPostCount": 304,
+    "listedPostCount": 342,
+    "detailedPostCount": 10,
+    "commentFetchCount": 10,
+    "commentCount": 17,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 6,
+    "scannedPageCount": 7,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-10-06",
     "newestScannedDate": "2026-10-14",
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-14",
     "candidateWindowEnd": "2026-10-28",
-    "candidateCount": 95,
+    "candidateCount": 94,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-12",
     "listLookbackDays": 1,
