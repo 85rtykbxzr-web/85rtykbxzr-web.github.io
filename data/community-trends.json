@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-15T00:21:21.758Z",
+  "generatedAt": "2026-10-15T03:12:22.814Z",
   "weekStart": "2026-10-13",
   "weekEnd": "2026-10-15",
   "windowStart": "2026-10-13",
@@ -18,28 +18,28 @@
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261015&tsId=TS0044&pno=2",
-      "score": 96.3,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-15&movieCd=029713&playSDT=2026-10-15&screenId=01&showSeq=3",
+      "score": 124.2,
       "signal": 2,
       "positiveSignal": 2,
-      "mentionCount": 8.4,
+      "mentionCount": 11.2,
       "rawPositiveSignal": 2,
-      "rawMentionCount": 13.669925001442312,
+      "rawMentionCount": 16.46240625180289,
       "scheduleBackfill": false,
       "venueIds": [
-        "sangsangmadang",
-        "kucine",
         "cinecube",
-        "filmforum"
+        "sangsangmadang",
+        "filmforum",
+        "kucine"
       ],
       "venueNames": [
-        "KT&G 상상마당 시네마",
-        "KU시네마테크",
         "씨네큐브 광화문",
-        "필름포럼"
+        "KT&G 상상마당 시네마",
+        "필름포럼",
+        "KU시네마테크"
       ],
       "nextDate": "2026-10-15",
-      "nextTime": "09:55",
+      "nextTime": "13:10",
       "evidence": [
         {
           "title": "스포) 룩백 실사판 최고 명장면은 뭐같음?",
@@ -90,8 +90,8 @@
           "dayWeight": 0.518
         },
         {
-          "title": "ㄴㅅㅍ)룩백.. 그냥 너무 평범함",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874871&page=1",
+          "title": "룩백 애니는 진짜 불필요하던데",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874910&page=1",
           "date": "2026-10-15",
           "positive": 0,
           "rawPositive": 0,
@@ -106,24 +106,16 @@
           "dayWeight": 1
         },
         {
-          "title": "이방인vs룩백vs알파 뛰어난 순서 매겨봐라",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874868&page=1",
+          "title": "치이카와 vs 옵세션 vs 룩백 중 하나보기",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874890&page=1",
           "date": "2026-10-15",
-          "positive": 2,
-          "rawPositive": 2,
+          "positive": 0,
+          "rawPositive": 0,
           "negative": 0,
-          "positiveHits": [
-            {
-              "term": "봐라",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
+          "positiveHits": [],
           "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
+          "questionLike": true,
+          "reviewQuestion": true,
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
@@ -134,6 +126,105 @@
     },
     {
       "rank": 2,
+      "title": "침묵의 빛",
+      "posterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
+      "localPosterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121808&playDt=20261015&tsId=TS0057&pno=3",
+      "score": 60.6,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 5.7,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 6.084962500721156,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "filmforum",
+        "kucine",
+        "cinecube",
+        "sangsangmadang",
+        "sac"
+      ],
+      "venueNames": [
+        "필름포럼",
+        "KU시네마테크",
+        "씨네큐브 광화문",
+        "KT&G 상상마당 시네마",
+        "서울아트시네마"
+      ],
+      "nextDate": "2026-10-15",
+      "nextTime": "15:30",
+      "evidence": [
+        {
+          "title": "침묵의 빛, 헤븐 노우즈 왓 상영관 ㅈㄴ없네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874377&page=7",
+          "date": "2026-10-14",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "침묵의 빛 상영관 좀 늘려줘",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874908&page=1",
+          "date": "2026-10-15",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "침묵의 빛 필관작인가요?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874836&page=2",
+          "date": "2026-10-15",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "침묵의 빛 상영관 졸라 없네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874829&page=2",
+          "date": "2026-10-15",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kniOoQky3GX9ljyzobwRUGFgQUT.jpg"
+    },
+    {
+      "rank": 3,
       "title": "사탄탱고",
       "posterUrl": "/assets/recommendation-posters/704a6f92e45d6139.webp",
       "localPosterUrl": "/assets/recommendation-posters/704a6f92e45d6139.webp",
@@ -214,7 +305,7 @@
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/qLTuJAltCfYTrVUpfNrVz8w2RRS.jpg"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "title": "트레인스포팅",
       "posterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
       "localPosterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
@@ -291,95 +382,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/1jUC02qsqS2NxBMFarbIhcQtazV.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "이방인",
-      "posterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
-      "localPosterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-15&movieCd=029631&playSDT=2026-10-15&screenId=02&showSeq=1",
-      "score": 48,
-      "signal": 2,
-      "positiveSignal": 2,
-      "mentionCount": 3.6,
-      "rawPositiveSignal": 2,
-      "rawMentionCount": 4.584962500721156,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "cinecube",
-        "kucine",
-        "sangsangmadang",
-        "filmforum"
-      ],
-      "venueNames": [
-        "씨네큐브 광화문",
-        "KU시네마테크",
-        "KT&G 상상마당 시네마",
-        "필름포럼"
-      ],
-      "nextDate": "2026-10-15",
-      "nextTime": "09:40",
-      "evidence": [
-        {
-          "title": "생각해보니 이방인 부갤주 점수",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1873850&page=8",
-          "date": "2026-10-13",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "이방인 시작하고 15분정도 놓쳐도 노상관이야?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874370&page=7",
-          "date": "2026-10-14",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "이방인vs룩백vs알파 뛰어난 순서 매겨봐라",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874868&page=1",
-          "date": "2026-10-15",
-          "positive": 2,
-          "rawPositive": 2,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "봐라",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260903_7e3d6928.jpg"
     }
   ],
   "festivalPicks": [
@@ -462,11 +464,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 61,
+    "fetchedPostCount": 94,
     "listedPostCount": 292,
-    "detailedPostCount": 4,
-    "commentFetchCount": 4,
-    "commentCount": 4,
+    "detailedPostCount": 7,
+    "commentFetchCount": 7,
+    "commentCount": 8,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
