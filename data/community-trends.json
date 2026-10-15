@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-15T12:16:31.949Z",
-  "weekStart": "2026-10-13",
-  "weekEnd": "2026-10-15",
-  "windowStart": "2026-10-13",
-  "windowEnd": "2026-10-15",
+  "generatedAt": "2026-10-15T15:22:50.767Z",
+  "weekStart": "2026-10-14",
+  "weekEnd": "2026-10-16",
+  "windowStart": "2026-10-14",
+  "windowEnd": "2026-10-16",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -13,129 +13,16 @@
   "items": [
     {
       "rank": 1,
-      "title": "룩백",
-      "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
-      "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-16&movieCd=029713&playSDT=2026-10-16&screenId=01&showSeq=3",
-      "score": 149.2,
-      "signal": 2,
-      "positiveSignal": 2,
-      "mentionCount": 13.7,
-      "rawPositiveSignal": 2,
-      "rawMentionCount": 18.96240625180289,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "cinecube",
-        "sangsangmadang",
-        "filmforum",
-        "kucine"
-      ],
-      "venueNames": [
-        "씨네큐브 광화문",
-        "KT&G 상상마당 시네마",
-        "필름포럼",
-        "KU시네마테크"
-      ],
-      "nextDate": "2026-10-16",
-      "nextTime": "13:45",
-      "evidence": [
-        {
-          "title": "스포) 룩백 실사판 최고 명장면은 뭐같음?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874210&page=1",
-          "date": "2026-10-13",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "룩백도 하는데ㅜ자몽살구클럽은 영화화 안 하냐",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874193&page=2",
-          "date": "2026-10-13",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 5,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "디거를 볼까 룩백을 볼까",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874181&page=2",
-          "date": "2026-10-13",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "룩백은 너무 무난하네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875144&page=1",
-          "date": "2026-10-15",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        },
-        {
-          "title": "메가박스 유튜브 채널에 룩백 제작기 영상 뜸",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874975&page=4",
-          "date": "2026-10-15",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/feIEhh07azcRtn2MocbFX3kWcjw.jpg"
-    },
-    {
-      "rank": 2,
       "title": "사탄탱고",
       "posterUrl": "/assets/recommendation-posters/704a6f92e45d6139.webp",
       "localPosterUrl": "/assets/recommendation-posters/704a6f92e45d6139.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121789&playDt=20261016&tsId=TS0039&pno=1",
-      "score": 97.8,
-      "signal": 14.6,
-      "positiveSignal": 14.6,
-      "mentionCount": 3.9,
+      "score": 70.5,
+      "signal": 10.5,
+      "positiveSignal": 10.5,
+      "mentionCount": 2.8,
       "rawPositiveSignal": 18,
       "rawMentionCount": 4.792481250360578,
       "scheduleBackfill": false,
@@ -162,7 +49,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "사탄탱고 후기",
@@ -200,7 +87,7 @@
           "commentCount": 5,
           "commentPositive": 12,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "사탄탱고 지난 달에 영화관에서 다 보고 느낀 게",
@@ -224,23 +111,23 @@
           "commentCount": 1,
           "commentPositive": 6,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/qLTuJAltCfYTrVUpfNrVz8w2RRS.jpg"
     },
     {
-      "rank": 3,
+      "rank": 2,
       "title": "침묵의 빛",
       "posterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
       "localPosterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121808&playDt=20261016&tsId=TS0044&pno=2",
-      "score": 95.6,
+      "score": 70,
       "signal": 0,
       "positiveSignal": 0,
-      "mentionCount": 9.2,
+      "mentionCount": 6.6,
       "rawPositiveSignal": 0,
       "rawMentionCount": 9.584962500721156,
       "scheduleBackfill": false,
@@ -275,7 +162,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "침묵의 빛 씨집 관이 두개네 ㅋㅋ",
@@ -291,7 +178,7 @@
           "commentCount": 3,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "침묵의 빛 드르렁임?",
@@ -307,7 +194,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "침묵의 빛 상영관 좀 늘려줘",
@@ -323,76 +210,148 @@
           "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kniOoQky3GX9ljyzobwRUGFgQUT.jpg"
     },
     {
-      "rank": 4,
-      "title": "괴물",
-      "posterUrl": "/assets/recommendation-posters/ccbc5087b974f131.webp",
-      "localPosterUrl": "/assets/recommendation-posters/ccbc5087b974f131.webp",
+      "rank": 3,
+      "title": "룩백",
+      "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
+      "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.tinyticket.net/event/EVcGiptnvBtW",
-      "score": 84.3,
-      "signal": 5.2,
-      "positiveSignal": 5.2,
-      "mentionCount": 6.3,
-      "rawPositiveSignal": 10,
-      "rawMentionCount": 8.453445297804258,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-16&movieCd=029713&playSDT=2026-10-16&screenId=01&showSeq=3",
+      "score": 68,
+      "signal": 1.4,
+      "positiveSignal": 1.4,
+      "mentionCount": 5.8,
+      "rawPositiveSignal": 2,
+      "rawMentionCount": 8.084962500721156,
       "scheduleBackfill": false,
       "venueIds": [
-        "sac"
+        "cinecube",
+        "sangsangmadang",
+        "filmforum",
+        "kucine"
       ],
       "venueNames": [
-        "서울아트시네마"
+        "씨네큐브 광화문",
+        "KT&G 상상마당 시네마",
+        "필름포럼",
+        "KU시네마테크"
       ],
-      "nextDate": "2026-10-21",
-      "nextTime": "18:40",
+      "nextDate": "2026-10-16",
+      "nextTime": "13:45",
       "evidence": [
         {
-          "title": "학원 선생님이 괴물(2023) 추천해줘서",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874185&page=2",
-          "date": "2026-10-13",
-          "positive": 8,
-          "rawPositive": 8,
+          "title": "룩백은 너무 무난하네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875144&page=1",
+          "date": "2026-10-15",
+          "positive": 0,
+          "rawPositive": 0,
           "negative": 0,
-          "positiveHits": [
-            {
-              "term": "재밌",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "추천",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
+          "positiveHits": [],
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 4,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "메가박스 유튜브 채널에 룩백 제작기 영상 뜸",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874975&page=4",
+          "date": "2026-10-15",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "룩백 애니는 진짜 불필요하던데",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874910&page=5",
+          "date": "2026-10-15",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/feIEhh07azcRtn2MocbFX3kWcjw.jpg"
+    },
+    {
+      "rank": 4,
+      "title": "이방인",
+      "posterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
+      "localPosterUrl": "/assets/recommendation-posters/bf30ff977c7ca65f.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-16&movieCd=029631&playSDT=2026-10-16&screenId=02&showSeq=1",
+      "score": 32,
+      "signal": 1.4,
+      "positiveSignal": 1.4,
+      "mentionCount": 2.2,
+      "rawPositiveSignal": 2,
+      "rawMentionCount": 3.584962500721156,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "cinecube",
+        "filmforum",
+        "sangsangmadang",
+        "kucine"
+      ],
+      "venueNames": [
+        "씨네큐브 광화문",
+        "필름포럼",
+        "KT&G 상상마당 시네마",
+        "KU시네마테크"
+      ],
+      "nextDate": "2026-10-16",
+      "nextTime": "09:40",
+      "evidence": [
+        {
+          "title": "이방인 시작하고 15분정도 놓쳐도 노상관이야?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874370&page=7",
+          "date": "2026-10-14",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.518
         },
         {
-          "title": "고레에다는 괴물 호인지 불호인지로 갈리는듯",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874170&page=2",
-          "date": "2026-10-13",
+          "title": "이방인vs룩백vs알파 뛰어난 순서 매겨봐라",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874868&page=6",
+          "date": "2026-10-15",
           "positive": 2,
           "rawPositive": 2,
           "negative": 0,
           "positiveHits": [
             {
-              "term": "괜찮",
+              "term": "봐라",
               "count": 1,
               "weight": 2,
               "score": 2,
@@ -402,145 +361,39 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 5,
-          "commentPositive": 2,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "고히가 괴물 같은 히갤 영화을 만들었다고",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874967&page=4",
-          "date": "2026-10-15",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 3,
+          "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
-        },
-        {
-          "title": "솔직히 고히 괴물은 역겨운 영화",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874964&page=4",
-          "date": "2026-10-15",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cecXXWJ5YINoUFPU8tMMUqz0yqG.jpg"
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20260903_7e3d6928.jpg"
     }
   ],
-  "festivalPicks": [
-    {
-      "festivalId": "biff-2026",
-      "name": "부산국제영화제",
-      "windowStart": "2026-09-22",
-      "windowEnd": "2026-10-15",
-      "coverageStart": "2026-09-22",
-      "items": [
-        {
-          "rank": 1,
-          "title": "라 그라디바",
-          "englishTitle": "La Gradiva",
-          "section": "월드 시네마",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90315&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 89
-        },
-        {
-          "rank": 2,
-          "title": "가능한 사랑",
-          "englishTitle": "Possible Love",
-          "section": "아이콘",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91115&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 64
-        },
-        {
-          "rank": 3,
-          "title": "에브리타임",
-          "englishTitle": "Everytime",
-          "section": "월드 시네마",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89989&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 64
-        },
-        {
-          "rank": 4,
-          "title": "노트르 살뤼",
-          "englishTitle": "A Man of His Time",
-          "section": "플래시 포워드",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=89988&c_idx=435&sp_idx=&QueryStep=2",
-          "mentionCount": 46
-        },
-        {
-          "rank": 5,
-          "title": "파더랜드",
-          "englishTitle": "Fatherland",
-          "section": "아이콘",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=90251&c_idx=430&sp_idx=&QueryStep=2",
-          "mentionCount": 32
-        },
-        {
-          "rank": 6,
-          "title": "클럽 키드",
-          "englishTitle": "Club Kid",
-          "section": "월드 시네마",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91104&c_idx=434&sp_idx=&QueryStep=2",
-          "mentionCount": 30
-        },
-        {
-          "rank": 7,
-          "title": "스파이럴",
-          "englishTitle": "The Spiral",
-          "section": "오픈 시네마",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91100&c_idx=437&sp_idx=&QueryStep=2",
-          "mentionCount": 28
-        },
-        {
-          "rank": 8,
-          "title": "그래비티",
-          "englishTitle": "Gravity",
-          "section": "특별상영 & 까르뜨 블랑슈",
-          "url": "https://www.biff.kr/kor/html/program/prog_view.asp?idx=91282&c_idx=441&sp_idx=&QueryStep=2",
-          "mentionCount": 27
-        }
-      ]
-    }
-  ],
+  "festivalPicks": [],
   "testerOnly": false,
   "promotedToMain": true,
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 297,
-    "listedPostCount": 342,
-    "detailedPostCount": 15,
-    "commentFetchCount": 15,
-    "commentCount": 21,
+    "fetchedPostCount": 10,
+    "listedPostCount": 292,
+    "detailedPostCount": 1,
+    "commentFetchCount": 1,
+    "commentCount": 2,
     "commentFetchErrorCount": 0,
-    "scannedPageCount": 7,
+    "scannedPageCount": 6,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-10-06",
-    "newestScannedDate": "2026-10-15",
+    "newestScannedDate": "2026-10-16",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-10-15",
-    "candidateWindowEnd": "2026-10-29",
-    "candidateCount": 94,
+    "candidateWindowStart": "2026-10-16",
+    "candidateWindowEnd": "2026-10-30",
+    "candidateCount": 98,
     "seedLookbackDays": 3,
-    "seedStart": "2026-10-13",
+    "seedStart": "2026-10-14",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-10-15",
+    "listWindowStart": "2026-10-16",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -548,7 +401,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-10-15"
+      "2026-10-16"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [
@@ -651,12 +504,7 @@
       "잘\\s*만듦|잘\\s*만듬|잘만듦|잘만듬"
     ],
     "posterProvider": "verified-image-official-source+known-poster-url+wikipedia-pageimage-fallback",
-    "festivalLineups": [
-      {
-        "id": "biff-2026",
-        "films": 247
-      }
-    ],
+    "festivalLineups": [],
     "errors": []
   }
 }
