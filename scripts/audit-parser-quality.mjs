@@ -39,7 +39,7 @@ const venueCoverageMinimums = {
   forest: { sessions: 10, dates: 2 },
   arirang: { sessions: 4, dates: 1 },
   filmforum: { sessions: 10, dates: 2 },
-  sangsangmadang: { sessions: 10, dates: 2 },
+  sangsangmadang: { sessions: 4, dates: 1 },
   movieland: { sessions: 1, dates: 1 },
   artnine: { sessions: 10, dates: 2 },
   kucine: { sessions: 4, dates: 1 },

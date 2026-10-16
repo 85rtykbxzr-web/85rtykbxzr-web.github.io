@@ -2549,6 +2549,14 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
     return program || session.screen || "상영";
   }
 
+  // A festival is over once its last day's evening starts: by then nothing is left to plan
+  // or book, so its home strip and card go away instead of lingering until midnight.
+  const festivalClosingTime = "18:00";
+  function festivalOver(endDate, now = new Date()) {
+    const today = kstDateString(now);
+    return today > endDate || (today === endDate && kstTimeString(now) >= festivalClosingTime);
+  }
+
   function majorFestivalRows() {
     const today = kstDateString();
     return (state.data.majorFestivals || [])
@@ -2557,8 +2565,7 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
         const endDate = festival.endDate || startDate;
         if (!startDate || !endDate) return null;
         const showFrom = festival.showFrom || addMonths(startDate, -1);
-        const showUntil = festival.showUntil || addDays(endDate, 1);
-        if (today < showFrom || today > showUntil) return null;
+        if (today < showFrom || (festival.showUntil ? today > festival.showUntil : festivalOver(endDate))) return null;
         const periodLabel = festival.periodLabel || formatPeriodLabel(startDate, endDate);
         return {
           id: `major-festival-${festival.id || festival.name}`,
@@ -2772,13 +2779,13 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
     planner().openShared(festivalId, token);
   }
 
-  // Home strip from two weeks before a major festival to its last day. A festival already
+  // Home strip from two weeks before a major festival to its last day's evening. A festival already
   // running wins over one still to open, then the earliest opening. Festivals with a collected
   // timetable open the planner; the rest jump to their card in the 영화제 section.
   function renderFestivalStrip() {
     const today = kstDateString();
     const festival = (state.data?.majorFestivals || [])
-      .filter((item) => item.startDate && item.endDate && today <= item.endDate && daysBetween(today, item.startDate) <= 14)
+      .filter((item) => item.startDate && item.endDate && !festivalOver(item.endDate) && daysBetween(today, item.startDate) <= 14)
       .sort((a, b) => Number(a.startDate > today) - Number(b.startDate > today) || a.startDate.localeCompare(b.startDate))[0];
     const mobileLayout = isMobileViewport();
     let markup = "";

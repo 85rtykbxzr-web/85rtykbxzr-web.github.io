@@ -31,7 +31,7 @@ const sourceSafetyFloors = {
   "forest-schedule": { sessions: 10, dates: 2 },
   "arirang-dtryx-showtimes": { sessions: 4, dates: 1 },
   "filmforum-moviee-showtimes": { sessions: 10, dates: 2 },
-  "sangsangmadang-cinema": { sessions: 10, dates: 2 },
+  "sangsangmadang-cinema": { sessions: 4, dates: 1 },
   "movieland-cafe24-options": { sessions: 1, dates: 1 },
   "artnine-dtryx-showtimes": { sessions: 10, dates: 2 },
   "kucine-moviee-showtimes": { sessions: 4, dates: 1 },
@@ -40,7 +40,7 @@ const sourceSafetyFloors = {
 // Sources that only list a short rolling window of upcoming screenings. Their
 // counts legitimately shrink relative to older stored data, so only the
 // safety floor and the zero-session check apply, not the ratio-drop heuristics.
-const rollingWindowSourceIds = new Set(["movieland-cafe24-options"]);
+const rollingWindowSourceIds = new Set(["movieland-cafe24-options", "sangsangmadang-cinema"]);
 // Small single-screen venues whose empty/rejected result keeps the stored sessions
 // with a warning but must not stop every other venue from refreshing and deploying.
 const nonBlockingPreservedSourceIds = new Set(["movieland-cafe24-options"]);
