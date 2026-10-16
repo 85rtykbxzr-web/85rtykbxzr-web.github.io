@@ -2,278 +2,25 @@
   "version": 3,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-10-14",
-  "windowEnd": "2026-10-16",
+  "windowStart": "2026-10-15",
+  "windowEnd": "2026-10-17",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-10-14",
       "2026-10-15",
-      "2026-10-16"
+      "2026-10-16",
+      "2026-10-17"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-10-16",
-    "lastWindowEnd": "2026-10-16",
+    "lastWindowStart": "2026-10-17",
+    "lastWindowEnd": "2026-10-17",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-16T12:19:48.822Z",
+  "updatedAt": "2026-10-16T21:02:48.628Z",
   "days": {
-    "2026-10-14": {
-      "헤븐노우즈왓": {
-        "title": "헤븐 노우즈 왓(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 2.5,
-        "evidence": [
-          {
-            "title": "헤븐 노우즈 왓 이번에 본사람 있냐",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874660&page=2",
-            "date": "2026-10-14",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "침묵의 빛, 헤븐 노우즈 왓 상영관 ㅈㄴ없네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874377&page=7",
-            "date": "2026-10-14",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "셀린느와줄리배타러가다": {
-        "title": "셀린느와 줄리 배 타러 가다(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 1.792481250360578,
-        "evidence": [
-          {
-            "title": "스포) 셀줄배 초반 10분 스포좀",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874582&page=3",
-            "date": "2026-10-14",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "사탄탱고": {
-        "title": "사탄탱고(기획전)",
-        "positiveSignal": 12,
-        "mentionCount": 3.292481250360578,
-        "evidence": [
-          {
-            "title": "사탄탱고 극장에서 볼때는 몰랐는데 다시 재관람하고싶음",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874566&page=3",
-            "date": "2026-10-14",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "사탄탱고 후기",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874557&page=3",
-            "date": "2026-10-14",
-            "positive": 12,
-            "rawPositive": 12,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              },
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              },
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 5,
-            "commentPositive": 12,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "드라이브마이카": {
-        "title": "드라이브 마이 카(하루키전)",
-        "positiveSignal": 4,
-        "mentionCount": 4,
-        "evidence": [
-          {
-            "title": "드라이브 마이 카는 왜 빨리는거냐",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874563&page=3",
-            "date": "2026-10-14",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 3,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "드마카는 드르렁했는데 갑병악은 재밋더라",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874455&page=5",
-            "date": "2026-10-14",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "재밋",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "아사코": {
-        "title": "아사코",
-        "positiveSignal": 0,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "아사코 못 보려나 씨지비에서",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874518&page=4",
-            "date": "2026-10-14",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "나의사적인예술가": {
-        "title": "나의 사적인 예술가",
-        "positiveSignal": 0,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "나의 사적인 예술가에서 주인공 말이야",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874432&page=6",
-            "date": "2026-10-14",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "침묵의빛": {
-        "title": "침묵의 빛(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "침묵의 빛, 헤븐 노우즈 왓 상영관 ㅈㄴ없네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874377&page=7",
-            "date": "2026-10-14",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "이방인": {
-        "title": "이방인",
-        "positiveSignal": 0,
-        "mentionCount": 1.792481250360578,
-        "evidence": [
-          {
-            "title": "이방인 시작하고 15분정도 놓쳐도 노상관이야?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874370&page=7",
-            "date": "2026-10-14",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-10-15": {
       "룩백": {
         "title": "룩백",
@@ -877,7 +624,8 @@
           }
         ]
       }
-    }
+    },
+    "2026-10-17": {}
   },
   "festivals": {}
 }

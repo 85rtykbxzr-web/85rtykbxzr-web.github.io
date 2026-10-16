@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-16T12:19:53.738Z",
-  "weekStart": "2026-10-14",
-  "weekEnd": "2026-10-16",
-  "windowStart": "2026-10-14",
-  "windowEnd": "2026-10-16",
+  "generatedAt": "2026-10-16T21:02:52.225Z",
+  "weekStart": "2026-10-15",
+  "weekEnd": "2026-10-17",
+  "windowStart": "2026-10-15",
+  "windowEnd": "2026-10-17",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -19,10 +19,10 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121765&playDt=20261017&tsId=TS0057&pno=1",
-      "score": 169,
-      "signal": 9.4,
-      "positiveSignal": 9.4,
-      "mentionCount": 12.7,
+      "score": 122.8,
+      "signal": 6.8,
+      "positiveSignal": 6.8,
+      "mentionCount": 9.2,
       "rawPositiveSignal": 10,
       "rawMentionCount": 14.988639961749957,
       "scheduleBackfill": false,
@@ -55,7 +55,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "메가박스 유튜브 채널에 룩백 제작기 영상 뜸",
@@ -71,7 +71,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "룩백 애니는 진짜 불필요하던데",
@@ -87,7 +87,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "룩백 실사는 ㄹㅇ 만화의 장점이 싹 거세된 영화네",
@@ -103,7 +103,7 @@
           "commentCount": 3,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "룩백 실사는 비추임",
@@ -141,7 +141,7 @@
           "commentCount": 8,
           "commentPositive": 8,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/feIEhh07azcRtn2MocbFX3kWcjw.jpg"
@@ -154,12 +154,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-21&movieCd=019765&playSDT=2026-10-21&screenId=01&showSeq=6",
-      "score": 118.5,
-      "signal": 6,
-      "positiveSignal": 6,
-      "mentionCount": 9.1,
+      "score": 80.7,
+      "signal": 4.3,
+      "positiveSignal": 4.3,
+      "mentionCount": 6,
       "rawPositiveSignal": 6,
-      "rawMentionCount": 9.821928094887362,
+      "rawMentionCount": 8.321928094887362,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -172,22 +172,6 @@
       "nextDate": "2026-10-21",
       "nextTime": "16:40",
       "evidence": [
-        {
-          "title": "아사코 못 보려나 씨지비에서",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874518&page=4",
-          "date": "2026-10-14",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "광야시대보다 아사코 재개봉을 먼저 미는 이유가 뭐냐",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875330&page=3",
@@ -210,7 +194,7 @@
           "commentCount": 9,
           "commentPositive": 6,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "그린나래 아사코랑 완벽한 초대 사이에 하나 안 풀면 욕 할 거임",
@@ -226,7 +210,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "아사코는 재개봉을 해주는거야 안해주는거야",
@@ -242,7 +226,7 @@
           "commentCount": 4,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
@@ -255,10 +239,10 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121558&playDt=20261017&tsId=TS0044&pno=4",
-      "score": 92.8,
-      "signal": 14,
-      "positiveSignal": 14,
-      "mentionCount": 3.6,
+      "score": 67.1,
+      "signal": 10.1,
+      "positiveSignal": 10.1,
+      "mentionCount": 2.6,
       "rawPositiveSignal": 14,
       "rawMentionCount": 4.084962500721156,
       "scheduleBackfill": false,
@@ -285,7 +269,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "옵세션도 부천 불판 전부 O밖에 없네",
@@ -330,131 +314,68 @@
           "commentCount": 5,
           "commentPositive": 8,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/iR0eC0eIWB8OjZ9abBz4FepfwkC.jpg"
     },
     {
       "rank": 4,
-      "title": "사탄탱고",
-      "posterUrl": "/assets/recommendation-posters/704a6f92e45d6139.webp",
-      "localPosterUrl": "/assets/recommendation-posters/704a6f92e45d6139.webp",
+      "title": "버닝(하루키전)",
+      "posterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
+      "localPosterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121788&playDt=20261024&tsId=TS0039&pno=1",
-      "score": 92.1,
-      "signal": 10.5,
-      "positiveSignal": 10.5,
-      "mentionCount": 4.9,
-      "rawPositiveSignal": 18,
-      "rawMentionCount": 6.953445297804259,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261017&tsId=TS0056&pno=4",
+      "score": 47.3,
+      "signal": 7.2,
+      "positiveSignal": 7.2,
+      "mentionCount": 1.8,
+      "rawPositiveSignal": 10,
+      "rawMentionCount": 2.5,
       "scheduleBackfill": false,
       "venueIds": [
-        "kucine"
+        "filmforum"
       ],
       "venueNames": [
-        "KU시네마테크"
+        "필름포럼"
       ],
-      "nextDate": "2026-10-24",
-      "nextTime": "15:00",
+      "nextDate": "2026-10-17",
+      "nextTime": "16:10",
       "evidence": [
         {
-          "title": "사탄탱고 극장에서 볼때는 몰랐는데 다시 재관람하고싶음",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874566&page=3",
-          "date": "2026-10-14",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "사탄탱고 후기",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874557&page=3",
-          "date": "2026-10-14",
-          "positive": 12,
-          "rawPositive": 12,
+          "title": "난 개인적으로 이동진 평가보고 버닝이 더 싫어짐",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875367&page=3",
+          "date": "2026-10-16",
+          "positive": 10,
+          "rawPositive": 10,
           "negative": 0,
           "positiveHits": [
             {
-              "term": "꿀잼",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "꿀잼",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "꿀잼",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 5,
-          "commentPositive": 12,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "사탄탱고 지난 달에 영화관에서 다 보고 느낀 게",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875038&page=3",
-          "date": "2026-10-15",
-          "positive": 6,
-          "rawPositive": 6,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "강추",
+              "term": "걸작",
               "count": 1,
               "weight": 6,
               "score": 6,
               "label": "strong"
+            },
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
             }
           ],
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 6,
+          "commentCount": 14,
+          "commentPositive": 10,
           "commentNegative": 0,
           "dayWeight": 0.72
-        },
-        {
-          "title": "스포) 사탄탱고 이렇게 해석했으면 재감상 해야함??",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875251&page=5",
-          "date": "2026-10-16",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 4,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
         }
       ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/qLTuJAltCfYTrVUpfNrVz8w2RRS.jpg"
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kXiF80o74fE9gf3Utf9moAI7ar0.jpg"
     }
   ],
   "festivalPicks": [],
@@ -463,24 +384,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 228,
+    "fetchedPostCount": 32,
     "listedPostCount": 292,
-    "detailedPostCount": 13,
-    "commentFetchCount": 13,
-    "commentCount": 74,
+    "detailedPostCount": 0,
+    "commentFetchCount": 0,
+    "commentCount": 0,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-10-06",
-    "newestScannedDate": "2026-10-16",
+    "newestScannedDate": "2026-10-17",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-10-16",
-    "candidateWindowEnd": "2026-10-30",
-    "candidateCount": 103,
+    "candidateWindowStart": "2026-10-17",
+    "candidateWindowEnd": "2026-10-31",
+    "candidateCount": 111,
     "seedLookbackDays": 3,
-    "seedStart": "2026-10-14",
+    "seedStart": "2026-10-15",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-10-16",
+    "listWindowStart": "2026-10-17",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -488,7 +409,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-10-16"
+      "2026-10-17"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [
