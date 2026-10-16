@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-16",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-15T21:22:14.150Z",
+  "updatedAt": "2026-10-16T00:10:25.540Z",
   "days": {
     "2026-10-14": {
       "헤븐노우즈왓": {
@@ -554,15 +554,15 @@
     "2026-10-16": {
       "옵세션": {
         "title": "옵세션(2D)",
-        "positiveSignal": 6,
-        "mentionCount": 1,
+        "positiveSignal": 12,
+        "mentionCount": 2,
         "evidence": [
           {
             "title": "옵세션도 부천 불판 전부 O밖에 없네",
             "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875252&page=1",
             "date": "2026-10-16",
-            "positive": 6,
-            "rawPositive": 6,
+            "positive": 12,
+            "rawPositive": 12,
             "negative": 0,
             "positiveHits": [
               {
@@ -571,13 +571,27 @@
                 "weight": 6,
                 "score": 6,
                 "label": "strong"
+              },
+              {
+                "term": "재미있",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "괜찮",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
               }
             ],
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
+            "commentCount": 3,
+            "commentPositive": 6,
             "commentNegative": 0
           }
         ]
@@ -585,7 +599,7 @@
       "사탄탱고": {
         "title": "사탄탱고(기획전)",
         "positiveSignal": 0,
-        "mentionCount": 1,
+        "mentionCount": 2.160964047443681,
         "evidence": [
           {
             "title": "스포) 사탄탱고 이렇게 해석했으면 재감상 해야함??",
@@ -598,7 +612,7 @@
             "negativeHits": [],
             "questionLike": true,
             "reviewQuestion": false,
-            "commentCount": 0,
+            "commentCount": 4,
             "commentPositive": 0,
             "commentNegative": 0
           }
@@ -626,7 +640,7 @@
           },
           {
             "title": "아사코 재개봉 포스터 개이쁘다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875213&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875213&page=1",
             "date": "2026-10-16",
             "positive": 0,
             "rawPositive": 0,
@@ -657,7 +671,7 @@
             "negativeHits": [],
             "questionLike": true,
             "reviewQuestion": false,
-            "commentCount": 7,
+            "commentCount": 9,
             "commentPositive": 0,
             "commentNegative": 0
           }
