@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-16T04:25:35.549Z",
+  "generatedAt": "2026-10-16T06:22:53.762Z",
   "weekStart": "2026-10-14",
   "weekEnd": "2026-10-16",
   "windowStart": "2026-10-14",
@@ -18,13 +18,13 @@
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-16&movieCd=029713&playSDT=2026-10-16&screenId=01&showSeq=3",
-      "score": 99.6,
-      "signal": 1.4,
-      "positiveSignal": 1.4,
-      "mentionCount": 9,
-      "rawPositiveSignal": 2,
-      "rawMentionCount": 11.245926548164837,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-16&movieCd=029713&playSDT=2026-10-16&screenId=01&showSeq=5",
+      "score": 149,
+      "signal": 9.4,
+      "positiveSignal": 9.4,
+      "mentionCount": 10.7,
+      "rawPositiveSignal": 10,
+      "rawMentionCount": 12.988639961749957,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -39,7 +39,7 @@
         "KU시네마테크"
       ],
       "nextDate": "2026-10-16",
-      "nextTime": "13:45",
+      "nextTime": "18:00",
       "evidence": [
         {
           "title": "룩백은 너무 무난하네",
@@ -93,15 +93,37 @@
           "title": "룩백 실사는 비추임",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875326&page=1",
           "date": "2026-10-16",
-          "positive": 0,
-          "rawPositive": 0,
+          "positive": 8,
+          "rawPositive": 8,
           "negative": 0,
-          "positiveHits": [],
+          "positiveHits": [
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "좋았음",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            },
+            {
+              "term": "좋았음",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
+          "commentCount": 8,
+          "commentPositive": 8,
           "commentNegative": 0,
           "dayWeight": 1
         },
@@ -126,6 +148,99 @@
     },
     {
       "rank": 2,
+      "title": "아사코",
+      "posterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
+      "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-21&movieCd=019765&playSDT=2026-10-21&screenId=01&showSeq=6",
+      "score": 93.5,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 9,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 9.725605555916164,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "cinecube",
+        "filmforum"
+      ],
+      "venueNames": [
+        "씨네큐브 광화문",
+        "필름포럼"
+      ],
+      "nextDate": "2026-10-21",
+      "nextTime": "16:40",
+      "evidence": [
+        {
+          "title": "아사코 못 보려나 씨지비에서",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874518&page=4",
+          "date": "2026-10-14",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "광야시대보다 아사코 재개봉을 먼저 미는 이유가 뭐냐",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875330&page=1",
+          "date": "2026-10-16",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 6,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "그린나래 아사코랑 완벽한 초대 사이에 하나 안 풀면 욕 할 거임",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875320&page=1",
+          "date": "2026-10-16",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "아사코는 재개봉을 해주는거야 안해주는거야",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875235&page=3",
+          "date": "2026-10-16",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 4,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
+    },
+    {
+      "rank": 3,
       "title": "옵세션",
       "posterUrl": "/assets/recommendation-posters/c1b7c09b74373fa5.webp",
       "localPosterUrl": "/assets/recommendation-posters/c1b7c09b74373fa5.webp",
@@ -166,7 +281,7 @@
         },
         {
           "title": "옵세션도 부천 불판 전부 O밖에 없네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875252&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875252&page=3",
           "date": "2026-10-16",
           "positive": 14,
           "rawPositive": 14,
@@ -213,7 +328,7 @@
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/iR0eC0eIWB8OjZ9abBz4FepfwkC.jpg"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "title": "침묵의 빛",
       "posterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
       "localPosterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
@@ -310,99 +425,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kniOoQky3GX9ljyzobwRUGFgQUT.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "아사코",
-      "posterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
-      "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-21&movieCd=019765&playSDT=2026-10-21&screenId=01&showSeq=6",
-      "score": 69.5,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 6.6,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 7.321928094887362,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "cinecube",
-        "filmforum"
-      ],
-      "venueNames": [
-        "씨네큐브 광화문",
-        "필름포럼"
-      ],
-      "nextDate": "2026-10-21",
-      "nextTime": "16:40",
-      "evidence": [
-        {
-          "title": "아사코 못 보려나 씨지비에서",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874518&page=4",
-          "date": "2026-10-14",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "그린나래 아사코랑 완벽한 초대 사이에 하나 안 풀면 욕 할 거임",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875320&page=1",
-          "date": "2026-10-16",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        },
-        {
-          "title": "아사코는 재개봉을 해주는거야 안해주는거야",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875235&page=2",
-          "date": "2026-10-16",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 4,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        },
-        {
-          "title": "아사코 재개봉 포스터 개이쁘다",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875213&page=3",
-          "date": "2026-10-16",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
     }
   ],
   "festivalPicks": [],
@@ -411,11 +433,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 94,
+    "fetchedPostCount": 127,
     "listedPostCount": 292,
-    "detailedPostCount": 8,
-    "commentFetchCount": 8,
-    "commentCount": 28,
+    "detailedPostCount": 9,
+    "commentFetchCount": 9,
+    "commentCount": 44,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -424,7 +446,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-16",
     "candidateWindowEnd": "2026-10-30",
-    "candidateCount": 96,
+    "candidateCount": 95,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-14",
     "listLookbackDays": 1,
