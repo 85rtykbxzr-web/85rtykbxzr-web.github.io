@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-17T15:11:54.625Z",
+  "generatedAt": "2026-10-17T15:29:27.167Z",
   "weekStart": "2026-10-16",
   "weekEnd": "2026-10-18",
   "windowStart": "2026-10-16",
@@ -326,59 +326,54 @@
     },
     {
       "rank": 4,
-      "title": "옵세션",
-      "posterUrl": "/assets/recommendation-posters/c1b7c09b74373fa5.webp",
-      "localPosterUrl": "/assets/recommendation-posters/c1b7c09b74373fa5.webp",
+      "title": "사탄탱고",
+      "posterUrl": "/assets/recommendation-posters/704a6f92e45d6139.webp",
+      "localPosterUrl": "/assets/recommendation-posters/704a6f92e45d6139.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121558&playDt=20261018&tsId=TS0044&pno=3",
-      "score": 41.4,
-      "signal": 7.3,
-      "positiveSignal": 7.3,
-      "mentionCount": 1.2,
-      "rawPositiveSignal": 14,
-      "rawMentionCount": 2.292481250360578,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121788&playDt=20261024&tsId=TS0039&pno=1",
+      "score": 44.7,
+      "signal": 2,
+      "positiveSignal": 2,
+      "mentionCount": 3.6,
+      "rawPositiveSignal": 2,
+      "rawMentionCount": 4.660964047443681,
       "scheduleBackfill": false,
       "venueIds": [
-        "sangsangmadang"
+        "kucine"
       ],
       "venueNames": [
-        "KT&G 상상마당 시네마"
+        "KU시네마테크"
       ],
-      "nextDate": "2026-10-18",
-      "nextTime": "17:30",
+      "nextDate": "2026-10-24",
+      "nextTime": "15:00",
       "evidence": [
         {
-          "title": "옵세션도 부천 불판 전부 O밖에 없네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875252&page=5",
+          "title": "스포) 사탄탱고 이렇게 해석했으면 재감상 해야함??",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875251&page=5",
           "date": "2026-10-16",
-          "positive": 14,
-          "rawPositive": 14,
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 4,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "여자친구 영알못인데 자꾸 사탄탱고를 같이 보려고함",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875747&page=1",
+          "date": "2026-10-18",
+          "positive": 2,
+          "rawPositive": 2,
           "negative": 0,
           "positiveHits": [
             {
-              "term": "걸작",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            },
-            {
-              "term": "재미있",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "괜찮",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            },
-            {
-              "term": "볼만",
+              "term": "봐라",
               "count": 1,
               "weight": 2,
               "score": 2,
@@ -388,13 +383,13 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 5,
-          "commentPositive": 8,
+          "commentCount": 8,
+          "commentPositive": 2,
           "commentNegative": 0,
-          "dayWeight": 0.518
+          "dayWeight": 1
         }
       ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/iR0eC0eIWB8OjZ9abBz4FepfwkC.jpg"
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/qLTuJAltCfYTrVUpfNrVz8w2RRS.jpg"
     }
   ],
   "festivalPicks": [],
@@ -403,11 +398,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 7,
+    "fetchedPostCount": 17,
     "listedPostCount": 292,
-    "detailedPostCount": 0,
-    "commentFetchCount": 0,
-    "commentCount": 0,
+    "detailedPostCount": 1,
+    "commentFetchCount": 1,
+    "commentCount": 8,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,

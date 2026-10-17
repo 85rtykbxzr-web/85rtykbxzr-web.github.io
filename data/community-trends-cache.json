@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-18",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-17T15:11:51.965Z",
+  "updatedAt": "2026-10-17T15:29:23.744Z",
   "days": {
     "2026-10-16": {
       "셀린느와줄리배타러가다": {
@@ -616,7 +616,38 @@
         ]
       }
     },
-    "2026-10-18": {}
+    "2026-10-18": {
+      "사탄탱고": {
+        "title": "사탄탱고(2D)",
+        "positiveSignal": 2,
+        "mentionCount": 2.5,
+        "evidence": [
+          {
+            "title": "여자친구 영알못인데 자꾸 사탄탱고를 같이 보려고함",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875747&page=1",
+            "date": "2026-10-18",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "봐라",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 8,
+            "commentPositive": 2,
+            "commentNegative": 0
+          }
+        ]
+      }
+    }
   },
   "festivals": {}
 }
