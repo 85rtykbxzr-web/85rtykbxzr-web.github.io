@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-17T10:36:19.727Z",
+  "generatedAt": "2026-10-17T12:21:14.670Z",
   "weekStart": "2026-10-15",
   "weekEnd": "2026-10-17",
   "windowStart": "2026-10-15",
@@ -18,13 +18,13 @@
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-17&movieCd=029713&playSDT=2026-10-17&screenId=01&showSeq=6",
-      "score": 145.7,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-18&movieCd=029713&playSDT=2026-10-18&screenId=01&showSeq=1",
+      "score": 170.7,
       "signal": 6.8,
       "positiveSignal": 6.8,
-      "mentionCount": 11.5,
+      "mentionCount": 14,
       "rawPositiveSignal": 10,
-      "rawMentionCount": 17.281121212110534,
+      "rawMentionCount": 19.781121212110534,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -38,8 +38,8 @@
         "KU시네마테크",
         "KT&G 상상마당 시네마"
       ],
-      "nextDate": "2026-10-17",
-      "nextTime": "20:00",
+      "nextDate": "2026-10-18",
+      "nextTime": "09:15",
       "evidence": [
         {
           "title": "룩백은 너무 무난하네",
@@ -154,12 +154,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-18&movieCd=029764&playSDT=2026-10-18&screenId=02&showSeq=4",
-      "score": 109.9,
+      "score": 111.5,
       "signal": 6,
       "positiveSignal": 6,
-      "mentionCount": 8.2,
+      "mentionCount": 8.3,
       "rawPositiveSignal": 6,
-      "rawMentionCount": 12.084962500721156,
+      "rawMentionCount": 12.245926548164837,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -228,7 +228,7 @@
         },
         {
           "title": "침묵의빛 진짜 걸작",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875632&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875632&page=2",
           "date": "2026-10-17",
           "positive": 6,
           "rawPositive": 6,
@@ -252,7 +252,7 @@
         },
         {
           "title": "침묵의 빛, 헤븐 노우즈 왓 왜 10월에 개봉하는 것임",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875628&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875628&page=2",
           "date": "2026-10-17",
           "positive": 0,
           "rawPositive": 0,
@@ -363,8 +363,8 @@
       "localPosterUrl": "/assets/recommendation-posters/c1b7c09b74373fa5.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121558&playDt=20261017&tsId=TS0044&pno=4",
-      "score": 67.1,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121558&playDt=20261018&tsId=TS0044&pno=3",
+      "score": 66.6,
       "signal": 10.1,
       "positiveSignal": 10.1,
       "mentionCount": 2.6,
@@ -377,8 +377,8 @@
       "venueNames": [
         "KT&G 상상마당 시네마"
       ],
-      "nextDate": "2026-10-17",
-      "nextTime": "20:25",
+      "nextDate": "2026-10-18",
+      "nextTime": "17:30",
       "evidence": [
         {
           "title": "치이카와 vs 옵세션 vs 룩백 중 하나보기",
@@ -451,11 +451,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 139,
+    "fetchedPostCount": 151,
     "listedPostCount": 292,
-    "detailedPostCount": 7,
-    "commentFetchCount": 7,
-    "commentCount": 19,
+    "detailedPostCount": 9,
+    "commentFetchCount": 9,
+    "commentCount": 30,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
