@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-17T04:18:55.804Z",
+  "generatedAt": "2026-10-17T06:09:28.546Z",
   "weekStart": "2026-10-15",
   "weekEnd": "2026-10-17",
   "windowStart": "2026-10-15",
@@ -18,7 +18,7 @@
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-17&movieCd=029713&playSDT=2026-10-17&screenId=01&showSeq=3",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-17&movieCd=029713&playSDT=2026-10-17&screenId=01&showSeq=6",
       "score": 122.8,
       "signal": 6.8,
       "positiveSignal": 6.8,
@@ -39,7 +39,7 @@
         "KT&G 상상마당 시네마"
       ],
       "nextDate": "2026-10-17",
-      "nextTime": "13:30",
+      "nextTime": "20:00",
       "evidence": [
         {
           "title": "룩백은 너무 무난하네",
@@ -323,61 +323,102 @@
     },
     {
       "rank": 4,
-      "title": "버닝(하루키전)",
-      "posterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
-      "localPosterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
+      "title": "침묵의 빛",
+      "posterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
+      "localPosterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261017&tsId=TS0056&pno=4",
-      "score": 47.3,
-      "signal": 7.2,
-      "positiveSignal": 7.2,
-      "mentionCount": 1.8,
-      "rawPositiveSignal": 10,
-      "rawMentionCount": 2.5,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121808&playDt=20261017&tsId=TS0057&pno=3",
+      "score": 63.8,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 6,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 9.877443751081735,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum"
+        "filmforum",
+        "cinecube",
+        "kucine",
+        "sangsangmadang",
+        "sac"
       ],
       "venueNames": [
-        "필름포럼"
+        "필름포럼",
+        "씨네큐브 광화문",
+        "KU시네마테크",
+        "KT&G 상상마당 시네마",
+        "서울아트시네마"
       ],
       "nextDate": "2026-10-17",
-      "nextTime": "16:10",
+      "nextTime": "17:10",
       "evidence": [
         {
-          "title": "난 개인적으로 이동진 평가보고 버닝이 더 싫어짐",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875367&page=3",
-          "date": "2026-10-16",
-          "positive": 10,
-          "rawPositive": 10,
+          "title": "침묵의 빛 씨집 관이 두개네 ㅋㅋ",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875072&page=2",
+          "date": "2026-10-15",
+          "positive": 0,
+          "rawPositive": 0,
           "negative": 0,
-          "positiveHits": [
-            {
-              "term": "걸작",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            },
-            {
-              "term": "재밌",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
+          "positiveHits": [],
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 14,
-          "commentPositive": 10,
+          "commentCount": 3,
+          "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
+        },
+        {
+          "title": "침묵의 빛 드르렁임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875037&page=3",
+          "date": "2026-10-15",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "침묵의 빛 상영관 좀 늘려줘",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1874908&page=5",
+          "date": "2026-10-15",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "침묵의 빛 다음주 주말까지 걸려있을까?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875604&page=1",
+          "date": "2026-10-17",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kXiF80o74fE9gf3Utf9moAI7ar0.jpg"
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kniOoQky3GX9ljyzobwRUGFgQUT.jpg"
     }
   ],
   "festivalPicks": [],
@@ -386,11 +427,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 68,
+    "fetchedPostCount": 89,
     "listedPostCount": 292,
-    "detailedPostCount": 0,
-    "commentFetchCount": 0,
-    "commentCount": 0,
+    "detailedPostCount": 1,
+    "commentFetchCount": 1,
+    "commentCount": 2,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -399,7 +440,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-17",
     "candidateWindowEnd": "2026-10-31",
-    "candidateCount": 108,
+    "candidateCount": 109,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-15",
     "listLookbackDays": 1,
