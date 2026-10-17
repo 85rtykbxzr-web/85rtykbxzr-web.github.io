@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-17T15:29:27.167Z",
+  "generatedAt": "2026-10-17T18:17:39.876Z",
   "weekStart": "2026-10-16",
   "weekEnd": "2026-10-18",
   "windowStart": "2026-10-16",
@@ -13,6 +13,125 @@
   "items": [
     {
       "rank": 1,
+      "title": "아사코",
+      "posterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
+      "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121840&playDt=20261021&tsId=TS0044&pno=3",
+      "score": 97.5,
+      "signal": 3.1,
+      "positiveSignal": 3.1,
+      "mentionCount": 8.1,
+      "rawPositiveSignal": 6,
+      "rawMentionCount": 12.114409345247939,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "sangsangmadang",
+        "cinecube",
+        "filmforum"
+      ],
+      "venueNames": [
+        "KT&G 상상마당 시네마",
+        "씨네큐브 광화문",
+        "필름포럼"
+      ],
+      "nextDate": "2026-10-21",
+      "nextTime": "15:25",
+      "evidence": [
+        {
+          "title": "광야시대보다 아사코 재개봉을 먼저 미는 이유가 뭐냐",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875330&page=3",
+          "date": "2026-10-16",
+          "positive": 6,
+          "rawPositive": 6,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "걸작",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 9,
+          "commentPositive": 6,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "그린나래 아사코랑 완벽한 초대 사이에 하나 안 풀면 욕 할 거임",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875320&page=4",
+          "date": "2026-10-16",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "아사코는 재개봉을 해주는거야 안해주는거야",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875235&page=5",
+          "date": "2026-10-16",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 4,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "영잘알못 판독기 <아사코> 재개봉",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875782&page=1",
+          "date": "2026-10-18",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "아사코가 헤어질결심 깔이야?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875772&page=1",
+          "date": "2026-10-18",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 3,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
+    },
+    {
+      "rank": 2,
       "title": "룩백",
       "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
@@ -145,93 +264,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/feIEhh07azcRtn2MocbFX3kWcjw.jpg"
-    },
-    {
-      "rank": 2,
-      "title": "아사코",
-      "posterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
-      "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121840&playDt=20261021&tsId=TS0044&pno=3",
-      "score": 59.5,
-      "signal": 3.1,
-      "positiveSignal": 3.1,
-      "mentionCount": 4.3,
-      "rawPositiveSignal": 6,
-      "rawMentionCount": 8.321928094887362,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "sangsangmadang",
-        "cinecube",
-        "filmforum"
-      ],
-      "venueNames": [
-        "KT&G 상상마당 시네마",
-        "씨네큐브 광화문",
-        "필름포럼"
-      ],
-      "nextDate": "2026-10-21",
-      "nextTime": "15:25",
-      "evidence": [
-        {
-          "title": "광야시대보다 아사코 재개봉을 먼저 미는 이유가 뭐냐",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875330&page=3",
-          "date": "2026-10-16",
-          "positive": 6,
-          "rawPositive": 6,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "걸작",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 9,
-          "commentPositive": 6,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "그린나래 아사코랑 완벽한 초대 사이에 하나 안 풀면 욕 할 거임",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875320&page=4",
-          "date": "2026-10-16",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "아사코는 재개봉을 해주는거야 안해주는거야",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875235&page=5",
-          "date": "2026-10-16",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 4,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        }
-      ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
     },
     {
       "rank": 3,
@@ -398,11 +430,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 17,
+    "fetchedPostCount": 44,
     "listedPostCount": 292,
-    "detailedPostCount": 1,
-    "commentFetchCount": 1,
-    "commentCount": 8,
+    "detailedPostCount": 5,
+    "commentFetchCount": 5,
+    "commentCount": 19,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,

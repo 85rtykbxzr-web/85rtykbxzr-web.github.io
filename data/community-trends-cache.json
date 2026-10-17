@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-18",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-17T15:29:23.744Z",
+  "updatedAt": "2026-10-17T18:17:36.009Z",
   "days": {
     "2026-10-16": {
       "셀린느와줄리배타러가다": {
@@ -617,6 +617,95 @@
       }
     },
     "2026-10-18": {
+      "아사코": {
+        "title": "아사코(2D)",
+        "positiveSignal": 0,
+        "mentionCount": 3.792481250360578,
+        "evidence": [
+          {
+            "title": "영잘알못 판독기 <아사코> 재개봉",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875782&page=1",
+            "date": "2026-10-18",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "아사코가 헤어질결심 깔이야?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875772&page=1",
+            "date": "2026-10-18",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 3,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "토리노의말": {
+        "title": "토리노의 말(기획전)",
+        "positiveSignal": 0,
+        "mentionCount": 1.792481250360578,
+        "evidence": [
+          {
+            "title": "토리노의 말 볼 수 있는 극장 남아잇음?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875779&page=1",
+            "date": "2026-10-18",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "담요를입은사람": {
+        "title": "담요를 입은 사람",
+        "positiveSignal": 2,
+        "mentionCount": 2.160964047443681,
+        "evidence": [
+          {
+            "title": "담요를 입은 사람 어때?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875760&page=1",
+            "date": "2026-10-18",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "좋더라",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 4,
+            "commentPositive": 2,
+            "commentNegative": 0
+          }
+        ]
+      },
       "사탄탱고": {
         "title": "사탄탱고(2D)",
         "positiveSignal": 2,
