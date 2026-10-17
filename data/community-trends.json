@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-17T00:13:26.879Z",
+  "generatedAt": "2026-10-17T03:19:17.117Z",
   "weekStart": "2026-10-15",
   "weekEnd": "2026-10-17",
   "windowStart": "2026-10-15",
@@ -18,7 +18,7 @@
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121765&playDt=20261017&tsId=TS0057&pno=1",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261017&tsId=TS0044&pno=2",
       "score": 122.8,
       "signal": 6.8,
       "positiveSignal": 6.8,
@@ -27,19 +27,19 @@
       "rawMentionCount": 14.988639961749957,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum",
         "sangsangmadang",
         "cinecube",
+        "filmforum",
         "kucine"
       ],
       "venueNames": [
-        "필름포럼",
         "KT&G 상상마당 시네마",
         "씨네큐브 광화문",
+        "필름포럼",
         "KU시네마테크"
       ],
       "nextDate": "2026-10-17",
-      "nextTime": "10:30",
+      "nextTime": "12:50",
       "evidence": [
         {
           "title": "룩백은 너무 무난하네",
@@ -153,8 +153,8 @@
       "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-21&movieCd=019765&playSDT=2026-10-21&screenId=01&showSeq=6",
-      "score": 80.7,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121840&playDt=20261021&tsId=TS0044&pno=3",
+      "score": 81.2,
       "signal": 4.3,
       "positiveSignal": 4.3,
       "mentionCount": 6,
@@ -162,15 +162,17 @@
       "rawMentionCount": 8.321928094887362,
       "scheduleBackfill": false,
       "venueIds": [
+        "sangsangmadang",
         "cinecube",
         "filmforum"
       ],
       "venueNames": [
+        "KT&G 상상마당 시네마",
         "씨네큐브 광화문",
         "필름포럼"
       ],
       "nextDate": "2026-10-21",
-      "nextTime": "16:40",
+      "nextTime": "15:25",
       "evidence": [
         {
           "title": "광야시대보다 아사코 재개봉을 먼저 미는 이유가 뭐냐",
@@ -384,7 +386,7 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 41,
+    "fetchedPostCount": 65,
     "listedPostCount": 292,
     "detailedPostCount": 0,
     "commentFetchCount": 0,
@@ -397,7 +399,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-17",
     "candidateWindowEnd": "2026-10-31",
-    "candidateCount": 111,
+    "candidateCount": 109,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-15",
     "listLookbackDays": 1,
