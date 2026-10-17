@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-17T20:32:36.525Z",
+  "generatedAt": "2026-10-17T21:23:12.430Z",
   "weekStart": "2026-10-16",
   "weekEnd": "2026-10-18",
   "windowStart": "2026-10-16",
@@ -273,12 +273,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121558&playDt=20261018&tsId=TS0044&pno=3",
-      "score": 51.4,
+      "score": 56.4,
       "signal": 7.3,
       "positiveSignal": 7.3,
-      "mentionCount": 2.2,
+      "mentionCount": 2.7,
       "rawPositiveSignal": 14,
-      "rawMentionCount": 3.292481250360578,
+      "rawMentionCount": 3.792481250360578,
       "scheduleBackfill": false,
       "venueIds": [
         "sangsangmadang"
@@ -345,7 +345,7 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 0,
+          "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
@@ -451,11 +451,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 50,
+    "fetchedPostCount": 52,
     "listedPostCount": 292,
     "detailedPostCount": 6,
     "commentFetchCount": 6,
-    "commentCount": 20,
+    "commentCount": 21,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
