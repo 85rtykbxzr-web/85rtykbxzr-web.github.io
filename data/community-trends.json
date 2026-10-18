@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-18T15:12:40.712Z",
+  "generatedAt": "2026-10-18T15:49:18.034Z",
   "weekStart": "2026-10-17",
   "weekEnd": "2026-10-19",
   "windowStart": "2026-10-17",
@@ -230,6 +230,85 @@
     },
     {
       "rank": 3,
+      "title": "룩백",
+      "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
+      "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-19&movieCd=029713&playSDT=2026-10-19&screenId=01&showSeq=5",
+      "score": 38.8,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 3.5,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 5.792481250360578,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "cinecube",
+        "kucine",
+        "sangsangmadang"
+      ],
+      "venueNames": [
+        "씨네큐브 광화문",
+        "KU시네마테크",
+        "KT&G 상상마당 시네마"
+      ],
+      "nextDate": "2026-10-19",
+      "nextTime": "18:20",
+      "evidence": [
+        {
+          "title": "룩백 생각보다 괜찮은데 음해 뭐냐??",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875684&page=1",
+          "date": "2026-10-17",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 5,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "스포) 룩백 후지노 그때 왜 그런거임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875634&page=2",
+          "date": "2026-10-17",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 7,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "룩백 실사 주인공 데구치 말고 다른 사람 아니었나?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875991&page=1",
+          "date": "2026-10-19",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/feIEhh07azcRtn2MocbFX3kWcjw.jpg"
+    },
+    {
+      "rank": 4,
       "title": "드라이브 마이 카(하루키전)",
       "posterUrl": "/assets/recommendation-posters/1a8ead8f915feb86.webp",
       "localPosterUrl": "/assets/recommendation-posters/1a8ead8f915feb86.webp",
@@ -286,65 +365,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/a2lxHS6Au35k5XtFQEQW44yWHeH.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "사랑",
-      "posterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
-      "localPosterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.tinyticket.net/event/EVGvD57i1Clf",
-      "score": 31.4,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 3.1,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 4.292481250360578,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "sac"
-      ],
-      "venueNames": [
-        "서울아트시네마"
-      ],
-      "nextDate": "2026-10-31",
-      "nextTime": "17:00",
-      "evidence": [
-        {
-          "title": "<아사코> 하마구치 류스케 인터뷰",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875934&page=1",
-          "date": "2026-10-18",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "아사코는 근데 순수하게 재밌지않음?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875831&page=3",
-          "date": "2026-10-18",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kISG5ljzXg34TwsqbToGPu8Ebqy.jpg"
     }
   ],
   "festivalPicks": [],
@@ -353,10 +373,10 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 4,
+    "fetchedPostCount": 10,
     "listedPostCount": 292,
-    "detailedPostCount": 0,
-    "commentFetchCount": 0,
+    "detailedPostCount": 1,
+    "commentFetchCount": 1,
     "commentCount": 0,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
