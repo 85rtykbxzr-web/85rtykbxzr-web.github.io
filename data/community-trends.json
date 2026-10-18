@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-18T00:13:55.761Z",
+  "generatedAt": "2026-10-18T03:19:49.185Z",
   "weekStart": "2026-10-16",
   "weekEnd": "2026-10-18",
   "windowStart": "2026-10-16",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121840&playDt=20261021&tsId=TS0044&pno=3",
-      "score": 111.1,
+      "score": 121.1,
       "signal": 3.1,
       "positiveSignal": 3.1,
-      "mentionCount": 9.5,
+      "mentionCount": 10.5,
       "rawPositiveSignal": 6,
-      "rawMentionCount": 13.482892142331043,
+      "rawMentionCount": 14.482892142331043,
       "scheduleBackfill": false,
       "venueIds": [
         "sangsangmadang",
@@ -96,8 +96,8 @@
           "dayWeight": 0.518
         },
         {
-          "title": "그나래야 아사코 상영관 좀 많이 많이 잡아줘~",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875801&page=1",
+          "title": "김송희 아사코 별점 은근슬쩍 올렸네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875818&page=1",
           "date": "2026-10-18",
           "positive": 0,
           "rawPositive": 0,
@@ -112,8 +112,8 @@
           "dayWeight": 1
         },
         {
-          "title": "영잘알못 판독기 <아사코> 재개봉",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875782&page=1",
+          "title": "그나래야 아사코 상영관 좀 많이 많이 잡아줘~",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875801&page=1",
           "date": "2026-10-18",
           "positive": 0,
           "rawPositive": 0,
@@ -122,7 +122,7 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 3,
+          "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
@@ -137,7 +137,7 @@
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-18&movieCd=029713&playSDT=2026-10-18&screenId=01&showSeq=1",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-18&movieCd=029713&playSDT=2026-10-18&screenId=01&showSeq=3",
       "score": 90.8,
       "signal": 4.1,
       "positiveSignal": 4.1,
@@ -158,7 +158,7 @@
         "KT&G 상상마당 시네마"
       ],
       "nextDate": "2026-10-18",
-      "nextTime": "09:15",
+      "nextTime": "13:00",
       "evidence": [
         {
           "title": "룩백 실사는 ㄹㅇ 만화의 장점이 싹 거세된 영화네",
@@ -273,12 +273,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-18&movieCd=029764&playSDT=2026-10-18&screenId=02&showSeq=4",
-      "score": 69.2,
+      "score": 71.2,
       "signal": 4.3,
       "positiveSignal": 4.3,
-      "mentionCount": 4.8,
+      "mentionCount": 5,
       "rawPositiveSignal": 6,
-      "rawMentionCount": 5.953445297804259,
+      "rawMentionCount": 6.160964047443681,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -364,7 +364,7 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 2,
+          "commentCount": 3,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
@@ -467,11 +467,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 61,
+    "fetchedPostCount": 76,
     "listedPostCount": 292,
-    "detailedPostCount": 9,
-    "commentFetchCount": 9,
-    "commentCount": 27,
+    "detailedPostCount": 10,
+    "commentFetchCount": 10,
+    "commentCount": 28,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
