@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-18T04:24:43.478Z",
+  "generatedAt": "2026-10-18T06:10:11.321Z",
   "weekStart": "2026-10-16",
   "weekEnd": "2026-10-18",
   "windowStart": "2026-10-16",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121840&playDt=20261021&tsId=TS0044&pno=3",
-      "score": 209.2,
-      "signal": 5.1,
-      "positiveSignal": 5.1,
-      "mentionCount": 18.5,
-      "rawPositiveSignal": 8,
-      "rawMentionCount": 22.491853096329674,
+      "score": 314.2,
+      "signal": 23.1,
+      "positiveSignal": 23.1,
+      "mentionCount": 21.8,
+      "rawPositiveSignal": 26,
+      "rawMentionCount": 25.78433434669025,
       "scheduleBackfill": false,
       "venueIds": [
         "sangsangmadang",
@@ -96,33 +96,49 @@
           "dayWeight": 0.518
         },
         {
-          "title": "아사코와 나는 세 번 만났다",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875832&page=1",
+          "title": "강 스포) 누갤 조회수 3만이 넘는 2019.03.16일 아사코 해석글",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875844&page=1",
           "date": "2026-10-18",
-          "positive": 0,
-          "rawPositive": 0,
+          "positive": 8,
+          "rawPositive": 8,
           "negative": 0,
-          "positiveHits": [],
+          "positiveHits": [
+            {
+              "term": "재밌",
+              "count": 2,
+              "weight": 4,
+              "score": 8,
+              "label": "clear"
+            }
+          ],
           "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 2,
+          "commentPositive": 8,
           "commentNegative": 0,
           "dayWeight": 1
         },
         {
-          "title": "아사코는 근데 순수하게 재밌지않음?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875831&page=1",
+          "title": "스포) 아사코에서 최애하는 씬",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875842&page=1",
           "date": "2026-10-18",
-          "positive": 0,
-          "rawPositive": 0,
+          "positive": 4,
+          "rawPositive": 4,
           "negative": 0,
-          "positiveHits": [],
+          "positiveHits": [
+            {
+              "term": "좋음",
+              "count": 2,
+              "weight": 2,
+              "score": 4,
+              "label": "soft"
+            }
+          ],
           "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 3,
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
@@ -133,8 +149,8 @@
     {
       "rank": 2,
       "title": "룩백",
-      "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
-      "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
+      "posterUrl": "/assets/recommendation-posters/eb4c5451cda00929.webp",
+      "localPosterUrl": "/assets/recommendation-posters/eb4c5451cda00929.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121765&playDt=20261018&tsId=TS0056&pno=3",
@@ -267,9 +283,105 @@
     },
     {
       "rank": 3,
+      "title": "옵세션",
+      "posterUrl": "/assets/recommendation-posters/926bf3c9c693a4b7.webp",
+      "localPosterUrl": "/assets/recommendation-posters/926bf3c9c693a4b7.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121558&playDt=20261018&tsId=TS0044&pno=3",
+      "score": 72.3,
+      "signal": 9.3,
+      "positiveSignal": 9.3,
+      "mentionCount": 3.5,
+      "rawPositiveSignal": 16,
+      "rawMentionCount": 4.584962500721156,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "sangsangmadang"
+      ],
+      "venueNames": [
+        "KT&G 상상마당 시네마"
+      ],
+      "nextDate": "2026-10-18",
+      "nextTime": "17:30",
+      "evidence": [
+        {
+          "title": "옵세션도 부천 불판 전부 O밖에 없네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875252&page=5",
+          "date": "2026-10-16",
+          "positive": 14,
+          "rawPositive": 14,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "걸작",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "재미있",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "괜찮",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            },
+            {
+              "term": "볼만",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 5,
+          "commentPositive": 8,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "옵세션 진짜 노잼이네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875786&page=2",
+          "date": "2026-10-18",
+          "positive": 2,
+          "rawPositive": 2,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "볼만",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 5,
+          "commentPositive": 2,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/iR0eC0eIWB8OjZ9abBz4FepfwkC.jpg"
+    },
+    {
+      "rank": 4,
       "title": "침묵의 빛",
-      "posterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
-      "localPosterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
+      "posterUrl": "/assets/recommendation-posters/8f2fee2a32f810f6.webp",
+      "localPosterUrl": "/assets/recommendation-posters/8f2fee2a32f810f6.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-18&movieCd=029764&playSDT=2026-10-18&screenId=02&showSeq=4",
@@ -355,7 +467,7 @@
         },
         {
           "title": "침묵의빛 보러갔는데 또 이상한데서 웃는관객 걸림",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875798&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875798&page=2",
           "date": "2026-10-18",
           "positive": 0,
           "rawPositive": 0,
@@ -371,94 +483,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kniOoQky3GX9ljyzobwRUGFgQUT.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "옵세션",
-      "posterUrl": "/assets/recommendation-posters/c1b7c09b74373fa5.webp",
-      "localPosterUrl": "/assets/recommendation-posters/c1b7c09b74373fa5.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121558&playDt=20261018&tsId=TS0044&pno=3",
-      "score": 61.4,
-      "signal": 7.3,
-      "positiveSignal": 7.3,
-      "mentionCount": 3.2,
-      "rawPositiveSignal": 14,
-      "rawMentionCount": 4.292481250360578,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "sangsangmadang"
-      ],
-      "venueNames": [
-        "KT&G 상상마당 시네마"
-      ],
-      "nextDate": "2026-10-18",
-      "nextTime": "17:30",
-      "evidence": [
-        {
-          "title": "옵세션도 부천 불판 전부 O밖에 없네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875252&page=5",
-          "date": "2026-10-16",
-          "positive": 14,
-          "rawPositive": 14,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "걸작",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            },
-            {
-              "term": "재미있",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "괜찮",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            },
-            {
-              "term": "볼만",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 5,
-          "commentPositive": 8,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "옵세션 진짜 노잼이네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875786&page=2",
-          "date": "2026-10-18",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/iR0eC0eIWB8OjZ9abBz4FepfwkC.jpg"
     }
   ],
   "festivalPicks": [],
@@ -467,11 +491,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 92,
+    "fetchedPostCount": 106,
     "listedPostCount": 292,
-    "detailedPostCount": 14,
-    "commentFetchCount": 14,
-    "commentCount": 44,
+    "detailedPostCount": 16,
+    "commentFetchCount": 16,
+    "commentCount": 77,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -480,7 +504,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-18",
     "candidateWindowEnd": "2026-11-01",
-    "candidateCount": 110,
+    "candidateCount": 108,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-16",
     "listLookbackDays": 1,
