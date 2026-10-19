@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-19T15:15:10.473Z",
+  "generatedAt": "2026-10-19T18:18:00.189Z",
   "weekStart": "2026-10-18",
   "weekEnd": "2026-10-20",
   "windowStart": "2026-10-18",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121840&playDt=20261021&tsId=TS0044&pno=3",
-      "score": 183.5,
+      "score": 201.4,
       "signal": 10.4,
       "positiveSignal": 10.4,
-      "mentionCount": 13.8,
+      "mentionCount": 15.6,
       "rawPositiveSignal": 20,
-      "rawMentionCount": 25.951046213552846,
+      "rawMentionCount": 27.743527463913424,
       "scheduleBackfill": false,
       "venueIds": [
         "sangsangmadang",
@@ -102,6 +102,22 @@
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.72
+        },
+        {
+          "title": "아사코 궁금한데 배우들때문에 안보게 됨",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876210&page=1",
+          "date": "2026-10-20",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
@@ -382,11 +398,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 1,
+    "fetchedPostCount": 10,
     "listedPostCount": 292,
-    "detailedPostCount": 0,
-    "commentFetchCount": 0,
-    "commentCount": 0,
+    "detailedPostCount": 1,
+    "commentFetchCount": 1,
+    "commentCount": 2,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
