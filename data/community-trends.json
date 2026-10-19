@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-19T06:11:30.311Z",
+  "generatedAt": "2026-10-19T09:17:37.633Z",
   "weekStart": "2026-10-17",
   "weekEnd": "2026-10-19",
   "windowStart": "2026-10-17",
@@ -97,7 +97,7 @@
       "localPosterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-19&movieCd=029764&playSDT=2026-10-19&screenId=01&showSeq=4",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121808&playDt=20261019&tsId=TS0057&pno=5",
       "score": 94.6,
       "signal": 8.9,
       "positiveSignal": 8.9,
@@ -106,21 +106,21 @@
       "rawMentionCount": 8.821928094887362,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube",
         "filmforum",
         "kucine",
+        "cinecube",
         "sangsangmadang",
         "sac"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
         "필름포럼",
         "KU시네마테크",
+        "씨네큐브 광화문",
         "KT&G 상상마당 시네마",
         "서울아트시네마"
       ],
       "nextDate": "2026-10-19",
-      "nextTime": "15:50",
+      "nextTime": "19:10",
       "evidence": [
         {
           "title": "침묵의빛 진짜 걸작",
@@ -230,36 +230,139 @@
     },
     {
       "rank": 3,
-      "title": "헤븐 노우즈 왓",
-      "posterUrl": "/assets/recommendation-posters/61f1382e4eaba03b.webp",
-      "localPosterUrl": "/assets/recommendation-posters/61f1382e4eaba03b.webp",
+      "title": "사랑",
+      "posterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
+      "localPosterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121810&playDt=20261019&tsId=TS0057&pno=4",
-      "score": 44.8,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 4.2,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 4.660964047443681,
+      "url": "https://www.tinyticket.net/event/EVGvD57i1Clf",
+      "score": 75.4,
+      "signal": 6,
+      "positiveSignal": 6,
+      "mentionCount": 5.1,
+      "rawPositiveSignal": 6,
+      "rawMentionCount": 6.292481250360578,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum",
-        "kucine",
-        "sangsangmadang"
+        "sac"
       ],
       "venueNames": [
-        "필름포럼",
-        "KU시네마테크",
-        "KT&G 상상마당 시네마"
+        "서울아트시네마"
       ],
-      "nextDate": "2026-10-19",
-      "nextTime": "17:30",
+      "nextDate": "2026-10-31",
+      "nextTime": "17:00",
       "evidence": [
         {
-          "title": "침묵의 빛, 헤븐 노우즈 왓 왜 10월에 개봉하는 것임",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875628&page=2",
-          "date": "2026-10-17",
+          "title": "<아사코> 하마구치 류스케 인터뷰",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875934&page=1",
+          "date": "2026-10-18",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "아사코는 근데 순수하게 재밌지않음?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875831&page=3",
+          "date": "2026-10-18",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "가능한 사랑 3.5점 호프 4점",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876111&page=1",
+          "date": "2026-10-19",
+          "positive": 6,
+          "rawPositive": 6,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "압도",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 3,
+          "commentPositive": 6,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kISG5ljzXg34TwsqbToGPu8Ebqy.jpg"
+    },
+    {
+      "rank": 4,
+      "title": "괴물",
+      "posterUrl": "/assets/recommendation-posters/ccbc5087b974f131.webp",
+      "localPosterUrl": "/assets/recommendation-posters/ccbc5087b974f131.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.tinyticket.net/event/EVcGiptnvBtW",
+      "score": 60.5,
+      "signal": 4,
+      "positiveSignal": 4,
+      "mentionCount": 4.4,
+      "rawPositiveSignal": 4,
+      "rawMentionCount": 4.403677461028802,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "sac"
+      ],
+      "venueNames": [
+        "서울아트시네마"
+      ],
+      "nextDate": "2026-10-21",
+      "nextTime": "18:40",
+      "evidence": [
+        {
+          "title": "괴물 까이는거 애프터썬 까이는거랑 같은 이치지 뭐",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876121&page=1",
+          "date": "2026-10-19",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "만족",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "고히 괴물 왜 싫은가하면",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876119&page=1",
+          "date": "2026-10-19",
           "positive": 0,
           "rawPositive": 0,
           "negative": 0,
@@ -270,27 +373,11 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "헤븐노우즈왓보면 병걸림",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876024&page=2",
-          "date": "2026-10-19",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
           "dayWeight": 1
         },
         {
-          "title": "헤븐노우즈왓 굿타임 언컷젬스급임?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876008&page=2",
+          "title": "근데 괴물은 올려치는 사람들이 많아서 까는 거임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876112&page=1",
           "date": "2026-10-19",
           "positive": 0,
           "rawPositive": 0,
@@ -299,92 +386,13 @@
           "negativeHits": [],
           "questionLike": true,
           "reviewQuestion": false,
-          "commentCount": 4,
+          "commentCount": 6,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
         }
       ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/4oyWMOWJ6trsRuyzn5cHPv50zVH.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "룩백",
-      "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
-      "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-19&movieCd=029713&playSDT=2026-10-19&screenId=01&showSeq=5",
-      "score": 43.8,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 4,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 6.292481250360578,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "cinecube",
-        "kucine",
-        "sangsangmadang"
-      ],
-      "venueNames": [
-        "씨네큐브 광화문",
-        "KU시네마테크",
-        "KT&G 상상마당 시네마"
-      ],
-      "nextDate": "2026-10-19",
-      "nextTime": "18:20",
-      "evidence": [
-        {
-          "title": "룩백 생각보다 괜찮은데 음해 뭐냐??",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875684&page=1",
-          "date": "2026-10-17",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 5,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "스포) 룩백 후지노 그때 왜 그런거임?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875634&page=2",
-          "date": "2026-10-17",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 7,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "룩백 실사 주인공 데구치 말고 다른 사람 아니었나?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875991&page=2",
-          "date": "2026-10-19",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/feIEhh07azcRtn2MocbFX3kWcjw.jpg"
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cecXXWJ5YINoUFPU8tMMUqz0yqG.jpg"
     }
   ],
   "festivalPicks": [],
@@ -393,11 +401,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 95,
+    "fetchedPostCount": 127,
     "listedPostCount": 292,
-    "detailedPostCount": 5,
-    "commentFetchCount": 5,
-    "commentCount": 8,
+    "detailedPostCount": 11,
+    "commentFetchCount": 11,
+    "commentCount": 19,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -406,7 +414,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-19",
     "candidateWindowEnd": "2026-11-02",
-    "candidateCount": 107,
+    "candidateCount": 108,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-17",
     "listLookbackDays": 1,
