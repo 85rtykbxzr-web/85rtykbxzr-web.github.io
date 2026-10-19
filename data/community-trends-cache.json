@@ -2,293 +2,25 @@
   "version": 3,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-10-17",
-  "windowEnd": "2026-10-19",
+  "windowStart": "2026-10-18",
+  "windowEnd": "2026-10-20",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-10-17",
       "2026-10-18",
-      "2026-10-19"
+      "2026-10-19",
+      "2026-10-20"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-10-19",
-    "lastWindowEnd": "2026-10-19",
+    "lastWindowStart": "2026-10-20",
+    "lastWindowEnd": "2026-10-20",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-19T13:02:16.954Z",
+  "updatedAt": "2026-10-19T15:15:07.036Z",
   "days": {
-    "2026-10-17": {
-      "룩백": {
-        "title": "룩백",
-        "positiveSignal": 0,
-        "mentionCount": 4.792481250360578,
-        "evidence": [
-          {
-            "title": "룩백 생각보다 괜찮은데 음해 뭐냐??",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875684&page=1",
-            "date": "2026-10-17",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 5,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "스포) 룩백 후지노 그때 왜 그런거임?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875634&page=2",
-            "date": "2026-10-17",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 7,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "씽씽": {
-        "title": "씽씽",
-        "positiveSignal": 0,
-        "mentionCount": 1.792481250360578,
-        "evidence": [
-          {
-            "title": "씽씽은 무슨 영화임?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875682&page=1",
-            "date": "2026-10-17",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "침묵의빛": {
-        "title": "침묵의 빛",
-        "positiveSignal": 6,
-        "mentionCount": 4.160964047443681,
-        "evidence": [
-          {
-            "title": "침묵의빛 진짜 걸작",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875632&page=2",
-            "date": "2026-10-17",
-            "positive": 6,
-            "rawPositive": 6,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "걸작",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "침묵의 빛, 헤븐 노우즈 왓 왜 10월에 개봉하는 것임",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875628&page=2",
-            "date": "2026-10-17",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "침묵의 빛 다음주 주말까지 걸려있을까?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875604&page=2",
-            "date": "2026-10-17",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 4,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "농부의초상접근": {
-        "title": "농부의 초상: 접근",
-        "positiveSignal": 0,
-        "mentionCount": 2.5,
-        "evidence": [
-          {
-            "title": "농부의 초상 고어한 장면 나오네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875630&page=2",
-            "date": "2026-10-17",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "농부의초상일상": {
-        "title": "농부의 초상: 일상",
-        "positiveSignal": 0,
-        "mentionCount": 2.5,
-        "evidence": [
-          {
-            "title": "농부의 초상 고어한 장면 나오네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875630&page=2",
-            "date": "2026-10-17",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "농부의초상모던라이프": {
-        "title": "농부의 초상: 모던 라이프",
-        "positiveSignal": 0,
-        "mentionCount": 2.5,
-        "evidence": [
-          {
-            "title": "농부의 초상 고어한 장면 나오네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875630&page=2",
-            "date": "2026-10-17",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "바얌섬": {
-        "title": "바얌섬",
-        "positiveSignal": 8,
-        "mentionCount": 2.292481250360578,
-        "evidence": [
-          {
-            "title": "바얌섬 이거 어떰?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875629&page=2",
-            "date": "2026-10-17",
-            "positive": 8,
-            "rawPositive": 8,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              },
-              {
-                "term": "잘 만들",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 5,
-            "commentPositive": 8,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "헤븐노우즈왓": {
-        "title": "헤븐 노우즈 왓(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "침묵의 빛, 헤븐 노우즈 왓 왜 10월에 개봉하는 것임",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875628&page=2",
-            "date": "2026-10-17",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "레위기": {
-        "title": "레위기(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "레위기 별로네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875618&page=2",
-            "date": "2026-10-17",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-10-18": {
       "아사코": {
         "title": "아사코(2D)",
@@ -946,7 +678,8 @@
           }
         ]
       }
-    }
+    },
+    "2026-10-20": {}
   },
   "festivals": {}
 }
