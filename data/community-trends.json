@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-20T14:18:07.079Z",
-  "weekStart": "2026-10-18",
-  "weekEnd": "2026-10-20",
-  "windowStart": "2026-10-18",
-  "windowEnd": "2026-10-20",
+  "generatedAt": "2026-10-20T15:14:46.918Z",
+  "weekStart": "2026-10-19",
+  "weekEnd": "2026-10-21",
+  "windowStart": "2026-10-19",
+  "windowEnd": "2026-10-21",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -13,127 +13,16 @@
   "items": [
     {
       "rank": 1,
-      "title": "아사코",
-      "posterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
-      "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121840&playDt=20261021&tsId=TS0044&pno=3",
-      "score": 237.5,
-      "signal": 10.4,
-      "positiveSignal": 10.4,
-      "mentionCount": 19.2,
-      "rawPositiveSignal": 20,
-      "rawMentionCount": 31.35472367458165,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "sangsangmadang",
-        "cinecube",
-        "filmforum"
-      ],
-      "venueNames": [
-        "KT&G 상상마당 시네마",
-        "씨네큐브 광화문",
-        "필름포럼"
-      ],
-      "nextDate": "2026-10-21",
-      "nextTime": "15:25",
-      "evidence": [
-        {
-          "title": "<아사코> 하마구치 류스케 인터뷰",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875934&page=1",
-          "date": "2026-10-18",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "아사코 군휴가나온 동생이랑 봐도됨?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875885&page=2",
-          "date": "2026-10-18",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 4,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "아사코 포스터 뭐가 젤 좋음?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875879&page=2",
-          "date": "2026-10-18",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 9,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "헤이트풀 vs 아사코 하나만 보면 뭐 봄?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876155&page=1",
-          "date": "2026-10-19",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "아사코가 재개봉을 했다고?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876385&page=1",
-          "date": "2026-10-20",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
-    },
-    {
-      "rank": 2,
       "title": "괴물",
       "posterUrl": "/assets/recommendation-posters/ccbc5087b974f131.webp",
       "localPosterUrl": "/assets/recommendation-posters/ccbc5087b974f131.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.tinyticket.net/event/EVcGiptnvBtW",
-      "score": 135.7,
-      "signal": 5.8,
-      "positiveSignal": 5.8,
-      "mentionCount": 11.2,
+      "score": 97.8,
+      "signal": 4.1,
+      "positiveSignal": 4.1,
+      "mentionCount": 8.1,
       "rawPositiveSignal": 8,
       "rawMentionCount": 13.453445297804258,
       "scheduleBackfill": false,
@@ -168,7 +57,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "고히 괴물 유치하게 느껴졌던 부분이",
@@ -184,7 +73,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "괴물 까이는거 애프터썬 까이는거랑 같은 이치지 뭐",
@@ -208,7 +97,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "서아시 봉 괴물 옆자리 누붕이한테 정가로 양도할까 생각했는데",
@@ -224,7 +113,7 @@
           "commentCount": 4,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "내일 서아시 괴물 봉gv 취소표 나올까?",
@@ -240,23 +129,23 @@
           "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cecXXWJ5YINoUFPU8tMMUqz0yqG.jpg"
     },
     {
-      "rank": 3,
+      "rank": 2,
       "title": "룩백",
       "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121765&playDt=20261021&tsId=TS0039&pno=2",
-      "score": 125.3,
-      "signal": 7.8,
-      "positiveSignal": 7.8,
-      "mentionCount": 9,
+      "score": 91.3,
+      "signal": 5.6,
+      "positiveSignal": 5.6,
+      "mentionCount": 6.5,
       "rawPositiveSignal": 10,
       "rawMentionCount": 10.792481250360577,
       "scheduleBackfill": false,
@@ -297,7 +186,7 @@
           "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "난 룩백 괴물보다 좋던데",
@@ -321,7 +210,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "룩백 애니랑 실사 주연은 다 중국계네",
@@ -337,7 +226,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "룩백 보고 썩은 눈 치이카와로 힐링했다",
@@ -353,7 +242,7 @@
           "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "룩백 보는데 전철 나올 때 마다 좆 같았음",
@@ -377,25 +266,25 @@
           "commentCount": 13,
           "commentPositive": 2,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/feIEhh07azcRtn2MocbFX3kWcjw.jpg"
     },
     {
-      "rank": 4,
+      "rank": 3,
       "title": "침묵의 빛",
       "posterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
       "localPosterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-21&movieCd=029764&playSDT=2026-10-21&screenId=01&showSeq=2",
-      "score": 119.3,
-      "signal": 4.1,
-      "positiveSignal": 4.1,
-      "mentionCount": 9.9,
-      "rawPositiveSignal": 8,
-      "rawMentionCount": 12.114409345247939,
+      "score": 57.7,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 5.4,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 7.453445297804259,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -415,53 +304,6 @@
       "nextTime": "12:00",
       "evidence": [
         {
-          "title": "침묵의 빛 중반부까지는 그냥 저냥이었는데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875877&page=2",
-          "date": "2026-10-18",
-          "positive": 8,
-          "rawPositive": 8,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "꿀잼",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "훌륭",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 7,
-          "commentPositive": 8,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "침묵의빛 보러갔는데 또 이상한데서 웃는관객 걸림",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875798&page=3",
-          "date": "2026-10-18",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 4,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
           "title": "침묵의 빛 드르렁임?",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876373&page=1",
           "date": "2026-10-20",
@@ -475,7 +317,7 @@
           "commentCount": 4,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "침묵의 빛 오데트 안봐도 좋던데",
@@ -491,7 +333,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "침묵의빛 오데트 필수임?",
@@ -507,10 +349,105 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kniOoQky3GX9ljyzobwRUGFgQUT.jpg"
+    },
+    {
+      "rank": 4,
+      "title": "아사코",
+      "posterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
+      "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121840&playDt=20261021&tsId=TS0044&pno=3",
+      "score": 52.2,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 4.8,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 7.19615871138938,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "sangsangmadang",
+        "cinecube",
+        "filmforum"
+      ],
+      "venueNames": [
+        "KT&G 상상마당 시네마",
+        "씨네큐브 광화문",
+        "필름포럼"
+      ],
+      "nextDate": "2026-10-21",
+      "nextTime": "15:25",
+      "evidence": [
+        {
+          "title": "헤이트풀 vs 아사코 하나만 보면 뭐 봄?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876155&page=1",
+          "date": "2026-10-19",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "아사코가 재개봉을 했다고?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876385&page=1",
+          "date": "2026-10-20",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "아사코 레전드 gv",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876218&page=4",
+          "date": "2026-10-20",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 3,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "아사코 궁금한데 배우들때문에 안보게 됨",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876210&page=4",
+          "date": "2026-10-20",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 6,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        }
+      ],
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
     }
   ],
   "festivalPicks": [],
@@ -519,24 +456,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 177,
+    "fetchedPostCount": 1,
     "listedPostCount": 292,
-    "detailedPostCount": 17,
-    "commentFetchCount": 17,
-    "commentCount": 55,
+    "detailedPostCount": 0,
+    "commentFetchCount": 0,
+    "commentCount": 0,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-10-19",
-    "newestScannedDate": "2026-10-20",
+    "newestScannedDate": "2026-10-21",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-10-20",
-    "candidateWindowEnd": "2026-11-03",
-    "candidateCount": 117,
+    "candidateWindowStart": "2026-10-21",
+    "candidateWindowEnd": "2026-11-04",
+    "candidateCount": 122,
     "seedLookbackDays": 3,
-    "seedStart": "2026-10-18",
+    "seedStart": "2026-10-19",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-10-20",
+    "listWindowStart": "2026-10-21",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -544,7 +481,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-10-20"
+      "2026-10-21"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [
