@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-20",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-20T06:11:09.978Z",
+  "updatedAt": "2026-10-20T08:27:27.780Z",
   "days": {
     "2026-10-18": {
       "아사코": {
@@ -680,6 +680,51 @@
       }
     },
     "2026-10-20": {
+      "룩백": {
+        "title": "룩백(2D)",
+        "positiveSignal": 2,
+        "mentionCount": 4.5,
+        "evidence": [
+          {
+            "title": "룩백 보고 썩은 눈 치이카와로 힐링했다",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876319&page=1",
+            "date": "2026-10-20",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "룩백 보는데 전철 나올 때 마다 좆 같았음",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876223&page=2",
+            "date": "2026-10-20",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "좋고",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 13,
+            "commentPositive": 2,
+            "commentNegative": 0
+          }
+        ]
+      },
       "괴물": {
         "title": "괴물",
         "positiveSignal": 0,
@@ -731,7 +776,7 @@
         "evidence": [
           {
             "title": "침묵의 빛 오데트 안봐도 좋던데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876256&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876256&page=2",
             "date": "2026-10-20",
             "positive": 0,
             "rawPositive": 0,
@@ -746,7 +791,7 @@
           },
           {
             "title": "침묵의빛 오데트 필수임?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876254&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876254&page=2",
             "date": "2026-10-20",
             "positive": 0,
             "rawPositive": 0,
@@ -761,7 +806,7 @@
           },
           {
             "title": "침묵의 빛 < 오데트 안 보고 가면 손해임?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876252&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876252&page=2",
             "date": "2026-10-20",
             "positive": 0,
             "rawPositive": 0,
@@ -783,7 +828,7 @@
         "evidence": [
           {
             "title": "침묵의 빛 오데트 안봐도 좋던데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876256&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876256&page=2",
             "date": "2026-10-20",
             "positive": 0,
             "rawPositive": 0,
@@ -798,7 +843,7 @@
           },
           {
             "title": "침묵의빛 오데트 필수임?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876254&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876254&page=2",
             "date": "2026-10-20",
             "positive": 0,
             "rawPositive": 0,
@@ -813,7 +858,7 @@
           },
           {
             "title": "침묵의 빛 < 오데트 안 보고 가면 손해임?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876252&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876252&page=2",
             "date": "2026-10-20",
             "positive": 0,
             "rawPositive": 0,
@@ -828,36 +873,6 @@
           }
         ]
       },
-      "룩백": {
-        "title": "룩백",
-        "positiveSignal": 2,
-        "mentionCount": 2.5,
-        "evidence": [
-          {
-            "title": "룩백 보는데 전철 나올 때 마다 좆 같았음",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876223&page=2",
-            "date": "2026-10-20",
-            "positive": 2,
-            "rawPositive": 2,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "좋고",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 13,
-            "commentPositive": 2,
-            "commentNegative": 0
-          }
-        ]
-      },
       "아사코": {
         "title": "아사코(2D)",
         "positiveSignal": 0,
@@ -865,7 +880,7 @@
         "evidence": [
           {
             "title": "아사코 레전드 gv",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876218&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876218&page=3",
             "date": "2026-10-20",
             "positive": 0,
             "rawPositive": 0,
@@ -880,7 +895,7 @@
           },
           {
             "title": "아사코 궁금한데 배우들때문에 안보게 됨",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876210&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876210&page=3",
             "date": "2026-10-20",
             "positive": 0,
             "rawPositive": 0,
