@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-21",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-20T15:14:42.880Z",
+  "updatedAt": "2026-10-20T18:21:03.887Z",
   "days": {
     "2026-10-19": {
       "아사코": {
@@ -642,7 +642,45 @@
         ]
       }
     },
-    "2026-10-21": {}
+    "2026-10-21": {
+      "버닝": {
+        "title": "버닝(하루키전)",
+        "positiveSignal": 12,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "이창동 시 다시봤는데 버닝이랑은 또 다르게 개쩐다",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876412&page=1",
+            "date": "2026-10-21",
+            "positive": 12,
+            "rawPositive": 12,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "개쩐다",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "쩐다",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      }
+    }
   },
   "festivals": {}
 }

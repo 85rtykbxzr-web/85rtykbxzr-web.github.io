@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-20T15:14:46.918Z",
+  "generatedAt": "2026-10-20T18:21:04.883Z",
   "weekStart": "2026-10-19",
   "weekEnd": "2026-10-21",
   "windowStart": "2026-10-19",
@@ -273,6 +273,80 @@
     },
     {
       "rank": 3,
+      "title": "버닝(하루키전)",
+      "posterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
+      "localPosterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261022&tsId=TS0056&pno=3",
+      "score": 71.3,
+      "signal": 12,
+      "positiveSignal": 12,
+      "mentionCount": 2.1,
+      "rawPositiveSignal": 12,
+      "rawMentionCount": 2.5,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "filmforum"
+      ],
+      "venueNames": [
+        "필름포럼"
+      ],
+      "nextDate": "2026-10-22",
+      "nextTime": "16:50",
+      "evidence": [
+        {
+          "title": "필름포럼 버닝 gv는 누구오는거냐?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876279&page=3",
+          "date": "2026-10-20",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "이창동 시 다시봤는데 버닝이랑은 또 다르게 개쩐다",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876412&page=1",
+          "date": "2026-10-21",
+          "positive": 12,
+          "rawPositive": 12,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "개쩐다",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "쩐다",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kXiF80o74fE9gf3Utf9moAI7ar0.jpg"
+    },
+    {
+      "rank": 4,
       "title": "침묵의 빛",
       "posterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
       "localPosterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
@@ -353,101 +427,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kniOoQky3GX9ljyzobwRUGFgQUT.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "아사코",
-      "posterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
-      "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121840&playDt=20261021&tsId=TS0044&pno=3",
-      "score": 52.2,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 4.8,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 7.19615871138938,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "sangsangmadang",
-        "cinecube",
-        "filmforum"
-      ],
-      "venueNames": [
-        "KT&G 상상마당 시네마",
-        "씨네큐브 광화문",
-        "필름포럼"
-      ],
-      "nextDate": "2026-10-21",
-      "nextTime": "15:25",
-      "evidence": [
-        {
-          "title": "헤이트풀 vs 아사코 하나만 보면 뭐 봄?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876155&page=1",
-          "date": "2026-10-19",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "아사코가 재개봉을 했다고?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876385&page=1",
-          "date": "2026-10-20",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "아사코 레전드 gv",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876218&page=4",
-          "date": "2026-10-20",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "아사코 궁금한데 배우들때문에 안보게 됨",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876210&page=4",
-          "date": "2026-10-20",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 6,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
     }
   ],
   "festivalPicks": [],
@@ -456,10 +435,10 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 1,
+    "fetchedPostCount": 13,
     "listedPostCount": 292,
-    "detailedPostCount": 0,
-    "commentFetchCount": 0,
+    "detailedPostCount": 1,
+    "commentFetchCount": 1,
     "commentCount": 0,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
