@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-20T03:20:17.438Z",
+  "generatedAt": "2026-10-20T06:11:14.403Z",
   "weekStart": "2026-10-18",
   "weekEnd": "2026-10-20",
   "windowStart": "2026-10-18",
@@ -105,7 +105,7 @@
         },
         {
           "title": "아사코 레전드 gv",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876218&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876218&page=2",
           "date": "2026-10-20",
           "positive": 0,
           "rawPositive": 0,
@@ -218,7 +218,7 @@
         },
         {
           "title": "룩백 보는데 전철 나올 때 마다 좆 같았음",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876223&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876223&page=2",
           "date": "2026-10-20",
           "positive": 2,
           "rawPositive": 2,
@@ -245,18 +245,148 @@
     },
     {
       "rank": 3,
+      "title": "침묵의 빛",
+      "posterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
+      "localPosterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121808&playDt=20261020&tsId=TS0056&pno=5",
+      "score": 97.6,
+      "signal": 4.1,
+      "positiveSignal": 4.1,
+      "mentionCount": 7.7,
+      "rawPositiveSignal": 8,
+      "rawMentionCount": 9.953445297804258,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "filmforum",
+        "kucine",
+        "cinecube",
+        "sangsangmadang",
+        "sac"
+      ],
+      "venueNames": [
+        "필름포럼",
+        "KU시네마테크",
+        "씨네큐브 광화문",
+        "KT&G 상상마당 시네마",
+        "서울아트시네마"
+      ],
+      "nextDate": "2026-10-20",
+      "nextTime": "17:20",
+      "evidence": [
+        {
+          "title": "침묵의 빛 중반부까지는 그냥 저냥이었는데",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875877&page=2",
+          "date": "2026-10-18",
+          "positive": 8,
+          "rawPositive": 8,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "훌륭",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 7,
+          "commentPositive": 8,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "침묵의빛 보러갔는데 또 이상한데서 웃는관객 걸림",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875798&page=3",
+          "date": "2026-10-18",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 4,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "침묵의 빛 오데트 안봐도 좋던데",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876256&page=1",
+          "date": "2026-10-20",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "침묵의빛 오데트 필수임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876254&page=1",
+          "date": "2026-10-20",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "침묵의 빛 < 오데트 안 보고 가면 손해임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876252&page=1",
+          "date": "2026-10-20",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kniOoQky3GX9ljyzobwRUGFgQUT.jpg"
+    },
+    {
+      "rank": 4,
       "title": "괴물",
-      "posterUrl": "/assets/recommendation-posters/ccbc5087b974f131.webp",
-      "localPosterUrl": "/assets/recommendation-posters/ccbc5087b974f131.webp",
+      "posterUrl": "/assets/recommendation-posters/55b53e7db7d7ecaf.webp",
+      "localPosterUrl": "/assets/recommendation-posters/55b53e7db7d7ecaf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.tinyticket.net/event/EVcGiptnvBtW",
-      "score": 81.1,
+      "score": 96.1,
       "signal": 5.8,
       "positiveSignal": 5.8,
-      "mentionCount": 5.8,
+      "mentionCount": 7.3,
       "rawPositiveSignal": 8,
-      "rawMentionCount": 8,
+      "rawMentionCount": 9.5,
       "scheduleBackfill": false,
       "venueIds": [
         "sac"
@@ -330,92 +460,25 @@
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.72
+        },
+        {
+          "title": "괴물 빠르네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876285&page=1",
+          "date": "2026-10-20",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cecXXWJ5YINoUFPU8tMMUqz0yqG.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "사랑",
-      "posterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
-      "localPosterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.tinyticket.net/event/EVGvD57i1Clf",
-      "score": 55.6,
-      "signal": 4.3,
-      "positiveSignal": 4.3,
-      "mentionCount": 3.8,
-      "rawPositiveSignal": 6,
-      "rawMentionCount": 6.453445297804259,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "sac"
-      ],
-      "venueNames": [
-        "서울아트시네마"
-      ],
-      "nextDate": "2026-10-31",
-      "nextTime": "17:00",
-      "evidence": [
-        {
-          "title": "<아사코> 하마구치 류스케 인터뷰",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875934&page=1",
-          "date": "2026-10-18",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "아사코는 근데 순수하게 재밌지않음?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1875831&page=3",
-          "date": "2026-10-18",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "가능한 사랑 3.5점 호프 4점",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876111&page=2",
-          "date": "2026-10-19",
-          "positive": 6,
-          "rawPositive": 6,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "압도",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 6,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kISG5ljzXg34TwsqbToGPu8Ebqy.jpg"
     }
   ],
   "festivalPicks": [],
@@ -424,11 +487,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 44,
+    "fetchedPostCount": 83,
     "listedPostCount": 292,
-    "detailedPostCount": 3,
-    "commentFetchCount": 3,
-    "commentCount": 22,
+    "detailedPostCount": 8,
+    "commentFetchCount": 8,
+    "commentCount": 32,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -437,7 +500,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-20",
     "candidateWindowEnd": "2026-11-03",
-    "candidateCount": 123,
+    "candidateCount": 119,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-18",
     "listLookbackDays": 1,
