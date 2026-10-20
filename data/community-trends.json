@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-19T21:23:52.325Z",
+  "generatedAt": "2026-10-20T00:14:27.014Z",
   "weekStart": "2026-10-18",
   "weekEnd": "2026-10-20",
   "windowStart": "2026-10-18",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121840&playDt=20261021&tsId=TS0044&pno=3",
-      "score": 220.1,
+      "score": 222.5,
       "signal": 10.4,
       "positiveSignal": 10.4,
-      "mentionCount": 17.5,
+      "mentionCount": 17.7,
       "rawPositiveSignal": 20,
-      "rawMentionCount": 29.612010260996527,
+      "rawMentionCount": 29.85472367458165,
       "scheduleBackfill": false,
       "venueIds": [
         "sangsangmadang",
@@ -124,6 +124,117 @@
     },
     {
       "rank": 2,
+      "title": "룩백",
+      "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
+      "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-20&movieCd=029713&playSDT=2026-10-20&screenId=02&showSeq=4",
+      "score": 87.3,
+      "signal": 5.8,
+      "positiveSignal": 5.8,
+      "mentionCount": 6,
+      "rawPositiveSignal": 8,
+      "rawMentionCount": 7.792481250360578,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "cinecube",
+        "kucine",
+        "sangsangmadang"
+      ],
+      "venueNames": [
+        "씨네큐브 광화문",
+        "KU시네마테크",
+        "KT&G 상상마당 시네마"
+      ],
+      "nextDate": "2026-10-20",
+      "nextTime": "15:55",
+      "evidence": [
+        {
+          "title": "갠적으로 고히 룩백이 너무 아쉽고 애니 룩백이 넘 좋았던 건",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876151&page=1",
+          "date": "2026-10-19",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "감동",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "난 룩백 괴물보다 좋던데",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876141&page=1",
+          "date": "2026-10-19",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "좋았음",
+              "count": 2,
+              "weight": 2,
+              "score": 4,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "룩백 애니랑 실사 주연은 다 중국계네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876116&page=2",
+          "date": "2026-10-19",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "룩백 보는데 전철 나올 때 마다 좆 같았음",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876223&page=1",
+          "date": "2026-10-20",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/feIEhh07azcRtn2MocbFX3kWcjw.jpg"
+    },
+    {
+      "rank": 3,
       "title": "괴물",
       "posterUrl": "/assets/recommendation-posters/ccbc5087b974f131.webp",
       "localPosterUrl": "/assets/recommendation-posters/ccbc5087b974f131.webp",
@@ -212,101 +323,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cecXXWJ5YINoUFPU8tMMUqz0yqG.jpg"
-    },
-    {
-      "rank": 3,
-      "title": "룩백",
-      "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
-      "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-20&movieCd=029713&playSDT=2026-10-20&screenId=02&showSeq=4",
-      "score": 72.3,
-      "signal": 5.8,
-      "positiveSignal": 5.8,
-      "mentionCount": 4.5,
-      "rawPositiveSignal": 8,
-      "rawMentionCount": 6.292481250360578,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "cinecube",
-        "kucine",
-        "sangsangmadang"
-      ],
-      "venueNames": [
-        "씨네큐브 광화문",
-        "KU시네마테크",
-        "KT&G 상상마당 시네마"
-      ],
-      "nextDate": "2026-10-20",
-      "nextTime": "15:55",
-      "evidence": [
-        {
-          "title": "갠적으로 고히 룩백이 너무 아쉽고 애니 룩백이 넘 좋았던 건",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876151&page=1",
-          "date": "2026-10-19",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "감동",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "난 룩백 괴물보다 좋던데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876141&page=1",
-          "date": "2026-10-19",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "좋았음",
-              "count": 2,
-              "weight": 2,
-              "score": 4,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "룩백 애니랑 실사 주연은 다 중국계네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876116&page=2",
-          "date": "2026-10-19",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/feIEhh07azcRtn2MocbFX3kWcjw.jpg"
     },
     {
       "rank": 4,
@@ -398,11 +414,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 15,
+    "fetchedPostCount": 25,
     "listedPostCount": 292,
-    "detailedPostCount": 2,
-    "commentFetchCount": 2,
-    "commentCount": 5,
+    "detailedPostCount": 3,
+    "commentFetchCount": 3,
+    "commentCount": 8,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
