@@ -284,7 +284,7 @@ assert(
 );
 assert(
   blockingRefreshSources([], [preserved("sac-timetable")]).join() === "sac-timetable",
-  "a preserved result from a core venue must still block the refresh"
+  "a preserved result from a core venue still counts as not refreshed"
 );
 assert(
   blockingRefreshSources([{ sourceId: "movieland-cafe24-options", error: "boom" }], []).join() === "movieland-cafe24-options",
@@ -396,6 +396,10 @@ assert(seatRefresh.meta.seatStatusVerifiedAt === seatCheckedAt, "seat refresh sh
 assert(failedRefresh.meta.generatedAt === fullCheckedAt, "incomplete refresh should preserve generatedAt");
 assert(failedRefresh.meta.lastVerifiedAt === fullCheckedAt, "incomplete refresh should preserve lastVerifiedAt");
 assert(failedRefresh.meta.lastRefreshAttemptAt === failedCheckedAt, "incomplete refresh should record its attempt time");
+const partialRefresh = refreshMeta(fullRefresh, failedCheckedAt, { degradedSourceIds: ["sac-timetable"] });
+assert(partialRefresh.meta.generatedAt === failedCheckedAt, "a refresh that kept one source's stored sessions still counts as a refresh");
+assert(partialRefresh.meta.degradedSourceIds.join() === "sac-timetable", "the kept source is named in the meta");
+assert(refreshMeta(fullRefresh, fullCheckedAt).meta.degradedSourceIds.length === 0, "a clean refresh clears the kept list");
 
 const sanitizedImages = sanitizeScheduleImageUrls(
   {

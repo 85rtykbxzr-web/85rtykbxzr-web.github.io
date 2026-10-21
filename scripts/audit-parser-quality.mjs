@@ -4,6 +4,7 @@ import {
   isIntentionallySkippedSourceHealth,
   isNonBlockingSourceHealthWarning
 } from "./source-health-status.mjs";
+import { isSystemicDegradation } from "./refresh-isolation.mjs";
 
 const scheduleSource = process.env.SEOUL_CINEMA_AUDIT_SCHEDULE_URL || "data/schedule.json";
 const healthSource = process.env.SEOUL_CINEMA_AUDIT_SOURCE_HEALTH_URL || "data/source-health.json";
@@ -289,15 +290,18 @@ function confirmedUpstreamCoverage(healthRows, sessionCount, dateCount) {
   return null;
 }
 
+// errors: the venue's setup is broken. problems: its data is thin or its source failed this time,
+// which only fails the audit when many venues have them at once (see refresh-isolation.mjs).
 function venueIssues({ venue, sessions, sources, healthRows, minimum }) {
   const errors = [];
+  const problems = [];
   const warnings = [];
   const dateCount = uniqueDates(sessions).length;
   if (!sources.length) errors.push(`${venue.name} source missing`);
   if (!sources.some((source) => String(source.parserStatus || "").startsWith("live"))) {
     errors.push(`${venue.name} live parser missing`);
   }
-  if (!sessions.length) errors.push(`${venue.name} has no sessions`);
+  if (!sessions.length) problems.push(`${venue.name} has no sessions`);
   const coverageBelowFloor = minimum && (sessions.length < minimum.sessions || dateCount < minimum.dates);
   const upstreamCoverage = coverageBelowFloor
     ? confirmedUpstreamCoverage(healthRows, sessions.length, dateCount)
@@ -308,16 +312,16 @@ function venueIssues({ venue, sessions, sources, healthRows, minimum }) {
     );
   } else {
     if (minimum && sessions.length < minimum.sessions) {
-      errors.push(`${venue.name} session count below floor ${sessions.length}/${minimum.sessions}`);
+      problems.push(`${venue.name} session count below floor ${sessions.length}/${minimum.sessions}`);
     }
     if (minimum && dateCount < minimum.dates) {
-      errors.push(`${venue.name} date count below floor ${dateCount}/${minimum.dates}`);
+      problems.push(`${venue.name} date count below floor ${dateCount}/${minimum.dates}`);
     }
   }
   for (const row of healthRows) {
-    if (isBlockingHealthFailure(row)) errors.push(`${venue.name} source health failed: ${row.sourceId}`);
+    if (isBlockingHealthFailure(row)) problems.push(`${venue.name} source health failed: ${row.sourceId}`);
   }
-  return { errors, warnings };
+  return { errors, problems, warnings };
 }
 
 const schedule = await readJson(scheduleSource);
@@ -333,6 +337,8 @@ const healthBySourceId = new Map((health.health || []).map((row) => [row.sourceI
 const venuesById = new Map((schedule.venues || []).map((venue) => [venue.id, venue]));
 const errors = [];
 const warnings = [];
+const venueProblems = new Map();
+let serverVenueCount = 0;
 
 const rows = expectedVenueOrder.map((venueId) => {
   const venue = venuesById.get(venueId) || { id: venueId, name: venueId };
@@ -347,6 +353,8 @@ const rows = expectedVenueOrder.map((venueId) => {
   const findings = venueIssues({ venue, sessions, sources, healthRows, minimum });
   errors.push(...findings.errors);
   warnings.push(...findings.warnings);
+  if (findings.problems.length) venueProblems.set(venueId, findings.problems);
+  serverVenueCount += 1;
 
   return {
     id: venueId,
@@ -385,6 +393,13 @@ const rows = expectedVenueOrder.map((venueId) => {
     strengthen: profile.strengthen
   };
 });
+
+if (isSystemicDegradation(venueProblems.size, serverVenueCount)) {
+  for (const problems of venueProblems.values()) errors.push(...problems);
+  errors.push(`too many venues failed at once: ${venueProblems.size}/${serverVenueCount}`);
+} else {
+  for (const problems of venueProblems.values()) warnings.push(...problems.map((problem) => `${problem} (only this venue; its stored sessions stand)`));
+}
 
 const counts = countBy(rows, (row) => row.grade);
 const highRiskRows = rows.filter((row) => row.risk === "높음" || row.grade === "C" || row.grade === "D");

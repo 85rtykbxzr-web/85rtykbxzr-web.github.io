@@ -6,6 +6,7 @@ import {
   isNamedFestivalLabel,
   resolveFestivalIdentity
 } from "../src/festival-labels.mjs";
+import { isSystemicDegradation } from "./refresh-isolation.mjs";
 
 const schedulePath = "data/schedule.json";
 const healthPath = "data/source-health.json";
@@ -324,10 +325,18 @@ function validateCoverage(schedule, health, errors, warnings) {
   }
 
   assertBrowserCollectionContract(schedule, health);
+  // Problems with one cinema's data are collected per venue: a few such venues are warnings (the
+  // refresh kept their stored sessions), many at once fail the audit. See refresh-isolation.mjs.
+  const venueProblems = new Map();
+  const venueProblem = (venueId, message) => {
+    if (!venueProblems.has(venueId)) venueProblems.set(venueId, []);
+    venueProblems.get(venueId).push(message);
+  };
+  const serverVenueIds = schedule.venues.map((venue) => venue.id).filter((venueId) => !isBrowserLiveVenue(schedule, venueId));
   for (const venue of schedule.venues) {
     if (isBrowserLiveVenue(schedule, venue.id)) continue;
     if (!expectedVenueIds.has(venue.id)) errors.push(fail("Unexpected venue needs scope review", venue.id));
-    if (!sessionsByVenue[venue.id]) errors.push(fail("Venue has no sessions", venue.id));
+    if (!sessionsByVenue[venue.id]) venueProblem(venue.id, fail("Venue has no sessions", venue.id));
     const minimum = venueCoverageMinimums[venue.id];
     if (minimum) {
       const sessionCount = sessionsByVenue[venue.id] || 0;
@@ -344,10 +353,10 @@ function validateCoverage(schedule, health, errors, warnings) {
         );
       } else {
         if (sessionCount < minimum.sessions) {
-          errors.push(fail("Venue session count dropped below parser safety floor", `${venue.id} ${sessionCount}/${minimum.sessions}`));
+          venueProblem(venue.id, fail("Venue session count dropped below parser safety floor", `${venue.id} ${sessionCount}/${minimum.sessions}`));
         }
         if (dateCount < minimum.dates) {
-          errors.push(fail("Venue active date count dropped below parser safety floor", `${venue.id} ${dateCount}/${minimum.dates}`));
+          venueProblem(venue.id, fail("Venue active date count dropped below parser safety floor", `${venue.id} ${dateCount}/${minimum.dates}`));
         }
       }
     }
@@ -361,13 +370,24 @@ function validateCoverage(schedule, health, errors, warnings) {
     if (source.venueId && !venueIds.has(source.venueId)) errors.push(fail("Source references unknown venue", `${source.id} ${source.venueId}`));
   }
 
+  const venueOfSource = new Map(schedule.sources.map((source) => [source.id, source.venueId]));
   for (const row of health.health || []) {
     if (!sourceIds.has(row.sourceId)) errors.push(fail("Health row references unknown source", row.sourceId));
-    if (isBlockingHealthFailure(row)) errors.push(fail("Source health failed", `${row.sourceId} ${row.status || ""}`));
+    const report = (message) => (venueOfSource.get(row.sourceId) ? venueProblem(venueOfSource.get(row.sourceId), message) : errors.push(message));
+    if (isBlockingHealthFailure(row)) report(fail("Source health failed", `${row.sourceId} ${row.status || ""}`));
     if (String(row.parserStatus || "").startsWith("live") && Number(row.liveSessionCount || 0) <= 0) {
-      errors.push(fail("Live source returned no sessions", row.sourceId));
+      report(fail("Live source returned no sessions", row.sourceId));
     }
   }
+
+  const systemic = isSystemicDegradation(venueProblems.size, serverVenueIds.length);
+  for (const [venueId, messages] of venueProblems) {
+    for (const message of messages) {
+      if (systemic) errors.push(message);
+      else warnings.push(`Only ${venueId} is affected, so its stored sessions stand: ${message}`);
+    }
+  }
+  if (systemic) errors.push(fail("Too many venues failed at once", `${venueProblems.size}/${serverVenueIds.length} (${[...venueProblems.keys()].join(", ")})`));
 }
 
 function validateNoPastDates(schedule, errors) {
