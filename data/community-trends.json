@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-21T03:23:30.212Z",
+  "generatedAt": "2026-10-21T04:38:16.696Z",
   "weekStart": "2026-10-19",
   "weekEnd": "2026-10-21",
   "windowStart": "2026-10-19",
@@ -14,8 +14,8 @@
     {
       "rank": 1,
       "title": "괴물",
-      "posterUrl": "/assets/recommendation-posters/ccbc5087b974f131.webp",
-      "localPosterUrl": "/assets/recommendation-posters/ccbc5087b974f131.webp",
+      "posterUrl": "/assets/recommendation-posters/2c54ca2aa6105bc9.webp",
+      "localPosterUrl": "/assets/recommendation-posters/2c54ca2aa6105bc9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.tinyticket.net/event/EVcGiptnvBtW",
@@ -137,11 +137,11 @@
     {
       "rank": 2,
       "title": "룩백",
-      "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
-      "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
+      "posterUrl": "/assets/recommendation-posters/eb4c5451cda00929.webp",
+      "localPosterUrl": "/assets/recommendation-posters/eb4c5451cda00929.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121765&playDt=20261021&tsId=TS0039&pno=2",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-21&movieCd=029713&playSDT=2026-10-21&screenId=02&showSeq=4",
       "score": 91.3,
       "signal": 5.6,
       "positiveSignal": 5.6,
@@ -150,19 +150,19 @@
       "rawMentionCount": 10.792481250360577,
       "scheduleBackfill": false,
       "venueIds": [
-        "kucine",
         "cinecube",
         "sangsangmadang",
-        "filmforum"
+        "filmforum",
+        "kucine"
       ],
       "venueNames": [
-        "KU시네마테크",
         "씨네큐브 광화문",
         "KT&G 상상마당 시네마",
-        "필름포럼"
+        "필름포럼",
+        "KU시네마테크"
       ],
       "nextDate": "2026-10-21",
-      "nextTime": "12:50",
+      "nextTime": "15:05",
       "evidence": [
         {
           "title": "갠적으로 고히 룩백이 너무 아쉽고 애니 룩백이 넘 좋았던 건",
@@ -274,8 +274,8 @@
     {
       "rank": 3,
       "title": "버닝(하루키전)",
-      "posterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
-      "localPosterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
+      "posterUrl": "/assets/recommendation-posters/5ead3b8fd9649712.webp",
+      "localPosterUrl": "/assets/recommendation-posters/5ead3b8fd9649712.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261022&tsId=TS0056&pno=3",
@@ -463,7 +463,7 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 61,
+    "fetchedPostCount": 64,
     "listedPostCount": 292,
     "detailedPostCount": 4,
     "commentFetchCount": 4,
