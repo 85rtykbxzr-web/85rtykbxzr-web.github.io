@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-21",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-21T04:38:13.934Z",
+  "updatedAt": "2026-10-21T06:13:52.560Z",
   "days": {
     "2026-10-19": {
       "아사코": {
@@ -643,6 +643,80 @@
       }
     },
     "2026-10-21": {
+      "버닝": {
+        "title": "버닝(하루키전)",
+        "positiveSignal": 12,
+        "mentionCount": 2,
+        "evidence": [
+          {
+            "title": "난 가능한 사랑이 전작들보다 상징을 잘 못넣었다고 생각함",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876478&page=1",
+            "date": "2026-10-21",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "이창동 시 다시봤는데 버닝이랑은 또 다르게 개쩐다",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876412&page=2",
+            "date": "2026-10-21",
+            "positive": 12,
+            "rawPositive": 12,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "개쩐다",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "쩐다",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "사랑": {
+        "title": "사랑",
+        "positiveSignal": 0,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "난 가능한 사랑이 전작들보다 상징을 잘 못넣었다고 생각함",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876478&page=1",
+            "date": "2026-10-21",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "아사코": {
         "title": "아사코(2D)",
         "positiveSignal": 0,
@@ -712,43 +786,6 @@
             "questionLike": false,
             "reviewQuestion": false,
             "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "버닝": {
-        "title": "버닝(하루키전)",
-        "positiveSignal": 12,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "이창동 시 다시봤는데 버닝이랑은 또 다르게 개쩐다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876412&page=2",
-            "date": "2026-10-21",
-            "positive": 12,
-            "rawPositive": 12,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "개쩐다",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              },
-              {
-                "term": "쩐다",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
             "commentPositive": 0,
             "commentNegative": 0
           }

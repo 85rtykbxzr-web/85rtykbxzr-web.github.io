@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-21T04:38:16.696Z",
+  "generatedAt": "2026-10-21T06:13:56.001Z",
   "weekStart": "2026-10-19",
   "weekEnd": "2026-10-21",
   "windowStart": "2026-10-19",
@@ -14,8 +14,8 @@
     {
       "rank": 1,
       "title": "괴물",
-      "posterUrl": "/assets/recommendation-posters/2c54ca2aa6105bc9.webp",
-      "localPosterUrl": "/assets/recommendation-posters/2c54ca2aa6105bc9.webp",
+      "posterUrl": "/assets/recommendation-posters/ccbc5087b974f131.webp",
+      "localPosterUrl": "/assets/recommendation-posters/ccbc5087b974f131.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.tinyticket.net/event/EVcGiptnvBtW",
@@ -137,11 +137,11 @@
     {
       "rank": 2,
       "title": "룩백",
-      "posterUrl": "/assets/recommendation-posters/eb4c5451cda00929.webp",
-      "localPosterUrl": "/assets/recommendation-posters/eb4c5451cda00929.webp",
+      "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
+      "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-21&movieCd=029713&playSDT=2026-10-21&screenId=02&showSeq=4",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-21&movieCd=029713&playSDT=2026-10-21&screenId=02&showSeq=5",
       "score": 91.3,
       "signal": 5.6,
       "positiveSignal": 5.6,
@@ -162,7 +162,7 @@
         "KU시네마테크"
       ],
       "nextDate": "2026-10-21",
-      "nextTime": "15:05",
+      "nextTime": "18:25",
       "evidence": [
         {
           "title": "갠적으로 고히 룩백이 너무 아쉽고 애니 룩백이 넘 좋았던 건",
@@ -274,17 +274,17 @@
     {
       "rank": 3,
       "title": "버닝(하루키전)",
-      "posterUrl": "/assets/recommendation-posters/5ead3b8fd9649712.webp",
-      "localPosterUrl": "/assets/recommendation-posters/5ead3b8fd9649712.webp",
+      "posterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
+      "localPosterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261022&tsId=TS0056&pno=3",
-      "score": 71.3,
+      "score": 81.3,
       "signal": 12,
       "positiveSignal": 12,
-      "mentionCount": 2.1,
+      "mentionCount": 3.1,
       "rawPositiveSignal": 12,
-      "rawMentionCount": 2.5,
+      "rawMentionCount": 3.5,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum"
@@ -310,6 +310,22 @@
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.72
+        },
+        {
+          "title": "난 가능한 사랑이 전작들보다 상징을 잘 못넣었다고 생각함",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876478&page=1",
+          "date": "2026-10-21",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
         },
         {
           "title": "이창동 시 다시봤는데 버닝이랑은 또 다르게 개쩐다",
@@ -463,10 +479,10 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 64,
+    "fetchedPostCount": 86,
     "listedPostCount": 292,
-    "detailedPostCount": 4,
-    "commentFetchCount": 4,
+    "detailedPostCount": 5,
+    "commentFetchCount": 5,
     "commentCount": 1,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
@@ -476,7 +492,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-21",
     "candidateWindowEnd": "2026-11-04",
-    "candidateCount": 121,
+    "candidateCount": 119,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-19",
     "listLookbackDays": 1,
