@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-21T09:20:22.231Z",
+  "generatedAt": "2026-10-21T11:42:43.509Z",
   "weekStart": "2026-10-19",
   "weekEnd": "2026-10-21",
   "windowStart": "2026-10-19",
@@ -18,13 +18,13 @@
       "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261021&tsId=TS0056&pno=5",
-      "score": 154.8,
-      "signal": 14,
-      "positiveSignal": 14,
-      "mentionCount": 9.5,
-      "rawPositiveSignal": 14,
-      "rawMentionCount": 11.85712275883306,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261022&tsId=TS0056&pno=4",
+      "score": 275.2,
+      "signal": 32,
+      "positiveSignal": 32,
+      "mentionCount": 14.3,
+      "rawPositiveSignal": 32,
+      "rawMentionCount": 16.69615871138938,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum",
@@ -36,7 +36,7 @@
         "씨네큐브 광화문",
         "KT&G 상상마당 시네마"
       ],
-      "nextDate": "2026-10-21",
+      "nextDate": "2026-10-22",
       "nextTime": "19:30",
       "evidence": [
         {
@@ -104,8 +104,8 @@
           "dayWeight": 0.72
         },
         {
-          "title": "아사코 극장에서 다시 보면",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876545&page=1",
+          "title": "아사코 보니 하류 10년대 중반이 그립긴하다",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876582&page=1",
           "date": "2026-10-21",
           "positive": 0,
           "rawPositive": 0,
@@ -124,126 +124,120 @@
     },
     {
       "rank": 2,
-      "title": "괴물",
-      "posterUrl": "/assets/recommendation-posters/ccbc5087b974f131.webp",
-      "localPosterUrl": "/assets/recommendation-posters/ccbc5087b974f131.webp",
+      "title": "레위기",
+      "posterUrl": "/assets/recommendation-posters/da37d7157efb65df.webp",
+      "localPosterUrl": "/assets/recommendation-posters/da37d7157efb65df.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.tinyticket.net/event/EVcGiptnvBtW",
-      "score": 97.8,
-      "signal": 4.1,
-      "positiveSignal": 4.1,
-      "mentionCount": 8.1,
-      "rawPositiveSignal": 8,
-      "rawMentionCount": 13.453445297804258,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121833&playDt=20261022&tsId=TS0056&pno=1",
+      "score": 103.6,
+      "signal": 10,
+      "positiveSignal": 10,
+      "mentionCount": 6,
+      "rawPositiveSignal": 10,
+      "rawMentionCount": 6.292481250360578,
       "scheduleBackfill": false,
       "venueIds": [
-        "sac"
+        "filmforum",
+        "sangsangmadang",
+        "kucine"
       ],
       "venueNames": [
-        "서울아트시네마"
+        "필름포럼",
+        "KT&G 상상마당 시네마",
+        "KU시네마테크"
       ],
-      "nextDate": "2026-10-21",
-      "nextTime": "18:40",
+      "nextDate": "2026-10-22",
+      "nextTime": "12:50",
       "evidence": [
         {
-          "title": "난 룩백 괴물보다 좋던데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876141&page=1",
-          "date": "2026-10-19",
-          "positive": 4,
-          "rawPositive": 4,
+          "title": "내일 클레이페이스 레위기 보고온다",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876344&page=2",
+          "date": "2026-10-20",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "레위기 여자랑 같이 봐도 ㄱㅊ음?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876585&page=1",
+          "date": "2026-10-21",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "레위기 재밋네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876559&page=1",
+          "date": "2026-10-21",
+          "positive": 10,
+          "rawPositive": 10,
           "negative": 0,
           "positiveHits": [
             {
-              "term": "좋았음",
-              "count": 2,
-              "weight": 2,
+              "term": "재밋",
+              "count": 1,
+              "weight": 4,
               "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "재밋",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "재밋네",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
               "label": "soft"
             }
           ],
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
+          "commentCount": 5,
+          "commentPositive": 4,
           "commentNegative": 0,
-          "dayWeight": 0.518
+          "dayWeight": 1
         },
         {
-          "title": "고히 괴물 유치하게 느껴졌던 부분이",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876127&page=1",
-          "date": "2026-10-19",
+          "title": "레위기도 게들갑이었네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876524&page=2",
+          "date": "2026-10-21",
           "positive": 0,
           "rawPositive": 0,
           "negative": 0,
           "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "괴물 까이는거 애프터썬 까이는거랑 같은 이치지 뭐",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876121&page=1",
-          "date": "2026-10-19",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "만족",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "서아시 봉 괴물 옆자리 누붕이한테 정가로 양도할까 생각했는데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876354&page=1",
-          "date": "2026-10-20",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 4,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "내일 서아시 괴물 봉gv 취소표 나올까?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876348&page=2",
-          "date": "2026-10-20",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 1
         }
       ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cecXXWJ5YINoUFPU8tMMUqz0yqG.jpg"
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cu0XnXLzJGPeI0msCoJKgnEecKz.jpg"
     },
     {
       "rank": 3,
@@ -252,7 +246,7 @@
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-21&movieCd=029713&playSDT=2026-10-21&screenId=02&showSeq=5",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-22&movieCd=029713&playSDT=2026-10-22&screenId=01&showSeq=3",
       "score": 91.3,
       "signal": 5.6,
       "positiveSignal": 5.6,
@@ -272,8 +266,8 @@
         "필름포럼",
         "KU시네마테크"
       ],
-      "nextDate": "2026-10-21",
-      "nextTime": "18:25",
+      "nextDate": "2026-10-22",
+      "nextTime": "14:40",
       "evidence": [
         {
           "title": "갠적으로 고히 룩백이 너무 아쉽고 애니 룩백이 넘 좋았던 건",
@@ -424,7 +418,7 @@
         },
         {
           "title": "난 가능한 사랑이 전작들보다 상징을 잘 못넣었다고 생각함",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876478&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876478&page=3",
           "date": "2026-10-21",
           "positive": 0,
           "rawPositive": 0,
@@ -440,7 +434,7 @@
         },
         {
           "title": "이창동 시 다시봤는데 버닝이랑은 또 다르게 개쩐다",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876412&page=3",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876412&page=4",
           "date": "2026-10-21",
           "positive": 12,
           "rawPositive": 12,
@@ -479,11 +473,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 124,
+    "fetchedPostCount": 154,
     "listedPostCount": 292,
-    "detailedPostCount": 11,
-    "commentFetchCount": 11,
-    "commentCount": 19,
+    "detailedPostCount": 18,
+    "commentFetchCount": 18,
+    "commentCount": 35,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -492,7 +486,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-21",
     "candidateWindowEnd": "2026-11-04",
-    "candidateCount": 118,
+    "candidateCount": 116,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-19",
     "listLookbackDays": 1,
