@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-21",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-21T00:17:37.218Z",
+  "updatedAt": "2026-10-21T03:23:26.596Z",
   "days": {
     "2026-10-19": {
       "아사코": {
@@ -643,6 +643,80 @@
       }
     },
     "2026-10-21": {
+      "아사코": {
+        "title": "아사코(2D)",
+        "positiveSignal": 0,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "아사코 옛날에 봤을 때는 별로였는데",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876461&page=1",
+            "date": "2026-10-21",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "눈둘데가없네": {
+        "title": "눈 둘 데가 없네(영문자막)",
+        "positiveSignal": 6,
+        "mentionCount": 2.5,
+        "evidence": [
+          {
+            "title": "눈둘데가 없어 어떤 점에서 호평임?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876456&page=1",
+            "date": "2026-10-21",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "눈둘데가없다는 수작입니다.",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876454&page=1",
+            "date": "2026-10-21",
+            "positive": 6,
+            "rawPositive": 6,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "수작",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "좋네",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "버닝": {
         "title": "버닝(하루키전)",
         "positiveSignal": 12,
@@ -650,7 +724,7 @@
         "evidence": [
           {
             "title": "이창동 시 다시봤는데 버닝이랑은 또 다르게 개쩐다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876412&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876412&page=2",
             "date": "2026-10-21",
             "positive": 12,
             "rawPositive": 12,
