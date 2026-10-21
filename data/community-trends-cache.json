@@ -2,281 +2,25 @@
   "version": 3,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-10-19",
-  "windowEnd": "2026-10-21",
+  "windowStart": "2026-10-20",
+  "windowEnd": "2026-10-22",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-10-19",
       "2026-10-20",
-      "2026-10-21"
+      "2026-10-21",
+      "2026-10-22"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-10-21",
-    "lastWindowEnd": "2026-10-21",
+    "lastWindowStart": "2026-10-22",
+    "lastWindowEnd": "2026-10-22",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-21T12:10:57.764Z",
+  "updatedAt": "2026-10-21T15:16:56.945Z",
   "days": {
-    "2026-10-19": {
-      "아사코": {
-        "title": "아사코(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 1.792481250360578,
-        "evidence": [
-          {
-            "title": "헤이트풀 vs 아사코 하나만 보면 뭐 봄?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876155&page=1",
-            "date": "2026-10-19",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "룩백": {
-        "title": "룩백",
-        "positiveSignal": 8,
-        "mentionCount": 6.292481250360578,
-        "evidence": [
-          {
-            "title": "갠적으로 고히 룩백이 너무 아쉽고 애니 룩백이 넘 좋았던 건",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876151&page=1",
-            "date": "2026-10-19",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "감동",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "난 룩백 괴물보다 좋던데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876141&page=1",
-            "date": "2026-10-19",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "좋았음",
-                "count": 2,
-                "weight": 2,
-                "score": 4,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "룩백 애니랑 실사 주연은 다 중국계네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876116&page=2",
-            "date": "2026-10-19",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "괴물": {
-        "title": "괴물",
-        "positiveSignal": 8,
-        "mentionCount": 8,
-        "evidence": [
-          {
-            "title": "난 룩백 괴물보다 좋던데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876141&page=1",
-            "date": "2026-10-19",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "좋았음",
-                "count": 2,
-                "weight": 2,
-                "score": 4,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "고히 괴물 유치하게 느껴졌던 부분이",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876127&page=1",
-            "date": "2026-10-19",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "괴물 까이는거 애프터썬 까이는거랑 같은 이치지 뭐",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876121&page=1",
-            "date": "2026-10-19",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "만족",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "탈출기": {
-        "title": "탈출기 (35mm)",
-        "positiveSignal": 0,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "영자원 신상옥 탈출기도 제한상영 아님????",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876120&page=1",
-            "date": "2026-10-19",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "사랑": {
-        "title": "사랑",
-        "positiveSignal": 6,
-        "mentionCount": 2.160964047443681,
-        "evidence": [
-          {
-            "title": "가능한 사랑 3.5점 호프 4점",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876111&page=2",
-            "date": "2026-10-19",
-            "positive": 6,
-            "rawPositive": 6,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "압도",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 3,
-            "commentPositive": 6,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "트레인스포팅": {
-        "title": "트레인스포팅(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 1.792481250360578,
-        "evidence": [
-          {
-            "title": "트레인스포팅 아트관에서만 개봉하나",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876043&page=3",
-            "date": "2026-10-19",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "헤븐노우즈왓": {
-        "title": "헤븐 노우즈 왓(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 2.160964047443681,
-        "evidence": [
-          {
-            "title": "헤븐노우즈왓 굿타임 언컷젬스급임?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876008&page=3",
-            "date": "2026-10-19",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 4,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-10-20": {
       "아사코": {
         "title": "아사코(2D)",
@@ -1006,7 +750,8 @@
           }
         ]
       }
-    }
+    },
+    "2026-10-22": {}
   },
   "festivals": {}
 }
