@@ -6,6 +6,7 @@ import { createSkippedSourceSnapshotResult } from "./source-health-status.mjs";
 import { writeFileAtomic } from "./write-file-atomic.mjs";
 import { readCafe24Challenge } from "./cafe24-challenge.mjs";
 import { browserLiveSourceIds, prepareBrowserLiveSchedule, deferredBrowserHealth } from "../src/browser-live-schedule.mjs";
+import { isSystemicDegradation } from "./refresh-isolation.mjs";
 const collectInBrowser = process.env.SCHEDULE_COLLECTION_MODE === "browser-live";
 
 const schedulePath = "data/schedule.json";
@@ -1416,7 +1417,9 @@ function refreshMeta(schedule, checkedAt, options = {}) {
           generatedAt: checkedAt,
           lastVerifiedAt: checkedAt,
           seatStatusVerifiedAt: checkedAt,
-          lastRefreshAttemptAt: checkedAt
+          lastRefreshAttemptAt: checkedAt,
+          // sources whose stored sessions were kept because this refresh couldn't verify them
+          degradedSourceIds: [...(options.degradedSourceIds || [])]
         };
   return {
     ...schedule,
@@ -2231,8 +2234,9 @@ function parseMovielandProductSessions(html, detailUrl) {
   });
 }
 
-// A refresh is incomplete when a source failed outright, or when a source that
-// must be verified fell back to its stored sessions.
+// The sources that didn't refresh this time: failed outright, or a source that must be verified
+// fell back to its stored sessions. Each one keeps its stored sessions; only many of them at once
+// stop the refresh (see refresh-isolation.mjs).
 function blockingRefreshSources(liveErrors, liveWarnings) {
   return [
     ...new Set([
@@ -3476,7 +3480,10 @@ async function main() {
 
   const checkedAt = new Date().toISOString();
   const incompleteSourceIds = blockingRefreshSources(liveErrors, liveWarnings);
-  const verificationIncomplete = incompleteSourceIds.length > 0;
+  const expectedSourceIds = fullLiveFetchers
+    .map((fetcher) => liveFetcherSourceIds.get(fetcher))
+    .filter((sourceId) => sourceId && !(collectInBrowser && browserLiveSourceIds.has(sourceId)));
+  const verificationIncomplete = isSystemicDegradation(incompleteSourceIds.length, expectedSourceIds.length);
   const liveSessions = liveResults.flatMap((result) => result.sessions);
   schedule = mergeLiveSessions(schedule, liveSessions, new Set(liveResults.map((result) => result.sourceId)));
   schedule = pruneUnscheduledSessions(schedule);
@@ -3487,7 +3494,7 @@ async function main() {
   schedule = normalizeFestivalSessions(schedule);
   schedule = refreshCuratedRecords(schedule);
   schedule = await fillMissingProgramImages(schedule);
-  schedule = refreshMeta(schedule, checkedAt, { verificationIncomplete });
+  schedule = refreshMeta(schedule, checkedAt, { verificationIncomplete, degradedSourceIds: incompleteSourceIds });
   schedule = refreshCoverageScope(schedule, checkedAt);
   schedule = sanitizeScheduleImageUrls(schedule);
   const sourceById = new Map(schedule.sources.map((source) => [source.id, source]));
@@ -3570,7 +3577,10 @@ async function main() {
   if (liveErrors.length) console.log(`Live adapter errors: ${liveErrors.length}`);
   for (const error of liveErrors) console.log(`  [error] ${error.sourceId}: ${error.error}`);
   if (verificationIncomplete) {
-    throw new Error(`Full refresh incomplete for: ${incompleteSourceIds.join(", ")}`);
+    throw new Error(`Full refresh incomplete: ${incompleteSourceIds.length}/${expectedSourceIds.length} sources failed (${incompleteSourceIds.join(", ")})`);
+  }
+  if (incompleteSourceIds.length) {
+    console.log(`Kept stored sessions for ${incompleteSourceIds.join(", ")}; everything else is refreshed.`);
   }
 }
 
