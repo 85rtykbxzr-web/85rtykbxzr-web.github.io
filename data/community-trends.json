@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-22T00:19:59.934Z",
+  "generatedAt": "2026-10-22T03:56:53.965Z",
   "weekStart": "2026-10-20",
   "weekEnd": "2026-10-22",
   "windowStart": "2026-10-20",
@@ -129,26 +129,26 @@
       "localPosterUrl": "/assets/recommendation-posters/da37d7157efb65df.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121833&playDt=20261022&tsId=TS0056&pno=1",
-      "score": 90.8,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121833&playDt=20261022&tsId=TS0044&pno=6",
+      "score": 125.3,
       "signal": 7.2,
       "positiveSignal": 7.2,
-      "mentionCount": 5.8,
+      "mentionCount": 9.3,
       "rawPositiveSignal": 10,
-      "rawMentionCount": 8.403677461028803,
+      "rawMentionCount": 11.903677461028803,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum",
         "sangsangmadang",
-        "kucine"
+        "kucine",
+        "filmforum"
       ],
       "venueNames": [
-        "필름포럼",
         "KT&G 상상마당 시네마",
-        "KU시네마테크"
+        "KU시네마테크",
+        "필름포럼"
       ],
       "nextDate": "2026-10-22",
-      "nextTime": "12:50",
+      "nextTime": "20:30",
       "evidence": [
         {
           "title": "내일 클레이페이스 레위기 보고온다",
@@ -213,6 +213,22 @@
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.72
+        },
+        {
+          "title": "레위기 부천에서 봤는데",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876682&page=1",
+          "date": "2026-10-22",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cu0XnXLzJGPeI0msCoJKgnEecKz.jpg"
@@ -220,8 +236,8 @@
     {
       "rank": 3,
       "title": "버닝(하루키전)",
-      "posterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
-      "localPosterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
+      "posterUrl": "/assets/recommendation-posters/edc372432da19c51.webp",
+      "localPosterUrl": "/assets/recommendation-posters/edc372432da19c51.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261022&tsId=TS0056&pno=3",
@@ -314,7 +330,7 @@
       "localPosterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121808&playDt=20261022&tsId=TS0039&pno=4",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121808&playDt=20261022&tsId=TS0044&pno=3",
       "score": 58.2,
       "signal": 0,
       "positiveSignal": 0,
@@ -323,21 +339,21 @@
       "rawMentionCount": 9.614409345247939,
       "scheduleBackfill": false,
       "venueIds": [
-        "kucine",
         "sangsangmadang",
         "cinecube",
+        "kucine",
         "sac",
         "filmforum"
       ],
       "venueNames": [
-        "KU시네마테크",
         "KT&G 상상마당 시네마",
         "씨네큐브 광화문",
+        "KU시네마테크",
         "서울아트시네마",
         "필름포럼"
       ],
       "nextDate": "2026-10-22",
-      "nextTime": "12:20",
+      "nextTime": "14:10",
       "evidence": [
         {
           "title": "침묵의 빛 드르렁임?",
@@ -413,11 +429,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 26,
+    "fetchedPostCount": 45,
     "listedPostCount": 292,
-    "detailedPostCount": 1,
-    "commentFetchCount": 1,
-    "commentCount": 4,
+    "detailedPostCount": 5,
+    "commentFetchCount": 5,
+    "commentCount": 9,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
