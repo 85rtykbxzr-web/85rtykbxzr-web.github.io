@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-22",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-22T03:56:50.233Z",
+  "updatedAt": "2026-10-22T04:36:40.875Z",
   "days": {
     "2026-10-20": {
       "아사코": {
@@ -752,6 +752,43 @@
       }
     },
     "2026-10-22": {
+      "응급실": {
+        "title": "응급실",
+        "positiveSignal": 10,
+        "mentionCount": 1.792481250360578,
+        "evidence": [
+          {
+            "title": "오늘 서아시 응급실 걸작이라고 믿고 볼게",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876699&page=1",
+            "date": "2026-10-22",
+            "positive": 10,
+            "rawPositive": 10,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "걸작",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "재밌",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "토리노의말": {
         "title": "토리노의 말(기획전)",
         "positiveSignal": 6,

@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-22T03:56:53.965Z",
+  "generatedAt": "2026-10-22T04:36:43.228Z",
   "weekStart": "2026-10-20",
   "weekEnd": "2026-10-22",
   "windowStart": "2026-10-20",
@@ -235,9 +235,98 @@
     },
     {
       "rank": 3,
+      "title": "응급실",
+      "posterUrl": "/assets/recommendation-posters/fcabd06cfa20cabd.webp",
+      "localPosterUrl": "/assets/recommendation-posters/fcabd06cfa20cabd.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.tinyticket.net/event/EVZiq3HNlvyv",
+      "score": 102.1,
+      "signal": 17.2,
+      "positiveSignal": 17.2,
+      "mentionCount": 3.2,
+      "rawPositiveSignal": 20,
+      "rawMentionCount": 3.792481250360578,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "sac"
+      ],
+      "venueNames": [
+        "서울아트시네마"
+      ],
+      "nextDate": "2026-10-22",
+      "nextTime": "14:30",
+      "evidence": [
+        {
+          "title": "내일 서아시 응급실 핵꿀잼 걸작임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876529&page=2",
+          "date": "2026-10-21",
+          "positive": 10,
+          "rawPositive": 10,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "강추",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 3,
+          "commentPositive": 10,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "오늘 서아시 응급실 걸작이라고 믿고 볼게",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876699&page=1",
+          "date": "2026-10-22",
+          "positive": 10,
+          "rawPositive": 10,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "걸작",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/znKaghCTrUtRwM9nF8a6DilOaLU.jpg"
+    },
+    {
+      "rank": 4,
       "title": "버닝(하루키전)",
-      "posterUrl": "/assets/recommendation-posters/edc372432da19c51.webp",
-      "localPosterUrl": "/assets/recommendation-posters/edc372432da19c51.webp",
+      "posterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
+      "localPosterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261022&tsId=TS0056&pno=3",
@@ -322,105 +411,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kXiF80o74fE9gf3Utf9moAI7ar0.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "침묵의 빛",
-      "posterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
-      "localPosterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121808&playDt=20261022&tsId=TS0044&pno=3",
-      "score": 58.2,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 5.4,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 9.614409345247939,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "sangsangmadang",
-        "cinecube",
-        "kucine",
-        "sac",
-        "filmforum"
-      ],
-      "venueNames": [
-        "KT&G 상상마당 시네마",
-        "씨네큐브 광화문",
-        "KU시네마테크",
-        "서울아트시네마",
-        "필름포럼"
-      ],
-      "nextDate": "2026-10-22",
-      "nextTime": "14:10",
-      "evidence": [
-        {
-          "title": "침묵의 빛 드르렁임?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876373&page=1",
-          "date": "2026-10-20",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 4,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "침묵의 빛 오데트 안봐도 좋던데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876256&page=3",
-          "date": "2026-10-20",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "침묵의빛 오데트 필수임?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876254&page=3",
-          "date": "2026-10-20",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "침묵의 빛, 헤븐 노우즈 왓 필관작임?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876537&page=2",
-          "date": "2026-10-21",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kniOoQky3GX9ljyzobwRUGFgQUT.jpg"
     }
   ],
   "festivalPicks": [],
@@ -429,11 +419,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 45,
+    "fetchedPostCount": 49,
     "listedPostCount": 292,
-    "detailedPostCount": 5,
-    "commentFetchCount": 5,
-    "commentCount": 9,
+    "detailedPostCount": 6,
+    "commentFetchCount": 6,
+    "commentCount": 11,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
