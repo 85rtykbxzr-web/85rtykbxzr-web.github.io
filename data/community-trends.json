@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-22T09:22:50.546Z",
+  "generatedAt": "2026-10-22T11:45:23.671Z",
   "weekStart": "2026-10-20",
   "weekEnd": "2026-10-22",
   "windowStart": "2026-10-20",
@@ -18,26 +18,26 @@
       "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261022&tsId=TS0056&pno=4",
-      "score": 349.9,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-23&movieCd=019765&playSDT=2026-10-23&screenId=01&showSeq=2",
+      "score": 354,
       "signal": 31,
       "positiveSignal": 31,
-      "mentionCount": 22.2,
+      "mentionCount": 22.6,
       "rawPositiveSignal": 40,
-      "rawMentionCount": 27.44208525955422,
+      "rawMentionCount": 27.845762720583018,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum",
         "cinecube",
+        "filmforum",
         "sangsangmadang"
       ],
       "venueNames": [
-        "필름포럼",
         "씨네큐브 광화문",
+        "필름포럼",
         "KT&G 상상마당 시네마"
       ],
-      "nextDate": "2026-10-22",
-      "nextTime": "19:30",
+      "nextDate": "2026-10-23",
+      "nextTime": "11:20",
       "evidence": [
         {
           "title": "아사코가 재개봉을 했다고?",
@@ -129,8 +129,8 @@
       "localPosterUrl": "/assets/recommendation-posters/da37d7157efb65df.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121833&playDt=20261022&tsId=TS0044&pno=6",
-      "score": 125.3,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121833&playDt=20261023&tsId=TS0039&pno=2",
+      "score": 124.8,
       "signal": 7.2,
       "positiveSignal": 7.2,
       "mentionCount": 9.3,
@@ -138,17 +138,17 @@
       "rawMentionCount": 11.903677461028803,
       "scheduleBackfill": false,
       "venueIds": [
-        "sangsangmadang",
         "kucine",
+        "sangsangmadang",
         "filmforum"
       ],
       "venueNames": [
-        "KT&G 상상마당 시네마",
         "KU시네마테크",
+        "KT&G 상상마당 시네마",
         "필름포럼"
       ],
-      "nextDate": "2026-10-22",
-      "nextTime": "20:30",
+      "nextDate": "2026-10-23",
+      "nextTime": "17:40",
       "evidence": [
         {
           "title": "내일 클레이페이스 레위기 보고온다",
@@ -336,7 +336,7 @@
       "localPosterUrl": "/assets/recommendation-posters/242c9b28acea884f.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-22&movieCd=029696&playSDT=2026-10-22&screenId=01&showSeq=5",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121827&playDt=20261023&tsId=TS0056&pno=5",
       "score": 87.5,
       "signal": 8.3,
       "positiveSignal": 8.3,
@@ -345,23 +345,23 @@
       "rawMentionCount": 6,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube",
-        "kucine",
         "filmforum",
+        "cinecube",
         "sangsangmadang",
+        "kucine",
         "indiespace",
         "sac"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
-        "KU시네마테크",
         "필름포럼",
+        "씨네큐브 광화문",
         "KT&G 상상마당 시네마",
+        "KU시네마테크",
         "인디스페이스",
         "서울아트시네마"
       ],
-      "nextDate": "2026-10-22",
-      "nextTime": "18:40",
+      "nextDate": "2026-10-23",
+      "nextTime": "16:10",
       "evidence": [
         {
           "title": "눈둘데가없네 좋음?",
@@ -467,11 +467,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 102,
+    "fetchedPostCount": 119,
     "listedPostCount": 292,
-    "detailedPostCount": 18,
-    "commentFetchCount": 18,
-    "commentCount": 42,
+    "detailedPostCount": 19,
+    "commentFetchCount": 19,
+    "commentCount": 41,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -480,7 +480,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-22",
     "candidateWindowEnd": "2026-11-05",
-    "candidateCount": 116,
+    "candidateCount": 114,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-20",
     "listLookbackDays": 1,
