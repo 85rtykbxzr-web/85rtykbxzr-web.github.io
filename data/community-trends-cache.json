@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-22",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-22T04:36:40.875Z",
+  "updatedAt": "2026-10-22T06:16:33.025Z",
   "days": {
     "2026-10-20": {
       "아사코": {
@@ -752,17 +752,107 @@
       }
     },
     "2026-10-22": {
+      "눈둘데가없네": {
+        "title": "눈 둘 데가 없네",
+        "positiveSignal": 2,
+        "mentionCount": 2.5,
+        "evidence": [
+          {
+            "title": "노스포) 눈 둘 데가 없네, 너무 대충찍네",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876714&page=1",
+            "date": "2026-10-22",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "괜찮",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 7,
+            "commentPositive": 2,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "아사코": {
+        "title": "아사코(2D)",
+        "positiveSignal": 4,
+        "mentionCount": 5.660964047443681,
+        "evidence": [
+          {
+            "title": "아사코는 배우들 불륜까지가 진짜 시네마임",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876713&page=1",
+            "date": "2026-10-22",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "아사코 오랜만에 다시 봤는데 핵꿀잼이구나",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876707&page=1",
+            "date": "2026-10-22",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "아사코 보고 왔는데 연기력",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876665&page=2",
+            "date": "2026-10-22",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 4,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "응급실": {
         "title": "응급실",
-        "positiveSignal": 10,
-        "mentionCount": 1.792481250360578,
+        "positiveSignal": 14,
+        "mentionCount": 2,
         "evidence": [
           {
             "title": "오늘 서아시 응급실 걸작이라고 믿고 볼게",
             "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876699&page=1",
             "date": "2026-10-22",
-            "positive": 10,
-            "rawPositive": 10,
+            "positive": 14,
+            "rawPositive": 14,
             "negative": 0,
             "positiveHits": [
               {
@@ -778,13 +868,20 @@
                 "weight": 4,
                 "score": 4,
                 "label": "clear"
+              },
+              {
+                "term": "재밌",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
               }
             ],
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
+            "commentCount": 3,
+            "commentPositive": 4,
             "commentNegative": 0
           }
         ]
@@ -792,7 +889,7 @@
       "토리노의말": {
         "title": "토리노의 말(기획전)",
         "positiveSignal": 6,
-        "mentionCount": 2.160964047443681,
+        "mentionCount": 2.403677461028802,
         "evidence": [
           {
             "title": "베크마이스터 vs. 토리노의 말",
@@ -813,7 +910,7 @@
             "negativeHits": [],
             "questionLike": true,
             "reviewQuestion": true,
-            "commentCount": 4,
+            "commentCount": 6,
             "commentPositive": 6,
             "commentNegative": 0
           }
@@ -866,28 +963,6 @@
             "questionLike": false,
             "reviewQuestion": false,
             "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "아사코": {
-        "title": "아사코(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 2.160964047443681,
-        "evidence": [
-          {
-            "title": "아사코 보고 왔는데 연기력",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876665&page=1",
-            "date": "2026-10-22",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 4,
             "commentPositive": 0,
             "commentNegative": 0
           }
