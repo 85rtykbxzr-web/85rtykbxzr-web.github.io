@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-22T12:13:29.563Z",
-  "weekStart": "2026-10-20",
-  "weekEnd": "2026-10-22",
-  "windowStart": "2026-10-20",
-  "windowEnd": "2026-10-22",
+  "generatedAt": "2026-10-22T15:19:23.858Z",
+  "weekStart": "2026-10-21",
+  "weekEnd": "2026-10-23",
+  "windowStart": "2026-10-21",
+  "windowEnd": "2026-10-23",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-23&movieCd=019765&playSDT=2026-10-23&screenId=01&showSeq=2",
-      "score": 354,
-      "signal": 31,
-      "positiveSignal": 31,
-      "mentionCount": 22.6,
+      "score": 235.7,
+      "signal": 22.3,
+      "positiveSignal": 22.3,
+      "mentionCount": 14.2,
       "rawPositiveSignal": 40,
-      "rawMentionCount": 27.845762720583018,
+      "rawMentionCount": 22.442085259554215,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -40,54 +40,6 @@
       "nextTime": "11:20",
       "evidence": [
         {
-          "title": "아사코가 재개봉을 했다고?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876385&page=1",
-          "date": "2026-10-20",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "아사코 레전드 gv",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876218&page=4",
-          "date": "2026-10-20",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "아사코 궁금한데 배우들때문에 안보게 됨",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876210&page=4",
-          "date": "2026-10-20",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 6,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
           "title": "아사코 보니 하류 10년대 중반이 그립긴하다",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876582&page=1",
           "date": "2026-10-21",
@@ -101,7 +53,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "폐지에 혹해서 상상마당에서 아사코 봤는데",
@@ -113,6 +65,62 @@
           "positiveHits": [],
           "negativeHits": [],
           "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "아까 낮에 일반인(?) 직장동료가 아사코 알길래 깜짝 놀랐음^-^;;;;",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876568&page=1",
+          "date": "2026-10-21",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 7,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "아사코랑 침묵의 빛 연속으로 보면",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876750&page=1",
+          "date": "2026-10-22",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 4,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "나 안면인식 장애 있어서 아사코 처음 볼때 힘들었음",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876744&page=2",
+          "date": "2026-10-22",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
           "reviewQuestion": false,
           "commentCount": 0,
           "commentPositive": 0,
@@ -130,12 +138,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121833&playDt=20261023&tsId=TS0039&pno=2",
-      "score": 124.8,
-      "signal": 7.2,
-      "positiveSignal": 7.2,
-      "mentionCount": 9.3,
+      "score": 86.8,
+      "signal": 5.2,
+      "positiveSignal": 5.2,
+      "mentionCount": 6.4,
       "rawPositiveSignal": 10,
-      "rawMentionCount": 11.903677461028803,
+      "rawMentionCount": 10.903677461028803,
       "scheduleBackfill": false,
       "venueIds": [
         "kucine",
@@ -151,22 +159,6 @@
       "nextTime": "17:40",
       "evidence": [
         {
-          "title": "내일 클레이페이스 레위기 보고온다",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876344&page=2",
-          "date": "2026-10-20",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
           "title": "레위기 꼴리네",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876597&page=1",
           "date": "2026-10-21",
@@ -180,7 +172,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "씽씽볼까 레위기볼까",
@@ -196,7 +188,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "레위기 여자랑 같이 봐도 ㄱㅊ음?",
@@ -212,7 +204,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "레위기 부천에서 봤는데",
@@ -228,7 +220,23 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
+        },
+        {
+          "title": "레위기는 옵세션 보다 몇 수 아래던데",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876680&page=3",
+          "date": "2026-10-22",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cu0XnXLzJGPeI0msCoJKgnEecKz.jpg"
@@ -241,10 +249,10 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.tinyticket.net/event/EV8drQJc81Bi",
-      "score": 119.7,
-      "signal": 21.2,
-      "positiveSignal": 21.2,
-      "mentionCount": 3.4,
+      "score": 86.3,
+      "signal": 15.3,
+      "positiveSignal": 15.3,
+      "mentionCount": 2.5,
       "rawPositiveSignal": 24,
       "rawMentionCount": 4,
       "scheduleBackfill": false,
@@ -286,7 +294,7 @@
           "commentCount": 3,
           "commentPositive": 10,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "오늘 서아시 응급실 걸작이라고 믿고 볼게",
@@ -324,7 +332,7 @@
           "commentCount": 3,
           "commentPositive": 4,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/znKaghCTrUtRwM9nF8a6DilOaLU.jpg"
@@ -337,10 +345,10 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121827&playDt=20261023&tsId=TS0056&pno=5",
-      "score": 87.5,
-      "signal": 8.3,
-      "positiveSignal": 8.3,
-      "mentionCount": 5,
+      "score": 64.1,
+      "signal": 6,
+      "positiveSignal": 6,
+      "mentionCount": 3.6,
       "rawPositiveSignal": 10,
       "rawMentionCount": 6,
       "scheduleBackfill": false,
@@ -377,7 +385,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "눈둘데가 없어 어떤 점에서 호평임?",
@@ -393,7 +401,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "눈둘데가없다는 수작입니다.",
@@ -424,7 +432,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "노스포) 눈 둘 데가 없네, 너무 대충찍네",
@@ -455,7 +463,7 @@
           "commentCount": 12,
           "commentPositive": 4,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FKQ3U4%2FdJMcagtJijO%2FAAAAAAAAAAAAAAAAAAAAAKH4gcbmONCbAZfz-yMnnRvJMuh7ha9n8OfVoQ04Vj1U%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DBz4UTof%252BDblZAy%252BDwGuV3tXMP2s%253D"
@@ -467,24 +475,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 128,
+    "fetchedPostCount": 2,
     "listedPostCount": 292,
-    "detailedPostCount": 19,
-    "commentFetchCount": 19,
-    "commentCount": 41,
+    "detailedPostCount": 0,
+    "commentFetchCount": 0,
+    "commentCount": 0,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-10-21",
-    "newestScannedDate": "2026-10-22",
+    "newestScannedDate": "2026-10-23",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-10-22",
-    "candidateWindowEnd": "2026-11-05",
+    "candidateWindowStart": "2026-10-23",
+    "candidateWindowEnd": "2026-11-06",
     "candidateCount": 114,
     "seedLookbackDays": 3,
-    "seedStart": "2026-10-20",
+    "seedStart": "2026-10-21",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-10-22",
+    "listWindowStart": "2026-10-23",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -492,7 +500,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-10-22"
+      "2026-10-23"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [
