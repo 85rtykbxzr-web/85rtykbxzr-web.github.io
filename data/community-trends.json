@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-23T09:10:00.351Z",
+  "generatedAt": "2026-10-23T11:33:31.590Z",
   "weekStart": "2026-10-21",
   "weekEnd": "2026-10-23",
   "windowStart": "2026-10-21",
@@ -14,17 +14,17 @@
     {
       "rank": 1,
       "title": "아사코",
-      "posterUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg",
-      "localPosterUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg",
+      "posterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
+      "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-23&movieCd=019765&playSDT=2026-10-23&screenId=01&showSeq=6",
-      "score": 343.7,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-24&movieCd=019765&playSDT=2026-10-24&screenId=01&showSeq=4",
+      "score": 366.6,
       "signal": 32.3,
       "positiveSignal": 32.3,
-      "mentionCount": 21,
+      "mentionCount": 23.3,
       "rawPositiveSignal": 50,
-      "rawMentionCount": 29.234566509914792,
+      "rawMentionCount": 31.527047760275373,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -36,8 +36,8 @@
         "필름포럼",
         "KT&G 상상마당 시네마"
       ],
-      "nextDate": "2026-10-23",
-      "nextTime": "20:00",
+      "nextDate": "2026-10-24",
+      "nextTime": "15:40",
       "evidence": [
         {
           "title": "아사코 보니 하류 10년대 중반이 그립긴하다",
@@ -132,114 +132,18 @@
     },
     {
       "rank": 2,
-      "title": "응급실",
-      "posterUrl": "/assets/recommendation-posters/fcabd06cfa20cabd.webp",
-      "localPosterUrl": "/assets/recommendation-posters/fcabd06cfa20cabd.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.tinyticket.net/event/EV8drQJc81Bi",
-      "score": 86.3,
-      "signal": 15.3,
-      "positiveSignal": 15.3,
-      "mentionCount": 2.5,
-      "rawPositiveSignal": 24,
-      "rawMentionCount": 4,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "sac"
-      ],
-      "venueNames": [
-        "서울아트시네마"
-      ],
-      "nextDate": "2026-10-25",
-      "nextTime": "16:30",
-      "evidence": [
-        {
-          "title": "내일 서아시 응급실 핵꿀잼 걸작임?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876529&page=2",
-          "date": "2026-10-21",
-          "positive": 10,
-          "rawPositive": 10,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "강추",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            },
-            {
-              "term": "꿀잼",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 3,
-          "commentPositive": 10,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "오늘 서아시 응급실 걸작이라고 믿고 볼게",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876699&page=2",
-          "date": "2026-10-22",
-          "positive": 14,
-          "rawPositive": 14,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "걸작",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            },
-            {
-              "term": "재밌",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "재밌",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 4,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/znKaghCTrUtRwM9nF8a6DilOaLU.jpg"
-    },
-    {
-      "rank": 3,
       "title": "레위기",
       "posterUrl": "/assets/recommendation-posters/da37d7157efb65df.webp",
       "localPosterUrl": "/assets/recommendation-posters/da37d7157efb65df.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121833&playDt=20261025&tsId=TS0039&pno=2",
-      "score": 86.3,
+      "score": 96.3,
       "signal": 5.2,
       "positiveSignal": 5.2,
-      "mentionCount": 6.4,
+      "mentionCount": 7.4,
       "rawPositiveSignal": 10,
-      "rawMentionCount": 10.903677461028803,
+      "rawMentionCount": 11.903677461028803,
       "scheduleBackfill": false,
       "venueIds": [
         "kucine",
@@ -338,39 +242,65 @@
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cu0XnXLzJGPeI0msCoJKgnEecKz.jpg"
     },
     {
-      "rank": 4,
-      "title": "버닝(하루키전)",
-      "posterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
-      "localPosterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
+      "rank": 3,
+      "title": "눈 둘 데가 없네",
+      "posterUrl": "/assets/recommendation-posters/242c9b28acea884f.webp",
+      "localPosterUrl": "/assets/recommendation-posters/242c9b28acea884f.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261024&tsId=TS0057&pno=3",
-      "score": 74.6,
-      "signal": 6.2,
-      "positiveSignal": 6.2,
-      "mentionCount": 4.8,
-      "rawPositiveSignal": 12,
-      "rawMentionCount": 5.792481250360578,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-24&movieCd=029696&playSDT=2026-10-24&screenId=02&showSeq=4",
+      "score": 89.1,
+      "signal": 6,
+      "positiveSignal": 6,
+      "mentionCount": 6.1,
+      "rawPositiveSignal": 10,
+      "rawMentionCount": 8.5,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum"
+        "cinecube",
+        "sangsangmadang",
+        "filmforum",
+        "kucine",
+        "indiespace",
+        "sac"
       ],
       "venueNames": [
-        "필름포럼"
+        "씨네큐브 광화문",
+        "KT&G 상상마당 시네마",
+        "필름포럼",
+        "KU시네마테크",
+        "인디스페이스",
+        "서울아트시네마"
       ],
       "nextDate": "2026-10-24",
-      "nextTime": "17:10",
+      "nextTime": "16:55",
       "evidence": [
         {
-          "title": "난 가능한 사랑이 전작들보다 상징을 잘 못넣었다고 생각함",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876478&page=3",
+          "title": "눈둘데가없네 좋음?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876563&page=1",
           "date": "2026-10-21",
           "positive": 0,
           "rawPositive": 0,
           "negative": 0,
           "positiveHits": [],
           "negativeHits": [],
-          "questionLike": false,
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "눈둘데가 없어 어떤 점에서 호평임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876456&page=3",
+          "date": "2026-10-21",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
           "reviewQuestion": false,
           "commentCount": 0,
           "commentPositive": 0,
@@ -378,70 +308,181 @@
           "dayWeight": 0.518
         },
         {
-          "title": "이창동 시 다시봤는데 버닝이랑은 또 다르게 개쩐다",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876412&page=4",
+          "title": "눈둘데가없다는 수작입니다.",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876454&page=3",
           "date": "2026-10-21",
-          "positive": 12,
-          "rawPositive": 12,
+          "positive": 6,
+          "rawPositive": 6,
           "negative": 0,
           "positiveHits": [
             {
-              "term": "개쩐다",
+              "term": "수작",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "좋네",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "노스포) 눈 둘 데가 없네, 너무 대충찍네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876714&page=2",
+          "date": "2026-10-22",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "괜찮",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            },
+            {
+              "term": "좋았음",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 12,
+          "commentPositive": 4,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "홍상수 신작 눈둘데 관객수 천명 실화냐",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877094&page=1",
+          "date": "2026-10-23",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 10,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FKQ3U4%2FdJMcagtJijO%2FAAAAAAAAAAAAAAAAAAAAAKH4gcbmONCbAZfz-yMnnRvJMuh7ha9n8OfVoQ04Vj1U%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DBz4UTof%252BDblZAy%252BDwGuV3tXMP2s%253D"
+    },
+    {
+      "rank": 4,
+      "title": "응급실",
+      "posterUrl": "/assets/recommendation-posters/fcabd06cfa20cabd.webp",
+      "localPosterUrl": "/assets/recommendation-posters/fcabd06cfa20cabd.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.tinyticket.net/event/EV8drQJc81Bi",
+      "score": 86.3,
+      "signal": 15.3,
+      "positiveSignal": 15.3,
+      "mentionCount": 2.5,
+      "rawPositiveSignal": 24,
+      "rawMentionCount": 4,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "sac"
+      ],
+      "venueNames": [
+        "서울아트시네마"
+      ],
+      "nextDate": "2026-10-25",
+      "nextTime": "16:30",
+      "evidence": [
+        {
+          "title": "내일 서아시 응급실 핵꿀잼 걸작임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876529&page=2",
+          "date": "2026-10-21",
+          "positive": 10,
+          "rawPositive": 10,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "강추",
               "count": 1,
               "weight": 6,
               "score": 6,
               "label": "strong"
             },
             {
-              "term": "쩐다",
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 3,
+          "commentPositive": 10,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "오늘 서아시 응급실 걸작이라고 믿고 볼게",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876699&page=2",
+          "date": "2026-10-22",
+          "positive": 14,
+          "rawPositive": 14,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "걸작",
               "count": 1,
               "weight": 6,
               "score": 6,
               "label": "strong"
+            },
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
             }
           ],
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
+          "commentCount": 3,
+          "commentPositive": 4,
           "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "버닝이랑 시 둘중 하나만본다면??",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876923&page=3",
-          "date": "2026-10-23",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        },
-        {
-          "title": "버닝 << 여자들은 공감 못함??",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876846&page=4",
-          "date": "2026-10-23",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 4,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kXiF80o74fE9gf3Utf9moAI7ar0.jpg"
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/znKaghCTrUtRwM9nF8a6DilOaLU.jpg"
     }
   ],
   "festivalPicks": [],
@@ -450,11 +491,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 207,
+    "fetchedPostCount": 255,
     "listedPostCount": 292,
-    "detailedPostCount": 12,
-    "commentFetchCount": 12,
-    "commentCount": 52,
+    "detailedPostCount": 16,
+    "commentFetchCount": 16,
+    "commentCount": 67,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -463,7 +504,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-23",
     "candidateWindowEnd": "2026-11-06",
-    "candidateCount": 109,
+    "candidateCount": 107,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-21",
     "listLookbackDays": 1,
