@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-23T17:01:17.794Z",
+  "generatedAt": "2026-10-23T18:13:57.119Z",
   "weekStart": "2026-10-22",
   "weekEnd": "2026-10-24",
   "windowStart": "2026-10-22",
@@ -330,68 +330,100 @@
     },
     {
       "rank": 4,
-      "title": "응급실",
-      "posterUrl": "/assets/recommendation-posters/fcabd06cfa20cabd.webp",
-      "localPosterUrl": "/assets/recommendation-posters/fcabd06cfa20cabd.webp",
+      "title": "룩백",
+      "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
+      "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.tinyticket.net/event/EV8drQJc81Bi",
-      "score": 39.9,
-      "signal": 7.3,
-      "positiveSignal": 7.3,
-      "mentionCount": 1,
-      "rawPositiveSignal": 14,
-      "rawMentionCount": 2,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121765&playDt=20261024&tsId=TS0039&pno=3",
+      "score": 46.9,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 4.3,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 5.660964047443681,
       "scheduleBackfill": false,
       "venueIds": [
-        "sac"
+        "kucine",
+        "cinecube",
+        "filmforum",
+        "sangsangmadang"
       ],
       "venueNames": [
-        "서울아트시네마"
+        "KU시네마테크",
+        "씨네큐브 광화문",
+        "필름포럼",
+        "KT&G 상상마당 시네마"
       ],
-      "nextDate": "2026-10-25",
-      "nextTime": "16:30",
+      "nextDate": "2026-10-24",
+      "nextTime": "13:00",
       "evidence": [
         {
-          "title": "오늘 서아시 응급실 걸작이라고 믿고 볼게",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876699&page=2",
+          "title": "룩백 실사 원작,애니 둘다 안 보고 갔는데 불친절하게 만들었네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876782&page=1",
           "date": "2026-10-22",
-          "positive": 14,
-          "rawPositive": 14,
+          "positive": 0,
+          "rawPositive": 0,
           "negative": 0,
-          "positiveHits": [
-            {
-              "term": "걸작",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            },
-            {
-              "term": "재밌",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "재밌",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
+          "positiveHits": [],
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 4,
+          "commentCount": 0,
+          "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.518
+        },
+        {
+          "title": "이동진 5점준 침묵의 빛은 또 패스하노",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877087&page=1",
+          "date": "2026-10-23",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "룩백 후지노 방에서 무슨 냄새날까?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876910&page=4",
+          "date": "2026-10-23",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 3,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "룩백 애니메이션 영화 vs 실사 영화 뭐가 더 좋았음?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877186&page=1",
+          "date": "2026-10-24",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/znKaghCTrUtRwM9nF8a6DilOaLU.jpg"
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/feIEhh07azcRtn2MocbFX3kWcjw.jpg"
     }
   ],
   "festivalPicks": [],
@@ -400,11 +432,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 16,
+    "fetchedPostCount": 17,
     "listedPostCount": 292,
-    "detailedPostCount": 1,
-    "commentFetchCount": 1,
-    "commentCount": 3,
+    "detailedPostCount": 2,
+    "commentFetchCount": 2,
+    "commentCount": 6,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
