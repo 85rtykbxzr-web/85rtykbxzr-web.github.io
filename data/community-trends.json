@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-23T04:42:07.277Z",
+  "generatedAt": "2026-10-23T06:19:07.804Z",
   "weekStart": "2026-10-21",
   "weekEnd": "2026-10-23",
   "windowStart": "2026-10-21",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-23&movieCd=019765&playSDT=2026-10-23&screenId=01&showSeq=6",
-      "score": 332.3,
+      "score": 333.7,
       "signal": 32.3,
       "positiveSignal": 32.3,
-      "mentionCount": 19.9,
+      "mentionCount": 20,
       "rawPositiveSignal": 50,
-      "rawMentionCount": 28.103049306997896,
+      "rawMentionCount": 28.234566509914792,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -339,95 +339,58 @@
     },
     {
       "rank": 4,
-      "title": "버닝(하루키전)",
-      "posterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
-      "localPosterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
+      "title": "눈 둘 데가 없네",
+      "posterUrl": "/assets/recommendation-posters/242c9b28acea884f.webp",
+      "localPosterUrl": "/assets/recommendation-posters/242c9b28acea884f.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261024&tsId=TS0057&pno=3",
-      "score": 69.6,
-      "signal": 6.2,
-      "positiveSignal": 6.2,
-      "mentionCount": 4.3,
-      "rawPositiveSignal": 12,
-      "rawMentionCount": 5.292481250360578,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121827&playDt=20261023&tsId=TS0056&pno=5",
+      "score": 64.1,
+      "signal": 6,
+      "positiveSignal": 6,
+      "mentionCount": 3.6,
+      "rawPositiveSignal": 10,
+      "rawMentionCount": 6,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum"
+        "filmforum",
+        "cinecube",
+        "sangsangmadang",
+        "kucine",
+        "indiespace",
+        "sac"
       ],
       "venueNames": [
-        "필름포럼"
+        "필름포럼",
+        "씨네큐브 광화문",
+        "KT&G 상상마당 시네마",
+        "KU시네마테크",
+        "인디스페이스",
+        "서울아트시네마"
       ],
-      "nextDate": "2026-10-24",
-      "nextTime": "17:10",
+      "nextDate": "2026-10-23",
+      "nextTime": "16:10",
       "evidence": [
         {
-          "title": "난 가능한 사랑이 전작들보다 상징을 잘 못넣었다고 생각함",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876478&page=3",
+          "title": "눈둘데가없네 좋음?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876563&page=1",
           "date": "2026-10-21",
           "positive": 0,
           "rawPositive": 0,
           "negative": 0,
           "positiveHits": [],
           "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
+          "questionLike": true,
+          "reviewQuestion": true,
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.518
         },
         {
-          "title": "이창동 시 다시봤는데 버닝이랑은 또 다르게 개쩐다",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876412&page=4",
+          "title": "눈둘데가 없어 어떤 점에서 호평임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876456&page=3",
           "date": "2026-10-21",
-          "positive": 12,
-          "rawPositive": 12,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "개쩐다",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            },
-            {
-              "term": "쩐다",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "버닝은 봤고 시는 안봤는데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876904&page=1",
-          "date": "2026-10-23",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        },
-        {
-          "title": "버닝 << 여자들은 공감 못함??",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876846&page=2",
-          "date": "2026-10-23",
           "positive": 0,
           "rawPositive": 0,
           "negative": 0,
@@ -435,13 +398,75 @@
           "negativeHits": [],
           "questionLike": true,
           "reviewQuestion": false,
-          "commentCount": 4,
+          "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.518
+        },
+        {
+          "title": "눈둘데가없다는 수작입니다.",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876454&page=3",
+          "date": "2026-10-21",
+          "positive": 6,
+          "rawPositive": 6,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "수작",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "좋네",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "노스포) 눈 둘 데가 없네, 너무 대충찍네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876714&page=2",
+          "date": "2026-10-22",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "괜찮",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            },
+            {
+              "term": "좋았음",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 12,
+          "commentPositive": 4,
+          "commentNegative": 0,
+          "dayWeight": 0.72
         }
       ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kXiF80o74fE9gf3Utf9moAI7ar0.jpg"
+      "posterSourceUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FKQ3U4%2FdJMcagtJijO%2FAAAAAAAAAAAAAAAAAAAAAKH4gcbmONCbAZfz-yMnnRvJMuh7ha9n8OfVoQ04Vj1U%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DBz4UTof%252BDblZAy%252BDwGuV3tXMP2s%253D"
     }
   ],
   "festivalPicks": [],
@@ -450,11 +475,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 71,
+    "fetchedPostCount": 85,
     "listedPostCount": 292,
-    "detailedPostCount": 5,
-    "commentFetchCount": 5,
-    "commentCount": 36,
+    "detailedPostCount": 7,
+    "commentFetchCount": 7,
+    "commentCount": 43,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -463,7 +488,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-23",
     "candidateWindowEnd": "2026-11-06",
-    "candidateCount": 113,
+    "candidateCount": 112,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-21",
     "listLookbackDays": 1,

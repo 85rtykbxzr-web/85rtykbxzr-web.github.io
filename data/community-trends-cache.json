@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-23",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-23T04:42:03.708Z",
+  "updatedAt": "2026-10-23T06:19:02.765Z",
   "days": {
     "2026-10-21": {
       "레위기": {
@@ -737,14 +737,36 @@
       }
     },
     "2026-10-23": {
-      "버닝": {
-        "title": "버닝(하루키전)",
+      "씽씽": {
+        "title": "씽씽",
         "positiveSignal": 0,
-        "mentionCount": 3.292481250360578,
+        "mentionCount": 1,
         "evidence": [
           {
-            "title": "버닝은 봤고 시는 안봤는데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876904&page=1",
+            "title": "씽씽 아직도 개봉 안했었냐? ㅋㅋ",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876919&page=1",
+            "date": "2026-10-23",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "사랑": {
+        "title": "사랑",
+        "positiveSignal": 0,
+        "mentionCount": 1.5,
+        "evidence": [
+          {
+            "title": "가능한 사랑 봤는데 투자 못받은 이유 이해되긴 하네",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876917&page=1",
             "date": "2026-10-23",
             "positive": 0,
             "rawPositive": 0,
@@ -753,13 +775,20 @@
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 0,
+            "commentCount": 1,
             "commentPositive": 0,
             "commentNegative": 0
-          },
+          }
+        ]
+      },
+      "룩백": {
+        "title": "룩백",
+        "positiveSignal": 0,
+        "mentionCount": 2.160964047443681,
+        "evidence": [
           {
-            "title": "버닝 << 여자들은 공감 못함??",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876846&page=2",
+            "title": "룩백 후지노 방에서 무슨 냄새날까?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876910&page=1",
             "date": "2026-10-23",
             "positive": 0,
             "rawPositive": 0,
@@ -768,7 +797,7 @@
             "negativeHits": [],
             "questionLike": true,
             "reviewQuestion": false,
-            "commentCount": 4,
+            "commentCount": 3,
             "commentPositive": 0,
             "commentNegative": 0
           }
@@ -777,7 +806,7 @@
       "아사코": {
         "title": "아사코",
         "positiveSignal": 10,
-        "mentionCount": 5.660964047443681,
+        "mentionCount": 5.792481250360578,
         "evidence": [
           {
             "title": "아사코 다음주 주말까지 걸려있냐고",
@@ -798,7 +827,7 @@
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 4,
+            "commentCount": 5,
             "commentPositive": 0,
             "commentNegative": 0
           },
@@ -836,8 +865,30 @@
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 28,
+            "commentCount": 30,
             "commentPositive": 6,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "버닝": {
+        "title": "버닝(하루키전)",
+        "positiveSignal": 0,
+        "mentionCount": 2.292481250360578,
+        "evidence": [
+          {
+            "title": "버닝 << 여자들은 공감 못함??",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876846&page=2",
+            "date": "2026-10-23",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 4,
+            "commentPositive": 0,
             "commentNegative": 0
           }
         ]
