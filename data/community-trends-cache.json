@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-24",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-23T18:13:52.039Z",
+  "updatedAt": "2026-10-23T21:19:45.626Z",
   "days": {
     "2026-10-22": {
       "룩백": {
@@ -747,22 +747,30 @@
     "2026-10-24": {
       "룩백": {
         "title": "룩백(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 1.5,
+        "positiveSignal": 2,
+        "mentionCount": 2,
         "evidence": [
           {
             "title": "룩백 애니메이션 영화 vs 실사 영화 뭐가 더 좋았음?",
             "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877186&page=1",
             "date": "2026-10-24",
-            "positive": 0,
-            "rawPositive": 0,
+            "positive": 2,
+            "rawPositive": 2,
             "negative": 0,
-            "positiveHits": [],
+            "positiveHits": [
+              {
+                "term": "좋음",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
             "negativeHits": [],
             "questionLike": true,
             "reviewQuestion": true,
-            "commentCount": 1,
-            "commentPositive": 0,
+            "commentCount": 3,
+            "commentPositive": 2,
             "commentNegative": 0
           }
         ]
