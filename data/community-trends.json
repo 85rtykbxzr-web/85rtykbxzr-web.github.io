@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-23T12:16:07.054Z",
-  "weekStart": "2026-10-21",
-  "weekEnd": "2026-10-23",
-  "windowStart": "2026-10-21",
-  "windowEnd": "2026-10-23",
+  "generatedAt": "2026-10-23T15:22:35.938Z",
+  "weekStart": "2026-10-22",
+  "weekEnd": "2026-10-24",
+  "windowStart": "2026-10-22",
+  "windowEnd": "2026-10-24",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-24&movieCd=019765&playSDT=2026-10-24&screenId=01&showSeq=4",
-      "score": 368.7,
-      "signal": 32.3,
-      "positiveSignal": 32.3,
-      "mentionCount": 23.5,
-      "rawPositiveSignal": 50,
-      "rawMentionCount": 31.734566509914792,
+      "score": 183.3,
+      "signal": 11.3,
+      "positiveSignal": 11.3,
+      "mentionCount": 13.4,
+      "rawPositiveSignal": 18,
+      "rawMentionCount": 22.234566509914792,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -39,54 +39,6 @@
       "nextDate": "2026-10-24",
       "nextTime": "15:40",
       "evidence": [
-        {
-          "title": "아사코 보니 하류 10년대 중반이 그립긴하다",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876582&page=1",
-          "date": "2026-10-21",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "폐지에 혹해서 상상마당에서 아사코 봤는데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876573&page=1",
-          "date": "2026-10-21",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "아까 낮에 일반인(?) 직장동료가 아사코 알길래 깜짝 놀랐음^-^;;;;",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876568&page=1",
-          "date": "2026-10-21",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 7,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "아사코랑 침묵의 빛 연속으로 보면",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876750&page=1",
@@ -109,7 +61,7 @@
           "commentCount": 1,
           "commentPositive": 4,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "나 안면인식 장애 있어서 아사코 처음 볼때 힘들었음",
@@ -125,6 +77,54 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "아사코 볼때 이해안됐던거",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876741&page=2",
+          "date": "2026-10-22",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "아사코 vs 헤븐 노우즈 왓",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877072&page=1",
+          "date": "2026-10-23",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 3,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "하마구치 아사코 댓글",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877048&page=2",
+          "date": "2026-10-23",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
           "dayWeight": 0.72
         }
       ],
@@ -138,12 +138,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-24&movieCd=029696&playSDT=2026-10-24&screenId=02&showSeq=4",
-      "score": 122.1,
-      "signal": 8,
-      "positiveSignal": 8,
-      "mentionCount": 8.6,
-      "rawPositiveSignal": 12,
-      "rawMentionCount": 11,
+      "score": 67,
+      "signal": 3.5,
+      "positiveSignal": 3.5,
+      "mentionCount": 4.9,
+      "rawPositiveSignal": 6,
+      "rawMentionCount": 7.5,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -164,69 +164,6 @@
       "nextDate": "2026-10-24",
       "nextTime": "16:55",
       "evidence": [
-        {
-          "title": "눈둘데가없네 좋음?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876563&page=1",
-          "date": "2026-10-21",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "눈둘데가 없어 어떤 점에서 호평임?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876456&page=3",
-          "date": "2026-10-21",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "눈둘데가없다는 수작입니다.",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876454&page=3",
-          "date": "2026-10-21",
-          "positive": 6,
-          "rawPositive": 6,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "수작",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "좋네",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "노스포) 눈 둘 데가 없네, 너무 대충찍네",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876714&page=2",
@@ -256,7 +193,7 @@
           "commentCount": 12,
           "commentPositive": 4,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "스포) 눈둘데가없네 이 장면 어떻게 생각함",
@@ -280,150 +217,71 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
+        },
+        {
+          "title": "눈둘데가없네 홍 최근작 중에 젤 아쉽네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877103&page=1",
+          "date": "2026-10-23",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "홍상수 신작 눈둘데 관객수 천명 실화냐",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877094&page=1",
+          "date": "2026-10-23",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 11,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FKQ3U4%2FdJMcagtJijO%2FAAAAAAAAAAAAAAAAAAAAAKH4gcbmONCbAZfz-yMnnRvJMuh7ha9n8OfVoQ04Vj1U%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DBz4UTof%252BDblZAy%252BDwGuV3tXMP2s%253D"
     },
     {
       "rank": 3,
-      "title": "레위기",
-      "posterUrl": "/assets/recommendation-posters/da37d7157efb65df.webp",
-      "localPosterUrl": "/assets/recommendation-posters/da37d7157efb65df.webp",
+      "title": "사탄탱고",
+      "posterUrl": "/assets/recommendation-posters/704a6f92e45d6139.webp",
+      "localPosterUrl": "/assets/recommendation-posters/704a6f92e45d6139.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121833&playDt=20261025&tsId=TS0039&pno=2",
-      "score": 96.3,
-      "signal": 5.2,
-      "positiveSignal": 5.2,
-      "mentionCount": 7.4,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121788&playDt=20261024&tsId=TS0039&pno=1",
+      "score": 53,
+      "signal": 7.2,
+      "positiveSignal": 7.2,
+      "mentionCount": 2.4,
       "rawPositiveSignal": 10,
-      "rawMentionCount": 11.903677461028803,
+      "rawMentionCount": 3.292481250360578,
       "scheduleBackfill": false,
       "venueIds": [
-        "kucine",
-        "sangsangmadang",
-        "filmforum"
+        "kucine"
       ],
       "venueNames": [
-        "KU시네마테크",
-        "KT&G 상상마당 시네마",
-        "필름포럼"
+        "KU시네마테크"
       ],
-      "nextDate": "2026-10-25",
-      "nextTime": "12:10",
+      "nextDate": "2026-10-24",
+      "nextTime": "15:00",
       "evidence": [
         {
-          "title": "레위기 꼴리네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876597&page=1",
-          "date": "2026-10-21",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "씽씽볼까 레위기볼까",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876594&page=1",
-          "date": "2026-10-21",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "레위기 여자랑 같이 봐도 ㄱㅊ음?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876585&page=1",
-          "date": "2026-10-21",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "레위기 부천에서 봤는데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876682&page=3",
-          "date": "2026-10-22",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "레위기는 옵세션 보다 몇 수 아래던데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876680&page=3",
-          "date": "2026-10-22",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cu0XnXLzJGPeI0msCoJKgnEecKz.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "응급실",
-      "posterUrl": "/assets/recommendation-posters/fcabd06cfa20cabd.webp",
-      "localPosterUrl": "/assets/recommendation-posters/fcabd06cfa20cabd.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.tinyticket.net/event/EV8drQJc81Bi",
-      "score": 86.3,
-      "signal": 15.3,
-      "positiveSignal": 15.3,
-      "mentionCount": 2.5,
-      "rawPositiveSignal": 24,
-      "rawMentionCount": 4,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "sac"
-      ],
-      "venueNames": [
-        "서울아트시네마"
-      ],
-      "nextDate": "2026-10-25",
-      "nextTime": "16:30",
-      "evidence": [
-        {
-          "title": "내일 서아시 응급실 핵꿀잼 걸작임?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876529&page=2",
-          "date": "2026-10-21",
+          "title": "사탱=의외로 좆밥같음",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877042&page=2",
+          "date": "2026-10-23",
           "positive": 10,
           "rawPositive": 10,
           "negative": 0,
@@ -444,13 +302,56 @@
             }
           ],
           "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 3,
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
           "commentPositive": 10,
           "commentNegative": 0,
-          "dayWeight": 0.518
+          "dayWeight": 0.72
         },
+        {
+          "title": "사탄탱고 그부분은 왜 그렇게 연출했을까? ( 스포)",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876936&page=4",
+          "date": "2026-10-23",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/qLTuJAltCfYTrVUpfNrVz8w2RRS.jpg"
+    },
+    {
+      "rank": 4,
+      "title": "응급실",
+      "posterUrl": "/assets/recommendation-posters/fcabd06cfa20cabd.webp",
+      "localPosterUrl": "/assets/recommendation-posters/fcabd06cfa20cabd.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.tinyticket.net/event/EV8drQJc81Bi",
+      "score": 39.9,
+      "signal": 7.3,
+      "positiveSignal": 7.3,
+      "mentionCount": 1,
+      "rawPositiveSignal": 14,
+      "rawMentionCount": 2,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "sac"
+      ],
+      "venueNames": [
+        "서울아트시네마"
+      ],
+      "nextDate": "2026-10-25",
+      "nextTime": "16:30",
+      "evidence": [
         {
           "title": "오늘 서아시 응급실 걸작이라고 믿고 볼게",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876699&page=2",
@@ -487,7 +388,7 @@
           "commentCount": 3,
           "commentPositive": 4,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/znKaghCTrUtRwM9nF8a6DilOaLU.jpg"
@@ -499,24 +400,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 265,
+    "fetchedPostCount": 4,
     "listedPostCount": 292,
-    "detailedPostCount": 18,
-    "commentFetchCount": 18,
-    "commentCount": 70,
+    "detailedPostCount": 1,
+    "commentFetchCount": 1,
+    "commentCount": 0,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
-    "oldestScannedDate": "2026-10-22",
-    "newestScannedDate": "2026-10-23",
+    "oldestScannedDate": "2026-10-23",
+    "newestScannedDate": "2026-10-24",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-10-23",
-    "candidateWindowEnd": "2026-11-06",
-    "candidateCount": 107,
+    "candidateWindowStart": "2026-10-24",
+    "candidateWindowEnd": "2026-11-07",
+    "candidateCount": 109,
     "seedLookbackDays": 3,
-    "seedStart": "2026-10-21",
+    "seedStart": "2026-10-22",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-10-23",
+    "listWindowStart": "2026-10-24",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -524,7 +425,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-10-23"
+      "2026-10-24"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [

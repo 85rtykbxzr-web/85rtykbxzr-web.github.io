@@ -2,390 +2,25 @@
   "version": 3,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-10-21",
-  "windowEnd": "2026-10-23",
+  "windowStart": "2026-10-22",
+  "windowEnd": "2026-10-24",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-10-21",
       "2026-10-22",
-      "2026-10-23"
+      "2026-10-23",
+      "2026-10-24"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-10-23",
-    "lastWindowEnd": "2026-10-23",
+    "lastWindowStart": "2026-10-24",
+    "lastWindowEnd": "2026-10-24",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-23T12:16:03.071Z",
+  "updatedAt": "2026-10-23T15:22:31.427Z",
   "days": {
-    "2026-10-21": {
-      "레위기": {
-        "title": "레위기(2D)",
-        "positiveSignal": 10,
-        "mentionCount": 7.403677461028802,
-        "evidence": [
-          {
-            "title": "레위기 꼴리네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876597&page=1",
-            "date": "2026-10-21",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "씽씽볼까 레위기볼까",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876594&page=1",
-            "date": "2026-10-21",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "레위기 여자랑 같이 봐도 ㄱㅊ음?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876585&page=1",
-            "date": "2026-10-21",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "아사코": {
-        "title": "아사코(2D)",
-        "positiveSignal": 32,
-        "mentionCount": 9.5,
-        "evidence": [
-          {
-            "title": "아사코 보니 하류 10년대 중반이 그립긴하다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876582&page=1",
-            "date": "2026-10-21",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "폐지에 혹해서 상상마당에서 아사코 봤는데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876573&page=1",
-            "date": "2026-10-21",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "아까 낮에 일반인(?) 직장동료가 아사코 알길래 깜짝 놀랐음^-^;;;;",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876568&page=1",
-            "date": "2026-10-21",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 7,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "눈둘데가없네": {
-        "title": "눈 둘 데가 없네(2D)",
-        "positiveSignal": 6,
-        "mentionCount": 3.5,
-        "evidence": [
-          {
-            "title": "눈둘데가없네 좋음?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876563&page=1",
-            "date": "2026-10-21",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "눈둘데가 없어 어떤 점에서 호평임?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876456&page=3",
-            "date": "2026-10-21",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "눈둘데가없다는 수작입니다.",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876454&page=3",
-            "date": "2026-10-21",
-            "positive": 6,
-            "rawPositive": 6,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "수작",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              },
-              {
-                "term": "좋네",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "드라이브마이카": {
-        "title": "드라이브 마이 카(하루키전)",
-        "positiveSignal": 0,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "하류 최고작은 드마카가 정배지?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876561&page=1",
-            "date": "2026-10-21",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "침묵의빛": {
-        "title": "침묵의 빛(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 2.160964047443681,
-        "evidence": [
-          {
-            "title": "침묵의 빛, 헤븐 노우즈 왓 필관작임?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876537&page=2",
-            "date": "2026-10-21",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "헤븐노우즈왓": {
-        "title": "헤븐 노우즈 왓(GV)",
-        "positiveSignal": 0,
-        "mentionCount": 4.453445297804259,
-        "evidence": [
-          {
-            "title": "침묵의 빛, 헤븐 노우즈 왓 필관작임?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876537&page=2",
-            "date": "2026-10-21",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "헤븐 노우즈 왓 프레임 원래 이럼??",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876521&page=2",
-            "date": "2026-10-21",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 5,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "응급실": {
-        "title": "응급실",
-        "positiveSignal": 10,
-        "mentionCount": 2,
-        "evidence": [
-          {
-            "title": "내일 서아시 응급실 핵꿀잼 걸작임?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876529&page=2",
-            "date": "2026-10-21",
-            "positive": 10,
-            "rawPositive": 10,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "강추",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              },
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 3,
-            "commentPositive": 10,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "버닝": {
-        "title": "버닝(하루키전)",
-        "positiveSignal": 12,
-        "mentionCount": 2,
-        "evidence": [
-          {
-            "title": "난 가능한 사랑이 전작들보다 상징을 잘 못넣었다고 생각함",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876478&page=3",
-            "date": "2026-10-21",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "이창동 시 다시봤는데 버닝이랑은 또 다르게 개쩐다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876412&page=4",
-            "date": "2026-10-21",
-            "positive": 12,
-            "rawPositive": 12,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "개쩐다",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              },
-              {
-                "term": "쩐다",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "사랑": {
-        "title": "사랑",
-        "positiveSignal": 0,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "난 가능한 사랑이 전작들보다 상징을 잘 못넣었다고 생각함",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876478&page=3",
-            "date": "2026-10-21",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-10-22": {
       "룩백": {
         "title": "룩백",
@@ -1103,6 +738,30 @@
             "questionLike": false,
             "reviewQuestion": false,
             "commentCount": 4,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      }
+    },
+    "2026-10-24": {
+      "오데트": {
+        "title": "오데트",
+        "positiveSignal": 0,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "오늘 서아시 오데트 예매는 해놨는데",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877172&page=1",
+            "date": "2026-10-24",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
             "commentPositive": 0,
             "commentNegative": 0
           }
