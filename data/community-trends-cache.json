@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-25",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-24T15:52:52.648Z",
+  "updatedAt": "2026-10-24T18:14:32.642Z",
   "days": {
     "2026-10-23": {
       "눈둘데가없네": {
@@ -628,24 +628,62 @@
       }
     },
     "2026-10-25": {
+      "눈둘데가없네": {
+        "title": "눈 둘 데가 없네(영문자막)",
+        "positiveSignal": 2,
+        "mentionCount": 2.160964047443681,
+        "evidence": [
+          {
+            "title": "오늘 눈둘데없니 gv에서 인상적이였던거",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877348&page=1",
+            "date": "2026-10-25",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "인상적",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 4,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "트레인스포팅": {
         "title": "트레인스포팅(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 1,
+        "positiveSignal": 4,
+        "mentionCount": 1.792481250360578,
         "evidence": [
           {
             "title": "트레인스포팅 왜 좋아하는지 알겠더라",
             "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877338&page=1",
             "date": "2026-10-25",
-            "positive": 0,
-            "rawPositive": 0,
+            "positive": 4,
+            "rawPositive": 4,
             "negative": 0,
-            "positiveHits": [],
+            "positiveHits": [
+              {
+                "term": "추천",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
+            "commentCount": 2,
+            "commentPositive": 4,
             "commentNegative": 0
           }
         ]
