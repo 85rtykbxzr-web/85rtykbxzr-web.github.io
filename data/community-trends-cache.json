@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-24",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-24T00:10:21.670Z",
+  "updatedAt": "2026-10-24T03:16:08.879Z",
   "days": {
     "2026-10-22": {
       "룩백": {
@@ -745,10 +745,40 @@
       }
     },
     "2026-10-24": {
+      "사랑": {
+        "title": "사랑",
+        "positiveSignal": 2,
+        "mentionCount": 2.403677461028802,
+        "evidence": [
+          {
+            "title": "가능한 사랑 오스카 갈듯",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877199&page=1",
+            "date": "2026-10-24",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "볼만",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 6,
+            "commentPositive": 2,
+            "commentNegative": 0
+          }
+        ]
+      },
       "룩백": {
         "title": "룩백(2D)",
         "positiveSignal": 6,
-        "mentionCount": 2.292481250360578,
+        "mentionCount": 2.403677461028802,
         "evidence": [
           {
             "title": "룩백 애니메이션 영화 vs 실사 영화 뭐가 더 좋았음?",
@@ -776,7 +806,7 @@
             "negativeHits": [],
             "questionLike": true,
             "reviewQuestion": true,
-            "commentCount": 5,
+            "commentCount": 6,
             "commentPositive": 6,
             "commentNegative": 0
           }
@@ -785,7 +815,7 @@
       "오데트": {
         "title": "오데트",
         "positiveSignal": 4,
-        "mentionCount": 2.292481250360578,
+        "mentionCount": 2.403677461028802,
         "evidence": [
           {
             "title": "오늘 서아시 오데트 예매는 해놨는데",
@@ -806,7 +836,7 @@
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 5,
+            "commentCount": 6,
             "commentPositive": 4,
             "commentNegative": 0
           }
