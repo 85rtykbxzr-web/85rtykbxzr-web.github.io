@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-24",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-24T10:52:55.320Z",
+  "updatedAt": "2026-10-24T12:18:34.792Z",
   "days": {
     "2026-10-22": {
       "룩백": {
@@ -745,10 +745,32 @@
       }
     },
     "2026-10-24": {
+      "버닝": {
+        "title": "버닝(하루키전)",
+        "positiveSignal": 0,
+        "mentionCount": 2.160964047443681,
+        "evidence": [
+          {
+            "title": "버닝이나 노나없에서 느끼는 재미는 어떤류의 재미임?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877278&page=1",
+            "date": "2026-10-24",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 4,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "아사코": {
         "title": "아사코(2D)",
         "positiveSignal": 8,
-        "mentionCount": 7.084962500721156,
+        "mentionCount": 7.377443751081734,
         "evidence": [
           {
             "title": "아사코 호평 여주 얼굴 지분 얼마나 된다고 봄?",
@@ -761,13 +783,13 @@
             "negativeHits": [],
             "questionLike": true,
             "reviewQuestion": false,
-            "commentCount": 1,
+            "commentCount": 2,
             "commentPositive": 0,
             "commentNegative": 0
           },
           {
             "title": "아사코 카라타 에리카 존나 예쁨",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877235&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877235&page=2",
             "date": "2026-10-24",
             "positive": 0,
             "rawPositive": 0,
@@ -860,7 +882,7 @@
       "트레인스포팅": {
         "title": "트레인스포팅(2D)",
         "positiveSignal": 4,
-        "mentionCount": 1.792481250360578,
+        "mentionCount": 2,
         "evidence": [
           {
             "title": "트레인스포팅 예전 감동만 못하네",
@@ -881,7 +903,7 @@
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 2,
+            "commentCount": 3,
             "commentPositive": 0,
             "commentNegative": 0
           }
@@ -889,12 +911,42 @@
       },
       "룩백": {
         "title": "룩백(2D)",
-        "positiveSignal": 6,
-        "mentionCount": 2.5,
+        "positiveSignal": 12,
+        "mentionCount": 5,
         "evidence": [
           {
             "title": "룩백 애니메이션 영화 vs 실사 영화 뭐가 더 좋았음?",
             "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877186&page=2",
+            "date": "2026-10-24",
+            "positive": 6,
+            "rawPositive": 6,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "여운",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "좋음",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 7,
+            "commentPositive": 6,
+            "commentNegative": 0
+          },
+          {
+            "title": "룩백 애니메이션 영화 vs 실사 영화 뭐가 더 좋았음?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877186&page=3",
             "date": "2026-10-24",
             "positive": 6,
             "rawPositive": 6,
