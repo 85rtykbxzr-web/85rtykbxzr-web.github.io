@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-24T09:12:53.176Z",
+  "generatedAt": "2026-10-24T10:52:59.000Z",
   "weekStart": "2026-10-22",
   "weekEnd": "2026-10-24",
   "windowStart": "2026-10-22",
@@ -18,26 +18,26 @@
       "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261024&tsId=TS0056&pno=4",
-      "score": 271.2,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121840&playDt=20261025&tsId=TS0044&pno=2",
+      "score": 286.2,
       "signal": 19.3,
       "positiveSignal": 19.3,
-      "mentionCount": 19,
+      "mentionCount": 20.5,
       "rawPositiveSignal": 26,
-      "rawMentionCount": 27.819529010635947,
+      "rawMentionCount": 29.319529010635947,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum",
         "sangsangmadang",
-        "cinecube"
+        "cinecube",
+        "filmforum"
       ],
       "venueNames": [
-        "필름포럼",
         "KT&G 상상마당 시네마",
-        "씨네큐브 광화문"
+        "씨네큐브 광화문",
+        "필름포럼"
       ],
-      "nextDate": "2026-10-24",
-      "nextTime": "19:40",
+      "nextDate": "2026-10-25",
+      "nextTime": "11:50",
       "evidence": [
         {
           "title": "아사코랑 침묵의 빛 연속으로 보면",
@@ -138,12 +138,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.tinyticket.net/event/EVGvD57i1Clf",
-      "score": 94.7,
+      "score": 99.3,
       "signal": 2,
       "positiveSignal": 2,
-      "mentionCount": 8.6,
+      "mentionCount": 9,
       "rawPositiveSignal": 2,
-      "rawMentionCount": 9.66096404744368,
+      "rawMentionCount": 10.114409345247939,
       "scheduleBackfill": false,
       "venueIds": [
         "sac"
@@ -197,7 +197,7 @@
           "negativeHits": [],
           "questionLike": true,
           "reviewQuestion": false,
-          "commentCount": 3,
+          "commentCount": 5,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
@@ -213,7 +213,7 @@
           "negativeHits": [],
           "questionLike": true,
           "reviewQuestion": true,
-          "commentCount": 3,
+          "commentCount": 4,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
@@ -252,7 +252,7 @@
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-24&movieCd=029713&playSDT=2026-10-24&screenId=02&showSeq=5",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261025&tsId=TS0044&pno=3",
       "score": 80.9,
       "signal": 6,
       "positiveSignal": 6,
@@ -261,19 +261,19 @@
       "rawMentionCount": 6.660964047443681,
       "scheduleBackfill": false,
       "venueIds": [
+        "sangsangmadang",
         "cinecube",
         "filmforum",
-        "sangsangmadang",
         "kucine"
       ],
       "venueNames": [
+        "KT&G 상상마당 시네마",
         "씨네큐브 광화문",
         "필름포럼",
-        "KT&G 상상마당 시네마",
         "KU시네마테크"
       ],
-      "nextDate": "2026-10-24",
-      "nextTime": "18:25",
+      "nextDate": "2026-10-25",
+      "nextTime": "14:05",
       "evidence": [
         {
           "title": "룩백 실사 원작,애니 둘다 안 보고 갔는데 불친절하게 만들었네",
@@ -488,11 +488,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 81,
+    "fetchedPostCount": 101,
     "listedPostCount": 292,
-    "detailedPostCount": 8,
-    "commentFetchCount": 8,
-    "commentCount": 28,
+    "detailedPostCount": 9,
+    "commentFetchCount": 9,
+    "commentCount": 33,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
