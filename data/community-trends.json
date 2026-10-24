@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-24T03:16:14.032Z",
+  "generatedAt": "2026-10-24T04:30:30.273Z",
   "weekStart": "2026-10-22",
   "weekEnd": "2026-10-24",
   "windowStart": "2026-10-22",
@@ -132,12 +132,103 @@
     },
     {
       "rank": 2,
+      "title": "오데트",
+      "posterUrl": "/assets/recommendation-posters/be9a6c64e7aad395.webp",
+      "localPosterUrl": "/assets/recommendation-posters/be9a6c64e7aad395.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.tinyticket.net/event/EVff3eL4uj3T",
+      "score": 98.5,
+      "signal": 8,
+      "positiveSignal": 8,
+      "mentionCount": 6.6,
+      "rawPositiveSignal": 8,
+      "rawMentionCount": 6.599836172418182,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "sac"
+      ],
+      "venueNames": [
+        "서울아트시네마"
+      ],
+      "nextDate": "2026-10-24",
+      "nextTime": "16:40",
+      "evidence": [
+        {
+          "title": "사랑방손님과어머니 vs 오데트",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877208&page=1",
+          "date": "2026-10-24",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "오늘 서아시 오데트 예매는 해놨는데",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877172&page=1",
+          "date": "2026-10-24",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 6,
+          "commentPositive": 4,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "오늘 서아시 오데트 예매는 해놨는데",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877172&page=2",
+          "date": "2026-10-24",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 6,
+          "commentPositive": 4,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/c9Oef9uQEuadZlnvv8hphRmTIgx.jpg"
+    },
+    {
+      "rank": 3,
       "title": "룩백",
       "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121765&playDt=20261024&tsId=TS0039&pno=3",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-24&movieCd=029713&playSDT=2026-10-24&screenId=01&showSeq=3",
       "score": 80,
       "signal": 6,
       "positiveSignal": 6,
@@ -146,19 +237,19 @@
       "rawMentionCount": 6.564641508472483,
       "scheduleBackfill": false,
       "venueIds": [
-        "kucine",
         "cinecube",
         "filmforum",
-        "sangsangmadang"
+        "sangsangmadang",
+        "kucine"
       ],
       "venueNames": [
-        "KU시네마테크",
         "씨네큐브 광화문",
         "필름포럼",
-        "KT&G 상상마당 시네마"
+        "KT&G 상상마당 시네마",
+        "KU시네마테크"
       ],
       "nextDate": "2026-10-24",
-      "nextTime": "13:00",
+      "nextTime": "13:45",
       "evidence": [
         {
           "title": "룩백 실사 원작,애니 둘다 안 보고 갔는데 불친절하게 만들었네",
@@ -243,7 +334,7 @@
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/feIEhh07azcRtn2MocbFX3kWcjw.jpg"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "title": "눈 둘 데가 없네",
       "posterUrl": "/assets/recommendation-posters/242c9b28acea884f.webp",
       "localPosterUrl": "/assets/recommendation-posters/242c9b28acea884f.webp",
@@ -365,89 +456,6 @@
         }
       ],
       "posterSourceUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FKQ3U4%2FdJMcagtJijO%2FAAAAAAAAAAAAAAAAAAAAAKH4gcbmONCbAZfz-yMnnRvJMuh7ha9n8OfVoQ04Vj1U%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DBz4UTof%252BDblZAy%252BDwGuV3tXMP2s%253D"
-    },
-    {
-      "rank": 4,
-      "title": "사랑",
-      "posterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
-      "localPosterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.tinyticket.net/event/EVGvD57i1Clf",
-      "score": 53.8,
-      "signal": 2,
-      "positiveSignal": 2,
-      "mentionCount": 4.5,
-      "rawPositiveSignal": 2,
-      "rawMentionCount": 5.564641508472483,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "sac"
-      ],
-      "venueNames": [
-        "서울아트시네마"
-      ],
-      "nextDate": "2026-10-31",
-      "nextTime": "17:00",
-      "evidence": [
-        {
-          "title": "가능한 사랑 이탈리아 더빙판 예고",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876763&page=1",
-          "date": "2026-10-22",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "가능한 사랑 봤는데 투자 못받은 이유 이해되긴 하네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876917&page=4",
-          "date": "2026-10-23",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 4,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "가능한 사랑 오스카 갈듯",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877199&page=1",
-          "date": "2026-10-24",
-          "positive": 2,
-          "rawPositive": 2,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "볼만",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 6,
-          "commentPositive": 2,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kISG5ljzXg34TwsqbToGPu8Ebqy.jpg"
     }
   ],
   "festivalPicks": [],
@@ -456,11 +464,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 32,
+    "fetchedPostCount": 49,
     "listedPostCount": 292,
-    "detailedPostCount": 3,
-    "commentFetchCount": 3,
-    "commentCount": 18,
+    "detailedPostCount": 5,
+    "commentFetchCount": 5,
+    "commentCount": 26,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -469,7 +477,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-24",
     "candidateWindowEnd": "2026-11-07",
-    "candidateCount": 109,
+    "candidateCount": 108,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-22",
     "listLookbackDays": 1,

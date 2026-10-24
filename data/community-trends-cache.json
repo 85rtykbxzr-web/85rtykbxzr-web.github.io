@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-24",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-24T03:16:08.879Z",
+  "updatedAt": "2026-10-24T04:30:26.030Z",
   "days": {
     "2026-10-22": {
       "룩백": {
@@ -745,6 +745,96 @@
       }
     },
     "2026-10-24": {
+      "오데트": {
+        "title": "오데트",
+        "positiveSignal": 8,
+        "mentionCount": 6.599836172418182,
+        "evidence": [
+          {
+            "title": "사랑방손님과어머니 vs 오데트",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877208&page=1",
+            "date": "2026-10-24",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "오늘 서아시 오데트 예매는 해놨는데",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877172&page=1",
+            "date": "2026-10-24",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 6,
+            "commentPositive": 4,
+            "commentNegative": 0
+          },
+          {
+            "title": "오늘 서아시 오데트 예매는 해놨는데",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877172&page=2",
+            "date": "2026-10-24",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 6,
+            "commentPositive": 4,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "사랑방손님과어머니": {
+        "title": "사랑방 손님과 어머니 (4K)",
+        "positiveSignal": 0,
+        "mentionCount": 1.792481250360578,
+        "evidence": [
+          {
+            "title": "사랑방손님과어머니 vs 오데트",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877208&page=1",
+            "date": "2026-10-24",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "사랑": {
         "title": "사랑",
         "positiveSignal": 2,
@@ -776,7 +866,7 @@
         ]
       },
       "룩백": {
-        "title": "룩백(2D)",
+        "title": "룩백",
         "positiveSignal": 6,
         "mentionCount": 2.403677461028802,
         "evidence": [
@@ -808,36 +898,6 @@
             "reviewQuestion": true,
             "commentCount": 6,
             "commentPositive": 6,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "오데트": {
-        "title": "오데트",
-        "positiveSignal": 4,
-        "mentionCount": 2.403677461028802,
-        "evidence": [
-          {
-            "title": "오늘 서아시 오데트 예매는 해놨는데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877172&page=1",
-            "date": "2026-10-24",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 6,
-            "commentPositive": 4,
             "commentNegative": 0
           }
         ]
