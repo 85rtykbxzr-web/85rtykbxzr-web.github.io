@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-24",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-24T04:30:26.030Z",
+  "updatedAt": "2026-10-24T06:22:05.718Z",
   "days": {
     "2026-10-22": {
       "룩백": {
@@ -745,10 +745,55 @@
       }
     },
     "2026-10-24": {
+      "아사코": {
+        "title": "아사코",
+        "positiveSignal": 2,
+        "mentionCount": 3.292481250360578,
+        "evidence": [
+          {
+            "title": "아사코 포스터 잃어버린 누붕이 있나",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877218&page=1",
+            "date": "2026-10-24",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "아사코봣는데넘 좋네요",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877216&page=1",
+            "date": "2026-10-24",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "좋네",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "오데트": {
         "title": "오데트",
-        "positiveSignal": 8,
-        "mentionCount": 6.599836172418182,
+        "positiveSignal": 4,
+        "mentionCount": 4.564641508472483,
         "evidence": [
           {
             "title": "사랑방손님과어머니 vs 오데트",
@@ -763,29 +808,6 @@
             "reviewQuestion": false,
             "commentCount": 1,
             "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "오늘 서아시 오데트 예매는 해놨는데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877172&page=1",
-            "date": "2026-10-24",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 6,
-            "commentPositive": 4,
             "commentNegative": 0
           },
           {
@@ -816,7 +838,7 @@
       "사랑방손님과어머니": {
         "title": "사랑방 손님과 어머니 (4K)",
         "positiveSignal": 0,
-        "mentionCount": 1.792481250360578,
+        "mentionCount": 2.160964047443681,
         "evidence": [
           {
             "title": "사랑방손님과어머니 vs 오데트",
@@ -838,7 +860,7 @@
       "사랑": {
         "title": "사랑",
         "positiveSignal": 2,
-        "mentionCount": 2.403677461028802,
+        "mentionCount": 2.5,
         "evidence": [
           {
             "title": "가능한 사랑 오스카 갈듯",
@@ -859,7 +881,7 @@
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 6,
+            "commentCount": 7,
             "commentPositive": 2,
             "commentNegative": 0
           }
@@ -872,7 +894,7 @@
         "evidence": [
           {
             "title": "룩백 애니메이션 영화 vs 실사 영화 뭐가 더 좋았음?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877186&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877186&page=2",
             "date": "2026-10-24",
             "positive": 6,
             "rawPositive": 6,
