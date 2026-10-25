@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-25T15:09:48.321Z",
+  "generatedAt": "2026-10-25T16:08:37.813Z",
   "weekStart": "2026-10-24",
   "weekEnd": "2026-10-26",
   "windowStart": "2026-10-24",
@@ -124,6 +124,121 @@
     },
     {
       "rank": 2,
+      "title": "사랑",
+      "posterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
+      "localPosterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.tinyticket.net/event/EVGvD57i1Clf",
+      "score": 69.9,
+      "signal": 1,
+      "positiveSignal": 1,
+      "mentionCount": 6.5,
+      "rawPositiveSignal": 2,
+      "rawMentionCount": 10.245926548164835,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "sac"
+      ],
+      "venueNames": [
+        "서울아트시네마"
+      ],
+      "nextDate": "2026-10-31",
+      "nextTime": "17:00",
+      "evidence": [
+        {
+          "title": "이 영화들 중에서 가능한 사랑이 아카데미 국제장편영화상 젤 유력해?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877254&page=1",
+          "date": "2026-10-24",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 5,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "피닉스나 사랑을 카피하다 이거 극장에서 잘 안틈?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877246&page=1",
+          "date": "2026-10-24",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 4,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "가능한 사랑 오스카 갈듯",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877199&page=2",
+          "date": "2026-10-24",
+          "positive": 2,
+          "rawPositive": 2,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "볼만",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 7,
+          "commentPositive": 2,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "아사코 좋았다",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877499&page=1",
+          "date": "2026-10-25",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "사랑도 통역이 되나요같은 여운 짙게 남는 영화 추천 좀",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877589&page=1",
+          "date": "2026-10-26",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kISG5ljzXg34TwsqbToGPu8Ebqy.jpg"
+    },
+    {
+      "rank": 3,
       "title": "룩백",
       "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
@@ -232,7 +347,7 @@
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/feIEhh07azcRtn2MocbFX3kWcjw.jpg"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "title": "트레인스포팅",
       "posterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
       "localPosterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
@@ -316,105 +431,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/1jUC02qsqS2NxBMFarbIhcQtazV.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "사랑",
-      "posterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
-      "localPosterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.tinyticket.net/event/EVGvD57i1Clf",
-      "score": 52,
-      "signal": 1,
-      "positiveSignal": 1,
-      "mentionCount": 4.7,
-      "rawPositiveSignal": 2,
-      "rawMentionCount": 8.453445297804258,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "sac"
-      ],
-      "venueNames": [
-        "서울아트시네마"
-      ],
-      "nextDate": "2026-10-31",
-      "nextTime": "17:00",
-      "evidence": [
-        {
-          "title": "이 영화들 중에서 가능한 사랑이 아카데미 국제장편영화상 젤 유력해?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877254&page=1",
-          "date": "2026-10-24",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 5,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "피닉스나 사랑을 카피하다 이거 극장에서 잘 안틈?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877246&page=1",
-          "date": "2026-10-24",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 4,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "가능한 사랑 오스카 갈듯",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877199&page=2",
-          "date": "2026-10-24",
-          "positive": 2,
-          "rawPositive": 2,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "볼만",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 7,
-          "commentPositive": 2,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "아사코 좋았다",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877499&page=1",
-          "date": "2026-10-25",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kISG5ljzXg34TwsqbToGPu8Ebqy.jpg"
     }
   ],
   "festivalPicks": [],
@@ -423,11 +439,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 2,
+    "fetchedPostCount": 18,
     "listedPostCount": 292,
-    "detailedPostCount": 0,
-    "commentFetchCount": 0,
-    "commentCount": 0,
+    "detailedPostCount": 2,
+    "commentFetchCount": 2,
+    "commentCount": 3,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
