@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-25T03:16:55.717Z",
+  "generatedAt": "2026-10-25T04:35:19.226Z",
   "weekStart": "2026-10-23",
   "weekEnd": "2026-10-25",
   "windowStart": "2026-10-23",
@@ -18,7 +18,7 @@
       "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-25&movieCd=019765&playSDT=2026-10-25&screenId=01&showSeq=3",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261026&tsId=TS0057&pno=3",
       "score": 164,
       "signal": 10.9,
       "positiveSignal": 10.9,
@@ -27,17 +27,17 @@
       "rawMentionCount": 18.169925001442312,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube",
         "filmforum",
+        "cinecube",
         "sangsangmadang"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
         "필름포럼",
+        "씨네큐브 광화문",
         "KT&G 상상마당 시네마"
       ],
-      "nextDate": "2026-10-25",
-      "nextTime": "13:35",
+      "nextDate": "2026-10-26",
+      "nextTime": "16:00",
       "evidence": [
         {
           "title": "아사코 vs 헤븐 노우즈 왓",
@@ -327,7 +327,7 @@
         },
         {
           "title": "트레인스포팅 왜 좋아하는지 알겠더라",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877338&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877338&page=1",
           "date": "2026-10-25",
           "positive": 8,
           "rawPositive": 8,
@@ -465,7 +465,7 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 52,
+    "fetchedPostCount": 46,
     "listedPostCount": 292,
     "detailedPostCount": 4,
     "commentFetchCount": 4,
