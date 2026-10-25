@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-25T12:19:49.857Z",
-  "weekStart": "2026-10-23",
-  "weekEnd": "2026-10-25",
-  "windowStart": "2026-10-23",
-  "windowEnd": "2026-10-25",
+  "generatedAt": "2026-10-25T15:09:48.321Z",
+  "weekStart": "2026-10-24",
+  "weekEnd": "2026-10-26",
+  "windowStart": "2026-10-24",
+  "windowEnd": "2026-10-26",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261026&tsId=TS0057&pno=3",
-      "score": 302.9,
-      "signal": 16.9,
-      "positiveSignal": 16.9,
-      "mentionCount": 23.1,
-      "rawPositiveSignal": 24,
-      "rawMentionCount": 29.65856496319227,
+      "score": 169.6,
+      "signal": 8.5,
+      "positiveSignal": 8.5,
+      "mentionCount": 13.2,
+      "rawPositiveSignal": 14,
+      "rawMentionCount": 20.366083712831692,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum",
@@ -40,62 +40,6 @@
       "nextTime": "16:00",
       "evidence": [
         {
-          "title": "아사코 vs 헤븐 노우즈 왓",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877072&page=1",
-          "date": "2026-10-23",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "하마구치 아사코 댓글",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877048&page=2",
-          "date": "2026-10-23",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "아사코 다음주 주말까지 걸려있냐고",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876896&page=5",
-          "date": "2026-10-23",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "여운",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 5,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
           "title": "아사코 호평 여주 얼굴 지분 얼마나 된다고 봄?",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877274&page=1",
           "date": "2026-10-24",
@@ -109,7 +53,7 @@
           "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "아사코 카라타 에리카 존나 예쁨",
@@ -125,6 +69,54 @@
           "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "아사코 포스터 잃어버린 누붕이 있나",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877218&page=2",
+          "date": "2026-10-24",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 3,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "아사코 좋았다",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877499&page=1",
+          "date": "2026-10-25",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "아사코 해석글 <- 이게 진짜 존나 좋다",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877498&page=1",
+          "date": "2026-10-25",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
           "dayWeight": 0.72
         }
       ],
@@ -138,12 +130,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-26&movieCd=029713&playSDT=2026-10-26&screenId=02&showSeq=3",
-      "score": 105.9,
-      "signal": 8.6,
-      "positiveSignal": 8.6,
-      "mentionCount": 6.7,
+      "score": 65.6,
+      "signal": 6.2,
+      "positiveSignal": 6.2,
+      "mentionCount": 3.7,
       "rawPositiveSignal": 12,
-      "rawMentionCount": 9.66096404744368,
+      "rawMentionCount": 6.5,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -158,38 +150,6 @@
       "nextDate": "2026-10-26",
       "nextTime": "14:30",
       "evidence": [
-        {
-          "title": "이동진 5점준 침묵의 빛은 또 패스하노",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877087&page=1",
-          "date": "2026-10-23",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "룩백 후지노 방에서 무슨 냄새날까?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876910&page=4",
-          "date": "2026-10-23",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "룩백 애니메이션 영화 vs 실사 영화 뭐가 더 좋았음?",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877186&page=2",
@@ -219,7 +179,7 @@
           "commentCount": 7,
           "commentPositive": 6,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "룩백 애니메이션 영화 vs 실사 영화 뭐가 더 좋았음?",
@@ -250,7 +210,7 @@
           "commentCount": 7,
           "commentPositive": 6,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "어제 3시간 잤ㄴ는데 룩백",
@@ -266,7 +226,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/feIEhh07azcRtn2MocbFX3kWcjw.jpg"
@@ -274,15 +234,15 @@
     {
       "rank": 3,
       "title": "트레인스포팅",
-      "posterUrl": "/assets/recommendation-posters/6f99db607f2fcb6a.webp",
-      "localPosterUrl": "/assets/recommendation-posters/6f99db607f2fcb6a.webp",
+      "posterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
+      "localPosterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121831&playDt=20261026&tsId=TS0057&pno=4",
-      "score": 83.5,
-      "signal": 10.9,
-      "positiveSignal": 10.9,
-      "mentionCount": 3.6,
+      "score": 61.2,
+      "signal": 7.8,
+      "positiveSignal": 7.8,
+      "mentionCount": 2.6,
       "rawPositiveSignal": 12,
       "rawMentionCount": 4.160964047443681,
       "scheduleBackfill": false,
@@ -321,7 +281,7 @@
           "commentCount": 3,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "트레인스포팅 왜 좋아하는지 알겠더라",
@@ -352,7 +312,7 @@
           "commentCount": 3,
           "commentPositive": 8,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/1jUC02qsqS2NxBMFarbIhcQtazV.jpg"
@@ -365,12 +325,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.tinyticket.net/event/EVGvD57i1Clf",
-      "score": 83,
-      "signal": 1.4,
-      "positiveSignal": 1.4,
-      "mentionCount": 7.6,
+      "score": 52,
+      "signal": 1,
+      "positiveSignal": 1,
+      "mentionCount": 4.7,
       "rawPositiveSignal": 2,
-      "rawMentionCount": 10.614409345247939,
+      "rawMentionCount": 8.453445297804258,
       "scheduleBackfill": false,
       "venueIds": [
         "sac"
@@ -381,22 +341,6 @@
       "nextDate": "2026-10-31",
       "nextTime": "17:00",
       "evidence": [
-        {
-          "title": "가능한 사랑 봤는데 투자 못받은 이유 이해되긴 하네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1876917&page=4",
-          "date": "2026-10-23",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 4,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "이 영화들 중에서 가능한 사랑이 아카데미 국제장편영화상 젤 유력해?",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877254&page=1",
@@ -411,7 +355,7 @@
           "commentCount": 5,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "피닉스나 사랑을 카피하다 이거 극장에서 잘 안틈?",
@@ -427,7 +371,7 @@
           "commentCount": 4,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "가능한 사랑 오스카 갈듯",
@@ -451,7 +395,7 @@
           "commentCount": 7,
           "commentPositive": 2,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "아사코 좋았다",
@@ -467,7 +411,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kISG5ljzXg34TwsqbToGPu8Ebqy.jpg"
@@ -479,24 +423,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 159,
+    "fetchedPostCount": 2,
     "listedPostCount": 292,
-    "detailedPostCount": 14,
-    "commentFetchCount": 14,
-    "commentCount": 32,
+    "detailedPostCount": 0,
+    "commentFetchCount": 0,
+    "commentCount": 0,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
-    "oldestScannedDate": "2026-10-13",
-    "newestScannedDate": "2026-10-25",
+    "oldestScannedDate": "2026-10-24",
+    "newestScannedDate": "2026-10-26",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-10-25",
-    "candidateWindowEnd": "2026-11-08",
+    "candidateWindowStart": "2026-10-26",
+    "candidateWindowEnd": "2026-11-09",
     "candidateCount": 95,
     "seedLookbackDays": 3,
-    "seedStart": "2026-10-23",
+    "seedStart": "2026-10-24",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-10-25",
+    "listWindowStart": "2026-10-26",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -504,7 +448,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-10-25"
+      "2026-10-26"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [
