@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-25T00:10:44.349Z",
+  "generatedAt": "2026-10-25T03:16:55.717Z",
   "weekStart": "2026-10-23",
   "weekEnd": "2026-10-25",
   "windowStart": "2026-10-23",
@@ -18,7 +18,7 @@
       "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121840&playDt=20261025&tsId=TS0044&pno=2",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-25&movieCd=019765&playSDT=2026-10-25&screenId=01&showSeq=3",
       "score": 164,
       "signal": 10.9,
       "positiveSignal": 10.9,
@@ -27,17 +27,17 @@
       "rawMentionCount": 18.169925001442312,
       "scheduleBackfill": false,
       "venueIds": [
-        "sangsangmadang",
         "cinecube",
-        "filmforum"
+        "filmforum",
+        "sangsangmadang"
       ],
       "venueNames": [
-        "KT&G 상상마당 시네마",
         "씨네큐브 광화문",
-        "필름포럼"
+        "필름포럼",
+        "KT&G 상상마당 시네마"
       ],
       "nextDate": "2026-10-25",
-      "nextTime": "11:50",
+      "nextTime": "13:35",
       "evidence": [
         {
           "title": "아사코 vs 헤븐 노우즈 왓",
@@ -138,12 +138,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261025&tsId=TS0044&pno=3",
-      "score": 90.9,
+      "score": 105.9,
       "signal": 8.6,
       "positiveSignal": 8.6,
-      "mentionCount": 5.2,
+      "mentionCount": 6.7,
       "rawPositiveSignal": 12,
-      "rawMentionCount": 8.16096404744368,
+      "rawMentionCount": 9.66096404744368,
       "scheduleBackfill": false,
       "venueIds": [
         "sangsangmadang",
@@ -253,12 +253,114 @@
           "commentPositive": 6,
           "commentNegative": 0,
           "dayWeight": 0.72
+        },
+        {
+          "title": "어제 3시간 잤ㄴ는데 룩백",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877367&page=1",
+          "date": "2026-10-25",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/feIEhh07azcRtn2MocbFX3kWcjw.jpg"
     },
     {
       "rank": 3,
+      "title": "트레인스포팅",
+      "posterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
+      "localPosterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121831&playDt=20261025&tsId=TS0044&pno=6",
+      "score": 81.9,
+      "signal": 10.9,
+      "positiveSignal": 10.9,
+      "mentionCount": 3.4,
+      "rawPositiveSignal": 12,
+      "rawMentionCount": 4,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "sangsangmadang",
+        "filmforum",
+        "kucine"
+      ],
+      "venueNames": [
+        "KT&G 상상마당 시네마",
+        "필름포럼",
+        "KU시네마테크"
+      ],
+      "nextDate": "2026-10-25",
+      "nextTime": "20:20",
+      "evidence": [
+        {
+          "title": "트레인스포팅 예전 감동만 못하네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877242&page=1",
+          "date": "2026-10-24",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "감동",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 3,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "트레인스포팅 왜 좋아하는지 알겠더라",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877338&page=2",
+          "date": "2026-10-25",
+          "positive": 8,
+          "rawPositive": 8,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "재밋",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "추천",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 3,
+          "commentPositive": 8,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/1jUC02qsqS2NxBMFarbIhcQtazV.jpg"
+    },
+    {
+      "rank": 4,
       "title": "사랑",
       "posterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
       "localPosterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
@@ -355,123 +457,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kISG5ljzXg34TwsqbToGPu8Ebqy.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "눈 둘 데가 없네",
-      "posterUrl": "/assets/recommendation-posters/242c9b28acea884f.webp",
-      "localPosterUrl": "/assets/recommendation-posters/242c9b28acea884f.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121827&playDt=20261025&tsId=TS0044&pno=1",
-      "score": 65,
-      "signal": 3,
-      "positiveSignal": 3,
-      "mentionCount": 4.9,
-      "rawPositiveSignal": 4,
-      "rawMentionCount": 7.292481250360578,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "sangsangmadang",
-        "cinecube",
-        "filmforum",
-        "kucine",
-        "indiespace",
-        "sac"
-      ],
-      "venueNames": [
-        "KT&G 상상마당 시네마",
-        "씨네큐브 광화문",
-        "필름포럼",
-        "KU시네마테크",
-        "인디스페이스",
-        "서울아트시네마"
-      ],
-      "nextDate": "2026-10-25",
-      "nextTime": "10:20",
-      "evidence": [
-        {
-          "title": "스포) 눈둘데가없네 이 장면 어떻게 생각함",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877104&page=1",
-          "date": "2026-10-23",
-          "positive": 2,
-          "rawPositive": 2,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "인상적",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "눈둘데가없네 홍 최근작 중에 젤 아쉽네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877103&page=1",
-          "date": "2026-10-23",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "홍상수 신작 눈둘데 관객수 천명 실화냐",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877094&page=1",
-          "date": "2026-10-23",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 11,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "오늘 눈둘데없니 gv에서 인상적이였던거",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877348&page=1",
-          "date": "2026-10-25",
-          "positive": 2,
-          "rawPositive": 2,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "인상적",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 5,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FKQ3U4%2FdJMcagtJijO%2FAAAAAAAAAAAAAAAAAAAAAKH4gcbmONCbAZfz-yMnnRvJMuh7ha9n8OfVoQ04Vj1U%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1793458799%26allow_ip%3D%26allow_referer%3D%26signature%3DBz4UTof%252BDblZAy%252BDwGuV3tXMP2s%253D"
     }
   ],
   "festivalPicks": [],
@@ -480,11 +465,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 27,
+    "fetchedPostCount": 52,
     "listedPostCount": 292,
-    "detailedPostCount": 3,
-    "commentFetchCount": 3,
-    "commentCount": 8,
+    "detailedPostCount": 4,
+    "commentFetchCount": 4,
+    "commentCount": 10,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,

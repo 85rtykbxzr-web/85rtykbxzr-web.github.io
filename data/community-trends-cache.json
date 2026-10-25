@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-25",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-25T00:10:39.202Z",
+  "updatedAt": "2026-10-25T03:16:51.955Z",
   "days": {
     "2026-10-23": {
       "눈둘데가없네": {
@@ -628,8 +628,30 @@
       }
     },
     "2026-10-25": {
+      "룩백": {
+        "title": "룩백(2D)",
+        "positiveSignal": 0,
+        "mentionCount": 1.5,
+        "evidence": [
+          {
+            "title": "어제 3시간 잤ㄴ는데 룩백",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877367&page=1",
+            "date": "2026-10-25",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "눈둘데가없네": {
-        "title": "눈 둘 데가 없네(영문자막)",
+        "title": "눈 둘 데가 없네",
         "positiveSignal": 2,
         "mentionCount": 2.292481250360578,
         "evidence": [
@@ -660,17 +682,24 @@
       },
       "트레인스포팅": {
         "title": "트레인스포팅(2D)",
-        "positiveSignal": 4,
-        "mentionCount": 1.792481250360578,
+        "positiveSignal": 8,
+        "mentionCount": 2,
         "evidence": [
           {
             "title": "트레인스포팅 왜 좋아하는지 알겠더라",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877338&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877338&page=2",
             "date": "2026-10-25",
-            "positive": 4,
-            "rawPositive": 4,
+            "positive": 8,
+            "rawPositive": 8,
             "negative": 0,
             "positiveHits": [
+              {
+                "term": "재밋",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
               {
                 "term": "추천",
                 "count": 1,
@@ -682,20 +711,20 @@
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 4,
+            "commentCount": 3,
+            "commentPositive": 8,
             "commentNegative": 0
           }
         ]
       },
       "아사코": {
-        "title": "아사코(2D)",
+        "title": "아사코",
         "positiveSignal": 0,
         "mentionCount": 1.5,
         "evidence": [
           {
             "title": "k-아사코",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877330&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877330&page=2",
             "date": "2026-10-25",
             "positive": 0,
             "rawPositive": 0,
