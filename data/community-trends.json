@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-26T09:14:26.126Z",
+  "generatedAt": "2026-10-26T12:20:47.568Z",
   "weekStart": "2026-10-24",
   "weekEnd": "2026-10-26",
   "windowStart": "2026-10-24",
@@ -18,26 +18,26 @@
       "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-26&movieCd=019765&playSDT=2026-10-26&screenId=02&showSeq=6",
-      "score": 189.6,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261028&tsId=TS0056&pno=2",
+      "score": 209.6,
       "signal": 8.5,
       "positiveSignal": 8.5,
-      "mentionCount": 15.2,
+      "mentionCount": 17.2,
       "rawPositiveSignal": 14,
-      "rawMentionCount": 22.366083712831692,
+      "rawMentionCount": 24.366083712831692,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube",
         "filmforum",
-        "sangsangmadang"
+        "sangsangmadang",
+        "cinecube"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
         "필름포럼",
-        "KT&G 상상마당 시네마"
+        "KT&G 상상마당 시네마",
+        "씨네큐브 광화문"
       ],
-      "nextDate": "2026-10-26",
-      "nextTime": "19:55",
+      "nextDate": "2026-10-28",
+      "nextTime": "12:30",
       "evidence": [
         {
           "title": "아사코 호평 여주 얼굴 지분 얼마나 된다고 봄?",
@@ -124,6 +124,93 @@
     },
     {
       "rank": 2,
+      "title": "헤븐 노우즈 왓",
+      "posterUrl": "/assets/recommendation-posters/61f1382e4eaba03b.webp",
+      "localPosterUrl": "/assets/recommendation-posters/61f1382e4eaba03b.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121810&playDt=20261027&tsId=TS0044&pno=4",
+      "score": 84.7,
+      "signal": 8,
+      "positiveSignal": 8,
+      "mentionCount": 5,
+      "rawPositiveSignal": 8,
+      "rawMentionCount": 5.584962500721156,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "sangsangmadang",
+        "filmforum",
+        "kucine"
+      ],
+      "venueNames": [
+        "KT&G 상상마당 시네마",
+        "필름포럼",
+        "KU시네마테크"
+      ],
+      "nextDate": "2026-10-27",
+      "nextTime": "15:10",
+      "evidence": [
+        {
+          "title": "홍상수 신작vs아사코vs헤븐 노우즈 왓",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877434&page=2",
+          "date": "2026-10-25",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "홍상수 신작 vs 헤븐 노우즈 왓",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877718&page=1",
+          "date": "2026-10-26",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "헤븐노우즈왓 재밌네요",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877713&page=1",
+          "date": "2026-10-26",
+          "positive": 8,
+          "rawPositive": 8,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "재밌",
+              "count": 2,
+              "weight": 4,
+              "score": 8,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/4oyWMOWJ6trsRuyzn5cHPv50zVH.jpg"
+    },
+    {
+      "rank": 3,
       "title": "사랑",
       "posterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
       "localPosterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
@@ -238,7 +325,7 @@
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kISG5ljzXg34TwsqbToGPu8Ebqy.jpg"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "title": "룩백",
       "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
@@ -345,92 +432,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/feIEhh07azcRtn2MocbFX3kWcjw.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "트레인스포팅",
-      "posterUrl": "/assets/recommendation-posters/6f99db607f2fcb6a.webp",
-      "localPosterUrl": "/assets/recommendation-posters/6f99db607f2fcb6a.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121831&playDt=20261027&tsId=TS0039&pno=1",
-      "score": 61.2,
-      "signal": 7.8,
-      "positiveSignal": 7.8,
-      "mentionCount": 2.6,
-      "rawPositiveSignal": 12,
-      "rawMentionCount": 4.160964047443681,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "kucine",
-        "sangsangmadang",
-        "filmforum"
-      ],
-      "venueNames": [
-        "KU시네마테크",
-        "KT&G 상상마당 시네마",
-        "필름포럼"
-      ],
-      "nextDate": "2026-10-27",
-      "nextTime": "15:50",
-      "evidence": [
-        {
-          "title": "트레인스포팅 예전 감동만 못하네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877242&page=1",
-          "date": "2026-10-24",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "감동",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "트레인스포팅 왜 좋아하는지 알겠더라",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877338&page=4",
-          "date": "2026-10-25",
-          "positive": 8,
-          "rawPositive": 8,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "재밋",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "추천",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 8,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/1jUC02qsqS2NxBMFarbIhcQtazV.jpg"
     }
   ],
   "festivalPicks": [],
@@ -439,20 +440,20 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 103,
+    "fetchedPostCount": 141,
     "listedPostCount": 292,
-    "detailedPostCount": 4,
-    "commentFetchCount": 4,
-    "commentCount": 12,
+    "detailedPostCount": 8,
+    "commentFetchCount": 8,
+    "commentCount": 21,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
-    "oldestScannedDate": "2026-10-25",
+    "oldestScannedDate": "2026-10-24",
     "newestScannedDate": "2026-10-26",
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-26",
     "candidateWindowEnd": "2026-11-09",
-    "candidateCount": 93,
+    "candidateCount": 92,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-24",
     "listLookbackDays": 1,
