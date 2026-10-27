@@ -2,308 +2,25 @@
   "version": 3,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-10-25",
-  "windowEnd": "2026-10-27",
+  "windowStart": "2026-10-26",
+  "windowEnd": "2026-10-28",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-10-25",
       "2026-10-26",
-      "2026-10-27"
+      "2026-10-27",
+      "2026-10-28"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-10-27",
-    "lastWindowEnd": "2026-10-27",
+    "lastWindowStart": "2026-10-28",
+    "lastWindowEnd": "2026-10-28",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-27T12:09:39.852Z",
+  "updatedAt": "2026-10-27T15:16:13.987Z",
   "days": {
-    "2026-10-25": {
-      "씽씽": {
-        "title": "씽씽",
-        "positiveSignal": 2,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "씽씽 그럭저럭 볼만한(ㄴㅅㅍ)",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877504&page=1",
-            "date": "2026-10-25",
-            "positive": 2,
-            "rawPositive": 2,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "볼만",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "아사코": {
-        "title": "아사코(2D)",
-        "positiveSignal": 6,
-        "mentionCount": 12.988639961749957,
-        "evidence": [
-          {
-            "title": "아사코 좋았다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877499&page=1",
-            "date": "2026-10-25",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "아사코 해석글 <- 이게 진짜 존나 좋다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877498&page=1",
-            "date": "2026-10-25",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "홍상수 신작vs아사코vs헤븐 노우즈 왓",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877434&page=2",
-            "date": "2026-10-25",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "사랑": {
-        "title": "사랑",
-        "positiveSignal": 0,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "아사코 좋았다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877499&page=1",
-            "date": "2026-10-25",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "하폰": {
-        "title": "하폰",
-        "positiveSignal": 0,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "하폰 vs 어둠 뒤에 빛이 있으라",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877445&page=2",
-            "date": "2026-10-25",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "침묵의빛": {
-        "title": "침묵의 빛(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "팝콘 먹으면서 침묵의 빛 보고싶노",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877443&page=2",
-            "date": "2026-10-25",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "헤븐노우즈왓": {
-        "title": "헤븐 노우즈 왓(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 2,
-        "evidence": [
-          {
-            "title": "홍상수 신작vs아사코vs헤븐 노우즈 왓",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877434&page=2",
-            "date": "2026-10-25",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "레위기": {
-        "title": "레위기(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "노스포) 레위기는 아트하우스깔이네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877404&page=3",
-            "date": "2026-10-25",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "룩백": {
-        "title": "룩백",
-        "positiveSignal": 0,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "어제 3시간 잤ㄴ는데 룩백",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877367&page=3",
-            "date": "2026-10-25",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "눈둘데가없네": {
-        "title": "눈 둘 데가 없네",
-        "positiveSignal": 2,
-        "mentionCount": 2.292481250360578,
-        "evidence": [
-          {
-            "title": "오늘 눈둘데없니 gv에서 인상적이였던거",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877348&page=4",
-            "date": "2026-10-25",
-            "positive": 2,
-            "rawPositive": 2,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "인상적",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 5,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "트레인스포팅": {
-        "title": "트레인스포팅(2D)",
-        "positiveSignal": 8,
-        "mentionCount": 2.160964047443681,
-        "evidence": [
-          {
-            "title": "트레인스포팅 왜 좋아하는지 알겠더라",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877338&page=4",
-            "date": "2026-10-25",
-            "positive": 8,
-            "rawPositive": 8,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "재밋",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              },
-              {
-                "term": "추천",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 3,
-            "commentPositive": 8,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-10-26": {
       "침묵의빛": {
         "title": "침묵의 빛(2D)",
@@ -640,7 +357,8 @@
           }
         ]
       }
-    }
+    },
+    "2026-10-28": {}
   },
   "festivals": {}
 }

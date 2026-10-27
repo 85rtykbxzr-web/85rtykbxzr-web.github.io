@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-27T12:09:42.904Z",
-  "weekStart": "2026-10-25",
-  "weekEnd": "2026-10-27",
-  "windowStart": "2026-10-25",
-  "windowEnd": "2026-10-27",
+  "generatedAt": "2026-10-27T15:16:17.783Z",
+  "weekStart": "2026-10-26",
+  "weekEnd": "2026-10-28",
+  "windowStart": "2026-10-26",
+  "windowEnd": "2026-10-28",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -13,36 +13,38 @@
   "items": [
     {
       "rank": 1,
-      "title": "아사코",
-      "posterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
-      "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
+      "title": "룩백",
+      "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
+      "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261028&tsId=TS0056&pno=2",
-      "score": 112.5,
-      "signal": 3.1,
-      "positiveSignal": 3.1,
-      "mentionCount": 9.6,
-      "rawPositiveSignal": 6,
-      "rawMentionCount": 16.988639961749957,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121765&playDt=20261028&tsId=TS0039&pno=1",
+      "score": 45.8,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 4.2,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 5.807354922057604,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum",
+        "kucine",
+        "cinecube",
         "sangsangmadang",
-        "cinecube"
+        "filmforum"
       ],
       "venueNames": [
-        "필름포럼",
+        "KU시네마테크",
+        "씨네큐브 광화문",
         "KT&G 상상마당 시네마",
-        "씨네큐브 광화문"
+        "필름포럼"
       ],
       "nextDate": "2026-10-28",
-      "nextTime": "12:30",
+      "nextTime": "10:00",
       "evidence": [
         {
-          "title": "아사코 좋았다",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877499&page=1",
-          "date": "2026-10-25",
+          "title": "룩백 진지하게",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877863&page=2",
+          "date": "2026-10-27",
           "positive": 0,
           "rawPositive": 0,
           "negative": 0,
@@ -50,77 +52,45 @@
           "negativeHits": [],
           "questionLike": true,
           "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "아사코 해석글 <- 이게 진짜 존나 좋다",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877498&page=1",
-          "date": "2026-10-25",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "홍상수 신작vs아사코vs헤븐 노우즈 왓",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877434&page=2",
-          "date": "2026-10-25",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "아사코 마지막 씬 뭐임? 해석좀",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877720&page=1",
-          "date": "2026-10-26",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 3,
+          "commentCount": 6,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.72
         },
         {
-          "title": "아사코 신작 떴다",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877654&page=2",
-          "date": "2026-10-26",
+          "title": "룩백 어떤점이 감동적인거임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877840&page=2",
+          "date": "2026-10-27",
           "positive": 0,
           "rawPositive": 0,
           "negative": 0,
           "positiveHits": [],
           "negativeHits": [],
-          "questionLike": false,
+          "questionLike": true,
           "reviewQuestion": false,
-          "commentCount": 3,
+          "commentCount": 6,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "룩백 애니 주제가 light song vs 룩백 실사화 Main them",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877830&page=3",
+          "date": "2026-10-27",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.72
         }
       ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/feIEhh07azcRtn2MocbFX3kWcjw.jpg"
     },
     {
       "rank": 2,
@@ -130,12 +100,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121831&playDt=20261028&tsId=TS0057&pno=2",
-      "score": 77.4,
-      "signal": 10.1,
-      "positiveSignal": 10.1,
-      "mentionCount": 3.3,
-      "rawPositiveSignal": 14,
-      "rawMentionCount": 4.321928094887362,
+      "score": 36.8,
+      "signal": 4.3,
+      "positiveSignal": 4.3,
+      "mentionCount": 1.6,
+      "rawPositiveSignal": 6,
+      "rawMentionCount": 2.160964047443681,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum",
@@ -150,37 +120,6 @@
       "nextDate": "2026-10-28",
       "nextTime": "13:00",
       "evidence": [
-        {
-          "title": "트레인스포팅 왜 좋아하는지 알겠더라",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877338&page=4",
-          "date": "2026-10-25",
-          "positive": 8,
-          "rawPositive": 8,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "재밋",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "추천",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 8,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "오디세이 vs 트레인스포팅 추천좀",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877850&page=2",
@@ -203,122 +142,25 @@
           "commentCount": 4,
           "commentPositive": 6,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/1jUC02qsqS2NxBMFarbIhcQtazV.jpg"
     },
     {
       "rank": 3,
-      "title": "룩백",
-      "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
-      "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121765&playDt=20261028&tsId=TS0039&pno=1",
-      "score": 69.8,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 6.6,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 7.307354922057604,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "kucine",
-        "cinecube",
-        "sangsangmadang",
-        "filmforum"
-      ],
-      "venueNames": [
-        "KU시네마테크",
-        "씨네큐브 광화문",
-        "KT&G 상상마당 시네마",
-        "필름포럼"
-      ],
-      "nextDate": "2026-10-28",
-      "nextTime": "10:00",
-      "evidence": [
-        {
-          "title": "어제 3시간 잤ㄴ는데 룩백",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877367&page=3",
-          "date": "2026-10-25",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "룩백 진지하게",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877863&page=2",
-          "date": "2026-10-27",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 6,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        },
-        {
-          "title": "룩백 어떤점이 감동적인거임?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877840&page=2",
-          "date": "2026-10-27",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 6,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        },
-        {
-          "title": "룩백 애니 주제가 light song vs 룩백 실사화 Main them",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877830&page=3",
-          "date": "2026-10-27",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/feIEhh07azcRtn2MocbFX3kWcjw.jpg"
-    },
-    {
-      "rank": 4,
       "title": "헤븐 노우즈 왓",
       "posterUrl": "/assets/recommendation-posters/61f1382e4eaba03b.webp",
       "localPosterUrl": "/assets/recommendation-posters/61f1382e4eaba03b.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121813&playDt=20261030&tsId=TS0039&pno=1",
-      "score": 60.2,
-      "signal": 5.8,
-      "positiveSignal": 5.8,
-      "mentionCount": 3.6,
+      "score": 36.1,
+      "signal": 4.1,
+      "positiveSignal": 4.1,
+      "mentionCount": 1.9,
       "rawPositiveSignal": 8,
-      "rawMentionCount": 5.584962500721156,
+      "rawMentionCount": 3.584962500721156,
       "scheduleBackfill": false,
       "venueIds": [
         "kucine",
@@ -331,22 +173,6 @@
       "nextDate": "2026-10-30",
       "nextTime": "19:30",
       "evidence": [
-        {
-          "title": "홍상수 신작vs아사코vs헤븐 노우즈 왓",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877434&page=2",
-          "date": "2026-10-25",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "홍상수 신작 vs 헤븐 노우즈 왓",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877718&page=1",
@@ -361,7 +187,7 @@
           "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "헤븐노우즈왓 재밌네요",
@@ -385,10 +211,73 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/4oyWMOWJ6trsRuyzn5cHPv50zVH.jpg"
+    },
+    {
+      "rank": 4,
+      "title": "아사코",
+      "posterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
+      "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261028&tsId=TS0056&pno=2",
+      "score": 24.7,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 2.1,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 4,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "filmforum",
+        "sangsangmadang",
+        "cinecube"
+      ],
+      "venueNames": [
+        "필름포럼",
+        "KT&G 상상마당 시네마",
+        "씨네큐브 광화문"
+      ],
+      "nextDate": "2026-10-28",
+      "nextTime": "12:30",
+      "evidence": [
+        {
+          "title": "아사코 마지막 씬 뭐임? 해석좀",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877720&page=1",
+          "date": "2026-10-26",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 3,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "아사코 신작 떴다",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877654&page=2",
+          "date": "2026-10-26",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 3,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        }
+      ],
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
     }
   ],
   "festivalPicks": [],
@@ -397,24 +286,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 137,
+    "fetchedPostCount": 11,
     "listedPostCount": 292,
-    "detailedPostCount": 8,
-    "commentFetchCount": 8,
-    "commentCount": 28,
+    "detailedPostCount": 0,
+    "commentFetchCount": 0,
+    "commentCount": 0,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-10-24",
-    "newestScannedDate": "2026-10-27",
+    "newestScannedDate": "2026-10-28",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-10-27",
-    "candidateWindowEnd": "2026-11-10",
-    "candidateCount": 98,
+    "candidateWindowStart": "2026-10-28",
+    "candidateWindowEnd": "2026-11-11",
+    "candidateCount": 103,
     "seedLookbackDays": 3,
-    "seedStart": "2026-10-25",
+    "seedStart": "2026-10-26",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-10-27",
+    "listWindowStart": "2026-10-28",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -422,7 +311,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-10-27"
+      "2026-10-28"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [
