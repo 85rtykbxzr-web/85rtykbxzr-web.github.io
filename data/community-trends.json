@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-27T06:12:37.723Z",
+  "generatedAt": "2026-10-27T08:54:52.635Z",
   "weekStart": "2026-10-25",
   "weekEnd": "2026-10-27",
   "windowStart": "2026-10-25",
@@ -124,13 +124,196 @@
     },
     {
       "rank": 2,
+      "title": "룩백",
+      "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
+      "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-27&movieCd=029713&playSDT=2026-10-27&screenId=02&showSeq=5",
+      "score": 77.6,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 7.4,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 8.084962500721156,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "cinecube",
+        "kucine",
+        "sangsangmadang",
+        "filmforum"
+      ],
+      "venueNames": [
+        "씨네큐브 광화문",
+        "KU시네마테크",
+        "KT&G 상상마당 시네마",
+        "필름포럼"
+      ],
+      "nextDate": "2026-10-27",
+      "nextTime": "18:20",
+      "evidence": [
+        {
+          "title": "어제 3시간 잤ㄴ는데 룩백",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877367&page=3",
+          "date": "2026-10-25",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "룩백 진지하게",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877863&page=1",
+          "date": "2026-10-27",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 5,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "룩백 final one vs light song",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877862&page=1",
+          "date": "2026-10-27",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "룩백 어떤점이 감동적인거임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877840&page=2",
+          "date": "2026-10-27",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 5,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/feIEhh07azcRtn2MocbFX3kWcjw.jpg"
+    },
+    {
+      "rank": 3,
+      "title": "트레인스포팅",
+      "posterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
+      "localPosterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121831&playDt=20261027&tsId=TS0044&pno=7",
+      "score": 77.4,
+      "signal": 10.1,
+      "positiveSignal": 10.1,
+      "mentionCount": 3.3,
+      "rawPositiveSignal": 14,
+      "rawMentionCount": 4.321928094887362,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "sangsangmadang",
+        "filmforum",
+        "kucine"
+      ],
+      "venueNames": [
+        "KT&G 상상마당 시네마",
+        "필름포럼",
+        "KU시네마테크"
+      ],
+      "nextDate": "2026-10-27",
+      "nextTime": "20:20",
+      "evidence": [
+        {
+          "title": "트레인스포팅 왜 좋아하는지 알겠더라",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877338&page=4",
+          "date": "2026-10-25",
+          "positive": 8,
+          "rawPositive": 8,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "재밋",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "추천",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 3,
+          "commentPositive": 8,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "오디세이 vs 트레인스포팅 추천좀",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877850&page=2",
+          "date": "2026-10-27",
+          "positive": 6,
+          "rawPositive": 6,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "강추",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 4,
+          "commentPositive": 6,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/1jUC02qsqS2NxBMFarbIhcQtazV.jpg"
+    },
+    {
+      "rank": 4,
       "title": "헤븐 노우즈 왓",
       "posterUrl": "/assets/recommendation-posters/61f1382e4eaba03b.webp",
       "localPosterUrl": "/assets/recommendation-posters/61f1382e4eaba03b.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121810&playDt=20261027&tsId=TS0056&pno=4",
-      "score": 61.2,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121813&playDt=20261030&tsId=TS0039&pno=1",
+      "score": 60.2,
       "signal": 5.8,
       "positiveSignal": 5.8,
       "mentionCount": 3.6,
@@ -138,15 +321,15 @@
       "rawMentionCount": 5.584962500721156,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum",
-        "kucine"
+        "kucine",
+        "filmforum"
       ],
       "venueNames": [
-        "필름포럼",
-        "KU시네마테크"
+        "KU시네마테크",
+        "필름포럼"
       ],
-      "nextDate": "2026-10-27",
-      "nextTime": "15:40",
+      "nextDate": "2026-10-30",
+      "nextTime": "19:30",
       "evidence": [
         {
           "title": "홍상수 신작vs아사코vs헤븐 노우즈 왓",
@@ -206,165 +389,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/4oyWMOWJ6trsRuyzn5cHPv50zVH.jpg"
-    },
-    {
-      "rank": 3,
-      "title": "룩백",
-      "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
-      "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-27&movieCd=029713&playSDT=2026-10-27&screenId=02&showSeq=5",
-      "score": 43.4,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 3.9,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 4.660964047443681,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "cinecube",
-        "kucine",
-        "sangsangmadang",
-        "filmforum"
-      ],
-      "venueNames": [
-        "씨네큐브 광화문",
-        "KU시네마테크",
-        "KT&G 상상마당 시네마",
-        "필름포럼"
-      ],
-      "nextDate": "2026-10-27",
-      "nextTime": "18:20",
-      "evidence": [
-        {
-          "title": "어제 3시간 잤ㄴ는데 룩백",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877367&page=3",
-          "date": "2026-10-25",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "룩백 어떤점이 감동적인거임?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877840&page=1",
-          "date": "2026-10-27",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 4,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        },
-        {
-          "title": "룩백 애니 주제가 light song vs 룩백 실사화 Main them",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877830&page=1",
-          "date": "2026-10-27",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/feIEhh07azcRtn2MocbFX3kWcjw.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "트레인스포팅",
-      "posterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
-      "localPosterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121831&playDt=20261027&tsId=TS0039&pno=1",
-      "score": 41.8,
-      "signal": 4.1,
-      "positiveSignal": 4.1,
-      "mentionCount": 2.1,
-      "rawPositiveSignal": 8,
-      "rawMentionCount": 3.160964047443681,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "kucine",
-        "sangsangmadang",
-        "filmforum"
-      ],
-      "venueNames": [
-        "KU시네마테크",
-        "KT&G 상상마당 시네마",
-        "필름포럼"
-      ],
-      "nextDate": "2026-10-27",
-      "nextTime": "15:50",
-      "evidence": [
-        {
-          "title": "트레인스포팅 왜 좋아하는지 알겠더라",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877338&page=4",
-          "date": "2026-10-25",
-          "positive": 8,
-          "rawPositive": 8,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "재밋",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "추천",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 8,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "오디세이 vs 트레인스포팅 추천좀",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877850&page=1",
-          "date": "2026-10-27",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/1jUC02qsqS2NxBMFarbIhcQtazV.jpg"
     }
   ],
   "festivalPicks": [],
@@ -373,11 +397,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 72,
+    "fetchedPostCount": 106,
     "listedPostCount": 292,
-    "detailedPostCount": 4,
-    "commentFetchCount": 4,
-    "commentCount": 4,
+    "detailedPostCount": 9,
+    "commentFetchCount": 9,
+    "commentCount": 24,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -386,7 +410,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-27",
     "candidateWindowEnd": "2026-11-10",
-    "candidateCount": 101,
+    "candidateCount": 102,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-25",
     "listLookbackDays": 1,
