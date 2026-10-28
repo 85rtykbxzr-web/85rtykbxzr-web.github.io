@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-28",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-28T06:17:04.006Z",
+  "updatedAt": "2026-10-28T09:23:32.014Z",
   "days": {
     "2026-10-26": {
       "침묵의빛": {
@@ -359,29 +359,14 @@
       }
     },
     "2026-10-28": {
-      "사랑": {
-        "title": "사랑",
-        "positiveSignal": 0,
-        "mentionCount": 2.5,
+      "버닝": {
+        "title": "버닝(하루키전)",
+        "positiveSignal": 14,
+        "mentionCount": 15.745926548164835,
         "evidence": [
           {
-            "title": "가능한 사랑이 아카데미에서 수상하면 이거 푼다.",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878104&page=1",
-            "date": "2026-10-28",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "고담상 노미 3개 - 가능한 사랑 포함",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878033&page=2",
+            "title": "버닝 돌비관 클럽신 사운드 지리더라",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878147&page=1",
             "date": "2026-10-28",
             "positive": 0,
             "rawPositive": 0,
@@ -393,17 +378,121 @@
             "commentCount": 0,
             "commentPositive": 0,
             "commentNegative": 0
+          },
+          {
+            "title": "버닝 시네마구나",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878141&page=1",
+            "date": "2026-10-28",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "버닝 돌비에서 보는거 추천",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878132&page=1",
+            "date": "2026-10-28",
+            "positive": 8,
+            "rawPositive": 8,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "만족",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "추천",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 5,
+            "commentPositive": 4,
+            "commentNegative": 0
           }
         ]
       },
-      "버닝": {
-        "title": "버닝(하루키전)",
-        "positiveSignal": 0,
-        "mentionCount": 7.5,
+      "이성과감성": {
+        "title": "이성과 감성(2D)",
+        "positiveSignal": 8,
+        "mentionCount": 4,
         "evidence": [
           {
-            "title": "버닝 돌비로 볼때 장점이 뭐임?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878082&page=1",
+            "title": "이성과 감성 이번에 나온거 이안꺼보다 재밌음?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878142&page=1",
+            "date": "2026-10-28",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "노스포) 이성과 감성 재미는 있다",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878125&page=1",
+            "date": "2026-10-28",
+            "positive": 8,
+            "rawPositive": 8,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "잘만들",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "괜찮",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              },
+              {
+                "term": "좋았음",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 10,
+            "commentPositive": 8,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "트레인스포팅": {
+        "title": "트레인스포팅(2D)",
+        "positiveSignal": 2,
+        "mentionCount": 6.488639961749958,
+        "evidence": [
+          {
+            "title": "ㅅㅍ? 트레인스포팅 화장실 씬에서",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878137&page=1",
             "date": "2026-10-28",
             "positive": 0,
             "rawPositive": 0,
@@ -412,50 +501,28 @@
             "negativeHits": [],
             "questionLike": true,
             "reviewQuestion": false,
-            "commentCount": 3,
+            "commentCount": 2,
             "commentPositive": 0,
             "commentNegative": 0
           },
           {
-            "title": "버닝 돌비로 보니까 끝내주네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878076&page=1",
+            "title": "더러운거 싫음 트레인스포팅 걸러야 되나",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878131&page=1",
             "date": "2026-10-28",
             "positive": 0,
             "rawPositive": 0,
             "negative": 0,
             "positiveHits": [],
             "negativeHits": [],
-            "questionLike": false,
+            "questionLike": true,
             "reviewQuestion": false,
-            "commentCount": 1,
+            "commentCount": 5,
             "commentPositive": 0,
             "commentNegative": 0
           },
-          {
-            "title": "버닝 텅텅인데 뭐냐",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878064&page=1",
-            "date": "2026-10-28",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 7,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "트레인스포팅": {
-        "title": "트레인스포팅(2D)",
-        "positiveSignal": 2,
-        "mentionCount": 2.403677461028802,
-        "evidence": [
           {
             "title": "트레인스포팅 스타뎀 나오는 영화인줄...",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878077&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878077&page=2",
             "date": "2026-10-28",
             "positive": 2,
             "rawPositive": 2,
@@ -474,6 +541,117 @@
             "reviewQuestion": false,
             "commentCount": 6,
             "commentPositive": 2,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "아버지": {
+        "title": "아버지",
+        "positiveSignal": 6,
+        "mentionCount": 2.403677461028802,
+        "evidence": [
+          {
+            "title": "아버지의방 이거 볼만함?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878130&page=1",
+            "date": "2026-10-28",
+            "positive": 6,
+            "rawPositive": 6,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "추천",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "좋았음",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 6,
+            "commentPositive": 6,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "사랑": {
+        "title": "사랑",
+        "positiveSignal": 0,
+        "mentionCount": 4,
+        "evidence": [
+          {
+            "title": "버닝 보고나니까 가능한 사랑이 좀 우스워지네",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878123&page=1",
+            "date": "2026-10-28",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "가능한 사랑이 아카데미에서 수상하면 이거 푼다.",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878104&page=1",
+            "date": "2026-10-28",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "고담상 노미 3개 - 가능한 사랑 포함",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878033&page=3",
+            "date": "2026-10-28",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "흐르는여정": {
+        "title": "흐르는 여정",
+        "positiveSignal": 0,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "흐르는여정 후기",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878121&page=1",
+            "date": "2026-10-28",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
             "commentNegative": 0
           }
         ]
