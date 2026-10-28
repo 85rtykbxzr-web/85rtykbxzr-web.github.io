@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-28T12:14:38.292Z",
+  "generatedAt": "2026-10-28T12:45:30.973Z",
   "weekStart": "2026-10-26",
   "weekEnd": "2026-10-28",
   "windowStart": "2026-10-26",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261029&tsId=TS0056&pno=3",
-      "score": 495.6,
+      "score": 512.7,
       "signal": 28,
       "positiveSignal": 28,
-      "mentionCount": 38.2,
+      "mentionCount": 39.9,
       "rawPositiveSignal": 28,
-      "rawMentionCount": 38.49185309632967,
+      "rawMentionCount": 40.1993718459691,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum"
@@ -52,6 +52,22 @@
           "dayWeight": 0.72
         },
         {
+          "title": "버닝 영화관 내릴때쯤 한번 더봐야것다",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878218&page=1",
+          "date": "2026-10-28",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
           "title": "버닝을 잉태한 대황본",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878209&page=1",
           "date": "2026-10-28",
@@ -62,7 +78,7 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 2,
+          "commentCount": 3,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
@@ -79,22 +95,6 @@
           "questionLike": false,
           "reviewQuestion": false,
           "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        },
-        {
-          "title": "버닝 좋아한다하면 여자들이 싫어함?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878183&page=1",
-          "date": "2026-10-28",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 7,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
@@ -255,7 +255,7 @@
         },
         {
           "title": "난 가능한 사랑 보다는 버닝이 더 재밌던데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878162&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878162&page=2",
           "date": "2026-10-28",
           "positive": 4,
           "rawPositive": 4,
@@ -295,7 +295,7 @@
         },
         {
           "title": "가능한 사랑이 아카데미에서 수상하면 이거 푼다.",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878104&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878104&page=3",
           "date": "2026-10-28",
           "positive": 0,
           "rawPositive": 0,
@@ -404,11 +404,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 189,
+    "fetchedPostCount": 197,
     "listedPostCount": 292,
-    "detailedPostCount": 31,
-    "commentFetchCount": 31,
-    "commentCount": 111,
+    "detailedPostCount": 32,
+    "commentFetchCount": 32,
+    "commentCount": 116,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
