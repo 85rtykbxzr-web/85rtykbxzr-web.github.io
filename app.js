@@ -620,11 +620,12 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
   function failedVenueCards(compact) {
     if (state.query.trim()) return "";
     const venues = venueMap();
-    return [...browserLiveStates()]
-      .filter(([, status]) => status === "error")
-      .map(([venueId]) => venueCardMarkup(venueId, venues[venueId], "보류", `
+    const rows = usesBrowserLive(state.data) ? state.data.meta.browserLive || [] : [];
+    return rows
+      .filter((row) => row.status === "error")
+      .map((row) => venueCardMarkup(row.venueId, venues[row.venueId], "보류", `
         <div class="venue-failed">
-          <p>시간표를 지금 불러오지 못했어요. 잠시 후 다시 시도해 주세요.</p>
+          <p>시간표를 지금 불러오지 못했어요${row.message ? ` (${escapeHtml(row.message)})` : ""}. 잠시 후 다시 시도해 주세요.</p>
           <button type="button" data-retry-browser-live>다시 시도</button>
         </div>`, compact, "is-failed"))
       .join("");
@@ -666,7 +667,7 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
       }
       notice.innerHTML = rows.map((row) => {
         const name = [...browserLiveConfigs, ...regionalLiveConfigs].find((config) => config.venueId === row.venueId)?.name || row.venueId;
-        const detail = row.status === "ok" ? `${row.sessions}회${row.stale ? ` (저장본, ${row.message})` : ""}` : row.message || "";
+        const detail = row.status === "ok" ? `${row.sessions}회${row.thin ? " (평소보다 적음)" : ""}${row.stale ? ` (저장본, ${row.message})` : ""}` : row.message || "";
         return `<div>${escapeHtml(name)} · ${escapeHtml(row.status)}${detail ? ` · ${escapeHtml(detail)}` : ""}</div>`;
       }).join("");
     }

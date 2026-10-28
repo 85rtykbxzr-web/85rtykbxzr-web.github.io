@@ -43,13 +43,31 @@ await assert.rejects(() => fetchBrowserVenue(browserLiveConfigs[0], { now, fetch
   const result = await fetchImpl(url, options);const body = await result.json();
   if (new URL(url).searchParams.has("PlaySDT")) body.Recordset.push(body.Recordset[0]);
   return { ok: true, json: async () => body };
-} }), /중복/);
+} }), /형식/);
+
+// A short timetable is shown as it is: one screening on one date still counts.
+const oneSession = async (url, options) => {
+  const result = await fetchImpl(url, options);
+  const body = await result.json();
+  body.Recordset = body.Recordset.slice(0, 1);
+  return { ok: true, json: async () => body };
+};
+const thinVenue = await fetchBrowserVenue(browserLiveConfigs[1], { now, fetchImpl: oneSession });
+assert.equal(thinVenue.sessions.length, 1, "a timetable shorter than usual must not be thrown away");
+assert.equal(thinVenue.thin, true);
+await assert.rejects(() => fetchBrowserVenue(browserLiveConfigs[1], { now, fetchImpl: async (url, options) => {
+  const result = await fetchImpl(url, options);
+  const body = await result.json();
+  if (new URL(url).searchParams.has("PlaySDT")) body.Recordset = [];
+  return { ok: true, json: async () => body };
+} }), /회차가 없어요/);
 const partial = await refreshBrowserLiveSchedule(prepared, { now, retryDelayMs: 0, cache: null, fetchImpl: (url, options) => {
   if (new URL(url).searchParams.get("CinemaCd") === "000065") throw new Error("offline");
   return fetchImpl(url, options);
 } });
 assert.equal(partial.meta.browserLive.filter((row) => row.status === "ok").length, 6);
 assert.equal(partial.meta.browserLive.find((row) => row.venueId === "forest").checkedAt, null);
+assert.equal(partial.meta.browserLive.find((row) => row.venueId === "forest").message, "공식 예매 시스템이 응답하지 않아요", "a network failure is explained in plain words");
 assert(!partial.sessions.some((session) => session.venueId === "forest"));
 assert(partial.sessions.some((session) => session.id === "core"));
 assert.equal(partial.meta.generatedAt, fixture.meta.generatedAt, "Browser fetch must not falsify the server verification timestamp");

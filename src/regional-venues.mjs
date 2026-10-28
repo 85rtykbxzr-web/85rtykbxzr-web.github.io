@@ -30,8 +30,8 @@ export const regionalVenueIds = new Set(regionalVenues.map((venue) => venue.id))
 // collection and only move to the 지역 view.
 export const serverVenuesOutsideSeoul = new Set(["heyri"]);
 
-// Small single-screen houses: a day with one screening is normal, so one session on one date
-// is enough to trust an answer.
+// Small single-screen houses: a day with one screening is normal, so their usual size (below
+// which the ?live-debug view notes a short timetable) is one session on one date.
 export const regionalLiveConfigs = regionalVenues.map((venue) => ({
   venueId: venue.id,
   sourceId: `${venue.id}-dtryx-showtimes`,
