@@ -118,18 +118,22 @@ export async function fetchBrowserVenue(config, { fetchImpl = fetch, now = new D
   const today = todayKst(now);
   const dates = (await apiRows("third-party-type2-timetable-play-date-list", config, { MovieCd: "", WorkGuID: config.dateGuid || config.workGuid }, fetchImpl))
     .filter((row) => row.HiddenYn !== "Y").map((row) => dateValue(row.PlaySDT)).filter((date) => date >= today).slice(0, config.maxDates || 14);
-  if (!dates.length || new Set(dates).size !== dates.length) throw new Error("공식 상영 날짜를 확인하지 못했습니다.");
+  if (!dates.length) throw new Error("공식 시간표에 앞으로의 상영 날짜가 없어요");
+  if (new Set(dates).size !== dates.length) throw new Error("공식 시간표 형식이 평소와 달라요");
   const sessions = [];
   for (const date of dates) {
     const rows = await apiRows("third-party-type2-timetable-list", config, { PlaySDT: date, ImgSize: "small" }, fetchImpl);
     sessions.push(...rows.map((item) => browserSession(config, item, date)));
   }
-  if (new Set(sessions.map((session) => session.id)).size !== sessions.length) throw new Error("공식 상영회차가 중복됐습니다.");
+  if (new Set(sessions.map((session) => session.id)).size !== sessions.length) throw new Error("공식 시간표 형식이 평소와 달라요");
   const naturalKeys = sessions.map((session) => `${session.date}|${session.time}|${session.screen}|${session.title}`);
-  if (new Set(naturalKeys).size !== sessions.length) throw new Error("공식 상영회차가 중복됐습니다.");
+  if (new Set(naturalKeys).size !== sessions.length) throw new Error("공식 시간표 형식이 평소와 달라요");
+  if (!sessions.length) throw new Error("공식 시간표에 올라온 회차가 없어요");
+  // A short timetable is still the cinema's own answer: a small house may list a few days only.
+  // It is shown as it is; `thin` only marks it for the ?live-debug view.
   const activeDates = new Set(sessions.map((session) => session.date));
-  if (sessions.length < config.minimum || activeDates.size < config.minimumDates) throw new Error("공식 시간표가 평소보다 적어 추가 확인이 필요합니다.");
-  return { venueId: config.venueId, sourceId: config.sourceId, sessions, checkedAt: new Date().toISOString(), status: "ok" };
+  const thin = sessions.length < config.minimum || activeDates.size < config.minimumDates;
+  return { venueId: config.venueId, sourceId: config.sourceId, sessions, checkedAt: new Date().toISOString(), status: "ok", thin };
 }
 
 // The cinemas' API answers a visitor's browser most of the time but not always, so one
@@ -163,6 +167,15 @@ async function fetchVenueWithRetry(config, { fetchImpl, now, retryDelayMs }) {
   }
 }
 
+// What a visitor is told when a cinema's timetable can't be shown. Our own checks already speak
+// Korean; anything else (a network error, a timeout, an HTTP status) means the booking system
+// didn't answer this browser.
+function failureReason(error) {
+  const message = String(error?.message || "");
+  if (/[가-힣]/.test(message) && !/응답 오류|응답을 확인하지/.test(message)) return message;
+  return "공식 예매 시스템이 응답하지 않아요";
+}
+
 function cachedVenue(cache, config, now, message) {
   const cached = cache?.read(config.venueId);
   const age = Date.now() - Date.parse(cached?.checkedAt || 0);
@@ -189,12 +202,13 @@ export async function refreshBrowserLiveSchedule(base, { configs = browserLiveCo
         outcome = await fetchVenueWithRetry(config, { fetchImpl, now, retryDelayMs });
         cache?.write(config.venueId, { checkedAt: outcome.checkedAt, sessions: outcome.sessions });
       } catch (error) {
-        outcome = cachedVenue(cache, config, now, error.message) || { venueId: config.venueId, status: "error", message: error.message };
+        const reason = failureReason(error);
+        outcome = cachedVenue(cache, config, now, reason) || { venueId: config.venueId, status: "error", message: reason };
       }
       const sessions = result.sessions.filter((session) => session.venueId !== config.venueId);
       if (outcome.status === "ok") sessions.push(...outcome.sessions);
       sessions.sort((a, b) => `${a.date} ${a.timeSort} ${a.id}`.localeCompare(`${b.date} ${b.timeSort} ${b.id}`));
-      const browserLive = result.meta.browserLive.map((row) => row.venueId === config.venueId ? { venueId: outcome.venueId, status: outcome.status, stale: Boolean(outcome.stale), checkedAt: outcome.checkedAt || null, message: outcome.message || "", sessions: outcome.sessions?.length || 0 } : row);
+      const browserLive = result.meta.browserLive.map((row) => row.venueId === config.venueId ? { venueId: outcome.venueId, status: outcome.status, stale: Boolean(outcome.stale), checkedAt: outcome.checkedAt || null, message: outcome.message || "", thin: Boolean(outcome.thin), sessions: outcome.sessions?.length || 0 } : row);
       result = { ...result, sessions, meta: { ...result.meta, browserLive } };
       onProgress(result);
     }
