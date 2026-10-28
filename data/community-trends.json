@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-28T03:10:36.257Z",
+  "generatedAt": "2026-10-28T05:32:37.932Z",
   "weekStart": "2026-10-26",
   "weekEnd": "2026-10-28",
   "windowStart": "2026-10-26",
@@ -14,17 +14,17 @@
     {
       "rank": 1,
       "title": "버닝(하루키전)",
-      "posterUrl": "/assets/recommendation-posters/edc372432da19c51.webp",
-      "localPosterUrl": "/assets/recommendation-posters/edc372432da19c51.webp",
+      "posterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
+      "localPosterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261029&tsId=TS0056&pno=3",
-      "score": 47.7,
+      "score": 81.6,
       "signal": 0,
       "positiveSignal": 0,
-      "mentionCount": 4.6,
+      "mentionCount": 8,
       "rawPositiveSignal": 0,
-      "rawMentionCount": 4.903677461028802,
+      "rawMentionCount": 8.292481250360577,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum"
@@ -52,6 +52,38 @@
           "dayWeight": 0.72
         },
         {
+          "title": "버닝 돌비로 볼때 장점이 뭐임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878082&page=1",
+          "date": "2026-10-28",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "버닝 돌비로 보니까 끝내주네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878076&page=1",
+          "date": "2026-10-28",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
           "title": "버닝 텅텅인데 뭐냐",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878064&page=1",
           "date": "2026-10-28",
@@ -62,23 +94,7 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 6,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        },
-        {
-          "title": "버닝, 시 팝콘 먹어도되냐",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878035&page=1",
-          "date": "2026-10-28",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 1,
+          "commentCount": 7,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
@@ -88,6 +104,85 @@
     },
     {
       "rank": 2,
+      "title": "트레인스포팅",
+      "posterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
+      "localPosterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121831&playDt=20261028&tsId=TS0044&pno=4",
+      "score": 68.9,
+      "signal": 6.3,
+      "positiveSignal": 6.3,
+      "mentionCount": 4,
+      "rawPositiveSignal": 8,
+      "rawMentionCount": 4.564641508472483,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "sangsangmadang",
+        "kucine",
+        "filmforum"
+      ],
+      "venueNames": [
+        "KT&G 상상마당 시네마",
+        "KU시네마테크",
+        "필름포럼"
+      ],
+      "nextDate": "2026-10-28",
+      "nextTime": "16:35",
+      "evidence": [
+        {
+          "title": "오디세이 vs 트레인스포팅 추천좀",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877850&page=2",
+          "date": "2026-10-27",
+          "positive": 6,
+          "rawPositive": 6,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "강추",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 4,
+          "commentPositive": 6,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "트레인스포팅 스타뎀 나오는 영화인줄...",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878077&page=1",
+          "date": "2026-10-28",
+          "positive": 2,
+          "rawPositive": 2,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "봐라",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 6,
+          "commentPositive": 2,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/1jUC02qsqS2NxBMFarbIhcQtazV.jpg"
+    },
+    {
+      "rank": 3,
       "title": "룩백",
       "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
       "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
@@ -168,61 +263,6 @@
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/feIEhh07azcRtn2MocbFX3kWcjw.jpg"
     },
     {
-      "rank": 3,
-      "title": "트레인스포팅",
-      "posterUrl": "/assets/recommendation-posters/6f99db607f2fcb6a.webp",
-      "localPosterUrl": "/assets/recommendation-posters/6f99db607f2fcb6a.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121831&playDt=20261028&tsId=TS0057&pno=2",
-      "score": 36.8,
-      "signal": 4.3,
-      "positiveSignal": 4.3,
-      "mentionCount": 1.6,
-      "rawPositiveSignal": 6,
-      "rawMentionCount": 2.160964047443681,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "filmforum",
-        "sangsangmadang",
-        "kucine"
-      ],
-      "venueNames": [
-        "필름포럼",
-        "KT&G 상상마당 시네마",
-        "KU시네마테크"
-      ],
-      "nextDate": "2026-10-28",
-      "nextTime": "13:00",
-      "evidence": [
-        {
-          "title": "오디세이 vs 트레인스포팅 추천좀",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877850&page=2",
-          "date": "2026-10-27",
-          "positive": 6,
-          "rawPositive": 6,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "강추",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 4,
-          "commentPositive": 6,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/1jUC02qsqS2NxBMFarbIhcQtazV.jpg"
-    },
-    {
       "rank": 4,
       "title": "헤븐 노우즈 왓",
       "posterUrl": "/assets/recommendation-posters/61f1382e4eaba03b.webp",
@@ -298,11 +338,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 76,
+    "fetchedPostCount": 102,
     "listedPostCount": 292,
-    "detailedPostCount": 3,
-    "commentFetchCount": 3,
-    "commentCount": 7,
+    "detailedPostCount": 6,
+    "commentFetchCount": 6,
+    "commentCount": 17,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -311,7 +351,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-28",
     "candidateWindowEnd": "2026-11-11",
-    "candidateCount": 100,
+    "candidateCount": 99,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-26",
     "listLookbackDays": 1,
