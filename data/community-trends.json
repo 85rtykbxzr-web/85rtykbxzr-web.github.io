@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-28T12:45:30.973Z",
-  "weekStart": "2026-10-26",
-  "weekEnd": "2026-10-28",
-  "windowStart": "2026-10-26",
-  "windowEnd": "2026-10-28",
+  "generatedAt": "2026-10-28T15:20:04.233Z",
+  "weekStart": "2026-10-27",
+  "weekEnd": "2026-10-29",
+  "windowStart": "2026-10-27",
+  "windowEnd": "2026-10-29",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -19,10 +19,10 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261029&tsId=TS0056&pno=3",
-      "score": 512.7,
-      "signal": 28,
-      "positiveSignal": 28,
-      "mentionCount": 39.9,
+      "score": 369.6,
+      "signal": 20.2,
+      "positiveSignal": 20.2,
+      "mentionCount": 28.7,
       "rawPositiveSignal": 28,
       "rawMentionCount": 40.1993718459691,
       "scheduleBackfill": false,
@@ -49,7 +49,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "버닝 영화관 내릴때쯤 한번 더봐야것다",
@@ -65,7 +65,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "버닝을 잉태한 대황본",
@@ -81,7 +81,7 @@
           "commentCount": 3,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "버닝 코돌비 맛있다",
@@ -97,7 +97,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kXiF80o74fE9gf3Utf9moAI7ar0.jpg"
@@ -110,10 +110,10 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121831&playDt=20261029&tsId=TS0057&pno=2",
-      "score": 111.8,
-      "signal": 6.3,
-      "positiveSignal": 6.3,
-      "mentionCount": 8.3,
+      "score": 81.6,
+      "signal": 4.5,
+      "positiveSignal": 4.5,
+      "mentionCount": 5.9,
       "rawPositiveSignal": 8,
       "rawMentionCount": 8.85712275883306,
       "scheduleBackfill": false,
@@ -152,7 +152,7 @@
           "commentCount": 4,
           "commentPositive": 6,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "ㅅㅍ? 트레인스포팅 화장실 씬에서",
@@ -168,7 +168,7 @@
           "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "더러운거 싫음 트레인스포팅 걸러야 되나",
@@ -184,7 +184,7 @@
           "commentCount": 7,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "트레인스포팅 스타뎀 나오는 영화인줄...",
@@ -208,122 +208,23 @@
           "commentCount": 6,
           "commentPositive": 2,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/1jUC02qsqS2NxBMFarbIhcQtazV.jpg"
     },
     {
       "rank": 3,
-      "title": "사랑",
-      "posterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
-      "localPosterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.tinyticket.net/event/EVGvD57i1Clf",
-      "score": 83.2,
-      "signal": 4,
-      "positiveSignal": 4,
-      "mentionCount": 6.6,
-      "rawPositiveSignal": 4,
-      "rawMentionCount": 7.660964047443681,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "sac"
-      ],
-      "venueNames": [
-        "서울아트시네마"
-      ],
-      "nextDate": "2026-10-31",
-      "nextTime": "17:00",
-      "evidence": [
-        {
-          "title": "사랑도 통역이 되나요같은 여운 짙게 남는 영화 추천 좀",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877589&page=3",
-          "date": "2026-10-26",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 4,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "난 가능한 사랑 보다는 버닝이 더 재밌던데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878162&page=2",
-          "date": "2026-10-28",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "재밌",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        },
-        {
-          "title": "버닝 보고나니까 가능한 사랑이 좀 우스워지네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878123&page=2",
-          "date": "2026-10-28",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        },
-        {
-          "title": "가능한 사랑이 아카데미에서 수상하면 이거 푼다.",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878104&page=3",
-          "date": "2026-10-28",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kISG5ljzXg34TwsqbToGPu8Ebqy.jpg"
-    },
-    {
-      "rank": 4,
       "title": "이성과 감성",
       "posterUrl": "/assets/recommendation-posters/97c05577019e48b6.webp",
       "localPosterUrl": "/assets/recommendation-posters/97c05577019e48b6.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-29&movieCd=029853&playSDT=2026-10-29&screenId=01&showSeq=4",
-      "score": 76,
-      "signal": 8,
-      "positiveSignal": 8,
-      "mentionCount": 4,
+      "score": 55.8,
+      "signal": 5.8,
+      "positiveSignal": 5.8,
+      "mentionCount": 2.9,
       "rawPositiveSignal": 8,
       "rawMentionCount": 4,
       "scheduleBackfill": false,
@@ -354,7 +255,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "노스포) 이성과 감성 재미는 있다",
@@ -392,10 +293,93 @@
           "commentCount": 10,
           "commentPositive": 8,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261015_94ea9910.jpg"
+    },
+    {
+      "rank": 4,
+      "title": "사랑",
+      "posterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
+      "localPosterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.tinyticket.net/event/EVGvD57i1Clf",
+      "score": 52.1,
+      "signal": 2.9,
+      "positiveSignal": 2.9,
+      "mentionCount": 4,
+      "rawPositiveSignal": 4,
+      "rawMentionCount": 5.5,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "sac"
+      ],
+      "venueNames": [
+        "서울아트시네마"
+      ],
+      "nextDate": "2026-10-31",
+      "nextTime": "17:00",
+      "evidence": [
+        {
+          "title": "난 가능한 사랑 보다는 버닝이 더 재밌던데",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878162&page=2",
+          "date": "2026-10-28",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "버닝 보고나니까 가능한 사랑이 좀 우스워지네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878123&page=2",
+          "date": "2026-10-28",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "가능한 사랑이 아카데미에서 수상하면 이거 푼다.",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878104&page=3",
+          "date": "2026-10-28",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kISG5ljzXg34TwsqbToGPu8Ebqy.jpg"
     }
   ],
   "festivalPicks": [],
@@ -404,24 +388,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 197,
+    "fetchedPostCount": 5,
     "listedPostCount": 292,
-    "detailedPostCount": 32,
-    "commentFetchCount": 32,
-    "commentCount": 116,
+    "detailedPostCount": 0,
+    "commentFetchCount": 0,
+    "commentCount": 0,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-10-27",
-    "newestScannedDate": "2026-10-28",
+    "newestScannedDate": "2026-10-29",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-10-28",
-    "candidateWindowEnd": "2026-11-11",
-    "candidateCount": 93,
+    "candidateWindowStart": "2026-10-29",
+    "candidateWindowEnd": "2026-11-12",
+    "candidateCount": 97,
     "seedLookbackDays": 3,
-    "seedStart": "2026-10-26",
+    "seedStart": "2026-10-27",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-10-28",
+    "listWindowStart": "2026-10-29",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -429,7 +413,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-10-28"
+      "2026-10-29"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [

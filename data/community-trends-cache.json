@@ -2,190 +2,25 @@
   "version": 3,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-10-26",
-  "windowEnd": "2026-10-28",
+  "windowStart": "2026-10-27",
+  "windowEnd": "2026-10-29",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-10-26",
       "2026-10-27",
-      "2026-10-28"
+      "2026-10-28",
+      "2026-10-29"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-10-28",
-    "lastWindowEnd": "2026-10-28",
+    "lastWindowStart": "2026-10-29",
+    "lastWindowEnd": "2026-10-29",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-28T12:45:25.371Z",
+  "updatedAt": "2026-10-28T15:20:02.492Z",
   "days": {
-    "2026-10-26": {
-      "침묵의빛": {
-        "title": "침묵의 빛(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 3.5,
-        "evidence": [
-          {
-            "title": "침묵의 빛 엄청 기대하고 봤는데(ㄴㅅㅍ)",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877725&page=1",
-            "date": "2026-10-26",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 3,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "오늘 침묵의빛 보는데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877628&page=3",
-            "date": "2026-10-26",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "아사코": {
-        "title": "아사코(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 4,
-        "evidence": [
-          {
-            "title": "아사코 마지막 씬 뭐임? 해석좀",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877720&page=1",
-            "date": "2026-10-26",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 3,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "아사코 신작 떴다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877654&page=2",
-            "date": "2026-10-26",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 3,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "헤븐노우즈왓": {
-        "title": "헤븐 노우즈 왓(2D)",
-        "positiveSignal": 8,
-        "mentionCount": 3.584962500721156,
-        "evidence": [
-          {
-            "title": "홍상수 신작 vs 헤븐 노우즈 왓",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877718&page=1",
-            "date": "2026-10-26",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "헤븐노우즈왓 재밌네요",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877713&page=1",
-            "date": "2026-10-26",
-            "positive": 8,
-            "rawPositive": 8,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "재밌",
-                "count": 2,
-                "weight": 4,
-                "score": 8,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "사탄탱고": {
-        "title": "사탄탱고(기획전)",
-        "positiveSignal": 0,
-        "mentionCount": 2.160964047443681,
-        "evidence": [
-          {
-            "title": "사탄탱고 안보면 후회하겠지",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877671&page=2",
-            "date": "2026-10-26",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 4,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "사랑": {
-        "title": "사랑",
-        "positiveSignal": 0,
-        "mentionCount": 2.160964047443681,
-        "evidence": [
-          {
-            "title": "사랑도 통역이 되나요같은 여운 짙게 남는 영화 추천 좀",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877589&page=3",
-            "date": "2026-10-26",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 4,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-10-27": {
       "눈둘데가없네": {
         "title": "눈 둘 데가 없네(영문자막)",
@@ -693,7 +528,8 @@
           }
         ]
       }
-    }
+    },
+    "2026-10-29": {}
   },
   "festivals": {}
 }
