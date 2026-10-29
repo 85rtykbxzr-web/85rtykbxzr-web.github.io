@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-28T21:18:16.819Z",
+  "generatedAt": "2026-10-29T00:24:17.025Z",
   "weekStart": "2026-10-27",
   "weekEnd": "2026-10-29",
   "windowStart": "2026-10-27",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261029&tsId=TS0056&pno=3",
-      "score": 369.6,
+      "score": 394.6,
       "signal": 20.2,
       "positiveSignal": 20.2,
-      "mentionCount": 28.7,
+      "mentionCount": 31.2,
       "rawPositiveSignal": 28,
-      "rawMentionCount": 40.1993718459691,
+      "rawMentionCount": 42.6993718459691,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum"
@@ -98,6 +98,22 @@
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.72
+        },
+        {
+          "title": "버닝에서 이 지점 어찌 생각함",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878305&page=1",
+          "date": "2026-10-29",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 8,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kXiF80o74fE9gf3Utf9moAI7ar0.jpg"
@@ -221,12 +237,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.tinyticket.net/event/EVGvD57i1Clf",
-      "score": 62.1,
+      "score": 77.1,
       "signal": 2.9,
       "positiveSignal": 2.9,
-      "mentionCount": 5,
+      "mentionCount": 6.5,
       "rawPositiveSignal": 4,
-      "rawMentionCount": 6.5,
+      "rawMentionCount": 8,
       "scheduleBackfill": false,
       "venueIds": [
         "sac"
@@ -304,7 +320,7 @@
           "negativeHits": [],
           "questionLike": true,
           "reviewQuestion": true,
-          "commentCount": 0,
+          "commentCount": 13,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
@@ -404,11 +420,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 24,
+    "fetchedPostCount": 29,
     "listedPostCount": 292,
-    "detailedPostCount": 3,
-    "commentFetchCount": 3,
-    "commentCount": 0,
+    "detailedPostCount": 4,
+    "commentFetchCount": 4,
+    "commentCount": 23,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
