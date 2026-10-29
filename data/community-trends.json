@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-29T12:18:34.183Z",
-  "weekStart": "2026-10-27",
-  "weekEnd": "2026-10-29",
-  "windowStart": "2026-10-27",
-  "windowEnd": "2026-10-29",
+  "generatedAt": "2026-10-29T15:08:56.528Z",
+  "weekStart": "2026-10-28",
+  "weekEnd": "2026-10-30",
+  "windowStart": "2026-10-28",
+  "windowEnd": "2026-10-30",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261030&tsId=TS0056&pno=1",
-      "score": 452,
-      "signal": 20.2,
-      "positiveSignal": 20.2,
-      "mentionCount": 37,
+      "score": 361.8,
+      "signal": 14.5,
+      "positiveSignal": 14.5,
+      "mentionCount": 30.3,
       "rawPositiveSignal": 28,
-      "rawMentionCount": 48.49185309632968,
+      "rawMentionCount": 51.49185309632968,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum"
@@ -35,22 +35,6 @@
       "nextDate": "2026-10-30",
       "nextTime": "10:20",
       "evidence": [
-        {
-          "title": "버닝은 돌비에서 한번 보고싶다",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877783&page=3",
-          "date": "2026-10-27",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "버닝 영화관 내릴때쯤 한번 더봐야것다",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878218&page=1",
@@ -65,7 +49,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "버닝을 잉태한 대황본",
@@ -81,7 +65,7 @@
           "commentCount": 3,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "버닝 코돌비 맛있다",
@@ -97,7 +81,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "버닝 봤는데 연상엽이 대체 누구임??",
@@ -113,7 +97,23 @@
           "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
+        },
+        {
+          "title": "버닝에서 비닐하우스 불타는씬",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878410&page=2",
+          "date": "2026-10-29",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kXiF80o74fE9gf3Utf9moAI7ar0.jpg"
@@ -126,10 +126,10 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-30&movieCd=019765&playSDT=2026-10-30&screenId=01&showSeq=6",
-      "score": 196.9,
-      "signal": 22,
-      "positiveSignal": 22,
-      "mentionCount": 10.5,
+      "score": 142.9,
+      "signal": 15.8,
+      "positiveSignal": 15.8,
+      "mentionCount": 7.6,
       "rawPositiveSignal": 22,
       "rawMentionCount": 10.488639961749957,
       "scheduleBackfill": false,
@@ -160,7 +160,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "아사코를 볼까 시를 볼까 둘다안본눈인데",
@@ -176,7 +176,7 @@
           "commentCount": 6,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "(스포?) 아사코 포스터",
@@ -192,7 +192,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
@@ -205,10 +205,10 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.tinyticket.net/event/EVGvD57i1Clf",
-      "score": 111.2,
-      "signal": 2.9,
-      "positiveSignal": 2.9,
-      "mentionCount": 9.9,
+      "score": 80.3,
+      "signal": 2.1,
+      "positiveSignal": 2.1,
+      "mentionCount": 7.1,
       "rawPositiveSignal": 4,
       "rawMentionCount": 11.403677461028803,
       "scheduleBackfill": false,
@@ -243,7 +243,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "버닝 보고나니까 가능한 사랑이 좀 우스워지네",
@@ -259,7 +259,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "가능한 사랑이 아카데미에서 수상하면 이거 푼다.",
@@ -275,7 +275,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "가능한 사랑을 제대로 못 본 것 같기도 하다",
@@ -291,7 +291,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "이창동 시 vs 가능한 사랑 뭐가 더 좋았음?",
@@ -307,7 +307,7 @@
           "commentCount": 6,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kISG5ljzXg34TwsqbToGPu8Ebqy.jpg"
@@ -320,12 +320,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121831&playDt=20261030&tsId=TS0044&pno=3",
-      "score": 81.6,
-      "signal": 4.5,
-      "positiveSignal": 4.5,
-      "mentionCount": 5.9,
-      "rawPositiveSignal": 8,
-      "rawMentionCount": 8.85712275883306,
+      "score": 42.8,
+      "signal": 1,
+      "positiveSignal": 1,
+      "mentionCount": 3.5,
+      "rawPositiveSignal": 2,
+      "rawMentionCount": 6.69615871138938,
       "scheduleBackfill": false,
       "venueIds": [
         "sangsangmadang",
@@ -341,30 +341,6 @@
       "nextTime": "13:35",
       "evidence": [
         {
-          "title": "오디세이 vs 트레인스포팅 추천좀",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1877850&page=2",
-          "date": "2026-10-27",
-          "positive": 6,
-          "rawPositive": 6,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "강추",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 4,
-          "commentPositive": 6,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
           "title": "ㅅㅍ? 트레인스포팅 화장실 씬에서",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878137&page=2",
           "date": "2026-10-28",
@@ -378,7 +354,7 @@
           "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "더러운거 싫음 트레인스포팅 걸러야 되나",
@@ -394,7 +370,7 @@
           "commentCount": 7,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "트레인스포팅 스타뎀 나오는 영화인줄...",
@@ -418,7 +394,7 @@
           "commentCount": 6,
           "commentPositive": 2,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/1jUC02qsqS2NxBMFarbIhcQtazV.jpg"
@@ -430,24 +406,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 204,
+    "fetchedPostCount": 3,
     "listedPostCount": 292,
-    "detailedPostCount": 24,
-    "commentFetchCount": 24,
-    "commentCount": 91,
+    "detailedPostCount": 2,
+    "commentFetchCount": 2,
+    "commentCount": 8,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-10-28",
-    "newestScannedDate": "2026-10-29",
+    "newestScannedDate": "2026-10-30",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-10-29",
-    "candidateWindowEnd": "2026-11-12",
-    "candidateCount": 87,
+    "candidateWindowStart": "2026-10-30",
+    "candidateWindowEnd": "2026-11-13",
+    "candidateCount": 90,
     "seedLookbackDays": 3,
-    "seedStart": "2026-10-27",
+    "seedStart": "2026-10-28",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-10-29",
+    "listWindowStart": "2026-10-30",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -455,7 +431,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-10-29"
+      "2026-10-30"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [
