@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-29T03:14:55.805Z",
+  "generatedAt": "2026-10-29T06:21:20.963Z",
   "weekStart": "2026-10-27",
   "weekEnd": "2026-10-29",
   "windowStart": "2026-10-27",
@@ -14,12 +14,12 @@
     {
       "rank": 1,
       "title": "버닝(하루키전)",
-      "posterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
-      "localPosterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
+      "posterUrl": "/assets/recommendation-posters/edc372432da19c51.webp",
+      "localPosterUrl": "/assets/recommendation-posters/edc372432da19c51.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261029&tsId=TS0056&pno=3",
-      "score": 424.6,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261030&tsId=TS0056&pno=1",
+      "score": 424.1,
       "signal": 20.2,
       "positiveSignal": 20.2,
       "mentionCount": 34.2,
@@ -32,8 +32,8 @@
       "venueNames": [
         "필름포럼"
       ],
-      "nextDate": "2026-10-29",
-      "nextTime": "13:40",
+      "nextDate": "2026-10-30",
+      "nextTime": "10:20",
       "evidence": [
         {
           "title": "버닝은 돌비에서 한번 보고싶다",
@@ -101,7 +101,7 @@
         },
         {
           "title": "시 버닝 후기",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878315&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878315&page=2",
           "date": "2026-10-29",
           "positive": 0,
           "rawPositive": 0,
@@ -120,12 +120,114 @@
     },
     {
       "rank": 2,
-      "title": "트레인스포팅",
-      "posterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
-      "localPosterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
+      "title": "아사코",
+      "posterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
+      "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121831&playDt=20261029&tsId=TS0057&pno=2",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-29&movieCd=019765&playSDT=2026-10-29&screenId=02&showSeq=4",
+      "score": 162.8,
+      "signal": 22,
+      "positiveSignal": 22,
+      "mentionCount": 7.1,
+      "rawPositiveSignal": 22,
+      "rawMentionCount": 7.084962500721156,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "cinecube",
+        "filmforum",
+        "sangsangmadang"
+      ],
+      "venueNames": [
+        "씨네큐브 광화문",
+        "필름포럼",
+        "KT&G 상상마당 시네마"
+      ],
+      "nextDate": "2026-10-29",
+      "nextTime": "15:25",
+      "evidence": [
+        {
+          "title": "(스포?) 아사코 포스터",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878376&page=1",
+          "date": "2026-10-29",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "아사코 존나재밌음",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878354&page=1",
+          "date": "2026-10-29",
+          "positive": 10,
+          "rawPositive": 10,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "최고",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "나 히갤러인데 아사코 개꿀잼이던데",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878353&page=1",
+          "date": "2026-10-29",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
+    },
+    {
+      "rank": 3,
+      "title": "트레인스포팅",
+      "posterUrl": "/assets/recommendation-posters/6f99db607f2fcb6a.webp",
+      "localPosterUrl": "/assets/recommendation-posters/6f99db607f2fcb6a.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121831&playDt=20261030&tsId=TS0044&pno=3",
       "score": 81.6,
       "signal": 4.5,
       "positiveSignal": 4.5,
@@ -134,17 +236,17 @@
       "rawMentionCount": 8.85712275883306,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum",
         "sangsangmadang",
-        "kucine"
+        "kucine",
+        "filmforum"
       ],
       "venueNames": [
-        "필름포럼",
         "KT&G 상상마당 시네마",
-        "KU시네마테크"
+        "KU시네마테크",
+        "필름포럼"
       ],
-      "nextDate": "2026-10-29",
-      "nextTime": "12:40",
+      "nextDate": "2026-10-30",
+      "nextTime": "13:35",
       "evidence": [
         {
           "title": "오디세이 vs 트레인스포팅 추천좀",
@@ -230,7 +332,7 @@
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/1jUC02qsqS2NxBMFarbIhcQtazV.jpg"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "title": "사랑",
       "posterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
       "localPosterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
@@ -311,7 +413,7 @@
         },
         {
           "title": "가능한 사랑 메타 95 ㄷㄷ",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878301&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878301&page=2",
           "date": "2026-10-29",
           "positive": 0,
           "rawPositive": 0,
@@ -327,91 +429,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kISG5ljzXg34TwsqbToGPu8Ebqy.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "이성과 감성",
-      "posterUrl": "/assets/recommendation-posters/97c05577019e48b6.webp",
-      "localPosterUrl": "/assets/recommendation-posters/97c05577019e48b6.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-29&movieCd=029853&playSDT=2026-10-29&screenId=01&showSeq=4",
-      "score": 55.8,
-      "signal": 5.8,
-      "positiveSignal": 5.8,
-      "mentionCount": 2.9,
-      "rawPositiveSignal": 8,
-      "rawMentionCount": 4,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "cinecube",
-        "kucine",
-        "filmforum"
-      ],
-      "venueNames": [
-        "씨네큐브 광화문",
-        "KU시네마테크",
-        "필름포럼"
-      ],
-      "nextDate": "2026-10-29",
-      "nextTime": "13:40",
-      "evidence": [
-        {
-          "title": "이성과 감성 이번에 나온거 이안꺼보다 재밌음?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878142&page=2",
-          "date": "2026-10-28",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "노스포) 이성과 감성 재미는 있다",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878125&page=2",
-          "date": "2026-10-28",
-          "positive": 8,
-          "rawPositive": 8,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "잘만들",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "괜찮",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            },
-            {
-              "term": "좋았음",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 10,
-          "commentPositive": 8,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261015_94ea9910.jpg"
     }
   ],
   "festivalPicks": [],
@@ -420,20 +437,20 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 38,
+    "fetchedPostCount": 104,
     "listedPostCount": 292,
-    "detailedPostCount": 7,
-    "commentFetchCount": 7,
-    "commentCount": 67,
+    "detailedPostCount": 13,
+    "commentFetchCount": 13,
+    "commentCount": 70,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
-    "oldestScannedDate": "2026-10-27",
+    "oldestScannedDate": "2026-10-28",
     "newestScannedDate": "2026-10-29",
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-29",
     "candidateWindowEnd": "2026-11-12",
-    "candidateCount": 96,
+    "candidateCount": 92,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-27",
     "listLookbackDays": 1,
