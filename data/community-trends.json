@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-30T06:23:43.697Z",
+  "generatedAt": "2026-10-30T09:14:21.324Z",
   "weekStart": "2026-10-28",
   "weekEnd": "2026-10-30",
   "windowStart": "2026-10-28",
@@ -125,8 +125,8 @@
       "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-30&movieCd=019765&playSDT=2026-10-30&screenId=01&showSeq=6",
-      "score": 142.9,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261030&tsId=TS0056&pno=5",
+      "score": 142.4,
       "signal": 15.8,
       "positiveSignal": 15.8,
       "mentionCount": 7.6,
@@ -134,17 +134,17 @@
       "rawMentionCount": 10.488639961749957,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube",
         "filmforum",
-        "sangsangmadang"
+        "sangsangmadang",
+        "cinecube"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
         "필름포럼",
-        "KT&G 상상마당 시네마"
+        "KT&G 상상마당 시네마",
+        "씨네큐브 광화문"
       ],
       "nextDate": "2026-10-30",
-      "nextTime": "17:15",
+      "nextTime": "19:40",
       "evidence": [
         {
           "title": "아사코 두 번 보니까",
@@ -360,7 +360,7 @@
         },
         {
           "title": "룩백 좋았으면",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878591&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878591&page=2",
           "date": "2026-10-30",
           "positive": 12,
           "rawPositive": 12,
@@ -406,10 +406,10 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 66,
+    "fetchedPostCount": 104,
     "listedPostCount": 292,
-    "detailedPostCount": 8,
-    "commentFetchCount": 8,
+    "detailedPostCount": 9,
+    "commentFetchCount": 9,
     "commentCount": 40,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
