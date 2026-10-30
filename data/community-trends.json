@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-30T09:56:50.629Z",
+  "generatedAt": "2026-10-30T12:20:27.130Z",
   "weekStart": "2026-10-28",
   "weekEnd": "2026-10-30",
   "windowStart": "2026-10-28",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261102&tsId=TS0057&pno=1",
-      "score": 424.1,
-      "signal": 22.5,
-      "positiveSignal": 22.5,
-      "mentionCount": 33.4,
-      "rawPositiveSignal": 36,
-      "rawMentionCount": 54.57681559705083,
+      "score": 508,
+      "signal": 28.5,
+      "positiveSignal": 28.5,
+      "mentionCount": 39.3,
+      "rawPositiveSignal": 42,
+      "rawMentionCount": 60.56545555880079,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum"
@@ -125,8 +125,8 @@
       "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261030&tsId=TS0056&pno=5",
-      "score": 142.4,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-31&movieCd=019765&playSDT=2026-10-31&screenId=01&showSeq=5",
+      "score": 141.4,
       "signal": 15.8,
       "positiveSignal": 15.8,
       "mentionCount": 7.6,
@@ -134,17 +134,17 @@
       "rawMentionCount": 10.488639961749957,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum",
+        "cinecube",
         "sangsangmadang",
-        "cinecube"
+        "filmforum"
       ],
       "venueNames": [
-        "필름포럼",
+        "씨네큐브 광화문",
         "KT&G 상상마당 시네마",
-        "씨네큐브 광화문"
+        "필름포럼"
       ],
-      "nextDate": "2026-10-30",
-      "nextTime": "19:40",
+      "nextDate": "2026-10-31",
+      "nextTime": "19:20",
       "evidence": [
         {
           "title": "아사코 두 번 보니까",
@@ -199,117 +199,6 @@
     },
     {
       "rank": 3,
-      "title": "룩백",
-      "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
-      "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121765&playDt=20261031&tsId=TS0056&pno=4",
-      "score": 110.5,
-      "signal": 14,
-      "positiveSignal": 14,
-      "mentionCount": 5.2,
-      "rawPositiveSignal": 14,
-      "rawMentionCount": 6.403677461028802,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "filmforum",
-        "cinecube",
-        "sangsangmadang",
-        "kucine"
-      ],
-      "venueNames": [
-        "필름포럼",
-        "씨네큐브 광화문",
-        "KT&G 상상마당 시네마",
-        "KU시네마테크"
-      ],
-      "nextDate": "2026-10-31",
-      "nextTime": "12:10",
-      "evidence": [
-        {
-          "title": "늦은 룩백 후기",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878177&page=1",
-          "date": "2026-10-28",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 7,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "고레에다 룩백 보고 폭풍오열",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878661&page=1",
-          "date": "2026-10-30",
-          "positive": 2,
-          "rawPositive": 2,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "좋네",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 2,
-          "commentNegative": 0,
-          "dayWeight": 1
-        },
-        {
-          "title": "룩백 좋았으면",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878591&page=2",
-          "date": "2026-10-30",
-          "positive": 12,
-          "rawPositive": 12,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "재밌",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "추천",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "추천",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 6,
-          "commentPositive": 8,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/feIEhh07azcRtn2MocbFX3kWcjw.jpg"
-    },
-    {
-      "rank": 4,
       "title": "사랑",
       "posterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
       "localPosterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
@@ -422,6 +311,93 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kISG5ljzXg34TwsqbToGPu8Ebqy.jpg"
+    },
+    {
+      "rank": 4,
+      "title": "룩백",
+      "posterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
+      "localPosterUrl": "/assets/recommendation-posters/3f8057ae3cf83bcf.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121765&playDt=20261031&tsId=TS0056&pno=4",
+      "score": 88.5,
+      "signal": 12,
+      "positiveSignal": 12,
+      "mentionCount": 3.7,
+      "rawPositiveSignal": 12,
+      "rawMentionCount": 4.903677461028802,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "filmforum",
+        "cinecube",
+        "sangsangmadang",
+        "kucine"
+      ],
+      "venueNames": [
+        "필름포럼",
+        "씨네큐브 광화문",
+        "KT&G 상상마당 시네마",
+        "KU시네마테크"
+      ],
+      "nextDate": "2026-10-31",
+      "nextTime": "12:10",
+      "evidence": [
+        {
+          "title": "늦은 룩백 후기",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878177&page=1",
+          "date": "2026-10-28",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 7,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "룩백 좋았으면",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878591&page=3",
+          "date": "2026-10-30",
+          "positive": 12,
+          "rawPositive": 12,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "추천",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "추천",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 6,
+          "commentPositive": 8,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/feIEhh07azcRtn2MocbFX3kWcjw.jpg"
     }
   ],
   "festivalPicks": [],
@@ -430,11 +406,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 116,
+    "fetchedPostCount": 163,
     "listedPostCount": 292,
-    "detailedPostCount": 10,
-    "commentFetchCount": 10,
-    "commentCount": 42,
+    "detailedPostCount": 12,
+    "commentFetchCount": 12,
+    "commentCount": 50,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -443,7 +419,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-30",
     "candidateWindowEnd": "2026-11-13",
-    "candidateCount": 88,
+    "candidateCount": 87,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-28",
     "listLookbackDays": 1,
