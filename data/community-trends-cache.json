@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-30",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-30T09:14:17.835Z",
+  "updatedAt": "2026-10-30T09:56:47.754Z",
   "days": {
     "2026-10-28": {
       "버닝": {
@@ -693,70 +693,34 @@
       }
     },
     "2026-10-30": {
-      "매쉬빌": {
-        "title": "매쉬빌(GV)",
-        "positiveSignal": 0,
-        "mentionCount": 1,
+      "룩백": {
+        "title": "룩백(2D)",
+        "positiveSignal": 14,
+        "mentionCount": 3.903677461028802,
         "evidence": [
           {
-            "title": "매쉬빌 본 사람없냐?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878625&page=1",
+            "title": "고레에다 룩백 보고 폭풍오열",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878661&page=1",
             "date": "2026-10-30",
-            "positive": 0,
-            "rawPositive": 0,
+            "positive": 2,
+            "rawPositive": 2,
             "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "미션": {
-        "title": "미션(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 2,
-        "evidence": [
-          {
-            "title": "미션 볼만하냐?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878613&page=1",
-            "date": "2026-10-30",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "왜 미션이 희생보다 못한건지 이해를 못하겠우",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878561&page=2",
-            "date": "2026-10-30",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
+            "positiveHits": [
+              {
+                "term": "좋네",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
+            "commentCount": 2,
+            "commentPositive": 2,
             "commentNegative": 0
-          }
-        ]
-      },
-      "룩백": {
-        "title": "룩백(2D)",
-        "positiveSignal": 12,
-        "mentionCount": 2.403677461028802,
-        "evidence": [
+          },
           {
             "title": "룩백 좋았으면",
             "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878591&page=2",
@@ -792,6 +756,65 @@
             "reviewQuestion": false,
             "commentCount": 6,
             "commentPositive": 8,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "매쉬빌": {
+        "title": "매쉬빌(GV)",
+        "positiveSignal": 0,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "매쉬빌 본 사람없냐?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878625&page=2",
+            "date": "2026-10-30",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "미션": {
+        "title": "미션(2D)",
+        "positiveSignal": 0,
+        "mentionCount": 2,
+        "evidence": [
+          {
+            "title": "미션 볼만하냐?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878613&page=2",
+            "date": "2026-10-30",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "왜 미션이 희생보다 못한건지 이해를 못하겠우",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878561&page=3",
+            "date": "2026-10-30",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
             "commentNegative": 0
           }
         ]
