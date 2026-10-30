@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-30T15:11:27.522Z",
+  "generatedAt": "2026-10-30T17:59:40.333Z",
   "weekStart": "2026-10-29",
   "weekEnd": "2026-10-31",
   "windowStart": "2026-10-29",
@@ -134,12 +134,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-31&movieCd=019765&playSDT=2026-10-31&screenId=01&showSeq=5",
-      "score": 102.4,
+      "score": 112.4,
       "signal": 11.4,
       "positiveSignal": 11.4,
-      "mentionCount": 5.4,
+      "mentionCount": 6.4,
       "rawPositiveSignal": 22,
-      "rawMentionCount": 10.488639961749957,
+      "rawMentionCount": 11.488639961749957,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -201,6 +201,22 @@
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.518
+        },
+        {
+          "title": "아사코 장건재gv vs 갤주gv",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878792&page=1",
+          "date": "2026-10-31",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
@@ -374,11 +390,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 1,
+    "fetchedPostCount": 15,
     "listedPostCount": 292,
-    "detailedPostCount": 0,
-    "commentFetchCount": 0,
-    "commentCount": 0,
+    "detailedPostCount": 2,
+    "commentFetchCount": 2,
+    "commentCount": 1,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
