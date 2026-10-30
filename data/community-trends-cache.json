@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-10-30",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-30T03:17:41.051Z",
+  "updatedAt": "2026-10-30T06:23:40.326Z",
   "days": {
     "2026-10-28": {
       "버닝": {
@@ -693,14 +693,14 @@
       }
     },
     "2026-10-30": {
-      "20시간": {
-        "title": "20시간",
+      "미션": {
+        "title": "미션(2D)",
         "positiveSignal": 0,
         "mentionCount": 2,
         "evidence": [
           {
-            "title": "서아시 20시간 사랑영화 필관작임?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878584&page=1",
+            "title": "미션 볼만하냐?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878613&page=1",
             "date": "2026-10-30",
             "positive": 0,
             "rawPositive": 0,
@@ -708,6 +708,21 @@
             "positiveHits": [],
             "negativeHits": [],
             "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "왜 미션이 희생보다 못한건지 이해를 못하겠우",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878561&page=2",
+            "date": "2026-10-30",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
             "reviewQuestion": false,
             "commentCount": 0,
             "commentPositive": 0,
@@ -715,10 +730,54 @@
           }
         ]
       },
+      "룩백": {
+        "title": "룩백(2D)",
+        "positiveSignal": 12,
+        "mentionCount": 2.403677461028802,
+        "evidence": [
+          {
+            "title": "룩백 좋았으면",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878591&page=1",
+            "date": "2026-10-30",
+            "positive": 12,
+            "rawPositive": 12,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "재밌",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "추천",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "추천",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 6,
+            "commentPositive": 8,
+            "commentNegative": 0
+          }
+        ]
+      },
       "사랑영화": {
         "title": "사랑영화",
         "positiveSignal": 0,
-        "mentionCount": 2,
+        "mentionCount": 2.292481250360578,
         "evidence": [
           {
             "title": "서아시 20시간 사랑영화 필관작임?",
@@ -731,7 +790,7 @@
             "negativeHits": [],
             "questionLike": true,
             "reviewQuestion": false,
-            "commentCount": 0,
+            "commentCount": 1,
             "commentPositive": 0,
             "commentNegative": 0
           }
@@ -740,7 +799,29 @@
       "사랑": {
         "title": "사랑",
         "positiveSignal": 0,
-        "mentionCount": 2,
+        "mentionCount": 2.292481250360578,
+        "evidence": [
+          {
+            "title": "서아시 20시간 사랑영화 필관작임?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878584&page=1",
+            "date": "2026-10-30",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "시간은멈춰있다": {
+        "title": "시간은 멈춰 있다",
+        "positiveSignal": 0,
+        "mentionCount": 2.292481250360578,
         "evidence": [
           {
             "title": "서아시 20시간 사랑영화 필관작임?",
@@ -759,10 +840,10 @@
           }
         ]
       },
-      "시간은멈춰있다": {
-        "title": "시간은 멈춰 있다",
+      "20시간": {
+        "title": "20시간",
         "positiveSignal": 0,
-        "mentionCount": 2,
+        "mentionCount": 2.292481250360578,
         "evidence": [
           {
             "title": "서아시 20시간 사랑영화 필관작임?",
@@ -775,7 +856,7 @@
             "negativeHits": [],
             "questionLike": true,
             "reviewQuestion": false,
-            "commentCount": 0,
+            "commentCount": 1,
             "commentPositive": 0,
             "commentNegative": 0
           }
@@ -803,7 +884,7 @@
           },
           {
             "title": "<버닝> 러닝 타임 2시간 27분 52초 ㅈㄴ기내",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878545&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878545&page=2",
             "date": "2026-10-30",
             "positive": 0,
             "rawPositive": 0,
@@ -848,28 +929,6 @@
           }
         ]
       },
-      "미션": {
-        "title": "미션(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "왜 미션이 희생보다 못한건지 이해를 못하겠우",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878561&page=1",
-            "date": "2026-10-30",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
       "아버지": {
         "title": "아버지",
         "positiveSignal": 0,
@@ -877,7 +936,7 @@
         "evidence": [
           {
             "title": "‘영원한 수사반장’·‘국민 아버지’ 최불암 별세",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878553&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878553&page=2",
             "date": "2026-10-30",
             "positive": 0,
             "rawPositive": 0,
