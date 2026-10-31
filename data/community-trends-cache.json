@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-11-01",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-10-31T15:17:14.790Z",
+  "updatedAt": "2026-10-31T18:23:21.745Z",
   "days": {
     "2026-10-30": {
       "버닝": {
@@ -676,7 +676,135 @@
         ]
       }
     },
-    "2026-11-01": {}
+    "2026-11-01": {
+      "이방인": {
+        "title": "이방인",
+        "positiveSignal": 0,
+        "mentionCount": 2,
+        "evidence": [
+          {
+            "title": "이방인 꿈꾸는 모험 뭐 볼까",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879031&page=1",
+            "date": "2026-11-01",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 3,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "버닝": {
+        "title": "버닝(하루키전)",
+        "positiveSignal": 6,
+        "mentionCount": 9.114409345247939,
+        "evidence": [
+          {
+            "title": "너네라면 버닝, 시 돌비에 이동 시간 얼마나 투자할래",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879026&page=1",
+            "date": "2026-11-01",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 4,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "버닝 돌비로 보니까 ㄹㅇ 지림",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879025&page=1",
+            "date": "2026-11-01",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "버닝 별거 아닌 듯한데 좋았던 장면",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879022&page=1",
+            "date": "2026-11-01",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 4,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "아사코": {
+        "title": "아사코",
+        "positiveSignal": 12,
+        "mentionCount": 3.584962500721156,
+        "evidence": [
+          {
+            "title": "아사코는 익스트림 롱숏이 가히 천재적임",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879014&page=1",
+            "date": "2026-11-01",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "감탄",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 4,
+            "commentNegative": 0
+          },
+          {
+            "title": "아사코 재밌다",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879005&page=1",
+            "date": "2026-11-01",
+            "positive": 8,
+            "rawPositive": 8,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "재밌",
+                "count": 2,
+                "weight": 4,
+                "score": 8,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      }
+    }
   },
   "festivals": {}
 }

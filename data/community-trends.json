@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-31T15:17:20.067Z",
+  "generatedAt": "2026-10-31T18:23:24.929Z",
   "weekStart": "2026-10-30",
   "weekEnd": "2026-11-01",
   "windowStart": "2026-10-30",
@@ -13,93 +13,18 @@
   "items": [
     {
       "rank": 1,
-      "title": "와일드 호스 나인",
-      "posterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
-      "localPosterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-04&movieCd=029805&playSDT=2026-11-04&screenId=01&showSeq=3",
-      "score": 230.7,
-      "signal": 25.9,
-      "positiveSignal": 25.9,
-      "mentionCount": 12.3,
-      "rawPositiveSignal": 36,
-      "rawMentionCount": 17.084962500721154,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "cinecube"
-      ],
-      "venueNames": [
-        "씨네큐브 광화문"
-      ],
-      "nextDate": "2026-11-04",
-      "nextTime": "13:15",
-      "evidence": [
-        {
-          "title": "와일드호스나인에서 '나인'의 의미",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878913&page=1",
-          "date": "2026-10-31",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "와호나 불판에 불호가 단하나도없던데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878911&page=1",
-          "date": "2026-10-31",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 7,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "영고수잇냐? 와일드호스나인 왜 나인인거냐 제목이",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878882&page=2",
-          "date": "2026-10-31",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/bh4wFW0B7fVtUOT9xfeugJJYKWw.jpg"
-    },
-    {
-      "rank": 2,
       "title": "버닝(하루키전)",
       "posterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
       "localPosterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261102&tsId=TS0057&pno=1",
-      "score": 195.5,
-      "signal": 7.3,
-      "positiveSignal": 7.3,
-      "mentionCount": 16.6,
-      "rawPositiveSignal": 14,
-      "rawMentionCount": 26.723206471664753,
+      "score": 310.7,
+      "signal": 13.3,
+      "positiveSignal": 13.3,
+      "mentionCount": 25.7,
+      "rawPositiveSignal": 20,
+      "rawMentionCount": 35.83761581691269,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum"
@@ -210,6 +135,81 @@
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kXiF80o74fE9gf3Utf9moAI7ar0.jpg"
     },
     {
+      "rank": 2,
+      "title": "와일드 호스 나인",
+      "posterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
+      "localPosterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-04&movieCd=029805&playSDT=2026-11-04&screenId=01&showSeq=3",
+      "score": 230.7,
+      "signal": 25.9,
+      "positiveSignal": 25.9,
+      "mentionCount": 12.3,
+      "rawPositiveSignal": 36,
+      "rawMentionCount": 17.084962500721154,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "cinecube"
+      ],
+      "venueNames": [
+        "씨네큐브 광화문"
+      ],
+      "nextDate": "2026-11-04",
+      "nextTime": "13:15",
+      "evidence": [
+        {
+          "title": "와일드호스나인에서 '나인'의 의미",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878913&page=1",
+          "date": "2026-10-31",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "와호나 불판에 불호가 단하나도없던데",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878911&page=1",
+          "date": "2026-10-31",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 7,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "영고수잇냐? 와일드호스나인 왜 나인인거냐 제목이",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878882&page=2",
+          "date": "2026-10-31",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/bh4wFW0B7fVtUOT9xfeugJJYKWw.jpg"
+    },
+    {
       "rank": 3,
       "title": "아사코",
       "posterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
@@ -217,12 +217,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-01&movieCd=019765&playSDT=2026-11-01&screenId=02&showSeq=4",
-      "score": 55.1,
-      "signal": 1.4,
-      "positiveSignal": 1.4,
-      "mentionCount": 4.5,
-      "rawPositiveSignal": 2,
-      "rawMentionCount": 6.292481250360578,
+      "score": 138.9,
+      "signal": 13.4,
+      "positiveSignal": 13.4,
+      "mentionCount": 8.1,
+      "rawPositiveSignal": 14,
+      "rawMentionCount": 9.877443751081735,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -292,6 +292,54 @@
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.72
+        },
+        {
+          "title": "아사코는 익스트림 롱숏이 가히 천재적임",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879014&page=1",
+          "date": "2026-11-01",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "감탄",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 4,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "아사코 재밌다",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879005&page=1",
+          "date": "2026-11-01",
+          "positive": 8,
+          "rawPositive": 8,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "재밌",
+              "count": 2,
+              "weight": 4,
+              "score": 8,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
@@ -390,11 +438,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 1,
+    "fetchedPostCount": 34,
     "listedPostCount": 292,
-    "detailedPostCount": 0,
-    "commentFetchCount": 0,
-    "commentCount": 0,
+    "detailedPostCount": 8,
+    "commentFetchCount": 8,
+    "commentCount": 19,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
