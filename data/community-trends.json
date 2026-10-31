@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-31T12:18:38.124Z",
-  "weekStart": "2026-10-29",
-  "weekEnd": "2026-10-31",
-  "windowStart": "2026-10-29",
-  "windowEnd": "2026-10-31",
+  "generatedAt": "2026-10-31T15:17:20.067Z",
+  "weekStart": "2026-10-30",
+  "weekEnd": "2026-11-01",
+  "windowStart": "2026-10-30",
+  "windowEnd": "2026-11-01",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -19,10 +19,10 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-04&movieCd=029805&playSDT=2026-11-04&screenId=01&showSeq=3",
-      "score": 318.8,
-      "signal": 36,
-      "positiveSignal": 36,
-      "mentionCount": 17.1,
+      "score": 230.7,
+      "signal": 25.9,
+      "positiveSignal": 25.9,
+      "mentionCount": 12.3,
       "rawPositiveSignal": 36,
       "rawMentionCount": 17.084962500721154,
       "scheduleBackfill": false,
@@ -49,7 +49,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "와호나 불판에 불호가 단하나도없던데",
@@ -65,7 +65,7 @@
           "commentCount": 7,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "영고수잇냐? 와일드호스나인 왜 나인인거냐 제목이",
@@ -81,7 +81,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/bh4wFW0B7fVtUOT9xfeugJJYKWw.jpg"
@@ -94,12 +94,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261102&tsId=TS0057&pno=1",
-      "score": 314.4,
-      "signal": 10.1,
-      "positiveSignal": 10.1,
-      "mentionCount": 27.4,
+      "score": 195.5,
+      "signal": 7.3,
+      "positiveSignal": 7.3,
+      "mentionCount": 16.6,
       "rawPositiveSignal": 14,
-      "rawMentionCount": 35.01568772202533,
+      "rawMentionCount": 26.723206471664753,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum"
@@ -110,54 +110,6 @@
       "nextDate": "2026-11-02",
       "nextTime": "10:30",
       "evidence": [
-        {
-          "title": "버닝 봤는데 연상엽이 대체 누구임??",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878472&page=1",
-          "date": "2026-10-29",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "버닝에서 비닐하우스 불타는씬",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878410&page=2",
-          "date": "2026-10-29",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "시 버닝 후기",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878315&page=4",
-          "date": "2026-10-29",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "스포)) 버닝 봤는데 ㅈㄴ 궁금한거 있음..",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878716&page=1",
@@ -180,7 +132,7 @@
           "commentCount": 6,
           "commentPositive": 4,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "버닝이 이창동 필모 중에선 제일 순한 내용 아니냐",
@@ -196,6 +148,62 @@
           "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "버닝 돌비로 보면 체감 큼?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878681&page=2",
+          "date": "2026-10-30",
+          "positive": 2,
+          "rawPositive": 2,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "봐라",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 2,
+          "commentPositive": 2,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "버닝 종수모 만나는 씬 웃프네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878923&page=1",
+          "date": "2026-10-31",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "버닝 집에서만 봐서 잘 모르겠던데",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878904&page=2",
+          "date": "2026-10-31",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 4,
+          "commentPositive": 0,
+          "commentNegative": 0,
           "dayWeight": 0.72
         }
       ],
@@ -209,12 +217,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-01&movieCd=019765&playSDT=2026-11-01&screenId=02&showSeq=4",
-      "score": 174.8,
-      "signal": 13.4,
-      "positiveSignal": 13.4,
-      "mentionCount": 11.7,
-      "rawPositiveSignal": 24,
-      "rawMentionCount": 16.781121212110534,
+      "score": 55.1,
+      "signal": 1.4,
+      "positiveSignal": 1.4,
+      "mentionCount": 4.5,
+      "rawPositiveSignal": 2,
+      "rawMentionCount": 6.292481250360578,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -230,54 +238,6 @@
       "nextTime": "16:35",
       "evidence": [
         {
-          "title": "아사코 두 번 보니까",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878459&page=2",
-          "date": "2026-10-29",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "아사코를 볼까 시를 볼까 둘다안본눈인데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878422&page=2",
-          "date": "2026-10-29",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 6,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "(스포?) 아사코 포스터",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878376&page=3",
-          "date": "2026-10-29",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
           "title": "아사코 정성일쌤 gv는 시간, 장소 정해졌나요???",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878887&page=2",
           "date": "2026-10-31",
@@ -291,7 +251,7 @@
           "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "아사코 보러가려했는데",
@@ -307,7 +267,31 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
+        },
+        {
+          "title": "아사코는 좋긴 좋은데",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878826&page=3",
+          "date": "2026-10-31",
+          "positive": 2,
+          "rawPositive": 2,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "좋긴",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
@@ -320,10 +304,10 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261101&tsId=TS0044&pno=3",
-      "score": 65.9,
-      "signal": 8.6,
-      "positiveSignal": 8.6,
-      "mentionCount": 2.7,
+      "score": 48.5,
+      "signal": 6.2,
+      "positiveSignal": 6.2,
+      "mentionCount": 2,
       "rawPositiveSignal": 12,
       "rawMentionCount": 3.403677461028802,
       "scheduleBackfill": false,
@@ -378,7 +362,7 @@
           "commentCount": 6,
           "commentPositive": 8,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "룩백 실사 진짜 별로더라",
@@ -394,7 +378,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/rfH6BJ9ZRw31awgUtQhN6Cug5yu.jpg"
@@ -406,24 +390,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 154,
+    "fetchedPostCount": 1,
     "listedPostCount": 292,
-    "detailedPostCount": 31,
-    "commentFetchCount": 31,
-    "commentCount": 86,
+    "detailedPostCount": 0,
+    "commentFetchCount": 0,
+    "commentCount": 0,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-10-30",
-    "newestScannedDate": "2026-10-31",
+    "newestScannedDate": "2026-11-01",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-10-31",
-    "candidateWindowEnd": "2026-11-14",
+    "candidateWindowStart": "2026-11-01",
+    "candidateWindowEnd": "2026-11-15",
     "candidateCount": 89,
     "seedLookbackDays": 3,
-    "seedStart": "2026-10-29",
+    "seedStart": "2026-10-30",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-10-31",
+    "listWindowStart": "2026-11-01",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -431,7 +415,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-10-31"
+      "2026-11-01"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [
