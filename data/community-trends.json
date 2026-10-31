@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-31T09:20:43.955Z",
+  "generatedAt": "2026-10-31T12:11:49.288Z",
   "weekStart": "2026-10-29",
   "weekEnd": "2026-10-31",
   "windowStart": "2026-10-29",
@@ -14,17 +14,17 @@
     {
       "rank": 1,
       "title": "버닝(하루키전)",
-      "posterUrl": "/assets/recommendation-posters/edc372432da19c51.webp",
-      "localPosterUrl": "/assets/recommendation-posters/edc372432da19c51.webp",
+      "posterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
+      "localPosterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261102&tsId=TS0057&pno=1",
-      "score": 273.8,
+      "score": 314.4,
       "signal": 10.1,
       "positiveSignal": 10.1,
-      "mentionCount": 23.3,
+      "mentionCount": 27.4,
       "rawPositiveSignal": 14,
-      "rawMentionCount": 30.95104621355285,
+      "rawMentionCount": 35.01568772202533,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum"
@@ -133,13 +133,13 @@
       "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-10-31&movieCd=019765&playSDT=2026-10-31&screenId=01&showSeq=5",
-      "score": 171.4,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-01&movieCd=019765&playSDT=2026-11-01&screenId=02&showSeq=4",
+      "score": 174.8,
       "signal": 13.4,
       "positiveSignal": 13.4,
-      "mentionCount": 11.4,
+      "mentionCount": 11.7,
       "rawPositiveSignal": 24,
-      "rawMentionCount": 16.488639961749957,
+      "rawMentionCount": 16.781121212110534,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -151,8 +151,8 @@
         "KT&G 상상마당 시네마",
         "필름포럼"
       ],
-      "nextDate": "2026-10-31",
-      "nextTime": "19:20",
+      "nextDate": "2026-11-01",
+      "nextTime": "16:35",
       "evidence": [
         {
           "title": "아사코 두 번 보니까",
@@ -204,7 +204,7 @@
         },
         {
           "title": "아사코 정성일쌤 gv는 시간, 장소 정해졌나요???",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878887&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878887&page=2",
           "date": "2026-10-31",
           "positive": 0,
           "rawPositive": 0,
@@ -213,14 +213,14 @@
           "negativeHits": [],
           "questionLike": true,
           "reviewQuestion": false,
-          "commentCount": 1,
+          "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
         },
         {
           "title": "아사코 보러가려했는데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878843&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878843&page=3",
           "date": "2026-10-31",
           "positive": 0,
           "rawPositive": 0,
@@ -239,13 +239,100 @@
     },
     {
       "rank": 3,
+      "title": "룩백",
+      "posterUrl": "/assets/recommendation-posters/966107553553c174.webp",
+      "localPosterUrl": "/assets/recommendation-posters/966107553553c174.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261101&tsId=TS0044&pno=3",
+      "score": 65.9,
+      "signal": 8.6,
+      "positiveSignal": 8.6,
+      "mentionCount": 2.7,
+      "rawPositiveSignal": 12,
+      "rawMentionCount": 3.403677461028802,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "sangsangmadang",
+        "cinecube",
+        "kucine",
+        "filmforum"
+      ],
+      "venueNames": [
+        "KT&G 상상마당 시네마",
+        "씨네큐브 광화문",
+        "KU시네마테크",
+        "필름포럼"
+      ],
+      "nextDate": "2026-11-01",
+      "nextTime": "14:40",
+      "evidence": [
+        {
+          "title": "룩백 좋았으면",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878591&page=3",
+          "date": "2026-10-30",
+          "positive": 12,
+          "rawPositive": 12,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "추천",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "추천",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 6,
+          "commentPositive": 8,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "룩백 실사 진짜 별로더라",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878949&page=1",
+          "date": "2026-10-31",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/rfH6BJ9ZRw31awgUtQhN6Cug5yu.jpg"
+    },
+    {
+      "rank": 4,
       "title": "침묵의 빛",
       "posterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
       "localPosterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121808&playDt=20261101&tsId=TS0044&pno=1",
-      "score": 56.7,
+      "score": 59.2,
       "signal": 0,
       "positiveSignal": 0,
       "mentionCount": 5.5,
@@ -254,10 +341,12 @@
       "scheduleBackfill": false,
       "venueIds": [
         "sangsangmadang",
+        "cinecube",
         "kucine"
       ],
       "venueNames": [
         "KT&G 상상마당 시네마",
+        "씨네큐브 광화문",
         "KU시네마테크"
       ],
       "nextDate": "2026-11-01",
@@ -313,7 +402,7 @@
         },
         {
           "title": "침묵의빛 ㅈㄴ좋은데 비슷한거",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878894&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878894&page=2",
           "date": "2026-10-31",
           "positive": 0,
           "rawPositive": 0,
@@ -329,7 +418,7 @@
         },
         {
           "title": "침묵의빛 많이 드르렁이고 어려움?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878806&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878806&page=3",
           "date": "2026-10-31",
           "positive": 0,
           "rawPositive": 0,
@@ -345,75 +434,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kniOoQky3GX9ljyzobwRUGFgQUT.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "룩백",
-      "posterUrl": "/assets/recommendation-posters/966107553553c174.webp",
-      "localPosterUrl": "/assets/recommendation-posters/966107553553c174.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261101&tsId=TS0044&pno=3",
-      "score": 55.4,
-      "signal": 8.6,
-      "positiveSignal": 8.6,
-      "mentionCount": 1.7,
-      "rawPositiveSignal": 12,
-      "rawMentionCount": 2.403677461028802,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "sangsangmadang",
-        "kucine",
-        "filmforum"
-      ],
-      "venueNames": [
-        "KT&G 상상마당 시네마",
-        "KU시네마테크",
-        "필름포럼"
-      ],
-      "nextDate": "2026-11-01",
-      "nextTime": "14:40",
-      "evidence": [
-        {
-          "title": "룩백 좋았으면",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878591&page=3",
-          "date": "2026-10-30",
-          "positive": 12,
-          "rawPositive": 12,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "재밌",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "추천",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "추천",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 6,
-          "commentPositive": 8,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/rfH6BJ9ZRw31awgUtQhN6Cug5yu.jpg"
     }
   ],
   "festivalPicks": [],
@@ -422,11 +442,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 109,
+    "fetchedPostCount": 152,
     "listedPostCount": 292,
-    "detailedPostCount": 17,
-    "commentFetchCount": 17,
-    "commentCount": 45,
+    "detailedPostCount": 31,
+    "commentFetchCount": 31,
+    "commentCount": 86,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -435,7 +455,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-10-31",
     "candidateWindowEnd": "2026-11-14",
-    "candidateCount": 83,
+    "candidateCount": 89,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-29",
     "listLookbackDays": 1,
