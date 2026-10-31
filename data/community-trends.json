@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-10-31T12:11:49.288Z",
+  "generatedAt": "2026-10-31T12:18:38.124Z",
   "weekStart": "2026-10-29",
   "weekEnd": "2026-10-31",
   "windowStart": "2026-10-29",
@@ -13,6 +13,81 @@
   "items": [
     {
       "rank": 1,
+      "title": "와일드 호스 나인",
+      "posterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
+      "localPosterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-04&movieCd=029805&playSDT=2026-11-04&screenId=01&showSeq=3",
+      "score": 318.8,
+      "signal": 36,
+      "positiveSignal": 36,
+      "mentionCount": 17.1,
+      "rawPositiveSignal": 36,
+      "rawMentionCount": 17.084962500721154,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "cinecube"
+      ],
+      "venueNames": [
+        "씨네큐브 광화문"
+      ],
+      "nextDate": "2026-11-04",
+      "nextTime": "13:15",
+      "evidence": [
+        {
+          "title": "와일드호스나인에서 '나인'의 의미",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878913&page=1",
+          "date": "2026-10-31",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "와호나 불판에 불호가 단하나도없던데",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878911&page=1",
+          "date": "2026-10-31",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 7,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "영고수잇냐? 와일드호스나인 왜 나인인거냐 제목이",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878882&page=2",
+          "date": "2026-10-31",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/bh4wFW0B7fVtUOT9xfeugJJYKWw.jpg"
+    },
+    {
+      "rank": 2,
       "title": "버닝(하루키전)",
       "posterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
       "localPosterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
@@ -127,7 +202,7 @@
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kXiF80o74fE9gf3Utf9moAI7ar0.jpg"
     },
     {
-      "rank": 2,
+      "rank": 3,
       "title": "아사코",
       "posterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
       "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
@@ -238,7 +313,7 @@
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "title": "룩백",
       "posterUrl": "/assets/recommendation-posters/966107553553c174.webp",
       "localPosterUrl": "/assets/recommendation-posters/966107553553c174.webp",
@@ -323,117 +398,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/rfH6BJ9ZRw31awgUtQhN6Cug5yu.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "침묵의 빛",
-      "posterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
-      "localPosterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121808&playDt=20261101&tsId=TS0044&pno=1",
-      "score": 59.2,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 5.5,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 7.584962500721156,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "sangsangmadang",
-        "cinecube",
-        "kucine"
-      ],
-      "venueNames": [
-        "KT&G 상상마당 시네마",
-        "씨네큐브 광화문",
-        "KU시네마테크"
-      ],
-      "nextDate": "2026-11-01",
-      "nextTime": "09:50",
-      "evidence": [
-        {
-          "title": "침묵의 빛 봤는데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878452&page=2",
-          "date": "2026-10-29",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "질문 좀 ... 침묵의 빛 앞부분 10분 놓침 ㅜㅜ",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878435&page=2",
-          "date": "2026-10-29",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 5,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "침묵의빛 5000명이면 손익분기점 달성이냐?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878332&page=4",
-          "date": "2026-10-29",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "침묵의빛 ㅈㄴ좋은데 비슷한거",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878894&page=2",
-          "date": "2026-10-31",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        },
-        {
-          "title": "침묵의빛 많이 드르렁이고 어려움?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878806&page=3",
-          "date": "2026-10-31",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 5,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kniOoQky3GX9ljyzobwRUGFgQUT.jpg"
     }
   ],
   "festivalPicks": [],
@@ -442,7 +406,7 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 152,
+    "fetchedPostCount": 154,
     "listedPostCount": 292,
     "detailedPostCount": 31,
     "commentFetchCount": 31,
