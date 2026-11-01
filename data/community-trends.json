@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-01T00:19:24.198Z",
+  "generatedAt": "2026-11-01T03:09:51.865Z",
   "weekStart": "2026-10-30",
   "weekEnd": "2026-11-01",
   "windowStart": "2026-10-30",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261102&tsId=TS0057&pno=1",
-      "score": 315.7,
+      "score": 324.9,
       "signal": 13.3,
       "positiveSignal": 13.3,
-      "mentionCount": 26.2,
+      "mentionCount": 27.1,
       "rawPositiveSignal": 20,
-      "rawMentionCount": 36.33761581691269,
+      "rawMentionCount": 37.261614270190165,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum"
@@ -217,12 +217,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-01&movieCd=019765&playSDT=2026-11-01&screenId=02&showSeq=4",
-      "score": 141,
+      "score": 160.5,
       "signal": 13.4,
       "positiveSignal": 13.4,
-      "mentionCount": 8.3,
+      "mentionCount": 10.3,
       "rawPositiveSignal": 14,
-      "rawMentionCount": 10.084962500721156,
+      "rawMentionCount": 12.038407798525416,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -294,6 +294,22 @@
           "dayWeight": 0.72
         },
         {
+          "title": "쿵푸허슬 vs 아사코 둘 다 첨인데",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879051&page=1",
+          "date": "2026-11-01",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
           "title": "아사코는 익스트림 롱숏이 가히 천재적임",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879014&page=1",
           "date": "2026-11-01",
@@ -312,32 +328,8 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 3,
+          "commentCount": 4,
           "commentPositive": 4,
-          "commentNegative": 0,
-          "dayWeight": 1
-        },
-        {
-          "title": "아사코 재밌다",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879005&page=1",
-          "date": "2026-11-01",
-          "positive": 8,
-          "rawPositive": 8,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "재밌",
-              "count": 2,
-              "weight": 4,
-              "score": 8,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
         }
@@ -438,11 +430,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 41,
+    "fetchedPostCount": 51,
     "listedPostCount": 292,
-    "detailedPostCount": 8,
-    "commentFetchCount": 8,
-    "commentCount": 24,
+    "detailedPostCount": 9,
+    "commentFetchCount": 9,
+    "commentCount": 30,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,

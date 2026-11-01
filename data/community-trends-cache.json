@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-11-01",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-01T00:19:20.725Z",
+  "updatedAt": "2026-11-01T03:09:48.558Z",
   "days": {
     "2026-10-30": {
       "버닝": {
@@ -677,6 +677,74 @@
       }
     },
     "2026-11-01": {
+      "아사코": {
+        "title": "아사코",
+        "positiveSignal": 12,
+        "mentionCount": 5.745926548164837,
+        "evidence": [
+          {
+            "title": "쿵푸허슬 vs 아사코 둘 다 첨인데",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879051&page=1",
+            "date": "2026-11-01",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "아사코는 익스트림 롱숏이 가히 천재적임",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879014&page=1",
+            "date": "2026-11-01",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "감탄",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 4,
+            "commentPositive": 4,
+            "commentNegative": 0
+          },
+          {
+            "title": "아사코 재밌다",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879005&page=2",
+            "date": "2026-11-01",
+            "positive": 8,
+            "rawPositive": 8,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "재밌",
+                "count": 2,
+                "weight": 4,
+                "score": 8,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "이방인": {
         "title": "이방인",
         "positiveSignal": 0,
@@ -702,7 +770,7 @@
       "버닝": {
         "title": "버닝(하루키전)",
         "positiveSignal": 6,
-        "mentionCount": 9.614409345247939,
+        "mentionCount": 10.538407798525416,
         "evidence": [
           {
             "title": "너네라면 버닝, 시 돌비에 이동 시간 얼마나 투자할래",
@@ -746,59 +814,6 @@
             "questionLike": false,
             "reviewQuestion": false,
             "commentCount": 4,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "아사코": {
-        "title": "아사코",
-        "positiveSignal": 12,
-        "mentionCount": 3.792481250360578,
-        "evidence": [
-          {
-            "title": "아사코는 익스트림 롱숏이 가히 천재적임",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879014&page=1",
-            "date": "2026-11-01",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "감탄",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 3,
-            "commentPositive": 4,
-            "commentNegative": 0
-          },
-          {
-            "title": "아사코 재밌다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879005&page=1",
-            "date": "2026-11-01",
-            "positive": 8,
-            "rawPositive": 8,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "재밌",
-                "count": 2,
-                "weight": 4,
-                "score": 8,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
             "commentPositive": 0,
             "commentNegative": 0
           }
