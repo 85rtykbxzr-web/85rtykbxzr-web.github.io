@@ -11,7 +11,8 @@ import {
   sanitizeSourceSnapshot,
   sanitizeScheduleImageUrls,
   seatStatusRefreshIssue,
-  sourceSessionMetrics
+  sourceSessionMetrics,
+  parseMovielandProductSessions
 } from "./update-schedule.mjs";
 import { addCalendarDays, addCalendarMonths, calendarDaysBetween } from "../src/calendar-date.mjs";
 import { fetchWithTransientRetry } from "./http-retry.mjs";
@@ -415,3 +416,24 @@ assert(sanitizedImages.programs[0].imageUrl.startsWith("https://"), "external im
 assert(sanitizedImages.majorFestivals[0].logoUrl === "assets/festival-marks/bifan.png", "local image assets should be preserved");
 
 console.log(JSON.stringify({ ok: true }, null, 2));
+
+// Movieland's product page since late October 2026: a ProductGroup schema without offers, the
+// seats only in Cafe24's option table. Two seats at 12:00 (one left), one at 15:30 (sold).
+const soon = new Date(Date.now() + 2 * 24 * 60 * 60 * 1000);
+const soonDay = new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Seoul", month: "numeric", day: "numeric" }).formatToParts(soon);
+const soonLabel = `${soonDay.find((part) => part.type === "month").value}.${soonDay.find((part) => part.type === "day").value} (WED)`;
+const movielandOptions = {
+  P1: { option_value: `${soonLabel}-12:00-A1`, stock_number: 1, is_selling: "T" },
+  P2: { option_value: `${soonLabel}-12:00-A2`, stock_number: 0, is_selling: "T" },
+  P3: { option_value: `${soonLabel}-15:30-A1`, stock_number: 0, is_selling: "T" }
+};
+const movielandHtml = `<title>HER | 영화 예매 | 무비랜드</title>
+<script type="application/ld+json">{"@type":"ProductGroup","name":"HER"}</script>
+<script>var option_stock_data = '${JSON.stringify(JSON.stringify(movielandOptions)).slice(1, -1)}';</script>`;
+const movielandSessions = parseMovielandProductSessions(movielandHtml, "https://movieland.co/product/her/306/");
+const byTime = Object.fromEntries(movielandSessions.map((session) => [session.time, session]));
+assert(movielandSessions.length === 2, "seats group into one session per time");
+assert(byTime["12:00"].status === "confirmed" && byTime["12:00"].summary.includes("1/2"), "a seat left keeps the session bookable");
+assert(byTime["15:30"].status === "soldout", "no seat left is sold out");
+assert(byTime["12:00"].title === "HER", "the title drops the shop suffix");
+console.log("Movieland option-table parsing checked.");
