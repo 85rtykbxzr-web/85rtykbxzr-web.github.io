@@ -55,12 +55,18 @@ const oneSession = async (url, options) => {
 const thinVenue = await fetchBrowserVenue(browserLiveConfigs[1], { now, fetchImpl: oneSession });
 assert.equal(thinVenue.sessions.length, 1, "a timetable shorter than usual must not be thrown away");
 assert.equal(thinVenue.thin, true);
-await assert.rejects(() => fetchBrowserVenue(browserLiveConfigs[1], { now, fetchImpl: async (url, options) => {
+// A closed cinema (no dates ahead, or dates without screenings) is an answer, shown as 0, not 보류.
+const noScreenings = await fetchBrowserVenue(browserLiveConfigs[1], { now, fetchImpl: async (url, options) => {
   const result = await fetchImpl(url, options);
   const body = await result.json();
   if (new URL(url).searchParams.has("PlaySDT")) body.Recordset = [];
   return { ok: true, json: async () => body };
-} }), /회차가 없어요/);
+} });
+assert.equal(noScreenings.status, "ok");
+assert.equal(noScreenings.sessions.length, 0);
+const closed = await fetchBrowserVenue(browserLiveConfigs[1], { now, fetchImpl: async () => ({ ok: true, json: async () => ({ RetCode: "success", Recordset: [] }) }) });
+assert.equal(closed.status, "ok", "a cinema with no dates ahead is closed, not failing");
+assert.equal(closed.empty, true);
 const partial = await refreshBrowserLiveSchedule(prepared, { now, retryDelayMs: 0, cache: null, fetchImpl: (url, options) => {
   if (new URL(url).searchParams.get("CinemaCd") === "000065") throw new Error("offline");
   return fetchImpl(url, options);
