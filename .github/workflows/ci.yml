@@ -37,19 +37,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # TEMPORARY: can a GitHub runner reach 지하실? Removed before merge.
-      - name: Probe 지하실 from the runner
-        continue-on-error: true
-        run: |
-          for i in 1 2 3; do
-            curl -sS -m 20 -o /dev/null -w "catalog %{http_code} %{size_download}B %{time_total}s\n" "https://jihasil.com/catalog/initial_categories?ai_recommendations=false&continue_watching=false&my_library=false&preview=false&user=false" || true
-            curl -sS -m 20 -o /dev/null -w "home %{http_code} %{size_download}B\n" "https://jihasil.com/" || true
-            node scripts/jihasil.mjs || true
-            sleep 5
-          done
-          git diff --stat -- data/jihasil.json
-          git checkout -- data/jihasil.json
-
       - name: Run project checks
         run: npm run check
 
