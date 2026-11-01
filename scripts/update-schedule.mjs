@@ -2135,6 +2135,7 @@ function movielandProductId(url) {
 function movielandTitle(html, product) {
   const title = stripHtml(String(html || "").match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1] || "")
     .replace(/\s*-\s*MOVIE LAND.*$/i, "")
+    .replace(/\s*\|.*$/, "")
     .trim();
   if (title) return title;
   const description = String(product?.description || "").replace(/\s+\d{4}\s*$/, "").trim();
@@ -2170,9 +2171,35 @@ function parseMovielandOfferName(offerName) {
   return null;
 }
 
+// Cafe24's own option table: one entry per seat, "11.4 (WED)-12:00-A1", with its stock. Since
+// late October 2026 the product page's schema block is a ProductGroup without offers, so the
+// seats are read from here instead.
+function movielandOptionOffers(html, detailUrl, title) {
+  const raw = String(html || "").match(/option_stock_data\s*=\s*'((?:\\.|[^'\\])*)'/)?.[1];
+  if (!raw) return [];
+  let options;
+  try {
+    // the value is a single-quoted JS string holding JSON; its escapes are JSON's, bar \'
+    options = JSON.parse(JSON.parse(`"${raw.replace(/\\'/g, "'")}"`));
+  } catch {
+    return [];
+  }
+  return Object.entries(options || {}).map(([itemCode, option]) => ({
+    name: `${title} ${option?.option_value || ""}`,
+    availability: option?.is_selling === "T" && Number(option?.stock_number) > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+    url: `${detailUrl}?item_code=${encodeURIComponent(itemCode)}`
+  }));
+}
+
 function parseMovielandProductSessions(html, detailUrl) {
-  const product = extractJsonLdObjects(html).find((item) => item?.["@type"] === "Product" && Array.isArray(item.offers));
-  if (!product) return [];
+  const schema = extractJsonLdObjects(html);
+  let product = schema.find((item) => item?.["@type"] === "Product" && Array.isArray(item.offers));
+  if (!product) {
+    const group = schema.find((item) => item?.["@type"] === "ProductGroup" || item?.["@type"] === "Product") || {};
+    const offers = movielandOptionOffers(html, detailUrl, movielandTitle(html, group));
+    if (!offers.length) return [];
+    product = { ...group, offers };
+  }
 
   const title = movielandTitle(html, product);
   const productId = movielandProductId(detailUrl);
@@ -3648,6 +3675,7 @@ async function refreshSeatStatusOnly() {
 
 export {
   blockingRefreshSources,
+  parseMovielandProductSessions,
   dtryxVisibleDateRows,
   liveResultFallbackProbeIssue,
   liveResultQualityIssue,

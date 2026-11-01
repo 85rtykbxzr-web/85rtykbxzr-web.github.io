@@ -118,7 +118,9 @@ export async function fetchBrowserVenue(config, { fetchImpl = fetch, now = new D
   const today = todayKst(now);
   const dates = (await apiRows("third-party-type2-timetable-play-date-list", config, { MovieCd: "", WorkGuID: config.dateGuid || config.workGuid }, fetchImpl))
     .filter((row) => row.HiddenYn !== "Y").map((row) => dateValue(row.PlaySDT)).filter((date) => date >= today).slice(0, config.maxDates || 14);
-  if (!dates.length) throw new Error("공식 시간표에 앞으로의 상영 날짜가 없어요");
+  // No dates ahead is an answer, not a failure: the cinema is closed (a remodel, a break) or
+  // hasn't opened bookings yet. It shows as 0 like any other day without screenings.
+  if (!dates.length) return { venueId: config.venueId, sourceId: config.sourceId, sessions: [], checkedAt: new Date().toISOString(), status: "ok", empty: true };
   if (new Set(dates).size !== dates.length) throw new Error("공식 시간표 형식이 평소와 달라요");
   const sessions = [];
   for (const date of dates) {
@@ -128,7 +130,7 @@ export async function fetchBrowserVenue(config, { fetchImpl = fetch, now = new D
   if (new Set(sessions.map((session) => session.id)).size !== sessions.length) throw new Error("공식 시간표 형식이 평소와 달라요");
   const naturalKeys = sessions.map((session) => `${session.date}|${session.time}|${session.screen}|${session.title}`);
   if (new Set(naturalKeys).size !== sessions.length) throw new Error("공식 시간표 형식이 평소와 달라요");
-  if (!sessions.length) throw new Error("공식 시간표에 올라온 회차가 없어요");
+  if (!sessions.length) return { venueId: config.venueId, sourceId: config.sourceId, sessions: [], checkedAt: new Date().toISOString(), status: "ok", empty: true };
   // A short timetable is still the cinema's own answer: a small house may list a few days only.
   // It is shown as it is; `thin` only marks it for the ?live-debug view.
   const activeDates = new Set(sessions.map((session) => session.date));
@@ -208,7 +210,7 @@ export async function refreshBrowserLiveSchedule(base, { configs = browserLiveCo
       const sessions = result.sessions.filter((session) => session.venueId !== config.venueId);
       if (outcome.status === "ok") sessions.push(...outcome.sessions);
       sessions.sort((a, b) => `${a.date} ${a.timeSort} ${a.id}`.localeCompare(`${b.date} ${b.timeSort} ${b.id}`));
-      const browserLive = result.meta.browserLive.map((row) => row.venueId === config.venueId ? { venueId: outcome.venueId, status: outcome.status, stale: Boolean(outcome.stale), checkedAt: outcome.checkedAt || null, message: outcome.message || "", thin: Boolean(outcome.thin), sessions: outcome.sessions?.length || 0 } : row);
+      const browserLive = result.meta.browserLive.map((row) => row.venueId === config.venueId ? { venueId: outcome.venueId, status: outcome.status, stale: Boolean(outcome.stale), checkedAt: outcome.checkedAt || null, message: outcome.message || "", thin: Boolean(outcome.thin), empty: Boolean(outcome.empty), sessions: outcome.sessions?.length || 0 } : row);
       result = { ...result, sessions, meta: { ...result.meta, browserLive } };
       onProgress(result);
     }

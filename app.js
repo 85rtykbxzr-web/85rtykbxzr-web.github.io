@@ -667,7 +667,7 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
       }
       notice.innerHTML = rows.map((row) => {
         const name = [...browserLiveConfigs, ...regionalLiveConfigs].find((config) => config.venueId === row.venueId)?.name || row.venueId;
-        const detail = row.status === "ok" ? `${row.sessions}회${row.thin ? " (평소보다 적음)" : ""}${row.stale ? ` (저장본, ${row.message})` : ""}` : row.message || "";
+        const detail = row.status === "ok" ? `${row.sessions}회${row.empty ? " (상영 일정 없음)" : row.thin ? " (평소보다 적음)" : ""}${row.stale ? ` (저장본, ${row.message})` : ""}` : row.message || "";
         return `<div>${escapeHtml(name)} · ${escapeHtml(row.status)}${detail ? ` · ${escapeHtml(detail)}` : ""}</div>`;
       }).join("");
     }
