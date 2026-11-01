@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-01T13:15:50.485Z",
-  "weekStart": "2026-10-30",
-  "weekEnd": "2026-11-01",
-  "windowStart": "2026-10-30",
-  "windowEnd": "2026-11-01",
+  "generatedAt": "2026-11-01T15:18:29.822Z",
+  "weekStart": "2026-10-31",
+  "weekEnd": "2026-11-02",
+  "windowStart": "2026-10-31",
+  "windowEnd": "2026-11-02",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261102&tsId=TS0057&pno=1",
-      "score": 608.6,
-      "signal": 67.3,
-      "positiveSignal": 67.3,
-      "mentionCount": 33.9,
-      "rawPositiveSignal": 74,
-      "rawMentionCount": 44.033774528302075,
+      "score": 368.6,
+      "signal": 43.2,
+      "positiveSignal": 43.2,
+      "mentionCount": 19.5,
+      "rawPositiveSignal": 60,
+      "rawMentionCount": 30.960172065830957,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum"
@@ -35,70 +35,6 @@
       "nextDate": "2026-11-02",
       "nextTime": "10:30",
       "evidence": [
-        {
-          "title": "스포)) 버닝 봤는데 ㅈㄴ 궁금한거 있음..",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878716&page=1",
-          "date": "2026-10-30",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "재밌",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 6,
-          "commentPositive": 4,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "버닝이 이창동 필모 중에선 제일 순한 내용 아니냐",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878698&page=1",
-          "date": "2026-10-30",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "버닝 돌비로 보면 체감 큼?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878681&page=2",
-          "date": "2026-10-30",
-          "positive": 2,
-          "rawPositive": 2,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "봐라",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 2,
-          "commentPositive": 2,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "버닝 종수모 만나는 씬 웃프네",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878923&page=1",
@@ -113,7 +49,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "버닝 집에서만 봐서 잘 모르겠던데",
@@ -129,6 +65,83 @@
           "commentCount": 4,
           "commentPositive": 0,
           "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "버닝 말 안되네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878895&page=2",
+          "date": "2026-10-31",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 6,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "버닝이 대중성 높은 영화가 맞나?!?!",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879222&page=1",
+          "date": "2026-11-01",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "버닝 걍 핵꿀잼작인데",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879216&page=1",
+          "date": "2026-11-01",
+          "positive": 16,
+          "rawPositive": 16,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 4,
+          "commentPositive": 8,
+          "commentNegative": 0,
           "dayWeight": 0.72
         }
       ],
@@ -142,10 +155,10 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261102&tsId=TS0057&pno=3",
-      "score": 373,
-      "signal": 43.4,
-      "positiveSignal": 43.4,
-      "mentionCount": 19.5,
+      "score": 269.6,
+      "signal": 31.3,
+      "positiveSignal": 31.3,
+      "mentionCount": 14.1,
       "rawPositiveSignal": 44,
       "rawMentionCount": 21.28433434669025,
       "scheduleBackfill": false,
@@ -176,7 +189,7 @@
           "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "아사코 보러가려했는데",
@@ -192,7 +205,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "아사코는 좋긴 좋은데",
@@ -216,7 +229,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "아사코 갤주 gv갈만할까?",
@@ -232,7 +245,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "아사코 여주 사누최 여주 누가 더 썅년같음?",
@@ -248,7 +261,7 @@
           "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
@@ -261,10 +274,10 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-04&movieCd=029805&playSDT=2026-11-04&screenId=01&showSeq=3",
-      "score": 346.7,
-      "signal": 43.9,
-      "positiveSignal": 43.9,
-      "mentionCount": 16.7,
+      "score": 250.6,
+      "signal": 31.6,
+      "positiveSignal": 31.6,
+      "mentionCount": 12,
       "rawPositiveSignal": 54,
       "rawMentionCount": 21.488639961749957,
       "scheduleBackfill": false,
@@ -291,7 +304,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "와호나 불판에 불호가 단하나도없던데",
@@ -307,7 +320,7 @@
           "commentCount": 7,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "영고수잇냐? 와일드호스나인 왜 나인인거냐 제목이",
@@ -323,7 +336,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "와일드호스나인 원배틀 느낌임?",
@@ -339,7 +352,7 @@
           "commentCount": 3,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "와일드 호스 나인 걸작임?",
@@ -377,82 +390,42 @@
           "commentCount": 4,
           "commentPositive": 18,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/bh4wFW0B7fVtUOT9xfeugJJYKWw.jpg"
     },
     {
       "rank": 4,
-      "title": "룩백",
-      "posterUrl": "/assets/recommendation-posters/966107553553c174.webp",
-      "localPosterUrl": "/assets/recommendation-posters/966107553553c174.webp",
+      "title": "침묵의 빛",
+      "posterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
+      "localPosterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-02&movieCd=029713&playSDT=2026-11-02&screenId=02&showSeq=4",
-      "score": 58.5,
-      "signal": 6.2,
-      "positiveSignal": 6.2,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-02&movieCd=029764&playSDT=2026-11-02&screenId=02&showSeq=6",
+      "score": 33,
+      "signal": 0,
+      "positiveSignal": 0,
       "mentionCount": 3,
-      "rawPositiveSignal": 12,
-      "rawMentionCount": 4.403677461028802,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 5.084962500721156,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
-        "filmforum",
         "sangsangmadang",
         "kucine"
       ],
       "venueNames": [
         "씨네큐브 광화문",
-        "필름포럼",
         "KT&G 상상마당 시네마",
         "KU시네마테크"
       ],
       "nextDate": "2026-11-02",
-      "nextTime": "15:35",
+      "nextTime": "19:30",
       "evidence": [
         {
-          "title": "룩백 좋았으면",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878591&page=3",
-          "date": "2026-10-30",
-          "positive": 12,
-          "rawPositive": 12,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "재밌",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "추천",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "추천",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 6,
-          "commentPositive": 8,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "룩백 실사 진짜 별로더라",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878949&page=1",
+          "title": "침묵의빛 ㅈㄴ좋은데 비슷한거",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878894&page=2",
           "date": "2026-10-31",
           "positive": 0,
           "rawPositive": 0,
@@ -464,12 +437,12 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
-          "title": "룩백 이번 주가 끝인가?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879072&page=3",
-          "date": "2026-11-01",
+          "title": "침묵의빛 많이 드르렁이고 어려움?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878806&page=3",
+          "date": "2026-10-31",
           "positive": 0,
           "rawPositive": 0,
           "negative": 0,
@@ -477,13 +450,29 @@
           "negativeHits": [],
           "questionLike": true,
           "reviewQuestion": false,
-          "commentCount": 0,
+          "commentCount": 5,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.518
+        },
+        {
+          "title": "침묵의빛 오데트랑 하도 엮으니깐 스포 다 당한 기분이던데",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879153&page=2",
+          "date": "2026-11-01",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
         }
       ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/rfH6BJ9ZRw31awgUtQhN6Cug5yu.jpg"
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kniOoQky3GX9ljyzobwRUGFgQUT.jpg"
     }
   ],
   "festivalPicks": [],
@@ -492,24 +481,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 185,
+    "fetchedPostCount": 3,
     "listedPostCount": 292,
-    "detailedPostCount": 23,
-    "commentFetchCount": 23,
-    "commentCount": 82,
+    "detailedPostCount": 0,
+    "commentFetchCount": 0,
+    "commentCount": 0,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-10-31",
-    "newestScannedDate": "2026-11-01",
+    "newestScannedDate": "2026-11-02",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-11-01",
-    "candidateWindowEnd": "2026-11-15",
+    "candidateWindowStart": "2026-11-02",
+    "candidateWindowEnd": "2026-11-16",
     "candidateCount": 89,
     "seedLookbackDays": 3,
-    "seedStart": "2026-10-30",
+    "seedStart": "2026-10-31",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-11-01",
+    "listWindowStart": "2026-11-02",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -517,7 +506,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-11-01"
+      "2026-11-02"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [
