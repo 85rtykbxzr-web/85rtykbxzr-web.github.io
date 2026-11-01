@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-01T03:09:51.865Z",
+  "generatedAt": "2026-11-01T05:58:20.055Z",
   "weekStart": "2026-10-30",
   "weekEnd": "2026-11-01",
   "windowStart": "2026-10-30",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261102&tsId=TS0057&pno=1",
-      "score": 324.9,
-      "signal": 13.3,
-      "positiveSignal": 13.3,
-      "mentionCount": 27.1,
-      "rawPositiveSignal": 20,
-      "rawMentionCount": 37.261614270190165,
+      "score": 460.6,
+      "signal": 41.3,
+      "positiveSignal": 41.3,
+      "mentionCount": 29.5,
+      "rawPositiveSignal": 48,
+      "rawMentionCount": 39.63009706727327,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum"
@@ -142,12 +142,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-04&movieCd=029805&playSDT=2026-11-04&screenId=01&showSeq=3",
-      "score": 230.7,
-      "signal": 25.9,
-      "positiveSignal": 25.9,
-      "mentionCount": 12.3,
-      "rawPositiveSignal": 36,
-      "rawMentionCount": 17.084962500721154,
+      "score": 301.6,
+      "signal": 37.9,
+      "positiveSignal": 37.9,
+      "mentionCount": 14.6,
+      "rawPositiveSignal": 48,
+      "rawMentionCount": 19.37744375108173,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube"
@@ -205,6 +205,30 @@
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.72
+        },
+        {
+          "title": "와일드 호스 나인 걸작임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879080&page=1",
+          "date": "2026-11-01",
+          "positive": 12,
+          "rawPositive": 12,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "최고",
+              "count": 2,
+              "weight": 6,
+              "score": 12,
+              "label": "strong"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 4,
+          "commentPositive": 12,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/bh4wFW0B7fVtUOT9xfeugJJYKWw.jpg"
@@ -217,12 +241,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-01&movieCd=019765&playSDT=2026-11-01&screenId=02&showSeq=4",
-      "score": 160.5,
-      "signal": 13.4,
-      "positiveSignal": 13.4,
-      "mentionCount": 10.3,
-      "rawPositiveSignal": 14,
-      "rawMentionCount": 12.038407798525416,
+      "score": 262.1,
+      "signal": 33.4,
+      "positiveSignal": 33.4,
+      "mentionCount": 12.4,
+      "rawPositiveSignal": 34,
+      "rawMentionCount": 14.199371845969097,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -294,6 +318,51 @@
           "dayWeight": 0.72
         },
         {
+          "title": "버닝, 아사코는 극장에서 틀어줄 때 꼭 봐라",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879068&page=1",
+          "date": "2026-11-01",
+          "positive": 20,
+          "rawPositive": 20,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "걸작",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "걸작",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "꼭 봐",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "봐라",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 6,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
           "title": "쿵푸허슬 vs 아사코 둘 다 첨인데",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879051&page=1",
           "date": "2026-11-01",
@@ -308,30 +377,6 @@
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
-        },
-        {
-          "title": "아사코는 익스트림 롱숏이 가히 천재적임",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879014&page=1",
-          "date": "2026-11-01",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "감탄",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 4,
-          "commentPositive": 4,
-          "commentNegative": 0,
-          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
@@ -343,28 +388,28 @@
       "localPosterUrl": "/assets/recommendation-posters/966107553553c174.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121765&playDt=20261101&tsId=TS0044&pno=3",
-      "score": 48.5,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-01&movieCd=029713&playSDT=2026-11-01&screenId=01&showSeq=5",
+      "score": 58.5,
       "signal": 6.2,
       "positiveSignal": 6.2,
-      "mentionCount": 2,
+      "mentionCount": 3,
       "rawPositiveSignal": 12,
-      "rawMentionCount": 3.403677461028802,
+      "rawMentionCount": 4.403677461028802,
       "scheduleBackfill": false,
       "venueIds": [
-        "sangsangmadang",
         "cinecube",
         "kucine",
-        "filmforum"
+        "filmforum",
+        "sangsangmadang"
       ],
       "venueNames": [
-        "KT&G 상상마당 시네마",
         "씨네큐브 광화문",
         "KU시네마테크",
-        "필름포럼"
+        "필름포럼",
+        "KT&G 상상마당 시네마"
       ],
       "nextDate": "2026-11-01",
-      "nextTime": "14:40",
+      "nextTime": "17:35",
       "evidence": [
         {
           "title": "룩백 좋았으면",
@@ -419,6 +464,22 @@
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.72
+        },
+        {
+          "title": "룩백 이번 주가 끝인가?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879072&page=1",
+          "date": "2026-11-01",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/rfH6BJ9ZRw31awgUtQhN6Cug5yu.jpg"
@@ -430,11 +491,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 51,
+    "fetchedPostCount": 84,
     "listedPostCount": 292,
-    "detailedPostCount": 9,
-    "commentFetchCount": 9,
-    "commentCount": 30,
+    "detailedPostCount": 12,
+    "commentFetchCount": 12,
+    "commentCount": 41,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -443,7 +504,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-11-01",
     "candidateWindowEnd": "2026-11-15",
-    "candidateCount": 89,
+    "candidateCount": 92,
     "seedLookbackDays": 3,
     "seedStart": "2026-10-30",
     "listLookbackDays": 1,

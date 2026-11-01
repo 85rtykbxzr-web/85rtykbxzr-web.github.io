@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-11-01",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-01T03:09:48.558Z",
+  "updatedAt": "2026-11-01T05:58:16.639Z",
   "days": {
     "2026-10-30": {
       "버닝": {
@@ -677,11 +677,203 @@
       }
     },
     "2026-11-01": {
+      "버닝": {
+        "title": "버닝(하루키전)",
+        "positiveSignal": 34,
+        "mentionCount": 12.906890595608516,
+        "evidence": [
+          {
+            "title": "버닝 고평가 ㅈ되네ㄷㄷㄷㄷ",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879085&page=1",
+            "date": "2026-11-01",
+            "positive": 8,
+            "rawPositive": 8,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "재밌",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "재밌",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 8,
+            "commentPositive": 8,
+            "commentNegative": 0
+          },
+          {
+            "title": "버닝, 아사코는 극장에서 틀어줄 때 꼭 봐라",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879068&page=1",
+            "date": "2026-11-01",
+            "positive": 20,
+            "rawPositive": 20,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "걸작",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "걸작",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "꼭 봐",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "봐라",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 6,
+            "commentNegative": 0
+          },
+          {
+            "title": "버닝 돌비로 보니까 ㄹㅇ 지림",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879025&page=2",
+            "date": "2026-11-01",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 3,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "와일드호스나인": {
+        "title": "와일드 호스 나인",
+        "positiveSignal": 12,
+        "mentionCount": 2.292481250360578,
+        "evidence": [
+          {
+            "title": "와일드 호스 나인 걸작임?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879080&page=1",
+            "date": "2026-11-01",
+            "positive": 12,
+            "rawPositive": 12,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "최고",
+                "count": 2,
+                "weight": 6,
+                "score": 12,
+                "label": "strong"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 4,
+            "commentPositive": 12,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "룩백": {
+        "title": "룩백",
+        "positiveSignal": 0,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "룩백 이번 주가 끝인가?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879072&page=1",
+            "date": "2026-11-01",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "아사코": {
         "title": "아사코",
-        "positiveSignal": 12,
-        "mentionCount": 5.745926548164837,
+        "positiveSignal": 32,
+        "mentionCount": 7.906890595608518,
         "evidence": [
+          {
+            "title": "버닝, 아사코는 극장에서 틀어줄 때 꼭 봐라",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879068&page=1",
+            "date": "2026-11-01",
+            "positive": 20,
+            "rawPositive": 20,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "걸작",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "걸작",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "꼭 봐",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "봐라",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 6,
+            "commentNegative": 0
+          },
           {
             "title": "쿵푸허슬 vs 아사코 둘 다 첨인데",
             "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879051&page=1",
@@ -699,7 +891,7 @@
           },
           {
             "title": "아사코는 익스트림 롱숏이 가히 천재적임",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879014&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879014&page=2",
             "date": "2026-11-01",
             "positive": 4,
             "rawPositive": 4,
@@ -719,29 +911,6 @@
             "commentCount": 4,
             "commentPositive": 4,
             "commentNegative": 0
-          },
-          {
-            "title": "아사코 재밌다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879005&page=2",
-            "date": "2026-11-01",
-            "positive": 8,
-            "rawPositive": 8,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "재밌",
-                "count": 2,
-                "weight": 4,
-                "score": 8,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
           }
         ]
       },
@@ -752,7 +921,7 @@
         "evidence": [
           {
             "title": "이방인 꿈꾸는 모험 뭐 볼까",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879031&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879031&page=2",
             "date": "2026-11-01",
             "positive": 0,
             "rawPositive": 0,
@@ -761,58 +930,6 @@
             "negativeHits": [],
             "questionLike": true,
             "reviewQuestion": true,
-            "commentCount": 4,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "버닝": {
-        "title": "버닝(하루키전)",
-        "positiveSignal": 6,
-        "mentionCount": 10.538407798525416,
-        "evidence": [
-          {
-            "title": "너네라면 버닝, 시 돌비에 이동 시간 얼마나 투자할래",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879026&page=1",
-            "date": "2026-11-01",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 5,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "버닝 돌비로 보니까 ㄹㅇ 지림",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879025&page=1",
-            "date": "2026-11-01",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 3,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "버닝 별거 아닌 듯한데 좋았던 장면",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879022&page=1",
-            "date": "2026-11-01",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
             "commentCount": 4,
             "commentPositive": 0,
             "commentNegative": 0
