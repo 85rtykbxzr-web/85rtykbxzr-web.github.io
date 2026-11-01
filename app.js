@@ -2621,9 +2621,9 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
       return [major.periodLabel, festivalVenueLabel(major, venues), major.section].filter(Boolean).join(" · ");
     }
     const venuesText = compactValues(group.rows.map((row) => festivalVenueLabel(row, venues)), 3);
-    const dateText = compactValues(group.rows.map((row) => formatDate(row.date)), 2);
-    const sectionCount = festivalScheduleSections(group).length;
-    return [dateText, venuesText, `${group.rows.length}회차, ${sectionCount}개 섹션`].filter(Boolean).join(" · ");
+    const dates = group.rows.map((row) => row.date).filter(Boolean).sort();
+    const dateText = !dates.length ? "" : dates[0] === dates.at(-1) ? formatDate(dates[0]) : `${formatDate(dates[0])} – ${formatDate(dates.at(-1))}`;
+    return [dateText, venuesText, `${group.rows.length}회`].filter(Boolean).join(" · ");
   }
 
   function festivalScheduleSectionLabel(row, groupName) {
@@ -2650,23 +2650,7 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
     ) {
       return explicitSection;
     }
-    return `${shortDate(row.date)} 프로그램`;
-  }
-
-  function festivalScheduleSections(group) {
-    const sections = new Map();
-    for (const row of group?.rows || []) {
-      if (row.kind === "major-festival") continue;
-      const label = festivalScheduleSectionLabel(row, group.name);
-      if (!sections.has(label)) sections.set(label, { label, rows: [] });
-      sections.get(label).rows.push(row);
-    }
-    return [...sections.values()];
-  }
-
-  function festivalScheduleSectionMeta(section) {
-    const dates = compactValues(section.rows.map((row) => shortDate(row.date)), 2);
-    return [dates, `${section.rows.length}회`].filter(Boolean).join(" · ");
+    return "";
   }
 
   function festivalRows() {
@@ -2854,31 +2838,31 @@ import { regionalVenues, regionalVenueIds, regionalLiveConfigs, serverVenuesOuts
     return `<div class="fest-chips">${highlights.slice(0, 6).map((item) => `<span>${escapeHtml(item)}</span>`).join("")}</div>`;
   }
 
+  // One fold per festival with every screening in date order. A named section (개막, 폐막,
+  // EX-Now…) rides on its row; the old per-day headers only repeated the row's own date.
   function festivalScheduleSectionsMarkup(group, venues) {
-    const sections = festivalScheduleSections(group);
-    if (!sections.length) return "";
+    const rows = (group?.rows || [])
+      .filter((row) => row.kind !== "major-festival")
+      .sort((a, b) => `${a.date} ${a.time || ""}`.localeCompare(`${b.date} ${b.time || ""}`));
+    if (!rows.length) return "";
     return `
       <div class="fest-more">
-        ${sections
-          .map(
-            (section) => `
-              <details>
-                <summary>${escapeHtml(section.label)} <small>${escapeHtml(festivalScheduleSectionMeta(section))}</small></summary>
-                <div class="items">
-                  ${section.rows
-                    .map(
-                      (row) => `
-                        <div class="fest-item">
-                          <span class="fw${isSunday(row.date) ? " is-sun" : ""}"><strong>${escapeHtml(formatDate(row.date))}</strong>${escapeHtml(row.time || "")}</span>
-                          <span class="fc"><strong title="${escapeHtml(row.title)}">${escapeHtml(row.title)}</strong><small>${escapeHtml(festivalVenueLabel(row, venues))}</small></span>
-                          ${festivalActionMarkup(row)}
-                        </div>`
-                    )
-                    .join("")}
-                </div>
-              </details>`
-          )
-          .join("")}
+        <details>
+          <summary>상영 일정 <small>${rows.length}회</small></summary>
+          <div class="items">
+            ${rows
+              .map((row) => {
+                const meta = [festivalScheduleSectionLabel(row, group.name), festivalVenueLabel(row, venues)].filter(Boolean).join(" · ");
+                return `
+                  <div class="fest-item">
+                    <span class="fw${isSunday(row.date) ? " is-sun" : ""}"><strong>${escapeHtml(formatDate(row.date))}</strong>${escapeHtml(row.time || "")}</span>
+                    <span class="fc"><strong title="${escapeHtml(row.title)}">${escapeHtml(row.title)}</strong><small>${escapeHtml(meta)}</small></span>
+                    ${festivalActionMarkup(row)}
+                  </div>`;
+              })
+              .join("")}
+          </div>
+        </details>
       </div>`;
   }
 
