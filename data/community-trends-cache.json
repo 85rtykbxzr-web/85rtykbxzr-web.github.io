@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-11-03",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-02T18:16:09.947Z",
+  "updatedAt": "2026-11-02T21:11:14.803Z",
   "days": {
     "2026-11-01": {
       "버닝": {
@@ -609,6 +609,59 @@
       }
     },
     "2026-11-03": {
+      "짝패": {
+        "title": "짝패",
+        "positiveSignal": 10,
+        "mentionCount": 3.5,
+        "evidence": [
+          {
+            "title": "짝패 가치가 높다 보는 이유",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879519&page=1",
+            "date": "2026-11-03",
+            "positive": 6,
+            "rawPositive": 6,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "최고",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 6,
+            "commentNegative": 0
+          },
+          {
+            "title": "류승완 짝패는 어떰",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879517&page=1",
+            "date": "2026-11-03",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 3,
+            "commentPositive": 4,
+            "commentNegative": 0
+          }
+        ]
+      },
       "아사코": {
         "title": "아사코(2D)",
         "positiveSignal": 8,

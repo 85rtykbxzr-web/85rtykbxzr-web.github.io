@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-02T18:16:12.056Z",
+  "generatedAt": "2026-11-02T21:11:18.247Z",
   "weekStart": "2026-11-01",
   "weekEnd": "2026-11-03",
   "windowStart": "2026-11-01",
@@ -132,9 +132,84 @@
     },
     {
       "rank": 2,
+      "title": "짝패",
+      "posterUrl": "/assets/recommendation-posters/d4a64ddf3b5f373f.webp",
+      "localPosterUrl": "/assets/recommendation-posters/d4a64ddf3b5f373f.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.tinyticket.net/event/EV5WRFw1pPk9",
+      "score": 75.5,
+      "signal": 10,
+      "positiveSignal": 10,
+      "mentionCount": 3.5,
+      "rawPositiveSignal": 10,
+      "rawMentionCount": 3.5,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "sac"
+      ],
+      "venueNames": [
+        "서울아트시네마"
+      ],
+      "nextDate": "2026-11-07",
+      "nextTime": "19:00",
+      "evidence": [
+        {
+          "title": "짝패 가치가 높다 보는 이유",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879519&page=1",
+          "date": "2026-11-03",
+          "positive": 6,
+          "rawPositive": 6,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "최고",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 6,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "류승완 짝패는 어떰",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879517&page=1",
+          "date": "2026-11-03",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 3,
+          "commentPositive": 4,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/3qZEhBOd6IX363AQOTDC2RucLh2.jpg"
+    },
+    {
+      "rank": 3,
       "title": "와일드 호스 나인",
-      "posterUrl": "/assets/recommendation-posters/db570bb5d2e214b3.webp",
-      "localPosterUrl": "/assets/recommendation-posters/db570bb5d2e214b3.webp",
+      "posterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
+      "localPosterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-04&movieCd=029805&playSDT=2026-11-04&screenId=01&showSeq=3",
@@ -228,10 +303,10 @@
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/bh4wFW0B7fVtUOT9xfeugJJYKWw.jpg"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "title": "사랑",
-      "posterUrl": "/assets/recommendation-posters/615c09c6353d48fc.webp",
-      "localPosterUrl": "/assets/recommendation-posters/615c09c6353d48fc.webp",
+      "posterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
+      "localPosterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.tinyticket.net/event/EVvTFTWz06Rt",
@@ -301,49 +376,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kISG5ljzXg34TwsqbToGPu8Ebqy.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "나미비아의 사막",
-      "posterUrl": "/assets/recommendation-posters/664698fb0ec6dd17.webp",
-      "localPosterUrl": "/assets/recommendation-posters/664698fb0ec6dd17.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121902&playDt=20261106&tsId=TS0044&pno=5",
-      "score": 19,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 1.8,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 2.5,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "sangsangmadang"
-      ],
-      "venueNames": [
-        "KT&G 상상마당 시네마"
-      ],
-      "nextDate": "2026-11-06",
-      "nextTime": "19:40",
-      "evidence": [
-        {
-          "title": "나미비아의 사막 어디서 볼수잇음..",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879369&page=2",
-          "date": "2026-11-02",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 12,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/4GmjVMDsj4YFwVGzEcvl8XTaMaB.jpg"
     }
   ],
   "festivalPicks": [],
@@ -352,11 +384,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 18,
+    "fetchedPostCount": 23,
     "listedPostCount": 292,
-    "detailedPostCount": 1,
-    "commentFetchCount": 1,
-    "commentCount": 3,
+    "detailedPostCount": 3,
+    "commentFetchCount": 3,
+    "commentCount": 7,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
