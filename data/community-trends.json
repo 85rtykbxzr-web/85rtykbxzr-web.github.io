@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-02T12:16:22.282Z",
-  "weekStart": "2026-10-31",
-  "weekEnd": "2026-11-02",
-  "windowStart": "2026-10-31",
-  "windowEnd": "2026-11-02",
+  "generatedAt": "2026-11-02T15:23:06.081Z",
+  "weekStart": "2026-11-01",
+  "weekEnd": "2026-11-03",
+  "windowStart": "2026-11-01",
+  "windowEnd": "2026-11-03",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261103&tsId=TS0056&pno=4",
-      "score": 478,
-      "signal": 43.3,
-      "positiveSignal": 43.3,
-      "mentionCount": 30.1,
-      "rawPositiveSignal": 56,
-      "rawMentionCount": 37.32274214521567,
+      "score": 368.6,
+      "signal": 38.4,
+      "positiveSignal": 38.4,
+      "mentionCount": 21.1,
+      "rawPositiveSignal": 62,
+      "rawMentionCount": 32.82274214521567,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum",
@@ -40,62 +40,6 @@
       "nextTime": "17:00",
       "evidence": [
         {
-          "title": "아사코 정성일쌤 gv는 시간, 장소 정해졌나요???",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878887&page=2",
-          "date": "2026-10-31",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "아사코 보러가려했는데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878843&page=3",
-          "date": "2026-10-31",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "아사코는 좋긴 좋은데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878826&page=3",
-          "date": "2026-10-31",
-          "positive": 2,
-          "rawPositive": 2,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "좋긴",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
           "title": "아사코 갤주 gv갈만할까?",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879210&page=1",
           "date": "2026-11-01",
@@ -109,12 +53,68 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "아사코 여주 사누최 여주 누가 더 썅년같음?",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879183&page=2",
           "date": "2026-11-01",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "아사코 불륜터져서 남주 이혼함?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879163&page=2",
+          "date": "2026-11-01",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "2018년 칸 경쟁작 '아사코' 정성일 평론가 씨네토크 전석 매진",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879403&page=2",
+          "date": "2026-11-02",
+          "positive": 6,
+          "rawPositive": 6,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "압도",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 5,
+          "commentPositive": 6,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "김성훈 아사코 5.0 이거 뭐냐?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879368&page=2",
+          "date": "2026-11-02",
           "positive": 0,
           "rawPositive": 0,
           "negative": 0,
@@ -138,12 +138,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-04&movieCd=029805&playSDT=2026-11-04&screenId=01&showSeq=3",
-      "score": 265.6,
-      "signal": 31.6,
-      "positiveSignal": 31.6,
-      "mentionCount": 13.5,
-      "rawPositiveSignal": 54,
-      "rawMentionCount": 22.988639961749957,
+      "score": 74.9,
+      "signal": 9.3,
+      "positiveSignal": 9.3,
+      "mentionCount": 3.4,
+      "rawPositiveSignal": 18,
+      "rawMentionCount": 5.903677461028802,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube"
@@ -154,54 +154,6 @@
       "nextDate": "2026-11-04",
       "nextTime": "13:15",
       "evidence": [
-        {
-          "title": "와일드호스나인에서 '나인'의 의미",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878913&page=1",
-          "date": "2026-10-31",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "와호나 불판에 불호가 단하나도없던데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878911&page=1",
-          "date": "2026-10-31",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 7,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "영고수잇냐? 와일드호스나인 왜 나인인거냐 제목이",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878882&page=2",
-          "date": "2026-10-31",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "와일드호스나인 원배틀 느낌임?",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879172&page=2",
@@ -216,7 +168,7 @@
           "commentCount": 3,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "와일드 호스 나인 걸작임?",
@@ -254,6 +206,22 @@
           "commentCount": 4,
           "commentPositive": 18,
           "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "와호나 여친이랑 봐도 ㄱㅊ?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879339&page=3",
+          "date": "2026-11-02",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
           "dayWeight": 0.72
         }
       ],
@@ -267,10 +235,10 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.tinyticket.net/event/EVvTFTWz06Rt",
-      "score": 50.5,
+      "score": 36.5,
       "signal": 0,
       "positiveSignal": 0,
-      "mentionCount": 5,
+      "mentionCount": 3.6,
       "rawPositiveSignal": 0,
       "rawMentionCount": 5,
       "scheduleBackfill": false,
@@ -297,7 +265,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "가능한 사랑 vs 하트 오브 비스트",
@@ -313,7 +281,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "사랑은 휴식이라 말하는 사람들의 시네마 취향",
@@ -329,75 +297,39 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kISG5ljzXg34TwsqbToGPu8Ebqy.jpg"
     },
     {
       "rank": 4,
-      "title": "침묵의 빛",
-      "posterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
-      "localPosterUrl": "/assets/recommendation-posters/d148f361cd726dbd.webp",
+      "title": "나미비아의 사막",
+      "posterUrl": "/assets/recommendation-posters/eb7fa8aa163a148e.webp",
+      "localPosterUrl": "/assets/recommendation-posters/eb7fa8aa163a148e.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121808&playDt=20261104&tsId=TS0044&pno=2",
-      "score": 33,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121902&playDt=20261106&tsId=TS0044&pno=5",
+      "score": 19,
       "signal": 0,
       "positiveSignal": 0,
-      "mentionCount": 3,
+      "mentionCount": 1.8,
       "rawPositiveSignal": 0,
-      "rawMentionCount": 5.084962500721156,
+      "rawMentionCount": 2.5,
       "scheduleBackfill": false,
       "venueIds": [
-        "sangsangmadang",
-        "cinecube",
-        "kucine"
+        "sangsangmadang"
       ],
       "venueNames": [
-        "KT&G 상상마당 시네마",
-        "씨네큐브 광화문",
-        "KU시네마테크"
+        "KT&G 상상마당 시네마"
       ],
-      "nextDate": "2026-11-04",
-      "nextTime": "12:00",
+      "nextDate": "2026-11-06",
+      "nextTime": "19:40",
       "evidence": [
         {
-          "title": "침묵의빛 ㅈㄴ좋은데 비슷한거",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878894&page=2",
-          "date": "2026-10-31",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "침묵의빛 많이 드르렁이고 어려움?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1878806&page=3",
-          "date": "2026-10-31",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 5,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "침묵의빛 오데트랑 하도 엮으니깐 스포 다 당한 기분이던데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879153&page=2",
-          "date": "2026-11-01",
+          "title": "나미비아의 사막 어디서 볼수잇음..",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879369&page=2",
+          "date": "2026-11-02",
           "positive": 0,
           "rawPositive": 0,
           "negative": 0,
@@ -405,13 +337,13 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 2,
+          "commentCount": 12,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.72
         }
       ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kniOoQky3GX9ljyzobwRUGFgQUT.jpg"
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/4GmjVMDsj4YFwVGzEcvl8XTaMaB.jpg"
     }
   ],
   "festivalPicks": [],
@@ -420,24 +352,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 137,
+    "fetchedPostCount": 2,
     "listedPostCount": 292,
-    "detailedPostCount": 18,
-    "commentFetchCount": 18,
-    "commentCount": 67,
+    "detailedPostCount": 1,
+    "commentFetchCount": 1,
+    "commentCount": 2,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-11-01",
-    "newestScannedDate": "2026-11-02",
+    "newestScannedDate": "2026-11-03",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-11-02",
-    "candidateWindowEnd": "2026-11-16",
-    "candidateCount": 92,
+    "candidateWindowStart": "2026-11-03",
+    "candidateWindowEnd": "2026-11-17",
+    "candidateCount": 95,
     "seedLookbackDays": 3,
-    "seedStart": "2026-10-31",
+    "seedStart": "2026-11-01",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-11-02",
+    "listWindowStart": "2026-11-03",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -445,7 +377,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-11-02"
+      "2026-11-03"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [
