@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-11-04",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-03T21:10:28.906Z",
+  "updatedAt": "2026-11-03T23:17:08.829Z",
   "days": {
     "2026-11-02": {
       "씽씽": {
@@ -523,14 +523,36 @@
       }
     },
     "2026-11-04": {
-      "아사코": {
-        "title": "아사코",
+      "개봉인디토크": {
+        "title": "개봉 인디토크",
         "positiveSignal": 0,
-        "mentionCount": 1.5,
+        "mentionCount": 1,
         "evidence": [
           {
-            "title": "누린이 이번에 아사코 처음 봤는데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879745&page=1",
+            "title": "씨집 단독 재개봉인데 왜 나는 라이카에서 예매를?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879755&page=1",
+            "date": "2026-11-04",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "버닝": {
+        "title": "버닝(하루키전)",
+        "positiveSignal": 10,
+        "mentionCount": 3.160964047443681,
+        "evidence": [
+          {
+            "title": "스포) 버닝과 가능사 비슷한 지점",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879753&page=1",
             "date": "2026-11-04",
             "positive": 0,
             "rawPositive": 0,
@@ -542,14 +564,7 @@
             "commentCount": 0,
             "commentPositive": 0,
             "commentNegative": 0
-          }
-        ]
-      },
-      "버닝": {
-        "title": "버닝(하루키전)",
-        "positiveSignal": 10,
-        "mentionCount": 2.160964047443681,
-        "evidence": [
+          },
           {
             "title": "스포) 버닝이 그렇게 미친영화인지 모르겠어요...",
             "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879744&page=1",
@@ -577,6 +592,28 @@
             "questionLike": false,
             "reviewQuestion": false,
             "commentCount": 4,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "아사코": {
+        "title": "아사코",
+        "positiveSignal": 0,
+        "mentionCount": 1.5,
+        "evidence": [
+          {
+            "title": "누린이 이번에 아사코 처음 봤는데",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879745&page=1",
+            "date": "2026-11-04",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
             "commentPositive": 0,
             "commentNegative": 0
           }
