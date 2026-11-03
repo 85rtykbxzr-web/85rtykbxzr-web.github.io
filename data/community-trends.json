@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-03T06:41:25.140Z",
+  "generatedAt": "2026-11-03T09:23:53.596Z",
   "weekStart": "2026-11-01",
   "weekEnd": "2026-11-03",
   "windowStart": "2026-11-01",
@@ -18,7 +18,7 @@
       "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261103&tsId=TS0056&pno=4",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-03&movieCd=019765&playSDT=2026-11-03&screenId=01&showSeq=6",
       "score": 380.3,
       "signal": 40.4,
       "positiveSignal": 40.4,
@@ -27,17 +27,17 @@
       "rawMentionCount": 33.191224942298774,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum",
         "cinecube",
-        "sangsangmadang"
+        "sangsangmadang",
+        "filmforum"
       ],
       "venueNames": [
-        "필름포럼",
         "씨네큐브 광화문",
-        "KT&G 상상마당 시네마"
+        "KT&G 상상마당 시네마",
+        "필름포럼"
       ],
       "nextDate": "2026-11-03",
-      "nextTime": "17:00",
+      "nextTime": "20:10",
       "evidence": [
         {
           "title": "아사코 갤주 gv갈만할까?",
@@ -248,7 +248,7 @@
         },
         {
           "title": "버닝은 그냥 영화를 재미있게 만들었음",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879545&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879545&page=3",
           "date": "2026-11-03",
           "positive": 8,
           "rawPositive": 8,
@@ -279,7 +279,7 @@
         },
         {
           "title": "버닝 봤는데 스티븐 연 연기 겁나 잘한다",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879533&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879533&page=3",
           "date": "2026-11-03",
           "positive": 0,
           "rawPositive": 0,
@@ -322,7 +322,7 @@
       "evidence": [
         {
           "title": "류승완 짝패 아라한같은 감성영화 다신 안찍겠지",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879529&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879529&page=3",
           "date": "2026-11-03",
           "positive": 0,
           "rawPositive": 0,
@@ -338,7 +338,7 @@
         },
         {
           "title": "짝패 가치가 높다 보는 이유",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879519&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879519&page=3",
           "date": "2026-11-03",
           "positive": 6,
           "rawPositive": 6,
@@ -362,7 +362,7 @@
         },
         {
           "title": "류승완 짝패는 어떰",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879517&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879517&page=3",
           "date": "2026-11-03",
           "positive": 4,
           "rawPositive": 4,
@@ -493,20 +493,20 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 99,
+    "fetchedPostCount": 138,
     "listedPostCount": 292,
-    "detailedPostCount": 9,
-    "commentFetchCount": 9,
-    "commentCount": 18,
+    "detailedPostCount": 11,
+    "commentFetchCount": 11,
+    "commentCount": 22,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
-    "oldestScannedDate": "2026-11-01",
+    "oldestScannedDate": "2026-11-02",
     "newestScannedDate": "2026-11-03",
     "scanMode": "daily",
     "candidateWindowStart": "2026-11-03",
     "candidateWindowEnd": "2026-11-17",
-    "candidateCount": 107,
+    "candidateCount": 105,
     "seedLookbackDays": 3,
     "seedStart": "2026-11-01",
     "listLookbackDays": 1,
