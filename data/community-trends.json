@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-03T18:16:16.012Z",
+  "generatedAt": "2026-11-03T21:10:31.175Z",
   "weekStart": "2026-11-02",
   "weekEnd": "2026-11-04",
   "windowStart": "2026-11-02",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-04&movieCd=019765&playSDT=2026-11-04&screenId=02&showSeq=5",
-      "score": 156.3,
+      "score": 171.3,
       "signal": 13.4,
       "positiveSignal": 13.4,
-      "mentionCount": 9.9,
+      "mentionCount": 11.4,
       "rawPositiveSignal": 22,
-      "rawMentionCount": 18.199371845969097,
+      "rawMentionCount": 19.699371845969097,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -125,6 +125,22 @@
           "commentPositive": 10,
           "commentNegative": 0,
           "dayWeight": 0.72
+        },
+        {
+          "title": "누린이 이번에 아사코 처음 봤는데",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879745&page=1",
+          "date": "2026-11-04",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
@@ -137,12 +153,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261105&tsId=TS0057&pno=2",
-      "score": 79,
-      "signal": 5.8,
-      "positiveSignal": 5.8,
-      "mentionCount": 5.5,
-      "rawPositiveSignal": 8,
-      "rawMentionCount": 7.69615871138938,
+      "score": 140.6,
+      "signal": 15.8,
+      "positiveSignal": 15.8,
+      "mentionCount": 7.7,
+      "rawPositiveSignal": 18,
+      "rawMentionCount": 9.85712275883306,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum"
@@ -215,6 +231,37 @@
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.72
+        },
+        {
+          "title": "스포) 버닝이 그렇게 미친영화인지 모르겠어요...",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879744&page=1",
+          "date": "2026-11-04",
+          "positive": 10,
+          "rawPositive": 10,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "미친영화",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "명작",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 4,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kXiF80o74fE9gf3Utf9moAI7ar0.jpg"
@@ -379,11 +426,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 15,
+    "fetchedPostCount": 24,
     "listedPostCount": 292,
-    "detailedPostCount": 0,
-    "commentFetchCount": 0,
-    "commentCount": 0,
+    "detailedPostCount": 2,
+    "commentFetchCount": 2,
+    "commentCount": 4,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,

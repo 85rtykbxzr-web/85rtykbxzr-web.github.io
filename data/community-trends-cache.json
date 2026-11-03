@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-11-04",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-03T18:16:13.013Z",
+  "updatedAt": "2026-11-03T21:10:28.906Z",
   "days": {
     "2026-11-02": {
       "씽씽": {
@@ -522,7 +522,67 @@
         ]
       }
     },
-    "2026-11-04": {}
+    "2026-11-04": {
+      "아사코": {
+        "title": "아사코",
+        "positiveSignal": 0,
+        "mentionCount": 1.5,
+        "evidence": [
+          {
+            "title": "누린이 이번에 아사코 처음 봤는데",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879745&page=1",
+            "date": "2026-11-04",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "버닝": {
+        "title": "버닝(하루키전)",
+        "positiveSignal": 10,
+        "mentionCount": 2.160964047443681,
+        "evidence": [
+          {
+            "title": "스포) 버닝이 그렇게 미친영화인지 모르겠어요...",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879744&page=1",
+            "date": "2026-11-04",
+            "positive": 10,
+            "rawPositive": 10,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "미친영화",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "명작",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 4,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      }
+    }
   },
   "festivals": {}
 }
