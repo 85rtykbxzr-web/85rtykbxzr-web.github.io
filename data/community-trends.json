@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-03T03:10:44.330Z",
+  "generatedAt": "2026-11-03T06:17:18.218Z",
   "weekStart": "2026-11-01",
   "weekEnd": "2026-11-03",
   "windowStart": "2026-11-01",
@@ -156,7 +156,7 @@
       "evidence": [
         {
           "title": "류승완 짝패 아라한같은 감성영화 다신 안찍겠지",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879529&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879529&page=2",
           "date": "2026-11-03",
           "positive": 0,
           "rawPositive": 0,
@@ -172,7 +172,7 @@
         },
         {
           "title": "짝패 가치가 높다 보는 이유",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879519&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879519&page=2",
           "date": "2026-11-03",
           "positive": 6,
           "rawPositive": 6,
@@ -196,7 +196,7 @@
         },
         {
           "title": "류승완 짝패는 어떰",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879517&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879517&page=2",
           "date": "2026-11-03",
           "positive": 4,
           "rawPositive": 4,
@@ -237,10 +237,12 @@
       "rawMentionCount": 5.903677461028802,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube"
+        "cinecube",
+        "filmforum"
       ],
       "venueNames": [
-        "씨네큐브 광화문"
+        "씨네큐브 광화문",
+        "필름포럼"
       ],
       "nextDate": "2026-11-04",
       "nextTime": "13:15",
@@ -400,11 +402,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 43,
+    "fetchedPostCount": 98,
     "listedPostCount": 292,
-    "detailedPostCount": 4,
-    "commentFetchCount": 4,
-    "commentCount": 9,
+    "detailedPostCount": 9,
+    "commentFetchCount": 9,
+    "commentCount": 18,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -413,7 +415,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-11-03",
     "candidateWindowEnd": "2026-11-17",
-    "candidateCount": 95,
+    "candidateCount": 107,
     "seedLookbackDays": 3,
     "seedStart": "2026-11-01",
     "listLookbackDays": 1,
