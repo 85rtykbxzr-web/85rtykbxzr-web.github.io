@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-03T06:17:18.218Z",
+  "generatedAt": "2026-11-03T06:41:25.140Z",
   "weekStart": "2026-11-01",
   "weekEnd": "2026-11-03",
   "windowStart": "2026-11-01",
@@ -132,6 +132,172 @@
     },
     {
       "rank": 2,
+      "title": "버닝(하루키전)",
+      "posterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
+      "localPosterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261105&tsId=TS0057&pno=2",
+      "score": 323.5,
+      "signal": 39.1,
+      "positiveSignal": 39.1,
+      "mentionCount": 16.7,
+      "rawPositiveSignal": 68,
+      "rawMentionCount": 25.0067267680267,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "filmforum"
+      ],
+      "venueNames": [
+        "필름포럼"
+      ],
+      "nextDate": "2026-11-05",
+      "nextTime": "12:50",
+      "evidence": [
+        {
+          "title": "버닝이 대중성 높은 영화가 맞나?!?!",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879222&page=1",
+          "date": "2026-11-01",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "버닝 걍 핵꿀잼작인데",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879216&page=1",
+          "date": "2026-11-01",
+          "positive": 16,
+          "rawPositive": 16,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 4,
+          "commentPositive": 8,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "버닝 고평가 ㅈ되네ㄷㄷㄷㄷ",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879085&page=3",
+          "date": "2026-11-01",
+          "positive": 8,
+          "rawPositive": 8,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 8,
+          "commentPositive": 8,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "버닝은 그냥 영화를 재미있게 만들었음",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879545&page=2",
+          "date": "2026-11-03",
+          "positive": 8,
+          "rawPositive": 8,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "재미있",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "버닝 봤는데 스티븐 연 연기 겁나 잘한다",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879533&page=2",
+          "date": "2026-11-03",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 6,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kXiF80o74fE9gf3Utf9moAI7ar0.jpg"
+    },
+    {
+      "rank": 3,
       "title": "짝패",
       "posterUrl": "/assets/recommendation-posters/d4a64ddf3b5f373f.webp",
       "localPosterUrl": "/assets/recommendation-posters/d4a64ddf3b5f373f.webp",
@@ -222,7 +388,7 @@
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/3qZEhBOd6IX363AQOTDC2RucLh2.jpg"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "title": "와일드 호스 나인",
       "posterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
       "localPosterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
@@ -319,81 +485,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/bh4wFW0B7fVtUOT9xfeugJJYKWw.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "사랑",
-      "posterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
-      "localPosterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.tinyticket.net/event/EVvTFTWz06Rt",
-      "score": 36.5,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 3.6,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 5,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "sac"
-      ],
-      "venueNames": [
-        "서울아트시네마"
-      ],
-      "nextDate": "2026-11-06",
-      "nextTime": "19:10",
-      "evidence": [
-        {
-          "title": "사랑은 휴식이라 말하는 사람들의 시네마 취향",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879398&page=2",
-          "date": "2026-11-02",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "가능한 사랑 vs 하트 오브 비스트",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879345&page=3",
-          "date": "2026-11-02",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "사랑은 휴식이라 말하는 사람들의 시네마 취향",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879303&page=3",
-          "date": "2026-11-02",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kISG5ljzXg34TwsqbToGPu8Ebqy.jpg"
     }
   ],
   "festivalPicks": [],
@@ -402,7 +493,7 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 98,
+    "fetchedPostCount": 99,
     "listedPostCount": 292,
     "detailedPostCount": 9,
     "commentFetchCount": 9,
