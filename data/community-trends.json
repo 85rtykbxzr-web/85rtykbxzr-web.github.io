@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-03T23:17:12.058Z",
+  "generatedAt": "2026-11-04T00:17:15.493Z",
   "weekStart": "2026-11-02",
   "weekEnd": "2026-11-04",
   "windowStart": "2026-11-02",
@@ -284,6 +284,91 @@
     },
     {
       "rank": 3,
+      "title": "와일드 호스 나인",
+      "posterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
+      "localPosterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-04&movieCd=029805&playSDT=2026-11-04&screenId=01&showSeq=3",
+      "score": 63.7,
+      "signal": 6,
+      "positiveSignal": 6,
+      "mentionCount": 3.6,
+      "rawPositiveSignal": 6,
+      "rawMentionCount": 4.792481250360578,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "cinecube",
+        "filmforum"
+      ],
+      "venueNames": [
+        "씨네큐브 광화문",
+        "필름포럼"
+      ],
+      "nextDate": "2026-11-04",
+      "nextTime": "13:15",
+      "evidence": [
+        {
+          "title": "와호나 여친이랑 봐도 ㄱㅊ?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879339&page=3",
+          "date": "2026-11-02",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "와호나vs박하사탕",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879667&page=1",
+          "date": "2026-11-03",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "와일드 호스 나인 관 거의 바닥 수준이네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879762&page=1",
+          "date": "2026-11-04",
+          "positive": 6,
+          "rawPositive": 6,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "최고",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 6,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/bh4wFW0B7fVtUOT9xfeugJJYKWw.jpg"
+    },
+    {
+      "rank": 4,
       "title": "짝패",
       "posterUrl": "/assets/recommendation-posters/d4a64ddf3b5f373f.webp",
       "localPosterUrl": "/assets/recommendation-posters/d4a64ddf3b5f373f.webp",
@@ -372,68 +457,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/3qZEhBOd6IX363AQOTDC2RucLh2.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "레위기",
-      "posterUrl": "/assets/recommendation-posters/da37d7157efb65df.webp",
-      "localPosterUrl": "/assets/recommendation-posters/da37d7157efb65df.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121833&playDt=20261104&tsId=TS0044&pno=4",
-      "score": 45.2,
-      "signal": 7.2,
-      "positiveSignal": 7.2,
-      "mentionCount": 1.3,
-      "rawPositiveSignal": 10,
-      "rawMentionCount": 1.792481250360578,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "sangsangmadang",
-        "kucine",
-        "filmforum"
-      ],
-      "venueNames": [
-        "KT&G 상상마당 시네마",
-        "KU시네마테크",
-        "필름포럼"
-      ],
-      "nextDate": "2026-11-04",
-      "nextTime": "16:35",
-      "evidence": [
-        {
-          "title": "레위기는 캐스팅이 ㅆㅅㅌㅊ네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879675&page=1",
-          "date": "2026-11-03",
-          "positive": 10,
-          "rawPositive": 10,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "ㅆㅅㅌㅊ",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            },
-            {
-              "term": "ㅅㅌㅊ",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cu0XnXLzJGPeI0msCoJKgnEecKz.jpg"
     }
   ],
   "festivalPicks": [],
@@ -442,11 +465,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 31,
+    "fetchedPostCount": 40,
     "listedPostCount": 292,
-    "detailedPostCount": 4,
-    "commentFetchCount": 4,
-    "commentCount": 4,
+    "detailedPostCount": 5,
+    "commentFetchCount": 5,
+    "commentCount": 5,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,

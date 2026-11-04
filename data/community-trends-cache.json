@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-11-04",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-03T23:17:08.829Z",
+  "updatedAt": "2026-11-04T00:17:12.596Z",
   "days": {
     "2026-11-02": {
       "씽씽": {
@@ -523,6 +523,36 @@
       }
     },
     "2026-11-04": {
+      "와일드호스나인": {
+        "title": "와일드 호스 나인",
+        "positiveSignal": 6,
+        "mentionCount": 1.5,
+        "evidence": [
+          {
+            "title": "와일드 호스 나인 관 거의 바닥 수준이네",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879762&page=1",
+            "date": "2026-11-04",
+            "positive": 6,
+            "rawPositive": 6,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "최고",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 6,
+            "commentNegative": 0
+          }
+        ]
+      },
       "개봉인디토크": {
         "title": "개봉 인디토크",
         "positiveSignal": 0,
