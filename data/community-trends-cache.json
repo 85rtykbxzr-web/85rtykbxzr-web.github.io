@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-11-04",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-04T00:17:12.596Z",
+  "updatedAt": "2026-11-04T03:23:08.765Z",
   "days": {
     "2026-11-02": {
       "씽씽": {
@@ -523,10 +523,68 @@
       }
     },
     "2026-11-04": {
+      "사랑": {
+        "title": "사랑",
+        "positiveSignal": 28,
+        "mentionCount": 2.5,
+        "evidence": [
+          {
+            "title": "사랑은 비를 타고 재밌냐?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879783&page=1",
+            "date": "2026-11-04",
+            "positive": 28,
+            "rawPositive": 28,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "걸작",
+                "count": 2,
+                "weight": 6,
+                "score": 12,
+                "label": "strong"
+              },
+              {
+                "term": "걸작",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "존잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "추천",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "좋음",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 7,
+            "commentPositive": 28,
+            "commentNegative": 0
+          }
+        ]
+      },
       "와일드호스나인": {
         "title": "와일드 호스 나인",
         "positiveSignal": 6,
-        "mentionCount": 1.5,
+        "mentionCount": 1.792481250360578,
         "evidence": [
           {
             "title": "와일드 호스 나인 관 거의 바닥 수준이네",
@@ -547,7 +605,7 @@
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 1,
+            "commentCount": 2,
             "commentPositive": 6,
             "commentNegative": 0
           }
@@ -577,8 +635,8 @@
       },
       "버닝": {
         "title": "버닝(하루키전)",
-        "positiveSignal": 10,
-        "mentionCount": 3.160964047443681,
+        "positiveSignal": 12,
+        "mentionCount": 4.084962500721156,
         "evidence": [
           {
             "title": "스포) 버닝과 가능사 비슷한 지점",
@@ -591,16 +649,16 @@
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 0,
+            "commentCount": 2,
             "commentPositive": 0,
             "commentNegative": 0
           },
           {
             "title": "스포) 버닝이 그렇게 미친영화인지 모르겠어요...",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879744&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879744&page=2",
             "date": "2026-11-04",
-            "positive": 10,
-            "rawPositive": 10,
+            "positive": 12,
+            "rawPositive": 12,
             "negative": 0,
             "positiveHits": [
               {
@@ -616,13 +674,20 @@
                 "weight": 4,
                 "score": 4,
                 "label": "clear"
+              },
+              {
+                "term": "흥미롭",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
               }
             ],
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 4,
-            "commentPositive": 0,
+            "commentCount": 5,
+            "commentPositive": 2,
             "commentNegative": 0
           }
         ]
@@ -634,7 +699,7 @@
         "evidence": [
           {
             "title": "누린이 이번에 아사코 처음 봤는데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879745&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879745&page=2",
             "date": "2026-11-04",
             "positive": 0,
             "rawPositive": 0,
