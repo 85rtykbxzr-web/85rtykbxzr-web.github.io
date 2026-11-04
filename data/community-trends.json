@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-04T15:17:04.305Z",
+  "generatedAt": "2026-11-04T18:14:55.815Z",
   "weekStart": "2026-11-03",
   "weekEnd": "2026-11-05",
   "windowStart": "2026-11-03",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-05&movieCd=029805&playSDT=2026-11-05&screenId=01&showSeq=2",
-      "score": 346.6,
+      "score": 368.2,
       "signal": 27.4,
       "positiveSignal": 27.4,
-      "mentionCount": 23.3,
+      "mentionCount": 25.5,
       "rawPositiveSignal": 38,
-      "rawMentionCount": 32.88417051910843,
+      "rawMentionCount": 35.04513456655211,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -122,6 +122,22 @@
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.72
+        },
+        {
+          "title": "( 스포) 와일드 호스 나인 뜻 이거 맞냐",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879966&page=1",
+          "date": "2026-11-05",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 4,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/bh4wFW0B7fVtUOT9xfeugJJYKWw.jpg"
@@ -134,12 +150,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261105&tsId=TS0056&pno=3",
-      "score": 163.9,
+      "score": 204.8,
       "signal": 16.7,
       "positiveSignal": 16.7,
-      "mentionCount": 9.3,
+      "mentionCount": 13.4,
       "rawPositiveSignal": 26,
-      "rawMentionCount": 13.538407798525416,
+      "rawMentionCount": 17.623370299246574,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum",
@@ -255,6 +271,22 @@
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.72
+        },
+        {
+          "title": "아사코 실관람평 이거맞아요?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879978&page=1",
+          "date": "2026-11-05",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 4,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
@@ -505,11 +537,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 4,
+    "fetchedPostCount": 18,
     "listedPostCount": 292,
-    "detailedPostCount": 0,
-    "commentFetchCount": 0,
-    "commentCount": 0,
+    "detailedPostCount": 4,
+    "commentFetchCount": 4,
+    "commentCount": 10,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
