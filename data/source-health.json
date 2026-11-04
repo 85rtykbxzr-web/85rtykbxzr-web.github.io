@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-04T14:31:15.249Z",
+  "checkedAt": "2026-11-04T15:16:34.118Z",
   "health": [
     {
       "sourceId": "momo-dtryx-showtimes",
@@ -8,7 +8,7 @@
       "status": null,
       "blocking": false,
       "deferredToBrowser": true,
-      "checkedAt": "2026-11-04T14:31:15.249Z",
+      "checkedAt": "2026-11-04T15:16:34.118Z",
       "parserStatus": "browser-api",
       "liveSessionCount": 0,
       "note": "Official timetable and seats are fetched in the visitor browser; no server verification is claimed."
@@ -20,7 +20,7 @@
       "status": null,
       "blocking": false,
       "deferredToBrowser": true,
-      "checkedAt": "2026-11-04T14:31:15.249Z",
+      "checkedAt": "2026-11-04T15:16:34.118Z",
       "parserStatus": "browser-api",
       "liveSessionCount": 0,
       "note": "Official timetable and seats are fetched in the visitor browser; no server verification is claimed."
@@ -32,7 +32,7 @@
       "status": null,
       "blocking": false,
       "deferredToBrowser": true,
-      "checkedAt": "2026-11-04T14:31:15.249Z",
+      "checkedAt": "2026-11-04T15:16:34.118Z",
       "parserStatus": "browser-api",
       "liveSessionCount": 0,
       "note": "Official timetable and seats are fetched in the visitor browser; no server verification is claimed."
@@ -44,7 +44,7 @@
       "status": null,
       "blocking": false,
       "deferredToBrowser": true,
-      "checkedAt": "2026-11-04T14:31:15.249Z",
+      "checkedAt": "2026-11-04T15:16:34.118Z",
       "parserStatus": "browser-api",
       "liveSessionCount": 0,
       "note": "Official timetable and seats are fetched in the visitor browser; no server verification is claimed."
@@ -56,7 +56,7 @@
       "status": null,
       "blocking": false,
       "deferredToBrowser": true,
-      "checkedAt": "2026-11-04T14:31:15.249Z",
+      "checkedAt": "2026-11-04T15:16:34.118Z",
       "parserStatus": "browser-api",
       "liveSessionCount": 0,
       "note": "Official timetable and seats are fetched in the visitor browser; no server verification is claimed."
@@ -68,7 +68,7 @@
       "status": null,
       "blocking": false,
       "deferredToBrowser": true,
-      "checkedAt": "2026-11-04T14:31:15.249Z",
+      "checkedAt": "2026-11-04T15:16:34.118Z",
       "parserStatus": "browser-api",
       "liveSessionCount": 0,
       "note": "Official timetable and seats are fetched in the visitor browser; no server verification is claimed."
@@ -80,7 +80,7 @@
       "status": null,
       "blocking": false,
       "deferredToBrowser": true,
-      "checkedAt": "2026-11-04T14:31:15.249Z",
+      "checkedAt": "2026-11-04T15:16:34.118Z",
       "parserStatus": "browser-api",
       "liveSessionCount": 0,
       "note": "Official timetable and seats are fetched in the visitor browser; no server verification is claimed."
@@ -91,19 +91,21 @@
       "ok": true,
       "blocking": false,
       "status": 200,
-      "checkedAt": "2026-11-04T14:30:03.664Z",
+      "checkedAt": "2026-11-04T15:15:35.132Z",
       "warning": "",
-      "contentHash": "97e9f6be4a5598b07357640f42cfd606cace1335f67ad4b57b72030b48877e4a",
-      "bytes": 83169
+      "contentHash": "66f9c75495da9faf0047cd109e10cc108e6ba22113993b963d267a7a809f3bbd",
+      "bytes": 83118
     },
     {
       "sourceId": "sac-program",
       "url": "https://www.cinematheque.seoul.kr/bbs/board.php?sfl=wr_30&bo_table=program&stx=1",
-      "ok": false,
+      "ok": true,
       "blocking": false,
-      "status": 0,
-      "checkedAt": "2026-11-04T14:30:04.777Z",
-      "warning": "source snapshot unavailable: fetch failed for https://www.cinematheque.seoul.kr/bbs/board.php?sfl=wr_30&bo_table=program&stx=1: Error - fetch failed for https://www.cinematheque.seoul.kr/bbs/board.php?sfl=wr_30&bo_table=program&stx=1&ckattempt=1: Error - Source returned an unresolved browser challenge - Source returned an unresolved browser challenge"
+      "status": 200,
+      "checkedAt": "2026-11-04T15:15:36.073Z",
+      "warning": "",
+      "contentHash": "ebd4ea514c333c03a123ccfc9013be2f262213d6aa5f4641e315741cbdfe4aa3",
+      "bytes": 59340
     },
     {
       "sourceId": "laika-program",
@@ -111,10 +113,10 @@
       "ok": true,
       "blocking": false,
       "status": 200,
-      "checkedAt": "2026-11-04T14:30:12.893Z",
+      "checkedAt": "2026-11-04T15:15:38.819Z",
       "warning": "",
-      "contentHash": "2772a12645aff1dd89ffc2a4e0b80a8a50be9e344ea3d0fec7c332c5db1047c1",
-      "bytes": 344403
+      "contentHash": "c92c5f5db99e6249736395add7c6e50cc1277eeddca4149f519c19df7d68d23c",
+      "bytes": 344402
     },
     {
       "sourceId": "indiespace-program",
@@ -122,9 +124,9 @@
       "ok": true,
       "blocking": false,
       "status": 200,
-      "checkedAt": "2026-11-04T14:30:13.758Z",
+      "checkedAt": "2026-11-04T15:15:39.559Z",
       "warning": "",
-      "contentHash": "01701f43301c5e2b8dd7d0b3bc65745c6f821296d74b5a85a5942c0bbe3c84d1",
+      "contentHash": "320176c0c9f84e94614f76bc9ff2afd10a96319be104d276ae6c9d04c0425717",
       "bytes": 46130
     },
     {
@@ -133,9 +135,9 @@
       "ok": true,
       "blocking": false,
       "status": 200,
-      "checkedAt": "2026-11-04T14:30:15.847Z",
+      "checkedAt": "2026-11-04T15:15:41.597Z",
       "warning": "",
-      "contentHash": "2cedbf78875476d9f843719234a37fdeaeaf86674cef3d2afe0a624d9a6bec0b",
+      "contentHash": "422a41e361bed53b125e84e22147511b8ef3a28e742d157a53c44698eb270d25",
       "bytes": 80475
     },
     {
@@ -144,7 +146,7 @@
       "ok": false,
       "blocking": false,
       "status": 0,
-      "checkedAt": "2026-11-04T14:30:17.340Z",
+      "checkedAt": "2026-11-04T15:15:43.455Z",
       "warning": "source snapshot unavailable: fetch failed for https://www.arthousemomo.co.kr/pages/board.php?bo_table=special_program: Error - fetch failed for https://www.arthousemomo.co.kr/pages/board.php?bo_table=special_program&ckattempt=1: Error - Source returned an unresolved browser challenge - Source returned an unresolved browser challenge"
     },
     {
@@ -153,9 +155,9 @@
       "ok": true,
       "blocking": false,
       "status": 200,
-      "checkedAt": "2026-11-04T14:30:27.381Z",
+      "checkedAt": "2026-11-04T15:15:55.658Z",
       "warning": "",
-      "contentHash": "a1fce9343fbf6cfc2b2497b5b1de74904f82376e705aac9a47776ec83cee3b5f",
+      "contentHash": "340b0526b0900fd19ca6e59c27c7357f2b0d1943d91f692652489f66e62eb8c7",
       "bytes": 24812
     },
     {
@@ -164,7 +166,7 @@
       "ok": true,
       "blocking": false,
       "status": 200,
-      "checkedAt": "2026-11-04T14:30:29.290Z",
+      "checkedAt": "2026-11-04T15:15:57.589Z",
       "warning": "",
       "contentHash": "d2f3ca53a8d2d22642e41ab54026b03af129d4d32ab7230a99226ca1191109bc",
       "bytes": 45497
@@ -175,7 +177,7 @@
       "ok": null,
       "blocking": false,
       "status": null,
-      "checkedAt": "2026-11-04T14:30:30.516Z",
+      "checkedAt": "2026-11-04T15:15:58.670Z",
       "skipped": true,
       "note": "아리랑 행사 페이지는 CI에서 8443 포트 연결 타임아웃이 간헐적으로 발생해 자동 갱신에서 제외하고, 상영시간표는 Dtryx API로 갱신합니다."
     },
@@ -185,9 +187,9 @@
       "ok": true,
       "blocking": false,
       "status": 200,
-      "checkedAt": "2026-11-04T14:30:30.516Z",
+      "checkedAt": "2026-11-04T15:15:58.671Z",
       "warning": "",
-      "contentHash": "c2925ec4adc04329950890f382936e636768c2c367b16dab7ce7562492438340",
+      "contentHash": "9cbd88e781585db0dc5ad83f8c35899ddd7dd3a35d75b7df1e38443686f7b0d0",
       "bytes": 24536
     },
     {
@@ -195,11 +197,11 @@
       "url": "https://kucinema.net/make/",
       "ok": true,
       "blocking": false,
-      "status": 200,
-      "checkedAt": "2026-11-04T14:30:31.096Z",
+      "status": 202,
+      "checkedAt": "2026-11-04T15:15:59.157Z",
       "warning": "",
-      "contentHash": "26d8985bd772e42920ce81f4ab712863e2a48f9456b34fbe91965a91a51bcd7f",
-      "bytes": 17202
+      "contentHash": "c0ce124ad54ed80ab9b38d2309e880162939b1cd83fdf1ab3ee924e502ca1ce6",
+      "bytes": 174
     },
     {
       "sourceId": "artnine-program",
@@ -207,7 +209,7 @@
       "ok": true,
       "blocking": false,
       "status": 200,
-      "checkedAt": "2026-11-04T14:30:32.259Z",
+      "checkedAt": "2026-11-04T15:16:00.175Z",
       "warning": "",
       "contentHash": "15f9e19318ec1b1d3b06cac9da7e24df35e61e8796511e7407be80bc1c36cf60",
       "bytes": 10823
@@ -218,9 +220,9 @@
       "ok": true,
       "blocking": false,
       "status": 200,
-      "checkedAt": "2026-11-04T14:30:33.106Z",
+      "checkedAt": "2026-11-04T15:16:01.005Z",
       "warning": "",
-      "contentHash": "c7e160f965c1c77e2a6285280952c32e3e6085f44411b533ad5af1b56701d6ca",
+      "contentHash": "e3cf05d57d5bf4752d678c219f6732ee32b4f4a3bf2afc10d7783ae77d59561c",
       "bytes": 140046
     },
     {
@@ -229,7 +231,7 @@
       "ok": true,
       "blocking": true,
       "status": 200,
-      "checkedAt": "2026-11-04T14:31:15.249Z",
+      "checkedAt": "2026-11-04T15:16:34.118Z",
       "parserStatus": "live-api",
       "liveSessionCount": 92,
       "liveDateCount": 10,
@@ -245,7 +247,7 @@
       "ok": true,
       "blocking": true,
       "status": 200,
-      "checkedAt": "2026-11-04T14:31:15.249Z",
+      "checkedAt": "2026-11-04T15:16:34.118Z",
       "parserStatus": "live-api",
       "liveSessionCount": 32,
       "liveDateCount": 9,
@@ -261,7 +263,7 @@
       "ok": true,
       "blocking": true,
       "status": 200,
-      "checkedAt": "2026-11-04T14:31:15.249Z",
+      "checkedAt": "2026-11-04T15:16:34.118Z",
       "parserStatus": "live-api",
       "liveSessionCount": 72,
       "liveDateCount": 7,
@@ -277,7 +279,7 @@
       "ok": true,
       "blocking": true,
       "status": 200,
-      "checkedAt": "2026-11-04T14:31:15.249Z",
+      "checkedAt": "2026-11-04T15:16:34.118Z",
       "parserStatus": "live-api",
       "liveSessionCount": 18,
       "liveDateCount": 5,
@@ -293,7 +295,7 @@
       "ok": true,
       "blocking": true,
       "status": 200,
-      "checkedAt": "2026-11-04T14:31:15.249Z",
+      "checkedAt": "2026-11-04T15:16:34.118Z",
       "parserStatus": "live-html",
       "liveSessionCount": 89,
       "liveDateCount": 25,
@@ -309,10 +311,26 @@
       "ok": true,
       "blocking": true,
       "status": 200,
-      "checkedAt": "2026-11-04T14:31:15.249Z",
+      "checkedAt": "2026-11-04T15:16:34.118Z",
       "parserStatus": "live-html",
       "liveSessionCount": 30,
       "liveDateCount": 10,
+      "upstreamDateCount": null,
+      "upstreamActiveDateCount": null,
+      "fallbackMerged": false,
+      "fallbackReason": "",
+      "fallbackSessionCount": 0
+    },
+    {
+      "sourceId": "sac-timetable",
+      "url": "https://www.cinematheque.seoul.kr/bbs/content.php?co_id=timetable",
+      "ok": true,
+      "blocking": true,
+      "status": 200,
+      "checkedAt": "2026-11-04T15:16:34.118Z",
+      "parserStatus": "live-html",
+      "liveSessionCount": 39,
+      "liveDateCount": 14,
       "upstreamDateCount": null,
       "upstreamActiveDateCount": null,
       "fallbackMerged": false,
@@ -325,7 +343,7 @@
       "ok": true,
       "blocking": true,
       "status": 200,
-      "checkedAt": "2026-11-04T14:31:15.249Z",
+      "checkedAt": "2026-11-04T15:16:34.118Z",
       "parserStatus": "live-html",
       "liveSessionCount": 37,
       "liveDateCount": 15,
@@ -334,18 +352,6 @@
       "fallbackMerged": false,
       "fallbackReason": "",
       "fallbackSessionCount": 0
-    },
-    {
-      "sourceId": "sac-timetable",
-      "ok": true,
-      "blocking": false,
-      "status": 206,
-      "checkedAt": "2026-11-04T14:31:15.249Z",
-      "parserStatus": "live-html",
-      "warning": "fetch failed for https://www.cinematheque.seoul.kr/bbs/content.php?co_id=timetable: Error - fetch failed for https://www.cinematheque.seoul.kr/bbs/content.php?co_id=timetable&ckattempt=1: Error - Source returned an unresolved browser challenge - Source returned an unresolved browser challenge; no fallback configured; kept 39 existing sessions across 14 date(s)",
-      "preservedExisting": true,
-      "liveSessionCount": 39,
-      "liveDateCount": 14
     }
   ]
 }
