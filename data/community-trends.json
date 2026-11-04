@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-04T12:11:12.351Z",
+  "generatedAt": "2026-11-04T14:32:37.105Z",
   "weekStart": "2026-11-02",
   "weekEnd": "2026-11-04",
   "windowStart": "2026-11-02",
@@ -14,17 +14,17 @@
     {
       "rank": 1,
       "title": "와일드 호스 나인",
-      "posterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
-      "localPosterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
+      "posterUrl": "/assets/recommendation-posters/db570bb5d2e214b3.webp",
+      "localPosterUrl": "/assets/recommendation-posters/db570bb5d2e214b3.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-05&movieCd=029805&playSDT=2026-11-05&screenId=01&showSeq=2",
-      "score": 401.7,
-      "signal": 26,
-      "positiveSignal": 26,
-      "mentionCount": 29.4,
-      "rawPositiveSignal": 26,
-      "rawMentionCount": 30.591689268747853,
+      "score": 487.6,
+      "signal": 38,
+      "positiveSignal": 38,
+      "mentionCount": 33.2,
+      "rawPositiveSignal": 38,
+      "rawMentionCount": 34.38417051910843,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -70,8 +70,8 @@
           "dayWeight": 0.72
         },
         {
-          "title": "와일드 호스 나인 뭐 알고 가야함",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879909&page=1",
+          "title": "스포) 와호나 그부분은 좀 예상 가능 범주더라",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879923&page=1",
           "date": "2026-11-04",
           "positive": 0,
           "rawPositive": 0,
@@ -86,37 +86,51 @@
           "dayWeight": 1
         },
         {
-          "title": "와호나 보기 전 감상 추천하는 영화",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879902&page=1",
+          "title": "와호나 잼내",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879919&page=1",
           "date": "2026-11-04",
-          "positive": 4,
-          "rawPositive": 4,
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "와일드 호스 나인 좋네!!",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879911&page=1",
+          "date": "2026-11-04",
+          "positive": 12,
+          "rawPositive": 12,
           "negative": 0,
           "positiveHits": [
             {
-              "term": "추천",
-              "count": 1,
+              "term": "여운",
+              "count": 2,
               "weight": 4,
-              "score": 4,
+              "score": 8,
               "label": "clear"
+            },
+            {
+              "term": "인상적",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            },
+            {
+              "term": "좋네",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
             }
           ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        },
-        {
-          "title": "와일드호스나인 제일 웃겼던 장면",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879883&page=1",
-          "date": "2026-11-04",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
@@ -136,12 +150,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261105&tsId=TS0056&pno=3",
-      "score": 259.1,
-      "signal": 19.4,
-      "positiveSignal": 19.4,
-      "mentionCount": 17.7,
-      "rawPositiveSignal": 28,
-      "rawMentionCount": 26.07681559705083,
+      "score": 334.1,
+      "signal": 29.4,
+      "positiveSignal": 29.4,
+      "mentionCount": 21.2,
+      "rawPositiveSignal": 38,
+      "rawMentionCount": 29.57681559705083,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum",
@@ -244,26 +258,33 @@
           "dayWeight": 0.72
         },
         {
-          "title": "파이아키아 아사코 심층분석 ㄷㄷㄷ",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879903&page=1",
+          "title": "아사코 보고 옴",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879933&page=1",
           "date": "2026-11-04",
-          "positive": 6,
-          "rawPositive": 6,
+          "positive": 10,
+          "rawPositive": 10,
           "negative": 0,
           "positiveHits": [
             {
-              "term": "미쳤",
+              "term": "최고",
               "count": 1,
               "weight": 6,
               "score": 6,
               "label": "strong"
+            },
+            {
+              "term": "존잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
             }
           ],
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
           "commentCount": 2,
-          "commentPositive": 0,
+          "commentPositive": 4,
           "commentNegative": 0,
           "dayWeight": 1
         }
@@ -272,9 +293,152 @@
     },
     {
       "rank": 3,
+      "title": "사랑",
+      "posterUrl": "/assets/recommendation-posters/615c09c6353d48fc.webp",
+      "localPosterUrl": "/assets/recommendation-posters/615c09c6353d48fc.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.tinyticket.net/event/EVvTFTWz06Rt",
+      "score": 173.4,
+      "signal": 28,
+      "positiveSignal": 28,
+      "mentionCount": 6.1,
+      "rawPositiveSignal": 28,
+      "rawMentionCount": 8.5,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "sac"
+      ],
+      "venueNames": [
+        "서울아트시네마"
+      ],
+      "nextDate": "2026-11-06",
+      "nextTime": "19:10",
+      "evidence": [
+        {
+          "title": "사랑은 휴식이라 말하는 사람들의 시네마 취향",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879398&page=2",
+          "date": "2026-11-02",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "가능한 사랑 vs 하트 오브 비스트",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879345&page=3",
+          "date": "2026-11-02",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "사랑은 휴식이라 말하는 사람들의 시네마 취향",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879303&page=3",
+          "date": "2026-11-02",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "가능한 사랑 넷플릭스라 선공개도 뜬다 야 ㅋㅋㅋ",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879947&page=1",
+          "date": "2026-11-04",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "사랑은 비를 타고 재밌냐?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879783&page=4",
+          "date": "2026-11-04",
+          "positive": 28,
+          "rawPositive": 28,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "걸작",
+              "count": 2,
+              "weight": 6,
+              "score": 12,
+              "label": "strong"
+            },
+            {
+              "term": "걸작",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "존잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "추천",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "좋음",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 8,
+          "commentPositive": 28,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kISG5ljzXg34TwsqbToGPu8Ebqy.jpg"
+    },
+    {
+      "rank": 4,
       "title": "버닝(하루키전)",
-      "posterUrl": "/assets/recommendation-posters/edc372432da19c51.webp",
-      "localPosterUrl": "/assets/recommendation-posters/edc372432da19c51.webp",
+      "posterUrl": "/assets/recommendation-posters/5ead3b8fd9649712.webp",
+      "localPosterUrl": "/assets/recommendation-posters/5ead3b8fd9649712.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261105&tsId=TS0057&pno=2",
@@ -413,133 +577,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kXiF80o74fE9gf3Utf9moAI7ar0.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "사랑",
-      "posterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
-      "localPosterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.tinyticket.net/event/EVvTFTWz06Rt",
-      "score": 163.4,
-      "signal": 28,
-      "positiveSignal": 28,
-      "mentionCount": 5.1,
-      "rawPositiveSignal": 28,
-      "rawMentionCount": 7.5,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "sac"
-      ],
-      "venueNames": [
-        "서울아트시네마"
-      ],
-      "nextDate": "2026-11-06",
-      "nextTime": "19:10",
-      "evidence": [
-        {
-          "title": "사랑은 휴식이라 말하는 사람들의 시네마 취향",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879398&page=2",
-          "date": "2026-11-02",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "가능한 사랑 vs 하트 오브 비스트",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879345&page=3",
-          "date": "2026-11-02",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "사랑은 휴식이라 말하는 사람들의 시네마 취향",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879303&page=3",
-          "date": "2026-11-02",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "사랑은 비를 타고 재밌냐?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879783&page=3",
-          "date": "2026-11-04",
-          "positive": 28,
-          "rawPositive": 28,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "걸작",
-              "count": 2,
-              "weight": 6,
-              "score": 12,
-              "label": "strong"
-            },
-            {
-              "term": "걸작",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            },
-            {
-              "term": "존잼",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "추천",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "좋음",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 8,
-          "commentPositive": 28,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kISG5ljzXg34TwsqbToGPu8Ebqy.jpg"
     }
   ],
   "festivalPicks": [],
@@ -548,15 +585,15 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 166,
+    "fetchedPostCount": 194,
     "listedPostCount": 292,
-    "detailedPostCount": 26,
-    "commentFetchCount": 26,
-    "commentCount": 62,
+    "detailedPostCount": 33,
+    "commentFetchCount": 33,
+    "commentCount": 69,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
-    "oldestScannedDate": "2026-11-03",
+    "oldestScannedDate": "2026-11-02",
     "newestScannedDate": "2026-11-04",
     "scanMode": "daily",
     "candidateWindowStart": "2026-11-04",
