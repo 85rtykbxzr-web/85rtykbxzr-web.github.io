@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-04T09:19:43.675Z",
+  "generatedAt": "2026-11-04T12:11:12.351Z",
   "weekStart": "2026-11-02",
   "weekEnd": "2026-11-04",
   "windowStart": "2026-11-02",
@@ -18,13 +18,13 @@
       "localPosterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-04&movieCd=029805&playSDT=2026-11-04&screenId=02&showSeq=6",
-      "score": 260.4,
-      "signal": 20,
-      "positiveSignal": 20,
-      "mentionCount": 17.6,
-      "rawPositiveSignal": 20,
-      "rawMentionCount": 18.86608371283169,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-05&movieCd=029805&playSDT=2026-11-05&screenId=01&showSeq=2",
+      "score": 401.7,
+      "signal": 26,
+      "positiveSignal": 26,
+      "mentionCount": 29.4,
+      "rawPositiveSignal": 26,
+      "rawMentionCount": 30.591689268747853,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -34,8 +34,8 @@
         "씨네큐브 광화문",
         "필름포럼"
       ],
-      "nextDate": "2026-11-04",
-      "nextTime": "20:10",
+      "nextDate": "2026-11-05",
+      "nextTime": "11:20",
       "evidence": [
         {
           "title": "와호나 여친이랑 봐도 ㄱㅊ?",
@@ -70,40 +70,8 @@
           "dayWeight": 0.72
         },
         {
-          "title": "(아직 안 봄) 와호나 질문",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879867&page=1",
-          "date": "2026-11-04",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        },
-        {
-          "title": "와일드 호스나인 매우 즐거운 영화였다",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879866&page=1",
-          "date": "2026-11-04",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        },
-        {
-          "title": "까이에 와호나 별점",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879859&page=1",
+          "title": "와일드 호스 나인 뭐 알고 가야함",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879909&page=1",
           "date": "2026-11-04",
           "positive": 0,
           "rawPositive": 0,
@@ -112,7 +80,47 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 4,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "와호나 보기 전 감상 추천하는 영화",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879902&page=1",
+          "date": "2026-11-04",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "추천",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "와일드호스나인 제일 웃겼던 장면",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879883&page=1",
+          "date": "2026-11-04",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
@@ -127,26 +135,26 @@
       "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121840&playDt=20261104&tsId=TS0044&pno=6",
-      "score": 174.2,
-      "signal": 13.4,
-      "positiveSignal": 13.4,
-      "mentionCount": 11.7,
-      "rawPositiveSignal": 22,
-      "rawMentionCount": 19.991853096329674,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261105&tsId=TS0056&pno=3",
+      "score": 259.1,
+      "signal": 19.4,
+      "positiveSignal": 19.4,
+      "mentionCount": 17.7,
+      "rawPositiveSignal": 28,
+      "rawMentionCount": 26.07681559705083,
       "scheduleBackfill": false,
       "venueIds": [
-        "sangsangmadang",
         "filmforum",
-        "cinecube"
+        "cinecube",
+        "sangsangmadang"
       ],
       "venueNames": [
-        "KT&G 상상마당 시네마",
         "필름포럼",
-        "씨네큐브 광화문"
+        "씨네큐브 광화문",
+        "KT&G 상상마당 시네마"
       ],
-      "nextDate": "2026-11-04",
-      "nextTime": "20:10",
+      "nextDate": "2026-11-05",
+      "nextTime": "14:00",
       "evidence": [
         {
           "title": "2018년 칸 경쟁작 '아사코' 정성일 평론가 씨네토크 전석 매진",
@@ -236,17 +244,25 @@
           "dayWeight": 0.72
         },
         {
-          "title": "누린이 이번에 아사코 처음 봤는데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879745&page=3",
+          "title": "파이아키아 아사코 심층분석 ㄷㄷㄷ",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879903&page=1",
           "date": "2026-11-04",
-          "positive": 0,
-          "rawPositive": 0,
+          "positive": 6,
+          "rawPositive": 6,
           "negative": 0,
-          "positiveHits": [],
+          "positiveHits": [
+            {
+              "term": "미쳤",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            }
+          ],
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 0,
+          "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
@@ -257,8 +273,8 @@
     {
       "rank": 3,
       "title": "버닝(하루키전)",
-      "posterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
-      "localPosterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
+      "posterUrl": "/assets/recommendation-posters/edc372432da19c51.webp",
+      "localPosterUrl": "/assets/recommendation-posters/edc372432da19c51.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261105&tsId=TS0057&pno=2",
@@ -343,7 +359,7 @@
         },
         {
           "title": "스포) 버닝과 가능사 비슷한 지점",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879753&page=3",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879753&page=4",
           "date": "2026-11-04",
           "positive": 0,
           "rawPositive": 0,
@@ -359,7 +375,7 @@
         },
         {
           "title": "스포) 버닝이 그렇게 미친영화인지 모르겠어요...",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879744&page=3",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879744&page=4",
           "date": "2026-11-04",
           "positive": 12,
           "rawPositive": 12,
@@ -472,7 +488,7 @@
         },
         {
           "title": "사랑은 비를 타고 재밌냐?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879783&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879783&page=3",
           "date": "2026-11-04",
           "positive": 28,
           "rawPositive": 28,
@@ -532,11 +548,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 137,
+    "fetchedPostCount": 166,
     "listedPostCount": 292,
-    "detailedPostCount": 14,
-    "commentFetchCount": 14,
-    "commentCount": 47,
+    "detailedPostCount": 26,
+    "commentFetchCount": 26,
+    "commentCount": 62,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -545,7 +561,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-11-04",
     "candidateWindowEnd": "2026-11-18",
-    "candidateCount": 105,
+    "candidateCount": 104,
     "seedLookbackDays": 3,
     "seedStart": "2026-11-02",
     "listLookbackDays": 1,
