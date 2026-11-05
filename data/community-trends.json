@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-05T15:13:06.064Z",
+  "generatedAt": "2026-11-05T17:21:49.123Z",
   "weekStart": "2026-11-04",
   "weekEnd": "2026-11-06",
   "windowStart": "2026-11-04",
@@ -14,8 +14,8 @@
     {
       "rank": 1,
       "title": "와일드 호스 나인",
-      "posterUrl": "/assets/recommendation-posters/db570bb5d2e214b3.webp",
-      "localPosterUrl": "/assets/recommendation-posters/db570bb5d2e214b3.webp",
+      "posterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
+      "localPosterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-06&movieCd=029805&playSDT=2026-11-06&screenId=01&showSeq=3",
@@ -287,17 +287,17 @@
     {
       "rank": 3,
       "title": "사랑",
-      "posterUrl": "/assets/recommendation-posters/615c09c6353d48fc.webp",
-      "localPosterUrl": "/assets/recommendation-posters/615c09c6353d48fc.webp",
+      "posterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
+      "localPosterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.tinyticket.net/event/EVvTFTWz06Rt",
-      "score": 101.8,
+      "score": 111.8,
       "signal": 14.5,
       "positiveSignal": 14.5,
-      "mentionCount": 4.3,
+      "mentionCount": 5.3,
       "rawPositiveSignal": 28,
-      "rawMentionCount": 7,
+      "rawMentionCount": 8,
       "scheduleBackfill": false,
       "venueIds": [
         "sac"
@@ -407,6 +407,22 @@
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.72
+        },
+        {
+          "title": "가능한 사랑 언제뜸",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880137&page=1",
+          "date": "2026-11-06",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kISG5ljzXg34TwsqbToGPu8Ebqy.jpg"
@@ -414,8 +430,8 @@
     {
       "rank": 4,
       "title": "아버지",
-      "posterUrl": "/assets/recommendation-posters/02353adb4e3de386.webp",
-      "localPosterUrl": "/assets/recommendation-posters/02353adb4e3de386.webp",
+      "posterUrl": "/assets/recommendation-posters/9136c0aa7c5f3e0d.webp",
+      "localPosterUrl": "/assets/recommendation-posters/9136c0aa7c5f3e0d.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.tinyticket.net/event/EVzjkzfDbLdC",
@@ -477,10 +493,10 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 2,
+    "fetchedPostCount": 17,
     "listedPostCount": 292,
-    "detailedPostCount": 0,
-    "commentFetchCount": 0,
+    "detailedPostCount": 1,
+    "commentFetchCount": 1,
     "commentCount": 0,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
