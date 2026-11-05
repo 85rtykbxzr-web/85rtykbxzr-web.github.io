@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-05T06:37:51.923Z",
+  "generatedAt": "2026-11-05T09:15:04.547Z",
   "weekStart": "2026-11-03",
   "weekEnd": "2026-11-05",
   "windowStart": "2026-11-03",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-05&movieCd=029805&playSDT=2026-11-05&screenId=01&showSeq=6",
-      "score": 408.4,
-      "signal": 31.4,
-      "positiveSignal": 31.4,
-      "mentionCount": 27.9,
-      "rawPositiveSignal": 42,
-      "rawMentionCount": 37.469133019829584,
+      "score": 481,
+      "signal": 35.4,
+      "positiveSignal": 35.4,
+      "mentionCount": 33.6,
+      "rawPositiveSignal": 46,
+      "rawMentionCount": 43.13009706727327,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -124,26 +124,26 @@
           "dayWeight": 0.72
         },
         {
-          "title": "지금 ㅈㄴ 피곤한데 와일드 호스 나인",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880002&page=1",
+          "title": "와호나 보기 전에 이거 보면 좋음",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880064&page=1",
           "date": "2026-11-05",
-          "positive": 4,
-          "rawPositive": 4,
+          "positive": 2,
+          "rawPositive": 2,
           "negative": 0,
           "positiveHits": [
             {
-              "term": "재밌",
+              "term": "좋음",
               "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
             }
           ],
           "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 5,
-          "commentPositive": 4,
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
         }
@@ -157,26 +157,26 @@
       "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-05&movieCd=019765&playSDT=2026-11-05&screenId=01&showSeq=5",
-      "score": 266.8,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261106&tsId=TS0056&pno=1",
+      "score": 288.4,
       "signal": 16.7,
       "positiveSignal": 16.7,
-      "mentionCount": 19.6,
+      "mentionCount": 21.8,
       "rawPositiveSignal": 26,
-      "rawMentionCount": 23.830889048885993,
+      "rawMentionCount": 25.991853096329674,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube",
         "filmforum",
-        "sangsangmadang"
+        "sangsangmadang",
+        "cinecube"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
         "필름포럼",
-        "KT&G 상상마당 시네마"
+        "KT&G 상상마당 시네마",
+        "씨네큐브 광화문"
       ],
-      "nextDate": "2026-11-05",
-      "nextTime": "17:35",
+      "nextDate": "2026-11-06",
+      "nextTime": "10:20",
       "evidence": [
         {
           "title": "우연과상상도 아사코만큼 재미있어?",
@@ -281,8 +281,8 @@
           "dayWeight": 0.72
         },
         {
-          "title": "아사코보다는 예전에 하나코라는",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880000&page=1",
+          "title": "이동진 유운성 두 평론가 모두 아사코에서 중요하게 본 대사",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880061&page=1",
           "date": "2026-11-05",
           "positive": 0,
           "rawPositive": 0,
@@ -291,7 +291,7 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 0,
+          "commentCount": 4,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
@@ -508,11 +508,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 72,
+    "fetchedPostCount": 98,
     "listedPostCount": 292,
-    "detailedPostCount": 12,
-    "commentFetchCount": 12,
-    "commentCount": 38,
+    "detailedPostCount": 16,
+    "commentFetchCount": 16,
+    "commentCount": 74,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -521,7 +521,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-11-05",
     "candidateWindowEnd": "2026-11-19",
-    "candidateCount": 104,
+    "candidateCount": 102,
     "seedLookbackDays": 3,
     "seedStart": "2026-11-03",
     "listLookbackDays": 1,
