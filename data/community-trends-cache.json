@@ -2,280 +2,25 @@
   "version": 3,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-11-03",
-  "windowEnd": "2026-11-05",
+  "windowStart": "2026-11-04",
+  "windowEnd": "2026-11-06",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-11-03",
       "2026-11-04",
-      "2026-11-05"
+      "2026-11-05",
+      "2026-11-06"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-11-05",
-    "lastWindowEnd": "2026-11-05",
+    "lastWindowStart": "2026-11-06",
+    "lastWindowEnd": "2026-11-06",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-05T12:21:18.420Z",
+  "updatedAt": "2026-11-05T15:13:02.912Z",
   "days": {
-    "2026-11-03": {
-      "레위기": {
-        "title": "레위기(2D)",
-        "positiveSignal": 10,
-        "mentionCount": 1.792481250360578,
-        "evidence": [
-          {
-            "title": "레위기는 캐스팅이 ㅆㅅㅌㅊ네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879675&page=1",
-            "date": "2026-11-03",
-            "positive": 10,
-            "rawPositive": 10,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "ㅆㅅㅌㅊ",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              },
-              {
-                "term": "ㅅㅌㅊ",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "와일드호스나인": {
-        "title": "와일드 호스 나인",
-        "positiveSignal": 0,
-        "mentionCount": 1.792481250360578,
-        "evidence": [
-          {
-            "title": "와호나vs박하사탕",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879667&page=1",
-            "date": "2026-11-03",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "개봉인디토크": {
-        "title": "개봉 인디토크",
-        "positiveSignal": 0,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "고마제는 왜 한국에 미개봉인거냐?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879641&page=1",
-            "date": "2026-11-03",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "버닝": {
-        "title": "버닝(하루키전)",
-        "positiveSignal": 8,
-        "mentionCount": 7.69615871138938,
-        "evidence": [
-          {
-            "title": "버닝은 그냥 영화를 재미있게 만들었음",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879545&page=3",
-            "date": "2026-11-03",
-            "positive": 8,
-            "rawPositive": 8,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "재미있",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              },
-              {
-                "term": "재밌",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "버닝 봤는데 스티븐 연 연기 겁나 잘한다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879533&page=3",
-            "date": "2026-11-03",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 6,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "버닝 오늘 마지막이던데 한번더볼까",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879524&page=4",
-            "date": "2026-11-03",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "짝패": {
-        "title": "짝패",
-        "positiveSignal": 10,
-        "mentionCount": 4.660964047443681,
-        "evidence": [
-          {
-            "title": "류승완 짝패 아라한같은 감성영화 다신 안찍겠지",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879529&page=3",
-            "date": "2026-11-03",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "짝패 가치가 높다 보는 이유",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879519&page=4",
-            "date": "2026-11-03",
-            "positive": 6,
-            "rawPositive": 6,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "최고",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 6,
-            "commentNegative": 0
-          },
-          {
-            "title": "류승완 짝패는 어떰",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879517&page=4",
-            "date": "2026-11-03",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 4,
-            "commentPositive": 4,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "아사코": {
-        "title": "아사코",
-        "positiveSignal": 10,
-        "mentionCount": 2.160964047443681,
-        "evidence": [
-          {
-            "title": "우연과상상도 아사코만큼 재미있어?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879495&page=4",
-            "date": "2026-11-03",
-            "positive": 10,
-            "rawPositive": 10,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "재밌",
-                "count": 2,
-                "weight": 4,
-                "score": 8,
-                "label": "clear"
-              },
-              {
-                "term": "좋음",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 4,
-            "commentPositive": 10,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-11-04": {
       "사랑": {
         "title": "사랑",
@@ -952,7 +697,8 @@
           }
         ]
       }
-    }
+    },
+    "2026-11-06": {}
   },
   "festivals": {}
 }
