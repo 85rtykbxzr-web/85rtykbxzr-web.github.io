@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-05T03:18:00.965Z",
+  "generatedAt": "2026-11-05T06:23:48.880Z",
   "weekStart": "2026-11-03",
   "weekEnd": "2026-11-05",
   "windowStart": "2026-11-03",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-05&movieCd=029805&playSDT=2026-11-05&screenId=01&showSeq=4",
-      "score": 388.2,
-      "signal": 27.4,
-      "positiveSignal": 27.4,
-      "mentionCount": 27.5,
-      "rawPositiveSignal": 38,
-      "rawMentionCount": 37.04513456655211,
+      "score": 408.4,
+      "signal": 31.4,
+      "positiveSignal": 31.4,
+      "mentionCount": 27.9,
+      "rawPositiveSignal": 42,
+      "rawMentionCount": 37.469133019829584,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -127,15 +127,23 @@
           "title": "지금 ㅈㄴ 피곤한데 와일드 호스 나인",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880002&page=1",
           "date": "2026-11-05",
-          "positive": 0,
-          "rawPositive": 0,
+          "positive": 4,
+          "rawPositive": 4,
           "negative": 0,
-          "positiveHits": [],
+          "positiveHits": [
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
           "negativeHits": [],
           "questionLike": true,
           "reviewQuestion": true,
-          "commentCount": 3,
-          "commentPositive": 0,
+          "commentCount": 5,
+          "commentPositive": 4,
           "commentNegative": 0,
           "dayWeight": 1
         }
@@ -149,26 +157,26 @@
       "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261105&tsId=TS0056&pno=3",
-      "score": 264.9,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-05&movieCd=019765&playSDT=2026-11-05&screenId=01&showSeq=5",
+      "score": 266.8,
       "signal": 16.7,
       "positiveSignal": 16.7,
-      "mentionCount": 19.4,
+      "mentionCount": 19.6,
       "rawPositiveSignal": 26,
-      "rawMentionCount": 23.6382439709436,
+      "rawMentionCount": 23.830889048885993,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum",
         "cinecube",
+        "filmforum",
         "sangsangmadang"
       ],
       "venueNames": [
-        "필름포럼",
         "씨네큐브 광화문",
+        "필름포럼",
         "KT&G 상상마당 시네마"
       ],
       "nextDate": "2026-11-05",
-      "nextTime": "14:00",
+      "nextTime": "17:35",
       "evidence": [
         {
           "title": "우연과상상도 아사코만큼 재미있어?",
@@ -293,162 +301,18 @@
     },
     {
       "rank": 3,
-      "title": "버닝(하루키전)",
-      "posterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
-      "localPosterUrl": "/assets/recommendation-posters/70bb129a52d2ff85.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121850&playDt=20261105&tsId=TS0057&pno=2",
-      "score": 138.9,
-      "signal": 14.8,
-      "positiveSignal": 14.8,
-      "mentionCount": 7.9,
-      "rawPositiveSignal": 22,
-      "rawMentionCount": 12.781121212110536,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "filmforum"
-      ],
-      "venueNames": [
-        "필름포럼"
-      ],
-      "nextDate": "2026-11-05",
-      "nextTime": "12:50",
-      "evidence": [
-        {
-          "title": "버닝은 그냥 영화를 재미있게 만들었음",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879545&page=3",
-          "date": "2026-11-03",
-          "positive": 8,
-          "rawPositive": 8,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "재미있",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "재밌",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "버닝 봤는데 스티븐 연 연기 겁나 잘한다",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879533&page=3",
-          "date": "2026-11-03",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 6,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "버닝 오늘 마지막이던데 한번더볼까",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879524&page=4",
-          "date": "2026-11-03",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "스포) 버닝과 가능사 비슷한 지점",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879753&page=4",
-          "date": "2026-11-04",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "스포) 버닝이 그렇게 미친영화인지 모르겠어요...",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879744&page=4",
-          "date": "2026-11-04",
-          "positive": 12,
-          "rawPositive": 12,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "미친영화",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            },
-            {
-              "term": "명작",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "흥미롭",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 5,
-          "commentPositive": 2,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kXiF80o74fE9gf3Utf9moAI7ar0.jpg"
-    },
-    {
-      "rank": 4,
       "title": "사랑",
       "posterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
       "localPosterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.tinyticket.net/event/EVvTFTWz06Rt",
-      "score": 130.4,
+      "score": 131.3,
       "signal": 20.2,
       "positiveSignal": 20.2,
-      "mentionCount": 4.9,
+      "mentionCount": 5,
       "rawPositiveSignal": 28,
-      "rawMentionCount": 5.903677461028802,
+      "rawMentionCount": 6,
       "scheduleBackfill": false,
       "venueIds": [
         "sac"
@@ -529,7 +393,7 @@
         },
         {
           "title": "(ㅅㅍ) 아사코는 쌍년일까 아닐까",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879980&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879980&page=2",
           "date": "2026-11-05",
           "positive": 0,
           "rawPositive": 0,
@@ -545,6 +409,97 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kISG5ljzXg34TwsqbToGPu8Ebqy.jpg"
+    },
+    {
+      "rank": 4,
+      "title": "짝패",
+      "posterUrl": "/assets/recommendation-posters/d4a64ddf3b5f373f.webp",
+      "localPosterUrl": "/assets/recommendation-posters/d4a64ddf3b5f373f.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.tinyticket.net/event/EV5WRFw1pPk9",
+      "score": 45.4,
+      "signal": 5.2,
+      "positiveSignal": 5.2,
+      "mentionCount": 2.4,
+      "rawPositiveSignal": 10,
+      "rawMentionCount": 4.660964047443681,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "sac"
+      ],
+      "venueNames": [
+        "서울아트시네마"
+      ],
+      "nextDate": "2026-11-07",
+      "nextTime": "19:00",
+      "evidence": [
+        {
+          "title": "류승완 짝패 아라한같은 감성영화 다신 안찍겠지",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879529&page=3",
+          "date": "2026-11-03",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "짝패 가치가 높다 보는 이유",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879519&page=4",
+          "date": "2026-11-03",
+          "positive": 6,
+          "rawPositive": 6,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "최고",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 6,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "류승완 짝패는 어떰",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879517&page=4",
+          "date": "2026-11-03",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 4,
+          "commentPositive": 4,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/3qZEhBOd6IX363AQOTDC2RucLh2.jpg"
     }
   ],
   "festivalPicks": [],
@@ -553,11 +508,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 48,
+    "fetchedPostCount": 69,
     "listedPostCount": 292,
-    "detailedPostCount": 10,
-    "commentFetchCount": 10,
-    "commentCount": 26,
+    "detailedPostCount": 12,
+    "commentFetchCount": 12,
+    "commentCount": 38,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -566,7 +521,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-11-05",
     "candidateWindowEnd": "2026-11-19",
-    "candidateCount": 108,
+    "candidateCount": 105,
     "seedLookbackDays": 3,
     "seedStart": "2026-11-03",
     "listLookbackDays": 1,
