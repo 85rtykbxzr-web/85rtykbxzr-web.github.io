@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-11-07",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-06T16:44:07.275Z",
+  "updatedAt": "2026-11-06T18:10:49.365Z",
   "days": {
     "2026-11-05": {
       "사랑": {
@@ -443,22 +443,30 @@
     "2026-11-07": {
       "침묵의빛": {
         "title": "침묵의 빛",
-        "positiveSignal": 0,
-        "mentionCount": 1,
+        "positiveSignal": 2,
+        "mentionCount": 1.5,
         "evidence": [
           {
             "title": "오데트 안봤는데 침묵의 빛 나중에 보는게낫냐",
             "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880359&page=1",
             "date": "2026-11-07",
-            "positive": 0,
-            "rawPositive": 0,
+            "positive": 2,
+            "rawPositive": 2,
             "negative": 0,
-            "positiveHits": [],
+            "positiveHits": [
+              {
+                "term": "봐라",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
+            "commentCount": 1,
+            "commentPositive": 2,
             "commentNegative": 0
           }
         ]

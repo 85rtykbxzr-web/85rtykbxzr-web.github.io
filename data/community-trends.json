@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-06T16:44:10.825Z",
+  "generatedAt": "2026-11-06T18:10:51.810Z",
   "weekStart": "2026-11-05",
   "weekEnd": "2026-11-07",
   "windowStart": "2026-11-05",
@@ -223,6 +223,59 @@
     },
     {
       "rank": 3,
+      "title": "침묵의 빛",
+      "posterUrl": "/assets/recommendation-posters/16d51bc4d18bb69d.webp",
+      "localPosterUrl": "/assets/recommendation-posters/16d51bc4d18bb69d.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-07&movieCd=029764&playSDT=2026-11-07&screenId=02&showSeq=6",
+      "score": 25,
+      "signal": 2,
+      "positiveSignal": 2,
+      "mentionCount": 1.5,
+      "rawPositiveSignal": 2,
+      "rawMentionCount": 1.5,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "cinecube",
+        "kucine"
+      ],
+      "venueNames": [
+        "씨네큐브 광화문",
+        "KU시네마테크"
+      ],
+      "nextDate": "2026-11-07",
+      "nextTime": "19:50",
+      "evidence": [
+        {
+          "title": "오데트 안봤는데 침묵의 빛 나중에 보는게낫냐",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880359&page=1",
+          "date": "2026-11-07",
+          "positive": 2,
+          "rawPositive": 2,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "봐라",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 2,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cxYo82e0JT5u7an0VRF9J8h6V5B.jpg"
+    },
+    {
+      "rank": 4,
       "title": "낮과 밤은 서로에게",
       "posterUrl": "/assets/recommendation-posters/940fbdc3b35a5442.webp",
       "localPosterUrl": "/assets/recommendation-posters/940fbdc3b35a5442.webp",
@@ -283,63 +336,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/3EjStyyfqn7AyEX2ocqMH6SZVV5.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "눈 둘 데가 없네",
-      "posterUrl": "/assets/recommendation-posters/242c9b28acea884f.webp",
-      "localPosterUrl": "/assets/recommendation-posters/242c9b28acea884f.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-07&movieCd=029696&playSDT=2026-11-07&screenId=01&showSeq=1",
-      "score": 13.3,
-      "signal": 1,
-      "positiveSignal": 1,
-      "mentionCount": 0.5,
-      "rawPositiveSignal": 2,
-      "rawMentionCount": 1,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "cinecube",
-        "filmforum",
-        "indiespace",
-        "sac"
-      ],
-      "venueNames": [
-        "씨네큐브 광화문",
-        "필름포럼",
-        "인디스페이스",
-        "서울아트시네마"
-      ],
-      "nextDate": "2026-11-07",
-      "nextTime": "09:30",
-      "evidence": [
-        {
-          "title": "<눈둘데가없네>에서 가족이 남같은 이유가 있지",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880077&page=1",
-          "date": "2026-11-05",
-          "positive": 2,
-          "rawPositive": 2,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "봐라",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        }
-      ],
-      "posterSourceUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FKQ3U4%2FdJMcagtJijO%2FAAAAAAAAAAAAAAAAAAAAAKH4gcbmONCbAZfz-yMnnRvJMuh7ha9n8OfVoQ04Vj1U%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1796050799%26allow_ip%3D%26allow_referer%3D%26signature%3DIdgNdHJb8BX%252Bl6skOO5rov1XIV0%253D"
     }
   ],
   "festivalPicks": [],
@@ -348,11 +344,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 2,
+    "fetchedPostCount": 5,
     "listedPostCount": 292,
     "detailedPostCount": 1,
     "commentFetchCount": 1,
-    "commentCount": 0,
+    "commentCount": 1,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
