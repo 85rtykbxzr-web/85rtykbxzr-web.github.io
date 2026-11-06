@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-06T09:23:13.148Z",
+  "generatedAt": "2026-11-06T12:14:05.615Z",
   "weekStart": "2026-11-04",
   "weekEnd": "2026-11-06",
   "windowStart": "2026-11-04",
@@ -18,24 +18,24 @@
       "localPosterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121961&playDt=20261106&tsId=TS0056&pno=6",
-      "score": 357.1,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-07&movieCd=029805&playSDT=2026-11-07&screenId=01&showSeq=2",
+      "score": 382.1,
       "signal": 25.4,
       "positiveSignal": 25.4,
-      "mentionCount": 25.1,
+      "mentionCount": 27.6,
       "rawPositiveSignal": 46,
-      "rawMentionCount": 43.63009706727327,
+      "rawMentionCount": 46.13009706727327,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum",
-        "cinecube"
+        "cinecube",
+        "filmforum"
       ],
       "venueNames": [
-        "필름포럼",
-        "씨네큐브 광화문"
+        "씨네큐브 광화문",
+        "필름포럼"
       ],
-      "nextDate": "2026-11-06",
-      "nextTime": "19:50",
+      "nextDate": "2026-11-07",
+      "nextTime": "11:00",
       "evidence": [
         {
           "title": "스포) 와호나 그부분은 좀 예상 가능 범주더라",
@@ -284,149 +284,6 @@
     },
     {
       "rank": 3,
-      "title": "사랑",
-      "posterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
-      "localPosterUrl": "/assets/recommendation-posters/2d44e34c6f36e2e1.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.tinyticket.net/event/EVvTFTWz06Rt",
-      "score": 151.8,
-      "signal": 14.5,
-      "positiveSignal": 14.5,
-      "mentionCount": 9.3,
-      "rawPositiveSignal": 28,
-      "rawMentionCount": 12,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "sac"
-      ],
-      "venueNames": [
-        "서울아트시네마"
-      ],
-      "nextDate": "2026-11-06",
-      "nextTime": "19:10",
-      "evidence": [
-        {
-          "title": "가능한 사랑 넷플릭스라 선공개도 뜬다 야 ㅋㅋㅋ",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879947&page=1",
-          "date": "2026-11-04",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "사랑은 비를 타고 재밌냐?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879783&page=4",
-          "date": "2026-11-04",
-          "positive": 28,
-          "rawPositive": 28,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "걸작",
-              "count": 2,
-              "weight": 6,
-              "score": 12,
-              "label": "strong"
-            },
-            {
-              "term": "걸작",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            },
-            {
-              "term": "존잼",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "추천",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "좋음",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 8,
-          "commentPositive": 28,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "가능한 사랑 가족들이랑 볼만함?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880100&page=1",
-          "date": "2026-11-05",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "(ㅅㅍ) 아사코는 쌍년일까 아닐까",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879980&page=3",
-          "date": "2026-11-05",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "사랑에 관한 짧은 필름 포스터를 친구가 그려봄 평가 부탁",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880215&page=1",
-          "date": "2026-11-06",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/kISG5ljzXg34TwsqbToGPu8Ebqy.jpg"
-    },
-    {
-      "rank": 4,
       "title": "아버지",
       "posterUrl": "/assets/recommendation-posters/9136c0aa7c5f3e0d.webp",
       "localPosterUrl": "/assets/recommendation-posters/9136c0aa7c5f3e0d.webp",
@@ -483,6 +340,69 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/8FyQmF3aAtgEDrhBN6g2HixfpaR.jpg"
+    },
+    {
+      "rank": 4,
+      "title": "낮과 밤은 서로에게",
+      "posterUrl": "/assets/recommendation-posters/940fbdc3b35a5442.webp",
+      "localPosterUrl": "/assets/recommendation-posters/940fbdc3b35a5442.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=121&mId=M000121899&playDt=20261107&tsId=TS0039&pno=2",
+      "score": 22,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 1.8,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 2.5,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "kucine",
+        "cinecube",
+        "filmforum"
+      ],
+      "venueNames": [
+        "KU시네마테크",
+        "씨네큐브 광화문",
+        "필름포럼"
+      ],
+      "nextDate": "2026-11-07",
+      "nextTime": "12:20",
+      "evidence": [
+        {
+          "title": "낮과 밤은 서로에게가 그렇게 별로라고?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879979&page=3",
+          "date": "2026-11-05",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "스포) 낮과밤은 서로에게 보고옴",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1879965&page=3",
+          "date": "2026-11-05",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/3EjStyyfqn7AyEX2ocqMH6SZVV5.jpg"
     }
   ],
   "festivalPicks": [],
@@ -491,20 +411,20 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 93,
+    "fetchedPostCount": 143,
     "listedPostCount": 292,
-    "detailedPostCount": 7,
-    "commentFetchCount": 7,
-    "commentCount": 51,
+    "detailedPostCount": 6,
+    "commentFetchCount": 6,
+    "commentCount": 61,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
-    "oldestScannedDate": "2026-11-02",
+    "oldestScannedDate": "2026-11-05",
     "newestScannedDate": "2026-11-06",
     "scanMode": "daily",
     "candidateWindowStart": "2026-11-06",
     "candidateWindowEnd": "2026-11-20",
-    "candidateCount": 99,
+    "candidateCount": 104,
     "seedLookbackDays": 3,
     "seedStart": "2026-11-04",
     "listLookbackDays": 1,
