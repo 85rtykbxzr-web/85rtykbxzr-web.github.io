@@ -1,21 +1,8 @@
 {
-  "generatedAt": "2026-11-07T00:22:10.703Z",
+  "generatedAt": "2026-11-07T03:12:33.854Z",
   "source": "TMDB",
   "imageBase": "https://image.tmdb.org/t/p/",
   "films": {
-    "눈둘데가없네": {
-      "title": "눈 둘 데가 없네",
-      "tmdbId": 1728590,
-      "posters": [
-        "/2c0g7UABkH4d1LsdXRTUsrnfaww.jpg",
-        "/sBfDSOTrkWkP8UFrxlEMrdi5QVn.jpg",
-        "/51bt3bgUK3rnuQ8ngu3HM79mBEH.jpg",
-        "/1HO4bHEPLgoRd9PFLM7ReH2aOl1.jpg",
-        "/aUeIME3LKb9qoYrnEv48fIiOb2l.jpg",
-        "/iHhmuWaxDKuULzauyOzBXPT32fJ.jpg"
-      ],
-      "checkedAt": "2026-11-06T12:14:05.768Z"
-    },
     "룩백": {
       "title": "룩백",
       "tmdbId": 1591675,
@@ -59,21 +46,6 @@
       ],
       "checkedAt": "2026-11-05T06:23:49.055Z"
     },
-    "와일드호스나인": {
-      "title": "와일드 호스 나인",
-      "tmdbId": 891621,
-      "posters": [
-        "/dNJFRtVg3xLQ7dbNIQ55cmmIniD.jpg",
-        "/bh4wFW0B7fVtUOT9xfeugJJYKWw.jpg",
-        "/alXnuo8r8EZVSheH3oT5gPSB77d.jpg",
-        "/29TQ7VQHm8y8AS5h7uMgX90guNq.jpg",
-        "/y3h4LMOqa1OWx2sqUeUCmd03NRD.jpg",
-        "/60FBAyxR7H0WKqsRZRmD4Sysum5.jpg",
-        "/u2IVUwbutyWv5HCL1qdLuDJOyW1.jpg",
-        "/33Ghx2NGVdk2Q8KgmlUt5Szr0vT.jpg"
-      ],
-      "checkedAt": "2026-10-31T12:11:49.444Z"
-    },
     "어머니의가계부": {
       "title": "어머니의 가계부",
       "tmdbId": 1351017,
@@ -85,12 +57,6 @@
         "/xuiDJ7B8vtz6cJaLmnBvPZZsIID.jpg"
       ],
       "checkedAt": "2026-10-19T04:33:54.443Z"
-    },
-    "부에노스아이레스여안녕": {
-      "title": "부에노스 아이레스여 안녕",
-      "tmdbId": null,
-      "posters": [],
-      "checkedAt": "2026-11-06T15:20:03.012Z"
     },
     "이성과감성": {
       "title": "이성과 감성",
@@ -194,6 +160,21 @@
         "/ffdnHRn4p5byROGZkBVfZihyQRD.jpg"
       ],
       "checkedAt": "2026-10-16T09:13:39.764Z"
+    },
+    "와일드호스나인": {
+      "title": "와일드 호스 나인",
+      "tmdbId": 891621,
+      "posters": [
+        "/dNJFRtVg3xLQ7dbNIQ55cmmIniD.jpg",
+        "/bh4wFW0B7fVtUOT9xfeugJJYKWw.jpg",
+        "/alXnuo8r8EZVSheH3oT5gPSB77d.jpg",
+        "/29TQ7VQHm8y8AS5h7uMgX90guNq.jpg",
+        "/y3h4LMOqa1OWx2sqUeUCmd03NRD.jpg",
+        "/60FBAyxR7H0WKqsRZRmD4Sysum5.jpg",
+        "/u2IVUwbutyWv5HCL1qdLuDJOyW1.jpg",
+        "/33Ghx2NGVdk2Q8KgmlUt5Szr0vT.jpg"
+      ],
+      "checkedAt": "2026-10-31T12:11:49.444Z"
     },
     "사르다르우담": {
       "title": "사르다르 우담",
@@ -340,6 +321,12 @@
         "/vk98TEx7QhW7ggM5KQqrL6kEzbI.jpg"
       ],
       "checkedAt": "2026-10-31T06:14:12.994Z"
+    },
+    "부에노스아이레스여안녕": {
+      "title": "부에노스 아이레스여 안녕",
+      "tmdbId": null,
+      "posters": [],
+      "checkedAt": "2026-11-06T15:20:03.012Z"
     },
     "마린알솝": {
       "title": "마린 알솝",
@@ -521,6 +508,19 @@
       ],
       "checkedAt": "2026-10-27T06:12:37.881Z"
     },
+    "눈둘데가없네": {
+      "title": "눈 둘 데가 없네",
+      "tmdbId": 1728590,
+      "posters": [
+        "/2c0g7UABkH4d1LsdXRTUsrnfaww.jpg",
+        "/sBfDSOTrkWkP8UFrxlEMrdi5QVn.jpg",
+        "/51bt3bgUK3rnuQ8ngu3HM79mBEH.jpg",
+        "/1HO4bHEPLgoRd9PFLM7ReH2aOl1.jpg",
+        "/aUeIME3LKb9qoYrnEv48fIiOb2l.jpg",
+        "/iHhmuWaxDKuULzauyOzBXPT32fJ.jpg"
+      ],
+      "checkedAt": "2026-11-06T12:14:05.768Z"
+    },
     "씽씽": {
       "title": "씽씽",
       "tmdbId": 1155828,
@@ -541,6 +541,21 @@
       "tmdbId": null,
       "posters": [],
       "checkedAt": "2026-11-06T15:20:03.012Z"
+    },
+    "광장": {
+      "title": "광장",
+      "tmdbId": 1361054,
+      "posters": [
+        "/3deKUb9NyjZQfrDVnR9LPon1YNy.jpg",
+        "/mFUmZj9Y0M0soJhQEQ8ahA1gELo.jpg",
+        "/56FBOnodqDxOgWgIVeJ1cZhzxnp.jpg",
+        "/g21Jem4eNvI33VoqNRFvZaC5ttj.jpg",
+        "/854hVCosrxOcEKoqVtcvudh2Nlu.jpg",
+        "/qM6Nrgvs3Vl5iVwUdbXgVAJF4rI.jpg",
+        "/zc7pixkI85IVj4A9vuYjjfGJCIC.jpg",
+        "/kmU2zuNjIvDblrL6EnnkeuJhmbt.jpg"
+      ],
+      "checkedAt": "2026-11-07T03:12:33.854Z"
     },
     "마티슈프림": {
       "title": "마티 슈프림",
@@ -987,6 +1002,21 @@
       "posters": [],
       "checkedAt": "2026-11-06T12:14:05.768Z"
     },
+    "시간을달리는소녀": {
+      "title": "시간을 달리는 소녀",
+      "tmdbId": 14069,
+      "posters": [
+        "/xHnlWM8BmqY419YUccYy2KC5Jqo.jpg",
+        "/fS41b13LZEtL9VYUlMobXZqvk41.jpg",
+        "/fmK92C7HGu6sK0axItlQ0YsO9qR.jpg",
+        "/kWNH34oWJOq4fddFvjLagJOVz6C.jpg",
+        "/1VeuEsMN2XjzyNnChYMj4iPJjEo.jpg",
+        "/zuBoZm91ftImUclSPP2It9vbB0o.jpg",
+        "/gJCB6UMPvh38l9QcJxxxLwScLUB.jpg",
+        "/rwxr4yw1uou4cQVruOXhPXIPbSh.jpg"
+      ],
+      "checkedAt": "2026-11-07T03:12:33.854Z"
+    },
     "지금은맞고그때는틀리다": {
       "title": "지금은맞고그때는틀리다",
       "tmdbId": 354275,
@@ -1007,6 +1037,12 @@
       "tmdbId": null,
       "posters": [],
       "checkedAt": "2026-11-06T12:14:05.768Z"
+    },
+    "레이트시프트": {
+      "title": "레이트 시프트",
+      "tmdbId": null,
+      "posters": [],
+      "checkedAt": "2026-11-07T03:12:33.854Z"
     },
     "숨비소리": {
       "title": "숨비소리",
