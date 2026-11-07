@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-11-08",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-07T15:19:25.082Z",
+  "updatedAt": "2026-11-07T18:09:38.014Z",
   "days": {
     "2026-11-06": {
       "와일드호스나인": {
@@ -389,7 +389,45 @@
         ]
       }
     },
-    "2026-11-08": {}
+    "2026-11-08": {
+      "눈둘데가없네": {
+        "title": "눈 둘 데가 없네(영문자막)",
+        "positiveSignal": 6,
+        "mentionCount": 1.792481250360578,
+        "evidence": [
+          {
+            "title": "눈 둘 데가 없네 >> 홍 근작 중에선 가장 좋은듯",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880701&page=1",
+            "date": "2026-11-08",
+            "positive": 6,
+            "rawPositive": 6,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "좋았음",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      }
+    }
   },
   "festivals": {}
 }

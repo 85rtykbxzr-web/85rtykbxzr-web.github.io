@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-07T15:19:28.740Z",
+  "generatedAt": "2026-11-07T18:09:42.615Z",
   "weekStart": "2026-11-06",
   "weekEnd": "2026-11-08",
   "windowStart": "2026-11-06",
@@ -263,6 +263,74 @@
     },
     {
       "rank": 3,
+      "title": "눈 둘 데가 없네",
+      "posterUrl": "/assets/recommendation-posters/242c9b28acea884f.webp",
+      "localPosterUrl": "/assets/recommendation-posters/242c9b28acea884f.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121827&playDt=20261109&tsId=TS0056&pno=3",
+      "score": 45.9,
+      "signal": 6,
+      "positiveSignal": 6,
+      "mentionCount": 1.8,
+      "rawPositiveSignal": 6,
+      "rawMentionCount": 1.792481250360578,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "filmforum",
+        "indiespace",
+        "cinecube",
+        "sangsangmadang",
+        "sac",
+        "kucine"
+      ],
+      "venueNames": [
+        "필름포럼",
+        "인디스페이스",
+        "씨네큐브 광화문",
+        "KT&G 상상마당 시네마",
+        "서울아트시네마",
+        "KU시네마테크"
+      ],
+      "nextDate": "2026-11-09",
+      "nextTime": "14:10",
+      "evidence": [
+        {
+          "title": "눈 둘 데가 없네 >> 홍 근작 중에선 가장 좋은듯",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880701&page=1",
+          "date": "2026-11-08",
+          "positive": 6,
+          "rawPositive": 6,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "좋았음",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FKQ3U4%2FdJMcagtJijO%2FAAAAAAAAAAAAAAAAAAAAAKH4gcbmONCbAZfz-yMnnRvJMuh7ha9n8OfVoQ04Vj1U%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1796050799%26allow_ip%3D%26allow_referer%3D%26signature%3DIdgNdHJb8BX%252Bl6skOO5rov1XIV0%253D"
+    },
+    {
+      "rank": 4,
       "title": "침묵의 빛",
       "posterUrl": "/assets/recommendation-posters/16d51bc4d18bb69d.webp",
       "localPosterUrl": "/assets/recommendation-posters/16d51bc4d18bb69d.webp",
@@ -315,51 +383,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cxYo82e0JT5u7an0VRF9J8h6V5B.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "굿타임(샤프디 전)",
-      "posterUrl": "/assets/recommendation-posters/29f9b37fdf308c77.webp",
-      "localPosterUrl": "/assets/recommendation-posters/29f9b37fdf308c77.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121969&playDt=20261108&tsId=TS0057&pno=3",
-      "score": 14.4,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 1.3,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 1.792481250360578,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "filmforum",
-        "sac"
-      ],
-      "venueNames": [
-        "필름포럼",
-        "서울아트시네마"
-      ],
-      "nextDate": "2026-11-08",
-      "nextTime": "17:30",
-      "evidence": [
-        {
-          "title": "샤프디 즐거운 도난 본 사람 있냐",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880479&page=3",
-          "date": "2026-11-07",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cz0egudCsfsTzwUAL03A5UzoHGT.jpg"
     }
   ],
   "festivalPicks": [],
@@ -368,11 +391,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 8,
+    "fetchedPostCount": 36,
     "listedPostCount": 292,
-    "detailedPostCount": 0,
-    "commentFetchCount": 0,
-    "commentCount": 0,
+    "detailedPostCount": 1,
+    "commentFetchCount": 1,
+    "commentCount": 2,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
