@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-07T05:52:23.364Z",
+  "generatedAt": "2026-11-07T06:18:04.619Z",
   "weekStart": "2026-11-05",
   "weekEnd": "2026-11-07",
   "windowStart": "2026-11-05",
@@ -14,17 +14,17 @@
     {
       "rank": 1,
       "title": "와일드 호스 나인",
-      "posterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
-      "localPosterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
+      "posterUrl": "/assets/recommendation-posters/db570bb5d2e214b3.webp",
+      "localPosterUrl": "/assets/recommendation-posters/db570bb5d2e214b3.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-07&movieCd=029805&playSDT=2026-11-07&screenId=01&showSeq=4",
-      "score": 180.4,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-07&movieCd=029805&playSDT=2026-11-07&screenId=01&showSeq=6",
+      "score": 195.4,
       "signal": 10.1,
       "positiveSignal": 10.1,
-      "mentionCount": 13.6,
+      "mentionCount": 15.1,
       "rawPositiveSignal": 14,
-      "rawMentionCount": 20.330889048885993,
+      "rawMentionCount": 21.830889048885993,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -35,7 +35,7 @@
         "필름포럼"
       ],
       "nextDate": "2026-11-07",
-      "nextTime": "15:05",
+      "nextTime": "20:15",
       "evidence": [
         {
           "title": "와호나 누가 별로랬냐",
@@ -110,32 +110,17 @@
           "dayWeight": 0.72
         },
         {
-          "title": "약 스포) 와일드 호스 나인 후기",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880422&page=1",
+          "title": "와일드호스나인 다음주 화욜까지던데",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880453&page=1",
           "date": "2026-11-07",
-          "positive": 6,
-          "rawPositive": 6,
+          "positive": 0,
+          "rawPositive": 0,
           "negative": 0,
-          "positiveHits": [
-            {
-              "term": "훌륭",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "좋았다",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
+          "positiveHits": [],
           "negativeHits": [],
-          "questionLike": false,
+          "questionLike": true,
           "reviewQuestion": false,
-          "commentCount": 0,
+          "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
@@ -257,8 +242,8 @@
     {
       "rank": 3,
       "title": "침묵의 빛",
-      "posterUrl": "/assets/recommendation-posters/16d51bc4d18bb69d.webp",
-      "localPosterUrl": "/assets/recommendation-posters/16d51bc4d18bb69d.webp",
+      "posterUrl": "/assets/recommendation-posters/8e46ef9b4abb8245.webp",
+      "localPosterUrl": "/assets/recommendation-posters/8e46ef9b4abb8245.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-07&movieCd=029764&playSDT=2026-11-07&screenId=02&showSeq=6",
@@ -312,8 +297,8 @@
     {
       "rank": 4,
       "title": "프레셔",
-      "posterUrl": "/assets/recommendation-posters/1061ac23cf498358.webp",
-      "localPosterUrl": "/assets/recommendation-posters/1061ac23cf498358.webp",
+      "posterUrl": "/assets/recommendation-posters/d8c20d8fc88ace79.webp",
+      "localPosterUrl": "/assets/recommendation-posters/d8c20d8fc88ace79.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-11&movieCd=030049&playSDT=2026-11-11&screenId=02&showSeq=4",
@@ -359,11 +344,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 71,
+    "fetchedPostCount": 79,
     "listedPostCount": 292,
-    "detailedPostCount": 5,
-    "commentFetchCount": 5,
-    "commentCount": 9,
+    "detailedPostCount": 6,
+    "commentFetchCount": 6,
+    "commentCount": 10,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -372,7 +357,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-11-07",
     "candidateWindowEnd": "2026-11-21",
-    "candidateCount": 109,
+    "candidateCount": 110,
     "seedLookbackDays": 3,
     "seedStart": "2026-11-05",
     "listLookbackDays": 1,
