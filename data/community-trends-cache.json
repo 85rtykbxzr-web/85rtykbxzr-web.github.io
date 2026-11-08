@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-11-09",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-08T15:12:02.377Z",
+  "updatedAt": "2026-11-08T17:55:13.339Z",
   "days": {
     "2026-11-07": {
       "와일드호스나인": {
@@ -516,7 +516,60 @@
         ]
       }
     },
-    "2026-11-09": {}
+    "2026-11-09": {
+      "와일드호스나인": {
+        "title": "와일드 호스 나인",
+        "positiveSignal": 0,
+        "mentionCount": 2,
+        "evidence": [
+          {
+            "title": "와호나 앞부분 못 봤는데 설명해줄사람",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880995&page=1",
+            "date": "2026-11-09",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 3,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "트레인스포팅": {
+        "title": "트레인스포팅(2D)",
+        "positiveSignal": 4,
+        "mentionCount": 1.5,
+        "evidence": [
+          {
+            "title": "트레인스포팅 봤다",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880993&page=1",
+            "date": "2026-11-09",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "재밌",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      }
+    }
   },
   "festivals": {}
 }

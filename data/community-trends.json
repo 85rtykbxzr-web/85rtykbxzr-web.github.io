@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-08T15:12:06.715Z",
+  "generatedAt": "2026-11-08T17:55:17.289Z",
   "weekStart": "2026-11-07",
   "weekEnd": "2026-11-09",
   "windowStart": "2026-11-07",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-09&movieCd=029805&playSDT=2026-11-09&screenId=02&showSeq=3",
-      "score": 110.7,
+      "score": 130.7,
       "signal": 6,
       "positiveSignal": 6,
-      "mentionCount": 8.3,
+      "mentionCount": 10.3,
       "rawPositiveSignal": 10,
-      "rawMentionCount": 13.953445297804258,
+      "rawMentionCount": 15.953445297804258,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -272,6 +272,85 @@
     },
     {
       "rank": 3,
+      "title": "트레인스포팅",
+      "posterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
+      "localPosterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121831&playDt=20261111&tsId=TS0056&pno=1",
+      "score": 59.4,
+      "signal": 6.9,
+      "positiveSignal": 6.9,
+      "mentionCount": 2.8,
+      "rawPositiveSignal": 8,
+      "rawMentionCount": 3.292481250360578,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "filmforum",
+        "sangsangmadang",
+        "kucine"
+      ],
+      "venueNames": [
+        "필름포럼",
+        "KT&G 상상마당 시네마",
+        "KU시네마테크"
+      ],
+      "nextDate": "2026-11-11",
+      "nextTime": "10:30",
+      "evidence": [
+        {
+          "title": "트레인스포팅 봤는데 꿀잼이네.",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880895&page=2",
+          "date": "2026-11-08",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "트레인스포팅 봤다",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880993&page=1",
+          "date": "2026-11-09",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/1jUC02qsqS2NxBMFarbIhcQtazV.jpg"
+    },
+    {
+      "rank": 4,
       "title": "눈 둘 데가 없네",
       "posterUrl": "/assets/recommendation-posters/242c9b28acea884f.webp",
       "localPosterUrl": "/assets/recommendation-posters/242c9b28acea884f.webp",
@@ -353,61 +432,6 @@
         }
       ],
       "posterSourceUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FKQ3U4%2FdJMcagtJijO%2FAAAAAAAAAAAAAAAAAAAAAKH4gcbmONCbAZfz-yMnnRvJMuh7ha9n8OfVoQ04Vj1U%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1796050799%26allow_ip%3D%26allow_referer%3D%26signature%3DIdgNdHJb8BX%252Bl6skOO5rov1XIV0%253D"
-    },
-    {
-      "rank": 4,
-      "title": "트레인스포팅",
-      "posterUrl": "/assets/recommendation-posters/6f99db607f2fcb6a.webp",
-      "localPosterUrl": "/assets/recommendation-posters/6f99db607f2fcb6a.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121831&playDt=20261111&tsId=TS0056&pno=1",
-      "score": 28.4,
-      "signal": 2.9,
-      "positiveSignal": 2.9,
-      "mentionCount": 1.3,
-      "rawPositiveSignal": 4,
-      "rawMentionCount": 1.792481250360578,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "filmforum",
-        "sangsangmadang",
-        "kucine"
-      ],
-      "venueNames": [
-        "필름포럼",
-        "KT&G 상상마당 시네마",
-        "KU시네마테크"
-      ],
-      "nextDate": "2026-11-11",
-      "nextTime": "10:30",
-      "evidence": [
-        {
-          "title": "트레인스포팅 봤는데 꿀잼이네.",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880895&page=2",
-          "date": "2026-11-08",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "꿀잼",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/1jUC02qsqS2NxBMFarbIhcQtazV.jpg"
     }
   ],
   "festivalPicks": [],
@@ -416,15 +440,15 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 4,
+    "fetchedPostCount": 22,
     "listedPostCount": 291,
-    "detailedPostCount": 0,
-    "commentFetchCount": 0,
-    "commentCount": 0,
+    "detailedPostCount": 2,
+    "commentFetchCount": 2,
+    "commentCount": 4,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
-    "oldestScannedDate": "2026-11-07",
+    "oldestScannedDate": "2026-11-08",
     "newestScannedDate": "2026-11-09",
     "scanMode": "daily",
     "candidateWindowStart": "2026-11-09",
