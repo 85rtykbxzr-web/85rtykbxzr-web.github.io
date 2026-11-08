@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-08T06:16:04.724Z",
+  "generatedAt": "2026-11-08T09:25:52.561Z",
   "weekStart": "2026-11-06",
   "weekEnd": "2026-11-08",
   "windowStart": "2026-11-06",
@@ -18,26 +18,26 @@
       "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-08&movieCd=019765&playSDT=2026-11-08&screenId=01&showSeq=4",
-      "score": 151.8,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261108&tsId=TS0057&pno=4",
+      "score": 186.8,
       "signal": 11.3,
       "positiveSignal": 11.3,
-      "mentionCount": 10.2,
+      "mentionCount": 13.7,
       "rawPositiveSignal": 18,
-      "rawMentionCount": 16.74592654816484,
+      "rawMentionCount": 20.24592654816484,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube",
         "filmforum",
+        "cinecube",
         "sangsangmadang"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
         "필름포럼",
+        "씨네큐브 광화문",
         "KT&G 상상마당 시네마"
       ],
       "nextDate": "2026-11-08",
-      "nextTime": "17:30",
+      "nextTime": "19:30",
       "evidence": [
         {
           "title": "아사코 볼때 뭐 알아야할거있냐?",
@@ -160,13 +160,13 @@
       "localPosterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-08&movieCd=029805&playSDT=2026-11-08&screenId=01&showSeq=3",
-      "score": 117.5,
-      "signal": 4.3,
-      "positiveSignal": 4.3,
-      "mentionCount": 9.6,
-      "rawPositiveSignal": 6,
-      "rawMentionCount": 13.292481250360577,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-08&movieCd=029805&playSDT=2026-11-08&screenId=01&showSeq=5",
+      "score": 143.5,
+      "signal": 8.3,
+      "positiveSignal": 8.3,
+      "mentionCount": 10.6,
+      "rawPositiveSignal": 10,
+      "rawMentionCount": 14.292481250360577,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -177,7 +177,7 @@
         "필름포럼"
       ],
       "nextDate": "2026-11-08",
-      "nextTime": "15:20",
+      "nextTime": "19:45",
       "evidence": [
         {
           "title": "와호나 vs 디거",
@@ -259,13 +259,21 @@
           "dayWeight": 0.72
         },
         {
-          "title": "오늘 룩백이랑 와호나 연속 관람 예정",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880790&page=2",
+          "title": "와일드 호스 나인 재미있네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880872&page=1",
           "date": "2026-11-08",
-          "positive": 0,
-          "rawPositive": 0,
+          "positive": 4,
+          "rawPositive": 4,
           "negative": 0,
-          "positiveHits": [],
+          "positiveHits": [
+            {
+              "term": "재미있",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
@@ -313,7 +321,7 @@
       "evidence": [
         {
           "title": "눈 둘 데가 없네 >> 홍 근작 중에선 가장 좋은듯",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880701&page=3",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880701&page=4",
           "date": "2026-11-08",
           "positive": 6,
           "rawPositive": 6,
@@ -347,58 +355,58 @@
     },
     {
       "rank": 4,
-      "title": "침묵의 빛",
-      "posterUrl": "/assets/recommendation-posters/16d51bc4d18bb69d.webp",
-      "localPosterUrl": "/assets/recommendation-posters/16d51bc4d18bb69d.webp",
+      "title": "트레인스포팅",
+      "posterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
+      "localPosterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-09&movieCd=029764&playSDT=2026-11-09&screenId=02&showSeq=6",
-      "score": 20.2,
-      "signal": 1.4,
-      "positiveSignal": 1.4,
-      "mentionCount": 1.3,
-      "rawPositiveSignal": 2,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121831&playDt=20261108&tsId=TS0044&pno=3",
+      "score": 37.9,
+      "signal": 4,
+      "positiveSignal": 4,
+      "mentionCount": 1.8,
+      "rawPositiveSignal": 4,
       "rawMentionCount": 1.792481250360578,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube",
-        "kucine",
-        "sangsangmadang"
+        "sangsangmadang",
+        "filmforum",
+        "kucine"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
-        "KU시네마테크",
-        "KT&G 상상마당 시네마"
+        "KT&G 상상마당 시네마",
+        "필름포럼",
+        "KU시네마테크"
       ],
-      "nextDate": "2026-11-09",
-      "nextTime": "20:00",
+      "nextDate": "2026-11-08",
+      "nextTime": "20:25",
       "evidence": [
         {
-          "title": "오데트 안봤는데 침묵의 빛 나중에 보는게낫냐",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880359&page=5",
-          "date": "2026-11-07",
-          "positive": 2,
-          "rawPositive": 2,
+          "title": "트레인스포팅 봤는데 꿀잼이네.",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880895&page=1",
+          "date": "2026-11-08",
+          "positive": 4,
+          "rawPositive": 4,
           "negative": 0,
           "positiveHits": [
             {
-              "term": "봐라",
+              "term": "꿀잼",
               "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
             }
           ],
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
           "commentCount": 2,
-          "commentPositive": 2,
+          "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 1
         }
       ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cxYo82e0JT5u7an0VRF9J8h6V5B.jpg"
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/1jUC02qsqS2NxBMFarbIhcQtazV.jpg"
     }
   ],
   "festivalPicks": [],
@@ -407,11 +415,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 154,
-    "listedPostCount": 292,
-    "detailedPostCount": 4,
-    "commentFetchCount": 4,
-    "commentCount": 3,
+    "fetchedPostCount": 203,
+    "listedPostCount": 291,
+    "detailedPostCount": 9,
+    "commentFetchCount": 9,
+    "commentCount": 6,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -420,7 +428,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-11-08",
     "candidateWindowEnd": "2026-11-22",
-    "candidateCount": 107,
+    "candidateCount": 105,
     "seedLookbackDays": 3,
     "seedStart": "2026-11-06",
     "listLookbackDays": 1,
