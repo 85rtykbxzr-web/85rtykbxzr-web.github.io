@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-08T00:32:00.951Z",
+  "generatedAt": "2026-11-08T03:10:21.883Z",
   "weekStart": "2026-11-06",
   "weekEnd": "2026-11-08",
   "windowStart": "2026-11-06",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-08&movieCd=019765&playSDT=2026-11-08&screenId=01&showSeq=4",
-      "score": 136.8,
+      "score": 151.8,
       "signal": 11.3,
       "positiveSignal": 11.3,
-      "mentionCount": 8.7,
+      "mentionCount": 10.2,
       "rawPositiveSignal": 18,
-      "rawMentionCount": 15.245926548164837,
+      "rawMentionCount": 16.74592654816484,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -160,13 +160,13 @@
       "localPosterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-08&movieCd=029805&playSDT=2026-11-08&screenId=01&showSeq=1",
-      "score": 97.5,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-08&movieCd=029805&playSDT=2026-11-08&screenId=01&showSeq=3",
+      "score": 107.5,
       "signal": 4.3,
       "positiveSignal": 4.3,
-      "mentionCount": 7.6,
+      "mentionCount": 8.6,
       "rawPositiveSignal": 6,
-      "rawMentionCount": 11.292481250360577,
+      "rawMentionCount": 12.292481250360577,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -177,7 +177,7 @@
         "필름포럼"
       ],
       "nextDate": "2026-11-08",
-      "nextTime": "10:10",
+      "nextTime": "15:20",
       "evidence": [
         {
           "title": "와호나 vs 디거",
@@ -257,6 +257,22 @@
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.72
+        },
+        {
+          "title": "가능사 와호나 이런거보고 조는애들은",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880763&page=1",
+          "date": "2026-11-08",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/bh4wFW0B7fVtUOT9xfeugJJYKWw.jpg"
@@ -297,7 +313,7 @@
       "evidence": [
         {
           "title": "눈 둘 데가 없네 >> 홍 근작 중에선 가장 좋은듯",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880701&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880701&page=2",
           "date": "2026-11-08",
           "positive": 6,
           "rawPositive": 6,
@@ -391,11 +407,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 58,
+    "fetchedPostCount": 89,
     "listedPostCount": 292,
-    "detailedPostCount": 1,
-    "commentFetchCount": 1,
-    "commentCount": 2,
+    "detailedPostCount": 3,
+    "commentFetchCount": 3,
+    "commentCount": 3,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
