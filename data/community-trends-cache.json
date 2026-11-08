@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-11-08",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-08T10:14:15.322Z",
+  "updatedAt": "2026-11-08T12:21:36.915Z",
   "days": {
     "2026-11-06": {
       "와일드호스나인": {
@@ -390,6 +390,58 @@
       }
     },
     "2026-11-08": {
+      "눈둘데가없네": {
+        "title": "눈 둘 데가 없네(영문자막)",
+        "positiveSignal": 6,
+        "mentionCount": 3.292481250360578,
+        "evidence": [
+          {
+            "title": "눈 둘 데가 없네 후기(ㄴㅅㅍ)",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880912&page=1",
+            "date": "2026-11-08",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "눈 둘 데가 없네 >> 홍 근작 중에선 가장 좋은듯",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880701&page=5",
+            "date": "2026-11-08",
+            "positive": 6,
+            "rawPositive": 6,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "꿀잼",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "좋았음",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "와일드호스나인": {
         "title": "와일드 호스 나인",
         "positiveSignal": 4,
@@ -412,7 +464,7 @@
           },
           {
             "title": "와일드 호스 나인 재미있네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880872&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880872&page=2",
             "date": "2026-11-08",
             "positive": 4,
             "rawPositive": 4,
@@ -457,7 +509,7 @@
         "evidence": [
           {
             "title": "트레인스포팅 봤는데 꿀잼이네.",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880895&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880895&page=2",
             "date": "2026-11-08",
             "positive": 4,
             "rawPositive": 4,
@@ -487,7 +539,7 @@
         "evidence": [
           {
             "title": "다들 다음주 금요일 아사코 갤주 gv 예매했지?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880880&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880880&page=2",
             "date": "2026-11-08",
             "positive": 0,
             "rawPositive": 0,
@@ -549,43 +601,6 @@
             "questionLike": false,
             "reviewQuestion": false,
             "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "눈둘데가없네": {
-        "title": "눈 둘 데가 없네(영문자막)",
-        "positiveSignal": 6,
-        "mentionCount": 1.792481250360578,
-        "evidence": [
-          {
-            "title": "눈 둘 데가 없네 >> 홍 근작 중에선 가장 좋은듯",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880701&page=4",
-            "date": "2026-11-08",
-            "positive": 6,
-            "rawPositive": 6,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              },
-              {
-                "term": "좋았음",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
             "commentPositive": 0,
             "commentNegative": 0
           }
