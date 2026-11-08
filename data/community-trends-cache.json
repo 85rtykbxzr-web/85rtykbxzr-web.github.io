@@ -2,116 +2,25 @@
   "version": 3,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-11-06",
-  "windowEnd": "2026-11-08",
+  "windowStart": "2026-11-07",
+  "windowEnd": "2026-11-09",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-11-06",
       "2026-11-07",
-      "2026-11-08"
+      "2026-11-08",
+      "2026-11-09"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-11-08",
-    "lastWindowEnd": "2026-11-08",
+    "lastWindowStart": "2026-11-09",
+    "lastWindowEnd": "2026-11-09",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-08T12:21:36.915Z",
+  "updatedAt": "2026-11-08T15:12:02.377Z",
   "days": {
-    "2026-11-06": {
-      "와일드호스나인": {
-        "title": "와일드 호스 나인",
-        "positiveSignal": 0,
-        "mentionCount": 2.5,
-        "evidence": [
-          {
-            "title": "와호나 vs 디거",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880270&page=1",
-            "date": "2026-11-06",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 10,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "아사코": {
-        "title": "아사코(2D)",
-        "positiveSignal": 8,
-        "mentionCount": 11.084962500721156,
-        "evidence": [
-          {
-            "title": "아사코 볼때 뭐 알아야할거있냐?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880195&page=2",
-            "date": "2026-11-06",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "아사코< 호불호 갈리는 이유가 뭐임?? ㅅㅍ",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880188&page=3",
-            "date": "2026-11-06",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 5,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "가능한사랑보다 아사코 높이 평가하는건 진심이냐.",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880182&page=3",
-            "date": "2026-11-06",
-            "positive": 8,
-            "rawPositive": 8,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "압도",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              },
-              {
-                "term": "흥미롭",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 15,
-            "commentPositive": 8,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-11-07": {
       "와일드호스나인": {
         "title": "와일드 호스 나인",
@@ -606,7 +515,8 @@
           }
         ]
       }
-    }
+    },
+    "2026-11-09": {}
   },
   "festivals": {}
 }
