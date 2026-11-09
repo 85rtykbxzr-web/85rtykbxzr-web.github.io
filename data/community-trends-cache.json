@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-11-09",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-09T03:17:50.996Z",
+  "updatedAt": "2026-11-09T06:11:26.023Z",
   "days": {
     "2026-11-07": {
       "와일드호스나인": {
@@ -517,14 +517,96 @@
       }
     },
     "2026-11-09": {
+      "와일드호스나인": {
+        "title": "와일드 호스 나인(2D)",
+        "positiveSignal": 6,
+        "mentionCount": 7.292481250360578,
+        "evidence": [
+          {
+            "title": "와일드호스나인보고왔는데 관에2명있었음",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881089&page=1",
+            "date": "2026-11-09",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "와일드 호스 나인 보고나서 생각함",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881070&page=1",
+            "date": "2026-11-09",
+            "positive": 6,
+            "rawPositive": 6,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "압도",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 6,
+            "commentNegative": 0
+          },
+          {
+            "title": "최광희 평론가 와일드호스나인 평론",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881047&page=2",
+            "date": "2026-11-09",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 5,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "라라랜드": {
+        "title": "라라랜드(2D)",
+        "positiveSignal": 0,
+        "mentionCount": 1.792481250360578,
+        "evidence": [
+          {
+            "title": "라라랜드 재개봉 관람할거임?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881050&page=2",
+            "date": "2026-11-09",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "아사코": {
-        "title": "아사코(2D)",
+        "title": "아사코",
         "positiveSignal": 0,
         "mentionCount": 1.5,
         "evidence": [
           {
             "title": "더랍스터 재개봉은 진짜 뜬금없네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881026&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881026&page=2",
             "date": "2026-11-09",
             "positive": 0,
             "rawPositive": 0,
@@ -546,7 +628,7 @@
         "evidence": [
           {
             "title": "더랍스터 재개봉은 진짜 뜬금없네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881026&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881026&page=2",
             "date": "2026-11-09",
             "positive": 0,
             "rawPositive": 0,
@@ -561,28 +643,6 @@
           }
         ]
       },
-      "와일드호스나인": {
-        "title": "와일드 호스 나인",
-        "positiveSignal": 0,
-        "mentionCount": 2,
-        "evidence": [
-          {
-            "title": "와호나 앞부분 못 봤는데 설명해줄사람",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880995&page=2",
-            "date": "2026-11-09",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 3,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
       "트레인스포팅": {
         "title": "트레인스포팅(2D)",
         "positiveSignal": 4,
@@ -590,7 +650,7 @@
         "evidence": [
           {
             "title": "트레인스포팅 봤다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880993&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880993&page=3",
             "date": "2026-11-09",
             "positive": 4,
             "rawPositive": 4,
