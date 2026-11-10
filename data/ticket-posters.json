@@ -1,28 +1,8 @@
 {
-  "generatedAt": "2026-11-10T00:20:16.953Z",
+  "generatedAt": "2026-11-10T03:10:59.943Z",
   "source": "TMDB",
   "imageBase": "https://image.tmdb.org/t/p/",
   "films": {
-    "게오르그바젤리츠": {
-      "title": "게오르그 바젤리츠",
-      "tmdbId": null,
-      "posters": [],
-      "checkedAt": "2026-11-09T18:39:15.990Z"
-    },
-    "흐르는여정": {
-      "title": "흐르는 여정",
-      "tmdbId": 1470350,
-      "posters": [
-        "/vF3yOqmvobJNvDdF3AmaNOfLCIH.jpg",
-        "/eDLr6sTC6SqrMyM6YbuAwlVjMCh.jpg",
-        "/tAvT4KAEHBqBc1oueI7SFHAs2NF.jpg",
-        "/k9URshuZt6BXNl5PUN1JU93gEE7.jpg",
-        "/3uqAmY79L62qVsztb3UvbNaYwBK.jpg",
-        "/77nnc3UAitzeHJu0fwDiiuOHUCd.jpg",
-        "/1HSCui7EErhHJQzVrYX7P4yktjc.jpg"
-      ],
-      "checkedAt": "2026-10-20T03:20:17.605Z"
-    },
     "퍼플스왈로우": {
       "title": "퍼플 스왈로우",
       "tmdbId": 1361545,
@@ -72,33 +52,6 @@
       ],
       "checkedAt": "2026-11-06T12:14:05.768Z"
     },
-    "이성과감성": {
-      "title": "이성과 감성",
-      "tmdbId": 1503762,
-      "posters": [
-        "/czsyPHosFNbh4PPqXfqWu1aBXnA.jpg",
-        "/sYzWktm1YwJydX92fbSOWHJs33m.jpg",
-        "/ySkfsMQxSVokn5zYavQByFDrzsy.jpg",
-        "/ztypMQi2Ql2NLhfKxIjUHs4o8b7.jpg",
-        "/p1vgrJqcZMppdRZ2eoHIlpdTltA.jpg",
-        "/eLMo8wVhNNvIb9JdMX4EokgtE7Q.jpg",
-        "/msl2v4SgY5nl0dkEKPtc87eHtRu.jpg",
-        "/3OzG9GFcd4fLz9OWg0NyMjT12MR.jpg"
-      ],
-      "checkedAt": "2026-10-19T04:33:54.443Z"
-    },
-    "낮과밤은서로에게": {
-      "title": "낮과 밤은 서로에게",
-      "tmdbId": 1337732,
-      "posters": [
-        "/3EjStyyfqn7AyEX2ocqMH6SZVV5.jpg",
-        "/tvQMPI9RrupvbqPNRcAMRzBFaVL.jpg",
-        "/j88kf5fDOFiR5zrgVsIT1qe7hwD.jpg",
-        "/5VWviyc0JdcStQDGHd6Fj6zAyiS.jpg",
-        "/9l6VtYyqzb1KoI5JW5cqxISoUmx.jpg"
-      ],
-      "checkedAt": "2026-10-27T06:12:37.881Z"
-    },
     "7데이즈7피플": {
       "title": "7데이즈 7피플",
       "tmdbId": 1661000,
@@ -133,6 +86,20 @@
         "/gmgyBkqTXAINADrEP6DAbL8e05y.jpg"
       ],
       "checkedAt": "2026-10-12T03:11:55.544Z"
+    },
+    "흐르는여정": {
+      "title": "흐르는 여정",
+      "tmdbId": 1470350,
+      "posters": [
+        "/vF3yOqmvobJNvDdF3AmaNOfLCIH.jpg",
+        "/eDLr6sTC6SqrMyM6YbuAwlVjMCh.jpg",
+        "/tAvT4KAEHBqBc1oueI7SFHAs2NF.jpg",
+        "/k9URshuZt6BXNl5PUN1JU93gEE7.jpg",
+        "/3uqAmY79L62qVsztb3UvbNaYwBK.jpg",
+        "/77nnc3UAitzeHJu0fwDiiuOHUCd.jpg",
+        "/1HSCui7EErhHJQzVrYX7P4yktjc.jpg"
+      ],
+      "checkedAt": "2026-10-20T03:20:17.605Z"
     },
     "마티슈프림": {
       "title": "마티 슈프림",
@@ -197,6 +164,33 @@
         "/mdLBV4hI97tteESkXJRPbDm8Hhu.jpg"
       ],
       "checkedAt": "2026-11-05T12:21:22.953Z"
+    },
+    "낮과밤은서로에게": {
+      "title": "낮과 밤은 서로에게",
+      "tmdbId": 1337732,
+      "posters": [
+        "/3EjStyyfqn7AyEX2ocqMH6SZVV5.jpg",
+        "/tvQMPI9RrupvbqPNRcAMRzBFaVL.jpg",
+        "/j88kf5fDOFiR5zrgVsIT1qe7hwD.jpg",
+        "/5VWviyc0JdcStQDGHd6Fj6zAyiS.jpg",
+        "/9l6VtYyqzb1KoI5JW5cqxISoUmx.jpg"
+      ],
+      "checkedAt": "2026-10-27T06:12:37.881Z"
+    },
+    "이성과감성": {
+      "title": "이성과 감성",
+      "tmdbId": 1503762,
+      "posters": [
+        "/czsyPHosFNbh4PPqXfqWu1aBXnA.jpg",
+        "/sYzWktm1YwJydX92fbSOWHJs33m.jpg",
+        "/ySkfsMQxSVokn5zYavQByFDrzsy.jpg",
+        "/ztypMQi2Ql2NLhfKxIjUHs4o8b7.jpg",
+        "/p1vgrJqcZMppdRZ2eoHIlpdTltA.jpg",
+        "/eLMo8wVhNNvIb9JdMX4EokgtE7Q.jpg",
+        "/msl2v4SgY5nl0dkEKPtc87eHtRu.jpg",
+        "/3OzG9GFcd4fLz9OWg0NyMjT12MR.jpg"
+      ],
+      "checkedAt": "2026-10-19T04:33:54.443Z"
     },
     "나의사적인예술가": {
       "title": "나의 사적인 예술가",
@@ -579,6 +573,27 @@
       ],
       "checkedAt": "2026-11-02T03:11:25.893Z"
     },
+    "게오르그바젤리츠": {
+      "title": "게오르그 바젤리츠",
+      "tmdbId": null,
+      "posters": [],
+      "checkedAt": "2026-11-09T18:39:15.990Z"
+    },
+    "드라이브마이카": {
+      "title": "드라이브 마이 카",
+      "tmdbId": 758866,
+      "posters": [
+        "/znXps7wPyYq8UDCfeyO2vfEIeRS.jpg",
+        "/a2lxHS6Au35k5XtFQEQW44yWHeH.jpg",
+        "/nvb2NPaLJpySlg03BxgYHreBIdJ.jpg",
+        "/xlEnJ6O2xIlcJPvo23PWUiiSS21.jpg",
+        "/9cqsDjzJ1zFv1Tjs5kAHtx2YkyA.jpg",
+        "/3ywSXx2KITujZaO9Eb8MHHFCZPA.jpg",
+        "/u9qfAIKowlzVxrGiKG9XXptgc63.jpg",
+        "/4G2Ojp9XPbdryMWmBdzNRauuFzl.jpg"
+      ],
+      "checkedAt": "2026-11-10T03:10:59.943Z"
+    },
     "배리어프리영화제작에서창작자와수용자의역할과의미": {
       "title": "배리어프리영화 제작에서 창작자와 수용자의 역할과 의미",
       "tmdbId": null,
@@ -713,6 +728,21 @@
       ],
       "checkedAt": "2026-10-20T14:18:07.186Z"
     },
+    "다윗": {
+      "title": "다윗",
+      "tmdbId": 1167307,
+      "posters": [
+        "/bESlrLOrsQ9gKzaGQGHXKOyIUtX.jpg",
+        "/7lFG1WrCwAxBfyGK8ahlBVzXno7.jpg",
+        "/xY6eAo4gEKBvxfPyCTgWQhzRz5n.jpg",
+        "/psxs38M2JPQO4h5VlD71IwJSHA4.jpg",
+        "/kLuIE9VrWOhJVLgXmdpDQsLppPy.jpg",
+        "/ylfuHeawMz6Nt1IgEPGZ3ChhCa2.jpg",
+        "/dmMXUSReCoL8iStqSi5zxNblJkc.jpg",
+        "/3g7hA9NNd5gSv31IymiBYQ316lc.jpg"
+      ],
+      "checkedAt": "2026-10-20T03:20:17.605Z"
+    },
     "우리들의교복시절": {
       "title": "우리들의 교복시절",
       "tmdbId": 1335881,
@@ -831,21 +861,6 @@
       "posters": [],
       "checkedAt": "2026-11-09T15:16:04.529Z"
     },
-    "다윗": {
-      "title": "다윗",
-      "tmdbId": 1167307,
-      "posters": [
-        "/bESlrLOrsQ9gKzaGQGHXKOyIUtX.jpg",
-        "/7lFG1WrCwAxBfyGK8ahlBVzXno7.jpg",
-        "/xY6eAo4gEKBvxfPyCTgWQhzRz5n.jpg",
-        "/psxs38M2JPQO4h5VlD71IwJSHA4.jpg",
-        "/kLuIE9VrWOhJVLgXmdpDQsLppPy.jpg",
-        "/ylfuHeawMz6Nt1IgEPGZ3ChhCa2.jpg",
-        "/dmMXUSReCoL8iStqSi5zxNblJkc.jpg",
-        "/3g7hA9NNd5gSv31IymiBYQ316lc.jpg"
-      ],
-      "checkedAt": "2026-10-20T03:20:17.605Z"
-    },
     "섹션5한뼘빛": {
       "title": "섹션5 한뼘빛",
       "tmdbId": null,
@@ -894,6 +909,16 @@
       ],
       "checkedAt": "2026-11-02T06:17:17.445Z"
     },
+    "부활그사랑": {
+      "title": "부활 그 사랑",
+      "tmdbId": 1752982,
+      "posters": [
+        "/1pPjxKIZwO7Z7gtICZK96UrmX4q.jpg",
+        "/sl59CwDEmJcxsFdk8UIfTwCnas0.jpg",
+        "/9mIOIy8DyYBE1PcXQY88G9S1Ikr.jpg"
+      ],
+      "checkedAt": "2026-11-10T03:10:59.943Z"
+    },
     "섹션8윤슬길": {
       "title": "섹션8 윤슬길",
       "tmdbId": null,
@@ -928,6 +953,21 @@
         "/mr2h1O8oMcBUZe7y7mmY34H1n1U.jpg"
       ],
       "checkedAt": "2026-10-31T06:14:12.994Z"
+    },
+    "콘클라베": {
+      "title": "콘클라베",
+      "tmdbId": 974576,
+      "posters": [
+        "/vYEyxF1UT779RiEalpMjUT6kfdf.jpg",
+        "/m5x8D0bZ3eKqIVWZ5y7TnZ2oTVg.jpg",
+        "/qHNpEmmsyewn2yW8mmxYLgediil.jpg",
+        "/1j9r59YQ0a7kM9AKX9MCvf90QNS.jpg",
+        "/lWBqcniIYPh3ilAvHZLnlMbjjlZ.jpg",
+        "/m2H7hvAgteptfOLhBr4WEMdg2VY.jpg",
+        "/8etJ0QXmB80yKy11qD4tEZ1sGuW.jpg",
+        "/kbYKjFB06XtHTtvATGWbssBlo0k.jpg"
+      ],
+      "checkedAt": "2026-11-10T03:10:59.943Z"
     },
     "밀랍": {
       "title": "밀랍",
@@ -980,6 +1020,21 @@
       ],
       "checkedAt": "2026-10-29T09:11:55.150Z"
     },
+    "스윙걸즈": {
+      "title": "스윙걸즈",
+      "tmdbId": 36592,
+      "posters": [
+        "/hEJztp0a8MpADlXigQdJVNyMngV.jpg",
+        "/5pAfMXqcaUjr0dBuOhLpTRbtZqa.jpg",
+        "/d8T6w5GvNRnExT3EAxXt8Ldsbdf.jpg",
+        "/dHAKuFE7uqYdiRjqEzkTmRBB5Pl.jpg",
+        "/hEY5IuRDPad2E16tH3u8L4LqqoX.jpg",
+        "/wbhELVoFkV7wrjaIaUt0lxMAdMe.jpg",
+        "/zn3lBqU2q7mNEdeAIa0x9AZZpuT.jpg",
+        "/9ldNh53H7rAU4TVCPkr4DuFL2Zd.jpg"
+      ],
+      "checkedAt": "2026-11-10T03:10:59.943Z"
+    },
     "나는보리": {
       "title": "나는보리",
       "tmdbId": 582377,
@@ -991,6 +1046,21 @@
         "/vdCBin8QQ4AG5IXlzLPSSWOGfOY.jpg"
       ],
       "checkedAt": "2026-10-20T03:20:17.605Z"
+    },
+    "원스": {
+      "title": "원스",
+      "tmdbId": 5723,
+      "posters": [
+        "/7nW363kSYRCkr4VGOMvuSGwtzKs.jpg",
+        "/lW1y6TQyMMPCneQDDDddCQ5cLiD.jpg",
+        "/A9hXKH1U8mQfpiE2MT0xn69Mdma.jpg",
+        "/syDu86dCBdxUlibbB0yvI4GoZo1.jpg",
+        "/iTawBjPSZDniwM6PxTkFDq56d5j.jpg",
+        "/ga93Yk1D0N1jgeA7Q5jm9QZ26rc.jpg",
+        "/4zSdQ0mC8P1fWrrGosT399iAUuR.jpg",
+        "/wBvOgdXJv38lhNCKOuZs4Zh5OLa.jpg"
+      ],
+      "checkedAt": "2026-11-10T03:10:59.943Z"
     },
     "익스플로딩걸": {
       "title": "익스플로딩 걸",
@@ -1010,6 +1080,18 @@
         "/guCi4MmliBRFMDjVGos7CzJXmAT.jpg"
       ],
       "checkedAt": "2026-11-03T06:17:18.375Z"
+    },
+    "옆에서숨만쉬어도좋아": {
+      "title": "옆에서 숨만 쉬어도 좋아",
+      "tmdbId": 1125315,
+      "posters": [
+        "/wb003L4Khw0FsZdpDgeeNbZVK4p.jpg",
+        "/wW2KNDFLVMegkZzdwaBVGMbGtVX.jpg",
+        "/e1mlRZnKls1Hs1a5Ih1P3bsnIbq.jpg",
+        "/7Vr8UcdaHXHTgpYC3f49nC5QL0R.jpg",
+        "/prisauzrsUPo0Fkn0R28gD9cHnn.jpg"
+      ],
+      "checkedAt": "2026-11-10T03:10:59.943Z"
     },
     "저개발의기억": {
       "title": "저개발의 기억",
