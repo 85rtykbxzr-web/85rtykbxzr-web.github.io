@@ -2,243 +2,25 @@
   "version": 3,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-11-08",
-  "windowEnd": "2026-11-10",
+  "windowStart": "2026-11-09",
+  "windowEnd": "2026-11-11",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-11-08",
       "2026-11-09",
-      "2026-11-10"
+      "2026-11-10",
+      "2026-11-11"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-11-10",
-    "lastWindowEnd": "2026-11-10",
+    "lastWindowStart": "2026-11-11",
+    "lastWindowEnd": "2026-11-11",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-10T14:48:45.835Z",
+  "updatedAt": "2026-11-10T15:19:58.079Z",
   "days": {
-    "2026-11-08": {
-      "눈둘데가없네": {
-        "title": "눈 둘 데가 없네(영문자막)",
-        "positiveSignal": 6,
-        "mentionCount": 3.292481250360578,
-        "evidence": [
-          {
-            "title": "눈 둘 데가 없네 후기(ㄴㅅㅍ)",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880912&page=1",
-            "date": "2026-11-08",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "눈 둘 데가 없네 >> 홍 근작 중에선 가장 좋은듯",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880701&page=5",
-            "date": "2026-11-08",
-            "positive": 6,
-            "rawPositive": 6,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              },
-              {
-                "term": "좋았음",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "와일드호스나인": {
-        "title": "와일드 호스 나인",
-        "positiveSignal": 4,
-        "mentionCount": 5.160964047443681,
-        "evidence": [
-          {
-            "title": "스포) 와일드 호스 나인",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880900&page=1",
-            "date": "2026-11-08",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 4,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "와일드 호스 나인 재미있네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880872&page=2",
-            "date": "2026-11-08",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "재미있",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "오늘 룩백이랑 와호나 연속 관람 예정",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880790&page=3",
-            "date": "2026-11-08",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "트레인스포팅": {
-        "title": "트레인스포팅(2D)",
-        "positiveSignal": 4,
-        "mentionCount": 1.792481250360578,
-        "evidence": [
-          {
-            "title": "트레인스포팅 봤는데 꿀잼이네.",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880895&page=2",
-            "date": "2026-11-08",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "아사코": {
-        "title": "아사코(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 5,
-        "evidence": [
-          {
-            "title": "다들 다음주 금요일 아사코 갤주 gv 예매했지?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880880&page=2",
-            "date": "2026-11-08",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "아사코 갤주 gv 들을만함??",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880845&page=2",
-            "date": "2026-11-08",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "아사코보러왓다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880844&page=2",
-            "date": "2026-11-08",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "룩백": {
-        "title": "룩백",
-        "positiveSignal": 0,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "오늘 룩백이랑 와호나 연속 관람 예정",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880790&page=3",
-            "date": "2026-11-08",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-11-09": {
       "와일드호스나인": {
         "title": "와일드 호스 나인(2D)",
@@ -898,6 +680,30 @@
             "questionLike": false,
             "reviewQuestion": false,
             "commentCount": 2,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      }
+    },
+    "2026-11-11": {
+      "아사코": {
+        "title": "아사코(2D)",
+        "positiveSignal": 0,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "이번주 금요일 갤주 아사코gv 존나 기대되면 개추",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881649&page=1",
+            "date": "2026-11-11",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
             "commentPositive": 0,
             "commentNegative": 0
           }
