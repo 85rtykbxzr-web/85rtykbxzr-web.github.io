@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-10T15:20:01.663Z",
+  "generatedAt": "2026-11-10T18:10:22.536Z",
   "weekStart": "2026-11-09",
   "weekEnd": "2026-11-11",
   "windowStart": "2026-11-09",
@@ -14,17 +14,17 @@
     {
       "rank": 1,
       "title": "와일드 호스 나인",
-      "posterUrl": "/assets/recommendation-posters/db570bb5d2e214b3.webp",
-      "localPosterUrl": "/assets/recommendation-posters/db570bb5d2e214b3.webp",
+      "posterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
+      "localPosterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-11&movieCd=029805&playSDT=2026-11-11&screenId=01&showSeq=2",
-      "score": 186.9,
-      "signal": 10.3,
-      "positiveSignal": 10.3,
-      "mentionCount": 14.2,
-      "rawPositiveSignal": 16,
-      "rawMentionCount": 25.01808680627674,
+      "score": 244.9,
+      "signal": 20.3,
+      "positiveSignal": 20.3,
+      "mentionCount": 16,
+      "rawPositiveSignal": 26,
+      "rawMentionCount": 26.81056805663732,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -130,6 +130,106 @@
     },
     {
       "rank": 2,
+      "title": "룩백",
+      "posterUrl": "/assets/recommendation-posters/966107553553c174.webp",
+      "localPosterUrl": "/assets/recommendation-posters/966107553553c174.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-11&movieCd=029713&playSDT=2026-11-11&screenId=02&showSeq=2",
+      "score": 90.5,
+      "signal": 12.6,
+      "positiveSignal": 12.6,
+      "mentionCount": 3.6,
+      "rawPositiveSignal": 16,
+      "rawMentionCount": 4.292481250360578,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "cinecube",
+        "filmforum"
+      ],
+      "venueNames": [
+        "씨네큐브 광화문",
+        "필름포럼"
+      ],
+      "nextDate": "2026-11-11",
+      "nextTime": "11:25",
+      "evidence": [
+        {
+          "title": "룩백 보고 왔는데 우주명작이네...",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881557&page=2",
+          "date": "2026-11-10",
+          "positive": 12,
+          "rawPositive": 12,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "명작",
+              "count": 2,
+              "weight": 4,
+              "score": 8,
+              "label": "clear"
+            },
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "내일 영화 볼 건데 와호나vs룩백",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881336&page=6",
+          "date": "2026-11-10",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "룩백 보고 고레에다 맛탱이 간걸 느낌",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881669&page=1",
+          "date": "2026-11-11",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "잘 만들",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/rfH6BJ9ZRw31awgUtQhN6Cug5yu.jpg"
+    },
+    {
+      "rank": 3,
       "title": "아사코",
       "posterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
       "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
@@ -248,86 +348,10 @@
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
     },
     {
-      "rank": 3,
-      "title": "룩백",
-      "posterUrl": "/assets/recommendation-posters/2d320491abcb4e2e.webp",
-      "localPosterUrl": "/assets/recommendation-posters/2d320491abcb4e2e.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-11&movieCd=029713&playSDT=2026-11-11&screenId=02&showSeq=2",
-      "score": 56.6,
-      "signal": 8.6,
-      "positiveSignal": 8.6,
-      "mentionCount": 1.8,
-      "rawPositiveSignal": 12,
-      "rawMentionCount": 2.5,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "cinecube",
-        "filmforum"
-      ],
-      "venueNames": [
-        "씨네큐브 광화문",
-        "필름포럼"
-      ],
-      "nextDate": "2026-11-11",
-      "nextTime": "11:25",
-      "evidence": [
-        {
-          "title": "룩백 보고 왔는데 우주명작이네...",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881557&page=2",
-          "date": "2026-11-10",
-          "positive": 12,
-          "rawPositive": 12,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "명작",
-              "count": 2,
-              "weight": 4,
-              "score": 8,
-              "label": "clear"
-            },
-            {
-              "term": "재밌",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "내일 영화 볼 건데 와호나vs룩백",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881336&page=6",
-          "date": "2026-11-10",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/rfH6BJ9ZRw31awgUtQhN6Cug5yu.jpg"
-    },
-    {
       "rank": 4,
       "title": "드라이브 마이 카(하루키전)",
-      "posterUrl": "/assets/recommendation-posters/4d888521c590b0a5.webp",
-      "localPosterUrl": "/assets/recommendation-posters/4d888521c590b0a5.webp",
+      "posterUrl": "/assets/recommendation-posters/1a8ead8f915feb86.webp",
+      "localPosterUrl": "/assets/recommendation-posters/1a8ead8f915feb86.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121853&playDt=20261112&tsId=TS0057&pno=1",
@@ -405,11 +429,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 10,
+    "fetchedPostCount": 33,
     "listedPostCount": 291,
-    "detailedPostCount": 1,
-    "commentFetchCount": 1,
-    "commentCount": 0,
+    "detailedPostCount": 3,
+    "commentFetchCount": 3,
+    "commentCount": 4,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,

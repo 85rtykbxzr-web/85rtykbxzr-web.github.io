@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-11-11",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-10T15:19:58.079Z",
+  "updatedAt": "2026-11-10T18:10:19.843Z",
   "days": {
     "2026-11-09": {
       "와일드호스나인": {
@@ -687,6 +687,80 @@
       }
     },
     "2026-11-11": {
+      "룩백": {
+        "title": "룩백",
+        "positiveSignal": 4,
+        "mentionCount": 1.792481250360578,
+        "evidence": [
+          {
+            "title": "룩백 보고 고레에다 맛탱이 간걸 느낌",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881669&page=1",
+            "date": "2026-11-11",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "잘 만들",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "와일드호스나인": {
+        "title": "와일드 호스 나인",
+        "positiveSignal": 10,
+        "mentionCount": 1.792481250360578,
+        "evidence": [
+          {
+            "title": "스포)) 와일드 호스 나인 후기",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881667&page=1",
+            "date": "2026-11-11",
+            "positive": 10,
+            "rawPositive": 10,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "재미있",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "재밌",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "좋았음",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 4,
+            "commentNegative": 0
+          }
+        ]
+      },
       "아사코": {
         "title": "아사코(2D)",
         "positiveSignal": 0,
