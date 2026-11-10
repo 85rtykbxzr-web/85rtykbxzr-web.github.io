@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-10T03:10:59.810Z",
+  "generatedAt": "2026-11-10T03:30:45.449Z",
   "weekStart": "2026-11-08",
   "weekEnd": "2026-11-10",
   "windowStart": "2026-11-08",
@@ -135,7 +135,7 @@
       "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261110&tsId=TS0056&pno=2",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-10&movieCd=019765&playSDT=2026-11-10&screenId=01&showSeq=5",
       "score": 88.8,
       "signal": 2.9,
       "positiveSignal": 2.9,
@@ -144,17 +144,17 @@
       "rawMentionCount": 11,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum",
         "cinecube",
-        "sangsangmadang"
+        "sangsangmadang",
+        "filmforum"
       ],
       "venueNames": [
-        "필름포럼",
         "씨네큐브 광화문",
-        "KT&G 상상마당 시네마"
+        "KT&G 상상마당 시네마",
+        "필름포럼"
       ],
       "nextDate": "2026-11-10",
-      "nextTime": "12:20",
+      "nextTime": "17:40",
       "evidence": [
         {
           "title": "다들 다음주 금요일 아사코 갤주 gv 예매했지?",
@@ -328,87 +328,62 @@
     },
     {
       "rank": 4,
-      "title": "눈 둘 데가 없네",
-      "posterUrl": "/assets/recommendation-posters/242c9b28acea884f.webp",
-      "localPosterUrl": "/assets/recommendation-posters/242c9b28acea884f.webp",
+      "title": "드라이브 마이 카(하루키전)",
+      "posterUrl": "/assets/recommendation-posters/1a8ead8f915feb86.webp",
+      "localPosterUrl": "/assets/recommendation-posters/1a8ead8f915feb86.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.tinyticket.net/event/EVvwJVzc0n2w",
-      "score": 33.5,
-      "signal": 3.1,
-      "positiveSignal": 3.1,
-      "mentionCount": 1.7,
-      "rawPositiveSignal": 6,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121853&playDt=20261112&tsId=TS0057&pno=1",
+      "score": 33.9,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 3.3,
+      "rawPositiveSignal": 0,
       "rawMentionCount": 3.292481250360578,
       "scheduleBackfill": false,
       "venueIds": [
-        "sac",
-        "cinecube",
-        "sangsangmadang",
-        "kucine",
-        "indiespace",
         "filmforum"
       ],
       "venueNames": [
-        "서울아트시네마",
-        "씨네큐브 광화문",
-        "KT&G 상상마당 시네마",
-        "KU시네마테크",
-        "인디스페이스",
         "필름포럼"
       ],
-      "nextDate": "2026-11-10",
-      "nextTime": "18:00",
+      "nextDate": "2026-11-12",
+      "nextTime": "10:30",
       "evidence": [
         {
-          "title": "눈 둘 데가 없네 후기(ㄴㅅㅍ)",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880912&page=1",
-          "date": "2026-11-08",
+          "title": "아사코 재개봉 내려가면 ott 언제 올라오냐?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881314&page=2",
+          "date": "2026-11-10",
           "positive": 0,
           "rawPositive": 0,
           "negative": 0,
           "positiveHits": [],
           "negativeHits": [],
-          "questionLike": false,
+          "questionLike": true,
           "reviewQuestion": false,
-          "commentCount": 1,
+          "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.518
+          "dayWeight": 1
         },
         {
-          "title": "눈 둘 데가 없네 >> 홍 근작 중에선 가장 좋은듯",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880701&page=5",
-          "date": "2026-11-08",
-          "positive": 6,
-          "rawPositive": 6,
+          "title": "님들 드마카, 해피아워 재개봉하면 보러 갈 거임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881300&page=2",
+          "date": "2026-11-10",
+          "positive": 0,
+          "rawPositive": 0,
           "negative": 0,
-          "positiveHits": [
-            {
-              "term": "꿀잼",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "좋았음",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
+          "positiveHits": [],
           "negativeHits": [],
-          "questionLike": false,
+          "questionLike": true,
           "reviewQuestion": false,
           "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.518
+          "dayWeight": 1
         }
       ],
-      "posterSourceUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FKQ3U4%2FdJMcagtJijO%2FAAAAAAAAAAAAAAAAAAAAAKH4gcbmONCbAZfz-yMnnRvJMuh7ha9n8OfVoQ04Vj1U%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1796050799%26allow_ip%3D%26allow_referer%3D%26signature%3DIdgNdHJb8BX%252Bl6skOO5rov1XIV0%253D"
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/a2lxHS6Au35k5XtFQEQW44yWHeH.jpg"
     }
   ],
   "festivalPicks": [],
@@ -417,12 +392,12 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 90,
+    "fetchedPostCount": 96,
     "listedPostCount": 292,
     "detailedPostCount": 6,
-    "commentFetchCount": 5,
-    "commentCount": 4,
-    "commentFetchErrorCount": 1,
+    "commentFetchCount": 6,
+    "commentCount": 6,
+    "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-11-09",
@@ -546,8 +521,6 @@
     ],
     "posterProvider": "verified-image-official-source+known-poster-url+wikipedia-pageimage-fallback",
     "festivalLineups": [],
-    "errors": [
-      "comment https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881365&page=1 500"
-    ]
+    "errors": []
   }
 }
