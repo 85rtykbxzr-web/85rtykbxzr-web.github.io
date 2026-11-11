@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-11T03:13:03.086Z",
+  "generatedAt": "2026-11-11T06:04:33.243Z",
   "weekStart": "2026-11-09",
   "weekEnd": "2026-11-11",
   "windowStart": "2026-11-09",
@@ -18,7 +18,7 @@
       "localPosterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121961&playDt=20261111&tsId=TS0056&pno=4",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-11&movieCd=029805&playSDT=2026-11-11&screenId=01&showSeq=5",
       "score": 259.9,
       "signal": 20.3,
       "positiveSignal": 20.3,
@@ -27,15 +27,15 @@
       "rawMentionCount": 28.31056805663732,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum",
-        "cinecube"
+        "cinecube",
+        "filmforum"
       ],
       "venueNames": [
-        "필름포럼",
-        "씨네큐브 광화문"
+        "씨네큐브 광화문",
+        "필름포럼"
       ],
       "nextDate": "2026-11-11",
-      "nextTime": "12:20",
+      "nextTime": "18:00",
       "evidence": [
         {
           "title": "스포) 와일드호스나인 이야기인데",
@@ -203,7 +203,7 @@
         },
         {
           "title": "룩백 보고 고레에다 맛탱이 간걸 느낌",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881669&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881669&page=2",
           "date": "2026-11-11",
           "positive": 4,
           "rawPositive": 4,
@@ -235,7 +235,7 @@
       "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121840&playDt=20261111&tsId=TS0044&pno=3",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-11&movieCd=019765&playSDT=2026-11-11&screenId=02&showSeq=6",
       "score": 82.8,
       "signal": 2.1,
       "positiveSignal": 2.1,
@@ -244,17 +244,17 @@
       "rawMentionCount": 10.66096404744368,
       "scheduleBackfill": false,
       "venueIds": [
-        "sangsangmadang",
         "cinecube",
-        "filmforum"
+        "filmforum",
+        "sangsangmadang"
       ],
       "venueNames": [
-        "KT&G 상상마당 시네마",
         "씨네큐브 광화문",
-        "필름포럼"
+        "필름포럼",
+        "KT&G 상상마당 시네마"
       ],
       "nextDate": "2026-11-11",
-      "nextTime": "14:50",
+      "nextTime": "19:30",
       "evidence": [
         {
           "title": "아사코 존나 누하긴하네 배우들 외모도 그렇고",
@@ -429,11 +429,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 63,
+    "fetchedPostCount": 92,
     "listedPostCount": 291,
-    "detailedPostCount": 5,
-    "commentFetchCount": 5,
-    "commentCount": 11,
+    "detailedPostCount": 6,
+    "commentFetchCount": 6,
+    "commentCount": 14,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -442,7 +442,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-11-11",
     "candidateWindowEnd": "2026-11-25",
-    "candidateCount": 106,
+    "candidateCount": 103,
     "seedLookbackDays": 3,
     "seedStart": "2026-11-09",
     "listLookbackDays": 1,
