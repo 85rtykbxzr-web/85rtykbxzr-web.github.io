@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-11-11",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-11T09:09:20.330Z",
+  "updatedAt": "2026-11-11T12:16:29.335Z",
   "days": {
     "2026-11-09": {
       "와일드호스나인": {
@@ -687,83 +687,25 @@
       }
     },
     "2026-11-11": {
-      "어둠뒤에빛이있으라": {
-        "title": "어둠 뒤에 빛이 있으라",
-        "positiveSignal": 0,
-        "mentionCount": 1,
+      "와일드호스나인": {
+        "title": "와일드 호스 나인(2D)",
+        "positiveSignal": 22,
+        "mentionCount": 5.792481250360578,
         "evidence": [
           {
-            "title": "어둠뒤에빛이있으라 많이 졸림?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881766&page=1",
+            "title": "와호나는 뭔가 내가 다 허무해지네",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881796&page=1",
             "date": "2026-11-11",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "프레셔": {
-        "title": "프레셔",
-        "positiveSignal": 0,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "노스포) 프레셔, 템플릿 가져다 쓴 영화",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881762&page=1",
-            "date": "2026-11-11",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "더랍스터": {
-        "title": "더 랍스터(2D)",
-        "positiveSignal": 28,
-        "mentionCount": 2.5,
-        "evidence": [
-          {
-            "title": "더 랍스터 어떰?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881758&page=1",
-            "date": "2026-11-11",
-            "positive": 28,
-            "rawPositive": 28,
+            "positive": 12,
+            "rawPositive": 12,
             "negative": 0,
             "positiveHits": [
               {
-                "term": "최고",
+                "term": "꿀잼",
                 "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              },
-              {
-                "term": "최고",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              },
-              {
-                "term": "최고",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
               },
               {
                 "term": "재밌",
@@ -773,59 +715,23 @@
                 "label": "clear"
               },
               {
-                "term": "추천",
+                "term": "재밌",
                 "count": 1,
                 "weight": 4,
                 "score": 4,
                 "label": "clear"
-              },
-              {
-                "term": "좋더라",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
               }
             ],
             "negativeHits": [],
             "questionLike": true,
             "reviewQuestion": true,
-            "commentCount": 10,
-            "commentPositive": 28,
+            "commentCount": 7,
+            "commentPositive": 12,
             "commentNegative": 0
-          }
-        ]
-      },
-      "헤븐노우즈왓": {
-        "title": "헤븐 노우즈 왓(GV)",
-        "positiveSignal": 0,
-        "mentionCount": 1.792481250360578,
-        "evidence": [
-          {
-            "title": "어제 영자원 헤븐 노우즈 왓 h열 비매너녀 ㅅㅂ",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881723&page=2",
-            "date": "2026-11-11",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "와일드호스나인": {
-        "title": "와일드 호스 나인(2D)",
-        "positiveSignal": 10,
-        "mentionCount": 3.292481250360578,
-        "evidence": [
+          },
           {
             "title": "와호나 꿀잼임?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881698&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881698&page=3",
             "date": "2026-11-11",
             "positive": 0,
             "rawPositive": 0,
@@ -877,6 +783,122 @@
           }
         ]
       },
+      "프레셔": {
+        "title": "프레셔",
+        "positiveSignal": 0,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "노스포) 프레셔, 템플릿 가져다 쓴 영화",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881762&page=2",
+            "date": "2026-11-11",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "더랍스터": {
+        "title": "더 랍스터(2D)",
+        "positiveSignal": 34,
+        "mentionCount": 2.5,
+        "evidence": [
+          {
+            "title": "더 랍스터 어떰?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881758&page=2",
+            "date": "2026-11-11",
+            "positive": 34,
+            "rawPositive": 34,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "최고",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "최고",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "최고",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "최고",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "재밌",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "추천",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "좋더라",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 11,
+            "commentPositive": 34,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "헤븐노우즈왓": {
+        "title": "헤븐 노우즈 왓",
+        "positiveSignal": 0,
+        "mentionCount": 1.792481250360578,
+        "evidence": [
+          {
+            "title": "어제 영자원 헤븐 노우즈 왓 h열 비매너녀 ㅅㅂ",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881723&page=2",
+            "date": "2026-11-11",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "이방인": {
         "title": "이방인(2D)",
         "positiveSignal": 0,
@@ -884,7 +906,7 @@
         "evidence": [
           {
             "title": "이방인 영화랑 책이랑 좀 다르다던데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881697&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881697&page=3",
             "date": "2026-11-11",
             "positive": 0,
             "rawPositive": 0,
@@ -936,7 +958,7 @@
         "evidence": [
           {
             "title": "이번주 금요일 갤주 아사코gv 존나 기대되면 개추",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881649&page=3",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881649&page=4",
             "date": "2026-11-11",
             "positive": 0,
             "rawPositive": 0,
