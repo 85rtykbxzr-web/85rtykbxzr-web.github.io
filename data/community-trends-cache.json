@@ -2,294 +2,25 @@
   "version": 3,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-11-09",
-  "windowEnd": "2026-11-11",
+  "windowStart": "2026-11-10",
+  "windowEnd": "2026-11-12",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-11-09",
       "2026-11-10",
-      "2026-11-11"
+      "2026-11-11",
+      "2026-11-12"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-11-11",
-    "lastWindowEnd": "2026-11-11",
+    "lastWindowStart": "2026-11-12",
+    "lastWindowEnd": "2026-11-12",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-11T14:11:21.992Z",
+  "updatedAt": "2026-11-11T15:22:16.544Z",
   "days": {
-    "2026-11-09": {
-      "와일드호스나인": {
-        "title": "와일드 호스 나인(2D)",
-        "positiveSignal": 6,
-        "mentionCount": 19.01808680627674,
-        "evidence": [
-          {
-            "title": "스포) 와일드호스나인 이야기인데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881224&page=1",
-            "date": "2026-11-09",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 3,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "와일드 호스 나인 후기",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881133&page=3",
-            "date": "2026-11-09",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "와일드호스나인 와호나 이거 왜이리 어렵냐",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881127&page=3",
-            "date": "2026-11-09",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 8,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "침묵의빛": {
-        "title": "침묵의 빛(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "샹 내일 침묵의빛 볼라 했는데 예매랑 겹치네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881193&page=1",
-            "date": "2026-11-09",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "마티슈프림": {
-        "title": "마티 슈프림",
-        "positiveSignal": 0,
-        "mentionCount": 3.584962500721156,
-        "evidence": [
-          {
-            "title": "근데 마티 슈프림에서 주인공은",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881148&page=2",
-            "date": "2026-11-09",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "마티 슈프림 생각보다 그저그런데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881144&page=2",
-            "date": "2026-11-09",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "아사코": {
-        "title": "아사코(2D)",
-        "positiveSignal": 4,
-        "mentionCount": 4.5,
-        "evidence": [
-          {
-            "title": "아사코 존나 누하긴하네 배우들 외모도 그렇고",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881147&page=2",
-            "date": "2026-11-09",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "오늘 아사코 보고올게요",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881137&page=3",
-            "date": "2026-11-09",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 3,
-            "commentPositive": 4,
-            "commentNegative": 0
-          },
-          {
-            "title": "더랍스터 재개봉은 진짜 뜬금없네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881026&page=5",
-            "date": "2026-11-09",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "미션": {
-        "title": "미션(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 2.160964047443681,
-        "evidence": [
-          {
-            "title": "답답해서 영고수가 알려주는 와일드호스나인 제목의미",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881112&page=3",
-            "date": "2026-11-09",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "라라랜드": {
-        "title": "라라랜드(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 1.792481250360578,
-        "evidence": [
-          {
-            "title": "라라랜드 재개봉 관람할거임?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881050&page=4",
-            "date": "2026-11-09",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "더랍스터": {
-        "title": "더 랍스터(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "더랍스터 재개봉은 진짜 뜬금없네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881026&page=5",
-            "date": "2026-11-09",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "트레인스포팅": {
-        "title": "트레인스포팅(2D)",
-        "positiveSignal": 4,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "트레인스포팅 봤다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1880993&page=5",
-            "date": "2026-11-09",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "재밌",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-11-10": {
       "마더메리": {
         "title": "마더 메리(2D)",
@@ -1086,6 +817,30 @@
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      }
+    },
+    "2026-11-12": {
+      "헤븐노우즈왓": {
+        "title": "헤븐 노우즈 왓",
+        "positiveSignal": 0,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "스포) 헤븐 노우즈 왓 보고 옴",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881858&page=1",
+            "date": "2026-11-12",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
             "commentCount": 0,
             "commentPositive": 0,
             "commentNegative": 0

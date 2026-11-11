@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-11T14:11:25.122Z",
-  "weekStart": "2026-11-09",
-  "weekEnd": "2026-11-11",
-  "windowStart": "2026-11-09",
-  "windowEnd": "2026-11-11",
+  "generatedAt": "2026-11-11T15:22:17.182Z",
+  "weekStart": "2026-11-10",
+  "weekEnd": "2026-11-12",
+  "windowStart": "2026-11-10",
+  "windowEnd": "2026-11-12",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121961&playDt=20261112&tsId=TS0056&pno=3",
-      "score": 357.9,
-      "signal": 32.3,
-      "positiveSignal": 32.3,
-      "mentionCount": 22.5,
-      "rawPositiveSignal": 38,
-      "rawMentionCount": 33.31056805663732,
+      "score": 178.9,
+      "signal": 21,
+      "positiveSignal": 21,
+      "mentionCount": 9.1,
+      "rawPositiveSignal": 32,
+      "rawMentionCount": 14.292481250360577,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum",
@@ -37,54 +37,6 @@
       "nextDate": "2026-11-12",
       "nextTime": "12:20",
       "evidence": [
-        {
-          "title": "스포) 와일드호스나인 이야기인데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881224&page=1",
-          "date": "2026-11-09",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "와일드 호스 나인 후기",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881133&page=3",
-          "date": "2026-11-09",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "와일드호스나인 와호나 이거 왜이리 어렵냐",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881127&page=3",
-          "date": "2026-11-09",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 8,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "개념쌓기가 와호나 해석해준다 ㄱㄱ",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881585&page=2",
@@ -107,7 +59,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "스포) 와호나",
@@ -123,6 +75,76 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "스포)) 와일드호스나인 마지막에 왜 그런거임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881465&page=4",
+          "date": "2026-11-10",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "와호나 괜히봤네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881834&page=1",
+          "date": "2026-11-11",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 7,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "와호나는 뭔가 내가 다 허무해지네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881796&page=2",
+          "date": "2026-11-11",
+          "positive": 12,
+          "rawPositive": 12,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 7,
+          "commentPositive": 12,
+          "commentNegative": 0,
           "dayWeight": 0.72
         }
       ],
@@ -131,17 +153,17 @@
     {
       "rank": 2,
       "title": "더 랍스터",
-      "posterUrl": "/assets/recommendation-posters/519eac98f204ea52.webp",
-      "localPosterUrl": "/assets/recommendation-posters/519eac98f204ea52.webp",
+      "posterUrl": "/assets/recommendation-posters/870ad971a535e4e9.webp",
+      "localPosterUrl": "/assets/recommendation-posters/870ad971a535e4e9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121966&playDt=20261112&tsId=TS0056&pno=4",
-      "score": 244.3,
-      "signal": 46,
-      "positiveSignal": 46,
-      "mentionCount": 5.8,
+      "score": 171,
+      "signal": 33.1,
+      "positiveSignal": 33.1,
+      "mentionCount": 3.6,
       "rawPositiveSignal": 46,
-      "rawMentionCount": 6.5,
+      "rawMentionCount": 5,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum"
@@ -152,22 +174,6 @@
       "nextDate": "2026-11-12",
       "nextTime": "14:30",
       "evidence": [
-        {
-          "title": "더랍스터 재개봉은 진짜 뜬금없네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881026&page=5",
-          "date": "2026-11-09",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "란티모스 안티팬인데 더랍스터 보는거 추천함?",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881839&page=1",
@@ -204,7 +210,7 @@
           "commentCount": 8,
           "commentPositive": 12,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "더 랍스터 어떰?",
@@ -270,7 +276,7 @@
           "commentCount": 11,
           "commentPositive": 34,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/7Y9ILV1unpW9mLpGcqyGQU72LUy.jpg"
@@ -283,10 +289,10 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121765&playDt=20261112&tsId=TS0056&pno=2",
-      "score": 90,
-      "signal": 12.6,
-      "positiveSignal": 12.6,
-      "mentionCount": 3.6,
+      "score": 65.7,
+      "signal": 9.1,
+      "positiveSignal": 9.1,
+      "mentionCount": 2.6,
       "rawPositiveSignal": 16,
       "rawMentionCount": 4.292481250360578,
       "scheduleBackfill": false,
@@ -330,7 +336,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "내일 영화 볼 건데 와호나vs룩백",
@@ -346,7 +352,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "룩백 보고 고레에다 맛탱이 간걸 느낌",
@@ -370,43 +376,39 @@
           "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/rfH6BJ9ZRw31awgUtQhN6Cug5yu.jpg"
     },
     {
       "rank": 4,
-      "title": "아사코",
-      "posterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
-      "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
+      "title": "마더 메리",
+      "posterUrl": "/assets/recommendation-posters/1d6dab62737acabd.webp",
+      "localPosterUrl": "/assets/recommendation-posters/1d6dab62737acabd.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-12&movieCd=019765&playSDT=2026-11-12&screenId=02&showSeq=5",
-      "score": 82.8,
-      "signal": 2.1,
-      "positiveSignal": 2.1,
-      "mentionCount": 7,
-      "rawPositiveSignal": 4,
-      "rawMentionCount": 10.66096404744368,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121958&playDt=20261117&tsId=TS0056&pno=3",
+      "score": 44,
+      "signal": 1.4,
+      "positiveSignal": 1.4,
+      "mentionCount": 3.8,
+      "rawPositiveSignal": 2,
+      "rawMentionCount": 6.584962500721156,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube",
-        "filmforum",
-        "sangsangmadang"
+        "filmforum"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
-        "필름포럼",
-        "KT&G 상상마당 시네마"
+        "필름포럼"
       ],
-      "nextDate": "2026-11-12",
-      "nextTime": "17:05",
+      "nextDate": "2026-11-17",
+      "nextTime": "14:30",
       "evidence": [
         {
-          "title": "아사코 존나 누하긴하네 배우들 외모도 그렇고",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881147&page=2",
-          "date": "2026-11-09",
+          "title": "마더메리 뭔가",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881619&page=1",
+          "date": "2026-11-10",
           "positive": 0,
           "rawPositive": 0,
           "negative": 0,
@@ -420,48 +422,8 @@
           "dayWeight": 0.518
         },
         {
-          "title": "오늘 아사코 보고올게요",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881137&page=3",
-          "date": "2026-11-09",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "꿀잼",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 4,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "더랍스터 재개봉은 진짜 뜬금없네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881026&page=5",
-          "date": "2026-11-09",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "스포) 아사코 이 장면 이런 느낌 들지 않았냐",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881462&page=4",
+          "title": "마더메리 로워리 신작인데 언급 왤케 없음",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881606&page=1",
           "date": "2026-11-10",
           "positive": 0,
           "rawPositive": 0,
@@ -470,14 +432,14 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 1,
+          "commentCount": 5,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
-          "title": "아사코 포스터 젤 좋아하는게 머임?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881431&page=4",
+          "title": "마더 메리 볼?말?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881469&page=4",
           "date": "2026-11-10",
           "positive": 0,
           "rawPositive": 0,
@@ -486,13 +448,37 @@
           "negativeHits": [],
           "questionLike": true,
           "reviewQuestion": false,
-          "commentCount": 2,
+          "commentCount": 1,
           "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "마더메리 많이 별로임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881826&page=1",
+          "date": "2026-11-11",
+          "positive": 2,
+          "rawPositive": 2,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "봐라",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 2,
+          "commentPositive": 2,
           "commentNegative": 0,
           "dayWeight": 0.72
         }
       ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/aa5hoiIBcxy6PEvVgAJAFsMeTi7.jpg"
     }
   ],
   "festivalPicks": [],
@@ -501,24 +487,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 185,
+    "fetchedPostCount": 6,
     "listedPostCount": 291,
-    "detailedPostCount": 16,
-    "commentFetchCount": 16,
-    "commentCount": 56,
+    "detailedPostCount": 1,
+    "commentFetchCount": 1,
+    "commentCount": 0,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-11-10",
-    "newestScannedDate": "2026-11-11",
+    "newestScannedDate": "2026-11-12",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-11-11",
-    "candidateWindowEnd": "2026-11-25",
+    "candidateWindowStart": "2026-11-12",
+    "candidateWindowEnd": "2026-11-26",
     "candidateCount": 100,
     "seedLookbackDays": 3,
-    "seedStart": "2026-11-09",
+    "seedStart": "2026-11-10",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-11-11",
+    "listWindowStart": "2026-11-12",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -526,7 +512,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-11-11"
+      "2026-11-12"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [
