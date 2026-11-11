@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-11T12:16:36.225Z",
+  "generatedAt": "2026-11-11T14:11:25.122Z",
   "weekStart": "2026-11-09",
   "weekEnd": "2026-11-11",
   "windowStart": "2026-11-09",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121961&playDt=20261112&tsId=TS0056&pno=3",
-      "score": 332.9,
+      "score": 357.9,
       "signal": 32.3,
       "positiveSignal": 32.3,
-      "mentionCount": 20,
+      "mentionCount": 22.5,
       "rawPositiveSignal": 38,
-      "rawMentionCount": 30.81056805663732,
+      "rawMentionCount": 33.31056805663732,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum",
@@ -136,12 +136,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121966&playDt=20261112&tsId=TS0056&pno=4",
-      "score": 171.3,
-      "signal": 34,
-      "positiveSignal": 34,
-      "mentionCount": 3.3,
-      "rawPositiveSignal": 34,
-      "rawMentionCount": 4,
+      "score": 244.3,
+      "signal": 46,
+      "positiveSignal": 46,
+      "mentionCount": 5.8,
+      "rawPositiveSignal": 46,
+      "rawMentionCount": 6.5,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum"
@@ -167,6 +167,44 @@
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.518
+        },
+        {
+          "title": "란티모스 안티팬인데 더랍스터 보는거 추천함?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881839&page=1",
+          "date": "2026-11-11",
+          "positive": 12,
+          "rawPositive": 12,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "여운",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 8,
+          "commentPositive": 12,
+          "commentNegative": 0,
+          "dayWeight": 1
         },
         {
           "title": "더 랍스터 어떰?",
@@ -312,7 +350,7 @@
         },
         {
           "title": "룩백 보고 고레에다 맛탱이 간걸 느낌",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881669&page=3",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881669&page=4",
           "date": "2026-11-11",
           "positive": 4,
           "rawPositive": 4,
@@ -463,11 +501,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 154,
+    "fetchedPostCount": 185,
     "listedPostCount": 291,
-    "detailedPostCount": 9,
-    "commentFetchCount": 9,
-    "commentCount": 32,
+    "detailedPostCount": 16,
+    "commentFetchCount": 16,
+    "commentCount": 56,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
