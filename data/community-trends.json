@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-11T15:22:17.182Z",
+  "generatedAt": "2026-11-11T18:13:08.227Z",
   "weekStart": "2026-11-10",
   "weekEnd": "2026-11-12",
   "windowStart": "2026-11-10",
@@ -383,32 +383,84 @@
     },
     {
       "rank": 4,
-      "title": "마더 메리",
-      "posterUrl": "/assets/recommendation-posters/1d6dab62737acabd.webp",
-      "localPosterUrl": "/assets/recommendation-posters/1d6dab62737acabd.webp",
+      "title": "아사코",
+      "posterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
+      "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121958&playDt=20261117&tsId=TS0056&pno=3",
-      "score": 44,
-      "signal": 1.4,
-      "positiveSignal": 1.4,
-      "mentionCount": 3.8,
-      "rawPositiveSignal": 2,
-      "rawMentionCount": 6.584962500721156,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-12&movieCd=019765&playSDT=2026-11-12&screenId=02&showSeq=5",
+      "score": 55.9,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 5.2,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 7.953445297804259,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum"
+        "cinecube",
+        "filmforum",
+        "sangsangmadang"
       ],
       "venueNames": [
-        "필름포럼"
+        "씨네큐브 광화문",
+        "필름포럼",
+        "KT&G 상상마당 시네마"
       ],
-      "nextDate": "2026-11-17",
-      "nextTime": "14:30",
+      "nextDate": "2026-11-12",
+      "nextTime": "17:05",
       "evidence": [
         {
-          "title": "마더메리 뭔가",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881619&page=1",
+          "title": "스포) 아사코 이 장면 이런 느낌 들지 않았냐",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881462&page=4",
           "date": "2026-11-10",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "아사코 포스터 젤 좋아하는게 머임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881431&page=4",
+          "date": "2026-11-10",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "아사코 재개봉 내려가면 ott 언제 올라오냐?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881314&page=7",
+          "date": "2026-11-10",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "이번주 금요일 갤주 아사코gv 존나 기대되면 개추",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881649&page=4",
+          "date": "2026-11-11",
           "positive": 0,
           "rawPositive": 0,
           "negative": 0,
@@ -419,12 +471,12 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.518
+          "dayWeight": 0.72
         },
         {
-          "title": "마더메리 로워리 신작인데 언급 왤케 없음",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881606&page=1",
-          "date": "2026-11-10",
+          "title": "이번주 금요일 갤주 아사코 gv ㅈㄴ기대되면 개추 ㅋㅋ",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881865&page=1",
+          "date": "2026-11-12",
           "positive": 0,
           "rawPositive": 0,
           "negative": 0,
@@ -432,53 +484,13 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 5,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "마더 메리 볼?말?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881469&page=4",
-          "date": "2026-11-10",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "마더메리 많이 별로임?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881826&page=1",
-          "date": "2026-11-11",
-          "positive": 2,
-          "rawPositive": 2,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "봐라",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
           "commentCount": 2,
-          "commentPositive": 2,
+          "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 1
         }
       ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/aa5hoiIBcxy6PEvVgAJAFsMeTi7.jpg"
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
     }
   ],
   "festivalPicks": [],
@@ -487,11 +499,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 6,
+    "fetchedPostCount": 31,
     "listedPostCount": 291,
-    "detailedPostCount": 1,
-    "commentFetchCount": 1,
-    "commentCount": 0,
+    "detailedPostCount": 3,
+    "commentFetchCount": 3,
+    "commentCount": 3,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
