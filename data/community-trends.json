@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-11T00:22:16.750Z",
+  "generatedAt": "2026-11-11T03:13:03.086Z",
   "weekStart": "2026-11-09",
   "weekEnd": "2026-11-11",
   "windowStart": "2026-11-09",
@@ -18,24 +18,24 @@
       "localPosterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-11&movieCd=029805&playSDT=2026-11-11&screenId=01&showSeq=2",
-      "score": 244.9,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121961&playDt=20261111&tsId=TS0056&pno=4",
+      "score": 259.9,
       "signal": 20.3,
       "positiveSignal": 20.3,
-      "mentionCount": 16,
+      "mentionCount": 17.5,
       "rawPositiveSignal": 26,
-      "rawMentionCount": 26.81056805663732,
+      "rawMentionCount": 28.31056805663732,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube",
-        "filmforum"
+        "filmforum",
+        "cinecube"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
-        "필름포럼"
+        "필름포럼",
+        "씨네큐브 광화문"
       ],
       "nextDate": "2026-11-11",
-      "nextTime": "12:00",
+      "nextTime": "12:20",
       "evidence": [
         {
           "title": "스포) 와일드호스나인 이야기인데",
@@ -135,8 +135,8 @@
       "localPosterUrl": "/assets/recommendation-posters/966107553553c174.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-11&movieCd=029713&playSDT=2026-11-11&screenId=02&showSeq=2",
-      "score": 90.5,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121765&playDt=20261112&tsId=TS0056&pno=2",
+      "score": 90,
       "signal": 12.6,
       "positiveSignal": 12.6,
       "mentionCount": 3.6,
@@ -144,15 +144,15 @@
       "rawMentionCount": 4.292481250360578,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube",
-        "filmforum"
+        "filmforum",
+        "cinecube"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
-        "필름포럼"
+        "필름포럼",
+        "씨네큐브 광화문"
       ],
-      "nextDate": "2026-11-11",
-      "nextTime": "11:25",
+      "nextDate": "2026-11-12",
+      "nextTime": "10:30",
       "evidence": [
         {
           "title": "룩백 보고 왔는데 우주명작이네...",
@@ -429,11 +429,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 49,
+    "fetchedPostCount": 63,
     "listedPostCount": 291,
-    "detailedPostCount": 3,
-    "commentFetchCount": 3,
-    "commentCount": 4,
+    "detailedPostCount": 5,
+    "commentFetchCount": 5,
+    "commentCount": 11,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,

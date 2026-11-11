@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-11-11",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-11T00:22:13.963Z",
+  "updatedAt": "2026-11-11T03:12:59.443Z",
   "days": {
     "2026-11-09": {
       "와일드호스나인": {
@@ -687,41 +687,26 @@
       }
     },
     "2026-11-11": {
-      "룩백": {
-        "title": "룩백",
-        "positiveSignal": 4,
-        "mentionCount": 1.792481250360578,
+      "와일드호스나인": {
+        "title": "와일드 호스 나인(2D)",
+        "positiveSignal": 10,
+        "mentionCount": 3.292481250360578,
         "evidence": [
           {
-            "title": "룩백 보고 고레에다 맛탱이 간걸 느낌",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881669&page=1",
+            "title": "와호나 꿀잼임?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881698&page=1",
             "date": "2026-11-11",
-            "positive": 4,
-            "rawPositive": 4,
+            "positive": 0,
+            "rawPositive": 0,
             "negative": 0,
-            "positiveHits": [
-              {
-                "term": "잘 만들",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
+            "positiveHits": [],
             "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 1,
             "commentPositive": 0,
             "commentNegative": 0
-          }
-        ]
-      },
-      "와일드호스나인": {
-        "title": "와일드 호스 나인",
-        "positiveSignal": 10,
-        "mentionCount": 1.792481250360578,
-        "evidence": [
+          },
           {
             "title": "스포)) 와일드 호스 나인 후기",
             "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881667&page=1",
@@ -761,6 +746,58 @@
           }
         ]
       },
+      "이방인": {
+        "title": "이방인(2D)",
+        "positiveSignal": 0,
+        "mentionCount": 2.403677461028802,
+        "evidence": [
+          {
+            "title": "이방인 영화랑 책이랑 좀 다르다던데",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881697&page=1",
+            "date": "2026-11-11",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 6,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "룩백": {
+        "title": "룩백(2D)",
+        "positiveSignal": 4,
+        "mentionCount": 1.792481250360578,
+        "evidence": [
+          {
+            "title": "룩백 보고 고레에다 맛탱이 간걸 느낌",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881669&page=1",
+            "date": "2026-11-11",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "잘 만들",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "아사코": {
         "title": "아사코(2D)",
         "positiveSignal": 0,
@@ -768,7 +805,7 @@
         "evidence": [
           {
             "title": "이번주 금요일 갤주 아사코gv 존나 기대되면 개추",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881649&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881649&page=2",
             "date": "2026-11-11",
             "positive": 0,
             "rawPositive": 0,
