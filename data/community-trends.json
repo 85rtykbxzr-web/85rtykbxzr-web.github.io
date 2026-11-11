@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-11T06:18:49.609Z",
+  "generatedAt": "2026-11-11T09:09:24.163Z",
   "weekStart": "2026-11-09",
   "weekEnd": "2026-11-11",
   "windowStart": "2026-11-09",
@@ -18,7 +18,7 @@
       "localPosterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-11&movieCd=029805&playSDT=2026-11-11&screenId=01&showSeq=5",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121961&playDt=20261112&tsId=TS0056&pno=3",
       "score": 259.9,
       "signal": 20.3,
       "positiveSignal": 20.3,
@@ -27,15 +27,15 @@
       "rawMentionCount": 28.31056805663732,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube",
-        "filmforum"
+        "filmforum",
+        "cinecube"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
-        "필름포럼"
+        "필름포럼",
+        "씨네큐브 광화문"
       ],
-      "nextDate": "2026-11-11",
-      "nextTime": "18:00",
+      "nextDate": "2026-11-12",
+      "nextTime": "12:20",
       "evidence": [
         {
           "title": "스포) 와일드호스나인 이야기인데",
@@ -130,6 +130,108 @@
     },
     {
       "rank": 2,
+      "title": "더 랍스터",
+      "posterUrl": "/assets/recommendation-posters/870ad971a535e4e9.webp",
+      "localPosterUrl": "/assets/recommendation-posters/870ad971a535e4e9.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121966&playDt=20261112&tsId=TS0056&pno=4",
+      "score": 147.3,
+      "signal": 28,
+      "positiveSignal": 28,
+      "mentionCount": 3.3,
+      "rawPositiveSignal": 28,
+      "rawMentionCount": 4,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "filmforum"
+      ],
+      "venueNames": [
+        "필름포럼"
+      ],
+      "nextDate": "2026-11-12",
+      "nextTime": "14:30",
+      "evidence": [
+        {
+          "title": "더랍스터 재개봉은 진짜 뜬금없네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881026&page=5",
+          "date": "2026-11-09",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "더 랍스터 어떰?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881758&page=1",
+          "date": "2026-11-11",
+          "positive": 28,
+          "rawPositive": 28,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "최고",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "최고",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "최고",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "추천",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "좋더라",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 10,
+          "commentPositive": 28,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/7Y9ILV1unpW9mLpGcqyGQU72LUy.jpg"
+    },
+    {
+      "rank": 3,
       "title": "룩백",
       "posterUrl": "/assets/recommendation-posters/966107553553c174.webp",
       "localPosterUrl": "/assets/recommendation-posters/966107553553c174.webp",
@@ -203,7 +305,7 @@
         },
         {
           "title": "룩백 보고 고레에다 맛탱이 간걸 느낌",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881669&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881669&page=3",
           "date": "2026-11-11",
           "positive": 4,
           "rawPositive": 4,
@@ -229,7 +331,7 @@
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/rfH6BJ9ZRw31awgUtQhN6Cug5yu.jpg"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "title": "아사코",
       "posterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
       "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
@@ -346,81 +448,6 @@
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "드라이브 마이 카(하루키전)",
-      "posterUrl": "/assets/recommendation-posters/1a8ead8f915feb86.webp",
-      "localPosterUrl": "/assets/recommendation-posters/1a8ead8f915feb86.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121853&playDt=20261112&tsId=TS0057&pno=1",
-      "score": 35.5,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 3.5,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 4.792481250360578,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "filmforum"
-      ],
-      "venueNames": [
-        "필름포럼"
-      ],
-      "nextDate": "2026-11-12",
-      "nextTime": "10:30",
-      "evidence": [
-        {
-          "title": "드라이브 마이카나 가능한 사랑이나 둘 다 세시간인데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881552&page=2",
-          "date": "2026-11-10",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "아사코 재개봉 내려가면 ott 언제 올라오냐?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881314&page=7",
-          "date": "2026-11-10",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "님들 드마카, 해피아워 재개봉하면 보러 갈 거임?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881300&page=7",
-          "date": "2026-11-10",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/a2lxHS6Au35k5XtFQEQW44yWHeH.jpg"
     }
   ],
   "festivalPicks": [],
@@ -429,11 +456,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 94,
+    "fetchedPostCount": 121,
     "listedPostCount": 291,
-    "detailedPostCount": 6,
-    "commentFetchCount": 6,
-    "commentCount": 14,
+    "detailedPostCount": 9,
+    "commentFetchCount": 9,
+    "commentCount": 24,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -442,7 +469,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-11-11",
     "candidateWindowEnd": "2026-11-25",
-    "candidateCount": 103,
+    "candidateCount": 101,
     "seedLookbackDays": 3,
     "seedStart": "2026-11-09",
     "listLookbackDays": 1,
