@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-11-12",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-12T03:11:20.554Z",
+  "updatedAt": "2026-11-12T06:16:55.707Z",
   "days": {
     "2026-11-10": {
       "마더메리": {
@@ -825,10 +825,32 @@
       }
     },
     "2026-11-12": {
-      "와일드호스나인": {
-        "title": "와일드 호스 나인(2D)",
+      "룩백": {
+        "title": "룩백(2D)",
         "positiveSignal": 0,
-        "mentionCount": 1,
+        "mentionCount": 1.5,
+        "evidence": [
+          {
+            "title": "룩백 스크린 큰곳에서 보는거 중요함?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881935&page=1",
+            "date": "2026-11-12",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "와일드호스나인": {
+        "title": "와일드 호스 나인",
+        "positiveSignal": 0,
+        "mentionCount": 1.792481250360578,
         "evidence": [
           {
             "title": "와호나 가족들이랑 보는 거 어떰",
@@ -841,7 +863,7 @@
             "negativeHits": [],
             "questionLike": true,
             "reviewQuestion": true,
-            "commentCount": 0,
+            "commentCount": 2,
             "commentPositive": 0,
             "commentNegative": 0
           }
