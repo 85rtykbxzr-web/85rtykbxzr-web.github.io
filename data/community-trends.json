@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-13T03:12:45.176Z",
+  "generatedAt": "2026-11-13T06:18:28.617Z",
   "weekStart": "2026-11-11",
   "weekEnd": "2026-11-13",
   "windowStart": "2026-11-11",
@@ -14,12 +14,12 @@
     {
       "rank": 1,
       "title": "더 랍스터",
-      "posterUrl": "/assets/recommendation-posters/870ad971a535e4e9.webp",
-      "localPosterUrl": "/assets/recommendation-posters/870ad971a535e4e9.webp",
+      "posterUrl": "/assets/recommendation-posters/519eac98f204ea52.webp",
+      "localPosterUrl": "/assets/recommendation-posters/519eac98f204ea52.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121966&playDt=20261113&tsId=TS0056&pno=3",
-      "score": 123.2,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121966&playDt=20261114&tsId=TS0057&pno=6",
+      "score": 122.7,
       "signal": 23.8,
       "positiveSignal": 23.8,
       "mentionCount": 2.6,
@@ -32,8 +32,8 @@
       "venueNames": [
         "필름포럼"
       ],
-      "nextDate": "2026-11-13",
-      "nextTime": "14:30",
+      "nextDate": "2026-11-14",
+      "nextTime": "19:40",
       "evidence": [
         {
           "title": "란티모스 안티팬인데 더랍스터 보는거 추천함?",
@@ -149,7 +149,7 @@
       "localPosterUrl": "/assets/recommendation-posters/6a6cf9e1e8dbb352.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-13&movieCd=029805&playSDT=2026-11-13&screenId=01&showSeq=4",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121961&playDt=20261113&tsId=TS0056&pno=5",
       "score": 105.4,
       "signal": 11.4,
       "positiveSignal": 11.4,
@@ -158,15 +158,15 @@
       "rawMentionCount": 10.084962500721154,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube",
-        "filmforum"
+        "filmforum",
+        "cinecube"
       ],
       "venueNames": [
-        "씨네큐브 광화문",
-        "필름포럼"
+        "필름포럼",
+        "씨네큐브 광화문"
       ],
       "nextDate": "2026-11-13",
-      "nextTime": "14:50",
+      "nextTime": "19:00",
       "evidence": [
         {
           "title": "와호나 괜히봤네",
@@ -259,13 +259,88 @@
     },
     {
       "rank": 3,
+      "title": "마더 메리",
+      "posterUrl": "/assets/recommendation-posters/1d6dab62737acabd.webp",
+      "localPosterUrl": "/assets/recommendation-posters/1d6dab62737acabd.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121958&playDt=20261117&tsId=TS0056&pno=3",
+      "score": 60.9,
+      "signal": 7,
+      "positiveSignal": 7,
+      "mentionCount": 3.2,
+      "rawPositiveSignal": 8,
+      "rawMentionCount": 4.084962500721156,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "filmforum"
+      ],
+      "venueNames": [
+        "필름포럼"
+      ],
+      "nextDate": "2026-11-17",
+      "nextTime": "14:30",
+      "evidence": [
+        {
+          "title": "마더메리 많이 별로임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881826&page=1",
+          "date": "2026-11-11",
+          "positive": 2,
+          "rawPositive": 2,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "봐라",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 2,
+          "commentPositive": 2,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "마더메리 이거 그렇게 별로임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1882095&page=3",
+          "date": "2026-11-13",
+          "positive": 6,
+          "rawPositive": 6,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "걸작",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 5,
+          "commentPositive": 6,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/aa5hoiIBcxy6PEvVgAJAFsMeTi7.jpg"
+    },
+    {
+      "rank": 4,
       "title": "룩백",
       "posterUrl": "/assets/recommendation-posters/966107553553c174.webp",
       "localPosterUrl": "/assets/recommendation-posters/966107553553c174.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121765&playDt=20261113&tsId=TS0056&pno=2",
-      "score": 36,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-13&movieCd=029713&playSDT=2026-11-13&screenId=02&showSeq=5",
+      "score": 35.5,
       "signal": 2.1,
       "positiveSignal": 2.1,
       "mentionCount": 2.4,
@@ -273,15 +348,15 @@
       "rawMentionCount": 3.792481250360578,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum",
-        "cinecube"
+        "cinecube",
+        "filmforum"
       ],
       "venueNames": [
-        "필름포럼",
-        "씨네큐브 광화문"
+        "씨네큐브 광화문",
+        "필름포럼"
       ],
       "nextDate": "2026-11-13",
-      "nextTime": "12:40",
+      "nextTime": "18:05",
       "evidence": [
         {
           "title": "룩백 보고 고레에다 맛탱이 간걸 느낌",
@@ -325,66 +400,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/rfH6BJ9ZRw31awgUtQhN6Cug5yu.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "베리 베리 스트레인지 러브",
-      "posterUrl": "/assets/recommendation-posters/b98517ed1f81d977.webp",
-      "localPosterUrl": "/assets/recommendation-posters/b98517ed1f81d977.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://indiespace.kr/notice/5494",
-      "score": 34.3,
-      "signal": 4.3,
-      "positiveSignal": 4.3,
-      "mentionCount": 1.6,
-      "rawPositiveSignal": 6,
-      "rawMentionCount": 2.160964047443681,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "indiespace",
-        "filmforum"
-      ],
-      "venueNames": [
-        "인디스페이스",
-        "필름포럼"
-      ],
-      "nextDate": "2026-11-15",
-      "nextTime": "11:20",
-      "evidence": [
-        {
-          "title": "베리베리 스트레인지 러브 후기",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881983&page=1",
-          "date": "2026-11-12",
-          "positive": 6,
-          "rawPositive": 6,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "재밌",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            },
-            {
-              "term": "괜찮",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 4,
-          "commentPositive": 2,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FdljPgs%2FdJMcafPz6KA%2FAAAAAAAAAAAAAAAAAAAAALvR80IxRnhNaGOdXSpHBZwuVZsMEZePdCi0PlV7i7ut%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1796050799%26allow_ip%3D%26allow_referer%3D%26signature%3DRH2ytYzMFFEn0G6a5fXffpRwbao%253D"
     }
   ],
   "festivalPicks": [],
@@ -393,11 +408,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 43,
+    "fetchedPostCount": 146,
     "listedPostCount": 292,
-    "detailedPostCount": 3,
-    "commentFetchCount": 3,
-    "commentCount": 9,
+    "detailedPostCount": 6,
+    "commentFetchCount": 6,
+    "commentCount": 15,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -406,7 +421,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-11-13",
     "candidateWindowEnd": "2026-11-27",
-    "candidateCount": 103,
+    "candidateCount": 105,
     "seedLookbackDays": 3,
     "seedStart": "2026-11-11",
     "listLookbackDays": 1,
