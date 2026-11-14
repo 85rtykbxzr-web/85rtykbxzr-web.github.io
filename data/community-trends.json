@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-14T03:13:56.402Z",
+  "generatedAt": "2026-11-14T06:11:37.696Z",
   "weekStart": "2026-11-12",
   "weekEnd": "2026-11-14",
   "windowStart": "2026-11-12",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-14&movieCd=029805&playSDT=2026-11-14&screenId=01&showSeq=4",
-      "score": 87.2,
-      "signal": 2.9,
-      "positiveSignal": 2.9,
-      "mentionCount": 7.2,
-      "rawPositiveSignal": 4,
-      "rawMentionCount": 9.877443751081735,
+      "score": 128.1,
+      "signal": 4.9,
+      "positiveSignal": 4.9,
+      "mentionCount": 10.5,
+      "rawPositiveSignal": 6,
+      "rawMentionCount": 13.169925001442312,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -110,17 +110,25 @@
           "dayWeight": 0.72
         },
         {
-          "title": "와호나 가능사 뭔가 더 만족도 높았음?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1882387&page=1",
+          "title": "와호나는 개념쌓기 리뷰봐라",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1882419&page=1",
           "date": "2026-11-14",
-          "positive": 0,
-          "rawPositive": 0,
+          "positive": 2,
+          "rawPositive": 2,
           "negative": 0,
-          "positiveHits": [],
+          "positiveHits": [
+            {
+              "term": "봐라",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
           "negativeHits": [],
-          "questionLike": true,
+          "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 1,
+          "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
@@ -136,12 +144,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.koreafilm.or.kr/cinematheque/schedule",
-      "score": 76.1,
+      "score": 79,
       "signal": 10,
       "positiveSignal": 10,
-      "mentionCount": 3.6,
+      "mentionCount": 3.8,
       "rawPositiveSignal": 10,
-      "rawMentionCount": 4.160964047443681,
+      "rawMentionCount": 4.453445297804259,
       "scheduleBackfill": false,
       "venueIds": [
         "kofa"
@@ -170,7 +178,7 @@
         },
         {
           "title": "갤주 kmdb 올해 톱7 마티슈프림 선정 이거지 ㅋㅋㅋ",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1882361&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1882361&page=2",
           "date": "2026-11-14",
           "positive": 10,
           "rawPositive": 10,
@@ -194,7 +202,7 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 3,
+          "commentCount": 5,
           "commentPositive": 4,
           "commentNegative": 0,
           "dayWeight": 1
@@ -271,64 +279,66 @@
     },
     {
       "rank": 4,
-      "title": "눈 둘 데가 없네",
-      "posterUrl": "/assets/recommendation-posters/242c9b28acea884f.webp",
-      "localPosterUrl": "/assets/recommendation-posters/242c9b28acea884f.webp",
+      "title": "아사코",
+      "posterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
+      "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=123&mId=M000121827&playDt=20261114&tsId=TS0044&pno=6",
-      "score": 26.3,
-      "signal": 2.9,
-      "positiveSignal": 2.9,
-      "mentionCount": 1.1,
-      "rawPositiveSignal": 4,
-      "rawMentionCount": 1.5,
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261114&tsId=TS0057&pno=4",
+      "score": 31.2,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 2.7,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 3.584962500721156,
       "scheduleBackfill": false,
       "venueIds": [
-        "sangsangmadang",
-        "cinecube",
-        "indiespace",
         "filmforum",
-        "kucine",
-        "sac"
+        "cinecube",
+        "sangsangmadang"
       ],
       "venueNames": [
-        "KT&G 상상마당 시네마",
-        "씨네큐브 광화문",
-        "인디스페이스",
         "필름포럼",
-        "KU시네마테크",
-        "서울아트시네마"
+        "씨네큐브 광화문",
+        "KT&G 상상마당 시네마"
       ],
       "nextDate": "2026-11-14",
-      "nextTime": "20:40",
+      "nextTime": "15:50",
       "evidence": [
         {
-          "title": "( 스포) <눈 둘 데가 없네> 최명길 선생 연기",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1882251&page=1",
-          "date": "2026-11-13",
-          "positive": 4,
-          "rawPositive": 4,
+          "title": "이번주 금요일 갤주 아사코 gv ㅈㄴ기대되면 개추 ㅋㅋ",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881865&page=3",
+          "date": "2026-11-12",
+          "positive": 0,
+          "rawPositive": 0,
           "negative": 0,
-          "positiveHits": [
-            {
-              "term": "감탄",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
+          "positiveHits": [],
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 1,
+          "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
+        },
+        {
+          "title": "어제 아사코 갤주 지비 후기",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1882403&page=1",
+          "date": "2026-11-14",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
-      "posterSourceUrl": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FKQ3U4%2FdJMcagtJijO%2FAAAAAAAAAAAAAAAAAAAAAKH4gcbmONCbAZfz-yMnnRvJMuh7ha9n8OfVoQ04Vj1U%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1796050799%26allow_ip%3D%26allow_referer%3D%26signature%3DIdgNdHJb8BX%252Bl6skOO5rov1XIV0%253D"
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
     }
   ],
   "festivalPicks": [],
@@ -337,11 +347,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 63,
+    "fetchedPostCount": 97,
     "listedPostCount": 292,
-    "detailedPostCount": 5,
-    "commentFetchCount": 5,
-    "commentCount": 7,
+    "detailedPostCount": 9,
+    "commentFetchCount": 9,
+    "commentCount": 15,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -350,7 +360,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-11-14",
     "candidateWindowEnd": "2026-11-28",
-    "candidateCount": 103,
+    "candidateCount": 100,
     "seedLookbackDays": 3,
     "seedStart": "2026-11-12",
     "listLookbackDays": 1,
