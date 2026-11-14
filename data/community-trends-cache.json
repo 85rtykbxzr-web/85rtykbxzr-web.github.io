@@ -2,174 +2,25 @@
   "version": 3,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-11-12",
-  "windowEnd": "2026-11-14",
+  "windowStart": "2026-11-13",
+  "windowEnd": "2026-11-15",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-11-12",
       "2026-11-13",
-      "2026-11-14"
+      "2026-11-14",
+      "2026-11-15"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-11-14",
-    "lastWindowEnd": "2026-11-14",
+    "lastWindowStart": "2026-11-15",
+    "lastWindowEnd": "2026-11-15",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-14T12:15:48.983Z",
+  "updatedAt": "2026-11-14T15:21:26.754Z",
   "days": {
-    "2026-11-12": {
-      "베리베리스트레인지러브": {
-        "title": "베리 베리 스트레인지 러브",
-        "positiveSignal": 6,
-        "mentionCount": 2.160964047443681,
-        "evidence": [
-          {
-            "title": "베리베리 스트레인지 러브 후기",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881983&page=1",
-            "date": "2026-11-12",
-            "positive": 6,
-            "rawPositive": 6,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "재밌",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              },
-              {
-                "term": "괜찮",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 4,
-            "commentPositive": 2,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "룩백": {
-        "title": "룩백(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 2,
-        "evidence": [
-          {
-            "title": "룩백 스크린 큰곳에서 보는거 중요함?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881935&page=2",
-            "date": "2026-11-12",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 3,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "와일드호스나인": {
-        "title": "와일드 호스 나인",
-        "positiveSignal": 0,
-        "mentionCount": 1.792481250360578,
-        "evidence": [
-          {
-            "title": "와호나 가족들이랑 보는 거 어떰",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881916&page=2",
-            "date": "2026-11-12",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "거짓말4k무삭제완전판": {
-        "title": "거짓말: 4K 무삭제 완전판",
-        "positiveSignal": 0,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "거짓말 이거 볼 의미가 있는 작품맞냐?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881871&page=3",
-            "date": "2026-11-12",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "아사코": {
-        "title": "아사코(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 1.792481250360578,
-        "evidence": [
-          {
-            "title": "이번주 금요일 갤주 아사코 gv ㅈㄴ기대되면 개추 ㅋㅋ",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881865&page=3",
-            "date": "2026-11-12",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "헤븐노우즈왓": {
-        "title": "헤븐 노우즈 왓",
-        "positiveSignal": 0,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "스포) 헤븐 노우즈 왓 보고 옴",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881858&page=3",
-            "date": "2026-11-12",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-11-13": {
       "와일드호스나인": {
         "title": "와일드 호스 나인",
@@ -677,6 +528,30 @@
             "positiveHits": [],
             "negativeHits": [],
             "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      }
+    },
+    "2026-11-15": {
+      "와일드호스나인": {
+        "title": "와일드 호스 나인",
+        "positiveSignal": 0,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "와호나 볼땐 걍그랫는데",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1882579&page=1",
+            "date": "2026-11-15",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
             "reviewQuestion": false,
             "commentCount": 0,
             "commentPositive": 0,

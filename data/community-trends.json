@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-14T12:15:49.534Z",
-  "weekStart": "2026-11-12",
-  "weekEnd": "2026-11-14",
-  "windowStart": "2026-11-12",
-  "windowEnd": "2026-11-14",
+  "generatedAt": "2026-11-14T15:21:27.692Z",
+  "weekStart": "2026-11-13",
+  "weekEnd": "2026-11-15",
+  "windowStart": "2026-11-13",
+  "windowEnd": "2026-11-15",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-15&movieCd=029805&playSDT=2026-11-15&screenId=01&showSeq=2",
-      "score": 130.2,
-      "signal": 4.9,
-      "positiveSignal": 4.9,
-      "mentionCount": 10.7,
+      "score": 98.2,
+      "signal": 3.5,
+      "positiveSignal": 3.5,
+      "mentionCount": 8,
       "rawPositiveSignal": 6,
-      "rawMentionCount": 13.377443751081735,
+      "rawMentionCount": 12.584962500721156,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -37,22 +37,6 @@
       "nextDate": "2026-11-15",
       "nextTime": "11:55",
       "evidence": [
-        {
-          "title": "와호나 가족들이랑 보는 거 어떰",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1881916&page=2",
-          "date": "2026-11-12",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "와호나 보고 왔는데",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1882276&page=1",
@@ -75,7 +59,7 @@
           "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "부갤주 와호나 리뷰떴당",
@@ -91,7 +75,7 @@
           "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "와일드호스나인 한 번 더 볼까",
@@ -107,7 +91,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "와호나는 개념쌓기 리뷰봐라",
@@ -131,7 +115,23 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
+        },
+        {
+          "title": "와호나 사전지식 뭐알고 봐야됨?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1882410&page=3",
+          "date": "2026-11-14",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 6,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/bh4wFW0B7fVtUOT9xfeugJJYKWw.jpg"
@@ -144,10 +144,10 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.koreafilm.or.kr/cinematheque/schedule",
-      "score": 79,
-      "signal": 10,
-      "positiveSignal": 10,
-      "mentionCount": 3.8,
+      "score": 57,
+      "signal": 7.2,
+      "positiveSignal": 7.2,
+      "mentionCount": 2.8,
       "rawPositiveSignal": 10,
       "rawMentionCount": 4.453445297804259,
       "scheduleBackfill": false,
@@ -174,7 +174,7 @@
           "commentCount": 4,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "갤주 kmdb 올해 톱7 마티슈프림 선정 이거지 ㅋㅋㅋ",
@@ -205,7 +205,7 @@
           "commentCount": 5,
           "commentPositive": 4,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/b6ae1sqOtuRC7An1nmBJc2sECPK.jpg"
@@ -218,10 +218,10 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121958&playDt=20261117&tsId=TS0056&pno=3",
-      "score": 49.3,
-      "signal": 4.3,
-      "positiveSignal": 4.3,
-      "mentionCount": 3.2,
+      "score": 35.6,
+      "signal": 3.1,
+      "positiveSignal": 3.1,
+      "mentionCount": 2.3,
       "rawPositiveSignal": 6,
       "rawMentionCount": 3.792481250360578,
       "scheduleBackfill": false,
@@ -256,7 +256,7 @@
           "commentCount": 5,
           "commentPositive": 6,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "오랜만에 힙스터 짓 좀 해야겠다 마더메리 빨아야겠다",
@@ -272,7 +272,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/aa5hoiIBcxy6PEvVgAJAFsMeTi7.jpg"
@@ -285,10 +285,10 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-27&movieCd=030158&playSDT=2026-11-27&screenId=01&showSeq=5",
-      "score": 47.5,
-      "signal": 8,
-      "positiveSignal": 8,
-      "mentionCount": 1.5,
+      "score": 34.8,
+      "signal": 5.8,
+      "positiveSignal": 5.8,
+      "mentionCount": 1.1,
       "rawPositiveSignal": 8,
       "rawMentionCount": 1.5,
       "scheduleBackfill": false,
@@ -330,7 +330,7 @@
           "commentCount": 1,
           "commentPositive": 2,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/vSPlg3aoPCK1RtZbdKqr2swuktY.jpg"
@@ -342,24 +342,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 179,
+    "fetchedPostCount": 5,
     "listedPostCount": 292,
-    "detailedPostCount": 11,
-    "commentFetchCount": 11,
-    "commentCount": 18,
+    "detailedPostCount": 1,
+    "commentFetchCount": 1,
+    "commentCount": 0,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-11-13",
-    "newestScannedDate": "2026-11-14",
+    "newestScannedDate": "2026-11-15",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-11-14",
-    "candidateWindowEnd": "2026-11-28",
-    "candidateCount": 97,
+    "candidateWindowStart": "2026-11-15",
+    "candidateWindowEnd": "2026-11-29",
+    "candidateCount": 100,
     "seedLookbackDays": 3,
-    "seedStart": "2026-11-12",
+    "seedStart": "2026-11-13",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-11-14",
+    "listWindowStart": "2026-11-15",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -367,7 +367,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-11-14"
+      "2026-11-15"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [
