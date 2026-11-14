@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-11-15",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-14T18:11:42.275Z",
+  "updatedAt": "2026-11-14T21:17:13.866Z",
   "days": {
     "2026-11-13": {
       "와일드호스나인": {
@@ -537,11 +537,56 @@
       }
     },
     "2026-11-15": {
+      "후광": {
+        "title": "후광",
+        "positiveSignal": 4,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "스포있)후광 비추천",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1882611&page=1",
+            "date": "2026-11-15",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "추천",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "와일드호스나인": {
         "title": "와일드 호스 나인",
         "positiveSignal": 0,
-        "mentionCount": 2.792481250360578,
+        "mentionCount": 4.792481250360578,
         "evidence": [
+          {
+            "title": "와호나 왕복 2시간 걸려서 보러갈만함?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1882599&page=1",
+            "date": "2026-11-15",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
           {
             "title": "와호나 보러갈건데 이니셰린이랑 많이 다른가",
             "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1882595&page=1",
@@ -553,7 +598,7 @@
             "negativeHits": [],
             "questionLike": true,
             "reviewQuestion": false,
-            "commentCount": 0,
+            "commentCount": 1,
             "commentPositive": 0,
             "commentNegative": 0
           },
