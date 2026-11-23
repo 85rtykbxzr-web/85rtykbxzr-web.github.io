@@ -2,93 +2,25 @@
   "version": 3,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-11-21",
-  "windowEnd": "2026-11-23",
+  "windowStart": "2026-11-22",
+  "windowEnd": "2026-11-24",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-11-21",
       "2026-11-22",
-      "2026-11-23"
+      "2026-11-23",
+      "2026-11-24"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-11-23",
-    "lastWindowEnd": "2026-11-23",
+    "lastWindowStart": "2026-11-24",
+    "lastWindowEnd": "2026-11-24",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-23T12:22:10.012Z",
+  "updatedAt": "2026-11-23T15:17:05.236Z",
   "days": {
-    "2026-11-21": {
-      "침묵의빛": {
-        "title": "침묵의 빛(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "침묵의 빛 무조건 내려가기전에 영화관에서 봐야되냐?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884046&page=6",
-            "date": "2026-11-21",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "마른잎": {
-        "title": "마른 잎(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "<마른잎> 재도전 가즈아",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1883995&page=7",
-            "date": "2026-11-21",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "피오르": {
-        "title": "피오르",
-        "positiveSignal": 0,
-        "mentionCount": 2,
-        "evidence": [
-          {
-            "title": "피오르 즈엉품 떴네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1883994&page=7",
-            "date": "2026-11-21",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-11-22": {
       "두검사": {
         "title": "두 검사",
@@ -523,7 +455,8 @@
           }
         ]
       }
-    }
+    },
+    "2026-11-24": {}
   },
   "festivals": {}
 }
