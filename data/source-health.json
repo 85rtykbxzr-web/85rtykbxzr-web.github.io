@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-11-23T15:16:41.461Z",
+  "checkedAt": "2026-11-23T18:23:28.914Z",
   "health": [
     {
       "sourceId": "momo-dtryx-showtimes",
@@ -8,7 +8,7 @@
       "status": null,
       "blocking": false,
       "deferredToBrowser": true,
-      "checkedAt": "2026-11-23T15:16:41.461Z",
+      "checkedAt": "2026-11-23T18:23:28.914Z",
       "parserStatus": "browser-api",
       "liveSessionCount": 0,
       "note": "Official timetable and seats are fetched in the visitor browser; no server verification is claimed."
@@ -20,7 +20,7 @@
       "status": null,
       "blocking": false,
       "deferredToBrowser": true,
-      "checkedAt": "2026-11-23T15:16:41.461Z",
+      "checkedAt": "2026-11-23T18:23:28.914Z",
       "parserStatus": "browser-api",
       "liveSessionCount": 0,
       "note": "Official timetable and seats are fetched in the visitor browser; no server verification is claimed."
@@ -32,7 +32,7 @@
       "status": null,
       "blocking": false,
       "deferredToBrowser": true,
-      "checkedAt": "2026-11-23T15:16:41.461Z",
+      "checkedAt": "2026-11-23T18:23:28.914Z",
       "parserStatus": "browser-api",
       "liveSessionCount": 0,
       "note": "Official timetable and seats are fetched in the visitor browser; no server verification is claimed."
@@ -44,7 +44,7 @@
       "status": null,
       "blocking": false,
       "deferredToBrowser": true,
-      "checkedAt": "2026-11-23T15:16:41.461Z",
+      "checkedAt": "2026-11-23T18:23:28.914Z",
       "parserStatus": "browser-api",
       "liveSessionCount": 0,
       "note": "Official timetable and seats are fetched in the visitor browser; no server verification is claimed."
@@ -56,7 +56,7 @@
       "status": null,
       "blocking": false,
       "deferredToBrowser": true,
-      "checkedAt": "2026-11-23T15:16:41.461Z",
+      "checkedAt": "2026-11-23T18:23:28.914Z",
       "parserStatus": "browser-api",
       "liveSessionCount": 0,
       "note": "Official timetable and seats are fetched in the visitor browser; no server verification is claimed."
@@ -68,7 +68,7 @@
       "status": null,
       "blocking": false,
       "deferredToBrowser": true,
-      "checkedAt": "2026-11-23T15:16:41.461Z",
+      "checkedAt": "2026-11-23T18:23:28.914Z",
       "parserStatus": "browser-api",
       "liveSessionCount": 0,
       "note": "Official timetable and seats are fetched in the visitor browser; no server verification is claimed."
@@ -80,7 +80,7 @@
       "status": null,
       "blocking": false,
       "deferredToBrowser": true,
-      "checkedAt": "2026-11-23T15:16:41.461Z",
+      "checkedAt": "2026-11-23T18:23:28.914Z",
       "parserStatus": "browser-api",
       "liveSessionCount": 0,
       "note": "Official timetable and seats are fetched in the visitor browser; no server verification is claimed."
@@ -91,9 +91,9 @@
       "ok": true,
       "blocking": false,
       "status": 200,
-      "checkedAt": "2026-11-23T15:15:54.697Z",
+      "checkedAt": "2026-11-23T18:21:48.418Z",
       "warning": "",
-      "contentHash": "afdfbffdf1201161ca675817c0282fae595128c6133fe26261fde2f0d9704239",
+      "contentHash": "977e0bb9a200e8be572d959b9503f14e6af8fc683f0e8c7bc12f4a0eddcb4a1c",
       "bytes": 83079
     },
     {
@@ -102,7 +102,7 @@
       "ok": true,
       "blocking": false,
       "status": 200,
-      "checkedAt": "2026-11-23T15:15:55.758Z",
+      "checkedAt": "2026-11-23T18:21:49.485Z",
       "warning": "",
       "contentHash": "60c8fa454fe6c97c7c1495dcd7b4ce0686d3dcbad353d884048713b54fb8a7fb",
       "bytes": 52699
@@ -113,21 +113,19 @@
       "ok": true,
       "blocking": false,
       "status": 200,
-      "checkedAt": "2026-11-23T15:15:57.414Z",
+      "checkedAt": "2026-11-23T18:21:51.124Z",
       "warning": "",
-      "contentHash": "41180a85e2d9aa8b73f27498a7e26f0a14758b857645c32bd3eac6e7ca0e806e",
-      "bytes": 345925
+      "contentHash": "ccdaa713f9bacebbb1c5bca3ad2bce8c582871a482488f2107e8453074e4f3e6",
+      "bytes": 345924
     },
     {
       "sourceId": "indiespace-program",
       "url": "https://indiespace.kr/",
-      "ok": true,
+      "ok": false,
       "blocking": false,
-      "status": 200,
-      "checkedAt": "2026-11-23T15:15:58.568Z",
-      "warning": "",
-      "contentHash": "4e76b6a323287c10cfe7f68cf628a8f5d8841f57a7f1f7c93c54673b49b029b6",
-      "bytes": 43054
+      "status": 0,
+      "checkedAt": "2026-11-23T18:21:52.164Z",
+      "warning": "source snapshot unavailable: fetch failed for https://indiespace.kr/: TypeError - fetch failed - UND_ERR_CONNECT_TIMEOUT - Connect Timeout Error (attempted address: indiespace.kr:443, timeout: 10000ms)"
     },
     {
       "sourceId": "cinecube-event",
@@ -135,9 +133,9 @@
       "ok": true,
       "blocking": false,
       "status": 200,
-      "checkedAt": "2026-11-23T15:16:00.578Z",
+      "checkedAt": "2026-11-23T18:22:24.532Z",
       "warning": "",
-      "contentHash": "20b6999da97182d8bebaf655baa30147b236a260653912a31cd60cfb04626f1a",
+      "contentHash": "44817d2affd7ea8d475aa58bd138ce0d17e63984770693aac2ddd39b2645f0c1",
       "bytes": 80930
     },
     {
@@ -146,7 +144,7 @@
       "ok": false,
       "blocking": false,
       "status": 0,
-      "checkedAt": "2026-11-23T15:16:01.740Z",
+      "checkedAt": "2026-11-23T18:22:25.710Z",
       "warning": "source snapshot unavailable: fetch failed for https://www.arthousemomo.co.kr/pages/board.php?bo_table=special_program: Error - fetch failed for https://www.arthousemomo.co.kr/pages/board.php?bo_table=special_program&ckattempt=1: Error - Source returned an unresolved browser challenge - Source returned an unresolved browser challenge"
     },
     {
@@ -155,9 +153,9 @@
       "ok": true,
       "blocking": false,
       "status": 200,
-      "checkedAt": "2026-11-23T15:16:10.400Z",
+      "checkedAt": "2026-11-23T18:22:34.019Z",
       "warning": "",
-      "contentHash": "3256369a761046875abb0d440b045d6c01b659120404b58a7e21ebd3fa59d870",
+      "contentHash": "c9a61699f1c2776fabc0dc758b7e1767bd5cdbe4b1e3b8ae48d8006df13846e5",
       "bytes": 24827
     },
     {
@@ -166,9 +164,9 @@
       "ok": true,
       "blocking": false,
       "status": 200,
-      "checkedAt": "2026-11-23T15:16:12.006Z",
+      "checkedAt": "2026-11-23T18:22:35.465Z",
       "warning": "",
-      "contentHash": "a32c7df7f101b579617d86a67b5973a89a0f671b1591427a56f2e5aebbd9aca0",
+      "contentHash": "c38ee7a2db668f8a7002285b6786571f0a9947c095262c9a22a90aec40733f51",
       "bytes": 204873
     },
     {
@@ -177,7 +175,7 @@
       "ok": null,
       "blocking": false,
       "status": null,
-      "checkedAt": "2026-11-23T15:16:13.944Z",
+      "checkedAt": "2026-11-23T18:22:37.012Z",
       "skipped": true,
       "note": "아리랑 행사 페이지는 CI에서 8443 포트 연결 타임아웃이 간헐적으로 발생해 자동 갱신에서 제외하고, 상영시간표는 Dtryx API로 갱신합니다."
     },
@@ -187,9 +185,9 @@
       "ok": true,
       "blocking": false,
       "status": 200,
-      "checkedAt": "2026-11-23T15:16:13.945Z",
+      "checkedAt": "2026-11-23T18:22:37.012Z",
       "warning": "",
-      "contentHash": "b24ae04d225781f037eb0acdc632d9e95c6adc4dac7dbf4cd0454324001956d5",
+      "contentHash": "5567123f7b35aa7d6d0953a8096d2845731dc415432e4b1868c5fd187f176ccb",
       "bytes": 24536
     },
     {
@@ -197,11 +195,11 @@
       "url": "https://kucinema.net/make/",
       "ok": true,
       "blocking": false,
-      "status": 200,
-      "checkedAt": "2026-11-23T15:16:14.348Z",
+      "status": 202,
+      "checkedAt": "2026-11-23T18:22:37.509Z",
       "warning": "",
-      "contentHash": "41cf963d0067fc9411d7575a7b23fd5ea83af2f4245dc158c81edfb8b0e32d2f",
-      "bytes": 17146
+      "contentHash": "6081d7b941f0733a725b789f5fbb8be753fca2da8bc682c90f456a1c7162715b",
+      "bytes": 173
     },
     {
       "sourceId": "artnine-program",
@@ -209,7 +207,7 @@
       "ok": true,
       "blocking": false,
       "status": 200,
-      "checkedAt": "2026-11-23T15:16:15.194Z",
+      "checkedAt": "2026-11-23T18:22:38.269Z",
       "warning": "",
       "contentHash": "15f896e8bfc01ddb040ab7986c31e179e135c756f359eaf0751b6295fd2b3d31",
       "bytes": 10717
@@ -220,7 +218,7 @@
       "ok": true,
       "blocking": false,
       "status": 200,
-      "checkedAt": "2026-11-23T15:16:15.778Z",
+      "checkedAt": "2026-11-23T18:22:38.927Z",
       "warning": "",
       "contentHash": "6c76c8a1d4f822aaa4dafadc1a62ba0bcd3d47313797cac364abe146931aae5c",
       "bytes": 139815
@@ -231,7 +229,7 @@
       "ok": true,
       "blocking": true,
       "status": 200,
-      "checkedAt": "2026-11-23T15:16:41.461Z",
+      "checkedAt": "2026-11-23T18:23:28.914Z",
       "parserStatus": "live-api",
       "liveSessionCount": 107,
       "liveDateCount": 10,
@@ -247,7 +245,7 @@
       "ok": true,
       "blocking": true,
       "status": 200,
-      "checkedAt": "2026-11-23T15:16:41.461Z",
+      "checkedAt": "2026-11-23T18:23:28.914Z",
       "parserStatus": "live-api",
       "liveSessionCount": 25,
       "liveDateCount": 7,
@@ -263,7 +261,7 @@
       "ok": true,
       "blocking": true,
       "status": 200,
-      "checkedAt": "2026-11-23T15:16:41.461Z",
+      "checkedAt": "2026-11-23T18:23:28.914Z",
       "parserStatus": "live-api",
       "liveSessionCount": 30,
       "liveDateCount": 3,
@@ -279,7 +277,7 @@
       "ok": true,
       "blocking": true,
       "status": 200,
-      "checkedAt": "2026-11-23T15:16:41.461Z",
+      "checkedAt": "2026-11-23T18:23:28.914Z",
       "parserStatus": "live-api",
       "liveSessionCount": 32,
       "liveDateCount": 6,
@@ -295,26 +293,10 @@
       "ok": true,
       "blocking": true,
       "status": 200,
-      "checkedAt": "2026-11-23T15:16:41.461Z",
+      "checkedAt": "2026-11-23T18:23:28.914Z",
       "parserStatus": "live-html",
       "liveSessionCount": 55,
       "liveDateCount": 16,
-      "upstreamDateCount": null,
-      "upstreamActiveDateCount": null,
-      "fallbackMerged": false,
-      "fallbackReason": "",
-      "fallbackSessionCount": 0
-    },
-    {
-      "sourceId": "indiespace-official-posts",
-      "url": "https://indiespace.kr/",
-      "ok": true,
-      "blocking": true,
-      "status": 200,
-      "checkedAt": "2026-11-23T15:16:41.461Z",
-      "parserStatus": "live-html",
-      "liveSessionCount": 34,
-      "liveDateCount": 10,
       "upstreamDateCount": null,
       "upstreamActiveDateCount": null,
       "fallbackMerged": false,
@@ -327,7 +309,7 @@
       "ok": true,
       "blocking": true,
       "status": 200,
-      "checkedAt": "2026-11-23T15:16:41.461Z",
+      "checkedAt": "2026-11-23T18:23:28.914Z",
       "parserStatus": "live-html",
       "liveSessionCount": 20,
       "liveDateCount": 6,
@@ -343,7 +325,7 @@
       "ok": true,
       "blocking": true,
       "status": 200,
-      "checkedAt": "2026-11-23T15:16:41.461Z",
+      "checkedAt": "2026-11-23T18:23:28.914Z",
       "parserStatus": "live-html",
       "liveSessionCount": 29,
       "liveDateCount": 11,
@@ -352,6 +334,18 @@
       "fallbackMerged": false,
       "fallbackReason": "",
       "fallbackSessionCount": 0
+    },
+    {
+      "sourceId": "indiespace-official-posts",
+      "ok": true,
+      "blocking": false,
+      "status": 206,
+      "checkedAt": "2026-11-23T18:23:28.914Z",
+      "parserStatus": "live-html",
+      "warning": "fetch failed for https://indiespace.kr/: TypeError - fetch failed - UND_ERR_CONNECT_TIMEOUT - Connect Timeout Error (attempted address: indiespace.kr:443, timeout: 10000ms); no fallback configured; kept 34 existing sessions across 10 date(s)",
+      "preservedExisting": true,
+      "liveSessionCount": 34,
+      "liveDateCount": 10
     }
   ]
 }

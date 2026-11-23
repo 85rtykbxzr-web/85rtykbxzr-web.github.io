@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-23T15:17:08.623Z",
+  "generatedAt": "2026-11-23T18:24:25.459Z",
   "weekStart": "2026-11-22",
   "weekEnd": "2026-11-24",
   "windowStart": "2026-11-22",
@@ -371,7 +371,7 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 0,
+    "fetchedPostCount": 18,
     "listedPostCount": 292,
     "detailedPostCount": 0,
     "commentFetchCount": 0,
@@ -380,7 +380,7 @@
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-11-22",
-    "newestScannedDate": "2026-11-23",
+    "newestScannedDate": "2026-11-24",
     "scanMode": "daily",
     "candidateWindowStart": "2026-11-24",
     "candidateWindowEnd": "2026-12-08",
@@ -395,7 +395,9 @@
       "windowDays": 3,
       "recencyDecay": 0.72
     },
-    "scoredPostDays": [],
+    "scoredPostDays": [
+      "2026-11-24"
+    ],
     "signalMode": "positive-only",
     "positiveTermGroups": [
       {
