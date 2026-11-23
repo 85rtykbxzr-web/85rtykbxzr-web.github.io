@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-23T12:11:42.014Z",
+  "generatedAt": "2026-11-23T12:22:14.197Z",
   "weekStart": "2026-11-21",
   "weekEnd": "2026-11-23",
   "windowStart": "2026-11-21",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000122044&playDt=20261125&tsId=TS0056&pno=1",
-      "score": 130.8,
+      "score": 152.6,
       "signal": 4,
       "positiveSignal": 4,
-      "mentionCount": 11.1,
+      "mentionCount": 13.3,
       "rawPositiveSignal": 4,
-      "rawMentionCount": 11.89231742277876,
+      "rawMentionCount": 14.073602462471115,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum",
@@ -70,6 +70,22 @@
           "dayWeight": 0.72
         },
         {
+          "title": "마른잎 같은건 진짜 보기싫은데 누갤자격박탈이냐",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884483&page=1",
+          "date": "2026-11-23",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
           "title": "아니 마른잎 144p인게",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884480&page=1",
           "date": "2026-11-23",
@@ -80,7 +96,7 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 1,
+          "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
@@ -96,31 +112,7 @@
           "negativeHits": [],
           "questionLike": true,
           "reviewQuestion": false,
-          "commentCount": 5,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        },
-        {
-          "title": "마른잎 + 물안에서 연속상영해주면 안되냐",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884412&page=2",
-          "date": "2026-11-23",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "재밋",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
+          "commentCount": 6,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
@@ -395,11 +387,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 120,
+    "fetchedPostCount": 122,
     "listedPostCount": 292,
-    "detailedPostCount": 10,
-    "commentFetchCount": 10,
-    "commentCount": 25,
+    "detailedPostCount": 11,
+    "commentFetchCount": 11,
+    "commentCount": 29,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
