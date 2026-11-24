@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-24T03:10:30.347Z",
+  "generatedAt": "2026-11-24T06:16:29.282Z",
   "weekStart": "2026-11-22",
   "weekEnd": "2026-11-24",
   "windowStart": "2026-11-22",
@@ -111,7 +111,7 @@
       "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261124&tsId=TS0057&pno=2",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261125&tsId=TS0056&pno=3",
       "score": 65.8,
       "signal": 2.1,
       "positiveSignal": 2.1,
@@ -129,8 +129,8 @@
         "씨네큐브 광화문",
         "KT&G 상상마당 시네마"
       ],
-      "nextDate": "2026-11-24",
-      "nextTime": "12:20",
+      "nextDate": "2026-11-25",
+      "nextTime": "12:30",
       "evidence": [
         {
           "title": "하마구치 팬이 늘긴 했나보네. 아사코 재개봉 많이 봤네",
@@ -225,6 +225,67 @@
     },
     {
       "rank": 3,
+      "title": "인사이드 르윈",
+      "posterUrl": "/assets/recommendation-posters/f3b3b469ce74fd51.webp",
+      "localPosterUrl": "/assets/recommendation-posters/f3b3b469ce74fd51.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-12-02&movieCd=020243&playSDT=2026-12-02&screenId=01&showSeq=3",
+      "score": 41,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 4,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 4,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "cinecube",
+        "filmforum"
+      ],
+      "venueNames": [
+        "씨네큐브 광화문",
+        "필름포럼"
+      ],
+      "nextDate": "2026-12-02",
+      "nextTime": "13:30",
+      "evidence": [
+        {
+          "title": "12월에 코엔 노나없 인사이드르윈 2개 개봉?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884544&page=1",
+          "date": "2026-11-24",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "인사이드 르윈 갤주 gv 예정",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884542&page=1",
+          "date": "2026-11-24",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 7,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cjiE3mMvDSYqVBh1iTmPs3RNY3x.jpg"
+    },
+    {
+      "rank": 4,
       "title": "로즈",
       "posterUrl": "/assets/recommendation-posters/f96f43564fd3225b.webp",
       "localPosterUrl": "/assets/recommendation-posters/f96f43564fd3225b.webp",
@@ -305,67 +366,6 @@
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261115_dff2c5d1.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "인사이드 르윈",
-      "posterUrl": "/assets/recommendation-posters/f3b3b469ce74fd51.webp",
-      "localPosterUrl": "/assets/recommendation-posters/f3b3b469ce74fd51.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-12-02&movieCd=020243&playSDT=2026-12-02&screenId=01&showSeq=3",
-      "score": 28.9,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 2.8,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 2.792481250360578,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "cinecube",
-        "filmforum"
-      ],
-      "venueNames": [
-        "씨네큐브 광화문",
-        "필름포럼"
-      ],
-      "nextDate": "2026-12-02",
-      "nextTime": "13:30",
-      "evidence": [
-        {
-          "title": "12월에 코엔 노나없 인사이드르윈 2개 개봉?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884544&page=1",
-          "date": "2026-11-24",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        },
-        {
-          "title": "인사이드 르윈 갤주 gv 예정",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884542&page=1",
-          "date": "2026-11-24",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cjiE3mMvDSYqVBh1iTmPs3RNY3x.jpg"
     }
   ],
   "festivalPicks": [],
@@ -374,11 +374,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 37,
+    "fetchedPostCount": 64,
     "listedPostCount": 292,
-    "detailedPostCount": 2,
-    "commentFetchCount": 2,
-    "commentCount": 2,
+    "detailedPostCount": 3,
+    "commentFetchCount": 3,
+    "commentCount": 10,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -387,7 +387,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-11-24",
     "candidateWindowEnd": "2026-12-08",
-    "candidateCount": 106,
+    "candidateCount": 109,
     "seedLookbackDays": 3,
     "seedStart": "2026-11-22",
     "listLookbackDays": 1,
