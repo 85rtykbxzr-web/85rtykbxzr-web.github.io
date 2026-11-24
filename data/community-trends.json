@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-24T15:19:39.866Z",
+  "generatedAt": "2026-11-24T18:10:09.704Z",
   "weekStart": "2026-11-23",
   "weekEnd": "2026-11-25",
   "windowStart": "2026-11-23",
@@ -108,6 +108,85 @@
     },
     {
       "rank": 2,
+      "title": "아사코",
+      "posterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
+      "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261125&tsId=TS0056&pno=3",
+      "score": 40.7,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 3.7,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 5.69615871138938,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "filmforum",
+        "cinecube",
+        "sangsangmadang"
+      ],
+      "venueNames": [
+        "필름포럼",
+        "씨네큐브 광화문",
+        "KT&G 상상마당 시네마"
+      ],
+      "nextDate": "2026-11-25",
+      "nextTime": "12:30",
+      "evidence": [
+        {
+          "title": "아사코 불륜남 근황",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884373&page=3",
+          "date": "2026-11-23",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 6,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "아사코 예고편 댓글 ㅋㅋ",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884372&page=3",
+          "date": "2026-11-23",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "아사코에 나오는 고양이",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884681&page=1",
+          "date": "2026-11-25",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
+    },
+    {
+      "rank": 3,
       "title": "인사이드 르윈",
       "posterUrl": "/assets/recommendation-posters/f3b3b469ce74fd51.webp",
       "localPosterUrl": "/assets/recommendation-posters/f3b3b469ce74fd51.webp",
@@ -168,7 +247,7 @@
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cjiE3mMvDSYqVBh1iTmPs3RNY3x.jpg"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "title": "세계의 주인",
       "posterUrl": "/assets/recommendation-posters/6651e3634039c7a6.webp",
       "localPosterUrl": "/assets/recommendation-posters/6651e3634039c7a6.webp",
@@ -225,69 +304,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cg679vCkXY9RH2iINLvdG68tzsQ.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "아사코",
-      "posterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
-      "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261125&tsId=TS0056&pno=3",
-      "score": 25.7,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 2.2,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 4.19615871138938,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "filmforum",
-        "cinecube",
-        "sangsangmadang"
-      ],
-      "venueNames": [
-        "필름포럼",
-        "씨네큐브 광화문",
-        "KT&G 상상마당 시네마"
-      ],
-      "nextDate": "2026-11-25",
-      "nextTime": "12:30",
-      "evidence": [
-        {
-          "title": "아사코 불륜남 근황",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884373&page=3",
-          "date": "2026-11-23",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 6,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "아사코 예고편 댓글 ㅋㅋ",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884372&page=3",
-          "date": "2026-11-23",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        }
-      ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
     }
   ],
   "festivalPicks": [],
@@ -296,11 +312,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 1,
+    "fetchedPostCount": 12,
     "listedPostCount": 292,
-    "detailedPostCount": 0,
-    "commentFetchCount": 0,
-    "commentCount": 0,
+    "detailedPostCount": 1,
+    "commentFetchCount": 1,
+    "commentCount": 1,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
