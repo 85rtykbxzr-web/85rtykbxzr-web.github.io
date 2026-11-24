@@ -2,280 +2,25 @@
   "version": 3,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-11-22",
-  "windowEnd": "2026-11-24",
+  "windowStart": "2026-11-23",
+  "windowEnd": "2026-11-25",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-11-22",
       "2026-11-23",
-      "2026-11-24"
+      "2026-11-24",
+      "2026-11-25"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-11-24",
-    "lastWindowEnd": "2026-11-24",
+    "lastWindowStart": "2026-11-25",
+    "lastWindowEnd": "2026-11-25",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-24T13:35:16.376Z",
+  "updatedAt": "2026-11-24T15:19:36.505Z",
   "days": {
-    "2026-11-22": {
-      "두검사": {
-        "title": "두 검사",
-        "positiveSignal": 4,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "두 검사 걸작임?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884321&page=1",
-            "date": "2026-11-22",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "ㅅㅌㅊ",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 1,
-            "commentPositive": 4,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "레이건": {
-        "title": "레이 건(2D)",
-        "positiveSignal": 2,
-        "mentionCount": 1.792481250360578,
-        "evidence": [
-          {
-            "title": "부국제서 레이건 본 사람들 이거 극장 필수작?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884320&page=1",
-            "date": "2026-11-22",
-            "positive": 2,
-            "rawPositive": 2,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "봐라",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 2,
-            "commentPositive": 2,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "로즈": {
-        "title": "로즈",
-        "positiveSignal": 0,
-        "mentionCount": 3.903677461028802,
-        "evidence": [
-          {
-            "title": "산드라 휠러 로즈 많이 좋음?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884319&page=1",
-            "date": "2026-11-22",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "모스카스 조의하루 로즈 3편 연달아보는거",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884216&page=3",
-            "date": "2026-11-22",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 6,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "트레인스포팅": {
-        "title": "트레인스포팅(2D)",
-        "positiveSignal": 2,
-        "mentionCount": 1.792481250360578,
-        "evidence": [
-          {
-            "title": "스포) 트레인스포팅 짧은 후기",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884315&page=1",
-            "date": "2026-11-22",
-            "positive": 2,
-            "rawPositive": 2,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "좋더라",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 2,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "마른잎": {
-        "title": "마른 잎(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "박찬욱관에서 마른 잎 못보게생겼네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884275&page=2",
-            "date": "2026-11-22",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "저개발의기억": {
-        "title": "저개발의 기억",
-        "positiveSignal": 0,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "영자원 <저개발의 기억> 핵꿀잼 명작임?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884224&page=3",
-            "date": "2026-11-22",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "아사코": {
-        "title": "아사코(2D)",
-        "positiveSignal": 4,
-        "mentionCount": 4.5,
-        "evidence": [
-          {
-            "title": "하마구치 팬이 늘긴 했나보네. 아사코 재개봉 많이 봤네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884208&page=3",
-            "date": "2026-11-22",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "재밌",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 4,
-            "commentNegative": 0
-          },
-          {
-            "title": "아사코 다음주 주말까지 걸어줄거같음?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884188&page=4",
-            "date": "2026-11-22",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "아사코나 눈둘데가없네 다다음주까지 걸려있으려나",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884176&page=4",
-            "date": "2026-11-22",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "눈둘데가없네": {
-        "title": "눈 둘 데가 없네",
-        "positiveSignal": 0,
-        "mentionCount": 2,
-        "evidence": [
-          {
-            "title": "아사코나 눈둘데가없네 다다음주까지 걸려있으려나",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884176&page=4",
-            "date": "2026-11-22",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-11-23": {
       "마른잎": {
         "title": "마른 잎(2D)",
@@ -649,7 +394,8 @@
           }
         ]
       }
-    }
+    },
+    "2026-11-25": {}
   },
   "festivals": {}
 }
