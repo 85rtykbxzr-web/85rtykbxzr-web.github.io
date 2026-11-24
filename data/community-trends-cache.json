@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-11-24",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-24T09:22:21.838Z",
+  "updatedAt": "2026-11-24T12:12:53.438Z",
   "days": {
     "2026-11-22": {
       "두검사": {
@@ -457,6 +457,36 @@
       }
     },
     "2026-11-24": {
+      "스윙걸즈": {
+        "title": "스윙걸즈(2D)",
+        "positiveSignal": 2,
+        "mentionCount": 2.160964047443681,
+        "evidence": [
+          {
+            "title": "스포) 오늘 스윙걸즈 봤음",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884620&page=1",
+            "date": "2026-11-24",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "좋더라",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 4,
+            "commentPositive": 2,
+            "commentNegative": 0
+          }
+        ]
+      },
       "토니에드만": {
         "title": "토니 에드만(기획전)",
         "positiveSignal": 0,
