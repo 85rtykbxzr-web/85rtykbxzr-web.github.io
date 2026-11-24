@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-24T06:16:29.282Z",
+  "generatedAt": "2026-11-24T09:22:24.594Z",
   "weekStart": "2026-11-22",
   "weekEnd": "2026-11-24",
   "windowStart": "2026-11-22",
@@ -28,11 +28,13 @@
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum",
-        "cinecube"
+        "cinecube",
+        "sac"
       ],
       "venueNames": [
         "필름포럼",
-        "씨네큐브 광화문"
+        "씨네큐브 광화문",
+        "서울아트시네마"
       ],
       "nextDate": "2026-11-25",
       "nextTime": "18:40",
@@ -251,7 +253,7 @@
       "evidence": [
         {
           "title": "12월에 코엔 노나없 인사이드르윈 2개 개봉?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884544&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884544&page=2",
           "date": "2026-11-24",
           "positive": 0,
           "rawPositive": 0,
@@ -267,7 +269,7 @@
         },
         {
           "title": "인사이드 르윈 갤주 gv 예정",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884542&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884542&page=2",
           "date": "2026-11-24",
           "positive": 0,
           "rawPositive": 0,
@@ -276,7 +278,7 @@
           "negativeHits": [],
           "questionLike": true,
           "reviewQuestion": false,
-          "commentCount": 7,
+          "commentCount": 8,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
@@ -374,11 +376,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 64,
+    "fetchedPostCount": 81,
     "listedPostCount": 292,
-    "detailedPostCount": 3,
-    "commentFetchCount": 3,
-    "commentCount": 10,
+    "detailedPostCount": 4,
+    "commentFetchCount": 4,
+    "commentCount": 11,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -387,7 +389,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-11-24",
     "candidateWindowEnd": "2026-12-08",
-    "candidateCount": 109,
+    "candidateCount": 119,
     "seedLookbackDays": 3,
     "seedStart": "2026-11-22",
     "listLookbackDays": 1,
