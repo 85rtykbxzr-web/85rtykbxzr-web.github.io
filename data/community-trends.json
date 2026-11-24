@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-24T12:12:57.588Z",
+  "generatedAt": "2026-11-24T13:35:21.265Z",
   "weekStart": "2026-11-22",
   "weekEnd": "2026-11-24",
   "windowStart": "2026-11-22",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000122044&playDt=20261125&tsId=TS0056&pno=1",
-      "score": 107.6,
+      "score": 117.6,
       "signal": 2.9,
       "positiveSignal": 2.9,
-      "mentionCount": 9.2,
+      "mentionCount": 10.2,
       "rawPositiveSignal": 4,
-      "rawMentionCount": 13.073602462471115,
+      "rawMentionCount": 14.073602462471115,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum",
@@ -102,6 +102,22 @@
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.72
+        },
+        {
+          "title": "마른 잎 상영관 예상보다 더 처참하네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884650&page=1",
+          "date": "2026-11-24",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261118_e38d07ee.jpg"
@@ -253,7 +269,7 @@
       "evidence": [
         {
           "title": "12월에 코엔 노나없 인사이드르윈 2개 개봉?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884544&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884544&page=3",
           "date": "2026-11-24",
           "positive": 0,
           "rawPositive": 0,
@@ -269,7 +285,7 @@
         },
         {
           "title": "인사이드 르윈 갤주 gv 예정",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884542&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884542&page=3",
           "date": "2026-11-24",
           "positive": 0,
           "rawPositive": 0,
@@ -376,11 +392,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 104,
+    "fetchedPostCount": 125,
     "listedPostCount": 292,
-    "detailedPostCount": 5,
-    "commentFetchCount": 5,
-    "commentCount": 15,
+    "detailedPostCount": 8,
+    "commentFetchCount": 8,
+    "commentCount": 17,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
