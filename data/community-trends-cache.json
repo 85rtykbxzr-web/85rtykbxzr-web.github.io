@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-11-26",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-25T15:22:37.001Z",
+  "updatedAt": "2026-11-25T19:11:16.506Z",
   "days": {
     "2026-11-24": {
       "마른잎": {
@@ -357,7 +357,60 @@
         ]
       }
     },
-    "2026-11-26": {}
+    "2026-11-26": {
+      "원스": {
+        "title": "원스(2D)",
+        "positiveSignal": 0,
+        "mentionCount": 1.792481250360578,
+        "evidence": [
+          {
+            "title": "원스 남주 죽었네.",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885172&page=1",
+            "date": "2026-11-26",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "트레인스포팅": {
+        "title": "트레인스포팅(2D)",
+        "positiveSignal": 2,
+        "mentionCount": 2.160964047443681,
+        "evidence": [
+          {
+            "title": "트레인스포팅 봤음",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885166&page=1",
+            "date": "2026-11-26",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "좋았음",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 3,
+            "commentPositive": 2,
+            "commentNegative": 0
+          }
+        ]
+      }
+    }
   },
   "festivals": {}
 }

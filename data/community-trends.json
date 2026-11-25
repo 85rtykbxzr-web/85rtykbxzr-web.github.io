@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-25T15:22:40.796Z",
+  "generatedAt": "2026-11-25T19:11:18.762Z",
   "weekStart": "2026-11-24",
   "weekEnd": "2026-11-26",
   "windowStart": "2026-11-24",
@@ -92,6 +92,61 @@
     },
     {
       "rank": 2,
+      "title": "트레인스포팅",
+      "posterUrl": "/assets/recommendation-posters/bc6df391e8a50d2f.webp",
+      "localPosterUrl": "/assets/recommendation-posters/bc6df391e8a50d2f.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121831&playDt=20261126&tsId=TS0056&pno=1",
+      "score": 33.6,
+      "signal": 2,
+      "positiveSignal": 2,
+      "mentionCount": 2.2,
+      "rawPositiveSignal": 2,
+      "rawMentionCount": 2.160964047443681,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "filmforum",
+        "sangsangmadang",
+        "kucine"
+      ],
+      "venueNames": [
+        "필름포럼",
+        "KT&G 상상마당 시네마",
+        "KU시네마테크"
+      ],
+      "nextDate": "2026-11-26",
+      "nextTime": "10:20",
+      "evidence": [
+        {
+          "title": "트레인스포팅 봤음",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885166&page=1",
+          "date": "2026-11-26",
+          "positive": 2,
+          "rawPositive": 2,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "좋았음",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 3,
+          "commentPositive": 2,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/1jUC02qsqS2NxBMFarbIhcQtazV.jpg"
+    },
+    {
+      "rank": 3,
       "title": "세계의 주인",
       "posterUrl": "/assets/recommendation-posters/57f8176d1ca23416.webp",
       "localPosterUrl": "/assets/recommendation-posters/57f8176d1ca23416.webp",
@@ -166,7 +221,7 @@
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cg679vCkXY9RH2iINLvdG68tzsQ.jpg"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "title": "인사이드 르윈",
       "posterUrl": "/assets/recommendation-posters/89a1ba35d9fb6e91.webp",
       "localPosterUrl": "/assets/recommendation-posters/89a1ba35d9fb6e91.webp",
@@ -225,53 +280,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cjiE3mMvDSYqVBh1iTmPs3RNY3x.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "아사코",
-      "posterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
-      "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261126&tsId=TS0056&pno=3",
-      "score": 19.6,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 1.6,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 2.160964047443681,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "filmforum",
-        "cinecube",
-        "sangsangmadang"
-      ],
-      "venueNames": [
-        "필름포럼",
-        "씨네큐브 광화문",
-        "KT&G 상상마당 시네마"
-      ],
-      "nextDate": "2026-11-26",
-      "nextTime": "14:20",
-      "evidence": [
-        {
-          "title": "아사코에 나오는 고양이",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884681&page=4",
-          "date": "2026-11-25",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 4,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
     }
   ],
   "festivalPicks": [],
@@ -280,11 +288,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 28,
+    "fetchedPostCount": 72,
     "listedPostCount": 291,
-    "detailedPostCount": 0,
-    "commentFetchCount": 0,
-    "commentCount": 0,
+    "detailedPostCount": 2,
+    "commentFetchCount": 2,
+    "commentCount": 5,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
