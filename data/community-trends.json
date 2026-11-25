@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-25T12:16:20.710Z",
-  "weekStart": "2026-11-23",
-  "weekEnd": "2026-11-25",
-  "windowStart": "2026-11-23",
-  "windowEnd": "2026-11-25",
+  "generatedAt": "2026-11-25T15:22:40.796Z",
+  "weekStart": "2026-11-24",
+  "weekEnd": "2026-11-26",
+  "windowStart": "2026-11-24",
+  "windowEnd": "2026-11-26",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-26&movieCd=030149&playSDT=2026-11-26&screenId=02&showSeq=4",
-      "score": 122,
-      "signal": 2.1,
-      "positiveSignal": 2.1,
-      "mentionCount": 11,
-      "rawPositiveSignal": 4,
-      "rawMentionCount": 17.073602462471115,
+      "score": 38,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 3.4,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 5,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -40,54 +40,6 @@
       "nextTime": "14:45",
       "evidence": [
         {
-          "title": "마른잎 같은건 진짜 보기싫은데 누갤자격박탈이냐",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884483&page=1",
-          "date": "2026-11-23",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "아니 마른잎 144p인게",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884480&page=1",
-          "date": "2026-11-23",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "마른잎 144p 힘들다고 징징대는애들은 어릴때 야동도 안봄?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884465&page=1",
-          "date": "2026-11-23",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 6,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
           "title": "마른 잎 상영관 예상보다 더 처참하네",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884650&page=1",
           "date": "2026-11-24",
@@ -101,7 +53,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "마른 잎 봤는데 좀 에바다",
@@ -117,102 +69,39 @@
           "commentCount": 3,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261118_e38d07ee.jpg"
-    },
-    {
-      "rank": 2,
-      "title": "아사코",
-      "posterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
-      "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261126&tsId=TS0056&pno=3",
-      "score": 47.3,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 4.3,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 6.357122758833061,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "filmforum",
-        "cinecube",
-        "sangsangmadang"
-      ],
-      "venueNames": [
-        "필름포럼",
-        "씨네큐브 광화문",
-        "KT&G 상상마당 시네마"
-      ],
-      "nextDate": "2026-11-26",
-      "nextTime": "14:20",
-      "evidence": [
-        {
-          "title": "아사코 불륜남 근황",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884373&page=3",
-          "date": "2026-11-23",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 6,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
+          "dayWeight": 0.72
         },
         {
-          "title": "아사코 예고편 댓글 ㅋㅋ",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884372&page=3",
-          "date": "2026-11-23",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "아사코에 나오는 고양이",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884681&page=4",
+          "title": "마른잎 144p라 빨리는거임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884775&page=2",
           "date": "2026-11-25",
           "positive": 0,
           "rawPositive": 0,
           "negative": 0,
           "positiveHits": [],
           "negativeHits": [],
-          "questionLike": false,
+          "questionLike": true,
           "reviewQuestion": false,
-          "commentCount": 4,
+          "commentCount": 3,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261118_e38d07ee.jpg"
     },
     {
-      "rank": 3,
+      "rank": 2,
       "title": "세계의 주인",
-      "posterUrl": "/assets/recommendation-posters/6651e3634039c7a6.webp",
-      "localPosterUrl": "/assets/recommendation-posters/6651e3634039c7a6.webp",
+      "posterUrl": "/assets/recommendation-posters/57f8176d1ca23416.webp",
+      "localPosterUrl": "/assets/recommendation-posters/57f8176d1ca23416.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.koreafilm.or.kr/cinematheque/schedule",
-      "score": 41.3,
+      "score": 29.9,
       "signal": 0,
       "positiveSignal": 0,
-      "mentionCount": 4.1,
+      "mentionCount": 2.9,
       "rawPositiveSignal": 0,
       "rawMentionCount": 5.084962500721156,
       "scheduleBackfill": false,
@@ -239,7 +128,7 @@
           "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "청룡 세계의주인이 받으면 좋겠다",
@@ -255,7 +144,7 @@
           "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "세계의 주인 남동생 아역이 청룡 축하공연 하는중",
@@ -271,23 +160,23 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cg679vCkXY9RH2iINLvdG68tzsQ.jpg"
     },
     {
-      "rank": 4,
+      "rank": 3,
       "title": "인사이드 르윈",
-      "posterUrl": "/assets/recommendation-posters/f3b3b469ce74fd51.webp",
-      "localPosterUrl": "/assets/recommendation-posters/f3b3b469ce74fd51.webp",
+      "posterUrl": "/assets/recommendation-posters/89a1ba35d9fb6e91.webp",
+      "localPosterUrl": "/assets/recommendation-posters/89a1ba35d9fb6e91.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-12-02&movieCd=020243&playSDT=2026-12-02&screenId=01&showSeq=3",
-      "score": 29.8,
+      "score": 21.7,
       "signal": 0,
       "positiveSignal": 0,
-      "mentionCount": 2.9,
+      "mentionCount": 2.1,
       "rawPositiveSignal": 0,
       "rawMentionCount": 4,
       "scheduleBackfill": false,
@@ -316,7 +205,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "인사이드 르윈 갤주 gv 예정",
@@ -332,10 +221,57 @@
           "commentCount": 8,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cjiE3mMvDSYqVBh1iTmPs3RNY3x.jpg"
+    },
+    {
+      "rank": 4,
+      "title": "아사코",
+      "posterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
+      "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121840&playDt=20261126&tsId=TS0056&pno=3",
+      "score": 19.6,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 1.6,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 2.160964047443681,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "filmforum",
+        "cinecube",
+        "sangsangmadang"
+      ],
+      "venueNames": [
+        "필름포럼",
+        "씨네큐브 광화문",
+        "KT&G 상상마당 시네마"
+      ],
+      "nextDate": "2026-11-26",
+      "nextTime": "14:20",
+      "evidence": [
+        {
+          "title": "아사코에 나오는 고양이",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884681&page=4",
+          "date": "2026-11-25",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 4,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        }
+      ],
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
     }
   ],
   "festivalPicks": [],
@@ -344,24 +280,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 157,
-    "listedPostCount": 292,
-    "detailedPostCount": 7,
-    "commentFetchCount": 7,
-    "commentCount": 16,
+    "fetchedPostCount": 28,
+    "listedPostCount": 291,
+    "detailedPostCount": 0,
+    "commentFetchCount": 0,
+    "commentCount": 0,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
-    "oldestScannedDate": "2026-11-23",
-    "newestScannedDate": "2026-11-25",
+    "oldestScannedDate": "2026-11-25",
+    "newestScannedDate": "2026-11-26",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-11-25",
-    "candidateWindowEnd": "2026-12-09",
-    "candidateCount": 114,
+    "candidateWindowStart": "2026-11-26",
+    "candidateWindowEnd": "2026-12-10",
+    "candidateCount": 117,
     "seedLookbackDays": 3,
-    "seedStart": "2026-11-23",
+    "seedStart": "2026-11-24",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-11-25",
+    "listWindowStart": "2026-11-26",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -369,7 +305,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-11-25"
+      "2026-11-26"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [

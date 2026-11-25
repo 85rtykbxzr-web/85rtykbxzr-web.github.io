@@ -2,205 +2,25 @@
   "version": 3,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-11-23",
-  "windowEnd": "2026-11-25",
+  "windowStart": "2026-11-24",
+  "windowEnd": "2026-11-26",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-11-23",
       "2026-11-24",
-      "2026-11-25"
+      "2026-11-25",
+      "2026-11-26"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-11-25",
-    "lastWindowEnd": "2026-11-25",
+    "lastWindowStart": "2026-11-26",
+    "lastWindowEnd": "2026-11-26",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-25T12:16:16.222Z",
+  "updatedAt": "2026-11-25T15:22:37.001Z",
   "days": {
-    "2026-11-23": {
-      "마른잎": {
-        "title": "마른 잎(2D)",
-        "positiveSignal": 4,
-        "mentionCount": 12.073602462471115,
-        "evidence": [
-          {
-            "title": "마른잎 같은건 진짜 보기싫은데 누갤자격박탈이냐",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884483&page=1",
-            "date": "2026-11-23",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "아니 마른잎 144p인게",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884480&page=1",
-            "date": "2026-11-23",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "마른잎 144p 힘들다고 징징대는애들은 어릴때 야동도 안봄?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884465&page=1",
-            "date": "2026-11-23",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 6,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "와일드호스나인": {
-        "title": "와일드 호스 나인",
-        "positiveSignal": 4,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "와일드 호스 나인 보고왔는데 좋네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884471&page=1",
-            "date": "2026-11-23",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "좋네",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              },
-              {
-                "term": "좋았음",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "로즈": {
-        "title": "로즈",
-        "positiveSignal": 2,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "첫세계 vs 로즈 겹치는데 뭐보지",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884422&page=2",
-            "date": "2026-11-23",
-            "positive": 2,
-            "rawPositive": 2,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "좋더라",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 2,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "마우스": {
-        "title": "마우스",
-        "positiveSignal": 0,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "마붑좌 속죄의 <마우스> 초대ㅠ",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884413&page=2",
-            "date": "2026-11-23",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "아사코": {
-        "title": "아사코(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 4.19615871138938,
-        "evidence": [
-          {
-            "title": "아사코 불륜남 근황",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884373&page=3",
-            "date": "2026-11-23",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 6,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "아사코 예고편 댓글 ㅋㅋ",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884372&page=3",
-            "date": "2026-11-23",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-11-24": {
       "마른잎": {
         "title": "마른 잎(2D)",
@@ -536,7 +356,8 @@
           }
         ]
       }
-    }
+    },
+    "2026-11-26": {}
   },
   "festivals": {}
 }
