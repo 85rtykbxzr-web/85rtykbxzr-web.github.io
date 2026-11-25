@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-25T09:09:42.381Z",
+  "generatedAt": "2026-11-25T12:16:20.710Z",
   "weekStart": "2026-11-23",
   "weekEnd": "2026-11-25",
   "windowStart": "2026-11-23",
@@ -18,26 +18,26 @@
       "localPosterUrl": "/assets/recommendation-posters/0282008ac7f1e742.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000122044&playDt=20261125&tsId=TS0056&pno=1",
-      "score": 82,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-26&movieCd=030149&playSDT=2026-11-26&screenId=02&showSeq=4",
+      "score": 122,
       "signal": 2.1,
       "positiveSignal": 2.1,
-      "mentionCount": 7,
+      "mentionCount": 11,
       "rawPositiveSignal": 4,
-      "rawMentionCount": 13.073602462471115,
+      "rawMentionCount": 17.073602462471115,
       "scheduleBackfill": false,
       "venueIds": [
-        "filmforum",
         "cinecube",
+        "filmforum",
         "sac"
       ],
       "venueNames": [
-        "필름포럼",
         "씨네큐브 광화문",
+        "필름포럼",
         "서울아트시네마"
       ],
-      "nextDate": "2026-11-25",
-      "nextTime": "18:40",
+      "nextDate": "2026-11-26",
+      "nextTime": "14:45",
       "evidence": [
         {
           "title": "마른잎 같은건 진짜 보기싫은데 누갤자격박탈이냐",
@@ -102,6 +102,22 @@
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.72
+        },
+        {
+          "title": "마른 잎 봤는데 좀 에바다",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884794&page=2",
+          "date": "2026-11-25",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 3,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261118_e38d07ee.jpg"
@@ -168,7 +184,7 @@
         },
         {
           "title": "아사코에 나오는 고양이",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884681&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884681&page=4",
           "date": "2026-11-25",
           "positive": 0,
           "rawPositive": 0,
@@ -187,6 +203,81 @@
     },
     {
       "rank": 3,
+      "title": "세계의 주인",
+      "posterUrl": "/assets/recommendation-posters/6651e3634039c7a6.webp",
+      "localPosterUrl": "/assets/recommendation-posters/6651e3634039c7a6.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.koreafilm.or.kr/cinematheque/schedule",
+      "score": 41.3,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 4.1,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 5.084962500721156,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "kofa"
+      ],
+      "venueNames": [
+        "시네마테크KOFA"
+      ],
+      "nextDate": "2026-11-28",
+      "nextTime": "12:00",
+      "evidence": [
+        {
+          "title": "세계의주인 영국 극장개봉 예정",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884637&page=1",
+          "date": "2026-11-24",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "청룡 세계의주인이 받으면 좋겠다",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884553&page=2",
+          "date": "2026-11-24",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "세계의 주인 남동생 아역이 청룡 축하공연 하는중",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884820&page=1",
+          "date": "2026-11-25",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cg679vCkXY9RH2iINLvdG68tzsQ.jpg"
+    },
+    {
+      "rank": 4,
       "title": "인사이드 르윈",
       "posterUrl": "/assets/recommendation-posters/f3b3b469ce74fd51.webp",
       "localPosterUrl": "/assets/recommendation-posters/f3b3b469ce74fd51.webp",
@@ -245,65 +336,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cjiE3mMvDSYqVBh1iTmPs3RNY3x.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "세계의 주인",
-      "posterUrl": "/assets/recommendation-posters/6651e3634039c7a6.webp",
-      "localPosterUrl": "/assets/recommendation-posters/6651e3634039c7a6.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.koreafilm.or.kr/cinematheque/schedule",
-      "score": 26.3,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 2.6,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 3.584962500721156,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "kofa"
-      ],
-      "venueNames": [
-        "시네마테크KOFA"
-      ],
-      "nextDate": "2026-11-28",
-      "nextTime": "12:00",
-      "evidence": [
-        {
-          "title": "세계의주인 영국 극장개봉 예정",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884637&page=1",
-          "date": "2026-11-24",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "청룡 세계의주인이 받으면 좋겠다",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884553&page=2",
-          "date": "2026-11-24",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cg679vCkXY9RH2iINLvdG68tzsQ.jpg"
     }
   ],
   "festivalPicks": [],
@@ -312,11 +344,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 87,
+    "fetchedPostCount": 157,
     "listedPostCount": 292,
-    "detailedPostCount": 2,
-    "commentFetchCount": 2,
-    "commentCount": 8,
+    "detailedPostCount": 7,
+    "commentFetchCount": 7,
+    "commentCount": 16,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -325,7 +357,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-11-25",
     "candidateWindowEnd": "2026-12-09",
-    "candidateCount": 115,
+    "candidateCount": 114,
     "seedLookbackDays": 3,
     "seedStart": "2026-11-23",
     "listLookbackDays": 1,
