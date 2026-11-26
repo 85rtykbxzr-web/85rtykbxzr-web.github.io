@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-26T09:12:53.656Z",
+  "generatedAt": "2026-11-26T12:19:10.243Z",
   "weekStart": "2026-11-24",
   "weekEnd": "2026-11-26",
   "windowStart": "2026-11-24",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000122095&playDt=20261127&tsId=TS0056&pno=4",
-      "score": 133.2,
-      "signal": 22,
-      "positiveSignal": 22,
-      "mentionCount": 4.4,
-      "rawPositiveSignal": 22,
-      "rawMentionCount": 4.903677461028802,
+      "score": 170.8,
+      "signal": 26,
+      "positiveSignal": 26,
+      "mentionCount": 6.6,
+      "rawPositiveSignal": 26,
+      "rawMentionCount": 7.064641508472483,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum"
@@ -52,8 +52,32 @@
           "dayWeight": 0.518
         },
         {
+          "title": "님들 토니 에드만 재밌나요",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885345&page=1",
+          "date": "2026-11-26",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "꿀잼",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 4,
+          "commentPositive": 4,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
           "title": "토니에드만 극장걸어주는거 누민경 덕분이네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885284&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885284&page=2",
           "date": "2026-11-26",
           "positive": 0,
           "rawPositive": 0,
@@ -69,7 +93,7 @@
         },
         {
           "title": "토니에드만 << 어떰? 씨집에서 해주던데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885235&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885235&page=3",
           "date": "2026-11-26",
           "positive": 22,
           "rawPositive": 22,
@@ -227,7 +251,7 @@
         },
         {
           "title": "호프 청룡 최우수작품, 촬영상은 예상했는데 세계의 주인 아쉽네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885202&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885202&page=3",
           "date": "2026-11-26",
           "positive": 4,
           "rawPositive": 4,
@@ -278,7 +302,7 @@
       "evidence": [
         {
           "title": "라그라디바 vs 피오르",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885215&page=2",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885215&page=3",
           "date": "2026-11-26",
           "positive": 6,
           "rawPositive": 6,
@@ -319,48 +343,36 @@
     },
     {
       "rank": 4,
-      "title": "더 데뷔",
-      "posterUrl": "/assets/recommendation-posters/f96f43564fd3225b.webp",
-      "localPosterUrl": "/assets/recommendation-posters/f96f43564fd3225b.webp",
+      "title": "마른 잎",
+      "posterUrl": "/assets/recommendation-posters/0282008ac7f1e742.webp",
+      "localPosterUrl": "/assets/recommendation-posters/0282008ac7f1e742.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-26&movieCd=030153&playSDT=2026-11-26&screenId=01&showSeq=6",
-      "score": 41.6,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-27&movieCd=030149&playSDT=2026-11-27&screenId=02&showSeq=6",
+      "score": 48,
       "signal": 0,
       "positiveSignal": 0,
-      "mentionCount": 4.1,
+      "mentionCount": 4.4,
       "rawPositiveSignal": 0,
-      "rawMentionCount": 4.660964047443681,
+      "rawMentionCount": 6,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube"
+        "cinecube",
+        "filmforum",
+        "sac"
       ],
       "venueNames": [
-        "씨네큐브 광화문"
+        "씨네큐브 광화문",
+        "필름포럼",
+        "서울아트시네마"
       ],
-      "nextDate": "2026-11-26",
-      "nextTime": "19:30",
+      "nextDate": "2026-11-27",
+      "nextTime": "19:15",
       "evidence": [
         {
-          "title": "씨큐 더 데뷔 왤케 인기많음?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884698&page=3",
-          "date": "2026-11-25",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 4,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "오늘 더데뷔 토크 뭐냐 이제봤네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885234&page=2",
-          "date": "2026-11-26",
+          "title": "마른 잎 상영관 예상보다 더 처참하네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884650&page=1",
+          "date": "2026-11-24",
           "positive": 0,
           "rawPositive": 0,
           "negative": 0,
@@ -371,26 +383,58 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.518
         },
         {
-          "title": "더 데뷔 예매함ㅅㅅ",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885221&page=2",
+          "title": "마른 잎 봤는데 좀 에바다",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884794&page=2",
+          "date": "2026-11-25",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 3,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "마른잎 144p라 빨리는거임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884775&page=2",
+          "date": "2026-11-25",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 3,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "마른잎 볼만한가",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885310&page=1",
           "date": "2026-11-26",
           "positive": 0,
           "rawPositive": 0,
           "negative": 0,
           "positiveHits": [],
           "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
         }
       ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261115_a3b0275b.jpg"
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261118_e38d07ee.jpg"
     }
   ],
   "festivalPicks": [],
@@ -399,11 +443,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 176,
-    "listedPostCount": 291,
-    "detailedPostCount": 11,
-    "commentFetchCount": 11,
-    "commentCount": 32,
+    "fetchedPostCount": 210,
+    "listedPostCount": 292,
+    "detailedPostCount": 15,
+    "commentFetchCount": 15,
+    "commentCount": 41,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -412,7 +456,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-11-26",
     "candidateWindowEnd": "2026-12-10",
-    "candidateCount": 116,
+    "candidateCount": 113,
     "seedLookbackDays": 3,
     "seedStart": "2026-11-24",
     "listLookbackDays": 1,
