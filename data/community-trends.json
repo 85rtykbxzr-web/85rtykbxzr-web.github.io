@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-25T23:39:38.506Z",
+  "generatedAt": "2026-11-26T00:10:49.393Z",
   "weekStart": "2026-11-24",
   "weekEnd": "2026-11-26",
   "windowStart": "2026-11-24",
@@ -13,6 +13,105 @@
   "items": [
     {
       "rank": 1,
+      "title": "세계의 주인",
+      "posterUrl": "/assets/recommendation-posters/6651e3634039c7a6.webp",
+      "localPosterUrl": "/assets/recommendation-posters/6651e3634039c7a6.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.koreafilm.or.kr/cinematheque/schedule",
+      "score": 55.9,
+      "signal": 4,
+      "positiveSignal": 4,
+      "mentionCount": 3.9,
+      "rawPositiveSignal": 4,
+      "rawMentionCount": 6.084962500721156,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "kofa"
+      ],
+      "venueNames": [
+        "시네마테크KOFA"
+      ],
+      "nextDate": "2026-11-28",
+      "nextTime": "12:00",
+      "evidence": [
+        {
+          "title": "세계의주인 영국 극장개봉 예정",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884637&page=1",
+          "date": "2026-11-24",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "청룡 세계의주인이 받으면 좋겠다",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884553&page=2",
+          "date": "2026-11-24",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 2,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "세계의 주인 남동생 아역이 청룡 축하공연 하는중",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884820&page=1",
+          "date": "2026-11-25",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "호프 청룡 최우수작품, 촬영상은 예상했는데 세계의 주인 아쉽네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885202&page=1",
+          "date": "2026-11-26",
+          "positive": 4,
+          "rawPositive": 4,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "수작",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cg679vCkXY9RH2iINLvdG68tzsQ.jpg"
+    },
+    {
+      "rank": 2,
       "title": "마른 잎",
       "posterUrl": "/assets/recommendation-posters/0282008ac7f1e742.webp",
       "localPosterUrl": "/assets/recommendation-posters/0282008ac7f1e742.webp",
@@ -91,7 +190,7 @@
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261118_e38d07ee.jpg"
     },
     {
-      "rank": 2,
+      "rank": 3,
       "title": "트레인스포팅",
       "posterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
       "localPosterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
@@ -144,81 +243,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/1jUC02qsqS2NxBMFarbIhcQtazV.jpg"
-    },
-    {
-      "rank": 3,
-      "title": "세계의 주인",
-      "posterUrl": "/assets/recommendation-posters/6651e3634039c7a6.webp",
-      "localPosterUrl": "/assets/recommendation-posters/6651e3634039c7a6.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.koreafilm.or.kr/cinematheque/schedule",
-      "score": 29.9,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 2.9,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 5.084962500721156,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "kofa"
-      ],
-      "venueNames": [
-        "시네마테크KOFA"
-      ],
-      "nextDate": "2026-11-28",
-      "nextTime": "12:00",
-      "evidence": [
-        {
-          "title": "세계의주인 영국 극장개봉 예정",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884637&page=1",
-          "date": "2026-11-24",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "청룡 세계의주인이 받으면 좋겠다",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884553&page=2",
-          "date": "2026-11-24",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "세계의 주인 남동생 아역이 청룡 축하공연 하는중",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884820&page=1",
-          "date": "2026-11-25",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cg679vCkXY9RH2iINLvdG68tzsQ.jpg"
     },
     {
       "rank": 4,
@@ -288,10 +312,10 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 83,
+    "fetchedPostCount": 89,
     "listedPostCount": 291,
-    "detailedPostCount": 2,
-    "commentFetchCount": 2,
+    "detailedPostCount": 3,
+    "commentFetchCount": 3,
     "commentCount": 5,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,

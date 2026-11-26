@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-11-26",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-25T23:39:36.203Z",
+  "updatedAt": "2026-11-26T00:10:46.733Z",
   "days": {
     "2026-11-24": {
       "마른잎": {
@@ -358,6 +358,36 @@
       }
     },
     "2026-11-26": {
+      "세계의주인": {
+        "title": "세계의 주인",
+        "positiveSignal": 4,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "호프 청룡 최우수작품, 촬영상은 예상했는데 세계의 주인 아쉽네",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885202&page=1",
+            "date": "2026-11-26",
+            "positive": 4,
+            "rawPositive": 4,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "수작",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "원스": {
         "title": "원스(2D)",
         "positiveSignal": 0,
