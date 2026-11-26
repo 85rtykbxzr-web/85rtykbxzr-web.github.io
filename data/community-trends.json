@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-26T03:16:30.627Z",
+  "generatedAt": "2026-11-26T03:33:04.780Z",
   "weekStart": "2026-11-24",
   "weekEnd": "2026-11-26",
   "windowStart": "2026-11-24",
@@ -112,6 +112,73 @@
     },
     {
       "rank": 2,
+      "title": "토니 에드만",
+      "posterUrl": "/assets/recommendation-posters/9cfedc5dfda46e38.webp",
+      "localPosterUrl": "/assets/recommendation-posters/9cfedc5dfda46e38.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000122095&playDt=20261127&tsId=TS0056&pno=4",
+      "score": 50.2,
+      "signal": 6,
+      "positiveSignal": 6,
+      "mentionCount": 2.5,
+      "rawPositiveSignal": 6,
+      "rawMentionCount": 3,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "filmforum"
+      ],
+      "venueNames": [
+        "필름포럼"
+      ],
+      "nextDate": "2026-11-27",
+      "nextTime": "16:30",
+      "evidence": [
+        {
+          "title": "파더랜드 12월 개봉이네 ㄷㄷ",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884600&page=2",
+          "date": "2026-11-24",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "토니에드만 << 어떰? 씨집에서 해주던데",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885235&page=1",
+          "date": "2026-11-26",
+          "positive": 6,
+          "rawPositive": 6,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "걸작",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 3,
+          "commentPositive": 6,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/3RBg5SiDPFUbyBi7SONLAGnfTcY.jpg"
+    },
+    {
+      "rank": 3,
       "title": "피오르",
       "posterUrl": "/assets/recommendation-posters/f96f43564fd3225b.webp",
       "localPosterUrl": "/assets/recommendation-posters/f96f43564fd3225b.webp",
@@ -176,7 +243,7 @@
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261115_8ce022cc.jpg"
     },
     {
-      "rank": 3,
+      "rank": 4,
       "title": "더 데뷔",
       "posterUrl": "/assets/recommendation-posters/f96f43564fd3225b.webp",
       "localPosterUrl": "/assets/recommendation-posters/f96f43564fd3225b.webp",
@@ -249,85 +316,6 @@
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261115_a3b0275b.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "마른 잎",
-      "posterUrl": "/assets/recommendation-posters/0282008ac7f1e742.webp",
-      "localPosterUrl": "/assets/recommendation-posters/0282008ac7f1e742.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-26&movieCd=030149&playSDT=2026-11-26&screenId=02&showSeq=4",
-      "score": 38,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 3.4,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 5,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "cinecube",
-        "filmforum",
-        "sac"
-      ],
-      "venueNames": [
-        "씨네큐브 광화문",
-        "필름포럼",
-        "서울아트시네마"
-      ],
-      "nextDate": "2026-11-26",
-      "nextTime": "14:45",
-      "evidence": [
-        {
-          "title": "마른 잎 상영관 예상보다 더 처참하네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884650&page=1",
-          "date": "2026-11-24",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "마른 잎 봤는데 좀 에바다",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884794&page=2",
-          "date": "2026-11-25",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "마른잎 144p라 빨리는거임?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884775&page=2",
-          "date": "2026-11-25",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        }
-      ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261118_e38d07ee.jpg"
     }
   ],
   "festivalPicks": [],
@@ -336,11 +324,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 118,
+    "fetchedPostCount": 122,
     "listedPostCount": 291,
-    "detailedPostCount": 6,
-    "commentFetchCount": 6,
-    "commentCount": 13,
+    "detailedPostCount": 7,
+    "commentFetchCount": 7,
+    "commentCount": 16,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
