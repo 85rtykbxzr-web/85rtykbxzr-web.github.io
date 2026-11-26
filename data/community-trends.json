@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-26T06:22:25.508Z",
+  "generatedAt": "2026-11-26T09:12:53.656Z",
   "weekStart": "2026-11-24",
   "weekEnd": "2026-11-26",
   "windowStart": "2026-11-24",
@@ -13,6 +13,110 @@
   "items": [
     {
       "rank": 1,
+      "title": "토니 에드만",
+      "posterUrl": "/assets/recommendation-posters/9cfedc5dfda46e38.webp",
+      "localPosterUrl": "/assets/recommendation-posters/9cfedc5dfda46e38.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000122095&playDt=20261127&tsId=TS0056&pno=4",
+      "score": 133.2,
+      "signal": 22,
+      "positiveSignal": 22,
+      "mentionCount": 4.4,
+      "rawPositiveSignal": 22,
+      "rawMentionCount": 4.903677461028802,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "filmforum"
+      ],
+      "venueNames": [
+        "필름포럼"
+      ],
+      "nextDate": "2026-11-27",
+      "nextTime": "16:30",
+      "evidence": [
+        {
+          "title": "파더랜드 12월 개봉이네 ㄷㄷ",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884600&page=2",
+          "date": "2026-11-24",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "토니에드만 극장걸어주는거 누민경 덕분이네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885284&page=1",
+          "date": "2026-11-26",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "토니에드만 << 어떰? 씨집에서 해주던데",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885235&page=2",
+          "date": "2026-11-26",
+          "positive": 22,
+          "rawPositive": 22,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "걸작",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "걸작",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "ㅆㅅㅌㅊ",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "ㅅㅌㅊ",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 6,
+          "commentPositive": 22,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/3RBg5SiDPFUbyBi7SONLAGnfTcY.jpg"
+    },
+    {
+      "rank": 2,
       "title": "세계의 주인",
       "posterUrl": "/assets/recommendation-posters/6651e3634039c7a6.webp",
       "localPosterUrl": "/assets/recommendation-posters/6651e3634039c7a6.webp",
@@ -85,7 +189,7 @@
         },
         {
           "title": "의외로 작품상 접점은 세계의주인이 아니라",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885246&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885246&page=2",
           "date": "2026-11-26",
           "positive": 12,
           "rawPositive": 12,
@@ -147,94 +251,6 @@
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cg679vCkXY9RH2iINLvdG68tzsQ.jpg"
-    },
-    {
-      "rank": 2,
-      "title": "토니 에드만",
-      "posterUrl": "/assets/recommendation-posters/9cfedc5dfda46e38.webp",
-      "localPosterUrl": "/assets/recommendation-posters/9cfedc5dfda46e38.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000122095&playDt=20261127&tsId=TS0056&pno=4",
-      "score": 118.2,
-      "signal": 22,
-      "positiveSignal": 22,
-      "mentionCount": 2.9,
-      "rawPositiveSignal": 22,
-      "rawMentionCount": 3.403677461028802,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "filmforum"
-      ],
-      "venueNames": [
-        "필름포럼"
-      ],
-      "nextDate": "2026-11-27",
-      "nextTime": "16:30",
-      "evidence": [
-        {
-          "title": "파더랜드 12월 개봉이네 ㄷㄷ",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884600&page=2",
-          "date": "2026-11-24",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "토니에드만 << 어떰? 씨집에서 해주던데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885235&page=1",
-          "date": "2026-11-26",
-          "positive": 22,
-          "rawPositive": 22,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "걸작",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            },
-            {
-              "term": "걸작",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            },
-            {
-              "term": "ㅆㅅㅌㅊ",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            },
-            {
-              "term": "ㅅㅌㅊ",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 6,
-          "commentPositive": 22,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/3RBg5SiDPFUbyBi7SONLAGnfTcY.jpg"
     },
     {
       "rank": 3,
@@ -343,7 +359,7 @@
         },
         {
           "title": "오늘 더데뷔 토크 뭐냐 이제봤네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885234&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885234&page=2",
           "date": "2026-11-26",
           "positive": 0,
           "rawPositive": 0,
@@ -383,11 +399,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 146,
+    "fetchedPostCount": 176,
     "listedPostCount": 291,
-    "detailedPostCount": 9,
-    "commentFetchCount": 9,
-    "commentCount": 30,
+    "detailedPostCount": 11,
+    "commentFetchCount": 11,
+    "commentCount": 32,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -396,7 +412,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-11-26",
     "candidateWindowEnd": "2026-12-10",
-    "candidateCount": 117,
+    "candidateCount": 116,
     "seedLookbackDays": 3,
     "seedStart": "2026-11-24",
     "listLookbackDays": 1,

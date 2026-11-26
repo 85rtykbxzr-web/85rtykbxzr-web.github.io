@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-11-26",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-26T06:22:22.008Z",
+  "updatedAt": "2026-11-26T09:12:50.389Z",
   "days": {
     "2026-11-24": {
       "마른잎": {
@@ -358,6 +358,94 @@
       }
     },
     "2026-11-26": {
+      "미션": {
+        "title": "미션(2D)",
+        "positiveSignal": 0,
+        "mentionCount": 1.5,
+        "evidence": [
+          {
+            "title": "미션 보고 왔는데",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885285&page=1",
+            "date": "2026-11-26",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "토니에드만": {
+        "title": "토니 에드만(기획전)",
+        "positiveSignal": 22,
+        "mentionCount": 3.903677461028802,
+        "evidence": [
+          {
+            "title": "토니에드만 극장걸어주는거 누민경 덕분이네",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885284&page=1",
+            "date": "2026-11-26",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "토니에드만 << 어떰? 씨집에서 해주던데",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885235&page=2",
+            "date": "2026-11-26",
+            "positive": 22,
+            "rawPositive": 22,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "걸작",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "걸작",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "ㅆㅅㅌㅊ",
+                "count": 1,
+                "weight": 6,
+                "score": 6,
+                "label": "strong"
+              },
+              {
+                "term": "ㅅㅌㅊ",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 6,
+            "commentPositive": 22,
+            "commentNegative": 0
+          }
+        ]
+      },
       "룩백": {
         "title": "룩백",
         "positiveSignal": 4,
@@ -365,7 +453,7 @@
         "evidence": [
           {
             "title": "고레에다 히로카즈 룩백 개봉했었구나",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885250&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885250&page=2",
             "date": "2026-11-26",
             "positive": 4,
             "rawPositive": 4,
@@ -395,7 +483,7 @@
         "evidence": [
           {
             "title": "의외로 작품상 접점은 세계의주인이 아니라",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885246&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885246&page=2",
             "date": "2026-11-26",
             "positive": 12,
             "rawPositive": 12,
@@ -455,57 +543,6 @@
           }
         ]
       },
-      "토니에드만": {
-        "title": "토니 에드만(기획전)",
-        "positiveSignal": 22,
-        "mentionCount": 2.403677461028802,
-        "evidence": [
-          {
-            "title": "토니에드만 << 어떰? 씨집에서 해주던데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885235&page=1",
-            "date": "2026-11-26",
-            "positive": 22,
-            "rawPositive": 22,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "걸작",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              },
-              {
-                "term": "걸작",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              },
-              {
-                "term": "ㅆㅅㅌㅊ",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              },
-              {
-                "term": "ㅅㅌㅊ",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 6,
-            "commentPositive": 22,
-            "commentNegative": 0
-          }
-        ]
-      },
       "더데뷔": {
         "title": "더 데뷔",
         "positiveSignal": 0,
@@ -513,7 +550,7 @@
         "evidence": [
           {
             "title": "오늘 더데뷔 토크 뭐냐 이제봤네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885234&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885234&page=2",
             "date": "2026-11-26",
             "positive": 0,
             "rawPositive": 0,
@@ -594,7 +631,7 @@
         "evidence": [
           {
             "title": "원스 남주 죽었네.",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885172&page=2",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885172&page=3",
             "date": "2026-11-26",
             "positive": 0,
             "rawPositive": 0,
