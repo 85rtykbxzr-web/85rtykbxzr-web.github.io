@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-26T12:19:10.243Z",
-  "weekStart": "2026-11-24",
-  "weekEnd": "2026-11-26",
-  "windowStart": "2026-11-24",
-  "windowEnd": "2026-11-26",
+  "generatedAt": "2026-11-26T15:09:24.242Z",
+  "weekStart": "2026-11-25",
+  "weekEnd": "2026-11-27",
+  "windowStart": "2026-11-25",
+  "windowEnd": "2026-11-27",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -14,17 +14,17 @@
     {
       "rank": 1,
       "title": "토니 에드만",
-      "posterUrl": "/assets/recommendation-posters/9cfedc5dfda46e38.webp",
-      "localPosterUrl": "/assets/recommendation-posters/9cfedc5dfda46e38.webp",
+      "posterUrl": "/assets/recommendation-posters/9d7317d08b4190fd.webp",
+      "localPosterUrl": "/assets/recommendation-posters/9d7317d08b4190fd.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000122095&playDt=20261127&tsId=TS0056&pno=4",
-      "score": 170.8,
-      "signal": 26,
-      "positiveSignal": 26,
-      "mentionCount": 6.6,
+      "score": 119.5,
+      "signal": 18.7,
+      "positiveSignal": 18.7,
+      "mentionCount": 4.4,
       "rawPositiveSignal": 26,
-      "rawMentionCount": 7.064641508472483,
+      "rawMentionCount": 6.064641508472483,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum"
@@ -35,22 +35,6 @@
       "nextDate": "2026-11-27",
       "nextTime": "16:30",
       "evidence": [
-        {
-          "title": "파더랜드 12월 개봉이네 ㄷㄷ",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884600&page=2",
-          "date": "2026-11-24",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "님들 토니 에드만 재밌나요",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885345&page=1",
@@ -73,7 +57,7 @@
           "commentCount": 4,
           "commentPositive": 4,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "토니에드만 극장걸어주는거 누민경 덕분이네",
@@ -89,7 +73,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "토니에드만 << 어떰? 씨집에서 해주던데",
@@ -134,7 +118,7 @@
           "commentCount": 6,
           "commentPositive": 22,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/3RBg5SiDPFUbyBi7SONLAGnfTcY.jpg"
@@ -142,17 +126,17 @@
     {
       "rank": 2,
       "title": "세계의 주인",
-      "posterUrl": "/assets/recommendation-posters/6651e3634039c7a6.webp",
-      "localPosterUrl": "/assets/recommendation-posters/6651e3634039c7a6.webp",
+      "posterUrl": "/assets/recommendation-posters/57f8176d1ca23416.webp",
+      "localPosterUrl": "/assets/recommendation-posters/57f8176d1ca23416.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.koreafilm.or.kr/cinematheque/schedule",
-      "score": 128.9,
-      "signal": 16,
-      "positiveSignal": 16,
-      "mentionCount": 6.4,
+      "score": 79.6,
+      "signal": 11.5,
+      "positiveSignal": 11.5,
+      "mentionCount": 3.3,
       "rawPositiveSignal": 16,
-      "rawMentionCount": 8.584962500721156,
+      "rawMentionCount": 5,
       "scheduleBackfill": false,
       "venueIds": [
         "kofa"
@@ -163,38 +147,6 @@
       "nextDate": "2026-11-28",
       "nextTime": "12:00",
       "evidence": [
-        {
-          "title": "세계의주인 영국 극장개봉 예정",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884637&page=1",
-          "date": "2026-11-24",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "청룡 세계의주인이 받으면 좋겠다",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884553&page=2",
-          "date": "2026-11-24",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 2,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "세계의 주인 남동생 아역이 청룡 축하공연 하는중",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884820&page=1",
@@ -209,7 +161,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "의외로 작품상 접점은 세계의주인이 아니라",
@@ -247,7 +199,7 @@
           "commentCount": 7,
           "commentPositive": 12,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "호프 청룡 최우수작품, 촬영상은 예상했는데 세계의 주인 아쉽네",
@@ -271,7 +223,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cg679vCkXY9RH2iINLvdG68tzsQ.jpg"
@@ -284,10 +236,10 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-27&movieCd=030156&playSDT=2026-11-27&screenId=01&showSeq=6",
-      "score": 50,
-      "signal": 6,
-      "positiveSignal": 6,
-      "mentionCount": 2.5,
+      "score": 36.3,
+      "signal": 4.3,
+      "positiveSignal": 4.3,
+      "mentionCount": 1.8,
       "rawPositiveSignal": 6,
       "rawMentionCount": 2.5,
       "scheduleBackfill": false,
@@ -336,7 +288,7 @@
           "commentCount": 7,
           "commentPositive": 6,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261115_8ce022cc.jpg"
@@ -349,12 +301,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-27&movieCd=030149&playSDT=2026-11-27&screenId=02&showSeq=6",
-      "score": 48,
+      "score": 31.9,
       "signal": 0,
       "positiveSignal": 0,
-      "mentionCount": 4.4,
+      "mentionCount": 2.8,
       "rawPositiveSignal": 0,
-      "rawMentionCount": 6,
+      "rawMentionCount": 5,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -370,22 +322,6 @@
       "nextTime": "19:15",
       "evidence": [
         {
-          "title": "마른 잎 상영관 예상보다 더 처참하네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884650&page=1",
-          "date": "2026-11-24",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
           "title": "마른 잎 봤는데 좀 에바다",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884794&page=2",
           "date": "2026-11-25",
@@ -399,7 +335,7 @@
           "commentCount": 3,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "마른잎 144p라 빨리는거임?",
@@ -415,7 +351,7 @@
           "commentCount": 3,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "마른잎 볼만한가",
@@ -431,7 +367,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261118_e38d07ee.jpg"
@@ -443,24 +379,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 210,
+    "fetchedPostCount": 3,
     "listedPostCount": 292,
-    "detailedPostCount": 15,
-    "commentFetchCount": 15,
-    "commentCount": 41,
+    "detailedPostCount": 0,
+    "commentFetchCount": 0,
+    "commentCount": 0,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-11-25",
-    "newestScannedDate": "2026-11-26",
+    "newestScannedDate": "2026-11-27",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-11-26",
-    "candidateWindowEnd": "2026-12-10",
+    "candidateWindowStart": "2026-11-27",
+    "candidateWindowEnd": "2026-12-11",
     "candidateCount": 113,
     "seedLookbackDays": 3,
-    "seedStart": "2026-11-24",
+    "seedStart": "2026-11-25",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-11-26",
+    "listWindowStart": "2026-11-27",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -468,7 +404,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-11-26"
+      "2026-11-27"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [

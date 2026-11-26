@@ -2,219 +2,25 @@
   "version": 3,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-11-24",
-  "windowEnd": "2026-11-26",
+  "windowStart": "2026-11-25",
+  "windowEnd": "2026-11-27",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-11-24",
       "2026-11-25",
-      "2026-11-26"
+      "2026-11-26",
+      "2026-11-27"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-11-26",
-    "lastWindowEnd": "2026-11-26",
+    "lastWindowStart": "2026-11-27",
+    "lastWindowEnd": "2026-11-27",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-26T12:19:06.072Z",
+  "updatedAt": "2026-11-26T15:09:21.197Z",
   "days": {
-    "2026-11-24": {
-      "마른잎": {
-        "title": "마른 잎(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "마른 잎 상영관 예상보다 더 처참하네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884650&page=1",
-            "date": "2026-11-24",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "레이오버호텔": {
-        "title": "레이오버 호텔",
-        "positiveSignal": 0,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "내일 누유림 슬픈열대 vs 누소희 레이오버호텔",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884644&page=1",
-            "date": "2026-11-24",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "세계의주인": {
-        "title": "세계의 주인",
-        "positiveSignal": 0,
-        "mentionCount": 3.584962500721156,
-        "evidence": [
-          {
-            "title": "세계의주인 영국 극장개봉 예정",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884637&page=1",
-            "date": "2026-11-24",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "청룡 세계의주인이 받으면 좋겠다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884553&page=2",
-            "date": "2026-11-24",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "스윙걸즈": {
-        "title": "스윙걸즈(2D)",
-        "positiveSignal": 2,
-        "mentionCount": 2.160964047443681,
-        "evidence": [
-          {
-            "title": "스포) 오늘 스윙걸즈 봤음",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884620&page=1",
-            "date": "2026-11-24",
-            "positive": 2,
-            "rawPositive": 2,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "좋더라",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 4,
-            "commentPositive": 2,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "토니에드만": {
-        "title": "토니 에드만(기획전)",
-        "positiveSignal": 0,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "파더랜드 12월 개봉이네 ㄷㄷ",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884600&page=2",
-            "date": "2026-11-24",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "파더랜드": {
-        "title": "파더랜드",
-        "positiveSignal": 0,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "파더랜드 12월 개봉이네 ㄷㄷ",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884600&page=2",
-            "date": "2026-11-24",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "인사이드르윈": {
-        "title": "인사이드 르윈",
-        "positiveSignal": 0,
-        "mentionCount": 4,
-        "evidence": [
-          {
-            "title": "12월에 코엔 노나없 인사이드르윈 2개 개봉?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884544&page=3",
-            "date": "2026-11-24",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "인사이드 르윈 갤주 gv 예정",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884542&page=3",
-            "date": "2026-11-24",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 8,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-11-25": {
       "세계의주인": {
         "title": "세계의 주인",
@@ -765,7 +571,8 @@
           }
         ]
       }
-    }
+    },
+    "2026-11-27": {}
   },
   "festivals": {}
 }
