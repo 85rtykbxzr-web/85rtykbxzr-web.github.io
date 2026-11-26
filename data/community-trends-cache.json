@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-11-26",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-26T00:10:46.733Z",
+  "updatedAt": "2026-11-26T03:16:26.481Z",
   "days": {
     "2026-11-24": {
       "마른잎": {
@@ -358,6 +358,87 @@
       }
     },
     "2026-11-26": {
+      "더데뷔": {
+        "title": "더 데뷔",
+        "positiveSignal": 0,
+        "mentionCount": 2.5,
+        "evidence": [
+          {
+            "title": "오늘 더데뷔 토크 뭐냐 이제봤네",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885234&page=1",
+            "date": "2026-11-26",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
+            "commentNegative": 0
+          },
+          {
+            "title": "더 데뷔 예매함ㅅㅅ",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885221&page=1",
+            "date": "2026-11-26",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "피오르": {
+        "title": "피오르",
+        "positiveSignal": 6,
+        "mentionCount": 2.5,
+        "evidence": [
+          {
+            "title": "라그라디바 vs 피오르",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885215&page=1",
+            "date": "2026-11-26",
+            "positive": 6,
+            "rawPositive": 6,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "좋긴",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              },
+              {
+                "term": "좋긴",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              },
+              {
+                "term": "좋음",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 6,
+            "commentPositive": 6,
+            "commentNegative": 0
+          }
+        ]
+      },
       "세계의주인": {
         "title": "세계의 주인",
         "positiveSignal": 4,
@@ -391,11 +472,11 @@
       "원스": {
         "title": "원스(2D)",
         "positiveSignal": 0,
-        "mentionCount": 1.792481250360578,
+        "mentionCount": 2,
         "evidence": [
           {
             "title": "원스 남주 죽었네.",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885172&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885172&page=2",
             "date": "2026-11-26",
             "positive": 0,
             "rawPositive": 0,
@@ -404,7 +485,7 @@
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 2,
+            "commentCount": 3,
             "commentPositive": 0,
             "commentNegative": 0
           }
@@ -417,7 +498,7 @@
         "evidence": [
           {
             "title": "트레인스포팅 봤음",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885166&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885166&page=2",
             "date": "2026-11-26",
             "positive": 2,
             "rawPositive": 2,

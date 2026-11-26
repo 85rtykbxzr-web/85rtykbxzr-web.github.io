@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-26T00:10:49.393Z",
+  "generatedAt": "2026-11-26T03:16:30.627Z",
   "weekStart": "2026-11-24",
   "weekEnd": "2026-11-26",
   "windowStart": "2026-11-24",
@@ -112,6 +112,146 @@
     },
     {
       "rank": 2,
+      "title": "피오르",
+      "posterUrl": "/assets/recommendation-posters/f96f43564fd3225b.webp",
+      "localPosterUrl": "/assets/recommendation-posters/f96f43564fd3225b.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-27&movieCd=030156&playSDT=2026-11-27&screenId=01&showSeq=6",
+      "score": 50,
+      "signal": 6,
+      "positiveSignal": 6,
+      "mentionCount": 2.5,
+      "rawPositiveSignal": 6,
+      "rawMentionCount": 2.5,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "cinecube"
+      ],
+      "venueNames": [
+        "씨네큐브 광화문"
+      ],
+      "nextDate": "2026-11-27",
+      "nextTime": "19:40",
+      "evidence": [
+        {
+          "title": "라그라디바 vs 피오르",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885215&page=1",
+          "date": "2026-11-26",
+          "positive": 6,
+          "rawPositive": 6,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "좋긴",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            },
+            {
+              "term": "좋긴",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            },
+            {
+              "term": "좋음",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 6,
+          "commentPositive": 6,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261115_8ce022cc.jpg"
+    },
+    {
+      "rank": 3,
+      "title": "더 데뷔",
+      "posterUrl": "/assets/recommendation-posters/f96f43564fd3225b.webp",
+      "localPosterUrl": "/assets/recommendation-posters/f96f43564fd3225b.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-26&movieCd=030153&playSDT=2026-11-26&screenId=01&showSeq=6",
+      "score": 41.6,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 4.1,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 4.660964047443681,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "cinecube"
+      ],
+      "venueNames": [
+        "씨네큐브 광화문"
+      ],
+      "nextDate": "2026-11-26",
+      "nextTime": "19:30",
+      "evidence": [
+        {
+          "title": "씨큐 더 데뷔 왤케 인기많음?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884698&page=3",
+          "date": "2026-11-25",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 4,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "오늘 더데뷔 토크 뭐냐 이제봤네",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885234&page=1",
+          "date": "2026-11-26",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "더 데뷔 예매함ㅅㅅ",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885221&page=1",
+          "date": "2026-11-26",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261115_a3b0275b.jpg"
+    },
+    {
+      "rank": 4,
       "title": "마른 잎",
       "posterUrl": "/assets/recommendation-posters/0282008ac7f1e742.webp",
       "localPosterUrl": "/assets/recommendation-posters/0282008ac7f1e742.webp",
@@ -188,122 +328,6 @@
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261118_e38d07ee.jpg"
-    },
-    {
-      "rank": 3,
-      "title": "트레인스포팅",
-      "posterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
-      "localPosterUrl": "/assets/recommendation-posters/ca5403e7f2cb2e3a.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000121831&playDt=20261126&tsId=TS0056&pno=1",
-      "score": 33.6,
-      "signal": 2,
-      "positiveSignal": 2,
-      "mentionCount": 2.2,
-      "rawPositiveSignal": 2,
-      "rawMentionCount": 2.160964047443681,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "filmforum",
-        "sangsangmadang",
-        "kucine"
-      ],
-      "venueNames": [
-        "필름포럼",
-        "KT&G 상상마당 시네마",
-        "KU시네마테크"
-      ],
-      "nextDate": "2026-11-26",
-      "nextTime": "10:20",
-      "evidence": [
-        {
-          "title": "트레인스포팅 봤음",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885166&page=1",
-          "date": "2026-11-26",
-          "positive": 2,
-          "rawPositive": 2,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "좋았음",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 2,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/1jUC02qsqS2NxBMFarbIhcQtazV.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "인사이드 르윈",
-      "posterUrl": "/assets/recommendation-posters/f3b3b469ce74fd51.webp",
-      "localPosterUrl": "/assets/recommendation-posters/f3b3b469ce74fd51.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-12-02&movieCd=020243&playSDT=2026-12-02&screenId=01&showSeq=3",
-      "score": 21.7,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 2.1,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 4,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "cinecube",
-        "filmforum"
-      ],
-      "venueNames": [
-        "씨네큐브 광화문",
-        "필름포럼"
-      ],
-      "nextDate": "2026-12-02",
-      "nextTime": "13:30",
-      "evidence": [
-        {
-          "title": "12월에 코엔 노나없 인사이드르윈 2개 개봉?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884544&page=3",
-          "date": "2026-11-24",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "인사이드 르윈 갤주 gv 예정",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884542&page=3",
-          "date": "2026-11-24",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 8,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cjiE3mMvDSYqVBh1iTmPs3RNY3x.jpg"
     }
   ],
   "festivalPicks": [],
@@ -312,11 +336,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 89,
+    "fetchedPostCount": 118,
     "listedPostCount": 291,
-    "detailedPostCount": 3,
-    "commentFetchCount": 3,
-    "commentCount": 5,
+    "detailedPostCount": 6,
+    "commentFetchCount": 6,
+    "commentCount": 13,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -325,7 +349,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-11-26",
     "candidateWindowEnd": "2026-12-10",
-    "candidateCount": 117,
+    "candidateCount": 116,
     "seedLookbackDays": 3,
     "seedStart": "2026-11-24",
     "listLookbackDays": 1,
