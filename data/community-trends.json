@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-26T03:33:04.780Z",
+  "generatedAt": "2026-11-26T06:22:25.508Z",
   "weekStart": "2026-11-24",
   "weekEnd": "2026-11-26",
   "windowStart": "2026-11-24",
@@ -19,12 +19,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.koreafilm.or.kr/cinematheque/schedule",
-      "score": 55.9,
-      "signal": 4,
-      "positiveSignal": 4,
-      "mentionCount": 3.9,
-      "rawPositiveSignal": 4,
-      "rawMentionCount": 6.084962500721156,
+      "score": 128.9,
+      "signal": 16,
+      "positiveSignal": 16,
+      "mentionCount": 6.4,
+      "rawPositiveSignal": 16,
+      "rawMentionCount": 8.584962500721156,
       "scheduleBackfill": false,
       "venueIds": [
         "kofa"
@@ -84,8 +84,46 @@
           "dayWeight": 0.72
         },
         {
+          "title": "의외로 작품상 접점은 세계의주인이 아니라",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885246&page=1",
+          "date": "2026-11-26",
+          "positive": 12,
+          "rawPositive": 12,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "미쳤",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "좋았다",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 7,
+          "commentPositive": 12,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
           "title": "호프 청룡 최우수작품, 촬영상은 예상했는데 세계의 주인 아쉽네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885202&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885202&page=2",
           "date": "2026-11-26",
           "positive": 4,
           "rawPositive": 4,
@@ -118,12 +156,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000122095&playDt=20261127&tsId=TS0056&pno=4",
-      "score": 50.2,
-      "signal": 6,
-      "positiveSignal": 6,
-      "mentionCount": 2.5,
-      "rawPositiveSignal": 6,
-      "rawMentionCount": 3,
+      "score": 118.2,
+      "signal": 22,
+      "positiveSignal": 22,
+      "mentionCount": 2.9,
+      "rawPositiveSignal": 22,
+      "rawMentionCount": 3.403677461028802,
       "scheduleBackfill": false,
       "venueIds": [
         "filmforum"
@@ -154,8 +192,8 @@
           "title": "토니에드만 << 어떰? 씨집에서 해주던데",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885235&page=1",
           "date": "2026-11-26",
-          "positive": 6,
-          "rawPositive": 6,
+          "positive": 22,
+          "rawPositive": 22,
           "negative": 0,
           "positiveHits": [
             {
@@ -164,13 +202,34 @@
               "weight": 6,
               "score": 6,
               "label": "strong"
+            },
+            {
+              "term": "걸작",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "ㅆㅅㅌㅊ",
+              "count": 1,
+              "weight": 6,
+              "score": 6,
+              "label": "strong"
+            },
+            {
+              "term": "ㅅㅌㅊ",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
             }
           ],
           "negativeHits": [],
           "questionLike": true,
           "reviewQuestion": true,
-          "commentCount": 3,
-          "commentPositive": 6,
+          "commentCount": 6,
+          "commentPositive": 22,
           "commentNegative": 0,
           "dayWeight": 1
         }
@@ -203,7 +262,7 @@
       "evidence": [
         {
           "title": "라그라디바 vs 피오르",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885215&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885215&page=2",
           "date": "2026-11-26",
           "positive": 6,
           "rawPositive": 6,
@@ -234,7 +293,7 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 6,
+          "commentCount": 7,
           "commentPositive": 6,
           "commentNegative": 0,
           "dayWeight": 1
@@ -300,7 +359,7 @@
         },
         {
           "title": "더 데뷔 예매함ㅅㅅ",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885221&page=1",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885221&page=2",
           "date": "2026-11-26",
           "positive": 0,
           "rawPositive": 0,
@@ -324,11 +383,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 122,
+    "fetchedPostCount": 146,
     "listedPostCount": 291,
-    "detailedPostCount": 7,
-    "commentFetchCount": 7,
-    "commentCount": 16,
+    "detailedPostCount": 9,
+    "commentFetchCount": 9,
+    "commentCount": 30,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -337,7 +396,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-11-26",
     "candidateWindowEnd": "2026-12-10",
-    "candidateCount": 116,
+    "candidateCount": 117,
     "seedLookbackDays": 3,
     "seedStart": "2026-11-24",
     "listLookbackDays": 1,
