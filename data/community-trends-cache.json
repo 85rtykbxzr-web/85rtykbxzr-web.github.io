@@ -2,167 +2,25 @@
   "version": 3,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-11-25",
-  "windowEnd": "2026-11-27",
+  "windowStart": "2026-11-26",
+  "windowEnd": "2026-11-28",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-11-25",
       "2026-11-26",
-      "2026-11-27"
+      "2026-11-27",
+      "2026-11-28"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-11-27",
-    "lastWindowEnd": "2026-11-27",
+    "lastWindowStart": "2026-11-28",
+    "lastWindowEnd": "2026-11-28",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-27T12:18:58.254Z",
+  "updatedAt": "2026-11-27T15:08:59.433Z",
   "days": {
-    "2026-11-25": {
-      "세계의주인": {
-        "title": "세계의 주인",
-        "positiveSignal": 0,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "세계의 주인 남동생 아역이 청룡 축하공연 하는중",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884820&page=1",
-            "date": "2026-11-25",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "폭설": {
-        "title": "폭설(한글자막 CC)",
-        "positiveSignal": 0,
-        "mentionCount": 2.5,
-        "evidence": [
-          {
-            "title": "파묘 vs 폭설",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884813&page=1",
-            "date": "2026-11-25",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "폭설 진짜 볼까말까",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884808&page=1",
-            "date": "2026-11-25",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "마른잎": {
-        "title": "마른 잎",
-        "positiveSignal": 0,
-        "mentionCount": 4,
-        "evidence": [
-          {
-            "title": "마른 잎 봤는데 좀 에바다",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884794&page=2",
-            "date": "2026-11-25",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 3,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "마른잎 144p라 빨리는거임?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884775&page=2",
-            "date": "2026-11-25",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 3,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "더데뷔": {
-        "title": "더 데뷔",
-        "positiveSignal": 0,
-        "mentionCount": 2.160964047443681,
-        "evidence": [
-          {
-            "title": "씨큐 더 데뷔 왤케 인기많음?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884698&page=3",
-            "date": "2026-11-25",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": false,
-            "commentCount": 4,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "아사코": {
-        "title": "아사코(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 2.160964047443681,
-        "evidence": [
-          {
-            "title": "아사코에 나오는 고양이",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884681&page=4",
-            "date": "2026-11-25",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 4,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-11-26": {
       "토니에드만": {
         "title": "토니 에드만(기획전)",
@@ -813,6 +671,30 @@
             "reviewQuestion": false,
             "commentCount": 1,
             "commentPositive": 2,
+            "commentNegative": 0
+          }
+        ]
+      }
+    },
+    "2026-11-28": {
+      "광야시대": {
+        "title": "광야시대",
+        "positiveSignal": 0,
+        "mentionCount": 1,
+        "evidence": [
+          {
+            "title": "찬실이 GV+사인회가기 vs 광야시대 프리미어 보기",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885766&page=1",
+            "date": "2026-11-28",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 0,
+            "commentPositive": 0,
             "commentNegative": 0
           }
         ]

@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-27T12:19:01.688Z",
-  "weekStart": "2026-11-25",
-  "weekEnd": "2026-11-27",
-  "windowStart": "2026-11-25",
-  "windowEnd": "2026-11-27",
+  "generatedAt": "2026-11-27T15:09:02.272Z",
+  "weekStart": "2026-11-26",
+  "weekEnd": "2026-11-28",
+  "windowStart": "2026-11-26",
+  "windowEnd": "2026-11-28",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -14,15 +14,15 @@
     {
       "rank": 1,
       "title": "토니 에드만",
-      "posterUrl": "/assets/recommendation-posters/9cfedc5dfda46e38.webp",
-      "localPosterUrl": "/assets/recommendation-posters/9cfedc5dfda46e38.webp",
+      "posterUrl": "/assets/recommendation-posters/9d7317d08b4190fd.webp",
+      "localPosterUrl": "/assets/recommendation-posters/9d7317d08b4190fd.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000122095&playDt=20261130&tsId=TS0057&pno=5",
-      "score": 119,
-      "signal": 18.7,
-      "positiveSignal": 18.7,
-      "mentionCount": 4.4,
+      "score": 85.8,
+      "signal": 13.5,
+      "positiveSignal": 13.5,
+      "mentionCount": 3.1,
       "rawPositiveSignal": 26,
       "rawMentionCount": 6.064641508472483,
       "scheduleBackfill": false,
@@ -57,7 +57,7 @@
           "commentCount": 4,
           "commentPositive": 4,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "토니에드만 극장걸어주는거 누민경 덕분이네",
@@ -73,7 +73,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "토니에드만 << 어떰? 씨집에서 해주던데",
@@ -118,7 +118,7 @@
           "commentCount": 6,
           "commentPositive": 22,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/3RBg5SiDPFUbyBi7SONLAGnfTcY.jpg"
@@ -126,17 +126,17 @@
     {
       "rank": 2,
       "title": "세계의 주인",
-      "posterUrl": "/assets/recommendation-posters/6651e3634039c7a6.webp",
-      "localPosterUrl": "/assets/recommendation-posters/6651e3634039c7a6.webp",
+      "posterUrl": "/assets/recommendation-posters/57f8176d1ca23416.webp",
+      "localPosterUrl": "/assets/recommendation-posters/57f8176d1ca23416.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.koreafilm.or.kr/cinematheque/schedule",
-      "score": 79.6,
-      "signal": 11.5,
-      "positiveSignal": 11.5,
-      "mentionCount": 3.3,
+      "score": 51.8,
+      "signal": 8.3,
+      "positiveSignal": 8.3,
+      "mentionCount": 1.8,
       "rawPositiveSignal": 16,
-      "rawMentionCount": 5,
+      "rawMentionCount": 3.5,
       "scheduleBackfill": false,
       "venueIds": [
         "kofa"
@@ -147,22 +147,6 @@
       "nextDate": "2026-11-28",
       "nextTime": "12:00",
       "evidence": [
-        {
-          "title": "세계의 주인 남동생 아역이 청룡 축하공연 하는중",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884820&page=1",
-          "date": "2026-11-25",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
         {
           "title": "의외로 작품상 접점은 세계의주인이 아니라",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885246&page=2",
@@ -199,7 +183,7 @@
           "commentCount": 7,
           "commentPositive": 12,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "호프 청룡 최우수작품, 촬영상은 예상했는데 세계의 주인 아쉽네",
@@ -223,134 +207,23 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         }
       ],
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cg679vCkXY9RH2iINLvdG68tzsQ.jpg"
     },
     {
       "rank": 3,
-      "title": "마른 잎",
-      "posterUrl": "/assets/recommendation-posters/0282008ac7f1e742.webp",
-      "localPosterUrl": "/assets/recommendation-posters/0282008ac7f1e742.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-28&movieCd=030149&playSDT=2026-11-28&screenId=02&showSeq=6",
-      "score": 71.4,
-      "signal": 0,
-      "positiveSignal": 0,
-      "mentionCount": 6.8,
-      "rawPositiveSignal": 0,
-      "rawMentionCount": 9,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "cinecube",
-        "filmforum",
-        "sac"
-      ],
-      "venueNames": [
-        "씨네큐브 광화문",
-        "필름포럼",
-        "서울아트시네마"
-      ],
-      "nextDate": "2026-11-28",
-      "nextTime": "19:35",
-      "evidence": [
-        {
-          "title": "마른 잎 봤는데 좀 에바다",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884794&page=2",
-          "date": "2026-11-25",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "마른잎 144p라 빨리는거임?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884775&page=2",
-          "date": "2026-11-25",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "마른잎 볼만한가",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885310&page=1",
-          "date": "2026-11-26",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "마른잎 고전 게임같지 않냐",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885574&page=3",
-          "date": "2026-11-27",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 1,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        },
-        {
-          "title": "호프를 cg안좋다고 까는애들은 마른잎같은 영화는",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885552&page=4",
-          "date": "2026-11-27",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 9,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261118_e38d07ee.jpg"
-    },
-    {
-      "rank": 4,
       "title": "피오르",
       "posterUrl": "/assets/recommendation-posters/f96f43564fd3225b.webp",
       "localPosterUrl": "/assets/recommendation-posters/f96f43564fd3225b.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-29&movieCd=030156&playSDT=2026-11-29&screenId=01&showSeq=3",
-      "score": 58.8,
-      "signal": 6.3,
-      "positiveSignal": 6.3,
-      "mentionCount": 3.3,
+      "score": 42.4,
+      "signal": 4.5,
+      "positiveSignal": 4.5,
+      "mentionCount": 2.4,
       "rawPositiveSignal": 8,
       "rawMentionCount": 4,
       "scheduleBackfill": false,
@@ -399,7 +272,7 @@
           "commentCount": 7,
           "commentPositive": 6,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "피오르 취소표 안 나오는구나...",
@@ -423,10 +296,89 @@
           "commentCount": 1,
           "commentPositive": 2,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261115_8ce022cc.jpg"
+    },
+    {
+      "rank": 4,
+      "title": "마른 잎",
+      "posterUrl": "/assets/recommendation-posters/0282008ac7f1e742.webp",
+      "localPosterUrl": "/assets/recommendation-posters/0282008ac7f1e742.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-28&movieCd=030149&playSDT=2026-11-28&screenId=02&showSeq=6",
+      "score": 38,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 3.4,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 5,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "cinecube",
+        "filmforum",
+        "sac"
+      ],
+      "venueNames": [
+        "씨네큐브 광화문",
+        "필름포럼",
+        "서울아트시네마"
+      ],
+      "nextDate": "2026-11-28",
+      "nextTime": "19:35",
+      "evidence": [
+        {
+          "title": "마른잎 볼만한가",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885310&page=1",
+          "date": "2026-11-26",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "마른잎 고전 게임같지 않냐",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885574&page=3",
+          "date": "2026-11-27",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "호프를 cg안좋다고 까는애들은 마른잎같은 영화는",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885552&page=4",
+          "date": "2026-11-27",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 9,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        }
+      ],
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261118_e38d07ee.jpg"
     }
   ],
   "festivalPicks": [],
@@ -435,24 +387,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 250,
+    "fetchedPostCount": 4,
     "listedPostCount": 292,
-    "detailedPostCount": 11,
-    "commentFetchCount": 11,
-    "commentCount": 24,
+    "detailedPostCount": 1,
+    "commentFetchCount": 1,
+    "commentCount": 0,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-11-17",
-    "newestScannedDate": "2026-11-27",
+    "newestScannedDate": "2026-11-28",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-11-27",
-    "candidateWindowEnd": "2026-12-11",
-    "candidateCount": 120,
+    "candidateWindowStart": "2026-11-28",
+    "candidateWindowEnd": "2026-12-12",
+    "candidateCount": 123,
     "seedLookbackDays": 3,
-    "seedStart": "2026-11-25",
+    "seedStart": "2026-11-26",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-11-27",
+    "listWindowStart": "2026-11-28",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -460,7 +412,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-11-27"
+      "2026-11-28"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [
