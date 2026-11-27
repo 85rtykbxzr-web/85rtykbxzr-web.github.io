@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-27T01:42:59.158Z",
+  "generatedAt": "2026-11-27T03:16:40.177Z",
   "weekStart": "2026-11-25",
   "weekEnd": "2026-11-27",
   "windowStart": "2026-11-25",
@@ -125,6 +125,94 @@
     },
     {
       "rank": 2,
+      "title": "두 검사",
+      "posterUrl": "/assets/recommendation-posters/4effe8943185a1bb.webp",
+      "localPosterUrl": "/assets/recommendation-posters/4effe8943185a1bb.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.koreafilm.or.kr/cinematheque/schedule",
+      "score": 118.4,
+      "signal": 20,
+      "positiveSignal": 20,
+      "mentionCount": 3.8,
+      "rawPositiveSignal": 20,
+      "rawMentionCount": 3.792481250360578,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "kofa"
+      ],
+      "venueNames": [
+        "시네마테크KOFA"
+      ],
+      "nextDate": "2026-11-27",
+      "nextTime": "13:00",
+      "evidence": [
+        {
+          "title": "<두 검사> 핵꿀잼 걸작인가요?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885532&page=1",
+          "date": "2026-11-27",
+          "positive": 20,
+          "rawPositive": 20,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "꿀잼",
+              "count": 2,
+              "weight": 4,
+              "score": 8,
+              "label": "clear"
+            },
+            {
+              "term": "수작",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "재밌",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            },
+            {
+              "term": "추천",
+              "count": 1,
+              "weight": 4,
+              "score": 4,
+              "label": "clear"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 5,
+          "commentPositive": 20,
+          "commentNegative": 0,
+          "dayWeight": 1
+        },
+        {
+          "title": "두 검사 오늘 영자원에서 틀어줄 때 봐야함?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885525&page=1",
+          "date": "2026-11-27",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/bkrIf65j2fgSJQaNvcZYkaY6VHs.jpg"
+    },
+    {
+      "rank": 3,
       "title": "세계의 주인",
       "posterUrl": "/assets/recommendation-posters/6651e3634039c7a6.webp",
       "localPosterUrl": "/assets/recommendation-posters/6651e3634039c7a6.webp",
@@ -229,70 +317,84 @@
       "posterSourceUrl": "https://image.tmdb.org/t/p/w500/cg679vCkXY9RH2iINLvdG68tzsQ.jpg"
     },
     {
-      "rank": 3,
-      "title": "피오르",
-      "posterUrl": "/assets/recommendation-posters/f96f43564fd3225b.webp",
-      "localPosterUrl": "/assets/recommendation-posters/f96f43564fd3225b.webp",
+      "rank": 4,
+      "title": "마른 잎",
+      "posterUrl": "/assets/recommendation-posters/0282008ac7f1e742.webp",
+      "localPosterUrl": "/assets/recommendation-posters/0282008ac7f1e742.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-27&movieCd=030156&playSDT=2026-11-27&screenId=01&showSeq=6",
-      "score": 46.3,
-      "signal": 4.3,
-      "positiveSignal": 4.3,
-      "mentionCount": 2.8,
-      "rawPositiveSignal": 6,
-      "rawMentionCount": 3.5,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-27&movieCd=030149&playSDT=2026-11-27&screenId=02&showSeq=6",
+      "score": 56.9,
+      "signal": 0,
+      "positiveSignal": 0,
+      "mentionCount": 5.3,
+      "rawPositiveSignal": 0,
+      "rawMentionCount": 7.5,
       "scheduleBackfill": false,
       "venueIds": [
-        "cinecube"
+        "cinecube",
+        "filmforum",
+        "sac"
       ],
       "venueNames": [
-        "씨네큐브 광화문"
+        "씨네큐브 광화문",
+        "필름포럼",
+        "서울아트시네마"
       ],
       "nextDate": "2026-11-27",
-      "nextTime": "19:40",
+      "nextTime": "19:15",
       "evidence": [
         {
-          "title": "라그라디바 vs 피오르",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885215&page=3",
-          "date": "2026-11-26",
-          "positive": 6,
-          "rawPositive": 6,
+          "title": "마른 잎 봤는데 좀 에바다",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884794&page=2",
+          "date": "2026-11-25",
+          "positive": 0,
+          "rawPositive": 0,
           "negative": 0,
-          "positiveHits": [
-            {
-              "term": "좋긴",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            },
-            {
-              "term": "좋긴",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            },
-            {
-              "term": "좋음",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
+          "positiveHits": [],
           "negativeHits": [],
-          "questionLike": false,
+          "questionLike": true,
           "reviewQuestion": false,
-          "commentCount": 7,
-          "commentPositive": 6,
+          "commentCount": 3,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "마른잎 144p라 빨리는거임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1884775&page=2",
+          "date": "2026-11-25",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 3,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.518
+        },
+        {
+          "title": "마른잎 볼만한가",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885310&page=1",
+          "date": "2026-11-26",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": true,
+          "commentCount": 0,
+          "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 0.72
         },
         {
-          "title": "피오르 취소표 안 나오는구나...",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885506&page=1",
+          "title": "호프를 cg안좋다고 까는애들은 마른잎같은 영화는",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885552&page=1",
           "date": "2026-11-27",
           "positive": 0,
           "rawPositive": 0,
@@ -301,64 +403,13 @@
           "negativeHits": [],
           "questionLike": false,
           "reviewQuestion": false,
-          "commentCount": 0,
+          "commentCount": 8,
           "commentPositive": 0,
           "commentNegative": 0,
           "dayWeight": 1
         }
       ],
-      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261115_8ce022cc.jpg"
-    },
-    {
-      "rank": 4,
-      "title": "단편 1",
-      "posterUrl": "/assets/recommendation-posters/97ff19897d6f92dc.webp",
-      "localPosterUrl": "/assets/recommendation-posters/97ff19897d6f92dc.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.tinyticket.net/event/EVIpi8SZLHcT",
-      "score": 33,
-      "signal": 2,
-      "positiveSignal": 2,
-      "mentionCount": 2.4,
-      "rawPositiveSignal": 2,
-      "rawMentionCount": 2.403677461028802,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "sac"
-      ],
-      "venueNames": [
-        "서울아트시네마"
-      ],
-      "nextDate": "2026-11-27",
-      "nextTime": "19:30",
-      "evidence": [
-        {
-          "title": "서독제 오늘자 페스티벌초이스 단편1, 밧줄맨 양도 받을 사람있나",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885486&page=1",
-          "date": "2026-11-27",
-          "positive": 2,
-          "rawPositive": 2,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "좋네",
-              "count": 1,
-              "weight": 2,
-              "score": 2,
-              "label": "soft"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 6,
-          "commentPositive": 2,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/uBFieq0YPvjsOXCoSrnXBS8LliF.jpg"
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261118_e38d07ee.jpg"
     }
   ],
   "festivalPicks": [],
@@ -367,11 +418,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 73,
+    "fetchedPostCount": 108,
     "listedPostCount": 292,
-    "detailedPostCount": 3,
-    "commentFetchCount": 3,
-    "commentCount": 8,
+    "detailedPostCount": 7,
+    "commentFetchCount": 7,
+    "commentCount": 25,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
@@ -380,7 +431,7 @@
     "scanMode": "daily",
     "candidateWindowStart": "2026-11-27",
     "candidateWindowEnd": "2026-12-11",
-    "candidateCount": 118,
+    "candidateCount": 119,
     "seedLookbackDays": 3,
     "seedStart": "2026-11-25",
     "listLookbackDays": 1,

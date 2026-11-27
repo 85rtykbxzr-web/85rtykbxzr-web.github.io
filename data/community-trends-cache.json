@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-11-27",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-27T01:42:56.030Z",
+  "updatedAt": "2026-11-27T03:16:37.031Z",
   "days": {
     "2026-11-25": {
       "세계의주인": {
@@ -573,21 +573,138 @@
       }
     },
     "2026-11-27": {
+      "마른잎": {
+        "title": "마른 잎",
+        "positiveSignal": 0,
+        "mentionCount": 2.5,
+        "evidence": [
+          {
+            "title": "호프를 cg안좋다고 까는애들은 마른잎같은 영화는",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885552&page=1",
+            "date": "2026-11-27",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 8,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "두검사": {
+        "title": "두 검사",
+        "positiveSignal": 20,
+        "mentionCount": 3.792481250360578,
+        "evidence": [
+          {
+            "title": "<두 검사> 핵꿀잼 걸작인가요?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885532&page=1",
+            "date": "2026-11-27",
+            "positive": 20,
+            "rawPositive": 20,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "꿀잼",
+                "count": 2,
+                "weight": 4,
+                "score": 8,
+                "label": "clear"
+              },
+              {
+                "term": "수작",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "재밌",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              },
+              {
+                "term": "추천",
+                "count": 1,
+                "weight": 4,
+                "score": 4,
+                "label": "clear"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": true,
+            "commentCount": 5,
+            "commentPositive": 20,
+            "commentNegative": 0
+          },
+          {
+            "title": "두 검사 오늘 영자원에서 틀어줄 때 봐야함?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885525&page=1",
+            "date": "2026-11-27",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "광야시대": {
+        "title": "광야시대",
+        "positiveSignal": 0,
+        "mentionCount": 1.5,
+        "evidence": [
+          {
+            "title": "태주vs광야시대",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885524&page=1",
+            "date": "2026-11-27",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
       "패러렐테일즈데칼로그": {
         "title": "패러렐 테일즈: 데칼로그",
-        "positiveSignal": 2,
-        "mentionCount": 1.792481250360578,
+        "positiveSignal": 4,
+        "mentionCount": 2.160964047443681,
         "evidence": [
           {
             "title": "패러렐 테일즈 왓챠는 왜 호평 일색이지",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885513&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885513&page=2",
             "date": "2026-11-27",
-            "positive": 2,
-            "rawPositive": 2,
+            "positive": 4,
+            "rawPositive": 4,
             "negative": 0,
             "positiveHits": [
               {
                 "term": "괜찮",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              },
+              {
+                "term": "볼만",
                 "count": 1,
                 "weight": 2,
                 "score": 2,
@@ -597,8 +714,8 @@
             "negativeHits": [],
             "questionLike": false,
             "reviewQuestion": false,
-            "commentCount": 2,
-            "commentPositive": 2,
+            "commentCount": 4,
+            "commentPositive": 4,
             "commentNegative": 0
           }
         ]
@@ -610,7 +727,7 @@
         "evidence": [
           {
             "title": "피오르 취소표 안 나오는구나...",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885506&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885506&page=2",
             "date": "2026-11-27",
             "positive": 0,
             "rawPositive": 0,
@@ -632,7 +749,7 @@
         "evidence": [
           {
             "title": "서독제 오늘자 페스티벌초이스 단편1, 밧줄맨 양도 받을 사람있나",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885486&page=1",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885486&page=2",
             "date": "2026-11-27",
             "positive": 2,
             "rawPositive": 2,
