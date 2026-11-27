@@ -1,6 +1,6 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-27T00:10:56.417Z",
+  "generatedAt": "2026-11-27T01:42:59.158Z",
   "weekStart": "2026-11-25",
   "weekEnd": "2026-11-27",
   "windowStart": "2026-11-25",
@@ -230,87 +230,18 @@
     },
     {
       "rank": 3,
-      "title": "룩백",
-      "posterUrl": "/assets/recommendation-posters/966107553553c174.webp",
-      "localPosterUrl": "/assets/recommendation-posters/966107553553c174.webp",
-      "posterSource": "verified-official",
-      "trailerUrl": "",
-      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-27&movieCd=029713&playSDT=2026-11-27&screenId=02&showSeq=2",
-      "score": 38.9,
-      "signal": 2.9,
-      "positiveSignal": 2.9,
-      "mentionCount": 2.4,
-      "rawPositiveSignal": 4,
-      "rawMentionCount": 3,
-      "scheduleBackfill": false,
-      "venueIds": [
-        "cinecube",
-        "filmforum"
-      ],
-      "venueNames": [
-        "씨네큐브 광화문",
-        "필름포럼"
-      ],
-      "nextDate": "2026-11-27",
-      "nextTime": "11:15",
-      "evidence": [
-        {
-          "title": "고레에다 히로카즈 룩백 개봉했었구나",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885250&page=2",
-          "date": "2026-11-26",
-          "positive": 4,
-          "rawPositive": 4,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "재밌",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": false,
-          "reviewQuestion": false,
-          "commentCount": 3,
-          "commentPositive": 4,
-          "commentNegative": 0,
-          "dayWeight": 0.72
-        },
-        {
-          "title": "누갤 애들 상자속의 양보다 룩백이 구리다 하지 않았냐?",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885483&page=1",
-          "date": "2026-11-27",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 1
-        }
-      ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/rfH6BJ9ZRw31awgUtQhN6Cug5yu.jpg"
-    },
-    {
-      "rank": 4,
       "title": "피오르",
       "posterUrl": "/assets/recommendation-posters/f96f43564fd3225b.webp",
       "localPosterUrl": "/assets/recommendation-posters/f96f43564fd3225b.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-27&movieCd=030156&playSDT=2026-11-27&screenId=01&showSeq=6",
-      "score": 36.3,
+      "score": 46.3,
       "signal": 4.3,
       "positiveSignal": 4.3,
-      "mentionCount": 1.8,
+      "mentionCount": 2.8,
       "rawPositiveSignal": 6,
-      "rawMentionCount": 2.5,
+      "rawMentionCount": 3.5,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube"
@@ -358,9 +289,76 @@
           "commentPositive": 6,
           "commentNegative": 0,
           "dayWeight": 0.72
+        },
+        {
+          "title": "피오르 취소표 안 나오는구나...",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885506&page=1",
+          "date": "2026-11-27",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 1
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261115_8ce022cc.jpg"
+    },
+    {
+      "rank": 4,
+      "title": "단편 1",
+      "posterUrl": "/assets/recommendation-posters/97ff19897d6f92dc.webp",
+      "localPosterUrl": "/assets/recommendation-posters/97ff19897d6f92dc.webp",
+      "posterSource": "verified-official",
+      "trailerUrl": "",
+      "url": "https://www.tinyticket.net/event/EVIpi8SZLHcT",
+      "score": 33,
+      "signal": 2,
+      "positiveSignal": 2,
+      "mentionCount": 2.4,
+      "rawPositiveSignal": 2,
+      "rawMentionCount": 2.403677461028802,
+      "scheduleBackfill": false,
+      "venueIds": [
+        "sac"
+      ],
+      "venueNames": [
+        "서울아트시네마"
+      ],
+      "nextDate": "2026-11-27",
+      "nextTime": "19:30",
+      "evidence": [
+        {
+          "title": "서독제 오늘자 페스티벌초이스 단편1, 밧줄맨 양도 받을 사람있나",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885486&page=1",
+          "date": "2026-11-27",
+          "positive": 2,
+          "rawPositive": 2,
+          "negative": 0,
+          "positiveHits": [
+            {
+              "term": "좋네",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
+            }
+          ],
+          "negativeHits": [],
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 6,
+          "commentPositive": 2,
+          "commentNegative": 0,
+          "dayWeight": 1
+        }
+      ],
+      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/uBFieq0YPvjsOXCoSrnXBS8LliF.jpg"
     }
   ],
   "festivalPicks": [],
@@ -369,11 +367,11 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 47,
+    "fetchedPostCount": 73,
     "listedPostCount": 292,
-    "detailedPostCount": 1,
-    "commentFetchCount": 1,
-    "commentCount": 0,
+    "detailedPostCount": 3,
+    "commentFetchCount": 3,
+    "commentCount": 8,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,

@@ -19,7 +19,7 @@
     "lastWindowEnd": "2026-11-27",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-27T00:10:52.542Z",
+  "updatedAt": "2026-11-27T01:42:56.030Z",
   "days": {
     "2026-11-25": {
       "세계의주인": {
@@ -573,24 +573,84 @@
       }
     },
     "2026-11-27": {
-      "룩백": {
-        "title": "룩백",
+      "패러렐테일즈데칼로그": {
+        "title": "패러렐 테일즈: 데칼로그",
+        "positiveSignal": 2,
+        "mentionCount": 1.792481250360578,
+        "evidence": [
+          {
+            "title": "패러렐 테일즈 왓챠는 왜 호평 일색이지",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885513&page=1",
+            "date": "2026-11-27",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "괜찮",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 2,
+            "commentPositive": 2,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "피오르": {
+        "title": "피오르",
         "positiveSignal": 0,
         "mentionCount": 1,
         "evidence": [
           {
-            "title": "누갤 애들 상자속의 양보다 룩백이 구리다 하지 않았냐?",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885483&page=1",
+            "title": "피오르 취소표 안 나오는구나...",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885506&page=1",
             "date": "2026-11-27",
             "positive": 0,
             "rawPositive": 0,
             "negative": 0,
             "positiveHits": [],
             "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
+            "questionLike": false,
+            "reviewQuestion": false,
             "commentCount": 0,
             "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "단편1": {
+        "title": "단편 1",
+        "positiveSignal": 2,
+        "mentionCount": 2.403677461028802,
+        "evidence": [
+          {
+            "title": "서독제 오늘자 페스티벌초이스 단편1, 밧줄맨 양도 받을 사람있나",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885486&page=1",
+            "date": "2026-11-27",
+            "positive": 2,
+            "rawPositive": 2,
+            "negative": 0,
+            "positiveHits": [
+              {
+                "term": "좋네",
+                "count": 1,
+                "weight": 2,
+                "score": 2,
+                "label": "soft"
+              }
+            ],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 6,
+            "commentPositive": 2,
             "commentNegative": 0
           }
         ]
