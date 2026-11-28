@@ -1,10 +1,10 @@
 {
   "label": "최근 3일 추천",
-  "generatedAt": "2026-11-28T12:19:15.456Z",
-  "weekStart": "2026-11-26",
-  "weekEnd": "2026-11-28",
-  "windowStart": "2026-11-26",
-  "windowEnd": "2026-11-28",
+  "generatedAt": "2026-11-28T15:09:16.629Z",
+  "weekStart": "2026-11-27",
+  "weekEnd": "2026-11-29",
+  "windowStart": "2026-11-27",
+  "windowEnd": "2026-11-29",
   "rollingDays": 3,
   "scoreModel": {
     "windowDays": 3,
@@ -19,10 +19,10 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-12-03&movieCd=030154&playSDT=2026-12-03&screenId=01&showSeq=6",
-      "score": 218.4,
-      "signal": 30,
-      "positiveSignal": 30,
-      "mentionCount": 9.8,
+      "score": 157.3,
+      "signal": 21.6,
+      "positiveSignal": 21.6,
+      "mentionCount": 7,
       "rawPositiveSignal": 30,
       "rawMentionCount": 10.988639961749957,
       "scheduleBackfill": false,
@@ -49,7 +49,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "지금 낼 파더랜드 리저렉션 취소한다.",
@@ -65,7 +65,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "파더랜드 개봉 언제할까",
@@ -81,7 +81,7 @@
           "commentCount": 2,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "파더랜드는 말그대로 심리적 회화를 그려나가는",
@@ -119,7 +119,7 @@
           "commentCount": 6,
           "commentPositive": 12,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "파더랜드는 걸작입니다",
@@ -150,7 +150,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261115_ae89b569.jpg"
@@ -163,12 +163,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-30&movieCd=030162&playSDT=2026-11-30&screenId=01&showSeq=6",
-      "score": 88.3,
-      "signal": 8,
-      "positiveSignal": 8,
-      "mentionCount": 5.6,
+      "score": 78.7,
+      "signal": 5.8,
+      "positiveSignal": 5.8,
+      "mentionCount": 5.5,
       "rawPositiveSignal": 8,
-      "rawMentionCount": 6,
+      "rawMentionCount": 7.5,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube"
@@ -193,7 +193,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "오늘 광야시대 부산 이후 첫상영이구나",
@@ -224,7 +224,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "님들 광야시대 필관임?",
@@ -240,12 +240,28 @@
           "commentCount": 3,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "찬실이 GV+사인회가기 vs 광야시대 프리미어 보기",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885766&page=4",
           "date": "2026-11-28",
+          "positive": 0,
+          "rawPositive": 0,
+          "negative": 0,
+          "positiveHits": [],
+          "negativeHits": [],
+          "questionLike": true,
+          "reviewQuestion": false,
+          "commentCount": 1,
+          "commentPositive": 0,
+          "commentNegative": 0,
+          "dayWeight": 0.72
+        },
+        {
+          "title": "광야시대 최고작임?",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885987&page=1",
+          "date": "2026-11-29",
           "positive": 0,
           "rawPositive": 0,
           "negative": 0,
@@ -263,115 +279,81 @@
     },
     {
       "rank": 3,
-      "title": "토니 에드만",
-      "posterUrl": "/assets/recommendation-posters/9cfedc5dfda46e38.webp",
-      "localPosterUrl": "/assets/recommendation-posters/9cfedc5dfda46e38.webp",
+      "title": "아사코",
+      "posterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
+      "localPosterUrl": "/assets/recommendation-posters/c836824c15c365f9.webp",
       "posterSource": "verified-official",
       "trailerUrl": "",
-      "url": "https://moviee.co.kr/Movie/Ticket?tid=130&mId=M000122095&playDt=20261130&tsId=TS0057&pno=5",
-      "score": 85.8,
-      "signal": 13.5,
-      "positiveSignal": 13.5,
-      "mentionCount": 3.1,
-      "rawPositiveSignal": 26,
-      "rawMentionCount": 6.064641508472483,
+      "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-29&movieCd=019765&playSDT=2026-11-29&screenId=02&showSeq=1",
+      "score": 43.5,
+      "signal": 4.3,
+      "positiveSignal": 4.3,
+      "mentionCount": 2.3,
+      "rawPositiveSignal": 6,
+      "rawMentionCount": 3.160964047443681,
       "scheduleBackfill": false,
       "venueIds": [
+        "cinecube",
+        "sangsangmadang",
         "filmforum"
       ],
       "venueNames": [
+        "씨네큐브 광화문",
+        "KT&G 상상마당 시네마",
         "필름포럼"
       ],
-      "nextDate": "2026-11-30",
-      "nextTime": "18:50",
+      "nextDate": "2026-11-29",
+      "nextTime": "09:45",
       "evidence": [
         {
-          "title": "님들 토니 에드만 재밌나요",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885345&page=1",
-          "date": "2026-11-26",
-          "positive": 4,
-          "rawPositive": 4,
+          "title": "아사코 6년전에 첨봤을땐 별로였는데 다시보니까",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885884&page=2",
+          "date": "2026-11-28",
+          "positive": 6,
+          "rawPositive": 6,
           "negative": 0,
           "positiveHits": [
             {
-              "term": "꿀잼",
+              "term": "재밋",
               "count": 1,
               "weight": 4,
               "score": 4,
               "label": "clear"
+            },
+            {
+              "term": "재밋네",
+              "count": 1,
+              "weight": 2,
+              "score": 2,
+              "label": "soft"
             }
           ],
           "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 4,
-          "commentPositive": 4,
+          "questionLike": false,
+          "reviewQuestion": false,
+          "commentCount": 0,
+          "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.518
+          "dayWeight": 0.72
         },
         {
-          "title": "토니에드만 극장걸어주는거 누민경 덕분이네",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885284&page=2",
-          "date": "2026-11-26",
+          "title": "아사코(하마구치) vs 거짓말(장선우)",
+          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885818&page=3",
+          "date": "2026-11-28",
           "positive": 0,
           "rawPositive": 0,
           "negative": 0,
           "positiveHits": [],
           "negativeHits": [],
-          "questionLike": false,
+          "questionLike": true,
           "reviewQuestion": false,
-          "commentCount": 1,
+          "commentCount": 4,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
-          "title": "토니에드만 << 어떰? 씨집에서 해주던데",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885235&page=3",
-          "date": "2026-11-26",
-          "positive": 22,
-          "rawPositive": 22,
-          "negative": 0,
-          "positiveHits": [
-            {
-              "term": "걸작",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            },
-            {
-              "term": "걸작",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            },
-            {
-              "term": "ㅆㅅㅌㅊ",
-              "count": 1,
-              "weight": 6,
-              "score": 6,
-              "label": "strong"
-            },
-            {
-              "term": "ㅅㅌㅊ",
-              "count": 1,
-              "weight": 4,
-              "score": 4,
-              "label": "clear"
-            }
-          ],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 6,
-          "commentPositive": 22,
-          "commentNegative": 0,
-          "dayWeight": 0.518
+          "dayWeight": 0.72
         }
       ],
-      "posterSourceUrl": "https://image.tmdb.org/t/p/w500/3RBg5SiDPFUbyBi7SONLAGnfTcY.jpg"
+      "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261010_e8e2e91d.jpg"
     },
     {
       "rank": 4,
@@ -381,12 +363,12 @@
       "posterSource": "verified-official",
       "trailerUrl": "",
       "url": "https://www.cinecube.co.kr/cinema/time-order-table?date=2026-11-29&movieCd=030149&playSDT=2026-11-29&screenId=02&showSeq=4",
-      "score": 62.5,
+      "score": 42.2,
       "signal": 0,
       "positiveSignal": 0,
-      "mentionCount": 5.9,
+      "mentionCount": 3.9,
       "rawPositiveSignal": 0,
-      "rawMentionCount": 7.5,
+      "rawMentionCount": 6.5,
       "scheduleBackfill": false,
       "venueIds": [
         "cinecube",
@@ -402,22 +384,6 @@
       "nextTime": "16:10",
       "evidence": [
         {
-          "title": "마른잎 볼만한가",
-          "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885310&page=1",
-          "date": "2026-11-26",
-          "positive": 0,
-          "rawPositive": 0,
-          "negative": 0,
-          "positiveHits": [],
-          "negativeHits": [],
-          "questionLike": true,
-          "reviewQuestion": true,
-          "commentCount": 0,
-          "commentPositive": 0,
-          "commentNegative": 0,
-          "dayWeight": 0.518
-        },
-        {
           "title": "마른잎 고전 게임같지 않냐",
           "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885574&page=3",
           "date": "2026-11-27",
@@ -431,7 +397,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "호프를 cg안좋다고 까는애들은 마른잎같은 영화는",
@@ -447,7 +413,7 @@
           "commentCount": 9,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 0.72
+          "dayWeight": 0.518
         },
         {
           "title": "ㅅㅂ 마른잎보다가 꿀잠잤다…",
@@ -463,7 +429,7 @@
           "commentCount": 1,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         },
         {
           "title": "마른잎 가족영화네",
@@ -479,7 +445,7 @@
           "commentCount": 0,
           "commentPositive": 0,
           "commentNegative": 0,
-          "dayWeight": 1
+          "dayWeight": 0.72
         }
       ],
       "posterSourceUrl": "https://www.cinecube.co.kr/static/uploads/MOVIE/20261118_e38d07ee.jpg"
@@ -491,24 +457,24 @@
   "sourceInternal": {
     "kind": "public-community-positive-signal",
     "galleryId": "nouvellevague",
-    "fetchedPostCount": 146,
+    "fetchedPostCount": 5,
     "listedPostCount": 292,
-    "detailedPostCount": 17,
-    "commentFetchCount": 17,
-    "commentCount": 24,
+    "detailedPostCount": 2,
+    "commentFetchCount": 2,
+    "commentCount": 2,
     "commentFetchErrorCount": 0,
     "scannedPageCount": 6,
     "reachedLookbackStart": true,
     "oldestScannedDate": "2026-11-27",
-    "newestScannedDate": "2026-11-28",
+    "newestScannedDate": "2026-11-29",
     "scanMode": "daily",
-    "candidateWindowStart": "2026-11-28",
-    "candidateWindowEnd": "2026-12-12",
-    "candidateCount": 111,
+    "candidateWindowStart": "2026-11-29",
+    "candidateWindowEnd": "2026-12-13",
+    "candidateCount": 112,
     "seedLookbackDays": 3,
-    "seedStart": "2026-11-26",
+    "seedStart": "2026-11-27",
     "listLookbackDays": 1,
-    "listWindowStart": "2026-11-28",
+    "listWindowStart": "2026-11-29",
     "listPageCap": 180,
     "minimumListPages": 6,
     "scoreModel": {
@@ -516,7 +482,7 @@
       "recencyDecay": 0.72
     },
     "scoredPostDays": [
-      "2026-11-28"
+      "2026-11-29"
     ],
     "signalMode": "positive-only",
     "positiveTermGroups": [

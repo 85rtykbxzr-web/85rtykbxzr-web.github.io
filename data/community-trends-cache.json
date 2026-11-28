@@ -2,434 +2,25 @@
   "version": 3,
   "galleryId": "nouvellevague",
   "rollingDays": 3,
-  "windowStart": "2026-11-26",
-  "windowEnd": "2026-11-28",
+  "windowStart": "2026-11-27",
+  "windowEnd": "2026-11-29",
   "scoreModel": {
     "windowDays": 3,
     "recencyDecay": 0.72
   },
   "scanCoverage": {
     "dates": [
-      "2026-11-26",
       "2026-11-27",
-      "2026-11-28"
+      "2026-11-28",
+      "2026-11-29"
     ],
     "lastMode": "daily",
-    "lastWindowStart": "2026-11-28",
-    "lastWindowEnd": "2026-11-28",
+    "lastWindowStart": "2026-11-29",
+    "lastWindowEnd": "2026-11-29",
     "lastReachedLookbackStart": true
   },
-  "updatedAt": "2026-11-28T12:19:12.101Z",
+  "updatedAt": "2026-11-28T15:09:12.680Z",
   "days": {
-    "2026-11-26": {
-      "토니에드만": {
-        "title": "토니 에드만(기획전)",
-        "positiveSignal": 26,
-        "mentionCount": 6.064641508472483,
-        "evidence": [
-          {
-            "title": "님들 토니 에드만 재밌나요",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885345&page=1",
-            "date": "2026-11-26",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "꿀잼",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 4,
-            "commentPositive": 4,
-            "commentNegative": 0
-          },
-          {
-            "title": "토니에드만 극장걸어주는거 누민경 덕분이네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885284&page=2",
-            "date": "2026-11-26",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "토니에드만 << 어떰? 씨집에서 해주던데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885235&page=3",
-            "date": "2026-11-26",
-            "positive": 22,
-            "rawPositive": 22,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "걸작",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              },
-              {
-                "term": "걸작",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              },
-              {
-                "term": "ㅆㅅㅌㅊ",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              },
-              {
-                "term": "ㅅㅌㅊ",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 6,
-            "commentPositive": 22,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "폭설": {
-        "title": "폭설(한글자막 CC)",
-        "positiveSignal": 0,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "폭설은 정말 인기가 1도 없네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885339&page=1",
-            "date": "2026-11-26",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "와일드호스나인": {
-        "title": "와일드 호스 나인",
-        "positiveSignal": 0,
-        "mentionCount": 2.160964047443681,
-        "evidence": [
-          {
-            "title": "와호나 보고 왔는데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885336&page=1",
-            "date": "2026-11-26",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 4,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "마른잎": {
-        "title": "마른 잎",
-        "positiveSignal": 0,
-        "mentionCount": 1,
-        "evidence": [
-          {
-            "title": "마른잎 볼만한가",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885310&page=1",
-            "date": "2026-11-26",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": true,
-            "reviewQuestion": true,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "미션": {
-        "title": "미션(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 1.5,
-        "evidence": [
-          {
-            "title": "미션 보고 왔는데",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885285&page=2",
-            "date": "2026-11-26",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "룩백": {
-        "title": "룩백",
-        "positiveSignal": 4,
-        "mentionCount": 2,
-        "evidence": [
-          {
-            "title": "고레에다 히로카즈 룩백 개봉했었구나",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885250&page=2",
-            "date": "2026-11-26",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "재밌",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 3,
-            "commentPositive": 4,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "세계의주인": {
-        "title": "세계의 주인",
-        "positiveSignal": 16,
-        "mentionCount": 3.5,
-        "evidence": [
-          {
-            "title": "의외로 작품상 접점은 세계의주인이 아니라",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885246&page=2",
-            "date": "2026-11-26",
-            "positive": 12,
-            "rawPositive": 12,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "미쳤",
-                "count": 1,
-                "weight": 6,
-                "score": 6,
-                "label": "strong"
-              },
-              {
-                "term": "재밌",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              },
-              {
-                "term": "좋았다",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 7,
-            "commentPositive": 12,
-            "commentNegative": 0
-          },
-          {
-            "title": "호프 청룡 최우수작품, 촬영상은 예상했는데 세계의 주인 아쉽네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885202&page=3",
-            "date": "2026-11-26",
-            "positive": 4,
-            "rawPositive": 4,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "수작",
-                "count": 1,
-                "weight": 4,
-                "score": 4,
-                "label": "clear"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "더데뷔": {
-        "title": "더 데뷔",
-        "positiveSignal": 0,
-        "mentionCount": 2.5,
-        "evidence": [
-          {
-            "title": "오늘 더데뷔 토크 뭐냐 이제봤네",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885234&page=3",
-            "date": "2026-11-26",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 0,
-            "commentPositive": 0,
-            "commentNegative": 0
-          },
-          {
-            "title": "더 데뷔 예매함ㅅㅅ",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885221&page=3",
-            "date": "2026-11-26",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 1,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "피오르": {
-        "title": "피오르",
-        "positiveSignal": 6,
-        "mentionCount": 2.5,
-        "evidence": [
-          {
-            "title": "라그라디바 vs 피오르",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885215&page=3",
-            "date": "2026-11-26",
-            "positive": 6,
-            "rawPositive": 6,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "좋긴",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              },
-              {
-                "term": "좋긴",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              },
-              {
-                "term": "좋음",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 7,
-            "commentPositive": 6,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "원스": {
-        "title": "원스(2D)",
-        "positiveSignal": 0,
-        "mentionCount": 2,
-        "evidence": [
-          {
-            "title": "원스 남주 죽었네.",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885172&page=4",
-            "date": "2026-11-26",
-            "positive": 0,
-            "rawPositive": 0,
-            "negative": 0,
-            "positiveHits": [],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 3,
-            "commentPositive": 0,
-            "commentNegative": 0
-          }
-        ]
-      },
-      "트레인스포팅": {
-        "title": "트레인스포팅(2D)",
-        "positiveSignal": 2,
-        "mentionCount": 2.160964047443681,
-        "evidence": [
-          {
-            "title": "트레인스포팅 봤음",
-            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885166&page=4",
-            "date": "2026-11-26",
-            "positive": 2,
-            "rawPositive": 2,
-            "negative": 0,
-            "positiveHits": [
-              {
-                "term": "좋았음",
-                "count": 1,
-                "weight": 2,
-                "score": 2,
-                "label": "soft"
-              }
-            ],
-            "negativeHits": [],
-            "questionLike": false,
-            "reviewQuestion": false,
-            "commentCount": 3,
-            "commentPositive": 2,
-            "commentNegative": 0
-          }
-        ]
-      }
-    },
     "2026-11-27": {
       "와일드호스나인": {
         "title": "와일드 호스 나인",
@@ -1078,6 +669,52 @@
             "title": "와호나 엄마아빠랑 보러가도댐?",
             "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885784&page=3",
             "date": "2026-11-28",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": true,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      }
+    },
+    "2026-11-29": {
+      "유레카": {
+        "title": "유레카",
+        "positiveSignal": 0,
+        "mentionCount": 1.5,
+        "evidence": [
+          {
+            "title": "오리 cgv 유레카 잘못 등록했네ㅋㅋ",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885988&page=1",
+            "date": "2026-11-29",
+            "positive": 0,
+            "rawPositive": 0,
+            "negative": 0,
+            "positiveHits": [],
+            "negativeHits": [],
+            "questionLike": false,
+            "reviewQuestion": false,
+            "commentCount": 1,
+            "commentPositive": 0,
+            "commentNegative": 0
+          }
+        ]
+      },
+      "광야시대": {
+        "title": "광야시대",
+        "positiveSignal": 0,
+        "mentionCount": 1.5,
+        "evidence": [
+          {
+            "title": "광야시대 최고작임?",
+            "url": "https://gall.dcinside.com/mgallery/board/view/?id=nouvellevague&no=1885987&page=1",
+            "date": "2026-11-29",
             "positive": 0,
             "rawPositive": 0,
             "negative": 0,
